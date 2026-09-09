@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it."
+title: "Abstract Algebra: Theory and Applications"
+version: "0.0.0"
+authors:
+  - family-names: Judson
+    given-names: Thomas W.
+  - family-names: Beezer
+    given-names: Robert A.
+repository-code: "https://github.com/projetorealmat/aata"
+license: "GFDL-1.3-or-later"
