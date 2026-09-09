@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this book, please cite it using the metadata below."
+title: "Abstract Algebra: Theory and Applications"
+authors:
+  - family-names: Judson
+    given-names: Thomas W.
+  - family-names: Beezer
+    given-names: Robert A.
+license: GFDL-1.3-or-later
+repository-code-url: "https://github.com/projetorealmat/aata"
+url: "https://judsonbooks.org/aata/"
+version: "0.0.0"
+date-released: 2026-09-09
