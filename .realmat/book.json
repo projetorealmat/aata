@@ -1,0 +1,16 @@
+{
+  "id": "aata",
+  "title": "Abstract Algebra: Theory and Applications",
+  "short_title": "Abstract Algebra",
+  "subject": "Abstract algebra",
+  "base_branch": "master",
+  "build_system": "pretext",
+  "pretext_project_file": "project.ptx",
+  "pretext_pdf_target": "print",
+  "pretext_web_target": "web",
+  "pretext_requirements_file": "requirements.txt",
+  "pdf_name": "aata.pdf",
+  "citation_file": "CITATION.cff",
+  "readme_file": "README.md",
+  "portal_repository": "projetorealmat/projetorealmat.github.io"
+}
