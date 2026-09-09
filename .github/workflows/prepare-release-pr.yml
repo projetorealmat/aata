@@ -1,0 +1,23 @@
+name: REALMat — preparar Release PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Próxima versão sem o prefixo v (MAJOR.MINOR.PATCH)
+        required: true
+        type: string
+      release_date:
+        description: Data da publicação (AAAA-MM-DD)
+        required: true
+        type: string
+
+jobs:
+  prepare:
+    uses: projetorealmat/.github/.github/workflows/book-prepare-release.yml@feat/aata-realmat-build-config-contract
+    with:
+      config: .realmat/book.json
+      base_branch: master
+      version: ${{ inputs.version }}
+      release_date: ${{ inputs.release_date }}
+    secrets: inherit
