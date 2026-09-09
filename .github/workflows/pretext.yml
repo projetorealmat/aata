@@ -1,0 +1,20 @@
+name: PreTeXt
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    name: Build configured targets
+    uses: projetorealmat/.github/.github/workflows/book-build-pretext.yml@feat/aata-realmat-build-config-contract
+    with:
+      release_commit: ${{ github.sha }}
+      release_tag: ci
+      release_status: ci
+      pretext_project_file: project.ptx
+      pretext_pdf_target: print
+      pretext_web_target: web
+      pretext_requirements_file: requirements.txt
+      pretext_checksum_file: output/aata.pdf.sha256
+      pdf_name: aata.pdf
