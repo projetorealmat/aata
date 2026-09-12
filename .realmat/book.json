@@ -3,6 +3,15 @@
   "title": "Abstract Algebra: Theory and Applications",
   "short_title": "Abstract Algebra",
   "subject": "Abstract algebra",
+  "translation_stage": "unreviewed",
+  "entrypoint": "pdf",
+  "publications": [
+    {
+      "id": "pdf",
+      "label": "PDF",
+      "format": "pdf"
+    }
+  ],
   "base_branch": "master",
   "build_system": "pretext",
   "pretext_project_file": "project.ptx",
