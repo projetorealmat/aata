@@ -19,7 +19,7 @@
     </author>
 
     <credit>
-      <title>Sage Exercises for Abstract Algebra</title>
+      <title>Exercícios de Sage para Álgebra Abstrata</title>
       <author>
         <personname>Robert A. Beezer</personname>
         <department>Department of Mathematics and Computer Science</department>
@@ -29,7 +29,7 @@
     </credit>
 
     <credit>
-      <title>Traducción al español</title>
+      <title>Tradução para o espanhol</title>
       <author>
         <personname>Antonio Behn</personname>
         <department>Departamento de Matemáticas, Facultad de Ciencias</department>
@@ -72,7 +72,7 @@
     <!-- READ COMMENT ABOVE BEFORE EDITING -->
     <!-- ********************************* -->
     <!--                                   -->
-    <edition>Annual Edition 2026</edition>
+    <edition>Edição anual 2026</edition>
     <!--                                   -->
     <!-- ********************************* -->
     <!-- READ COMMENT ABOVE BEFORE EDITING -->
@@ -96,105 +96,105 @@
 
   <preface>
     <p>
-      This text is intended for a one or two-semester undergraduate course in abstract algebra.
-      Traditionally,
-      these courses have covered the theoretical aspects of groups, rings,
-      and fields.
-      However, with the development of computing in the last several decades,
-      applications that involve abstract algebra and discrete mathematics have become increasingly important,
-      and many science, engineering,
-      and computer science students are now electing to minor in mathematics.
-      Though theory still occupies a central role in the subject of abstract algebra and no student should go through such a course without a good notion of what a proof is,
-      the importance of applications such as coding theory and cryptography has grown significantly.
+      Este texto destina-se a um curso de graduação em álgebra abstrata de um ou dois semestres.
+      Tradicionalmente,
+      esses cursos têm abordado os aspectos teóricos de grupos, anéis
+      e corpos.
+      No entanto, com o desenvolvimento da computação nas últimas décadas,
+      as aplicações que envolvem álgebra abstrata e matemática discreta tornaram-se cada vez mais importantes,
+      e muitos estudantes de ciências, engenharia
+      e ciência da computação estão agora optando por uma formação complementar em matemática.
+      Embora a teoria ainda ocupe um papel central na álgebra abstrata e nenhum estudante deva concluir um curso dessa natureza sem uma boa noção do que é uma demonstração,
+      a importância de aplicações como a teoria dos códigos e a criptografia cresceu significativamente.
     </p>
 
     <p>
-      Until recently most abstract algebra texts included few if any applications.
-      However, one of the major problems in teaching an abstract algebra course is that for many students it is their first encounter with an environment that requires them to do rigorous proofs.
-      Such students often find it hard to see the use of learning to prove theorems and propositions;
-      applied examples help the instructor provide motivation.
+      Até recentemente, a maioria dos textos de álgebra abstrata incluía poucas aplicações, quando incluía alguma.
+      No entanto, um dos principais problemas no ensino de um curso de álgebra abstrata é que, para muitos estudantes, esse é seu primeiro contato com um ambiente que exige que façam demonstrações rigorosas.
+      Esses estudantes frequentemente têm dificuldade em perceber a utilidade de aprender a demonstrar teoremas e proposições;
+      exemplos de aplicações ajudam o professor a oferecer motivação.
     </p>
 
     <p>
-      This text contains more material than can possibly be covered in a single semester.
-      Certainly there is adequate material for a two-semester course,
-      and perhaps more;
-      however, for a one-semester course it would be quite easy to omit selected chapters and still have a useful text.
-      The order of presentation of topics is standard:
-      groups, then rings, and finally fields.
-      Emphasis can be placed either on theory or on applications.
-      A typical one-semester course might cover groups and rings while briefly touching on field theory,
-      using Chapters<nbsp/>1 through 6, 9, 10, 11, 13
-      (the first part),
+      Este texto contém mais material do que se pode abordar em um único semestre.
+      Certamente há material suficiente para um curso de dois semestres,
+      e talvez mais;
+      no entanto, para um curso de um semestre, seria bastante fácil omitir capítulos selecionados e ainda dispor de um texto útil.
+      A ordem de apresentação dos tópicos é a usual:
+      grupos, depois anéis e, finalmente, corpos.
+      A ênfase pode ser colocada tanto na teoria quanto nas aplicações.
+      Um curso típico de um semestre poderia abordar grupos e anéis, tratando brevemente da teoria dos corpos,
+      utilizando os Capítulos<nbsp/>1 a 6, 9, 10, 11, 13
+      (a primeira parte),
       16, 17, 18
-      (the first part),
-      20, and 21.
-      Parts of these chapters could be deleted and applications substituted according to the interests of the students and the instructor.
-      A two-semester course emphasizing theory might cover Chapters<nbsp/>1 through 6, 9, 10, 11, 13 through 18, 20, 21, 22
-      (the first part),
-      and 23.
-      On the other hand, if applications are to be emphasized,
-      the course might cover Chapters 1 through 14, and 16 through 22.
-      In an applied course,
-      some of the more theoretical results could be assumed or omitted.
-      A chapter dependency chart appears below. (A broken line indicates a partial dependency.)
+      (a primeira parte),
+      20 e 21.
+      Partes desses capítulos poderiam ser suprimidas e substituídas por aplicações, de acordo com os interesses dos estudantes e do professor.
+      Um curso de dois semestres com ênfase na teoria poderia abordar os Capítulos<nbsp/>1 a 6, 9, 10, 11, 13 a 18, 20, 21, 22
+      (a primeira parte)
+      e 23.
+      Por outro lado, se a ênfase for nas aplicações,
+      o curso poderia abordar os Capítulos 1 a 14 e 16 a 22.
+      Em um curso voltado às aplicações,
+      alguns dos resultados mais teóricos poderiam ser admitidos ou omitidos.
+      Um diagrama das dependências entre os capítulos aparece abaixo. (Uma linha tracejada indica uma dependência parcial.)
     </p>
 
     <!-- Replaced figure with tikz figure - TWJ 6/14/2010 -->
     <image width="100%" xml:id="preface-dependencies">
-      <description>Chapter dependency graph.  Chapter 23 depends on Chapters 13 and 15. Chapter 22 depends on Chapter 21 and Chapter 8.  Chapter 21 depends on Chapter 20.  Chapters 18-20 depend on Chapter 17.  Chapter 17 depends on Chapter 16.  Chapter 15 depends on Chapter 14.  Chapters 12, 13, 14, and 16 depend on Chapter 11. Chapter 11 depends on Chapter 10, which depends on Chapter 9. Chapters 7-9 depend on Chapters 1-6</description>
+      <description>Grafo das dependências entre os capítulos. O Capítulo 23 depende dos Capítulos 13 e 15. O Capítulo 22 depende do Capítulo 21 e do Capítulo 8. O Capítulo 21 depende do Capítulo 20. Os Capítulos 18-20 dependem do Capítulo 17. O Capítulo 17 depende do Capítulo 16. O Capítulo 15 depende do Capítulo 14. Os Capítulos 12, 13, 14 e 16 dependem do Capítulo 11. O Capítulo 11 depende do Capítulo 10, que depende do Capítulo 9. Os Capítulos 7-9 dependem dos Capítulos 1-6</description>
       <latex-image>
           <xi:include href="tikz/preface-dependencies.tex" parse="text"/>
       </latex-image>
     </image>
 
     <p>
-      Though there are no specific prerequisites for a course in abstract algebra,
-      students who have had other higher-level courses in mathematics will generally be more prepared than those who have not,
-      because they will possess a bit more mathematical sophistication.
-      Occasionally, we shall assume some basic linear algebra;
-      that is, we shall take for granted an elementary knowledge of matrices and determinants.
-      This should present no great problem,
-      since most students taking a course in abstract algebra have been introduced to matrices and determinants elsewhere in their career,
-      if they have not already taken a sophomore or junior-level course in linear algebra.
+      Embora não haja pré-requisitos específicos para um curso de álgebra abstrata,
+      os estudantes que já cursaram outras disciplinas de matemática de nível mais avançado geralmente estarão mais preparados do que aqueles que não as cursaram,
+      pois terão um pouco mais de maturidade matemática.
+      Ocasionalmente, pressuporemos alguns conhecimentos básicos de álgebra linear;
+      isto é, pressuporemos um conhecimento elementar de matrizes e determinantes.
+      Isso não deverá representar um grande problema,
+      pois a maioria dos estudantes que cursam álgebra abstrata já teve contato com matrizes e determinantes em outro momento de sua formação,
+      se ainda não cursou uma disciplina de álgebra linear de segundo ou terceiro ano.
     </p>
 
     <p>
-      Exercise sections are the heart of any mathematics text.
-      An exercise set appears at the end of each chapter.
-      The nature of the exercises ranges over several categories;
-      computational, conceptual, and theoretical problems are included.
-      A section presenting hints and solutions to many of the exercises appears at the end of the text.
-      Often in the solutions a proof is only sketched,
-      and it is up to the student to provide the details.
-      The exercises range in difficulty from very easy to very challenging.
-      Many of the more substantial problems require careful thought,
-      so the student should not be discouraged if the solution is not forthcoming after a few minutes of work.
+      As seções de exercícios são o coração de qualquer texto de matemática.
+      Uma lista de exercícios aparece ao final de cada capítulo.
+      A natureza dos exercícios abrange diversas categorias;
+      incluem-se problemas de cálculo, conceituais e teóricos.
+      Uma seção que apresenta sugestões e soluções para muitos dos exercícios aparece ao final do texto.
+      Frequentemente, nas soluções, uma demonstração é apenas esboçada,
+      e cabe ao estudante fornecer os detalhes.
+      A dificuldade dos exercícios varia de muito fáceis a bastante desafiadores.
+      Muitos dos problemas mais substanciais exigem reflexão cuidadosa,
+      de modo que o estudante não deve desanimar se a solução não surgir após alguns minutos de trabalho.
     </p>
 
     <p>
-      Ideally, students should read the relavent material before attending class. Reading questions have been added to each chapter before the exercises.   To prepare for class, students should read the chapter before class and then answer the section's reading questions to prepare for the class.
+      Idealmente, os estudantes devem ler o material pertinente antes de assistir à aula. Foram acrescentadas questões de leitura a cada capítulo, antes dos exercícios. Para se preparar para a aula, os estudantes devem ler o capítulo antes da aula e então responder às questões de leitura da seção para se preparar para a aula.
     </p>
         <!-- Removed reference to the solutions manual.  TWJ 8/19/2010 -->
         <!-- A complete solutions manual is available for the instructor's use.  -->
     <p>
-      There are additional exercises or computer projects at the ends of many of the chapters.
-      The computer projects usually require a knowledge of programming.
-      All of these exercises and projects are more substantial in nature and allow the exploration of new results and theory.
+      Há exercícios adicionais ou projetos computacionais ao final de muitos dos capítulos.
+      Os projetos computacionais geralmente exigem conhecimentos de programação.
+      Todos esses exercícios e projetos são de natureza mais substancial e permitem explorar novos resultados e teoria.
     </p>
         <!-- % Added Sage blurb, RAB 2011/07/28 -->
     <p>
-      Sage (<url href="http://sagemath.org" visual="sagemath.org">sagemath.org</url>) is a free,
-      open source, software system for advanced mathematics,
-      which is ideal for assisting with a study of abstract algebra.
-      Sage can be used either on your own computer,
-      a local server, or on CoCalc
+      Sage (<url href="http://sagemath.org" visual="sagemath.org">sagemath.org</url>) é um sistema de software livre,
+      de código aberto, para matemática avançada,
+      ideal para auxiliar no estudo da álgebra abstrata.
+      Sage pode ser utilizado em seu próprio computador,
+      em um servidor local ou no CoCalc
       (<url href="https://cocalc.com" visual="cocalc.com"><c>cocalc.com</c></url>).
-      Robert Beezer has written a comprehensive introduction to Sage and a selection of relevant exercises that appear at the end of each chapter,
-      including live Sage cells in the web version of the book.
-      All of the Sage code has been subject to automated tests of accuracy,
-      using the most recent version available at this time: SageMath Version 10.6
-      (released 2025-03-31).
+      Robert Beezer escreveu uma introdução abrangente ao Sage e uma seleção de exercícios pertinentes que aparecem ao final de cada capítulo,
+      incluindo células interativas de Sage na versão web do livro.
+      Todo o código Sage foi submetido a testes automatizados de exatidão,
+      utilizando a versão mais recente disponível neste momento: SageMath Versão 10.6
+      (lançada em 2025-03-31).
     </p>
         <!-- check consistency with paragraph above -->
         <sage type="invisible">
@@ -209,7 +209,7 @@
       <!-- Accepted order: acknowledgements, forewords, prefaces -->
   <acknowledgement>
     <p>
-      I would like to acknowledge the following reviewers for their helpful comments and suggestions.
+      Gostaria de agradecer aos seguintes revisores por seus comentários e sugestões úteis.
 
       <ul>
         <li>
@@ -275,23 +275,22 @@
     </p>
 
     <p>
-      I would also like to thank Steve Quigley, Marnie Pommett, Cathie Griffin, Kelle Karshick,
-      and the rest of the staff at PWS Publishing for their guidance throughout this project.
-      It has been a pleasure to work with them.
+      Gostaria também de agradecer a Steve Quigley, Marnie Pommett, Cathie Griffin, Kelle Karshick
+      e aos demais integrantes da equipe da PWS Publishing pela orientação ao longo deste projeto.
+      Foi um prazer trabalhar com eles.
     </p>
         <!-- Added NSF support statement.  TWJ 8/9/2012 -->
     <p>
-      Robert Beezer encouraged me to make
-      <em>Abstract Algebra: Theory and Applications</em>
-      available as an open source textbook,
-      a decision that I have never regretted.
-      With his assistance, the book has been rewritten in PreTeXt
+      Robert Beezer me incentivou a disponibilizar
+      <em>Álgebra Abstrata: Teoria e Aplicações</em>
+      como um livro-texto de código aberto,
+      uma decisão da qual nunca me arrependi.
+      Com sua ajuda, o livro foi reescrito em PreTeXt
       (<url href="https://pretextbook.org" visual="pretextbook.org"><c>pretextbook.org</c></url>),
-      making it possible to quickly output print, web,
-      <acro>PDF</acro> versions and more from the same source.
-      The open source version of this book has received support from the National Science Foundation (Awards #DUE-1020957, #DUE–1625223, and #DUE–1821329).
+      tornando possível gerar rapidamente versões impressas, para a web,
+      em <acro>PDF</acro> e outras a partir da mesma fonte.
+      A versão de código aberto deste livro recebeu apoio da National Science Foundation (Auxílios #DUE-1020957, #DUE–1625223 e #DUE–1821329).
     </p>
   </acknowledgement>
 
 </frontmatter>
-
