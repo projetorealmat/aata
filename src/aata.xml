@@ -15,15 +15,15 @@
 <!--    Important: Always process all of the source   -->
 <!--    to preserve numbering and cross-references!   -->
 <!--    So it is never advisable to edit this file    -->
-<pretext component="production" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<pretext component="production" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="pt-BR">
   <!--
 <pretext component="french" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="fr-FR">  
 -->
 
   <xi:include href="./bookinfo.xml" /> <!-- ISBN, website, other metadata -->
   <book xml:id="aata-toc">
-    <title>Abstract Algebra</title>
-    <subtitle>Theory and Applications</subtitle>
+    <title>Álgebra Abstrata</title>
+    <subtitle>Teoria e Aplicações</subtitle>
     <xi:include href="./frontmatter.xml" />                 <!-- Title Page, Preface, etc. -->
     <xi:include href="./sets.xml" />                        <!-- Set Theory  -->
     <xi:include href="./integers.xml" />                    <!-- Integers -->
@@ -55,4 +55,3 @@
     <xi:include href="./backmatter.xml" />                  <!-- GFDL, Hints, Notation -->
   </book>
 </pretext>
-
