@@ -10,150 +10,150 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="integers">
-  <title>The Integers</title>
+  <title>Os inteiros</title>
   <introduction>
     <p>
-      The integers are the building blocks of mathematics.
-      In this chapter we will investigate the fundamental properties of the integers,
-      including mathematical induction,
-      the division algorithm, and the Fundamental Theorem of Arithmetic.
+      Os inteiros são os blocos de construção da matemática.
+      Neste capítulo, investigaremos as propriedades fundamentais dos inteiros,
+      incluindo a indução matemática,
+      o algoritmo da divisão e o Teorema Fundamental da Aritmética.
     </p>
   </introduction>
 
   <section xml:id="integers-section-math-induction">
-    <title>Mathematical Induction</title>
+    <title>Indução matemática</title>
     <p>
-      Suppose we wish to show that
+      Suponha que desejemos mostrar que
       <md>
         1 + 2 + \cdots + n = \frac{n(n + 1)}{2}
       </md>
-      for any natural number <m>n</m>.
-      This formula is easily  verified for small numbers such as <m>n = 1</m>,
-      <m>2</m>, <m>3</m>, or <m>4</m>,
-      but it is impossible to verify for all natural numbers on a case-by-case basis.
-      To prove the formula true in general,
-      a more generic method is required.
+      para qualquer número natural <m>n</m>.
+      Essa fórmula é facilmente verificada para números pequenos, como <m>n = 1</m>,
+      <m>2</m>, <m>3</m> ou <m>4</m>,
+      mas é impossível verificá-la para todos os números naturais caso a caso.
+      Para provar a fórmula em geral,
+      é necessário um método mais genérico.
     </p>
 
     <p>
-      Suppose we have verified the equation for the first <m>n</m> cases.
-      We will attempt to show that we can generate the formula for the <m>(n + 1)</m>th case from this knowledge.
-      The formula is true for <m>n = 1</m> since
+      Suponha que tenhamos verificado a equação para os primeiros <m>n</m> casos.
+      Tentaremos mostrar que podemos obter a fórmula para o caso <m>(n + 1)</m>-ésimo a partir desse conhecimento.
+      A fórmula é verdadeira para <m>n = 1</m>, pois
       <md>
         1 = \frac{1(1 + 1)}{2}
       </md>.
-      If we have verified the first <m>n</m> cases, then
+      Se tivermos verificado os primeiros <m>n</m> casos, então
       <md>
         <mrow>1 + 2 + \cdots + n + (n + 1) &amp; = \frac{n(n + 1)}{2} + n + 1</mrow>
         <mrow>&amp; = \frac{n^2 + 3n + 2}{2}</mrow>
         <mrow>&amp; = \frac{(n + 1)[(n + 1) + 1]}{2}</mrow>
       </md>.
-      This is exactly the formula for the <m>(n + 1)</m>th case.
+      Essa é exatamente a fórmula para o caso <m>(n + 1)</m>-ésimo.
     </p>
 
     <p>
-      This method of proof is known as
-      <term>mathematical induction</term>.
-      Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers
-      <m>{\mathbb N}</m> on a case-by-case basis,
-      an impossible task if <m>S</m> is an infinite set,
-      we give a specific proof for the smallest integer being considered,
-      followed by a generic argument showing that if the statement holds for a given case,
-      then it must also hold for the next case in the sequence.
-      We summarize mathematical induction in the following axiom.
+      Esse método de demonstração é conhecido como
+      <term>indução matemática</term>.
+      Em vez de tentar verificar uma afirmação sobre algum subconjunto <m>S</m> dos inteiros positivos
+      <m>{\mathbb N}</m> caso a caso,
+      tarefa impossível se <m>S</m> for um conjunto infinito,
+      damos uma demonstração específica para o menor inteiro considerado,
+      seguida de um argumento genérico mostrando que, se a afirmação vale para um caso dado,
+      então também deve valer para o caso seguinte da sequência.
+      Resumimos a indução matemática no axioma a seguir.
     </p>
 
     <principle xml:id="integers-principle-first-pmi">
-      <title>First Principle of Mathematical Induction</title>
+      <title>Primeiro princípio da indução matemática</title>
       <idx>
-      <h>Induction</h>
-      <h>first principle of</h>
+      <h>Indução</h>
+      <h>primeiro princípio de</h>
       </idx>
       <statement>
         <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If for all integers <m>k</m> with <m>k \geq n_0</m>,
-          <m>S(k)</m> implies that <m>S(k+1)</m> is true,
-          then <m>S(n)</m> is true for all integers <m>n</m> greater than or equal to <m>n_0</m>.
+          Seja <m>S(n)</m> uma afirmação sobre inteiros para
+          <m>n \in {\mathbb N}</m> e suponha que <m>S(n_0)</m> seja verdadeira para algum inteiro <m>n_0</m>.
+          Se, para todos os inteiros <m>k</m> com <m>k \geq n_0</m>,
+          <m>S(k)</m> implicar que <m>S(k+1)</m> é verdadeira,
+          então <m>S(n)</m> será verdadeira para todos os inteiros <m>n</m> maiores ou iguais a <m>n_0</m>.
         </p>
       </statement>
     </principle>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <example xml:id="integers-example-induction-greater-than">
       <p>
-        For all integers <m>n \geq 3</m>, <m>2^n \gt n + 4</m>.
-        Since
+        Para todos os inteiros <m>n \geq 3</m>, vale <m>2^n \gt n + 4</m>.
+        Como
         <md>
           8 = 2^3 \gt 3 + 4 = 7
         </md>,
-        the statement is true for <m>n_0 = 3</m>.
-        Assume that <m>2^k \gt k + 4</m> for <m>k \geq 3</m>.
-        Then <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.
-        But
+        a afirmação é verdadeira para <m>n_0 = 3</m>.
+        Suponha que <m>2^k \gt k + 4</m> para <m>k \geq 3</m>.
+        Então <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.
+        Mas
         <md>
           2(k + 4) = 2k + 8 \gt k + 5 = (k + 1) + 4
         </md>
-        since <m>k</m> is positive.
-        Hence, by induction,
-        the statement holds for all integers <m>n \geq 3</m>.
+        pois <m>k</m> é positivo.
+        Logo, por indução,
+        a afirmação vale para todos os inteiros <m>n \geq 3</m>.
       </p>
     </example>
 
     <example xml:id="integers-example-induction-divisible">
       <p>
-        Every integer <m>10^{n + 1} + 3 \cdot 10^n + 5</m> is divisible by <m>9</m> for <m>n \in {\mathbb N}</m>.
-        For <m>n = 1</m>,
+        Todo número da forma <m>10^{n + 1} + 3 \cdot 10^n + 5</m> é divisível por <m>9</m> para <m>n \in {\mathbb N}</m>.
+        Para <m>n = 1</m>,
         <md>
           10^{1 + 1} + 3 \cdot 10 + 5 = 135 = 9 \cdot 15
         </md>
-        is divisible by <m>9</m>.
-        Suppose that <m>10^{k + 1} + 3 \cdot 10^k + 5</m> is divisible by <m>9</m> for <m>k \geq 1</m>.
-        Then
+        é divisível por <m>9</m>.
+        Suponha que <m>10^{k + 1} + 3 \cdot 10^k + 5</m> seja divisível por <m>9</m> para <m>k \geq 1</m>.
+        Então
         <md>
           <mrow>10^{(k + 1) + 1} + 3 \cdot 10^{k + 1} + 5&amp; = 10^{k + 2} + 3 \cdot 10^{k + 1} + 50 - 45</mrow>
           <mrow>&amp; = 10 (10^{k + 1} + 3 \cdot 10^{k} + 5) - 45</mrow>
         </md>
-        is divisible by <m>9</m>.
+        é divisível por <m>9</m>.
       </p>
     </example>
 
     <example xml:id="integers-example-binomial-theorem">
       <p>
-        We will prove the binomial theorem using mathematical induction; that is,
+        Demonstraremos o teorema binomial usando indução matemática; isto é,
         <md>
           (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}
         </md>,
-        where <m>a</m> and <m>b</m> are real numbers,
-        <m>n \in \mathbb{N}</m>, and
+        em que <m>a</m> e <m>b</m> são números reais,
+        <m>n \in \mathbb{N}</m> e
         <md>
           \binom{n}{k} = \frac{n!}{k! (n - k)!}
         </md>
-        is the binomial coefficient.
+        é o coeficiente binomial.
 
         <notation>
           <usage><m>n!</m></usage>
-          <description><m>n</m> factorial</description>
+          <description>fatorial de <m>n</m></description>
         </notation>
 
         <notation>
           <usage><m>\binom{n}{k}</m></usage>
-          <description>binomial coefficient <m>n!/(k!(n-k)!)</m></description>
+          <description>coeficiente binomial <m>n!/(k!(n-k)!)</m></description>
         </notation>
 
-        We first show that
+        Primeiro, mostramos que
         <md>
           \binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}
         </md>.
-        This result follows from
+        Esse resultado segue de
         <md>
           <mrow>\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}</mrow>
           <mrow>&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}</mrow>
           <mrow>&amp; =\binom{n + 1}{k}</mrow>
         </md>.
-        If <m>n = 1</m>, the binomial theorem is easy to verify.
-        Now assume that the result is true for <m>n</m> greater than or equal to <m>1</m>.
-        Then
+        Se <m>n = 1</m>, o teorema binomial é fácil de verificar.
+        Agora suponha que o resultado seja verdadeiro para <m>n</m> maior ou igual a <m>1</m>.
+        Então
         <md>
           <mrow>(a + b)^{n + 1} &amp; = (a + b)(a + b)^n</mrow>
           <mrow>&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)</mrow>
@@ -166,65 +166,65 @@
     </example>
 
     <p>
-      We have an equivalent statement of the Principle of Mathematical Induction that is often very useful.
+      Temos uma formulação equivalente do princípio da indução matemática que costuma ser muito útil.
     </p>
 
     <principle xml:id="integers-principle-second-pmi">
-      <title>Second Principle of Mathematical Induction</title>
+      <title>Segundo princípio da indução matemática</title>
       <idx>
-      <h>Induction</h>
-      <h>second principle of</h>
+      <h>Indução</h>
+      <h>segundo princípio de</h>
       </idx>
       <statement>
         <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> imply that
-          <m>S(k + 1)</m> for <m>k \geq n_0</m>,
-          then the statement <m>S(n)</m> is true for all integers <m>n \geq n_0</m>.
+          Seja <m>S(n)</m> uma afirmação sobre inteiros para
+          <m>n \in {\mathbb N}</m> e suponha que <m>S(n_0)</m> seja verdadeira para algum inteiro <m>n_0</m>.
+          Se <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> implicarem
+          <m>S(k + 1)</m> para <m>k \geq n_0</m>,
+          então a afirmação <m>S(n)</m> será verdadeira para todos os inteiros <m>n \geq n_0</m>.
         </p>
       </statement>
     </principle>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <p>
-      A nonempty subset <m>S</m> of
-      <m>{\mathbb Z}</m> is <term>well-ordered</term><idx><h>Well-ordered set</h></idx>
-      if <m>S</m> contains a least element.
-      Notice that the set <m>{\mathbb Z}</m> is not well-ordered since it does not contain a smallest element.
-      However, the natural numbers are well-ordered.
+      Um subconjunto não vazio <m>S</m> de
+      <m>{\mathbb Z}</m> é <term>bem ordenado</term><idx><h>Conjunto bem ordenado</h></idx>
+      se <m>S</m> contém um menor elemento.
+      Observe que o conjunto <m>{\mathbb Z}</m> não é bem ordenado, pois não contém um menor elemento.
+      Contudo, os números naturais são bem ordenados.
     </p>
 
     <principle>
-      <title>Principle of Well-Ordering</title>
+      <title>Princípio da boa ordenação</title>
       <statement>
         <p>
-          Every nonempty subset of the natural numbers is well-ordered.
+          Todo subconjunto não vazio dos números naturais é bem ordenado.
         </p>
       </statement>
     </principle>
 
     <p>
-      The Principle of Well-Ordering is equivalent to the Principle of Mathematical Induction.
+      O princípio da boa ordenação é equivalente ao princípio da indução matemática.
     </p>
 
     <lemma xml:id="integers-lemma-smallest-number">
       <statement>
         <p>
-          The Principle of Mathematical Induction implies that <m>1</m> is the least positive natural number.
+          O princípio da indução matemática implica que <m>1</m> é o menor número natural positivo.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>S = \{ n \in {\mathbb N} : n \geq 1 \}</m>.
-          Then <m>1 \in S</m>.
-          Assume that <m>n \in S</m>.
-          Since <m>0 \lt 1</m>,
-          it must be the case that <m>n = n + 0 \lt n + 1</m>.
-          Therefore, <m>1 \leq n \lt n + 1</m>.
-          Consequently, if <m>n \in S</m>,
-          then <m>n + 1</m> must also be in <m>S</m>,
-          and by the Principle of Mathematical Induction, and we have <m>S = \mathbb N</m>.
+          Seja <m>S = \{ n \in {\mathbb N} : n \geq 1 \}</m>.
+          Então <m>1 \in S</m>.
+          Suponha que <m>n \in S</m>.
+          Como <m>0 \lt 1</m>,
+          deve ocorrer <m>n = n + 0 \lt n + 1</m>.
+          Portanto, <m>1 \leq n \lt n + 1</m>.
+          Consequentemente, se <m>n \in S</m>,
+          então <m>n + 1</m> também deve pertencer a <m>S</m>
+          e, pelo princípio da indução matemática, temos <m>S = \mathbb N</m>.
         </p>
       </proof>
     </lemma>
@@ -233,54 +233,54 @@
     <theorem xml:id="integers-theorem-pmi-implies-pwo">
       <statement>
         <p>
-          The Principle of Mathematical Induction implies the Principle of Well-Ordering.
-          That is, every nonempty subset of
-          <m>\mathbb N</m> contains a least element.
+          O princípio da indução matemática implica o princípio da boa ordenação.
+          Isto é, todo subconjunto não vazio de
+          <m>\mathbb N</m> contém um menor elemento.
         </p>
       </statement>
 
       <proof>
         <p>
-          We must show that if <m>S</m> is a nonempty subset of the natural numbers,
-          then <m>S</m> contains a least element.
-          If <m>S</m> contains <m>1</m>, then the theorem is true by <xref ref="integers-lemma-smallest-number"/>.
-          Assume that if <m>S</m> contains an integer <m>k</m> such that <m>1 \leq k \leq n</m>,
-          then <m>S</m> contains a least element.
-          We will show that if a set <m>S</m> contains an integer less than or equal to <m>n + 1</m>,
-          then <m>S</m> has a least element.
-          If <m>S</m> does not contain an integer less than <m>n+1</m>,
-          then <m>n+1</m> is the smallest integer in <m>S</m>.
-          Otherwise, since <m>S</m> is nonempty,
-          <m>S</m> must contain an integer less than or equal to <m>n</m>.
-          In this case, by induction, <m>S</m> contains a least element.
+          Devemos mostrar que, se <m>S</m> é um subconjunto não vazio dos números naturais,
+          então <m>S</m> contém um menor elemento.
+          Se <m>S</m> contém <m>1</m>, então o teorema é verdadeiro por <xref ref="integers-lemma-smallest-number"/>.
+          Suponha que, se <m>S</m> contém um inteiro <m>k</m> tal que <m>1 \leq k \leq n</m>,
+          então <m>S</m> contém um menor elemento.
+          Mostraremos que, se um conjunto <m>S</m> contém um inteiro menor ou igual a <m>n + 1</m>,
+          então <m>S</m> tem um menor elemento.
+          Se <m>S</m> não contém um inteiro menor que <m>n+1</m>,
+          então <m>n+1</m> é o menor inteiro de <m>S</m>.
+          Caso contrário, como <m>S</m> não é vazio,
+          <m>S</m> deve conter um inteiro menor ou igual a <m>n</m>.
+          Nesse caso, por indução, <m>S</m> contém um menor elemento.
         </p>
       </proof>
     </theorem>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <p>
-      Induction can also be very useful in formulating definitions.
-      For instance, there are two ways to define <m>n!</m>,
-      the factorial of a positive integer <m>n</m>.
+      A indução também pode ser muito útil na formulação de definições.
+      Por exemplo, há duas maneiras de definir <m>n!</m>,
+      o fatorial de um inteiro positivo <m>n</m>.
 
       <ul>
         <li>
           <p>
-            The <em>explicit</em> definition:
+            A definição <em>explícita</em>:
             <m>n! = 1 \cdot 2 \cdot 3 \cdots (n - 1) \cdot n</m>.
           </p>
         </li>
 
         <li>
           <p>
-            The <em>inductive</em> or <em>recursive</em> definition:
+            A definição <em>indutiva</em> ou <em>recursiva</em>:
             <m>1! = 1</m> and <m>n! = n(n - 1)!</m> for <m>n \gt 1</m>.
           </p>
         </li>
       </ul>
 
-      Every good mathematician or computer scientist knows that looking at problems recursively,
-      as opposed to explicitly,
-      often results in better understanding of complex issues.
+      Todo bom matemático ou cientista da computação sabe que examinar problemas recursivamente,
+      em oposição a explicitamente,
+      frequentemente resulta em uma melhor compreensão de questões complexas.
     </p>
   </section>
 
