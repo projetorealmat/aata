@@ -2101,7 +2101,7 @@
     <biblio type="raw">
 <!-- was [6] --><!-- I believe that this is not still in print, but it is certainly available through amazon.com 5/4/2010 - TWJ -->
       Halmos, P.
-      <title>Naive Set Theory</title>.  Springer, New York, 1991. One of the best references for set theory.
+      <title>Naive Set Theory</title>.  Springer, New York, 1991. Uma das melhores referências para a teoria dos conjuntos.
     </biblio>
 
     <biblio type="raw">
@@ -2113,15 +2113,15 @@
     <biblio type="raw">
 <!-- was [8] --><!-- Reference updated 5/4/2010 - TWJ -->
       Hungerford, T. W.
-      <title>Algebra</title>. Springer, New York, 1974. One
-      of the standard graduate algebra texts.
+      <title>Algebra</title>. Springer, New York, 1974. Um
+      dos textos padrão de álgebra para pós-graduação.
     </biblio>
 
     <biblio type="raw">
 <!-- was [9] --><!-- Reference updated 5/4/2010 - TWJ -->
       Lang, S.
       <title>Algebra</title>. 3rd ed. Springer, New York, 2002.
-      Another standard graduate text.
+      Outro texto padrão para pós-graduação.
     </biblio>
 
     <biblio type="raw">
@@ -2156,7 +2156,7 @@
 <!-- was [14] --><!-- No longer in print 5/4/2010 - TWJ -->
       van der Waerden, B. L.
       <title>A History of Algebra</title>. Springer-Verlag,
-      New York, 1985. An account of the historical development of algebra.
+      New York, 1985. Um relato do desenvolvimento histórico da álgebra.
     </biblio>
   </references>
 
@@ -2318,23 +2318,23 @@
     </subsection>
 
     <subsection>
-      <title>Immediate Help</title>
+      <title>Ajuda imediata</title>
       <p>
-        Some commands in Sage are <q>functions,</q>
-        an example is <c>factorial()</c> above.
-        Other commands are <q>methods</q>
-        of an object and are like characteristics of objects,
-        an example is <c>.inverse()</c> as a method of a matrix.
-        Once you know how to create an object
-        (such as a matrix),
-        then it is easy to see all the available methods.
-        Write the name of the object,
-        place a period (<q>dot</q>) and hit the TAB key.
-        If you have <c>A</c> defined from above,
-        then the compute cell below is ready to go,
-        click into it and then hit TAB
-        (not <q>evaluate</q>!).
-        You should get a long list of possible methods.
+        Alguns comandos no Sage são <q>funções</q>;
+        um exemplo é <c>factorial()</c> acima.
+        Outros comandos são <q>métodos</q>
+        de um objeto e funcionam como características dos objetos;
+        um exemplo é <c>.inverse()</c> como método de uma matriz.
+        Assim que você souber criar um objeto
+        (como uma matriz),
+        será fácil ver todos os métodos disponíveis.
+        Escreva o nome do objeto,
+        coloque um ponto (<q>ponto</q>) e pressione a tecla TAB.
+        Se você tiver definido <c>A</c> acima,
+        a célula de computação abaixo estará pronta;
+        clique nela e pressione TAB
+        (não <q>avaliar</q>!).
+        Você deverá obter uma longa lista de métodos possíveis.
       </p>
 
             <sage doctest="not tested">
@@ -2342,12 +2342,12 @@
             </sage>
 
       <p>
-        To get some help on how to use a method with an object,
-        write its name after a dot
-        (with no parentheses)
-        and then use a question-mark and hit TAB. (Hit the escape key
-        <q>ESC</q> to remove the list,
-        or click on the text for a method.)
+        Para obter ajuda sobre como usar um método com um objeto,
+        escreva seu nome depois de um ponto
+        (sem parênteses)
+        e então use um ponto de interrogação e pressione TAB. (Pressione a tecla Escape
+        <q>ESC</q> para remover a lista
+        ou clique no texto de um método.)
       </p>
 
             <sage doctest="not tested">
@@ -2355,8 +2355,8 @@
             </sage>
 
       <p>
-        With one more question-mark and a TAB you can see the actual computer instructions that were programmed into Sage to make the method work,
-        once you scoll down past the documentation delimited by the triple quotes (<c>"""</c>):
+        Com mais um ponto de interrogação e TAB, você pode ver as instruções de computador que foram programadas no Sage para fazer o método funcionar,
+        depois de rolar para baixo da documentação delimitada pelas aspas triplas (<c>"""</c>):
       </p>
 
             <sage doctest="not tested">
@@ -2364,14 +2364,14 @@
             </sage>
 
       <p>
-        It is worthwhile to see what Sage does when there is an error.
-        You will probably see a lot of these at first,
-        and initially they will be a bit intimidating.
-        But with time,
-        you will learn how to use them effectively and you will also become more proficient with Sage and see them less often.
-        Execute the compute cell below,
-        it asks for the inverse of a matrix that has no inverse.
-        Then reread the commentary.
+        Vale a pena ver o que o Sage faz quando ocorre um erro.
+        Provavelmente você verá muitos desses erros no início,
+        e eles serão um pouco intimidantes no começo.
+        Mas, com o tempo,
+        você aprenderá a usá-los de modo eficaz, ficará mais proficiente com o Sage e os verá com menos frequência.
+        Execute a célula de computação abaixo;
+        ela solicita a inversa de uma matriz que não tem inversa.
+        Depois, releia os comentários.
       </p>
 
             <sage>
@@ -2387,67 +2387,67 @@
             </sage>
 
       <p>
-        Click just to the left of the error message to expand it fully
-        (another click hides it totally,
-        and a third click brings back the abbreviated form).
-        Read the bottom of an error message first,
-        it is your best explanation.
-        Here a <c>ZeroDivisionError</c> is not 100% accurate,
-        but is close.
-        The matrix is not invertible,
-        not dissimilar to how we cannot divide scalars by zero.
-        The remainder of the message begins at the top showing were the error first happened in your code and then the various places where intermediate functions were called,
-        until the actual piece of Sage where the problem occurred.
-        Sometimes this information will give you some clues,
-        sometimes it is totally undecipherable.
-        So do not let it scare you if it seems mysterious,
-        but do remember to always read the last line first,
-        then go back and read the first few lines for something that looks like your code.
+        Clique logo à esquerda da mensagem de erro para expandi-la completamente
+        (outro clique a oculta por completo,
+        e um terceiro clique restaura a forma abreviada).
+        Leia primeiro a parte inferior de uma mensagem de erro;
+        ela é sua melhor explicação.
+        Aqui, um <c>ZeroDivisionError</c> não é 100% preciso,
+        mas é uma boa aproximação.
+        A matriz não é invertível,
+        assim como não podemos dividir escalares por zero.
+        O restante da mensagem começa no topo, mostrando onde o erro ocorreu primeiro em seu código e, em seguida, os vários pontos em que funções intermediárias foram chamadas,
+        até chegar ao trecho efetivo do Sage em que o problema ocorreu.
+        Às vezes essas informações lhe darão algumas pistas;
+        às vezes serão totalmente indecifráveis.
+        Portanto, não se assuste se tudo parecer misterioso,
+        mas lembre-se de sempre ler primeiro a última linha
+        e depois voltar e ler as primeiras linhas em busca de algo que se pareça com seu código.
       </p>
     </subsection>
 
     <subsection>
-      <title>Annotating Your Work</title>
+      <title>Anotando seu trabalho</title>
       <p>
-        It is easy to comment on your work when you use the Sage Notebook.
-        (The following only applies if you are reading this within a Sage Notebook.
-        If you are not,
-        then perhaps you can go open up a worksheet in the Sage Notebook and experiment there.)
-        You can open up a small word-processor by hovering your mouse until you get a skinny blue bar again,
-        but now when you click, also hold the SHIFT key at the same time.
-        Experiment with fonts, colors,
-        bullet lists, etc and then click the
-        <q>Save changes</q> button to exit.
-        Double-click on your text if you need to go back and edit it later.
+        É fácil comentar seu trabalho quando você usa o Sage Notebook.
+        (O que segue se aplica apenas se você estiver lendo isto em um Sage Notebook.
+        Se não estiver,
+        talvez possa abrir uma planilha no Sage Notebook e experimentar nela.)
+        Você pode abrir um pequeno processador de texto passando o mouse até aparecer novamente uma barra azul estreita,
+        mas agora, ao clicar, mantenha também pressionada a tecla SHIFT.
+        Experimente fontes, cores,
+        listas com marcadores etc. e então clique no botão
+        <q>Salvar alterações</q> para sair.
+        Clique duas vezes no seu texto se precisar voltar e editá-lo mais tarde.
       </p>
 
       <p>
-        Open the word-processor again to create a new bit of text
-        (maybe next to the empty compute cell just below).
-        Type all of the following <em>exactly,</em>
+        Abra novamente o processador de texto para criar um novo trecho
+        (talvez ao lado da célula de computação vazia logo abaixo).
+        Digite tudo a seguir <em>exatamente</em>
         <cd>
           <cline>Pythagorean Theorem: $c^2=a^2+b^2$</cline>
         </cd>
-        and save your changes.
-        The symbols between the dollar signs are written according to the mathematical typesetting language known as <tex/> <mdash/> cruise the internet to learn more about this very popular tool.
-        (Well, it is extremely popular among mathematicians and physical scientists.)
+        e salve suas alterações.
+        Os símbolos entre os cifrões são escritos de acordo com a linguagem de composição tipográfica matemática conhecida como <tex/> <mdash/> navegue pela internet para saber mais sobre essa ferramenta muito popular.
+        (Bem, ela é extremamente popular entre matemáticos e cientistas físicos.)
       </p>
 
       <sage/>
     </subsection>
 
     <subsection>
-      <title>Lists</title>
+      <title>Listas</title>
       <p>
-        Much of our interaction with sets will be through Sage lists.
-        These are not really sets <mdash/> they allow duplicates,
-        and order matters.
-        But they are so close to sets,
-        and so easy and powerful to use that we will use them regularly.
-        We will use a fun made-up list for practice,
-        the quote marks mean the items are just text,
-        with no special mathematical meaning.
-        Execute these compute cells as we work through them.
+        Grande parte da nossa interação com conjuntos ocorrerá por meio das listas do Sage.
+        Elas não são realmente conjuntos <mdash/> permitem duplicatas,
+        e a ordem importa.
+        Mas são tão próximas de conjuntos,
+        e tão fáceis e poderosas de usar, que as usaremos regularmente.
+        Usaremos uma lista inventada e divertida para praticar;
+        as aspas significam que os itens são apenas texto,
+        sem significado matemático especial.
+        Execute estas células de computação à medida que avançamos.
       </p>
 
             <sage>
@@ -2461,13 +2461,13 @@
             </sage>
 
       <p>
-        So the square brackets define the boundaries of our list,
-        commas separate items, and we can give the list a name.
-        To work with just one element of the list,
-        we use the name and a pair of brackets with an index.
-        Notice that lists have indices that
-        <em>begin counting at zero</em>.
-        This will seem odd at first and will seem very natural later.
+        Assim, os colchetes definem os limites da nossa lista,
+        as vírgulas separam os itens e podemos dar um nome à lista.
+        Para trabalhar com apenas um elemento da lista,
+        usamos o nome e um par de colchetes com um índice.
+        Observe que as listas têm índices que
+        <em>começam a contar em zero</em>.
+        Isso parecerá estranho no início e muito natural mais tarde.
       </p>
 
             <sage>
@@ -2476,8 +2476,8 @@
             </sage>
 
       <p>
-        We can add a new creature to the zoo,
-        it is joined up at the far right end.
+        Podemos adicionar uma nova criatura ao zoológico;
+        ela é inserida na extremidade direita.
       </p>
 
             <sage>
@@ -2486,7 +2486,7 @@
             </sage>
 
       <p>
-        We can remove a creature.
+        Podemos remover uma criatura.
       </p>
 
             <sage>
@@ -2498,14 +2498,14 @@
             </sage>
 
       <p>
-        We can extract a sublist.
-        Here we start with element 1
-        (the elephant)
-        and go all the way up to, <em>but not including</em>, element 3
-        (the beetle).
-        Again a bit odd, but it will feel natural later.
-        For now, notice that we are extracting two elements of the lists,
-        exactly <m>3-1=2</m> elements.
+        Podemos extrair uma sublista.
+        Aqui começamos com o elemento 1
+        (o elefante)
+        e vamos até, <em>mas sem incluir</em>, o elemento 3
+        (o besouro).
+        Novamente, isso é um pouco estranho, mas parecerá natural mais tarde.
+        Por enquanto, observe que estamos extraindo dois elementos das listas,
+        exatamente <m>3-1=2</m> elementos.
       </p>
 
             <sage>
@@ -2517,11 +2517,11 @@
             </sage>
 
       <p>
-        Often we will want to see if two lists are equal.
-        To do that we will need to sort a list first.
-        A function creates a new, sorted list,
-        leaving the original alone.
-        So we need to save the new one with a new name.
+        Muitas vezes, desejaremos verificar se duas listas são iguais.
+        Para isso, primeiro precisaremos ordenar uma lista.
+        Uma função cria uma nova lista ordenada,
+        deixando a original intacta.
+        Portanto, precisamos salvar a nova com um novo nome.
       </p>
 
             <sage>
@@ -2540,16 +2540,16 @@
             </sage>
 
       <p>
-        Notice that if you run this last compute cell your zoo has changed and some commands above will not necessarily execute the same way.
-        If you want to experiment,
-        go all the way back to the first creation of the zoo and start executing cells again from there with a fresh zoo.
+        Observe que, se executar esta última célula de computação, seu zoológico terá mudado e alguns comandos acima não necessariamente serão executados da mesma maneira.
+        Se quiser experimentar,
+        volte até a primeira criação do zoológico e comece a executar as células novamente a partir dali, com um zoológico novo.
       </p>
 
       <p>
-        A construction called a <term>list comprehension</term> is especially powerful,
-        since it almost exactly mirrors notation we use to describe sets.
-        Suppose we want to form the plural of the names of the creatures in our zoo.
-        We build a new list, based on all of the elements of our old list.
+        Uma construção chamada <term>compreensão de lista</term> é especialmente poderosa,
+        pois espelha quase exatamente a notação que usamos para descrever conjuntos.
+        Suponha que queiramos formar o plural dos nomes das criaturas do nosso zoológico.
+        Construímos uma nova lista com base em todos os elementos da lista antiga.
       </p>
 
             <sage>
@@ -2561,25 +2561,25 @@
             </sage>
 
       <p>
-        Almost like it says: we add an <q>s</q> to each animal name,
-        for each animal in the zoo, and place them in a new list.
-        Perfect.
-        (Except for getting the plural of <q>ostrich</q> wrong.)
+        É quase exatamente o que a expressão diz: adicionamos um <q>s</q> a cada nome de animal,
+        para cada animal do zoológico, e os colocamos em uma nova lista.
+        Perfeito.
+        (Exceto por errar o plural de <q>ostrich</q>.)
       </p>
     </subsection>
 
     <subsection>
-      <title>Lists of Integers</title>
+      <title>Listas de inteiros</title>
       <p>
-        One final type of list, with numbers this time.
-        The <c>srange()</c> function will create lists of integers.
-        (The <q>s</q> in the name stands for <q>Sage</q>
-        and so will produce integers that Sage understands best.
-        Many early difficulties with Sage and group theory can be alleviated by using only this command to create lists of integers.)
-        In its simplest form an invocation like <c>srange(12)</c> will create a list of 12 integers,
-        <em>starting at zero</em> and working up to,
-        <em>but not including</em>, 12.
-        Does this sound familiar?
+        Um último tipo de lista, desta vez com números.
+        A função <c>srange()</c> criará listas de inteiros.
+        (O <q>s</q> no nome significa <q>Sage</q>
+        e, portanto, produzirá inteiros que o Sage compreende melhor.
+        Muitas dificuldades iniciais com o Sage e a teoria de grupos podem ser atenuadas usando apenas este comando para criar listas de inteiros.)
+        Em sua forma mais simples, uma chamada como <c>srange(12)</c> criará uma lista de 12 inteiros,
+        <em>começando em zero</em> e indo até,
+        <em>mas sem incluir</em>, 12.
+        Isso parece familiar?
       </p>
 
             <sage>
@@ -2588,8 +2588,8 @@
             </sage>
 
       <p>
-        Here are two other forms,
-        that you should be able to understand by studying the examples.
+        Eis duas outras formas,
+        que você deve conseguir compreender estudando os exemplos.
       </p>
 
             <sage>
@@ -2603,61 +2603,61 @@
     </subsection>
 
     <subsection>
-      <title>Saving and Sharing Your Work</title>
+      <title>Salvando e compartilhando seu trabalho</title>
       <p>
-        There is a <q>Save</q> button in the upper-right corner of the Sage Notebook.
-        This will save a current copy of your worksheet that you can retrieve your work from within your notebook again later,
-        though you have to re-execute all the cells when you re-open the worksheet.
+        Há um botão <q>Salvar</q> no canto superior direito do Sage Notebook.
+        Ele salvará uma cópia atual da sua planilha, da qual você poderá recuperar seu trabalho dentro do notebook mais tarde,
+        embora precise executar novamente todas as células quando reabrir a planilha.
       </p>
 
       <p>
-        There is also a <q>File</q> drop-down list, on the left,
-        just above your very top compute cell
-        (not be confused with your browser's File menu item!).
-        You will see a choice here labeled
-        <q>Save worksheet to a file...</q> When you do this,
-        you are creating a copy of your worksheet in the <c>sws</c> format
-        (short for <q>Sage WorkSheet</q>).
-        You can email this file, or post it on a website,
-        for other Sage users and they can use the <q>Upload</q>
-        link on the homepage of their notebook to incorporate a copy of your worksheet into their notebook.
+        Há também uma lista suspensa <q>Arquivo</q>, à esquerda,
+        logo acima da sua célula de computação mais acima
+        (não a confunda com o item Arquivo do menu do navegador!).
+        Você verá aqui uma opção chamada
+        <q>Salvar planilha em um arquivo...</q>. Ao fazer isso,
+        você estará criando uma cópia da sua planilha no formato <c>sws</c>
+        (abreviação de <q>Sage WorkSheet</q>).
+        Você pode enviar esse arquivo por e-mail ou publicá-lo em um site;
+        outros usuários do Sage poderão usar o link <q>Upload</q>
+        na página inicial do notebook para incorporar uma cópia da sua planilha ao próprio notebook.
       </p>
 
       <p>
-        There are other ways to share worksheets that you can experiment with,
-        but this gives you one way to share any worksheet with anybody almost anywhere.
+        Há outras maneiras de compartilhar planilhas que você pode experimentar,
+        mas esta oferece uma forma de compartilhar qualquer planilha com qualquer pessoa, praticamente em qualquer lugar.
       </p>
 
       <p>
-        We have covered a lot here in this section,
-        so come back later to pick up tidbits you might have missed.
-        There are also many more features in the Sage Notebook that we have not covered.
+        Cobrimos muita coisa nesta seção,
+        portanto volte mais tarde para recuperar detalhes que possa ter perdido.
+        Há também muitos outros recursos no Sage Notebook que não abordamos.
       </p>
     </subsection>
 
   </section>
 
   <exercises xml:id="sets-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <exercise number="1" xml:id="sets-sage-exercise-cocalc">
       <statement>
         <p>
-          This exercise is just about making sure you know how to use Sage.
-          You may be using the Sage Notebook server the online CoCalc service through your web browser.
-          In either event, create a new worksheet.
-          Do some non-trivial computation,
-          maybe a pretty plot or some gruesome numerical computation to an insane precision.
-          Create an interesting list and experiment with it some.
-          Maybe include some nicely formatted text or <tex/> using the included mini-word-processor of the Sage Notebook
-          (hover until a blue bar appears between cells and then shift-click)
-          or create commentary in cells within CoCalc using the <term>magics</term>
-          <c>%html</c> or <c>%md</c> on a line of their own followed by text in <init>HTML</init> or Markdown syntax
-          (respectively).
+          Este exercício serve apenas para garantir que você sabe usar o Sage.
+          Talvez esteja usando o servidor do Sage Notebook ou o serviço CoCalc on-line pelo navegador.
+          Em qualquer caso, crie uma nova planilha.
+          Faça algum cálculo não trivial,
+          talvez um gráfico bonito ou um cálculo numérico monstruoso com uma precisão insana.
+          Crie uma lista interessante e experimente com ela.
+          Talvez inclua algum texto bem formatado ou <tex/> usando o miniprocessador de texto incluído no Sage Notebook
+          (passe o mouse até aparecer uma barra azul entre as células e então clique com SHIFT)
+          ou crie comentários nas células do CoCalc usando as <term>mágicas</term>
+          <c>%html</c> ou <c>%md</c> em uma linha própria, seguidos de texto na sintaxe de <init>HTML</init> ou Markdown
+          (respectivamente).
         </p>
 
         <p>
-          Use whatever mechanism your instructor has in place for submitting your work.
-          Or save your worksheet and then trade with a classmate.
+          Use o mecanismo que seu professor tiver estabelecido para enviar seu trabalho.
+          Ou salve sua planilha e troque-a com um colega.
         </p>
       </statement>
     </exercise>
