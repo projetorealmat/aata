@@ -612,18 +612,18 @@
     </subsection>
 
     <subsection xml:id="sets-subsection-cartesian-products">
-      <title>Cartesian Products and Mappings</title>
+      <title>Produtos cartesianos e aplicações</title>
       <p>
-        Given sets <m>A</m> and <m>B</m>,
-        we can define a new set <m>A \times B</m>,
-        called the <term>Cartesian product</term>
-        of <m>A</m> and <m>B</m>,
-        as a set of ordered pairs.
-        That is,
+        Dados os conjuntos <m>A</m> e <m>B</m>,
+        podemos definir um novo conjunto <m>A \times B</m>,
+        chamado <term>produto cartesiano</term>
+        de <m>A</m> e <m>B</m>,
+        como um conjunto de pares ordenados.
+        Isto é,
 
         <notation>
           <usage><m>A \times B</m></usage>
-          <description>Cartesian product of sets <m>A</m> and <m>B</m></description>
+          <description>produto cartesiano dos conjuntos <m>A</m> e <m>B</m></description>
         </notation>
 
         <md>
@@ -633,8 +633,8 @@
 
       <example xml:id="sets-example-cartesian-products">
         <p>
-          If <m>A = \{ x, y \}</m>, <m>B = \{ 1, 2, 3 \}</m>,
-          and <m>C = \emptyset</m>, then <m>A \times B</m> is the set
+          Se <m>A = \{ x, y \}</m>, <m>B = \{ 1, 2, 3 \}</m>
+          e <m>C = \emptyset</m>, então <m>A \times B</m> é o conjunto
           <md>
             \{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}
           </md>
@@ -646,59 +646,59 @@
       </example>
 
       <p>
-        We define the <term>Cartesian product of <m>n</m> sets</term> to be
+        Definimos o <term>produto cartesiano de <m>n</m> conjuntos</term> como
         <md>
           A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}
         </md>.
-        If <m>A = A_1 = A_2 = \cdots = A_n</m>,
-        we often write <m>A^n</m> for <m>A \times \cdots \times A</m>
-        (where <m>A</m> would be written <m>n</m> times).
+        Se <m>A = A_1 = A_2 = \cdots = A_n</m>,
+        frequentemente escrevemos <m>A^n</m> para <m>A \times \cdots \times A</m>
+        (em que <m>A</m> seria escrito <m>n</m> vezes).
 
         <notation>
           <usage><m>A^n</m></usage>
-          <description><m>A \times \cdots \times A</m> (<m>n</m> times)</description>
+          <description><m>A \times \cdots \times A</m> (<m>n</m> vezes)</description>
         </notation>
 
-        For example,
-        the set <m>{\mathbb R}^3</m> consists of all of 3-tuples of real numbers.
+        Por exemplo,
+        o conjunto <m>{\mathbb R}^3</m> consiste de todas as 3-uplas de números reais.
       </p>
 
       <p>
-        Subsets of <m>A \times B</m> are called <term>relations</term>.
-        We will define a <term>mapping</term><idx><h>Mapping</h><see>Function</see></idx> or
-        <term>function</term><idx><h>Function</h><h>definition of</h></idx>
-        <m>f \subset A \times B</m> from a set <m>A</m> to a set <m>B</m> to be the special type of relation where each element <m>a \in A</m> has a unique element <m>b \in B</m> such that <m>(a, b) \in f</m>.
-        Another way of saying this is that for every element in <m>A</m>,
-        <m>f</m> assigns a unique element in <m>B</m>.
-        We usually write <m>f:A \rightarrow B</m> or <m>A \stackrel{f}{\rightarrow} B</m>.
-        Instead of writing down ordered pairs  <m>(a,b) \in A \times B</m>,
-        we write <m>f(a) = b</m> or <m>f : a \mapsto b</m>.
-        The set  <m>A</m> is called the
-        <term>domain</term><idx><h>Function</h><h>domain of</h></idx> of <m>f</m> and
+        Os subconjuntos de <m>A \times B</m> são chamados de <term>relações</term>.
+        Definiremos uma <term>aplicação</term><idx><h>Aplicação</h><see>Função</see></idx> ou
+        <term>função</term><idx><h>Função</h><h>definição de</h></idx>
+        <m>f \subset A \times B</m> de um conjunto <m>A</m> em um conjunto <m>B</m> como o tipo especial de relação em que cada elemento <m>a \in A</m> possui um único elemento <m>b \in B</m> tal que <m>(a, b) \in f</m>.
+        Em outras palavras, para todo elemento de <m>A</m>,
+        <m>f</m> associa um único elemento de <m>B</m>.
+        Geralmente escrevemos <m>f:A \rightarrow B</m> ou <m>A \stackrel{f}{\rightarrow} B</m>.
+        Em vez de escrever os pares ordenados <m>(a,b) \in A \times B</m>,
+        escrevemos <m>f(a) = b</m> ou <m>f : a \mapsto b</m>.
+        O conjunto <m>A</m> é chamado
+        de <term>domínio</term><idx><h>Função</h><h>domínio de</h></idx> de <m>f</m> e
         <md>
           f(A) = \{ f(a) : a \in A \} \subset B
         </md>
-        is called the <term>range</term><idx><h>Function</h><h>range of</h></idx>
-        or <term>image</term> of <m>f</m>.
-        We can think of the elements in the function's domain as input values and the elements in the function's range as output values.
+        é chamado de <term>imagem</term><idx><h>Função</h><h>imagem de</h></idx>
+        ou <term>imagem</term> de <m>f</m>.
+        Podemos pensar nos elementos do domínio da função como valores de entrada e nos elementos da imagem da função como valores de saída.
       </p>
 
 
 
       <example xml:id="sets-example-mappings">
         <p>
-          Suppose <m>A = \{1, 2, 3 \}</m> and <m>B = \{a, b, c \}</m>.
-          In <xref ref="sets-figure-mappings"/> we define relations <m>f</m> and <m>g</m> from <m>A</m> to <m>B</m>.
-          The relation <m>f</m> is a mapping,
-          but <m>g</m> is not because <m>1 \in A</m> is not assigned to a unique element in <m>B</m>;
-          that is, <m>g(1) = a</m> and <m>g(1) = b</m>.
+          Suponha que <m>A = \{1, 2, 3 \}</m> e <m>B = \{a, b, c \}</m>.
+          Em <xref ref="sets-figure-mappings"/> definimos as relações <m>f</m> e <m>g</m> de <m>A</m> em <m>B</m>.
+          A relação <m>f</m> é uma aplicação,
+          mas <m>g</m> não é, pois <m>1 \in A</m> não está associado a um único elemento de <m>B</m>;
+          isto é, <m>g(1) = a</m> e <m>g(1) = b</m>.
         </p>
 
         <figure xml:id="sets-figure-mappings">
-          <caption>Mappings and relations</caption>
+          <caption>Aplicações e relações</caption>
             <!-- Changed the figure to a tikz diagram - TWJ 5/4/2010 -->
           <image width="60%" xml:id="sets-mappings">
-            <description>Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c.  The first mapping, f, sends 1 to b and 2 and 3 to c.  The second relation, g, sends 1 to a and b, 2 to c, and 3 to a</description>
+            <description>Dois conjuntos de ovais, A e B, relacionando 1, 2, 3 com a, b, c. A primeira aplicação, f, associa 1 a b e 2 e 3 a c. A segunda relação, g, associa 1 a a e b, 2 a c e 3 a a</description>
 
             <latex-image>
                 <xi:include href="tikz/sets-mappings.tex" parse="text"/>
@@ -710,63 +710,63 @@
       </example>
 
       <p>
-        Given a function <m>f : A \rightarrow B</m>,
-        it is often possible to write a list describing what the function does to each specific element in the domain.
-        However, not all functions can be described in this manner.
-        For example,
-        the function <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> that sends each real number to its cube is a mapping that must be described by writing
-        <m>f(x) = x^3</m> or <m>f:x \mapsto x^3</m>.
+        Dada uma função <m>f : A \rightarrow B</m>,
+        frequentemente é possível escrever uma lista que descreva o que a função faz com cada elemento específico do domínio.
+        No entanto, nem todas as funções podem ser descritas dessa maneira.
+        Por exemplo,
+        a função <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> que associa a cada número real o seu cubo é uma aplicação que deve ser descrita escrevendo
+        <m>f(x) = x^3</m> ou <m>f:x \mapsto x^3</m>.
       </p>
 
       <p>
-        Consider the relation <m>f : {\mathbb Q} \rightarrow {\mathbb Z}</m> given by <m>f(p/q) = p</m>.
-        We know that <m>1/2 = 2/4</m>,
-        but is <m>f(1/2) = 1</m> or <m>2</m>?
-        This relation cannot be a mapping because it is not well-defined.
-        A relation is <term>well-defined</term><idx><h>Well-defined map</h></idx>
-        if each element in the domain is assigned to a
-        <em>unique</em> element in the range.
+        Considere a relação <m>f : {\mathbb Q} \rightarrow {\mathbb Z}</m> dada por <m>f(p/q) = p</m>.
+        Sabemos que <m>1/2 = 2/4</m>,
+        mas <m>f(1/2) = 1</m> ou <m>2</m>?
+        Essa relação não pode ser uma aplicação porque não é bem definida.
+        Uma relação é <term>bem definida</term><idx><h>Aplicação bem definida</h></idx>
+        se cada elemento do domínio estiver associado a um elemento
+        <em>único</em> da imagem.
       </p>
 
       <p>
-        If <m>f:A \rightarrow B</m> is a map and the image of <m>f</m> is <m>B</m>,
-        i.e., <m>f(A) = B</m>, then <m>f</m> is said to be <term>onto</term><idx><h>Function</h><h>onto</h></idx>
-        or <idx><h>Function</h><h>surjective</h></idx><term>surjective</term>.
-        In other words,
-        if there exists an <m>a \in A</m> for each <m>b \in B</m> such that
-        <m>f(a) = b</m>, then <m>f</m> is onto.
-        A map is <term>one-to-one</term><idx><h>Function</h><h>one-to-one</h></idx> or
-        <term>injective</term><idx><h>Function</h><h>injective</h></idx> if
-        <m>a_1 \neq a_2</m> implies <m>f(a_1) \neq f(a_2)</m>.
-        Equivalently, a function is one-to-one if
-        <m>f(a_1) = f(a_2)</m> implies <m>a_1 = a_2</m>.
-        A map that is both one-to-one and onto is called <idx><h>Function</h><h>bijective</h></idx><term>bijective</term>.
+        Se <m>f:A \rightarrow B</m> é uma aplicação e a imagem de <m>f</m> é <m>B</m>,
+        isto é, <m>f(A) = B</m>, então <m>f</m> é dita <term>sobrejetiva</term><idx><h>Função</h><h>sobrejetiva</h></idx>
+        ou <idx><h>Função</h><h>sobre</h></idx><term>sobre</term>.
+        Em outras palavras,
+        se existe um <m>a \in A</m> para cada <m>b \in B</m> tal que
+        <m>f(a) = b</m>, então <m>f</m> é sobrejetiva.
+        Uma aplicação é <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> ou
+        <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> se
+        <m>a_1 \neq a_2</m> implica <m>f(a_1) \neq f(a_2)</m>.
+        Equivalentemente, uma função é injetiva se
+        <m>f(a_1) = f(a_2)</m> implica <m>a_1 = a_2</m>.
+        Uma aplicação que é simultaneamente injetiva e sobrejetiva é chamada de <idx><h>Função</h><h>bijetiva</h></idx><term>bijetiva</term>.
       </p>
             <!-- Added explanation for onto map - TWJ 1/25/2011 -->
       <example xml:id="sets-example-one-to-one-onto">
         <p>
-          Let <m>f:{\mathbb Z} \rightarrow {\mathbb Q}</m> be defined by <m>f(n) = n/1</m>.
-          Then <m>f</m> is one-to-one but not onto.
-          Define <m>g : {\mathbb Q} \rightarrow {\mathbb Z}</m> by
-          <m>g(p/q) = p</m> where <m>p/q</m> is a rational number expressed in its lowest terms with a positive denominator.
-          The function <m>g</m> is onto but not one-to-one.
+          Seja <m>f:{\mathbb Z} \rightarrow {\mathbb Q}</m> definida por <m>f(n) = n/1</m>.
+          Então <m>f</m> é injetiva, mas não sobrejetiva.
+          Defina <m>g : {\mathbb Q} \rightarrow {\mathbb Z}</m> por
+          <m>g(p/q) = p</m>, em que <m>p/q</m> é um número racional expresso na forma irredutível, com denominador positivo.
+          A função <m>g</m> é sobrejetiva, mas não injetiva.
         </p>
       </example>
 
       <p>
-        Given two functions,
-        we can construct a new function by using the range of the first function as the domain of the second function.
-        Let <m>f : A \rightarrow B</m> and <m>g : B \rightarrow C</m> be mappings.
-        Define a new map,
-        the <term>composition</term><idx><h>Function</h><h>composition of</h></idx> of <m>f</m> and <m>g</m> from <m>A</m> to <m>C</m>,
-        by <m>(g \circ f)(x) = g(f(x))</m>.
+        Dadas duas funções,
+        podemos construir uma nova função usando a imagem da primeira função como domínio da segunda.
+        Sejam <m>f : A \rightarrow B</m> e <m>g : B \rightarrow C</m> aplicações.
+        Defina uma nova aplicação,
+        a <term>composição</term><idx><h>Função</h><h>composição de</h></idx> de <m>f</m> e <m>g</m> de <m>A</m> em <m>C</m>,
+        por <m>(g \circ f)(x) = g(f(x))</m>.
       </p>
 
       <figure xml:id="sets-figure-composition">
-        <caption>Composition of maps</caption>
+        <caption>Composição de aplicações</caption>
             <!-- Changed the figure to a tikz diagram - TWJ 5/4/2010 -->
         <image width="90%" xml:id="sets-composition">
-          <description>Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c and a, b, c to X, Y, Z.  The first mapping, f, sends 1 to b, 2  2 to c, and 3 to a.  The second relation, g, sends a and b to Z and c to X.  The bottom map, g circle f, sends 1 and 3 to Z and 2 to X. </description>
+          <description>Dois conjuntos de ovais, A e B, relacionando 1, 2, 3 com a, b, c, e a, b, c com X, Y, Z. A primeira aplicação, f, associa 1 a b, 2 a c e 3 a a. A segunda relação, g, associa a e b a Z e c a X. A aplicação inferior, g composta com f, associa 1 e 3 a Z e 2 a X.</description>
             <latex-image>
                 <xi:include href="tikz/sets-composition.tex" parse="text"/>
             </latex-image>
@@ -776,41 +776,41 @@
 
       <example xml:id="sets-example-composition">
         <p>
-          Consider the functions <m>f: A \rightarrow B</m> and
-          <m>g: B \rightarrow C</m> that are defined in <xref ref="sets-figure-composition"/>
-          (top).
-          The composition of these functions,
+          Considere as funções <m>f: A \rightarrow B</m> e
+          <m>g: B \rightarrow C</m> definidas em <xref ref="sets-figure-composition"/>
+          (parte superior).
+          A composição dessas funções,
           <m>g \circ f: A \rightarrow C</m>,
-          is defined in <xref ref="sets-figure-composition"/>
-          (bottom).
+          está definida em <xref ref="sets-figure-composition"/>
+          (parte inferior).
         </p>
       </example>
             <!-- Changed figure references.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
       <example xml:id="sets-example-composition-noncommute">
         <p>
-          Let <m>f(x) = x^2</m> and <m>g(x) = 2x + 5</m>.
-          Then
+          Sejam <m>f(x) = x^2</m> e <m>g(x) = 2x + 5</m>.
+          Então
           <md>
             (f \circ g)(x) = f(g(x)) = (2x + 5)^2 = 4x^2 + 20x + 25
           </md>
-          and
+          e
           <md>
             (g \circ f)(x) = g(f(x)) = 2x^2 + 5
           </md>.
-          In general, order makes a difference;
-          that is, in most cases <m>f \circ g \neq g \circ f</m>.
+          Em geral, a ordem faz diferença;
+          isto é, na maioria dos casos <m>f \circ g \neq g \circ f</m>.
         </p>
       </example>
 
       <example xml:id="sets-example-composition-commute">
         <p>
-          Sometimes it is the case that <m>f \circ g= g \circ f</m>.
-          Let <m>f(x) = x^3</m> and <m>g(x) = \sqrt[3]{x}</m>.
-          Then
+          Às vezes ocorre que <m>f \circ g= g \circ f</m>.
+          Sejam <m>f(x) = x^3</m> e <m>g(x) = \sqrt[3]{x}</m>.
+          Então
           <md>
             (f \circ g )(x) = f(g(x)) = f( \sqrt[3]{x}\, ) = (\sqrt[3]{x}\, )^3 = x
           </md>
-          and
+          e
           <md>
             (g \circ f )(x) = g(f(x)) = g( x^3) = \sqrt[3]{ x^3} = x
           </md>.
@@ -819,7 +819,7 @@
 
       <example xml:id="sets-example-linear-map">
         <p>
-          Given a <m>2 \times 2</m> matrix
+          Dada uma matriz <m>2 \times 2</m>
           <md>
             A =
             \begin{pmatrix}
@@ -827,12 +827,12 @@
             c &amp; d
             \end{pmatrix}
           </md>,
-          we can define a map <m>T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> by
+          podemos definir uma aplicação <m>T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> por
           <md>
             T_A (x,y) = (ax + by, cx +dy)
           </md>
-          for <m>(x,y)</m> in <m>{\mathbb R}^2</m>.
-          This is actually matrix multiplication; that is,
+          para <m>(x,y)</m> em <m>{\mathbb R}^2</m>.
+          Trata-se, na verdade, de uma multiplicação de matrizes; isto é,
           <md>
             \begin{pmatrix}
             a &amp; b \\
@@ -847,21 +847,21 @@
             cx +dy
             \end{pmatrix}
           </md>.
-          Maps from <m>{\mathbb R}^n</m> to
-          <m>{\mathbb R}^m</m> given by matrices are called <term>linear maps</term>
-          or <idx><h>Linear transformation</h><h>definition of</h></idx><term>linear transformations</term>.      
+          As aplicações de <m>{\mathbb R}^n</m> em
+          <m>{\mathbb R}^m</m> dadas por matrizes são chamadas de <term>aplicações lineares</term>
+          ou <idx><h>Transformação linear</h><h>definição de</h></idx><term>transformações lineares</term>.
         </p>
       </example>
 
       <example xml:id="sets-example-permutation">
         <p>
-          Suppose that <m>S = \{ 1,2,3  \}</m>.
-          Define a map <m>\pi :S\rightarrow S</m> by
+          Suponha que <m>S = \{ 1,2,3  \}</m>.
+          Defina uma aplicação <m>\pi :S\rightarrow S</m> por
           <md>
             \pi( 1 )  = 2, \qquad \pi( 2 )  = 1, \qquad \pi( 3 )  = 3
           </md>.
-          This is a bijective map.
-          An alternative way to  write <m>\pi</m> is
+          Essa é uma aplicação bijetiva.
+          Uma forma alternativa de escrever <m>\pi</m> é
           <md>
             \begin{pmatrix}
             1 &amp; 2 &amp; 3 \\
@@ -873,45 +873,45 @@
             2 &amp; 1 &amp; 3
             \end{pmatrix}
           </md>.
-          For any set <m>S</m>,
-          a one-to-one and onto mapping <m>\pi : S \rightarrow S</m> is called a
-          <term>permutation</term><idx><h>Permutation</h><h>definition of</h></idx> of <m>S</m>.
+          Para qualquer conjunto <m>S</m>,
+          uma aplicação injetiva e sobrejetiva <m>\pi : S \rightarrow S</m> é chamada de
+          <term>permutação</term><idx><h>Permutação</h><h>definição de</h></idx> de <m>S</m>.
         </p>
       </example>
 
       <theorem>
         <statement>
           <p>
-            Let <m>f : A \rightarrow B</m>,
-            <m>g : B \rightarrow C</m>, and <m>h : C \rightarrow D</m>.
-            Then
+            Sejam <m>f : A \rightarrow B</m>,
+            <m>g : B \rightarrow C</m> e <m>h : C \rightarrow D</m>.
+            Então
 
             <ol>
               <li>
                 <p>
-                  The composition of mappings is associative;
-                  that is, <m>(h \circ g) \circ f = h \circ (g \circ f)</m>;
+                  A composição de aplicações é associativa;
+                  isto é, <m>(h \circ g) \circ f = h \circ (g \circ f)</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>f</m> and <m>g</m> are both one-to-one,
-                  then the mapping <m>g \circ f</m> is one-to-one;
+                  Se <m>f</m> e <m>g</m> são ambas injetivas,
+                  então a aplicação <m>g \circ f</m> é injetiva;
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>f</m> and <m>g</m> are both onto,
-                  then the mapping <m>g \circ f</m> is onto;
+                  Se <m>f</m> e <m>g</m> são ambas sobrejetivas,
+                  então a aplicação <m>g \circ f</m> é sobrejetiva;
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>f</m> and <m>g</m> are bijective,
-                  then so is <m>g \circ f</m>.
+                  Se <m>f</m> e <m>g</m> são bijetivas,
+                  então <m>g \circ f</m> também é.
                 </p>
               </li>
             </ol>
@@ -920,17 +920,17 @@
 
         <proof>
           <p>
-            We will prove (1) and (3).
-            Part (2) is left as an exercise.
-            Part (4) follows directly from (2) and (3).
+            Demonstraremos (1) e (3).
+            A parte (2) fica como exercício.
+            A parte (4) segue diretamente de (2) e (3).
           </p>
 
           <p>
-            (1) We must show that
+            (1) Devemos mostrar que
             <md>
               h \circ (g \circ f) = (h \circ g) \circ f
             </md>.
-            For <m>a \in A</m> we have
+            Para <m>a \in A</m>, temos
             <md>
               <mrow>(h \circ (g \circ f))(a) &amp; = h((g \circ f)(a))</mrow>
               <mrow>&amp; = h(g(f(a)))</mrow>
@@ -940,13 +940,13 @@
           </p>
 
           <p>
-            (3) Assume that <m>f</m> and <m>g</m> are both onto functions.
-            Given <m>c \in C</m>,
-            we must show that there exists an <m>a \in A</m> such that <m>(g \circ f)(a) = g(f(a)) = c</m>.
-            However, since <m>g</m> is onto,
-            there is an element <m>b \in B</m> such that <m>g(b) = c</m>.
-            Similarly, there is an <m>a \in A</m> such that <m>f(a) = b</m>.
-            Accordingly,
+            (3) Suponha que <m>f</m> e <m>g</m> sejam funções sobrejetivas.
+            Dado <m>c \in C</m>,
+            devemos mostrar que existe um <m>a \in A</m> tal que <m>(g \circ f)(a) = g(f(a)) = c</m>.
+            Como <m>g</m> é sobrejetiva,
+            existe um elemento <m>b \in B</m> tal que <m>g(b) = c</m>.
+            Analogamente, existe um <m>a \in A</m> tal que <m>f(a) = b</m>.
+            Portanto,
             <md>
               (g \circ f)(a) = g(f(a)) = g(b) = c
             </md>.
@@ -955,58 +955,58 @@
       </theorem>
 
       <p>
-        If <m>S</m> is any set, we will use <m>\identity_S</m> or <m>\identity</m> to denote the
-        <term>identity mapping</term><idx><h>Function</h><h>identity</h></idx>
-        from <m>S</m> to itself.
-        Define this map by <m>\identity(s) = s</m> for all <m>s \in S</m>.
-        A map <m>g: B \rightarrow A</m> is an
-        <term>inverse mapping</term>
-        of <m>f: A \rightarrow B</m> if
-        <m>g \circ f = \identity_A</m> and <m>f \circ g = \identity_B</m>;
-        in other words, the inverse function of a function simply
-        <q>undoes</q> the function.
-        A map is said to be <term>invertible</term><idx><h>Function</h><h>invertible</h></idx> if it has an inverse.
-        We usually write <m>f^{-1}</m> for the inverse of <m>f</m>.
+        Se <m>S</m> é qualquer conjunto, usaremos <m>\identity_S</m> ou <m>\identity</m> para denotar a
+        <term>aplicação identidade</term><idx><h>Função</h><h>identidade</h></idx>
+        de <m>S</m> em si mesmo.
+        Defina essa aplicação por <m>\identity(s) = s</m> para todo <m>s \in S</m>.
+        Uma aplicação <m>g: B \rightarrow A</m> é uma
+        <term>aplicação inversa</term>
+        de <m>f: A \rightarrow B</m> se
+        <m>g \circ f = \identity_A</m> e <m>f \circ g = \identity_B</m>;
+        em outras palavras, a função inversa de uma função simplesmente
+        <q>desfaz</q> a função.
+        Uma aplicação é dita <term>invertível</term><idx><h>Função</h><h>invertível</h></idx> se possui uma inversa.
+        Geralmente escrevemos <m>f^{-1}</m> para a inversa de <m>f</m>.
 
         <notation>
           <usage><m>id</m></usage>
-          <description>identity mapping</description>
+          <description>aplicação identidade</description>
         </notation>
 
         <notation>
           <usage><m>f^{-1}</m></usage>
-          <description>inverse of the function <m>f</m></description>
+          <description>inversa da função <m>f</m></description>
         </notation>
 
       </p>
 
       <example xml:id="sets-example-inverse-function">
         <p>
-          The function <m>f(x) = x^3</m> has inverse
-          <m>f^{-1}(x) = \sqrt[3]{x}</m> by <xref ref="sets-example-composition-commute"/>.
+          A função <m>f(x) = x^3</m> tem como inversa
+          <m>f^{-1}(x) = \sqrt[3]{x}</m>, pelo <xref ref="sets-example-composition-commute"/>.
         </p>
       </example>
 
       <example xml:id="sets-example-exponential">
         <p>
-          The natural logarithm and the exponential functions,
-          <m>f(x) = \ln x</m> and <m>f^{-1}(x) = e^x</m>,
-          are inverses of each other provided that we are careful about choosing domains.
-          Observe that
+          As funções logaritmo natural e exponencial,
+          <m>f(x) = \ln x</m> e <m>f^{-1}(x) = e^x</m>,
+          são inversas uma da outra, desde que tenhamos cuidado ao escolher os domínios.
+          Observe que
           <md>
             f(f^{-1}(x)) = f(e^x) = \ln e^x = x
           </md>
-          and
+          e
           <md>
             f^{-1}(f(x)) = f^{-1}(\ln x) = e^{\ln x} = x
           </md>
-          whenever composition makes sense.
+          sempre que a composição fizer sentido.
         </p>
       </example>
 
       <example xml:id="sets-example-inverse-matrix">
         <p>
-          Suppose that
+          Suponha que
           <md>
             A =
             \begin{pmatrix}
@@ -1014,14 +1014,14 @@
             5 &amp; 2
             \end{pmatrix}
           </md>.
-          Then <m>A</m> defines a map from
-          <m>{\mathbb R}^2</m> to <m>{\mathbb R}^2</m> by
+          Então <m>A</m> define uma aplicação de
+          <m>{\mathbb R}^2</m> em <m>{\mathbb R}^2</m> por
           <md>
             T_A (x,y) = (3x +  y, 5x + 2y)
           </md>.
-          We can find an inverse map of <m>T_A</m> by simply inverting the matrix <m>A</m>;
-          that is, <m>T_A^{-1} = T_{A^{-1}}</m>.
-          In this example,
+          Podemos encontrar uma aplicação inversa de <m>T_A</m> simplesmente invertendo a matriz <m>A</m>;
+          isto é, <m>T_A^{-1} = T_{A^{-1}}</m>.
+          Neste exemplo,
           <md>
             A^{-1} =
             \begin{pmatrix}
@@ -1029,20 +1029,20 @@
             -5 &amp;  3
             \end{pmatrix};
           </md>
-          hence, the inverse map is given by
+          portanto, a aplicação inversa é dada por
           <md>
             T_A^{-1} (x,y) = (2x -  y, -5x + 3y)
           </md>.
-          It is easy to check that
+          É fácil verificar que
           <md>
             T^{-1}_A \circ T_A (x,y) = T_A \circ T_A^{-1} (x,y) = (x,y)
           </md>.
-          Not every map has an inverse.
-          If we consider the map
+          Nem toda aplicação possui uma inversa.
+          Se considerarmos a aplicação
           <md>
             T_B (x,y) = (3x , 0 )
           </md>
-          given by the matrix
+          dada pela matriz
           <md>
             B =
             \begin{pmatrix}
@@ -1050,22 +1050,22 @@
             0 &amp; 0
             \end{pmatrix}
           </md>,
-          then an inverse map would have to be of the form
+          então uma aplicação inversa teria de ser da forma
           <md>
             T_B^{-1} (x,y) = (ax + by, cx +dy)
           </md>
-          and
+          e
           <md>
             (x,y) = T_B \circ T_B^{-1} (x,y) = (3ax + 3by, 0)
           </md>
-          for all <m>x</m> and <m>y</m>.
-          Clearly this is  impossible because <m>y</m> might not be <m>0</m>.
+          para todos os <m>x</m> e <m>y</m>.
+          Claramente isso é impossível, pois <m>y</m> pode não ser <m>0</m>.
         </p>
       </example>
 
       <example xml:id="sets-example-inverse-permutation">
         <p>
-          Given the permutation
+          Dada a permutação
           <md>
             \pi =
             \begin{pmatrix}
@@ -1073,7 +1073,7 @@
             2 &amp; 3 &amp; 1
             \end{pmatrix}
           </md>
-          on <m>S = \{ 1,2,3 \}</m>, it is easy to see that the permutation defined by
+          em <m>S = \{ 1,2,3 \}</m>, é fácil ver que a permutação definida por
           <md>
             \pi^{-1} =
             \begin{pmatrix}
@@ -1081,139 +1081,139 @@
             3 &amp; 1 &amp; 2
             \end{pmatrix}
           </md>
-          is the inverse of <m>\pi</m>.
-          In fact, any bijective mapping possesses an inverse,
-          as we will see in the next theorem.
+          é a inversa de <m>\pi</m>.
+          De fato, toda aplicação bijetiva possui uma inversa,
+          como veremos no teorema seguinte.
         </p>
       </example>
 
       <theorem>
         <statement>
           <p>
-            A mapping is invertible if and only if it is both one-to-one and onto.
+            Uma aplicação é invertível se, e somente se, é simultaneamente injetiva e sobrejetiva.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose first that <m>f:A \rightarrow B</m> is invertible with inverse <m>g: B \rightarrow A</m>.
-            Then <m>g \circ f = \identity_A</m> is the identity map;
-            that is, <m>g(f(a)) = a</m>.
-            If <m>a_1, a_2 \in A</m> with <m>f(a_1) = f(a_2)</m>,
-            then <m>a_1 = g(f(a_1)) = g(f(a_2)) = a_2</m>.
-            Consequently, <m>f</m> is one-to-one.
-            Now suppose that <m>b \in B</m>.
-            To show that <m>f</m> is onto,
-            it is necessary to find an <m>a \in A</m> such that <m>f(a) = b</m>,
-            but <m>f(g(b)) = b</m> with <m>g(b) \in A</m>.
-            Let <m>a = g(b)</m>.
+            Suponha primeiro que <m>f:A \rightarrow B</m> seja invertível, com inversa <m>g: B \rightarrow A</m>.
+            Então <m>g \circ f = \identity_A</m> é a aplicação identidade;
+            isto é, <m>g(f(a)) = a</m>.
+            Se <m>a_1, a_2 \in A</m> e <m>f(a_1) = f(a_2)</m>,
+            então <m>a_1 = g(f(a_1)) = g(f(a_2)) = a_2</m>.
+            Consequentemente, <m>f</m> é injetiva.
+            Agora suponha que <m>b \in B</m>.
+            Para mostrar que <m>f</m> é sobrejetiva,
+            é necessário encontrar um <m>a \in A</m> tal que <m>f(a) = b</m>,
+            mas <m>f(g(b)) = b</m>, com <m>g(b) \in A</m>.
+            Tome <m>a = g(b)</m>.
           </p>
 
           <p>
-            Conversely, let <m>f</m> be bijective and let <m>b \in B</m>.
-            Since <m>f</m> is onto,
-            there exists an <m>a \in A</m> such that <m>f(a) = b</m>.
-            Because <m>f</m> is one-to-one, <m>a</m> must be unique.
-            Define <m>g</m> by letting <m>g(b) = a</m>.
-            We have now constructed the inverse of <m>f</m>.
+            Reciprocamente, seja <m>f</m> bijetiva e seja <m>b \in B</m>.
+            Como <m>f</m> é sobrejetiva,
+            existe um <m>a \in A</m> tal que <m>f(a) = b</m>.
+            Como <m>f</m> é injetiva, <m>a</m> deve ser único.
+            Defina <m>g</m> tomando <m>g(b) = a</m>.
+            Construímos, assim, a inversa de <m>f</m>.
           </p>
         </proof>
       </theorem>
     </subsection>
 
     <subsection xml:id="sets-subsection-equivalence-relations">
-      <title>Equivalence Relations and Partitions</title>
+      <title>Relações de equivalência e partições</title>
       <p>
-        A fundamental notion in mathematics is that of equality.
-        We can generalize equality with equivalence relations and equivalence classes.
-        An <term>equivalence relation</term><idx><h>Equivalence relation</h></idx>
-        on a set <m>X</m> is a relation <m>R \subset X \times X</m> such that
+        Uma noção fundamental na matemática é a de igualdade.
+        Podemos generalizar a igualdade com relações de equivalência e classes de equivalência.
+        Uma <term>relação de equivalência</term><idx><h>Relação de equivalência</h></idx>
+        em um conjunto <m>X</m> é uma relação <m>R \subset X \times X</m> tal que
 
         <ul>
           <li>
             <p>
-              <m>(x, x) \in R</m> for all <m>x \in X</m> (<term>reflexive property</term>);
+              <m>(x, x) \in R</m> para todo <m>x \in X</m> (<term>propriedade reflexiva</term>);
             </p>
           </li>
 
           <li>
             <p>
-              <m>(x, y) \in R</m> implies
-              <m>(y, x) \in R</m> (<term>symmetric property</term>);
+              <m>(x, y) \in R</m> implica
+              <m>(y, x) \in R</m> (<term>propriedade simétrica</term>);
             </p>
           </li>
 
           <li>
             <p>
-              <m>(x, y)</m> and <m>(y, z) \in R</m> imply <m>(x, z) \in R</m>
-              (<term>transitive property</term>).
+              <m>(x, y)</m> e <m>(y, z) \in R</m> implicam <m>(x, z) \in R</m>
+              (<term>propriedade transitiva</term>).
             </p>
           </li>
         </ul>
 
-        Given an equivalence relation <m>R</m> on a set <m>X</m>,
-        we usually write <m>x \sim y</m> instead of <m>(x, y) \in R</m>.
-        If the equivalence relation already has an associated notation such as <m>=</m>,
-        <m>\equiv</m>, or <m>\cong</m>,
-        we will use that notation.
+        Dada uma relação de equivalência <m>R</m> em um conjunto <m>X</m>,
+        geralmente escrevemos <m>x \sim y</m> em vez de <m>(x, y) \in R</m>.
+        Se a relação de equivalência já tiver uma notação associada, como <m>=</m>,
+        <m>\equiv</m> ou <m>\cong</m>,
+        usaremos essa notação.
       </p>
 
       <example xml:id="sets-example-equivalent-fractions">
         <p>
-          Let <m>p</m>, <m>q</m>, <m>r</m>,
-          and <m>s</m> be integers, where <m>q</m> and <m>s</m> are nonzero.
-          Define <m>p/q \sim r/s</m> if <m>ps = qr</m>.
-          Clearly <m>\sim</m> is reflexive and symmetric.
-          To show that it is also transitive,
-          suppose that <m>p/q \sim r/s</m> and <m>r/s \sim t/u</m>,
-          with <m>q</m>,
-          <m>s</m>, and <m>u</m> all nonzero.
-          Then <m>ps = qr</m> and <m>ru = st</m>.
-          Therefore,
+          Sejam <m>p</m>, <m>q</m>, <m>r</m>
+          e <m>s</m> inteiros, em que <m>q</m> e <m>s</m> são não nulos.
+          Defina <m>p/q \sim r/s</m> se <m>ps = qr</m>.
+          Claramente, <m>\sim</m> é reflexiva e simétrica.
+          Para mostrar que ela também é transitiva,
+          suponha que <m>p/q \sim r/s</m> e <m>r/s \sim t/u</m>,
+          com <m>q</m>,
+          <m>s</m> e <m>u</m> todos não nulos.
+          Então <m>ps = qr</m> e <m>ru = st</m>.
+          Portanto,
           <md>
             psu = qru = qst
           </md>.
-          Since <m>s \neq 0</m>, <m>pu = qt</m>.
-          Consequently, <m>p/q \sim t/u</m>.
+          Como <m>s \neq 0</m>, <m>pu = qt</m>.
+          Consequentemente, <m>p/q \sim t/u</m>.
         </p>
       </example>
 
       <example xml:id="sets-example-equivalent-derivative">
         <p>
-          Suppose that <m>f</m> and <m>g</m> are differentiable functions on <m>{\mathbb R}</m>.
-          We can define an equivalence relation on such functions by letting
-          <m>f(x) \sim g(x)</m> if <m>f'(x) = g'(x)</m>.
-          It is clear that <m>\sim</m> is both reflexive and symmetric.
-          To demonstrate transitivity,
-          suppose that <m>f(x) \sim g(x)</m> and <m>g(x) \sim h(x)</m>.
-          From calculus we know that
-          <m>f(x) - g(x) = c_1</m> and <m>g(x)- h(x) = c_2</m>,
-          where <m>c_1</m> and <m>c_2</m> are both constants.
-          Hence,
+          Suponha que <m>f</m> e <m>g</m> sejam funções diferenciáveis em <m>{\mathbb R}</m>.
+          Podemos definir uma relação de equivalência nessas funções fazendo
+          <m>f(x) \sim g(x)</m> se <m>f'(x) = g'(x)</m>.
+          É claro que <m>\sim</m> é reflexiva e simétrica.
+          Para demonstrar a transitividade,
+          suponha que <m>f(x) \sim g(x)</m> e <m>g(x) \sim h(x)</m>.
+          Do cálculo sabemos que
+          <m>f(x) - g(x) = c_1</m> e <m>g(x)- h(x) = c_2</m>,
+          em que <m>c_1</m> e <m>c_2</m> são constantes.
+          Portanto,
           <md>
             f(x) - h(x) = ( f(x) - g(x)) + ( g(x)- h(x)) = c_1 + c_2
           </md>
-          and <m>f'(x) - h'(x) = 0</m>.
-          Therefore, <m>f(x) \sim h(x)</m>.
+          e <m>f'(x) - h'(x) = 0</m>.
+          Portanto, <m>f(x) \sim h(x)</m>.
         </p>
       </example>
 
       <example xml:id="sets-example-equivalent-circles">
         <p>
-          For <m>(x_1, y_1 )</m> and
-          <m>(x_2, y_2)</m> in <m>{\mathbb R}^2</m>,
-          define <m>(x_1, y_1 ) \sim (x_2, y_2)</m> if <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
-          Then <m>\sim</m> is an equivalence relation on <m>{\mathbb R}^2</m>.
+          Para <m>(x_1, y_1 )</m> e
+          <m>(x_2, y_2)</m> em <m>{\mathbb R}^2</m>,
+          defina <m>(x_1, y_1 ) \sim (x_2, y_2)</m> se <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
+          Então <m>\sim</m> é uma relação de equivalência em <m>{\mathbb R}^2</m>.
         </p>
       </example>
 
       <example xml:id="sets-example-equivalent-matrices">
         <p>
-          Let <m>A</m> and <m>B</m> be
-          <m>2 \times 2</m> matrices with entries in the real numbers.
-          We can define an equivalence relation on the set of <m>2 \times 2</m> matrices,
-          by saying <m>A \sim B</m> if there exists an invertible matrix <m>P</m> such that <m>PAP^{-1} = B</m>.
-          For example, if
+          Sejam <m>A</m> e <m>B</m>
+          matrizes <m>2 \times 2</m> com entradas nos números reais.
+          Podemos definir uma relação de equivalência no conjunto das matrizes <m>2 \times 2</m>
+          dizendo que <m>A \sim B</m> se existe uma matriz invertível <m>P</m> tal que <m>PAP^{-1} = B</m>.
+          Por exemplo, se
           <md>
             A =
             \begin{pmatrix}
@@ -1227,7 +1227,7 @@
             -11 &amp; 20
             \end{pmatrix}
           </md>,
-          then <m>A \sim B</m> since <m>PAP^{-1} = B</m> for
+          então <m>A \sim B</m>, pois <m>PAP^{-1} = B</m> para
           <md>
             P =
             \begin{pmatrix}
@@ -1235,7 +1235,7 @@
             1 &amp; 3
             \end{pmatrix}
           </md>.
-          Let <m>I</m> be the <m>2 \times 2</m> identity matrix; that is,
+          Seja <m>I</m> a matriz identidade <m>2 \times 2</m>; isto é,
           <md>
             I =
             \begin{pmatrix}
@@ -1243,78 +1243,78 @@
             0 &amp; 1
             \end{pmatrix}
           </md>.
-          Then <m>IAI^{-1} = IAI = A</m>;
-          therefore, the relation is reflexive.
-          To show symmetry, suppose that <m>A \sim B</m>.
-          Then there exists an invertible matrix <m>P</m> such that <m>PAP^{-1} = B</m>.
-          So
+          Então <m>IAI^{-1} = IAI = A</m>;
+          portanto, a relação é reflexiva.
+          Para mostrar a simetria, suponha que <m>A \sim B</m>.
+          Então existe uma matriz invertível <m>P</m> tal que <m>PAP^{-1} = B</m>.
+          Assim,
           <md>
             A = P^{-1} B P = P^{-1} B (P^{-1})^{-1}
           </md>.
-          Finally, suppose that <m>A \sim B</m> and <m>B \sim C</m>.
-          Then there exist invertible matrices <m>P</m> and <m>Q</m> such that
-          <m>PAP^{-1} = B</m> and  <m>QBQ^{-1} = C</m>.
-          Since
+          Finalmente, suponha que <m>A \sim B</m> e <m>B \sim C</m>.
+          Então existem matrizes invertíveis <m>P</m> e <m>Q</m> tais que
+          <m>PAP^{-1} = B</m> e <m>QBQ^{-1} = C</m>.
+          Como
           <md>
             C = QBQ^{-1} = QPAP^{-1} Q^{-1} = (QP)A(QP)^{-1}
           </md>,
-          the relation is transitive.
-          Two matrices that are equivalent in this manner are said to be <idx><h>Matrix</h><h>similar</h></idx><term>similar</term>.
+          a relação é transitiva.
+          Duas matrizes equivalentes dessa maneira são chamadas de <idx><h>Matriz</h><h>semelhante</h></idx><term>semelhantes</term>.
         </p>
       </example>
 
       <p>
-        A <term>partition</term><idx><h>Partitions</h></idx>
-        <m>{\mathcal P}</m> of a set <m>X</m> is a collection of nonempty sets
-        <m>X_1, X_2, \ldots</m> such that <m>X_i \cap X_j = \emptyset</m> for
-        <m>i \neq j</m> and <m>\bigcup_k X_k = X</m>.
-        Let <m>\sim</m> be an equivalence relation on a set <m>X</m> and let <m>x \in X</m>.
-        Then <m>[x] = \{ y \in X : y \sim x \}</m> is called the
-        <term>equivalence class</term><idx><h>Equivalence class</h></idx>
-        of <m>x</m>.
-        We will see that an equivalence relation gives rise to a partition via equivalence classes.
-        Also, whenever a partition of a set exists,
-        there is some natural underlying equivalence relation,
-        as the following theorem demonstrates.
+        Uma <term>partição</term><idx><h>Partições</h></idx>
+        <m>{\mathcal P}</m> de um conjunto <m>X</m> é uma coleção de conjuntos não vazios
+        <m>X_1, X_2, \ldots</m> tal que <m>X_i \cap X_j = \emptyset</m> para
+        <m>i \neq j</m> e <m>\bigcup_k X_k = X</m>.
+        Seja <m>\sim</m> uma relação de equivalência em um conjunto <m>X</m> e seja <m>x \in X</m>.
+        Então <m>[x] = \{ y \in X : y \sim x \}</m> é chamada de
+        <term>classe de equivalência</term><idx><h>Classe de equivalência</h></idx>
+        de <m>x</m>.
+        Veremos que uma relação de equivalência dá origem a uma partição por meio das classes de equivalência.
+        Além disso, sempre que existe uma partição de um conjunto,
+        há alguma relação de equivalência subjacente natural,
+        como demonstra o teorema a seguir.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Given an equivalence relation <m>\sim</m> on a set <m>X</m>,
-            the equivalence classes of <m>X</m> form a partition of <m>X</m>.
-            Conversely, if <m>{\mathcal P} = \{ X_i\}</m> is a partition of a set <m>X</m>,
-            then there is an equivalence relation on <m>X</m> with equivalence classes <m>X_i</m>.
+            Dada uma relação de equivalência <m>\sim</m> em um conjunto <m>X</m>,
+            as classes de equivalência de <m>X</m> formam uma partição de <m>X</m>.
+            Reciprocamente, se <m>{\mathcal P} = \{ X_i\}</m> é uma partição de um conjunto <m>X</m>,
+            então existe uma relação de equivalência em <m>X</m> cujas classes de equivalência são <m>X_i</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose there exists an equivalence relation <m>\sim</m> on the set <m>X</m>.
-            For any <m>x \in X</m>, the reflexive property shows that
-            <m>x \in [x]</m> and so <m>[x]</m> is nonempty.
-            Clearly <m>X = \bigcup_{x \in X} [x]</m>.
-            Now let <m>x, y \in X</m>.
-            We need to show that either
-            <m>[x] = [y]</m> or <m>[x] \cap [y] = \emptyset</m>.
-            Suppose that the intersection of <m>[x]</m> and <m>[y]</m> is not empty and that <m>z \in [x] \cap [y]</m>.
-            Then <m>z \sim x</m> and <m>z \sim y</m>.
-            By symmetry and transitivity <m>x \sim y</m>;
-            hence, <m>[x] \subset [y]</m>.
-            Similarly, <m>[y] \subset [x]</m> and so <m>[x] = [y]</m>.
-            Therefore, any two equivalence classes are either disjoint or exactly the same.
+            Suponha que exista uma relação de equivalência <m>\sim</m> no conjunto <m>X</m>.
+            Para qualquer <m>x \in X</m>, a propriedade reflexiva mostra que
+            <m>x \in [x]</m> e, portanto, <m>[x]</m> não é vazio.
+            Claramente, <m>X = \bigcup_{x \in X} [x]</m>.
+            Agora sejam <m>x, y \in X</m>.
+            Precisamos mostrar que ou
+            <m>[x] = [y]</m> ou <m>[x] \cap [y] = \emptyset</m>.
+            Suponha que a interseção de <m>[x]</m> e <m>[y]</m> não seja vazia e que <m>z \in [x] \cap [y]</m>.
+            Então <m>z \sim x</m> e <m>z \sim y</m>.
+            Pela simetria e transitividade, <m>x \sim y</m>;
+            logo, <m>[x] \subset [y]</m>.
+            Analogamente, <m>[y] \subset [x]</m> e, portanto, <m>[x] = [y]</m>.
+            Assim, duas classes de equivalência quaisquer são disjuntas ou exatamente iguais.
           </p>
 
           <p>
-            Conversely, suppose that <m>{\mathcal P} = \{X_i\}</m> is a partition of a set <m>X</m>.
-            Let two elements be equivalent if they are in the same partition.
-            Clearly, the relation is reflexive.
-            If <m>x</m> is in the same partition as <m>y</m>,
-            then <m>y</m> is in the same partition as <m>x</m>,
-            so <m>x \sim y</m> implies <m>y \sim x</m>.
-            Finally, if <m>x</m> is in the same partition as <m>y</m> and <m>y</m> is in the same partition as <m>z</m>,
-            then <m>x</m> must be in the same partition as <m>z</m>,
-            and transitivity holds.
+            Reciprocamente, suponha que <m>{\mathcal P} = \{X_i\}</m> seja uma partição de um conjunto <m>X</m>.
+            Declare dois elementos equivalentes se estiverem na mesma parte da partição.
+            Claramente, a relação é reflexiva.
+            Se <m>x</m> estiver na mesma parte que <m>y</m>,
+            então <m>y</m> estará na mesma parte que <m>x</m>,
+            logo <m>x \sim y</m> implica <m>y \sim x</m>.
+            Finalmente, se <m>x</m> estiver na mesma parte que <m>y</m> e <m>y</m> estiver na mesma parte que <m>z</m>,
+            então <m>x</m> deverá estar na mesma parte que <m>z</m>,
+            e vale a transitividade.
           </p>
         </proof>
       </theorem>
@@ -1322,102 +1322,102 @@
       <corollary>
         <statement>
           <p>
-            Two equivalence classes of an equivalence relation are either disjoint or equal.
+            Duas classes de equivalência de uma relação de equivalência são disjuntas ou iguais.
           </p>
         </statement>
       </corollary>
 
       <p>
-        Let us examine some of the partitions given by the equivalence classes in the last set of examples.
+        Examinemos algumas das partições dadas pelas classes de equivalência no último conjunto de exemplos.
       </p>
 
       <example xml:id="sets-example-fraction-partition">
         <p>
-          In the equivalence relation in <xref ref="sets-example-equivalent-fractions"/>,
-          two pairs of integers, <m>(p,q)</m> and <m>(r,s)</m>,
-          are in the same equivalence class when they reduce to the same fraction in its lowest terms.
+          Na relação de equivalência em <xref ref="sets-example-equivalent-fractions"/>,
+          dois pares de inteiros, <m>(p,q)</m> e <m>(r,s)</m>,
+          estão na mesma classe de equivalência quando se reduzem à mesma fração na forma irredutível.
         </p>
       </example>
 
       <example xml:id="sets-example-matrix-partition">
         <p>
-          In the equivalence relation in <xref ref="sets-example-equivalent-derivative"/>,
-          two functions <m>f(x)</m> and <m>g(x)</m> are in the same partition when they differ by a constant.
+          Na relação de equivalência em <xref ref="sets-example-equivalent-derivative"/>,
+          duas funções <m>f(x)</m> e <m>g(x)</m> estão na mesma partição quando diferem por uma constante.
         </p>
       </example>
 
       <example xml:id="sets-example-circle-partition">
         <p>
-          We defined an equivalence class on <m>{\mathbb R}^2</m> by
-          <m>(x_1, y_1 ) \sim (x_2, y_2)</m> if <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
-          Two pairs of real numbers are in the same partition when they lie on the same circle about the origin.
+          Definimos uma classe de equivalência em <m>{\mathbb R}^2</m> por
+          <m>(x_1, y_1 ) \sim (x_2, y_2)</m> se <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
+          Dois pares de números reais estão na mesma partição quando pertencem ao mesmo círculo centrado na origem.
         </p>
       </example>
 
       <example xml:id="sets-example-congruent-integers">
         <p>
-          Let <m>r</m> and <m>s</m> be two integers and suppose that <m>n \in {\mathbb N}</m>.
-          We say that <m>r</m> is <term>congruent</term><idx><h>Congruence modulo <m>n</m></h></idx> to <m>s</m>
-          <term>modulo</term> <m>n</m>,
-          or <m>r</m> is congruent to <m>s</m> mod <m>n</m>,
-          if <m>r - s</m> is evenly divisible by <m>n</m>;
-          that is, <m>r - s = nk</m>  for some <m>k \in {\mathbb Z}</m>.
-          In this case we write <m>r \equiv s \pmod{n}</m>.
+          Sejam <m>r</m> e <m>s</m> dois inteiros e suponha que <m>n \in {\mathbb N}</m>.
+          Dizemos que <m>r</m> é <term>congruente</term><idx><h>Congruência módulo <m>n</m></h></idx> a <m>s</m>
+          <term>módulo</term> <m>n</m>,
+          ou que <m>r</m> é congruente a <m>s</m> módulo <m>n</m>,
+          se <m>r - s</m> for divisível por <m>n</m>;
+          isto é, <m>r - s = nk</m> para algum <m>k \in {\mathbb Z}</m>.
+          Nesse caso, escrevemos <m>r \equiv s \pmod{n}</m>.
 
           <notation>
             <usage><m>a \equiv b \pmod{n}</m></usage>
-            <description><m>a</m> is congruent to <m>b</m> modulo <m>n</m></description>
+            <description><m>a</m> é congruente a <m>b</m> módulo <m>n</m></description>
           </notation>
 
-          For example, <m>41 \equiv 17 \pmod{ 8}</m> since
-          <m>41 - 17=24</m> is divisible by <m>8</m>.
-          We claim that congruence modulo <m>n</m> forms an equivalence relation of <m>{\mathbb Z}</m>.
-          Certainly any integer <m>r</m> is equivalent to itself since
-          <m>r - r = 0</m> is divisible by <m>n</m>.
-          We will now show that the relation is symmetric.
-          If <m>r \equiv s \pmod{ n}</m>,
-          then <m>r - s = -(s -r)</m> is divisible by <m>n</m>.
-          So <m>s - r</m> is divisible by <m>n</m> and <m>s \equiv r \pmod{ n}</m>.
-          Now suppose that <m>r \equiv s \pmod{ n}</m> and <m>s \equiv t \pmod{ n}</m>.
-          Then there exist integers <m>k</m> and <m>l</m> such that
-          <m>r -s = kn</m> and <m>s - t = ln</m>.
-          To show transitivity,
-          it is necessary to prove that <m>r - t</m> is divisible by <m>n</m>.
-          However,
+          Por exemplo, <m>41 \equiv 17 \pmod{ 8}</m>, pois
+          <m>41 - 17=24</m> é divisível por <m>8</m>.
+          Afirmamos que a congruência módulo <m>n</m> forma uma relação de equivalência em <m>{\mathbb Z}</m>.
+          Certamente, qualquer inteiro <m>r</m> é equivalente a si mesmo, pois
+          <m>r - r = 0</m> é divisível por <m>n</m>.
+          Mostraremos agora que a relação é simétrica.
+          Se <m>r \equiv s \pmod{ n}</m>,
+          então <m>r - s = -(s -r)</m> é divisível por <m>n</m>.
+          Assim, <m>s - r</m> é divisível por <m>n</m> e <m>s \equiv r \pmod{ n}</m>.
+          Suponha agora que <m>r \equiv s \pmod{ n}</m> e <m>s \equiv t \pmod{ n}</m>.
+          Então existem inteiros <m>k</m> e <m>l</m> tais que
+          <m>r -s = kn</m> e <m>s - t = ln</m>.
+          Para mostrar a transitividade,
+          é necessário provar que <m>r - t</m> é divisível por <m>n</m>.
+          Entretanto,
           <md>
             r - t = r - s + s - t = kn + ln = (k + l)n
           </md>,
-          and so <m>r - t</m> is divisible by <m>n</m>.
+          e, portanto, <m>r - t</m> é divisível por <m>n</m>.
         </p>
 
         <p>
-          If we consider the equivalence relation established by the integers modulo <m>3</m>, then
+          Se considerarmos a relação de equivalência estabelecida pelos inteiros módulo <m>3</m>, então
           <md>
             <mrow>{[0]} &amp; = \{ \ldots, -3, 0, 3, 6, \ldots \},</mrow>
             <mrow>{[1]} &amp; = \{ \ldots, -2, 1, 4, 7, \ldots \},</mrow>
             <mrow>{[2]} &amp; = \{ \ldots, -1, 2, 5, 8, \ldots \}</mrow>
           </md>.
-          Notice that <m>[0] \cup [1] \cup [2] = {\mathbb Z}</m> and also that the sets are disjoint.
-          The sets <m>[0]</m>, <m>[1]</m>,
-          and <m>[2]</m> form a partition of the integers.
+          Observe que <m>[0] \cup [1] \cup [2] = {\mathbb Z}</m> e que os conjuntos também são disjuntos.
+          Os conjuntos <m>[0]</m>, <m>[1]</m>
+          e <m>[2]</m> formam uma partição dos inteiros.
         </p>
 
         <p>
-          The integers modulo <m>n</m> are a very important example in the study of abstract algebra and will become quite useful in our investigation of various algebraic structures such as groups and rings.
-          In our discussion of the integers modulo <m>n</m> we have actually assumed a result known as the division algorithm,
-          which will be stated and proved in <xref ref="integers"/>.
+          Os inteiros módulo <m>n</m> são um exemplo muito importante no estudo da álgebra abstrata e serão bastante úteis em nossa investigação de várias estruturas algébricas, como grupos e anéis.
+          Em nossa discussão dos inteiros módulo <m>n</m>, na verdade, supusemos um resultado conhecido como algoritmo da divisão,
+          que será enunciado e demonstrado em <xref ref="integers"/>.
         </p>
       </example>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage is a powerful, open source, system for exact, numerical, and symbolic mathematical computations.
-          Electronic versions of this text contain comprehensive introductions to the use of Sage to study abstract algebra,
-          and include a set of exercises.
-          These can be found at the book's website.
-          Due to the format of this version of the text,
-          at the end of each chapter we have just included brief suggestions of how Sage might be employed.
+          Sage é um sistema poderoso e de código aberto para cálculos matemáticos exatos, numéricos e simbólicos.
+          As versões eletrônicas deste texto contêm introduções abrangentes ao uso do Sage no estudo da álgebra abstrata
+          e incluem um conjunto de exercícios.
+          Eles podem ser encontrados no site do livro.
+          Devido ao formato desta versão do texto,
+          no final de cada capítulo incluímos apenas breves sugestões de como o Sage pode ser utilizado.
         </p>
       </paragraphs>
     </subsection>
