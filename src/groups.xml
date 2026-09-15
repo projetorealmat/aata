@@ -1207,8 +1207,8 @@
     <exercise label="rq-groups-compute-in-z8">
       <statement>
         <p>
-          In the group <m>\mathbb Z_8</m> compute, (a) <m>6+7</m>,
-          and (b) <m>2^{-1}</m>.
+          No grupo <m>\mathbb Z_8</m>, calcule (a) <m>6+7</m>
+          e (b) <m>2^{-1}</m>.
         </p>
       </statement>
       <response/>
@@ -1217,8 +1217,8 @@
     <exercise label="rq-groups-compute-in-u16">
       <statement>
         <p>
-          In the group <m>U(16)</m> compute, (a)
-          <m>5\cdot 7</m>, and (b) <m>3^{-1}</m>.
+          No grupo <m>U(16)</m>, calcule (a)
+          <m>5\cdot 7</m> e (b) <m>3^{-1}</m>.
         </p>
       </statement>
       <response/>
@@ -1227,7 +1227,7 @@
     <exercise label="rq-groups-definition-group">
       <statement>
         <p>
-          State the definition of a group.
+          Enuncie a definição de grupo.
         </p>
       </statement>
       <response/>
@@ -1236,7 +1236,7 @@
     <exercise label="rq-groups-subset-is-subgroup">
       <statement>
         <p>
-          Explain a single method that will decide if a subset of a group is itself a subgroup.
+          Explique um método que permita decidir se um subconjunto de um grupo é ele próprio um subgrupo.
         </p>
       </statement>
       <response/>
@@ -1245,7 +1245,7 @@
     <exercise label="rq-groups-explain-abelian">
       <statement>
         <p>
-          Explain the origin of the term <q>abelian</q> for a commutative group.
+          Explique a origem do termo <q>abeliano</q> para um grupo comutativo.
         </p>
       </statement>
       <response/>
@@ -1254,8 +1254,8 @@
     <exercise label="rq-groups-new-example">
       <statement>
         <p>
-          Give an example of a group you have seen in your previous mathematical experience,
-          but that is not an example in this chapter.
+          Dê um exemplo de grupo que você tenha encontrado em sua experiência matemática anterior,
+          mas que não seja um exemplo deste capítulo.
         </p>
       </statement>
       <response/>
@@ -1266,12 +1266,12 @@
     <!-- File: groups.xml  -->
     <!-- Title: Groups -->
   <exercises xml:id="groups-exercises" filenamebase="groups">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="groups-exercise-find-x-modn">
       <statement>
         <p>
-          Find all <m>x \in {\mathbb Z}</m> satisfying each of the following equations.
+          Encontre todos os <m>x \in {\mathbb Z}</m> que satisfazem cada uma das equações a seguir.
 
           <ol cols="2">
             <li>
@@ -1391,7 +1391,7 @@
       </statement>
       <hint>
         <p>
-          (a) Not a group; (c) a group.
+          (a) Não é um grupo; (c) é um grupo.
         </p>
       </hint>
     </exercise>
@@ -1399,10 +1399,10 @@
     <exercise number="3" xml:id="groups-exercise-rectangle-symmetries">
       <statement>
         <p>
-          Write out Cayley tables for groups formed by the symmetries of a rectangle and for <m>({\mathbb Z}_4, +)</m>.
-          How many elements are in each group?
-          Are the groups the same?
-          Why or why not?
+          Escreva as tabelas de Cayley dos grupos formados pelas simetrias de um retângulo e de <m>({\mathbb Z}_4, +)</m>.
+          Quantos elementos há em cada grupo?
+          Os grupos são iguais?
+          Por que sim ou por que não?
         </p>
       </statement>
     </exercise>
@@ -1410,9 +1410,9 @@
     <exercise number="4" xml:id="groups-exercise-symmetries-rhombus">
       <statement>
         <p>
-          Describe the symmetries of a rhombus and prove that the set of symmetries forms a group.
-          Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus.
-          Are the symmetries of a rectangle and those of a rhombus the same?
+          Descreva as simetrias de um losango e prove que o conjunto das simetrias forma um grupo.
+          Dê as tabelas de Cayley tanto das simetrias de um retângulo quanto das simetrias de um losango.
+          As simetrias de um retângulo e as de um losango são as mesmas?
         </p>
       </statement>
     </exercise>
@@ -1420,11 +1420,11 @@
     <exercise number="5" xml:id="groups-exercise-symmetries-square">
       <statement>
         <p>
-          Describe the symmetries of a square and prove that the set of symmetries is a group.
-          Give a Cayley table for the symmetries.
-          How many ways can the vertices of a square be permuted?
-          Is each permutation necessarily a symmetry of the square?
-          The symmetry group of the square is denoted by <m>D_4</m>.
+          Descreva as simetrias de um quadrado e prove que o conjunto das simetrias é um grupo.
+          Dê uma tabela de Cayley para as simetrias.
+          De quantas maneiras os vértices de um quadrado podem ser permutados?
+          Cada permutação é necessariamente uma simetria do quadrado?
+          O grupo de simetrias do quadrado é denotado por <m>D_4</m>.
         </p>
       </statement>
     </exercise>
@@ -1432,7 +1432,7 @@
     <exercise number="6" xml:id="groups-exercise-table-u12">
       <statement>
         <p>
-          Give a multiplication table for the group <m>U(12)</m>.
+          Dê uma tabela de multiplicação para o grupo <m>U(12)</m>.
         </p>
       </statement>
       <hint>
@@ -1452,8 +1452,8 @@
     <exercise number="7" xml:id="groups-exercise-group-operation-on-R-except-minus1">
       <statement>
         <p>
-          Let <m>S = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>S</m> by <m>a \ast b = a + b + ab</m>.
-          Prove that <m>(S, \ast)</m> is an abelian group.
+          Seja <m>S = {\mathbb R} \setminus \{ -1 \}</m> e defina uma operação binária em <m>S</m> por <m>a \ast b = a + b + ab</m>.
+          Prove que <m>(S, \ast)</m> é um grupo abeliano.
         </p>
       </statement>
     </exercise>
@@ -1461,14 +1461,14 @@
     <exercise number="8" xml:id="groups-exercise-matrices-dont-commute">
       <statement>
         <p>
-          Give an example of two elements <m>A</m> and <m>B</m> in
-          <m>GL_2({\mathbb R})</m> with <m>AB \neq BA</m>.
+          Dê um exemplo de dois elementos <m>A</m> e <m>B</m> em
+          <m>GL_2({\mathbb R})</m> tais que <m>AB \neq BA</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Pick two matrices.
-          Almost any pair will work.
+          Escolha duas matrizes.
+          Quase qualquer par servirá.
         </p>
       </hint>
     </exercise>
@@ -1476,7 +1476,7 @@
     <exercise number="9" xml:id="groups-exercise-sl2-closed">
       <statement>
         <p>
-          Prove that the product of two matrices in <m>SL_2({\mathbb R})</m> has determinant one.
+          Prove que o produto de duas matrizes em <m>SL_2({\mathbb R})</m> tem determinante um.
         </p>
       </statement>
     </exercise>
@@ -1486,7 +1486,7 @@
     <exercise number="10" xml:id="groups-exercise-heisenberg-group">
       <statement>
         <p>
-          Prove that the set of matrices of the form
+          Prove que o conjunto de matrizes da forma
           <md>
             \begin{pmatrix}
             1 &amp; x &amp; y \\
@@ -1494,11 +1494,11 @@
             0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>
-          is a group under matrix multiplication.
-          This group, known as the
-          <term>Heisenberg group</term>,
-          is important in quantum physics.
-          Matrix multiplication in the Heisenberg group is defined by
+          é um grupo sob a multiplicação de matrizes.
+          Esse grupo, conhecido como
+          <term>grupo de Heisenberg</term>,
+          é importante na física quântica.
+          A multiplicação de matrizes no grupo de Heisenberg é definida por
           <md>
             \begin{pmatrix}
             1 &amp; x &amp; y \\
@@ -1524,10 +1524,10 @@
     <exercise number="11" xml:id="groups-exercise-determinant-product">
       <statement>
         <p>
-          Prove that <m>\det(AB) = \det(A) \det(B)</m> in <m>GL_2({\mathbb R})</m>.
-          Use this result to show that the binary operation in the group <m>GL_2({\mathbb R})</m> is closed;
-          that is, if <m>A</m> and <m>B</m> are in <m>GL_2({\mathbb R})</m>,
-          then <m>AB \in GL_2({\mathbb R})</m>.
+          Prove que <m>\det(AB) = \det(A) \det(B)</m> em <m>GL_2({\mathbb R})</m>.
+          Use esse resultado para mostrar que a operação binária no grupo <m>GL_2({\mathbb R})</m> é fechada;
+          isto é, se <m>A</m> e <m>B</m> pertencem a <m>GL_2({\mathbb R})</m>,
+          então <m>AB \in GL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1535,14 +1535,14 @@
     <exercise number="12" xml:id="groups-exercise-Zn-group">
       <statement>
         <p>
-          Let <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
+          Seja <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
           a_n) : a_i \in {\mathbb Z}_2 \}</m>.
-          Define a binary operation on <m>{\mathbb Z}_2^n</m> by
+          Defina uma operação binária em <m>{\mathbb Z}_2^n</m> por
           <md>
             (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n)
           </md>.
-          Prove that <m>{\mathbb Z}_2^n</m> is a group under this operation.
-          This group is important in algebraic coding theory.
+          Prove que <m>{\mathbb Z}_2^n</m> é um grupo sob essa operação.
+          Esse grupo é importante na teoria algébrica de códigos.
         </p>
       </statement>
     </exercise>
@@ -1550,7 +1550,7 @@
     <exercise number="13" xml:id="groups-exercise-R-star">
       <statement>
         <p>
-          Show that <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> is a group under the operation of multiplication.
+          Mostre que <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> é um grupo sob a operação de multiplicação.
         </p>
       </statement>
     </exercise>
@@ -1558,11 +1558,11 @@
     <exercise number="14" xml:id="groups-exercise-product-R-star-Z">
       <statement>
         <p>
-          Given the groups <m>{\mathbb R}^{\ast}</m> and <m>{\mathbb Z}</m>,
-          let <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>.
-          Define a binary operation <m>\circ</m> on <m>G</m> by <m>(a,m) \circ (b,n) = (ab,
+          Dados os grupos <m>{\mathbb R}^{\ast}</m> e <m>{\mathbb Z}</m>,
+          seja <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>.
+          Defina uma operação binária <m>\circ</m> em <m>G</m> por <m>(a,m) \circ (b,n) = (ab,
           m + n)</m>.
-          Show that <m>G</m> is a group under this operation.
+          Mostre que <m>G</m> é um grupo sob essa operação.
         </p>
       </statement>
     </exercise>
@@ -1570,12 +1570,12 @@
     <exercise number="15" xml:id="groups-exercise-order-6-nonabelain">
       <statement>
         <p>
-          Prove or disprove that every group containing six elements is abelian.
+          Prove ou refute que todo grupo com seis elementos é abeliano.
         </p>
       </statement>
       <hint>
         <p>
-          There is a nonabelian group containing six elements.
+          Existe um grupo não abeliano com seis elementos.
         </p>
       </hint>
     </exercise>
@@ -1583,14 +1583,14 @@
     <exercise number="16" xml:id="groups-exercise-product-exponents">
       <statement>
         <p>
-          Give a specific example of some group <m>G</m> and elements
+          Dê um exemplo específico de um grupo <m>G</m> e de elementos
           <m>g,
-          h \in G</m> where <m>(gh)^n \neq g^nh^n</m>.
+          h \in G</m> tais que <m>(gh)^n \neq g^nh^n</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Look at the symmetry group of an equilateral triangle or a square.
+          Considere o grupo de simetrias de um triângulo equilátero ou de um quadrado.
         </p>
       </hint>
     </exercise>
@@ -1598,13 +1598,13 @@
     <exercise number="17" xml:id="groups-exercise-groups-8-elements">
       <statement>
         <p>
-          Give an example of three different groups with eight elements.
-          Why are the groups different?
+          Dê um exemplo de três grupos diferentes com oito elementos.
+          Por que os grupos são diferentes?
         </p>
       </statement>
       <hint>
         <p>
-          The are five different groups of order 8.
+          Existem cinco grupos diferentes de ordem 8.
         </p>
       </hint>
     </exercise>
@@ -1612,7 +1612,7 @@
     <exercise number="18" xml:id="groups-exercise-n-factorial-permutations">
       <statement>
         <p>
-          Show that there are <m>n!</m> permutations of a set containing <m>n</m> items.
+          Mostre que há <m>n!</m> permutações de um conjunto contendo <m>n</m> itens.
         </p>
       </statement>
       <hint>
@@ -1624,12 +1624,12 @@
             1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
             \end{pmatrix}
           </md>
-          be in <m>S_n</m>.
-          All of the <m>a_i</m>s must be distinct.
-          There are <m>n</m> ways to choose <m>a_1</m>,
-          <m>n - 1</m> ways to choose <m>a_2</m>, <ellipsis/>, two ways to choose <m>a_{n - 1}</m>,
-          and only one way to choose <m>a_n</m>.
-          Therefore, we can form <m>\sigma</m> in <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> ways.
+          pertença a <m>S_n</m>.
+          Todos os <m>a_i</m> devem ser distintos.
+          Há <m>n</m> maneiras de escolher <m>a_1</m>,
+          <m>n - 1</m> maneiras de escolher <m>a_2</m>, <ellipsis/>, duas maneiras de escolher <m>a_{n - 1}</m>
+          e apenas uma maneira de escolher <m>a_n</m>.
+          Portanto, podemos formar <m>\sigma</m> de <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> maneiras.
         </p>
       </hint>
     </exercise>
