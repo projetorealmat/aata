@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Make PreTeXts bundled Runestone fallback usable in offline CI.
+"""Make PreTeXt's bundled Runestone fallback usable in offline CI.
 
 PreTeXt 2.44.0 ships its fallback XML as ``runestone_services.xml`` but the
 runtime looks for ``rs_services.xml``. When the Runestone CDN is unavailable,
