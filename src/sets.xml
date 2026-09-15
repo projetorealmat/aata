@@ -1429,7 +1429,7 @@
     <exercise label="rq-sets-relations-maps">
       <statement>
         <p>
-          What do relations and mappings have in common?
+          O que as relações e as aplicações têm em comum?
         </p>
       </statement>
       <response/>
@@ -1438,7 +1438,7 @@
     <exercise label="rq-sets-relations-maps-difference">
       <statement>
         <p>
-          What makes relations and mappings different?
+          O que diferencia relações e aplicações?
         </p>
       </statement>
       <response/>
@@ -1447,9 +1447,9 @@
     <exercise label="rq-sets-equiv-relation">
       <statement>
         <p>
-          State carefully the three defining properties of an equivalence relation.
-          In other words, do not just <em>name</em>
-          the properties, give their definitions.
+          Enuncie cuidadosamente as três propriedades que definem uma relação de equivalência.
+          Em outras palavras, não apenas dê o <em>nome</em>
+          das propriedades; apresente suas definições.
         </p>
       </statement>
       <response/>
@@ -1458,7 +1458,7 @@
     <exercise label="rq-sets-partitions">
       <statement>
         <p>
-          What is the big deal about equivalence relations? (Hint: Partitions.)
+          Qual é a importância das relações de equivalência? (Dica: partições.)
         </p>
       </statement>
       <response/>
@@ -1467,7 +1467,7 @@
     <exercise label="rq-sets-set-equality">
       <statement>
         <p>
-          Describe a general technique for proving that two sets are equal.
+          Descreva uma técnica geral para demonstrar que dois conjuntos são iguais.
         </p>
       </statement>
       <response/>
@@ -1478,17 +1478,17 @@
     <!-- File: sets.xml  -->
     <!-- Title: Preliminaries -->
   <exercises xml:id="sets-exercises" filenamebase="sets">
-    <title>Exercises</title>
+    <title>Exercícios</title>
     <exercise number="1" xml:id="sets-exercise-set-operations">
       <statement>
         <p>
-          Suppose that
+          Suponha que
           <md>
             <mrow>A &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is even} \},</mrow>
             <mrow>B &amp; = \{x : x \in \mathbb N \text{ and } x \text{ is prime}\},</mrow>
             <mrow>C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}</mrow>
           </md>.
-          Describe each of the following sets.
+          Descreva cada um dos conjuntos a seguir.
 
           <ol cols="2">
             <li>
@@ -1527,9 +1527,9 @@
     <exercise number="2" xml:id="sets-exercise-set-operations-empty-set">
       <statement>
         <p>
-          If <m>A = \{ a, b, c \}</m>,
-          <m>B = \{ 1, 2, 3 \}</m>, <m>C = \{ x \}</m>, and <m>D = \emptyset</m>,
-          list all of the elements in each of the following sets.
+          Se <m>A = \{ a, b, c \}</m>,
+          <m>B = \{ 1, 2, 3 \}</m>, <m>C = \{ x \}</m> e <m>D = \emptyset</m>,
+          liste todos os elementos de cada um dos conjuntos a seguir.
 
           <ol cols="2">
             <li>
@@ -1568,7 +1568,7 @@
     <exercise number="3" xml:id="sets-exercise-cartesian-product-nonempty-set">
       <statement>
         <p>
-          Find an example of two nonempty sets <m>A</m> and <m>B</m> for which <m>A \times B = B \times A</m> is true.
+          Encontre um exemplo de dois conjuntos não vazios <m>A</m> e <m>B</m> para os quais <m>A \times B = B \times A</m> seja verdadeiro.
         </p>
       </statement>
     </exercise>
@@ -1576,7 +1576,7 @@
     <exercise number="4" xml:id="sets-exercise-union-intersect-empty-set">
       <statement>
         <p>
-          Prove <m>A \cup \emptyset = A</m> and <m>A \cap \emptyset = \emptyset</m>.
+          Demonstre <m>A \cup \emptyset = A</m> e <m>A \cap \emptyset = \emptyset</m>.
         </p>
       </statement>
     </exercise>
@@ -1584,7 +1584,7 @@
     <exercise number="5" xml:id="sets-exercise-union-intersection-commute">
       <statement>
         <p>
-          Prove <m>A \cup B = B \cup A</m> and <m>A \cap B = B \cap A</m>.
+          Demonstre <m>A \cup B = B \cup A</m> e <m>A \cap B = B \cap A</m>.
         </p>
       </statement>
     </exercise>
@@ -1592,15 +1592,15 @@
     <exercise number="6" xml:id="sets-exercise-union-distributes">
       <statement>
         <p>
-          Prove <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>.
+          Demonstre <m>A \cup (B \cap C) = (A \cup B) \cap (A \cup C)</m>.
         </p>
       </statement>
       <hint>
         <p>
-           Observe that <m>x \in A \cup B</m> if and only if <m>x \in A</m> or <m>x \in B</m>.
-          Equivalently, <m>x \in B</m> or <m>x \in A</m>,
-          which is the same as <m>x \in B \cup A</m>.
-          Therefore, <m>A \cup B = B \cup A</m>.
+           Observe que <m>x \in A \cup B</m> se, e somente se, <m>x \in A</m> ou <m>x \in B</m>.
+          Equivalentemente, <m>x \in B</m> ou <m>x \in A</m>,
+          o que é o mesmo que <m>x \in B \cup A</m>.
+          Portanto, <m>A \cup B = B \cup A</m>.
         </p>
       </hint>
     </exercise>
@@ -1608,7 +1608,7 @@
     <exercise number="7" xml:id="sets-exercise-intersection-distributes">
       <statement>
         <p>
-          Prove <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)</m>.
+          Demonstre <m>A \cap (B \cup C) = (A \cap B) \cup (A \cap C)</m>.
         </p>
       </statement>
     </exercise>
@@ -1616,7 +1616,7 @@
     <exercise number="8" xml:id="sets-exercise-subset-iff-intersection">
       <statement>
         <p>
-          Prove <m>A \subset B</m> if and only if <m>A \cap B = A</m>.
+          Demonstre <m>A \subset B</m> se, e somente se, <m>A \cap B = A</m>.
         </p>
       </statement>
     </exercise>
@@ -1624,7 +1624,7 @@
     <exercise number="9" xml:id="sets-exercise-demorgan">
       <statement>
         <p>
-          Prove <m>(A \cap B)' = A' \cup B'</m>.
+          Demonstre <m>(A \cap B)' = A' \cup B'</m>.
         </p>
       </statement>
     </exercise>
@@ -1632,7 +1632,7 @@
     <exercise number="10" xml:id="sets-exercise-set-minus-union">
       <statement>
         <p>
-          Prove <m>A \cup B = (A \cap B) \cup (A \setminus B) \cup (B \setminus A)</m>.
+          Demonstre <m>A \cup B = (A \cap B) \cup (A \setminus B) \cup (B \setminus A)</m>.
         </p>
       </statement>
       <hint>
@@ -1645,7 +1645,7 @@
     <exercise number="11" xml:id="sets-exercise-times-union">
       <statement>
         <p>
-          Prove <m>(A \cup B) \times C = (A \times C ) \cup (B \times C)</m>.
+          Demonstre <m>(A \cup B) \times C = (A \times C ) \cup (B \times C)</m>.
         </p>
       </statement>
     </exercise>
@@ -1653,7 +1653,7 @@
     <exercise number="12" xml:id="sets-exercise-set-minus-empty-set">
       <statement>
         <p>
-          Prove <m>(A \cap B) \setminus B = \emptyset</m>.
+          Demonstre <m>(A \cap B) \setminus B = \emptyset</m>.
         </p>
       </statement>
     </exercise>
@@ -1661,7 +1661,7 @@
     <exercise number="13" xml:id="sets-exercise-union-set-minus">
       <statement>
         <p>
-          Prove <m>(A \cup B) \setminus B = A \setminus B</m>.
+          Demonstre <m>(A \cup B) \setminus B = A \setminus B</m>.
         </p>
       </statement>
     </exercise>
@@ -1669,7 +1669,7 @@
     <exercise number="14" xml:id="sets-exercise-set-minus-distribute">
       <statement>
         <p>
-          Prove <m>A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)</m>.
+          Demonstre <m>A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)</m>.
         </p>
       </statement>
       <hint>
@@ -1682,7 +1682,7 @@
     <exercise number="15" xml:id="sets-exercise-a-cap-b-setminus-c">
       <statement>
         <p>
-          Prove <m>A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)</m>.
+          Demonstre <m>A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)</m>.
         </p>
       </statement>
     </exercise>
@@ -1690,7 +1690,7 @@
     <exercise number="16" xml:id="sets-exercise-a-csetminus-b-cup-b-setminus-a">
       <statement>
         <p>
-          Prove <m>(A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)</m>.
+          Demonstre <m>(A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)</m>.
         </p>
       </statement>
     </exercise>
@@ -1698,9 +1698,9 @@
     <exercise number="17" xml:id="sets-exercise-which-are-maps">
       <statement>
         <p>
-          Which of the following relations <m>f: {\mathbb Q} \rightarrow {\mathbb Q}</m> define a mapping?
-          In each case,
-          supply a reason why <m>f</m> is or is not a mapping.
+          Quais das relações a seguir <m>f: {\mathbb Q} \rightarrow {\mathbb Q}</m> definem uma aplicação?
+          Em cada caso,
+          justifique por que <m>f</m> é ou não uma aplicação.
 
           <ol cols="2">
             <li>
@@ -1731,8 +1731,8 @@
       </statement>
       <hint>
         <p>
-          (a) Not a map since <m>f(2/3)</m> is undefined; (b) this is a map; (c) not a map,
-          since <m>f(1/2) = 3/4</m> but <m>f(2/4)=3/8</m>; (d) this is a map.
+          (a) Não é uma aplicação, pois <m>f(2/3)</m> não está definida; (b) é uma aplicação; (c) não é uma aplicação,
+          pois <m>f(1/2) = 3/4</m>, mas <m>f(2/4)=3/8</m>; (d) é uma aplicação.
         </p>
       </hint>
     </exercise>
@@ -1740,31 +1740,31 @@
     <exercise number="18" xml:id="sets-exercise-which-are-one-to-one-onto">
       <statement>
         <p>
-          Determine which of the following functions are one-to-one and which are onto.
-          If the function is not onto, determine its range.
+          Determine quais das funções a seguir são injetivas e quais são sobrejetivas.
+          Se a função não for sobrejetiva, determine sua imagem.
 
           <ol>
             <li>
               <p>
-                <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> defined by <m>f(x) = e^x</m>
+                <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> definida por <m>f(x) = e^x</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>f: {\mathbb Z} \rightarrow {\mathbb Z}</m> defined by <m>f(n) = n^2 + 3</m>
+                <m>f: {\mathbb Z} \rightarrow {\mathbb Z}</m> definida por <m>f(n) = n^2 + 3</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> defined by <m>f(x) = \sin x</m>
+                <m>f: {\mathbb R} \rightarrow {\mathbb R}</m> definida por <m>f(x) = \sin x</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>f: {\mathbb Z} \rightarrow {\mathbb Z}</m> defined by <m>f(x) = x^2</m>
+                <m>f: {\mathbb Z} \rightarrow {\mathbb Z}</m> definida por <m>f(x) = x^2</m>
               </p>
             </li>
           </ol>
@@ -1772,8 +1772,8 @@
       </statement>
       <hint>
         <p>
-          (a) <m>f</m> is one-to-one but not onto.
-          <m>f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}</m>. (c) <m>f</m> is neither one-to-one nor onto. <m>f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}</m>.
+          (a) <m>f</m> é injetiva, mas não sobrejetiva.
+          <m>f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}</m>. (c) <m>f</m> não é nem injetiva nem sobrejetiva. <m>f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}</m>.
         </p>
       </hint>
     </exercise>
@@ -1781,10 +1781,10 @@
     <exercise number="19" xml:id="sets-exercise-inverse-composition">
       <statement>
         <p>
-          Let <m>f :A \rightarrow B</m> and
-          <m>g : B \rightarrow C</m> be invertible mappings;
-          that is, mappings such that <m>f^{-1}</m> and <m>g^{-1}</m> exist.
-          Show that <m>(g \circ f)^{-1} =f^{-1} \circ g^{-1}</m>.
+          Sejam <m>f :A \rightarrow B</m> e
+          <m>g : B \rightarrow C</m> aplicações invertíveis;
+          isto é, aplicações para as quais <m>f^{-1}</m> e <m>g^{-1}</m> existem.
+          Mostre que <m>(g \circ f)^{-1} =f^{-1} \circ g^{-1}</m>.
         </p>
       </statement>
     </exercise>
@@ -1795,13 +1795,13 @@
           <ol>
             <li>
               <p>
-                Define a function <m>f: {\mathbb N} \rightarrow {\mathbb N}</m> that is one-to-one but not onto.
+                Defina uma função <m>f: {\mathbb N} \rightarrow {\mathbb N}</m> que seja injetiva, mas não sobrejetiva.
               </p>
             </li>
 
             <li>
               <p>
-                Define a function <m>f: {\mathbb N} \rightarrow {\mathbb N}</m> that is onto but not one-to-one.
+                Defina uma função <m>f: {\mathbb N} \rightarrow {\mathbb N}</m> que seja sobrejetiva, mas não injetiva.
               </p>
             </li>
           </ol>
@@ -1817,9 +1817,9 @@
     <exercise number="21" xml:id="sets-exercise-relation-on-circles">
       <statement>
         <p>
-          Prove the relation defined on
-          <m>{\mathbb R}^2</m> by <m>(x_1, y_1 ) \sim (x_2, y_2)</m> if
-          <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m> is an equivalence relation.
+          Demonstre que a relação definida em
+          <m>{\mathbb R}^2</m> por <m>(x_1, y_1 ) \sim (x_2, y_2)</m> se
+          <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m> é uma relação de equivalência.
         </p>
       </statement>
     </exercise>
@@ -1827,40 +1827,40 @@
     <exercise number="22" xml:id="sets-exercise-bijective-surjective-compostion">
       <statement>
         <p>
-          Let <m>f : A \rightarrow B</m> and <m>g : B \rightarrow C</m> be maps.
+          Sejam <m>f : A \rightarrow B</m> e <m>g : B \rightarrow C</m> aplicações.
 
           <ol>
             <li>
               <p>
-                If <m>f</m> and <m>g</m> are both one-to-one functions,
-                show that <m>g \circ f</m> is one-to-one.
+                Se <m>f</m> e <m>g</m> são funções injetivas,
+                mostre que <m>g \circ f</m> é injetiva.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>g \circ f</m> is onto, show that <m>g</m> is onto.
+                Se <m>g \circ f</m> é sobrejetiva, mostre que <m>g</m> é sobrejetiva.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>g \circ f</m> is one-to-one,
-                show that <m>f</m> is one-to-one.
+                Se <m>g \circ f</m> é injetiva,
+                mostre que <m>f</m> é injetiva.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>g \circ f</m> is one-to-one and <m>f</m> is onto,
-                show that <m>g</m> is one-to-one.
+                Se <m>g \circ f</m> é injetiva e <m>f</m> é sobrejetiva,
+                mostre que <m>g</m> é injetiva.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>g \circ f</m> is onto and <m>g</m> is one-to-one,
-                show that <m>f</m> is onto.
+                Se <m>g \circ f</m> é sobrejetiva e <m>g</m> é injetiva,
+                mostre que <m>f</m> é sobrejetiva.
               </p>
             </li>
           </ol>
@@ -1868,12 +1868,12 @@
       </statement>
       <hint>
         <p>
-          (a) Let <m>x, y \in A</m>.
-          Then <m>g(f(x)) = (g \circ f)(x) = (g \circ f)(y) = g(f(y))</m>.
-          Thus, <m>f(x) = f(y)</m> and <m>x = y</m>,
-          so <m>g \circ f</m> is one-to-one. (b) Let <m>c \in C</m>,
-          then <m>c = (g \circ f)(x) = g(f(x))</m> for some <m>x \in A</m>.
-          Since <m>f(x) \in B</m>, <m>g</m> is onto.
+          (a) Sejam <m>x, y \in A</m>.
+          Então <m>g(f(x)) = (g \circ f)(x) = (g \circ f)(y) = g(f(y))</m>.
+          Assim, <m>f(x) = f(y)</m> e <m>x = y</m>,
+          logo <m>g \circ f</m> é injetiva. (b) Seja <m>c \in C</m>,
+          então <m>c = (g \circ f)(x) = g(f(x))</m> para algum <m>x \in A</m>.
+          Como <m>f(x) \in B</m>, <m>g</m> é sobrejetiva.
         </p>
       </hint>
     </exercise>
@@ -1881,13 +1881,13 @@
     <exercise number="23"  xml:id="sets-exercise-inverse-rational-function">
       <statement>
         <p>
-          Define a function on the real numbers by
+          Defina uma função nos números reais por
           <md>
             f(x) = \frac{x + 1}{x - 1}
           </md>.
-          What are the domain and range of <m>f</m>?
-          What is the inverse of <m>f</m>?
-          Compute <m>f \circ f^{-1}</m> and <m>f^{-1} \circ f</m>.
+          Qual é o domínio e a imagem de <m>f</m>?
+          Qual é a inversa de <m>f</m>?
+          Calcule <m>f \circ f^{-1}</m> e <m>f^{-1} \circ f</m>.
         </p>
       </statement>
       <hint>
@@ -1900,26 +1900,26 @@
     <exercise number="24" xml:id="sets-exercise-maps-set-operations">
       <statement>
         <p>
-          Let <m>f: X \rightarrow Y</m> be a map with
-          <m>A_1, A_2 \subset X</m> and <m>B_1, B_2 \subset Y</m>.
+          Seja <m>f: X \rightarrow Y</m> uma aplicação tal que
+          <m>A_1, A_2 \subset X</m> e <m>B_1, B_2 \subset Y</m>.
 
           <ol>
             <li>
               <p>
-                Prove <m>f( A_1 \cup A_2 ) = f( A_1) \cup f( A_2 )</m>.
+                Demonstre <m>f( A_1 \cup A_2 ) = f( A_1) \cup f( A_2 )</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove <m>f( A_1 \cap A_2 ) \subset f( A_1) \cap f( A_2 )</m>.
-                Give an example in which equality fails.
+                Demonstre <m>f( A_1 \cap A_2 ) \subset f( A_1) \cap f( A_2 )</m>.
+                Dê um exemplo em que a igualdade falha.
               </p>
             </li>
 
             <li>
               <p>
-                Prove <m>f^{-1}( B_1 \cup B_2 ) = f^{-1}( B_1) \cup f^{-1}(B_2 )</m>, where
+                Demonstre <m>f^{-1}( B_1 \cup B_2 ) = f^{-1}( B_1) \cup f^{-1}(B_2 )</m>, em que
                 <md>
                   f^{-1}(B) = \{ x \in X : f(x) \in B \}
                 </md>.
@@ -1928,13 +1928,13 @@
 
             <li>
               <p>
-                Prove <m>f^{-1}( B_1 \cap B_2 ) = f^{-1}( B_1) \cap f^{-1}( B_2 )</m>.
+                Demonstre <m>f^{-1}( B_1 \cap B_2 ) = f^{-1}( B_1) \cap f^{-1}( B_2 )</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove <m>f^{-1}( Y \setminus B_1 ) = X \setminus f^{-1}( B_1)</m>.
+                Demonstre <m>f^{-1}( Y \setminus B_1 ) = X \setminus f^{-1}( B_1)</m>.
               </p>
             </li>
           </ol>
@@ -1942,18 +1942,18 @@
       </statement>
       <hint>
         <p>
-          (a) Let <m>y \in f(A_1 \cup A_2)</m>.
-          Then there exists an <m>x \in A_1 \cup A_2</m> such that <m>f(x) = y</m>.
-          Hence, <m> y \in f(A_1)</m> or <m>f(A_2) </m>.
-          Therefore, <m> y \in f(A_1) \cup f(A_2)</m>.
-          Consequently,
+          (a) Seja <m>y \in f(A_1 \cup A_2)</m>.
+          Então existe um <m>x \in A_1 \cup A_2</m> tal que <m>f(x) = y</m>.
+          Logo, <m> y \in f(A_1)</m> ou <m>f(A_2) </m>.
+          Portanto, <m> y \in f(A_1) \cup f(A_2)</m>.
+          Consequentemente,
           <m> f(A_1 \cup A_2) \subset f(A_1) \cup f(A_2)</m>.
-          Conversely, if <m>y \in f(A_1) \cup f(A_2)</m>,
-          then <m> y \in f(A_1)</m> or <m>f(A_2)</m>.
-          Hence, there exists an <m>x</m> in <m>A_1</m> or <m>A_2</m> such that <m>f(x) = y</m>.
-          Thus, there exists an <m>x \in A_1 \cup A_2</m> such that <m>f(x) = y</m>.
-          Therefore, <m> f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)</m>,
-          and <m>f(A_1 \cup A_2) = f(A_1) \cup f(A_2)</m>.
+          Reciprocamente, se <m>y \in f(A_1) \cup f(A_2)</m>,
+          então <m> y \in f(A_1)</m> ou <m>f(A_2)</m>.
+          Logo, existe um <m>x</m> em <m>A_1</m> ou <m>A_2</m> tal que <m>f(x) = y</m>.
+          Assim, existe um <m>x \in A_1 \cup A_2</m> tal que <m>f(x) = y</m>.
+          Portanto, <m> f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)</m>,
+          e <m>f(A_1 \cup A_2) = f(A_1) \cup f(A_2)</m>.
         </p>
       </hint>
     </exercise>
@@ -1961,34 +1961,34 @@
     <exercise number="25" xml:id="sets-exercise-determine-equivalence-relations">
       <statement>
         <p>
-          Determine whether or not the following relations are equivalence relations on the given set.
-          If the relation is an equivalence relation,
-          describe the partition given by it.
-          If the relation is not an equivalence relation,
-          state why it fails to be one.
+          Determine se as relações a seguir são ou não relações de equivalência no conjunto dado.
+          Se a relação for uma relação de equivalência,
+          descreva a partição que ela determina.
+          Se a relação não for uma relação de equivalência,
+          indique por que ela não o é.
 
           <ol cols="2">
             <li>
               <p>
-                <m>x \sim y</m> in <m>{\mathbb R}</m> if <m>x \geq y</m>
+                <m>x \sim y</m> em <m>{\mathbb R}</m> se <m>x \geq y</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>mn &gt; 0</m>
+                <m>m \sim n</m> em <m>{\mathbb Z}</m> se <m>mn &gt; 0</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>x \sim y</m> in <m>{\mathbb R}</m> if <m>|x - y| \leq 4</m>
+                <m>x \sim y</m> em <m>{\mathbb R}</m> se <m>|x - y| \leq 4</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>m \sim n</m> in <m>{\mathbb Z}</m> if <m>m \equiv n \pmod{6}</m>
+                <m>m \sim n</m> em <m>{\mathbb Z}</m> se <m>m \equiv n \pmod{6}</m>
               </p>
             </li>
           </ol>
@@ -1996,8 +1996,8 @@
       </statement>
       <hint>
         <p>
-          (a) The relation fails to be symmetric. (b) The relation is not reflexive,
-          since <m>0</m> is not equivalent to itself. (c) The relation is not transitive.
+          (a) A relação não é simétrica. (b) A relação não é reflexiva,
+          pois <m>0</m> não é equivalente a si mesmo. (c) A relação não é transitiva.
         </p>
       </hint>
     </exercise>
@@ -2005,9 +2005,9 @@
     <exercise number="26" xml:id="sets-exercise-nonsymmetric-circle">
       <statement>
         <p>
-          Define a relation <m>\sim</m> on <m>{\mathbb R}^2</m> by stating that
-          <m>(a, b) \sim (c, d)</m> if and only if <m>a^2 + b^2 \leq c^2 + d^2</m>.
-          Show that <m>\sim</m> is reflexive and transitive but not symmetric.
+          Defina uma relação <m>\sim</m> em <m>{\mathbb R}^2</m> afirmando que
+          <m>(a, b) \sim (c, d)</m> se, e somente se, <m>a^2 + b^2 \leq c^2 + d^2</m>.
+          Mostre que <m>\sim</m> é reflexiva e transitiva, mas não simétrica.
         </p>
       </statement>
     </exercise>
@@ -2015,8 +2015,8 @@
     <exercise number="27" xml:id="sets-exercise-matrix-mult-well-defined">
       <statement>
         <p>
-          Show that an <m>m \times n</m> matrix gives rise to a well-defined map from
-          <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m>.
+          Mostre que uma matriz <m>m \times n</m> dá origem a uma aplicação bem definida de
+          <m>{\mathbb R}^n</m> em <m>{\mathbb R}^m</m>.
         </p>
       </statement>
     </exercise>
@@ -2024,32 +2024,32 @@
     <exercise number="28" xml:id="sets-exercise-reflexive-error">
       <statement>
         <p>
-          Find the error in the following argument by providing a counterexample.
-          <q>The reflexive property is redundant in the axioms for an equivalence relation.
-          If <m>x \sim y</m>, then <m>y \sim x</m> by the symmetric property.
-          Using the transitive property,
-          we can deduce that <m>x \sim x</m>.</q>
+          Encontre o erro no argumento a seguir fornecendo um contraexemplo.
+          <q>A propriedade reflexiva é redundante nos axiomas de uma relação de equivalência.
+          Se <m>x \sim y</m>, então <m>y \sim x</m> pela propriedade simétrica.
+          Usando a propriedade transitiva,
+          podemos deduzir que <m>x \sim x</m>.</q>
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>X = {\mathbb N} \cup \{ \sqrt{2}\, \}</m> and define
-          <m>x \sim y</m> if <m>x + y \in {\mathbb N}</m>.
+          Seja <m>X = {\mathbb N} \cup \{ \sqrt{2}\, \}</m> e defina
+          <m>x \sim y</m> se <m>x + y \in {\mathbb N}</m>.
         </p>
       </hint>
     </exercise>
 
-    <exercise number="29" xml:id="sets-exercise-projective-real-line">
-      <title>Projective Real Line</title>
+      <exercise number="29" xml:id="sets-exercise-projective-real-line">
+      <title>Reta real projetiva</title>
       <statement>
         <p>
-          Define a relation on <m>{\mathbb R}^2 \setminus \{ (0,0) \}</m> by letting
-          <m>(x_1, y_1) \sim (x_2, y_2)</m> if there exists a nonzero real number <m>\lambda</m> such that <m>(x_1, y_1) = ( \lambda x_2, \lambda y_2)</m>.
-          Prove that <m>\sim</m> defines an equivalence relation on <m>{\mathbb R}^2 \setminus (0,0)</m>.
-          What are the corresponding equivalence classes?
-          This equivalence relation defines the projective line,
-          denoted by <m>{\mathbb P}({\mathbb R}) </m>,
-          which is very important in geometry.
+          Defina uma relação em <m>{\mathbb R}^2 \setminus \{ (0,0) \}</m> fazendo
+          <m>(x_1, y_1) \sim (x_2, y_2)</m> se existe um número real não nulo <m>\lambda</m> tal que <m>(x_1, y_1) = ( \lambda x_2, \lambda y_2)</m>.
+          Demonstre que <m>\sim</m> define uma relação de equivalência em <m>{\mathbb R}^2 \setminus (0,0)</m>.
+          Quais são as classes de equivalência correspondentes?
+          Essa relação de equivalência define a reta projetiva,
+          denotada por <m>{\mathbb P}({\mathbb R}) </m>,
+          que é muito importante na geometria.
         </p>
       </statement>
     </exercise>
@@ -2058,7 +2058,7 @@
   <!--Todo Figure out how to include comments in front of the list of references-->
 
   <references xml:id="sets-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
         <!--
 		<p>The following list contains references suitable for further reading.  With the exception of [8] and [9] and perhaps [1] and [3], all of these books are more or less  at the same level as this text.  Interesting applications of algebra  can be found in [2], [5], [10], and [11].</p>
 -->
@@ -2166,80 +2166,80 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage is a powerful system for studying and exploring many different areas of mathematics.
-        In this textbook, you will study a variety of algebraic structures,
-        such as groups, rings and fields.
-        Sage does an excellent job of implementing many features of these objects as we will see in the chapters ahead.
-        But here and now, in this initial chapter,
-        we will concentrate on a few general ways of getting the most out of working with Sage.
+        Sage é um sistema poderoso para estudar e explorar muitas áreas diferentes da matemática.
+        Neste livro, você estudará uma variedade de estruturas algébricas,
+        como grupos, anéis e corpos.
+        O Sage implementa muito bem muitos recursos desses objetos, como veremos nos capítulos seguintes.
+        Mas aqui e agora, neste capítulo inicial,
+        concentraremos nossa atenção em algumas maneiras gerais de aproveitar ao máximo o trabalho com o Sage.
       </p>
 
       <p>
-        You may use Sage several different ways.
-        It may be used as a command-line program when installed on your own computer.
-        Or it might be a web application such as the SageMathCloud.
-        Our writing will assume that you are reading this as a worksheet within the Sage Notebook (a web browser interface),
-        or this is a section of the entire book presented as web pages,
-        and you are employing the Sage Cell Server via those pages.
-        After the first few chapters the explanations should work equally well for whatever vehicle you use to execute Sage commands.
+        Você pode usar o Sage de várias maneiras.
+        Ele pode ser usado como um programa de linha de comando quando instalado em seu próprio computador.
+        Ou pode ser uma aplicação web, como o SageMathCloud.
+        Nossa redação pressupõe que você está lendo isto como uma planilha no Sage Notebook (uma interface de navegador),
+        ou que esta é uma seção do livro inteiro apresentada como páginas web
+        e você está usando o Sage Cell Server por meio dessas páginas.
+        Depois dos primeiros capítulos, as explicações devem funcionar igualmente bem qualquer que seja o meio utilizado para executar comandos do Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Executing Sage Commands</title>
+      <title>Execução de comandos do Sage</title>
       <p>
-        Most of your interaction will be by typing commands into a <em>compute cell</em>.
-        If you are reading this in the Sage Notebook or as a webpage version of the book,
-        then you will see a compute cell just below this paragraph.
-        Click once inside the compute cell and if you are in the Sage Notebook,
-        you will get a more distinctive border around it,
-        a blinking cursor inside, plus a cute little
-        <q>evaluate</q> link below.
+        A maior parte da sua interação ocorrerá digitando comandos em uma <em>célula de computação</em>.
+        Se estiver lendo isto no Sage Notebook ou na versão do livro em páginas web,
+        verá uma célula de computação logo abaixo deste parágrafo.
+        Clique uma vez dentro da célula de computação e, se estiver no Sage Notebook,
+        você verá uma borda mais destacada ao redor dela,
+        um cursor piscando dentro dela e também um pequeno
+        link <q>avaliar</q> abaixo.
       </p>
 
       <sage/>
 
       <p>
-        At the cursor,
-        type <c>2+2</c> and then click on the evaluate link.
-        Did a <c>4</c> appear below the cell?
-        If so, you have successfully sent a command off for Sage to evaluate and you have received back the (correct) answer.
+        No cursor,
+        digite <c>2+2</c> e então clique no link avaliar.
+        Apareceu um <c>4</c> abaixo da célula?
+        Se sim, você enviou com sucesso um comando para o Sage avaliar e recebeu de volta a resposta (correta).
       </p>
 
       <p>
-        Here is another compute cell.
-        Try evaluating the command <c>factorial(300)</c> here.
+        Aqui está outra célula de computação.
+        Tente avaliar aqui o comando <c>factorial(300)</c>.
       </p>
 
       <sage/>
 
       <p>
         Hmmmmm.
-        That is quite a big integer!
-        If you see slashes at the end of each line,
-        this means the result is continued onto the next line,
-        since there are 615 total digits in the result.
+        Esse é um inteiro bastante grande!
+        Se você vir barras no final de cada linha,
+        isso significa que o resultado continua na linha seguinte,
+        pois há 615 algarismos no total.
       </p>
 
       <p>
-        To make new compute cells in the Sage Notebook (only),
-        hover your mouse just above another compute cell,
-        or just below some output from a compute cell.
-        When you see a skinny blue bar across the width of your worksheet,
-        click and you will open up a new compute cell, ready for input.
-        Note that your worksheet will remember any calculations you make,
-        in the order you make them, no matter where you put the cells,
-        so it is best to stay organized and add new cells at the bottom.
+        Para criar novas células de computação no Sage Notebook (somente),
+        passe o mouse logo acima de outra célula de computação
+        ou logo abaixo de alguma saída de uma célula de computação.
+        Quando vir uma barra azul estreita atravessando a largura da sua planilha,
+        clique nela e abrirá uma nova célula de computação, pronta para receber entrada.
+        Observe que sua planilha se lembrará de todos os cálculos que você fizer,
+        na ordem em que os fizer, independentemente de onde colocar as células,
+        portanto é melhor manter tudo organizado e adicionar novas células na parte inferior.
       </p>
 
       <p>
-        Try placing your cursor just below the monstrous value of <m>300!</m> that you have.
-        Click on the blue bar and try another factorial computation in the new compute cell.
+        Tente posicionar o cursor logo abaixo do valor monstruoso de <m>300!</m> que você obteve.
+        Clique na barra azul e tente outro cálculo de fatorial na nova célula de computação.
       </p>
 
       <p>
-        Each compute cell will show output due to only the very last command in the cell.
-        Try to predict the following output before evaluating the cell.
+        Cada célula de computação exibirá a saída apenas do último comando da célula.
+        Tente prever a saída a seguir antes de avaliar a célula.
       </p>
             <!-- Doctest framework *will* create output from "b", contrary to notebook behavior -->
             <!-- So doctest will fail, and doctest="not tested" does not help the situation -->
@@ -2255,15 +2255,15 @@
             </sage>
 
       <p>
-        The following compute cell will not print anything since the one command does not create output.
-        But it will have an effect,
-        as you can see when you execute the subsequent cell.
-        Notice how this uses the value of <c>b</c> from above.
-        Execute this compute cell <em>once</em>.
-        Exactly once.
-        Even if it <em>appears</em> to do nothing.
-        If you execute the cell twice,
-        your credit card may be charged twice.
+        A célula de computação a seguir não imprimirá nada, pois o único comando não produz saída.
+        Mas ela terá um efeito,
+        como você poderá ver ao executar a célula seguinte.
+        Observe como ela usa o valor de <c>b</c> definido acima.
+        Execute esta célula de computação <em>uma vez</em>.
+        Exatamente uma vez.
+        Mesmo que <em>pareça</em> não fazer nada.
+        Se você executar a célula duas vezes,
+        seu cartão de crédito poderá ser cobrado duas vezes.
       </p>
 
             <sage>
@@ -2271,7 +2271,7 @@
             </sage>
 
       <p>
-        Now execute this cell, which will produce some output.
+        Agora execute esta célula, que produzirá alguma saída.
       </p>
 
             <sage>
@@ -2280,22 +2280,22 @@
             </sage>
 
       <p>
-        So <c>b</c> came into existence as <c>6</c>.
-        We subtracted <m>10</m> immediately afterward.
-        Then a subsequent cell added <c>50</c>.
-        This assumes you executed this cell <em>exactly</em> once!
-        In the last cell we create <c>b+20</c>
-        (but do not save it)
-        and it is this value (<m>66</m>) that is output,
-        while <c>b</c> is still <m>46</m>.
+        Assim, <c>b</c> surgiu com o valor <c>6</c>.
+        Subtraímos <m>10</m> imediatamente depois.
+        Em seguida, uma célula posterior adicionou <c>50</c>.
+        Isso pressupõe que você executou esta célula <em>exatamente</em> uma vez!
+        Na última célula criamos <c>b+20</c>
+        (mas não o salvamos)
+        e é esse valor (<m>66</m>) que é exibido,
+        enquanto <c>b</c> continua sendo <m>46</m>.
       </p>
 
       <p>
-        You can combine several commands on one line with a semi-colon.
-        This is a great way to get multiple outputs from a compute cell.
-        The syntax for building a matrix should be somewhat obvious when you see the output,
-        but if not,
-        it is not particularly important to understand now.
+        Você pode combinar vários comandos em uma linha usando um ponto e vírgula.
+        Essa é uma ótima maneira de obter várias saídas de uma célula de computação.
+        A sintaxe para construir uma matriz deve parecer relativamente óbvia quando você vir a saída,
+        mas, se não parecer,
+        não é particularmente importante compreendê-la agora.
       </p>
 
             <sage>
