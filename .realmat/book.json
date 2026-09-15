@@ -16,7 +16,6 @@
   "build_system": "pretext",
   "pretext_project_file": "project.ptx",
   "pretext_pdf_target": "print",
-  "pretext_web_target": "web",
   "pretext_requirements_file": "requirements.txt",
   "pretext_generate": false,
   "pretext_cached_assets_source": "images",
