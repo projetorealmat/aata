@@ -285,126 +285,126 @@
   </section>
 
   <section xml:id="integers-section-division-algorithm">
-    <title>The Division Algorithm</title>
+    <title>O algoritmo da divisão</title>
     <introduction>
       <p>
-        An application of the Principle of Well-Ordering that we will use often is the division algorithm.
+        Uma aplicação do princípio da boa ordenação que usaremos frequentemente é o algoritmo da divisão.
       </p>
 
       <theorem xml:id="integers-theorem-division_algorithm">
-        <title>Division Algorithm</title>
+        <title>Algoritmo da divisão</title>
         <idx>
-        <h>Division algorithm</h>
-        <h>for integers</h>
+        <h>Algoritmo da divisão</h>
+        <h>para inteiros</h>
         </idx>
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be integers, with <m>b \gt 0</m>.
-            Then there exist unique integers <m>q</m> and <m>r</m> such that
+            Sejam <m>a</m> e <m>b</m> inteiros, com <m>b \gt 0</m>.
+            Então existem únicos inteiros <m>q</m> e <m>r</m> tais que
             <md>
               a = bq + r
             </md>
-            where <m>0 \leq r \lt b</m>.
+            em que <m>0 \leq r \lt b</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            This is a perfect example of the existence-and-uniqueness type of proof.
-            We must first prove that the numbers <m>q</m> and <m>r</m> actually exist.
-            Then we must show that if <m>q'</m> and <m>r'</m> are two other such numbers,
-            then <m>q = q'</m> and <m>r = r'</m>.
+            Este é um exemplo perfeito de demonstração do tipo existência e unicidade.
+            Primeiro devemos provar que os números <m>q</m> e <m>r</m> realmente existem.
+            Depois devemos mostrar que, se <m>q'</m> e <m>r'</m> são dois outros números desse tipo,
+            então <m>q = q'</m> e <m>r = r'</m>.
           </p>
 
           <case>
-            <title>Existence of <m>q</m> and <m>r</m></title>
+            <title>Existência de <m>q</m> e <m>r</m></title>
             <p>
               Let
               <md>
                 S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}
               </md>.
-              If <m>0 \in S</m>, then <m>b</m> divides <m>a</m>,
-              and  we can let <m>q = a/b</m> and <m>r = 0</m>.
-              If <m>0 \notin S</m>, we can use the Well-Ordering Principle.
-              We must first show that <m>S</m> is nonempty.
-              If <m>a \gt 0</m>, then <m>a - b \cdot 0 \in S</m>.
-              If <m>a \lt 0</m>, then <m>a - b(2a) = a(1 - 2b) \in S</m>.
-              In either case <m>S \neq \emptyset</m>.
-              By the Well-Ordering Principle,
-              <m>S</m> must have a smallest member, say <m>r = a - bq</m>.
-              Therefore, <m>a = bq + r</m>, <m>r \geq 0</m>.
-              We now show that <m>r \lt b</m>.
-              Suppose that <m>r \gt b</m>.
-              Then
+              Se <m>0 \in S</m>, então <m>b</m> divide <m>a</m>
+              e podemos tomar <m>q = a/b</m> e <m>r = 0</m>.
+              Se <m>0 \notin S</m>, podemos usar o princípio da boa ordenação.
+              Primeiro devemos mostrar que <m>S</m> não é vazio.
+              Se <m>a \gt 0</m>, então <m>a - b \cdot 0 \in S</m>.
+              Se <m>a \lt 0</m>, então <m>a - b(2a) = a(1 - 2b) \in S</m>.
+              Em ambos os casos, <m>S \neq \emptyset</m>.
+              Pelo princípio da boa ordenação,
+              <m>S</m> deve ter um menor elemento, digamos <m>r = a - bq</m>.
+              Portanto, <m>a = bq + r</m>, com <m>r \geq 0</m>.
+              Mostremos agora que <m>r \lt b</m>.
+              Suponha que <m>r \gt b</m>.
+              Então
               <md>
                 a - b(q + 1)= a - bq - b = r - b \gt 0
               </md>.
-              In this case we would have <m>a - b(q + 1)</m> in the set <m>S</m>.
-              But then <m>a - b(q + 1) \lt a - bq</m>,
-              which would contradict the fact that
-              <m>r = a - bq</m> is the smallest member  of <m>S</m>.
-              So <m>r \leq b</m>.
-              Since <m>0 \notin S</m>, <m>r \neq b</m> and so <m>r \lt b</m>.
+              Nesse caso, teríamos <m>a - b(q + 1)</m> no conjunto <m>S</m>.
+              Mas então <m>a - b(q + 1) \lt a - bq</m>,
+              o que contradiz o fato de que
+              <m>r = a - bq</m> é o menor elemento de <m>S</m>.
+              Logo, <m>r \leq b</m>.
+              Como <m>0 \notin S</m>, <m>r \neq b</m> e, portanto, <m>r \lt b</m>.
             </p>
           </case>
 
           <case>
-            <title>Uniqueness of <m>q</m> and <m>r</m></title>
+            <title>Unicidade de <m>q</m> e <m>r</m></title>
             <p>
-              <em>Uniqueness of <m>q</m> and <m>r</m>.</em>
-              Suppose there exist integers <m>r</m>, <m>r'</m>,
-              <m>q</m>, and <m>q'</m> such that
+              <em>Unicidade de <m>q</m> e <m>r</m>.</em>
+              Suponha que existam inteiros <m>r</m>, <m>r'</m>,
+              <m>q</m> e <m>q'</m> tais que
               <md>
                 a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b
               </md>.
-              Then <m> bq + r =  bq' + r'</m>.
-              Assume that <m>r' \geq r</m>.
-              From the last equation we have <m>b(q - q') = r' - r</m>;
-              therefore, <m>b</m> must divide <m>r' - r</m> and <m>0 \leq r'- r \leq r' \lt b</m>.
-              This is possible only if <m>r' - r = 0</m>.
-              Hence, <m>r = r'</m> and  <m>q = q'</m>.
+              Então <m> bq + r =  bq' + r'</m>.
+              Suponha que <m>r' \geq r</m>.
+              Da última equação temos <m>b(q - q') = r' - r</m>;
+              portanto, <m>b</m> deve dividir <m>r' - r</m> e <m>0 \leq r'- r \leq r' \lt b</m>.
+              Isso só é possível se <m>r' - r = 0</m>.
+              Logo, <m>r = r'</m> e <m>q = q'</m>.
             </p>
           </case>
         </proof>
       </theorem>
 
       <p>
-        Let <m>a</m> and <m>b</m> be integers.
-        If <m>b = ak</m> for some integer <m>k</m>, we write <m>a \mid b</m>.
-        An integer <m>d</m> is called a
-        <term>common divisor</term>
-        of <m>a</m> and <m>b</m> if <m>d \mid a</m> and <m>d \mid b</m>.
-        The <term>greatest common divisor</term><idx><h>Greatest common divisor</h><h>of two integers</h></idx> of integers <m>a</m> and <m>b</m> is a positive integer <m>d</m> such that <m>d</m> is a common divisor of <m>a</m> and <m>b</m> and if <m>d'</m> is any other common divisor of <m>a</m> and <m>b</m>,
-        then <m>d' \mid d</m>.
+        Sejam <m>a</m> e <m>b</m> inteiros.
+        Se <m>b = ak</m> para algum inteiro <m>k</m>, escrevemos <m>a \mid b</m>.
+        Um inteiro <m>d</m> é chamado de
+        <term>divisor comum</term>
+        de <m>a</m> e <m>b</m> se <m>d \mid a</m> e <m>d \mid b</m>.
+        O <term>máximo divisor comum</term><idx><h>Máximo divisor comum</h><h>de dois inteiros</h></idx> dos inteiros <m>a</m> e <m>b</m> é um inteiro positivo <m>d</m> tal que <m>d</m> é um divisor comum de <m>a</m> e <m>b</m> e, se <m>d'</m> é qualquer outro divisor comum de <m>a</m> e <m>b</m>,
+        então <m>d' \mid d</m>.
 
         <notation>
           <usage><m>a \mid b</m></usage>
-          <description><m>a</m> divides <m>b</m></description>
+          <description><m>a</m> divide <m>b</m></description>
         </notation>
 
         <notation>
           <usage><m>\gcd(a, b)</m></usage>
-          <description>greatest common divisor of <m>a</m> and <m>b</m></description>
+          <description>máximo divisor comum de <m>a</m> e <m>b</m></description>
         </notation>
 
-        We write <m>d = \gcd(a, b)</m>;
-        for example,
-        <m>\gcd( 24, 36) = 12</m> and <m>\gcd(120, 102) = 6</m>.
-        We say that two integers <m>a</m> and <m>b</m> are
-        <term>relatively prime</term>
-        if <m>\gcd( a, b ) = 1</m>.
+        Escrevemos <m>d = \gcd(a, b)</m>;
+        por exemplo,
+        <m>\gcd( 24, 36) = 12</m> e <m>\gcd(120, 102) = 6</m>.
+        Dizemos que dois inteiros <m>a</m> e <m>b</m> são
+        <term>primos entre si</term>
+        se <m>\gcd( a, b ) = 1</m>.
       </p>
 
       <theorem xml:id="integers-theorem-gcd">
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be nonzero integers.
-            Then there exist integers <m>r</m> and <m>s</m> such that
+            Sejam <m>a</m> e <m>b</m> inteiros não nulos.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que
             <md>
               \gcd( a, b) = ar + bs
             </md>.
-            Furthermore,
-            the greatest common divisor of <m>a</m> and <m>b</m> is unique.
+            Além disso,
+            o máximo divisor comum de <m>a</m> e <m>b</m> é único.
           </p>
         </statement>
 
@@ -414,35 +414,35 @@
             <md>
               S = \{ am + bn : m, n \in {\mathbb Z} \text{ and } am + bn \gt 0 \}
             </md>.
-            Clearly, the set <m>S</m> is nonempty;
-            hence, by the Well-Ordering Principle <m>S</m> must have a smallest member,
-            say <m>d = ar + bs</m>.
-            We claim that <m>d = \gcd( a, b)</m>.
-            Write <m>a = dq + r'</m> where <m>0 \leq r' \lt d</m>.
-            If <m>r' \gt 0</m>,
-            then <!-- r changed to r' - TWJ 1/31/2011 -->
+            Claramente, o conjunto <m>S</m> não é vazio;
+            portanto, pelo princípio da boa ordenação, <m>S</m> deve ter um menor elemento,
+            digamos <m>d = ar + bs</m>.
+            Afirmamos que <m>d = \gcd( a, b)</m>.
+            Escreva <m>a = dq + r'</m>, em que <m>0 \leq r' \lt d</m>.
+            Se <m>r' \gt 0</m>,
+            então <!-- r changed to r' - TWJ 1/31/2011 -->
             <md>
               <mrow>r'&amp; = a - dq</mrow>
               <mrow>&amp; = a - (ar + bs)q</mrow>
               <mrow>&amp; = a - arq - bsq</mrow>
               <mrow>&amp; = a( 1 - rq ) + b( -sq )</mrow>
             </md>,
-            which is in <m>S</m>.
-            But this would contradict the fact that <m>d</m> is the smallest member of <m>S</m>.
-            Hence, <m>r' = 0</m> and <m>d</m> divides <m>a</m>.
-            A similar argument shows that <m>d</m> divides <m>b</m>.
-            Therefore, <m>d</m> is a common divisor of <m>a</m> and <m>b</m>.
+            que pertence a <m>S</m>.
+            Mas isso contradiz o fato de que <m>d</m> é o menor elemento de <m>S</m>.
+            Logo, <m>r' = 0</m> e <m>d</m> divide <m>a</m>.
+            Um argumento semelhante mostra que <m>d</m> divide <m>b</m>.
+            Portanto, <m>d</m> é um divisor comum de <m>a</m> e <m>b</m>.
           </p>
 
           <p>
-            Suppose that <m>d'</m> is another common divisor of <m>a</m> and <m>b</m>,
-            and we want to show that <m>d' \mid d</m>.
-            If we let <m>a = d'h</m> and <m>b = d'k</m>, then
+            Suponha que <m>d'</m> seja outro divisor comum de <m>a</m> e <m>b</m>,
+            e queremos mostrar que <m>d' \mid d</m>.
+            Sejam <m>a = d'h</m> e <m>b = d'k</m>, então
             <md>
               d = ar + bs = d'hr + d'ks = d'(hr + ks)
             </md>.
-            So <m>d'</m> must divide <m>d</m>.
-            Hence, <m>d</m> must be the unique greatest common divisor of <m>a</m> and <m>b</m>.
+            Assim, <m>d'</m> deve dividir <m>d</m>.
+            Portanto, <m>d</m> deve ser o único máximo divisor comum de <m>a</m> e <m>b</m>.
           </p>
         </proof>
             <!-- Notation error in proof fixed (pointed out by Rocco Rossi) - TWJ 9/13/2010 -->
@@ -451,43 +451,43 @@
       <corollary xml:id="integers-corollary-coprime">
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be two integers that are relatively prime.
-            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.
+            Sejam <m>a</m> e <m>b</m> dois inteiros primos entre si.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + bs = 1</m>.
           </p>
         </statement>
       </corollary>
     </introduction>
 
     <subsection xml:id="integers-subsection-euclidean-algorithm">
-      <title>The Euclidean Algorithm</title>
+      <title>O algoritmo de Euclides</title>
       <p>
-        Among other things, <xref ref="integers-theorem-gcd"/> allows us to compute the greatest common divisor of two integers.
+        Entre outras coisas, o <xref ref="integers-theorem-gcd"/> nos permite calcular o máximo divisor comum de dois inteiros.
       </p>
 
       <example xml:id="integers-example-gcd">
         <p>
-          Let us compute the greatest common divisor of <m>945</m> and <m>2415</m>.
-          First observe that
+          Calculemos o máximo divisor comum de <m>945</m> e <m>2415</m>.
+          Primeiro, observe que
           <md>
             <mrow>2415 &amp; = 945 \cdot 2 + 525</mrow>
             <mrow>945 &amp; = 525 \cdot 1 + 420</mrow>
             <mrow>525 &amp; = 420 \cdot 1 + 105</mrow>
             <mrow>420 &amp; = 105 \cdot 4 + 0</mrow>
           </md>.
-          Reversing our steps, <m>105</m> divides <m>420</m>,
-          <m>105</m> divides <m>525</m>,
-          <m>105</m> divides <m>945</m>,
-          and <m>105</m> divides <m>2415</m>.
-          Hence, <m>105</m> divides both <m>945</m> and <m>2415</m>.
-          If <m>d</m> were another common divisor of <m>945</m> and <m>2415</m>,
-          then <m>d</m> would also have to divide <m>105</m>.
-          Therefore, <m>\gcd( 945, 2415 ) = 105</m>.
+          Revertendo nossos passos, <m>105</m> divide <m>420</m>,
+          <m>105</m> divide <m>525</m>,
+          <m>105</m> divide <m>945</m>
+          e <m>105</m> divide <m>2415</m>.
+          Logo, <m>105</m> divide tanto <m>945</m> quanto <m>2415</m>.
+          Se <m>d</m> fosse outro divisor comum de <m>945</m> e <m>2415</m>,
+          então <m>d</m> também teria de dividir <m>105</m>.
+          Portanto, <m>\gcd( 945, 2415 ) = 105</m>.
         </p>
 
         <p>
-          If we work backward through the above sequence of equations,
-          we can also obtain numbers <m>r</m> and <m>s</m> such that <m>945 r + 2415 s = 105</m>.
-          Observe that
+          Se trabalharmos de trás para frente na sequência de equações acima,
+          também poderemos obter números <m>r</m> e <m>s</m> tais que <m>945 r + 2415 s = 105</m>.
+          Observe que
           <md>
             <mrow>105 &amp; = 525 + (-1) \cdot 420</mrow>
             <mrow>&amp; = 525 + (-1) \cdot [945 + (-1) \cdot 525]</mrow>
@@ -495,15 +495,15 @@
             <mrow>&amp; = 2 \cdot [2415 + (-2) \cdot 945] + (-1) \cdot 945</mrow>
             <mrow>&amp; = 2 \cdot 2415 + (-5) \cdot 945</mrow>
           </md>.
-          So <m>r = -5</m> and <m>s= 2</m>.
-          Notice that <m>r</m> and <m>s</m> are not unique,
-          since <m>r = 41</m> and <m>s = -16</m> would also work.
+          Assim, <m>r = -5</m> e <m>s= 2</m>.
+          Observe que <m>r</m> e <m>s</m> não são únicos,
+          pois <m>r = 41</m> e <m>s = -16</m> também funcionariam.
         </p>
       </example>
 
       <p>
-        To compute <m>\gcd(a,b) = d</m>,
-        we are using repeated divisions to obtain a decreasing sequence of positive integers <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; that is,
+        Para calcular <m>\gcd(a,b) = d</m>,
+        usamos divisões repetidas para obter uma sequência decrescente de inteiros positivos <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; isto é,
         <md>
           <mrow>b &amp; = a q_1 + r_1</mrow>
           <mrow>a &amp; = r_1 q_2 + r_2</mrow>
@@ -512,8 +512,8 @@
           <mrow>r_{n - 2} &amp; = r_{n - 1} q_{n} + r_{n}</mrow>
           <mrow>r_{n - 1} &amp; = r_n q_{n + 1}</mrow>
         </md>.
-        To find <m>r</m> and <m>s</m> such that <m>ar + bs = d</m>,
-        we begin with this last equation and substitute results obtained from the previous equations:
+        Para encontrar <m>r</m> e <m>s</m> tais que <m>ar + bs = d</m>,
+        começamos com esta última equação e substituímos os resultados obtidos nas equações anteriores:
         <md>
           <mrow>d &amp; = r_n</mrow>
           <mrow>&amp; = r_{n - 2} - r_{n - 1} q_n</mrow>
@@ -522,142 +522,142 @@
           <mrow>&amp; \aatavdots{=}</mrow>
           <mrow>&amp; = ra + sb</mrow>
         </md>.
-        The algorithm that we have just used to find the greatest common divisor <m>d</m> of two integers <m>a</m> and <m>b</m> and to write <m>d</m> as the linear combination of <m>a</m> and <m>b</m> is known as the
-        <idx><h>Euclidean algorithm</h></idx><idx><h>Algorithm</h><h>Euclidean</h></idx><term>Euclidean algorithm</term>.
+        O algoritmo que acabamos de usar para encontrar o máximo divisor comum <m>d</m> de dois inteiros <m>a</m> e <m>b</m> e escrever <m>d</m> como combinação linear de <m>a</m> e <m>b</m> é conhecido como
+        <idx><h>Algoritmo de Euclides</h></idx><idx><h>Algoritmo</h><h>Euclides</h></idx><term>algoritmo de Euclides</term>.
       </p>
     </subsection>
 
     <subsection xml:id="integers-subsection-prime-numbers">
-      <title>Prime Numbers</title>
+      <title>Números primos</title>
       <p>
-        Let <m>p</m> be an integer such that <m>p \gt 1</m>.
-        We say that <m>p</m> is a <term>prime number</term>,<idx><h>Prime integer</h></idx>
-        or simply <m>p</m> is <term>prime</term>,
-        if the only positive numbers that divide <m>p</m> are <m>1</m> and <m>p</m> itself.
-        An integer <m>n \gt 1</m> that is not prime is said to be <idx><h>Composite integer</h></idx><term>composite</term>.
+        Seja <m>p</m> um inteiro tal que <m>p \gt 1</m>.
+        Dizemos que <m>p</m> é um <term>número primo</term>,<idx><h>Inteiro primo</h></idx>
+        ou simplesmente que <m>p</m> é <term>primo</term>,
+        se os únicos números positivos que dividem <m>p</m> são <m>1</m> e o próprio <m>p</m>.
+        Um inteiro <m>n \gt 1</m> que não é primo é chamado de <idx><h>Inteiro composto</h></idx><term>composto</term>.
       </p>
 
       <lemma xml:id="integers-theorem-prime-divisor">
-        <title>Euclid</title>
+        <title>Euclides</title>
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be integers and <m>p</m> be a prime number.
-            If <m>p \mid ab</m>, then either <m>p \mid a</m> or <m>p \mid b</m>.
+            Sejam <m>a</m> e <m>b</m> inteiros e seja <m>p</m> um número primo.
+            Se <m>p \mid ab</m>, então <m>p \mid a</m> ou <m>p \mid b</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>p</m> does not divide <m>a</m>.
-            We must show that <m>p \mid b</m>.
-            Since <m>\gcd( a, p ) = 1</m>,
-            there exist integers <m>r</m> and <m>s</m> such that <m>ar + ps = 1</m>.
-            So
+            Suponha que <m>p</m> não divida <m>a</m>.
+            Devemos mostrar que <m>p \mid b</m>.
+            Como <m>\gcd( a, p ) = 1</m>,
+            existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + ps = 1</m>.
+            Assim,
             <md>
               b = b(ar + ps) = (ab)r + p(bs)
             </md>.
-            Since <m>p</m> divides both <m>ab</m> and itself,
-            <m>p</m> must divide <m>b = (ab)r + p(bs)</m>.
+            Como <m>p</m> divide tanto <m>ab</m> quanto a si próprio,
+            <m>p</m> deve dividir <m>b = (ab)r + p(bs)</m>.
           </p>
         </proof>
       </lemma>
 
       <theorem xml:id="integers-theorem-infinite-primes">
-        <title>Euclid</title>
+        <title>Euclides</title>
         <statement>
           <p>
-            There exist an infinite number of primes.
+            Existem infinitos números primos.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will prove this theorem by contradiction.
-            Suppose that there are only a finite number of primes,
-            say <m>p_1, p_2, \ldots, p_n</m>.
-            Let <m>P = p_1 p_2 \cdots p_n + 1</m>.
-            Then <m>P</m> must be divisible by some <m>p_i</m> for <m>1 \leq i \leq n</m>.
-            In this case, <m>p_i</m> must divide
-            <m>P - p_1 p_2 \cdots p_n = 1</m>, which is a contradiction.
-            Hence, either <m>P</m> is prime or there exists an additional prime number
-            <m>p \neq p_i</m> that divides <m>P</m>.
+            Demonstraremos este teorema por contradição.
+            Suponha que exista apenas um número finito de primos,
+            digamos <m>p_1, p_2, \ldots, p_n</m>.
+            Seja <m>P = p_1 p_2 \cdots p_n + 1</m>.
+            Então <m>P</m> deve ser divisível por algum <m>p_i</m> para <m>1 \leq i \leq n</m>.
+            Nesse caso, <m>p_i</m> deve dividir
+            <m>P - p_1 p_2 \cdots p_n = 1</m>, o que é uma contradição.
+            Logo, ou <m>P</m> é primo ou existe um número primo adicional
+            <m>p \neq p_i</m> que divide <m>P</m>.
           </p>
         </proof>
       </theorem>
             <!-- Error in proof fixed.  Suggested by R. Rossi.  TWJ 12/19/2011 -->
       <theorem xml:id="integers-theorem-fund-theorem-arithmetic">
-        <title>Fundamental Theorem of Arithmetic</title>
+        <title>Teorema fundamental da aritmética</title>
         <idx>
-        <h>Fundamental Theorem</h>
-        <h>of Arithmetic</h>
+        <h>Teorema fundamental</h>
+        <h>da aritmética</h>
         </idx>
         <statement>
           <p>
-            Let <m>n</m> be an integer such that <m>n \gt 1</m>.
-            Then
+            Seja <m>n</m> um inteiro tal que <m>n \gt 1</m>.
+            Então
             <md>
               n = p_1 p_2 \cdots p_k
             </md>,
-            where <m>p_1, \ldots, p_k</m> are  primes
-            (not necessarily distinct).
-            Furthermore, this factorization is unique; that is, if
+            em que <m>p_1, \ldots, p_k</m> são primos
+            (não necessariamente distintos).
+            Além disso, essa fatoração é única; isto é, se
             <md>
               n = q_1 q_2 \cdots q_l
             </md>,
-            then <m>k = l</m> and the <m>q_i</m>'s are just the <m>p_i</m>'s rearranged.
+            então <m>k = l</m> e os <m>q_i</m> são apenas os <m>p_i</m> rearranjados.
           </p>
         </statement>
 
         <proof>
           <case>
-            <title>Uniqueness</title>
+            <title>Unicidade</title>
             <p>
-              To show uniqueness we will use induction on <m>n</m>.
-              The theorem is certainly true for <m>n = 2</m> since in this case <m>n</m> is prime.
-              Now assume that the result holds for all integers <m>m</m> such that <m>1 \leq m \lt n</m>, and
+              Para mostrar a unicidade, usaremos indução sobre <m>n</m>.
+              O teorema certamente é verdadeiro para <m>n = 2</m>, pois nesse caso <m>n</m> é primo.
+              Agora suponha que o resultado valha para todos os inteiros <m>m</m> tais que <m>1 \leq m \lt n</m> e
               <md>
                 n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l
               </md>,
-              where <m>p_1 \leq p_2 \leq \cdots \leq p_k</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_l</m>.
-              By <xref ref="integers-theorem-prime-divisor"/>, <m>p_1  \mid  q_i</m> for some
+              em que <m>p_1 \leq p_2 \leq \cdots \leq p_k</m> e <m>q_1 \leq q_2 \leq \cdots \leq q_l</m>.
+              Pelo <xref ref="integers-theorem-prime-divisor"/>, <m>p_1  \mid  q_i</m> para algum
               <m>i = 1, \ldots,
-              l</m> and <m>q_1  \mid  p_j</m> for some <m>j = 1, \ldots, k</m>.
-              Since all of the <m>p_i</m>'s and <m>q_i</m>'s are prime,
-              <m>p_1 = q_i</m> and  <m>q_1 = p_j</m>.
-              Hence, <m>p_1 = q_1</m> since <m>p_1 \leq p_j = q_1 \leq q_i = p_1</m>.
-              By the induction hypothesis,
+              l</m> e <m>q_1  \mid  p_j</m> para algum <m>j = 1, \ldots, k</m>.
+              Como todos os <m>p_i</m> e <m>q_i</m> são primos,
+              <m>p_1 = q_i</m> e <m>q_1 = p_j</m>.
+              Logo, <m>p_1 = q_1</m>, pois <m>p_1 \leq p_j = q_1 \leq q_i = p_1</m>.
+              Pela hipótese de indução,
               <md>
                 n' = p_2 \cdots p_k = q_2 \cdots q_l
               </md>
-              has a unique factorization.
-              Hence, <m>k = l</m> and <m>q_i = p_i</m> for <m>i = 1, \ldots, k</m>.
+              tem uma fatoração única.
+              Logo, <m>k = l</m> e <m>q_i = p_i</m> para <m>i = 1, \ldots, k</m>.
             </p>
           </case>
 
           <case>
-            <title>Existence</title>
+            <title>Existência</title>
             <p>
-              To show existence,
-              suppose that there is some integer that cannot be written as the product of primes.
-              Let <m>S</m> be the set of all such numbers.
-              By the Principle of Well-Ordering,
-              <m>S</m> has a smallest number, say <m>a</m>.
-              If the only positive factors of <m>a</m> are <m>a</m> and <m>1</m>,
-              then <m>a</m> is prime, which is a contradiction.
-              Hence, <m>a = a_1 a_2</m> where
-              <m>1 \lt a_1 \lt a</m> and <m>1 \lt a_2 \lt a</m>.
-              Neither <m>a_1\in S</m> nor <m>a_2 \in S</m>,
-              since <m>a</m> is the smallest element in <m>S</m>.
-              So
+              Para mostrar a existência,
+              suponha que exista algum inteiro que não possa ser escrito como produto de primos.
+              Seja <m>S</m> o conjunto de todos esses números.
+              Pelo princípio da boa ordenação,
+              <m>S</m> tem um menor número, digamos <m>a</m>.
+              Se os únicos fatores positivos de <m>a</m> forem <m>a</m> e <m>1</m>,
+              então <m>a</m> é primo, o que é uma contradição.
+              Logo, <m>a = a_1 a_2</m>, em que
+              <m>1 \lt a_1 \lt a</m> e <m>1 \lt a_2 \lt a</m>.
+              Nem <m>a_1\in S</m> nem <m>a_2 \in S</m>,
+              pois <m>a</m> é o menor elemento de <m>S</m>.
+              Assim,
               <md>
                 <mrow>a_1 &amp; = p_1 \cdots p_r</mrow>
                 <mrow>a_2 &amp; = q_1 \cdots q_s</mrow>
               </md>.
-              Therefore,
+              Portanto,
               <md>
                 a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s
               </md>.
-              So <m>a \notin S</m>, which is a contradiction.
+              Assim, <m>a \notin S</m>, o que é uma contradição.
             </p>
           </case>
         </proof>
@@ -665,34 +665,34 @@
     </subsection>
 
     <subsection xml:id="integers-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Prime numbers were first studied by the ancient Greeks.
-        Two important results from antiquity are Euclid's proof that an infinite number of primes exist and the Sieve of Eratosthenes,
-        a method of computing all of the prime numbers less than a fixed positive integer <m>n</m>.
-        One problem in number theory is to find a function <m>f</m> such that <m>f(n)</m> is prime for each integer <m>n</m>.
-        Pierre Fermat (1601?<ndash/>1665) conjectured that
-        <m>2^{2^n} + 1</m> was prime for all <m>n</m>,
-        but later it was shown by Leonhard Euler (1707<ndash/>1783) that
+        Os números primos foram estudados pela primeira vez pelos antigos gregos.
+        Dois resultados importantes da Antiguidade são a demonstração de Euclides de que existem infinitos números primos e o crivo de Eratóstenes,
+        um método para calcular todos os números primos menores que um inteiro positivo fixo <m>n</m>.
+        Um problema da teoria dos números é encontrar uma função <m>f</m> tal que <m>f(n)</m> seja primo para cada inteiro <m>n</m>.
+        Pierre Fermat (1601?<ndash/>1665) conjecturou que
+        <m>2^{2^n} + 1</m> seria primo para todo <m>n</m>,
+        mas mais tarde Leonhard Euler (1707<ndash/>1783) mostrou que
         <md>
           2^{2^5} + 1 = 4{,}294{,}967{,}297
         </md>
-        is a composite number.
-        One of the many unproven conjectures about prime numbers is Goldbach's Conjecture.
-        In a letter to Euler in 1742, Christian Goldbach stated the conjecture that every even integer with the exception of <m>2</m> seemed to be the sum of two primes:
+        é um número composto.
+        Uma das muitas conjecturas não demonstradas sobre números primos é a conjectura de Goldbach.
+        Em uma carta a Euler, em 1742, Christian Goldbach formulou a conjectura de que todo inteiro par, com exceção de <m>2</m>, parecia ser a soma de dois primos:
         <m>4 = 2 + 2</m>, <m>6 = 3 + 3</m>,
         <m>8 =3 + 5</m>, <m>\ldots</m>.
-        Although the conjecture has been verified for the numbers up through <m>4 \times 10^{18}</m>,
-        it has yet to be proven in general.
-        Since prime numbers play an important role in public key cryptography,
-        there is currently a great deal of interest in determining whether or not a large number is prime.
+        Embora a conjectura tenha sido verificada para os números até <m>4 \times 10^{18}</m>,
+        ela ainda não foi demonstrada em geral.
+        Como os números primos desempenham um papel importante na criptografia de chave pública,
+        há atualmente grande interesse em determinar se um número grande é primo.
       </p>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage's original purpose was to support research in number theory,
-          so it is perfect for the types of computations with the integers that we have in this chapter.
+          O propósito original do Sage era apoiar a pesquisa em teoria dos números,
+          portanto ele é perfeito para os tipos de cálculos com inteiros que fazemos neste capítulo.
         </p>
       </paragraphs>
     </subsection>
