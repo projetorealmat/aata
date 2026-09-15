@@ -1323,8 +1323,8 @@
     <exercise number="2" xml:id="groups-exercise-caley-table-groups">
       <statement>
         <p>
-          Which of the following multiplication tables defined on the set <m>G = \{ a, b, c, d \}</m> form a group?
-          Support your answer in each case.
+          Quais das tabelas de multiplicação a seguir, definidas no conjunto <m>G = \{ a, b, c, d \}</m>, formam um grupo?
+          Justifique sua resposta em cada caso.
 
           <ol cols="2">
             <li>
