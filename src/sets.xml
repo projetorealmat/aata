@@ -242,21 +242,21 @@
   </section>
 
   <section xml:id="sets-section-sets-and-equivalence-relations">
-    <title>Sets and Equivalence Relations</title>
+    <title>Conjuntos e relações de equivalência</title>
     <subsection xml:id="sets-subsection-set-theory">
-      <title>Set Theory</title>
+      <title>Teoria dos conjuntos</title>
       <p>
-        A <term>set</term> is a well-defined collection of objects;
-        that is, it is defined in such a manner that we can determine for any given object <m>x</m> whether or not <m>x</m> belongs to the set.
-        The objects that belong to a set are called its
-        <term>elements</term> or <term>members</term>.
-        We will denote sets by capital letters,
-        such as <m>A</m> or <m>X</m>;
-        if <m>a</m> is an element of the set <m>A</m>, we write <m>a \in A</m>.
+        Um <term>conjunto</term> é uma coleção bem definida de objetos;
+        isto é, é definido de tal maneira que podemos determinar, para qualquer objeto <m>x</m> dado, se <m>x</m> pertence ou não ao conjunto.
+        Os objetos que pertencem a um conjunto são chamados de seus
+        <term>elementos</term> ou <term>membros</term>.
+        Denotaremos os conjuntos por letras maiúsculas,
+        como <m>A</m> ou <m>X</m>;
+        se <m>a</m> é um elemento do conjunto <m>A</m>, escrevemos <m>a \in A</m>.
 
         <notation>
           <usage><m>a \in A</m></usage>
-          <description><m>a</m> is in the set <m>A</m></description>
+          <description><m>a</m> pertence ao conjunto <m>A</m></description>
         </notation>
 
       </p>
@@ -264,27 +264,27 @@
       <!--Todo Make notation table-->
 
       <p>
-        A set is usually specified either by listing all of its elements inside a pair of braces or by stating the property that determines whether or not an object <m>x</m> belongs to the set.
-        We might write
+        Um conjunto geralmente é especificado listando todos os seus elementos entre chaves ou declarando a propriedade que determina se um objeto <m>x</m> pertence ou não ao conjunto.
+        Podemos escrever
         <md>
           X = \{ x_1, x_2, \ldots, x_n \}
         </md>
-        for a set containing elements <m>x_1, x_2, \ldots, x_n</m> or
+        para um conjunto que contém os elementos <m>x_1, x_2, \ldots, x_n</m> ou
         <md>
           X = \{ x :x \text{ satisfies }{\mathcal P}\}
         </md>
-        if each <m>x</m> in <m>X</m> satisfies a certain property <m>{\mathcal P}</m>.
-        For example, if <m>E</m> is the set of even positive integers,
-        we can describe <m>E</m> by writing either
+        se cada <m>x</m> em <m>X</m> satisfaz uma determinada propriedade <m>{\mathcal P}</m>.
+        Por exemplo, se <m>E</m> é o conjunto dos inteiros positivos pares,
+        podemos descrever <m>E</m> escrevendo
         <md>
           E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even integer and } x \gt 0 \}
         </md>.
-        We write <m>2 \in E</m> when we want to say that 2 is in the set <m>E</m>,
-        and <m>-3 \notin E</m> to say that <m>-3</m> is not in the set <m>E</m>.
+        <m>2 \in E</m> quando queremos dizer que 2 está no conjunto <m>E</m>
+        e <m>-3 \notin E</m> para dizer que <m>-3</m> não está no conjunto <m>E</m>.
       </p>
 
       <p>
-        Some of the more important sets that we will consider are the following:
+        Alguns dos conjuntos mais importantes que consideraremos são os seguintes:
         <md>
           <mrow>{\mathbb N} = \{n: n \text{ is a natural number}\}  = \{1, 2, 3, \ldots \};</mrow>
           <mrow>{\mathbb Z} = \{n : n \text{ is an integer} \} = \{\ldots, -1, 0, 1,  2, \ldots \};</mrow>
@@ -295,43 +295,43 @@
 
         <notation>
           <usage><m>{\mathbb N}</m></usage>
-          <description>the natural numbers</description>
+          <description>os números naturais</description>
         </notation>
 
         <notation>
           <usage><m>{\mathbb Z}</m></usage>
-          <description>the integers</description>
+          <description>os inteiros</description>
         </notation>
 
         <notation>
           <usage><m>{\mathbb Q}</m></usage>
-          <description>the rational numbers</description>
+          <description>os números racionais</description>
         </notation>
 
         <notation>
           <usage><m>{\mathbb R}</m></usage>
-          <description>the real numbers</description>
+          <description>os números reais</description>
         </notation>
 
         <notation>
           <usage><m>{\mathbb C}</m></usage>
-          <description>the complex numbers</description>
+          <description>os números complexos</description>
         </notation>
 
       </p>
 
       <p>
-        We can find various relations between sets as well as perform operations on sets.
-        A set <m>A</m> is a <term>subset</term> of <m>B</m>,
-        written <m>A \subset B</m> or <m>B \supset A</m>,
-        if every element of <m>A</m> is also an element of <m>B</m>.
+        Podemos encontrar várias relações entre conjuntos e também realizar operações com conjuntos.
+        Um conjunto <m>A</m> é um <term>subconjunto</term> de <m>B</m>,
+        escrito <m>A \subset B</m> ou <m>B \supset A</m>,
+        se todo elemento de <m>A</m> também é um elemento de <m>B</m>.
 
         <notation>
           <usage><m>A \subset B</m></usage>
-          <description><m>A</m> is a subset of <m>B</m></description>
+          <description><m>A</m> é um subconjunto de <m>B</m></description>
         </notation>
 
-        For example,
+        Por exemplo,
         <md>
           \{4,5,8\} \subset \{2, 3, 4, 5, 6, 7, 8, 9 \}
         </md>
@@ -339,57 +339,57 @@
         <md>
           {\mathbb N} \subset {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}
         </md>.
-        Trivially, every set is a subset of itself.
-        A set <m>B</m> is a <term>proper subset</term>
-        of a set <m>A</m> if <m>B \subset A</m> but <m>B \neq A</m>.
-        If <m>A</m> is not a subset of <m>B</m>,
-        we write <m>A \notsubset B</m>;
-        for example, <m>\{4, 7, 9\} \notsubset \{2, 4, 5,  8, 9 \}</m>.
-        Two sets are <term>equal</term>, written <m>A = B</m>,
-        if we can show that <m>A \subset B</m> and <m>B \subset A</m>.
+        É trivial que todo conjunto é subconjunto de si mesmo.
+        Um conjunto <m>B</m> é um <term>subconjunto próprio</term>
+        de um conjunto <m>A</m> se <m>B \subset A</m>, mas <m>B \neq A</m>.
+        Se <m>A</m> não é um subconjunto de <m>B</m>,
+        escrevemos <m>A \notsubset B</m>;
+        por exemplo, <m>\{4, 7, 9\} \notsubset \{2, 4, 5,  8, 9 \}</m>.
+        Dois conjuntos são <term>iguais</term>, o que escrevemos <m>A = B</m>,
+        se pudermos mostrar que <m>A \subset B</m> e <m>B \subset A</m>.
       </p>
 
       <p>
-        It is convenient to have a set with no elements in it.
-        This set is called the <term>empty set</term>
-        and is denoted by <m>\emptyset</m>.
-        Note that the empty set is a subset of every set.
+        É conveniente ter um conjunto que não contenha elementos.
+        Esse conjunto é chamado de <term>conjunto vazio</term>
+        e é denotado por <m>\emptyset</m>.
+        Observe que o conjunto vazio é um subconjunto de todo conjunto.
 
         <notation>
           <usage><m>\emptyset</m></usage>
-          <description>the empty set</description>
+          <description>o conjunto vazio</description>
         </notation>
 
       </p>
 
       <p>
-        To construct new sets out of old sets,
-        we can perform certain operations:
-        the <term>union</term> <m>A \cup B</m> of two sets <m>A</m> and <m>B</m> is defined as
+        Para construir novos conjuntos a partir de conjuntos já existentes,
+        podemos realizar certas operações:
+        a <term>união</term> <m>A \cup B</m> de dois conjuntos <m>A</m> e <m>B</m> é definida como
         <md>
           A \cup B = \{x : x \in A \text{ or } x \in B \};
         </md>
-        the <term>intersection</term> of <m>A</m> and <m>B</m>  is defined by
+        a <term>interseção</term> de <m>A</m> e <m>B</m> é definida por
         <md>
           A \cap B = \{x :  x \in A \text{ and } x \in B \}
         </md>.
 
         <notation>
           <usage><m>A \cup B</m></usage>
-          <description>the union of sets <m>A</m> and <m>B</m></description>
+          <description>a união dos conjuntos <m>A</m> e <m>B</m></description>
         </notation>
 
         <notation>
           <usage><m>A \cap B</m></usage>
-          <description>the intersection of sets <m>A</m> and <m>B</m></description>
+          <description>a interseção dos conjuntos <m>A</m> e <m>B</m></description>
         </notation>
 
-        If <m>A = \{1, 3, 5\}</m> and <m>B = \{ 1, 2, 3, 9 \}</m>, then
+        Se <m>A = \{1, 3, 5\}</m> e <m>B = \{ 1, 2, 3, 9 \}</m>, então
         <md>
           A \cup B = \{1, 2, 3, 5, 9 \} \quad \text{and} \quad A \cap B = \{ 1, 3 \}
         </md>.
-        We can consider the union and the intersection of more than two sets.
-        In this case we write
+        Podemos considerar a união e a interseção de mais de dois conjuntos.
+        Nesse caso, escrevemos
         <md>
           \bigcup_{i = 1}^{n} A_{i} = A_{1} \cup \cdots \cup A_n
         </md>
@@ -397,29 +397,29 @@
         <md>
           \bigcap_{i = 1}^{n} A_{i} = A_{1} \cap \cdots \cap A_n
         </md>
-        for the union and intersection, respectively,
-        of the sets <m>A_1, \ldots, A_n</m>.
+        para a união e a interseção, respectivamente,
+        dos conjuntos <m>A_1, \ldots, A_n</m>.
       </p>
             <!-- Added comma after \ldots - TWJ 12/16/2010 -->
       <p>
-        When two sets have no elements in common,
-        they are said to be <term>disjoint</term>;
-        for example,
-        if <m>E</m> is the set of even integers and <m>O</m> is the set of odd integers,
-        then <m>E</m> and <m>O</m> are disjoint.
-        Two sets <m>A</m> and <m>B</m> are disjoint exactly when <m>A \cap B = \emptyset</m>.
+        Quando dois conjuntos não têm elementos em comum,
+        dizemos que são <term>disjuntos</term>;
+        por exemplo,
+        se <m>E</m> é o conjunto dos inteiros pares e <m>O</m> é o conjunto dos inteiros ímpares,
+        então <m>E</m> e <m>O</m> são disjuntos.
+        Dois conjuntos <m>A</m> e <m>B</m> são disjuntos exatamente quando <m>A \cap B = \emptyset</m>.
       </p>
 
       <p>
-        Sometimes we will work within one fixed set <m>U</m>,
-        called the <term>universal set</term>.
-        For any set <m>A \subset U</m>,
-        we define the <term>complement</term> of <m>A</m>,
-        denoted by <m>A'</m>, to be the set
+        Às vezes trabalharemos dentro de um único conjunto fixo <m>U</m>,
+        chamado de <term>conjunto universo</term>.
+        Para qualquer conjunto <m>A \subset U</m>,
+        definimos o <term>complemento</term> de <m>A</m>,
+        denotado por <m>A'</m>, como o conjunto
 
         <notation>
           <usage><m>A'</m></usage>
-          <description>complement of the set <m>A</m></description>
+          <description>complemento do conjunto <m>A</m></description>
         </notation>
 
         <md>
@@ -428,12 +428,12 @@
       </p>
 
       <p>
-        We define the <term>difference</term>
-        of two sets <m>A</m> and <m>B</m> to be
+        Definimos a <term>diferença</term>
+        de dois conjuntos <m>A</m> e <m>B</m> como
 
         <notation>
           <usage><m>A \setminus B</m></usage>
-          <description>difference between sets <m>A</m> and <m>B</m></description>
+          <description>diferença entre os conjuntos <m>A</m> e <m>B</m></description>
         </notation>
 
         <md>
@@ -443,11 +443,11 @@
 
       <example xml:id="sets-example-operations">
         <p>
-          Let <m>{\mathbb R}</m> be the universal set and suppose that
+          Seja <m>{\mathbb R}</m> o conjunto universo e suponha que
           <md>
             A = \{ x \in {\mathbb R} : 0 \lt x \leq 3 \} \quad \text{and} \quad B = \{ x \in {\mathbb R} : 2 \leq x \lt 4 \}
           </md>.
-          Then
+          Então
           <md>
             <mrow>A \cap B &amp; =  \{ x \in {\mathbb R} : 2 \leq x \leq 3 \}</mrow>
             <mrow>A \cup B &amp; =  \{ x \in {\mathbb R} : 0 \lt x \lt 4 \}</mrow>
@@ -460,8 +460,8 @@
       <proposition>
         <statement>
           <p>
-            Let <m>A</m>, <m>B</m>, and <m>C</m> be sets.
-            Then
+            Sejam <m>A</m>, <m>B</m> e <m>C</m> conjuntos.
+            Então
 
             <ol>
               <li>
@@ -506,11 +506,11 @@
 
         <proof>
           <p>
-            We will prove (1) and (3) and leave the remaining results to be proven in the exercises.
+          Demonstraremos (1) e (3), deixando os resultados restantes para serem demonstrados nos exercícios.
           </p>
 
           <p>
-            (1) Observe that
+            (1) Observe que
             <md>
               <mrow>A \cup A &amp; =  \{ x :  x \in A \text{ or } x \in A \}</mrow>
               <mrow>&amp; =  \{ x : x \in A \}</mrow>
@@ -522,7 +522,7 @@
               <mrow>&amp; =  \{ x : x \in A  \}</mrow>
               <mrow>&amp; =  A</mrow>
             </md>.
-            Also, <m>A \setminus A = A \cap A' = \emptyset</m>.
+            Além disso, <m>A \setminus A = A \cap A' = \emptyset</m>.
           </p>
 
           <p>
@@ -533,21 +533,21 @@
               <mrow>&amp; = \{ x : x \in A \text{ or } x \in B \} \cup C</mrow>
               <mrow>&amp; = (A \cup B) \cup C</mrow>
             </md>.
-            A similar argument proves that  <m>A \cap (B \cap C) = (A \cap B) \cap C</m>.
+            Um argumento semelhante demonstra que <m>A \cap (B \cap C) = (A \cap B) \cap C</m>.
           </p>
         </proof>
       </proposition>
 
       <theorem>
-        <title>De Morgan's Laws</title>
+        <title>Leis de De Morgan</title>
         <idx>
-        <h>De Morgan's laws</h>
-        <h>for sets</h>
+        <h>Leis de De Morgan</h>
+        <h>para conjuntos</h>
         </idx>
         <statement>
           <p>
-            Let <m>A</m> and <m>B</m> be sets.
-            Then
+            Sejam <m>A</m> e <m>B</m> conjuntos.
+            Então
 
             <ol>
               <li>
@@ -567,42 +567,41 @@
 
         <proof>
           <p>
-            (1) If <m>A \cup B = \emptyset</m>,
-            then the theorem follows immediately since both <m>A</m> and <m>B</m> are the empty set.
-            Otherwise, we must show that
-            <m>(A \cup B)' \subset A' \cap B'</m> and <m>(A \cup B)' \supset A' \cap B'</m>.
-            Let <m>x \in (A \cup B)'</m>.
-            Then <m>x \notin A \cup B</m>.
-            So <m>x</m> is neither in <m>A</m> nor in <m>B</m>,
-            by the definition of the union of sets.
-            By the definition of the complement,
-            <m>x \in A'</m> and <m>x \in B'</m>.
-            Therefore, <m>x \in A' \cap B'</m> and we have <m>(A \cup B)' \subset A' \cap B'</m>.
+            (1) Se <m>A \cup B = \emptyset</m>,
+            então o teorema segue imediatamente, pois tanto <m>A</m> quanto <m>B</m> são o conjunto vazio.
+            Caso contrário, devemos mostrar que
+            <m>(A \cup B)' \subset A' \cap B'</m> e <m>(A \cup B)' \supset A' \cap B'</m>.
+            Seja <m>x \in (A \cup B)'</m>.
+            Então <m>x \notin A \cup B</m>.
+            Logo, pela definição da união de conjuntos, <m>x</m> não está nem em <m>A</m> nem em <m>B</m>.
+            Pela definição de complemento,
+            <m>x \in A'</m> e <m>x \in B'</m>.
+            Portanto, <m>x \in A' \cap B'</m> e temos <m>(A \cup B)' \subset A' \cap B'</m>.
           </p>
 
           <p>
-            To show the reverse inclusion,
-            suppose that <m>x \in A' \cap B'</m>.
-            Then <m>x \in A'</m> and <m>x \in B'</m>,
-            and so <m>x \notin A</m> and <m>x \notin B</m>.
-            Thus <m>x \notin A \cup B</m> and so <m>x \in (A \cup B)'</m>.
-            Hence, <m>(A \cup B)' \supset A' \cap B'</m> and so <m>(A \cup B)' = A' \cap B'</m>.
+            Para mostrar a inclusão inversa,
+            suponha que <m>x \in A' \cap B'</m>.
+            Então <m>x \in A'</m> e <m>x \in B'</m>,
+            e, portanto, <m>x \notin A</m> e <m>x \notin B</m>.
+            Assim, <m>x \notin A \cup B</m> e, consequentemente, <m>x \in (A \cup B)'</m>.
+            Logo, <m>(A \cup B)' \supset A' \cap B'</m> e, portanto, <m>(A \cup B)' = A' \cap B'</m>.
           </p>
 
           <p>
-            The proof of (2) is left as an exercise.
+            A demonstração de (2) fica como exercício.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="sets-example-other-relations">
         <p>
-          Other relations between sets often hold true.
-          For example,
+          Muitas vezes valem outras relações entre conjuntos.
+          Por exemplo,
           <md>
             ( A \setminus B) \cap (B \setminus A) = \emptyset
           </md>.
-          To see that this is true, observe that
+          Para ver que isso é verdade, observe que
           <md>
             <mrow>( A \setminus B) \cap (B \setminus A) &amp; = ( A \cap B') \cap (B \cap A')</mrow>
             <mrow>&amp; = A \cap A' \cap B \cap B'</mrow>
