@@ -922,78 +922,78 @@
   </section>
 
   <section xml:id="groups-section-subgroups">
-    <title>Subgroups</title>
+    <title>Subgrupos</title>
     <subsection xml:id="groups-subsection-subgroup-examples">
-      <title>Definitions and Examples</title>
+      <title>Definições e exemplos</title>
       <p>
-        Sometimes we wish to investigate smaller groups sitting inside a larger group.
-        The set of even integers <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> is a group under the operation of addition.
-        This smaller group sits naturally inside of the group of integers under addition.
-        We define a <term>subgroup</term><idx><h>Subgroup</h><h>definition of</h></idx> <m>H</m> of a group <m>G</m> to be a subset <m>H</m> of <m>G</m> such that when the group operation of <m>G</m> is restricted to <m>H</m>,
-        <m>H</m> is a group in its own right.
-        Observe that every group <m>G</m> with at least two elements will always have at least two subgroups,
-        the subgroup consisting of the identity element alone and the entire group itself.
-        The subgroup <m>H = \{ e \}</m> of a group <m>G</m> is called the
-        <idx><h>Subgroup</h><h>trivial</h></idx><term>trivial subgroup</term>.
-        A subgroup that is a proper subset of <m>G</m> is called a
-        <idx><h>Subgroup</h><h>proper</h></idx><term>proper subgroup</term>.
-        In many of the examples that we have investigated up to this point,
-        there exist other subgroups besides the trivial and improper subgroups.
+        Às vezes queremos investigar grupos menores contidos em um grupo maior.
+        O conjunto dos inteiros pares <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> é um grupo sob a operação de adição.
+        Esse grupo menor está naturalmente contido no grupo dos inteiros sob a adição.
+        Definimos um <term>subgrupo</term><idx><h>Subgrupo</h><h>definição de</h></idx> <m>H</m> de um grupo <m>G</m> como um subconjunto <m>H</m> de <m>G</m> tal que, quando a operação de grupo de <m>G</m> é restrita a <m>H</m>,
+        <m>H</m> é, por si só, um grupo.
+        Observe que todo grupo <m>G</m> com pelo menos dois elementos sempre terá pelo menos dois subgrupos:
+        o subgrupo constituído apenas pelo elemento identidade e o próprio grupo inteiro.
+        O subgrupo <m>H = \{ e \}</m> de um grupo <m>G</m> é chamado de
+        <idx><h>Subgrupo</h><h>trivial</h></idx><term>subgrupo trivial</term>.
+        Um subgrupo que é um subconjunto próprio de <m>G</m> é chamado de
+        <idx><h>Subgrupo</h><h>próprio</h></idx><term>subgrupo próprio</term>.
+        Em muitos dos exemplos que investigamos até aqui,
+        existem outros subgrupos além dos subgrupos trivial e impróprio.
       </p>
 
       <example xml:id="groups-example-multiplicative-subgroup">
         <p>
-          Consider the set of nonzero real numbers,
-          <m>{\mathbb R}^*</m>, with the group operation of multiplication.
+          Considere o conjunto dos números reais não nulos,
+          <m>{\mathbb R}^*</m>, com a operação de grupo dada pela multiplicação.
 
           <notation>
             <usage><m>\mathbb R^*</m></usage>
-            <description>the multiplicative group of real numbers</description>
+            <description>o grupo multiplicativo dos números reais</description>
           </notation>
 
-          The identity of this group is <m>1</m> and the inverse of any element <m>a \in {\mathbb R}^*</m> is just <m>1/a</m>.
-          We will show that
+          O elemento identidade desse grupo é <m>1</m> e o inverso de qualquer elemento <m>a \in {\mathbb R}^*</m> é simplesmente <m>1/a</m>.
+          Mostraremos que
           <md>
             {\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}
           </md>
-          is a subgroup of <m>{\mathbb R}^*</m>.
+          é um subgrupo de <m>{\mathbb R}^*</m>.
 
           <notation>
             <usage><m>\mathbb Q^*</m></usage>
-            <description>the multiplicative group of rational numbers</description>
+            <description>o grupo multiplicativo dos números racionais</description>
           </notation>
 
-          The identity of <m>{\mathbb R}^*</m> is <m>1</m>;
-          however,  <m>1 = 1/1</m> is the quotient of two nonzero integers.
-          Hence, the identity of <m>{\mathbb R}^*</m> is in <m>{\mathbb Q}^*</m>.
-          Given two elements in <m>{\mathbb Q}^*</m>,
-          say <m>p/q</m> and <m>r/s</m>,
-          their product <m>pr/qs</m> is also in <m>{\mathbb Q}^*</m>.
-          The inverse of any element <m>p/q \in {\mathbb Q}^*</m> is again in
-          <m>{\mathbb Q}^*</m> since <m>(p/q)^{-1} = q/p</m>.
-          Since multiplication in <m>{\mathbb R}^*</m> is associative,
-          multiplication in <m>{\mathbb Q}^*</m> is associative.
+          O elemento identidade de <m>{\mathbb R}^*</m> é <m>1</m>;
+          contudo, <m>1 = 1/1</m> é o quociente de dois inteiros não nulos.
+          Portanto, o elemento identidade de <m>{\mathbb R}^*</m> pertence a <m>{\mathbb Q}^*</m>.
+          Dados dois elementos de <m>{\mathbb Q}^*</m>,
+          digamos <m>p/q</m> e <m>r/s</m>,
+          seu produto <m>pr/qs</m> também pertence a <m>{\mathbb Q}^*</m>.
+          O inverso de qualquer elemento <m>p/q \in {\mathbb Q}^*</m> também pertence a
+          <m>{\mathbb Q}^*</m>, pois <m>(p/q)^{-1} = q/p</m>.
+          Como a multiplicação em <m>{\mathbb R}^*</m> é associativa,
+          a multiplicação em <m>{\mathbb Q}^*</m> é associativa.
         </p>
       </example>
 
       <example xml:id="groups-example-subgroup-h">
         <p>
-          Recall that <m>{\mathbb C}^{\ast}</m> is the multiplicative group of nonzero complex numbers.
-          Let <m>H = \{ 1, -1, i, -i \}</m>.
-          Then <m>H</m> is a subgroup of <m>{\mathbb C}^{\ast}</m>.
-          It is quite easy to verify that <m>H</m> is a group under multiplication and that <m>H \subset {\mathbb C}^{\ast}</m>.
+          Lembre-se de que <m>{\mathbb C}^{\ast}</m> é o grupo multiplicativo dos números complexos não nulos.
+          Seja <m>H = \{ 1, -1, i, -i \}</m>.
+          Então <m>H</m> é um subgrupo de <m>{\mathbb C}^{\ast}</m>.
+          É fácil verificar que <m>H</m> é um grupo sob a multiplicação e que <m>H \subset {\mathbb C}^{\ast}</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-sl2">
         <p>
-          Let <m>SL_2( {\mathbb R})</m> be the subset of
-          <m>GL_2( {\mathbb R })</m> consisting of matrices of determinant one;
-          that is, a matrix
+          Seja <m>SL_2( {\mathbb R})</m> o subconjunto de
+          <m>GL_2( {\mathbb R })</m> constituído pelas matrizes de determinante um;
+          isto é, uma matriz
 
           <notation>
             <usage><m>SL_n(\mathbb R)</m></usage>
-            <description>the special linear group</description>
+            <description>o grupo linear especial</description>
           </notation>
 
           <md>
@@ -1003,11 +1003,11 @@
             c &amp; d
             \end{pmatrix}
           </md>
-          is in <m>SL_2( {\mathbb R})</m> exactly when <m>ad - bc = 1</m>.
-          To show that <m>SL_2( {\mathbb R})</m> is a subgroup of the general linear group,
-          we must show that it is a group under matrix multiplication.
-          The <m>2 \times 2</m> identity matrix is in <m>SL_2( {\mathbb R})</m>,
-          as is the inverse of the matrix <m>A</m>:
+          pertence a <m>SL_2( {\mathbb R})</m> exatamente quando <m>ad - bc = 1</m>.
+          Para mostrar que <m>SL_2( {\mathbb R})</m> é um subgrupo do grupo linear geral,
+          devemos mostrar que ele é um grupo sob a multiplicação de matrizes.
+          A matriz identidade <m>2 \times 2</m> pertence a <m>SL_2( {\mathbb R})</m>,
+          assim como o inverso da matriz <m>A</m>:
           <md>
             A^{-1} =
             \begin{pmatrix}
@@ -1015,27 +1015,27 @@
             -c &amp;  a
             \end{pmatrix}
           </md>.
-          It remains to show that multiplication is closed;
-          that is, that the product of two matrices of determinant one also has determinant one.
-          We will leave this task as an exercise.
-          The group <m>SL_2({\mathbb R})</m> is called the
-          <idx><h>Group</h><h>special linear</h></idx><term>special linear group</term>.
+          Resta mostrar que a multiplicação é fechada;
+          isto é, que o produto de duas matrizes de determinante um também tem determinante um.
+          Deixaremos essa tarefa como exercício.
+          O grupo <m>SL_2({\mathbb R})</m> é chamado de
+          <idx><h>Grupo</h><h>linear especial</h></idx><term>grupo linear especial</term>.
         </p>
       </example>
 
       <example xml:id="groups-example-gl2-subgroup">
         <p>
-          It is important to realize that a subset <m>H</m> of a group <m>G</m> can be a group without being a subgroup of <m>G</m>.
-          For <m>H</m> to be a subgroup of <m>G</m>, it must inherit the binary operation of <m>G</m>.
-          The set of all <m>2 \times 2</m> matrices,
+          É importante perceber que um subconjunto <m>H</m> de um grupo <m>G</m> pode ser um grupo sem ser um subgrupo de <m>G</m>.
+          Para que <m>H</m> seja um subgrupo de <m>G</m>, ele deve herdar a operação binária de <m>G</m>.
+          O conjunto de todas as matrizes <m>2 \times 2</m>,
           <m>{\mathbb M}_2(\mathbb R)</m>,
-          forms a group under the operation of addition.
-          The <m>2 \times 2</m> general linear group is a subset of
-          <m>{\mathbb M}_2(\mathbb R)</m> and is a group under matrix multiplication,
-          but it is not a subgroup of <m>{\mathbb M}_2(\mathbb R)</m>.
-          If we add two invertible matrices,
-          we do not necessarily obtain another invertible matrix.
-          Observe that
+          forma um grupo sob a operação de adição.
+          O grupo linear geral <m>2 \times 2</m> é um subconjunto de
+          <m>{\mathbb M}_2(\mathbb R)</m> e é um grupo sob a multiplicação de matrizes,
+          mas não é um subgrupo de <m>{\mathbb M}_2(\mathbb R)</m>.
+          Se adicionarmos duas matrizes invertíveis,
+          não necessariamente obteremos outra matriz invertível.
+          Observe que
           <md>
             \begin{pmatrix}
             1 &amp; 0 \\
@@ -1052,31 +1052,31 @@
             0 &amp; 0
             \end{pmatrix}
           </md>,
-          but the zero matrix is not in <m>GL_2( {\mathbb R })</m>.
+          mas a matriz nula não pertence a <m>GL_2( {\mathbb R })</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-z2xz2">
         <p>
-          One way of telling whether or not two groups are the same is by examining their subgroups.
-          Other than the trivial subgroup and the group itself,
-          the group <m>{\mathbb Z}_4</m> has a single subgroup consisting of the elements <m>0</m> and <m>2</m>.
-          From the group <m>{\mathbb Z}_2</m>,
-          we can form another group of four elements as follows.
-          As a set this group is <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          We perform the group operation coordinatewise;
-          that is, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
-          <xref ref="groups-table-z2xz2"/> is an addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          Since there are three nontrivial proper subgroups of <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
+          Uma maneira de determinar se dois grupos são ou não iguais é examinar seus subgrupos.
+          Além do subgrupo trivial e do próprio grupo,
+          o grupo <m>{\mathbb Z}_4</m> tem um único subgrupo constituído pelos elementos <m>0</m> e <m>2</m>.
+          A partir do grupo <m>{\mathbb Z}_2</m>,
+          podemos formar outro grupo com quatro elementos da seguinte maneira.
+          Como conjunto, esse grupo é <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          Efetuamos a operação de grupo coordenada a coordenada;
+          isto é, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
+          <xref ref="groups-table-z2xz2"/> é uma tabela de adição para <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          Como existem três subgrupos próprios não triviais de <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
           <m>H_1 = \{ (0,0), (0,1) \}</m>,
           <m>H_2 = \{ (0,0), (1,0) \}</m>,
-          and <m>H_3 = \{ (0,0), (1,1) \}</m>,
-          <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> must be different groups.
+          e <m>H_3 = \{ (0,0), (1,1) \}</m>,
+          <m>{\mathbb Z}_4</m> e <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> devem ser grupos diferentes.
         </p>
 
         <figure xml:id="groups-table-z2xz2">
             <!-- math table -->
-          <caption>Addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
+          <caption>Tabela de adição para <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
           <p>
             <md>
               \begin{array}{c|cccc}
@@ -1095,33 +1095,33 @@
     </subsection>
 
     <subsection xml:id="groups-subsection-subgroup-theorems">
-      <title>Some Subgroup Theorems</title>
+      <title>Alguns teoremas sobre subgrupos</title>
       <p>
-        Let us examine some criteria for determining exactly when a subset of
-        a group is a subgroup.
+        Examinemos alguns critérios para determinar exatamente quando um subconjunto de
+        um grupo é um subgrupo.
       </p>
 
       <proposition>
         <statement>
           <p>
-            A subset <m>H</m> of <m>G</m> is a subgroup if and only if it satisfies the following conditions.
+            Um subconjunto <m>H</m> de <m>G</m> é um subgrupo se, e somente se, satisfaz as condições a seguir.
 
             <ol>
               <li>
                 <p>
-                  The identity <m>e</m> of <m>G</m> is in <m>H</m>.
+                  O elemento identidade <m>e</m> de <m>G</m> pertence a <m>H</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>h_1, h_2 \in H</m>, then <m>h_1h_2 \in H</m>.
+                  Se <m>h_1, h_2 \in H</m>, então <m>h_1h_2 \in H</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>h \in H</m>, then <m>h^{-1} \in H</m>.
+                  Se <m>h \in H</m>, então <m>h^{-1} \in H</m>.
                 </p>
               </li>
             </ol>
@@ -1130,25 +1130,25 @@
 
         <proof>
           <p>
-            First suppose that <m>H</m> is a subgroup of <m>G</m>.
-            We must show that the three conditions hold.
-            Since <m>H</m> is a group, it must have an identity <m>e_H</m>.
-            We must show that <m>e_H = e</m>,
-            where <m>e</m> is the identity of <m>G</m>.
-            We know that <m>e_H e_H = e_H</m> and that <m>ee_H = e_H e = e_H</m>;
-            hence, <m>ee_H = e_H e_H</m>.
-            By right-hand cancellation, <m>e =e_H</m>.
-            The second condition holds since a subgroup <m>H</m> is a group.
-            To prove the third condition, let <m>h \in H</m>.
-            Since <m>H</m> is a group,
-            there is an element <m>h' \in H</m> such that <m>hh' = h'h = e</m>.
-            By the uniqueness of the inverse in <m>G</m>, <m>h' = h^{-1}</m>.
+            Primeiro suponha que <m>H</m> seja um subgrupo de <m>G</m>.
+            Devemos mostrar que as três condições são satisfeitas.
+            Como <m>H</m> é um grupo, ele deve ter um elemento identidade <m>e_H</m>.
+            Devemos mostrar que <m>e_H = e</m>,
+            onde <m>e</m> é o elemento identidade de <m>G</m>.
+            Sabemos que <m>e_H e_H = e_H</m> e que <m>ee_H = e_H e = e_H</m>;
+            logo, <m>ee_H = e_H e_H</m>.
+            Pelo cancelamento à direita, <m>e =e_H</m>.
+            A segunda condição vale porque um subgrupo <m>H</m> é um grupo.
+            Para provar a terceira condição, seja <m>h \in H</m>.
+            Como <m>H</m> é um grupo,
+            existe um elemento <m>h' \in H</m> tal que <m>hh' = h'h = e</m>.
+            Pela unicidade do inverso em <m>G</m>, <m>h' = h^{-1}</m>.
           </p>
 
           <p>
-            Conversely, if the three conditions hold,
-            we must show that <m>H</m> is a group under the same operation as <m>G</m>;
-            however, these conditions plus the associativity of the binary operation are exactly the axioms stated in the definition of a group.
+            Reciprocamente, se as três condições são satisfeitas,
+            devemos mostrar que <m>H</m> é um grupo sob a mesma operação que <m>G</m>;
+            contudo, essas condições, juntamente com a associatividade da operação binária, são exatamente os axiomas enunciados na definição de grupo.
           </p>
         </proof>
       </proposition>
@@ -1156,30 +1156,30 @@
       <proposition xml:id="groups-proposition-subgroup">
         <statement>
           <p>
-            Let <m>H</m> be a subset of a group <m>G</m>.
-            Then <m>H</m> is a subgroup of <m>G</m> if and only if <m>H \neq \emptyset</m>,
-            and whenever <m>g, h \in H</m> then <m>gh^{-1}</m> is in <m>H</m>.
+            Seja <m>H</m> um subconjunto de um grupo <m>G</m>.
+            Então <m>H</m> é um subgrupo de <m>G</m> se, e somente se, <m>H \neq \emptyset</m>
+            e, sempre que <m>g, h \in H</m>, então <m>gh^{-1}</m> pertence a <m>H</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            First assume that <m>H</m> is a subgroup of <m>G</m>.
-            We wish to show that <m>gh^{-1} \in H</m> whenever <m>g</m> and <m>h</m> are in <m>H</m>.
-            Since <m>h</m> is in <m>H</m>,
-            its inverse <m>h^{-1}</m> must also be in <m>H</m>.
-            Because of the closure of the group operation, <m>gh^{-1} \in H</m>.
+            Primeiro suponha que <m>H</m> seja um subgrupo de <m>G</m>.
+            Queremos mostrar que <m>gh^{-1} \in H</m> sempre que <m>g</m> e <m>h</m> estejam em <m>H</m>.
+            Como <m>h</m> está em <m>H</m>,
+            seu inverso <m>h^{-1}</m> também deve estar em <m>H</m>.
+            Pela propriedade de fechamento da operação de grupo, <m>gh^{-1} \in H</m>.
           </p>
 
           <p>
-            Conversely, suppose that <m>H \subset G</m> such that <m>H \neq \emptyset</m> and
-            <m>g h^{-1} \in H</m> whenever <m>g, h \in H</m>.
-            If <m>g \in H</m>, then <m>gg^{-1} = e</m> is in <m>H</m>.
-            If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>.
-            Now let <m>h_1, h_2 \in H</m>.
-            We must show that their product is also in <m>H</m>.
-            However, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
-            Hence, <m>H</m> is a subgroup of <m>G</m>.
+            Reciprocamente, suponha que <m>H \subset G</m>, que <m>H \neq \emptyset</m> e que
+            <m>g h^{-1} \in H</m> sempre que <m>g, h \in H</m>.
+            Se <m>g \in H</m>, então <m>gg^{-1} = e</m> pertence a <m>H</m>.
+            Se <m>g \in H</m>, então <m>eg^{-1} = g^{-1}</m> também pertence a <m>H</m>.
+            Agora sejam <m>h_1, h_2 \in H</m>.
+            Devemos mostrar que seu produto também pertence a <m>H</m>.
+            Contudo, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
+            Portanto, <m>H</m> é um subgrupo de <m>G</m>.
           </p>
         </proof>
       </proposition>
@@ -1190,11 +1190,11 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          The first half of this text is about group theory.
-          Sage includes Groups, Algorithms and Programming (<acro>GAP</acro>),
-          a program designed primarly for just group theory,
-          and in continuous development since 1986.
-          Many of Sage's computations for groups ultimately are performed by GAP.
+          A primeira metade deste texto trata da teoria dos grupos.
+          O Sage inclui o sistema Groups, Algorithms and Programming (<acro>GAP</acro>),
+          um programa projetado principalmente para a teoria dos grupos,
+          em desenvolvimento contínuo desde 1986.
+          Muitos dos cálculos de grupos do Sage são, em última instância, realizados pelo GAP.
         </p>
       </paragraphs>
 
