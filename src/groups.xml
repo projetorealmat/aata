@@ -347,39 +347,39 @@
   </section>
 
   <section xml:id="groups-section-defnitions">
-    <title>Definitions and Examples</title>
+    <title>Definições e exemplos</title>
         <!-- % TWJ, 2010/03/31 -->
         <!-- % Fixed the error  <m>(a,b) \in G \times G</m> -->
     <introduction>
       <p>
-        The integers mod <m>n</m> and the symmetries of a triangle or a rectangle are examples of groups.
-        A <term>binary operation</term><idx><h>Binary operation</h></idx>
-        or <term>law of composition</term>
-        on a set <m>G</m> is a function
-        <m>G \times G \rightarrow G</m> that assigns to each pair
-        <m>(a,b) \in G \times G</m> a unique element <m>a \circ b</m>,
-        or <m>ab</m> in <m>G</m>, called the composition of <m>a</m> and <m>b</m>.
-        A <term>group</term><idx><h>Group</h><h>definition of</h></idx>
-        <m>(G, \circ )</m> is a set <m>G</m> together with a law of composition
-        <m>(a,b) \mapsto a \circ b</m> that satisfies the following axioms.
+        Os inteiros módulo <m>n</m> e as simetrias de um triângulo ou de um retângulo são exemplos de grupos.
+        Uma <term>operação binária</term><idx><h>Operação binária</h></idx>
+        ou <term>lei de composição</term>
+        em um conjunto <m>G</m> é uma função
+        <m>G \times G \rightarrow G</m> que associa a cada par
+        <m>(a,b) \in G \times G</m> um único elemento <m>a \circ b</m>,
+        ou <m>ab</m> em <m>G</m>, chamado composição de <m>a</m> e <m>b</m>.
+        Um <term>grupo</term><idx><h>Grupo</h><h>definição de</h></idx>
+        <m>(G, \circ )</m> é um conjunto <m>G</m> munido de uma lei de composição
+        <m>(a,b) \mapsto a \circ b</m> que satisfaz os axiomas a seguir.
 
         <ul>
           <li>
             <p>
-              The law of composition is <term>associative</term>.
-              That is,
+              A lei de composição é <term>associativa</term>.
+              Isto é,
               <md>
                 (a \circ b) \circ c = a \circ (b \circ c)
               </md>
-              for <m>a, b, c \in G</m>.
+              para <m>a, b, c \in G</m>.
             </p>
           </li>
 
           <li>
             <p>
-              There exists an element <m>e \in G</m>,
-              called the <term>identity element</term>,<idx><h>Element</h><h>identity</h></idx>
-              such that for any element <m>a \in G</m>
+              Existe um elemento <m>e \in G</m>,
+              chamado <term>elemento identidade</term>,<idx><h>Elemento</h><h>identidade</h></idx>
+              tal que, para qualquer elemento <m>a \in G</m>,
               <md>
                 e \circ a = a \circ e = a
               </md>.
@@ -388,9 +388,9 @@
 
           <li>
             <p>
-              For each element <m>a \in G</m>,
-              there exists an <term>inverse element</term><idx><h>Element</h><h>inverse</h></idx>
-              in G, denoted by <m>a^{-1}</m>, such that
+              Para cada elemento <m>a \in G</m>,
+              existe um <term>elemento inverso</term><idx><h>Elemento</h><h>inverso</h></idx>
+              em G, denotado por <m>a^{-1}</m>, tal que
               <md>
                 a \circ a^{-1} = a^{-1} \circ a = e
               </md>.
@@ -400,64 +400,64 @@
       </p>
 
       <p>
-        A group <m>G</m> with the property that <m>a \circ b = b \circ a</m> for all
-        <m>a, b \in G</m> is called <term>abelian</term><idx><h>Abelian group</h></idx><idx><h>Group</h><h>abelian</h></idx>
-        or <idx><h>Group</h><h>commutative</h></idx><term>commutative</term>. 
-        Groups not satisfying this property are said to be <term>nonabelian</term><idx><h>Group</h><h>nonabelian</h></idx>
-        or <idx><h>Group</h><h>noncommutative</h></idx><term>noncommutative</term>.
+        Um grupo <m>G</m> com a propriedade de que <m>a \circ b = b \circ a</m> para todos os
+        <m>a, b \in G</m> é chamado <term>abeliano</term><idx><h>Grupo abeliano</h></idx><idx><h>Grupo</h><h>abeliano</h></idx>
+        ou <idx><h>Grupo</h><h>comutativo</h></idx><term>comutativo</term>.
+        Grupos que não satisfazem essa propriedade são chamados <term>não abelianos</term><idx><h>Grupo</h><h>não abeliano</h></idx>
+        ou <idx><h>Grupo</h><h>não comutativo</h></idx><term>não comutativos</term>.
       </p>
 
       <example xml:id="groups-example-integers">
         <p>
-          The integers <m>{\mathbb Z } = \{ \ldots , -1, 0, 1, 2, \ldots \}</m> form a group under the operation of addition.
-          The binary operation on two integers <m>m,
-          n \in {\mathbb Z}</m> is just their sum.
-          Since the integers under addition already have a well-established notation,
-          we will use the operator <m>+</m> instead of <m>\circ</m>;
-          that is, we shall write <m>m + n</m> instead of <m>m \circ n</m>.
-          The identity is <m>0</m>,
-          and the inverse of <m>n \in {\mathbb Z}</m> is written as <m>-n</m> instead of <m>n^{-1}</m>.
-          Notice that the set of integers under addition have the additional property that
-          <m>m + n = n + m</m> and therefore form an abelian group.
+          Os inteiros <m>{\mathbb Z } = \{ \ldots , -1, 0, 1, 2, \ldots \}</m> formam um grupo sob a operação de adição.
+          A operação binária em dois inteiros <m>m,
+          n \in {\mathbb Z}</m> é simplesmente sua soma.
+          Como os inteiros sob a adição já possuem uma notação bem estabelecida,
+          usaremos o operador <m>+</m> em vez de <m>\circ</m>;
+          isto é, escreveremos <m>m + n</m> em vez de <m>m \circ n</m>.
+          O elemento identidade é <m>0</m>,
+          e o inverso de <m>n \in {\mathbb Z}</m> é escrito como <m>-n</m> em vez de <m>n^{-1}</m>.
+          Observe que o conjunto dos inteiros sob a adição possui ainda a propriedade
+          <m>m + n = n + m</m> e, portanto, forma um grupo abeliano.
         </p>
       </example>
 
       <p>
-        Most of the time we will write <m>ab</m> instead of <m>a \circ b</m>;
-        however, if the group already has a natural operation such as addition in the integers,
-        we will use that operation.
-        That is, if we are adding two integers,
-        we still write <m>m + n</m>,
-        <m>-n</m> for the inverse, and <m>0</m> for the identity as usual.
-        We also write <m>m - n</m> instead of <m>m + (-n)</m>.
+        Na maior parte do tempo escreveremos <m>ab</m> em vez de <m>a \circ b</m>;
+        contudo, se o grupo já tiver uma operação natural, como a adição nos inteiros,
+        usaremos essa operação.
+        Ou seja, se estivermos adicionando dois inteiros,
+        continuaremos escrevendo <m>m + n</m>,
+        <m>-n</m> para o inverso e <m>0</m> para o elemento identidade, como de costume.
+        Também escreveremos <m>m - n</m> em vez de <m>m + (-n)</m>.
       </p>
 
       <p>
-        It is often convenient to describe a group in terms of an addition or multiplication table.
-        Such a table is called a <idx><h>Cayley table</h></idx><term>Cayley table</term>.
+        Muitas vezes é conveniente descrever um grupo por meio de uma tabela de adição ou de multiplicação.
+        Essa tabela é chamada de <idx><h>Tabela de Cayley</h></idx><term>tabela de Cayley</term>.
       </p>
 
       <example xml:id="groups-example-z5">
         <p>
-          The integers mod <m>n</m> form a group under addition modulo <m>n</m>.
-          Consider <m>{\mathbb Z}_5</m>,
-          consisting of the equivalence classes of the integers <m>0</m>,
+          Os inteiros módulo <m>n</m> formam um grupo sob a adição módulo <m>n</m>.
+          Considere <m>{\mathbb Z}_5</m>,
+          constituído pelas classes de equivalência dos inteiros <m>0</m>,
           <m>1</m>,
-          <m>2</m>, <m>3</m>, and <m>4</m>.
-          We define the group operation on <m>{\mathbb Z}_5</m> by modular addition.
-          We write the binary operation on the group additively;
-          that is, we write <m>m + n</m>.
-          The element <m>0</m> is the identity of the group and each element in <m>{\mathbb Z}_5</m> has an inverse.
-          For instance, <m>2 + 3 = 3 + 2 = 0</m>.
-          <xref ref="groups-table-z5-cayley"/> is a Cayley table for <m>{\mathbb Z}_5</m>.
-          By <xref ref="groups-proposition-zn-equiv-classes"/>,
+          <m>2</m>, <m>3</m> e <m>4</m>.
+          Definimos a operação de grupo em <m>{\mathbb Z}_5</m> pela adição modular.
+          Escrevemos a operação binária do grupo aditivamente;
+          isto é, escrevemos <m>m + n</m>.
+          O elemento <m>0</m> é o elemento identidade do grupo, e cada elemento de <m>{\mathbb Z}_5</m> possui um inverso.
+          Por exemplo, <m>2 + 3 = 3 + 2 = 0</m>.
+          <xref ref="groups-table-z5-cayley"/> é uma tabela de Cayley para <m>{\mathbb Z}_5</m>.
+          Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
           <m>{\mathbb Z}_n = \{0, 1, \ldots,
-          n-1 \}</m> is a group under the binary operation of addition mod <m>n</m>.
+          n-1 \}</m> é um grupo sob a operação binária de adição módulo <m>n</m>.
         </p>
 
         <figure xml:id="groups-table-z5-cayley">
             <!-- math table -->
-          <caption>Cayley table for <m>({\mathbb Z_5}, +)</m></caption>
+          <caption>Tabela de Cayley para <m>({\mathbb Z_5}, +)</m></caption>
           <p>
             <md>
               \begin{array}{c|ccccc}
@@ -476,42 +476,42 @@
 
       <example xml:id="groups-example-z6-mult">
         <p>
-          Not every set with a binary operation is a group.
-          For example,
-          if we let modular multiplication be the binary operation on <m>{\mathbb Z}_n</m>,
-          then <m>{\mathbb Z}_n</m> fails to be a group.
-          The element 1 acts as a group identity since
-          <m>1 \cdot k = k \cdot 1 = k</m> for any <m>k \in {\mathbb Z}_n</m>;
-          however, a multiplicative inverse for <m>0</m> does not exist since
-          <m>0 \cdot k = k \cdot 0 = 0</m> for every <m>k</m> in <m>{\mathbb Z}_n</m>.
-          Even if we consider the set <m>{\mathbb Z}_n \setminus \{0 \}</m>,
-          we still may not have a group.
-          For instance, let <m>2 \in {\mathbb Z}_6</m>.
-          Then <m>2</m> has no multiplicative inverse since
+          Nem todo conjunto com uma operação binária é um grupo.
+          Por exemplo,
+          se tomarmos a multiplicação modular como operação binária em <m>{\mathbb Z}_n</m>,
+          então <m>{\mathbb Z}_n</m> não será um grupo.
+          O elemento 1 atua como elemento identidade do grupo, pois
+          <m>1 \cdot k = k \cdot 1 = k</m> para qualquer <m>k \in {\mathbb Z}_n</m>;
+          contudo, não existe inverso multiplicativo para <m>0</m>, pois
+          <m>0 \cdot k = k \cdot 0 = 0</m> para todo <m>k</m> em <m>{\mathbb Z}_n</m>.
+          Mesmo se considerarmos o conjunto <m>{\mathbb Z}_n \setminus \{0 \}</m>,
+          ainda podemos não ter um grupo.
+          Por exemplo, seja <m>2 \in {\mathbb Z}_6</m>.
+          Então <m>2</m> não possui inverso multiplicativo, pois
           <md>
             <mrow>0 \cdot 2 &amp; = 0 \qquad 1 \cdot 2 = 2</mrow>
             <mrow>2 \cdot 2 &amp; = 4 \qquad 3 \cdot 2 = 0</mrow>
             <mrow>4 \cdot 2 &amp; = 2 \qquad 5 \cdot 2 = 4</mrow>
           </md>.
-          By <xref ref="groups-proposition-zn-equiv-classes"/>,
-          every nonzero <m>k</m> does have an inverse in
-          <m>{\mathbb Z}_n</m> if <m>k</m> is relatively prime to <m>n</m>.
-          Denote the set of all such nonzero elements in <m>{\mathbb Z}_n</m> by <m>U(n)</m>.
+          Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
+          todo <m>k</m> não nulo possui um inverso em
+          <m>{\mathbb Z}_n</m> se <m>k</m> é relativamente primo com <m>n</m>.
+          Denotemos o conjunto de todos esses elementos não nulos em <m>{\mathbb Z}_n</m> por <m>U(n)</m>.
 
           <notation>
             <usage><m>U(n)</m></usage>
-            <description>group of units in <m>\mathbb Z_n</m></description>
+            <description>grupo das unidades em <m>\mathbb Z_n</m></description>
           </notation>
 
-          Then <m>U(n)</m> is a group called the
-          <term>group of units</term><idx><h>Group</h><h>of units</h></idx>
-          of <m>{\mathbb Z}_n</m>.
-          <xref ref="groups-table-cayley-u8"/> is a Cayley table for the group <m>U(8)</m>.
+          Então <m>U(n)</m> é um grupo chamado
+          <term>grupo das unidades</term><idx><h>Grupo</h><h>das unidades</h></idx>
+          de <m>{\mathbb Z}_n</m>.
+          <xref ref="groups-table-cayley-u8"/> é uma tabela de Cayley para o grupo <m>U(8)</m>.
         </p>
 
         <figure xml:id="groups-table-cayley-u8">
             <!-- math table -->
-          <caption>Multiplication table for <m>U(8)</m></caption>
+          <caption>Tabela de multiplicação de <m>U(8)</m></caption>
           <p>
             <md>
               \begin{array}{c|cccc}
@@ -529,26 +529,26 @@
 
       <example xml:id="groups-example-nonabelian">
         <p>
-          The symmetries of an equilateral triangle described in <xref ref="groups-section-mod-n-sym"/> form a nonabelian group.
-          As we observed, it is not necessarily true that
-          <m>\alpha \beta = \beta \alpha</m> for two symmetries <m>\alpha</m> and <m>\beta</m>.
-          Using <xref ref="groups-table-s3"/>, which is a Cayley table for this group,
-          we can easily check that the symmetries of an equilateral triangle are indeed a group.
-          We will denote this group by either <m>S_3</m> or <m>D_3</m>,
-          for reasons that will be explained later.
+          As simetrias de um triângulo equilátero descritas em <xref ref="groups-section-mod-n-sym"/> formam um grupo não abeliano.
+          Como observamos, não é necessariamente verdade que
+          <m>\alpha \beta = \beta \alpha</m> para duas simetrias <m>\alpha</m> e <m>\beta</m>.
+          Usando <xref ref="groups-table-s3"/>, que é uma tabela de Cayley para esse grupo,
+          podemos verificar facilmente que as simetrias de um triângulo equilátero são de fato um grupo.
+          Denotaremos esse grupo por <m>S_3</m> ou <m>D_3</m>,
+          por razões que serão explicadas mais adiante.
         </p>
       </example>
 
       <example xml:id="groups-example-gl2">
         <p>
-          We use  <m>{\mathbb M}_2 ( {\mathbb R})</m> to denote the set of all <m>2 \times 2</m> matrices.
-          Let <m>GL_2({\mathbb R})</m> be the subset of
-          <m>{\mathbb M}_2 ( {\mathbb R})</m> consisting of invertible matrices;
-          that is, a matrix
+          Usamos <m>{\mathbb M}_2 ( {\mathbb R})</m> para denotar o conjunto de todas as matrizes <m>2 \times 2</m>.
+          Seja <m>GL_2({\mathbb R})</m> o subconjunto de
+          <m>{\mathbb M}_2 ( {\mathbb R})</m> constituído pelas matrizes invertíveis;
+          isto é, uma matriz
 
           <notation>
             <usage><m>\mathbb M_n(\mathbb R)</m></usage>
-            <description>the <m>n \times n</m> matrices with entries in <m>\mathbb R</m></description>
+            <description>as matrizes <m>n \times n</m> com entradas em <m>\mathbb R</m></description>
           </notation>
 
           <md>
@@ -558,21 +558,21 @@
             c &amp; d
             \end{pmatrix}
           </md>
-          is in  <m>GL_2( {\mathbb R})</m> if there exists a matrix <m>A^{-1}</m> such that <m>A A^{-1} = A^{-1} A = I</m>,
-          where <m>I</m> is the <m>2 \times 2</m> identity matrix.
-          For <m>A</m> to have an inverse is equivalent to requiring that the determinant of <m>A</m> be nonzero;
-          that is, <m>\det A = ad - bc \neq 0</m>.
+          pertence a <m>GL_2( {\mathbb R})</m> se existe uma matriz <m>A^{-1}</m> tal que <m>A A^{-1} = A^{-1} A = I</m>,
+          onde <m>I</m> é a matriz identidade <m>2 \times 2</m>.
+          A existência de um inverso para <m>A</m> equivale a exigir que o determinante de <m>A</m> seja não nulo;
+          isto é, <m>\det A = ad - bc \neq 0</m>.
           <notation>
             <usage><m>\det A</m></usage>
-            <description>the determinant of <m>A</m></description>
+            <description>o determinante de <m>A</m></description>
           </notation>
-          The set of invertible matrices forms a group called the
-          <idx><h>Group</h><h>general linear</h></idx><term>general linear group</term>.
+          O conjunto das matrizes invertíveis forma um grupo chamado
+          <idx><h>Grupo</h><h>linear geral</h></idx><term>grupo linear geral</term>.
           <notation>
             <usage><m>GL_n(\mathbb R)</m></usage>
-            <description>the general linear group</description>
+            <description>o grupo linear geral</description>
           </notation>
-          The identity of the group is the identity matrix
+          O elemento identidade do grupo é a matriz identidade
           <md>
             I =
             \begin{pmatrix}
@@ -580,7 +580,7 @@
             0 &amp; 1
             \end{pmatrix}
           </md>.
-          The inverse of <m>A \in GL_2( {\mathbb R})</m> is
+          O inverso de <m>A \in GL_2( {\mathbb R})</m> é
           <md>
             A^{-1} =
             \frac{1}{ad-bc}
@@ -589,11 +589,11 @@
             -c &amp; a
             \end{pmatrix}
           </md>.
-          The product of two invertible matrices is again invertible.
-          Matrix multiplication is associative,
-          satisfying the other group axiom.
-          For matrices it is not true in general that <m>AB = BA</m>;
-          hence, <m>GL_2({\mathbb R})</m> is another example of a nonabelian group.
+          O produto de duas matrizes invertíveis é novamente invertível.
+          A multiplicação de matrizes é associativa,
+          satisfazendo o outro axioma de grupo.
+          Para matrizes, em geral não é verdade que <m>AB = BA</m>;
+          portanto, <m>GL_2({\mathbb R})</m> é outro exemplo de grupo não abeliano.
         </p>
       </example>
             <!-- % Changed <m>AB \neq BA</m> to <m>AB = BA</m>. Suggested by Isaac Coombs. TWJ 8/24/2011 -->
@@ -625,100 +625,100 @@
             0 &amp; -i
             \end{pmatrix}</mrow>
           </md>,
-          where <m>i^2 = -1</m>.
-          Then the relations <m>I^2 = J^2 = K^2 = -1</m>,
+          onde <m>i^2 = -1</m>.
+          Então valem as relações <m>I^2 = J^2 = K^2 = -1</m>,
           <m>IJ=K</m>, <m>JK = I</m>, <m>KI = J</m>,
-          <m>JI = -K</m>, <m>KJ = -I</m>, and <m>IK = -J</m> hold.
-          The set
+          <m>JI = -K</m>, <m>KJ = -I</m> e <m>IK = -J</m> são válidas.
+          O conjunto
 
           <notation>
             <usage><m>Q_8</m></usage>
-            <description>the group of quaternions</description>
+            <description>o grupo dos quatérnios</description>
           </notation>
 
-          <m>Q_8 = \{\pm 1, \pm I, \pm J, \pm K  \}</m> is a group called the
-          <idx><h>Group</h><h>quaternion</h></idx><idx><h>Quaternions</h></idx><term>quaternion group</term>.
-          Notice that <m>Q_8</m> is noncommutative.
+          <m>Q_8 = \{\pm 1, \pm I, \pm J, \pm K  \}</m> é um grupo chamado
+          <idx><h>Grupo</h><h>quatérnio</h></idx><idx><h>Quatérnios</h></idx><term>grupo dos quatérnios</term>.
+          Observe que <m>Q_8</m> não é comutativo.
         </p>
       </example>
 
       <example xml:id="groups-example-c-star">
         <p>
-          Let <m>{\mathbb C}^\ast</m> be the set of nonzero complex numbers.
+          Seja <m>{\mathbb C}^\ast</m> o conjunto dos números complexos não nulos.
           <notation>
             <usage><m>\mathbb C^*</m></usage>
-            <description>the multiplicative group of complex numbers</description>
+            <description>o grupo multiplicativo dos números complexos</description>
           </notation>
-          Under the operation of multiplication <m>{\mathbb C}^\ast</m> forms a group.
-          The identity is <m>1</m>.
-          If <m>z = a+bi</m> is a nonzero complex number, then
+          Sob a operação de multiplicação, <m>{\mathbb C}^\ast</m> forma um grupo.
+          O elemento identidade é <m>1</m>.
+          Se <m>z = a+bi</m> é um número complexo não nulo, então
           <md>
             z^{-1} = \frac{a -bi}{a^2 +b^2}
           </md>
-          is the inverse of <m>z</m>.
-          It is easy to see that the remaining group axioms hold.
+          é o inverso de <m>z</m>.
+          É fácil ver que os demais axiomas de grupo são satisfeitos.
         </p>
       </example>
 
       <p>
-        A group is <term>finite</term>,<idx><h>Group</h><h>finite</h></idx>
-        or has <term>finite order</term>,
-        if it contains a finite number of elements;
-        otherwise, the group is said to be <term>infinite</term>
-        or to have <idx><h>Group</h><h>infinite</h></idx><term>infinite order</term>.
-        The <term>order</term><idx><h>Group</h><h>order of</h></idx>
-        of a finite group is the number of elements that it contains.
-        If <m>G</m> is a group containing <m>n</m> elements, we write <m>|G| = n</m>.
+        Um grupo é <term>finito</term>,<idx><h>Grupo</h><h>finito</h></idx>
+        ou tem <term>ordem finita</term>,
+        se contém um número finito de elementos;
+        caso contrário, o grupo é dito <term>infinito</term>
+        ou tem <idx><h>Grupo</h><h>infinito</h></idx><term>ordem infinita</term>.
+        A <term>ordem</term><idx><h>Grupo</h><h>ordem de</h></idx>
+        de um grupo finito é o número de elementos que ele contém.
+        Se <m>G</m> é um grupo contendo <m>n</m> elementos, escrevemos <m>|G| = n</m>.
         <notation>
           <usage><m>|G|</m></usage>
-          <description>the order of a group</description>
+          <description>a ordem de um grupo</description>
         </notation>
-        The group <m>{\mathbb Z}_5</m> is a finite group of order <m>5</m>;
-        the integers <m>{\mathbb Z}</m> form an infinite group under addition,
-        and we sometimes write <m>|{\mathbb Z}| = \infty</m>.
+        O grupo <m>{\mathbb Z}_5</m> é um grupo finito de ordem <m>5</m>;
+        os inteiros <m>{\mathbb Z}</m> formam um grupo infinito sob a adição,
+        e às vezes escrevemos <m>|{\mathbb Z}| = \infty</m>.
       </p>
     </introduction>
 
     <subsection xml:id="groups-subsection-basic-properties">
-      <title>Basic Properties of Groups</title>
+      <title>Propriedades básicas dos grupos</title>
       <proposition>
         <statement>
           <p>
-            The identity element in a group <m>G</m> is unique;
-            that is, there exists only one element <m>e \in G</m> such that
-            <m>eg = ge = g</m> for all <m>g \in G</m>.
+            O elemento identidade em um grupo <m>G</m> é único;
+            isto é, existe apenas um elemento <m>e \in G</m> tal que
+            <m>eg = ge = g</m> para todo <m>g \in G</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>e</m> and <m>e'</m> are both identities in <m>G</m>.
-            Then <m>eg = ge = g</m> and
-            <m>e'g = ge' = g</m> for all <m>g \in G</m>.
-            We need to show that <m>e = e'</m>.
-            If we think of <m>e</m> as the identity, then <m>ee' = e'</m>;
-            but if <m>e'</m> is the identity, then <m>ee' = e</m>.
-            Combining these two equations,
-            we have <m>e = ee' = e'</m>.
+            Suponha que <m>e</m> e <m>e'</m> sejam ambos elementos identidade em <m>G</m>.
+            Então <m>eg = ge = g</m> e
+            <m>e'g = ge' = g</m> para todo <m>g \in G</m>.
+            Precisamos mostrar que <m>e = e'</m>.
+            Se considerarmos <m>e</m> como o elemento identidade, então <m>ee' = e'</m>;
+            mas, se <m>e'</m> for o elemento identidade, então <m>ee' = e</m>.
+            Combinando essas duas equações,
+            temos <m>e = ee' = e'</m>.
           </p>
         </proof>
       </proposition>
 
       <p>
-        Inverses in a group are also unique.
-        If <m>g'</m> and <m>g''</m> are both inverses of an element <m>g</m> in a group <m>G</m>,
-        then <m>gg' = g'g = e</m> and <m>gg'' = g''g = e</m>.
-        We want to show that <m>g' = g''</m>,
-        but <m>g' = g'e = g'(gg'') = (g'g)g'' = eg'' = g''</m>.
-        We summarize this fact in the following proposition.
+        Os inversos em um grupo também são únicos.
+        Se <m>g'</m> e <m>g''</m> são ambos inversos de um elemento <m>g</m> em um grupo <m>G</m>,
+        então <m>gg' = g'g = e</m> e <m>gg'' = g''g = e</m>.
+        Queremos mostrar que <m>g' = g''</m>,
+        mas <m>g' = g'e = g'(gg'') = (g'g)g'' = eg'' = g''</m>.
+        Resumimos esse fato na proposição a seguir.
       </p>
 
       <proposition>
         <statement>
           <p>
-            If <m>g</m> is any element in a group <m>G</m>,
-            then the inverse of <m>g</m>,
-            denoted by <m>g^{-1}</m>, is unique.
+            Se <m>g</m> é qualquer elemento de um grupo <m>G</m>,
+            então o inverso de <m>g</m>,
+            denotado por <m>g^{-1}</m>, é único.
           </p>
         </statement>
       </proposition>
@@ -726,18 +726,18 @@
       <proposition xml:id="groups-proposition-inverse-of-products">
         <statement>
           <p>
-            Let <m>G</m> be a group.
-            If <m>a, b \in G</m>, then <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+            Seja <m>G</m> um grupo.
+            Se <m>a, b \in G</m>, então <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>a, b \in G</m>.
-            Then <m>abb^{-1}a^{-1} = aea^{-1} = aa^{-1} = e</m>.
-            Similarly, <m>b^{-1}a^{-1}ab = e</m>.
-            But by the previous proposition, inverses are unique;
-            hence, <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+            Sejam <m>a, b \in G</m>.
+            Então <m>abb^{-1}a^{-1} = aea^{-1} = aa^{-1} = e</m>.
+            Analogamente, <m>b^{-1}a^{-1}ab = e</m>.
+            Mas, pela proposição anterior, os inversos são únicos;
+            portanto, <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
           </p>
         </proof>
       </proposition>
@@ -745,16 +745,16 @@
       <proposition>
         <statement>
           <p>
-            Let <m>G</m> be a group.
-            For any <m>a \in G</m>, <m>(a^{-1})^{-1} = a</m>.
+            Seja <m>G</m> um grupo.
+            Para qualquer <m>a \in G</m>, <m>(a^{-1})^{-1} = a</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Observe that <m>a^{-1} (a^{-1})^{-1} = e</m>.
-            Consequently,
-            multiplying both sides of this equation by <m>a</m>, we have
+            Observe que <m>a^{-1} (a^{-1})^{-1} = e</m>.
+            Consequentemente,
+            multiplicando ambos os lados dessa equação por <m>a</m>, temos
             <md>
               (a^{-1})^{-1} = e (a^{-1})^{-1} = a a^{-1} (a^{-1})^{-1} = ae = a
             </md>.
@@ -763,34 +763,34 @@
       </proposition>
 
       <p>
-        It makes sense to write equations with group elements and group operations.
-        If <m>a</m> and <m>b</m> are two elements in a group <m>G</m>,
-        does there exist an element <m>x \in G</m> such that <m>ax = b</m>?
-        If such an <m>x</m> does exist, is it unique?
-        The following proposition answers both of these questions positively.
+        Faz sentido escrever equações com elementos e operações de grupo.
+        Se <m>a</m> e <m>b</m> são dois elementos de um grupo <m>G</m>,
+        existe um elemento <m>x \in G</m> tal que <m>ax = b</m>?
+        Se tal <m>x</m> existir, ele é único?
+        A proposição a seguir responde positivamente a ambas as perguntas.
       </p>
 
       <proposition xml:id="groups-proposition-group-equations">
         <statement>
           <p>
-            Let <m>G</m> be a group and <m>a</m> and <m>b</m> be any two elements in <m>G</m>.
-            Then the equations <m>ax = b</m> and <m>xa = b</m> have unique solutions in <m>G</m>.
+            Seja <m>G</m> um grupo e sejam <m>a</m> e <m>b</m> quaisquer dois elementos de <m>G</m>.
+            Então as equações <m>ax = b</m> e <m>xa = b</m> têm soluções únicas em <m>G</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>ax = b</m>.
-            We must show that such an <m>x</m> exists.
-            We can multiply both sides of <m>ax = b</m> by <m>a^{-1}</m> to find <m>x = ex = a^{-1}ax = a^{-1}b</m>.
+            Suponha que <m>ax = b</m>.
+            Devemos mostrar que tal <m>x</m> existe.
+            Podemos multiplicar ambos os lados de <m>ax = b</m> por <m>a^{-1}</m> para obter <m>x = ex = a^{-1}ax = a^{-1}b</m>.
           </p>
 
           <p>
-            To show uniqueness,
-            suppose that <m>x_1</m> and <m>x_2</m> are both solutions of <m>ax = b</m>;
-            then <m>ax_1 = b = ax_2</m>.
-            So <m>x_1 = a^{-1}ax_1 = a^{-1}ax_2 = x_2</m>.
-            The proof for the existence and uniqueness of the solution of <m>xa = b</m> is similar.
+            Para mostrar a unicidade,
+            suponha que <m>x_1</m> e <m>x_2</m> sejam ambas soluções de <m>ax = b</m>;
+            então <m>ax_1 = b = ax_2</m>.
+            Logo <m>x_1 = a^{-1}ax_1 = a^{-1}ax_2 = x_2</m>.
+            A demonstração da existência e unicidade da solução de <m>xa = b</m> é semelhante.
           </p>
         </proof>
       </proposition>
@@ -798,27 +798,27 @@
       <proposition>
         <statement>
           <p>
-            If <m>G</m> is a group and <m>a, b, c \in G</m>,
-            then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>.
+            Se <m>G</m> é um grupo e <m>a, b, c \in G</m>,
+            então <m>ba = ca</m> implica <m>b = c</m> e <m>ab = ac</m> implica <m>b = c</m>.
           </p>
         </statement>
       </proposition>
 
       <p>
-        This proposition tells us that the
-        <term>right and left cancellation laws</term><idx><h>Cancellation law</h><h>for groups</h></idx> are true in groups.
-        We leave the proof as an exercise.
+        Essa proposição nos diz que as
+        <term>leis do cancelamento à direita e à esquerda</term><idx><h>Lei do cancelamento</h><h>para grupos</h></idx> são válidas em grupos.
+        Deixamos a demonstração como exercício.
       </p>
 
       <p>
-        We can use exponential notation for groups just as we do in ordinary algebra.
-        If <m>G</m> is a group and <m>g \in G</m>,
-        then we define <m>g^0 = e</m>.
-        For <m>n \in {\mathbb N}</m>, we define
+        Podemos usar notação exponencial para grupos assim como fazemos na álgebra usual.
+        Se <m>G</m> é um grupo e <m>g \in G</m>,
+        definimos <m>g^0 = e</m>.
+        Para <m>n \in {\mathbb N}</m>, definimos
         <md>
           g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}
         </md>
-        and
+        e
         <md>
           g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}
         </md>.
@@ -827,27 +827,27 @@
       <theorem xml:id="groups-theorem-exponent-laws">
         <statement>
           <p>
-            In a group, the usual laws of exponents hold;
-            that is, for all <m>g, h \in G</m>,
+            Em um grupo, valem as leis usuais dos expoentes;
+            isto é, para todos os <m>g, h \in G</m>,
 
             <ol>
               <li>
                 <p>
-                  <m>g^mg^n = g^{m+n}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                  <m>g^mg^n = g^{m+n}</m> para todos os <m>m, n \in {\mathbb Z}</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>(g^m)^n = g^{mn}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                  <m>(g^m)^n = g^{mn}</m> para todos os <m>m, n \in {\mathbb Z}</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> for all <m>n \in {\mathbb Z}</m>.
-                  Furthermore, if <m>G</m> is abelian,
-                  then <m>(gh)^n = g^nh^n</m>.
+                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> para todo <m>n \in {\mathbb Z}</m>.
+                  Além disso, se <m>G</m> é abeliano,
+                  então <m>(gh)^n = g^nh^n</m>.
                 </p>
               </li>
             </ol>
@@ -856,65 +856,66 @@
       </theorem>
 
       <p>
-        We will leave the proof of this theorem as an exercise.
-        Notice that <m>(gh)^n \neq g^nh^n</m> in general,
-        since the group may not be abelian.
-        If the group is <m>{\mathbb Z}</m> or <m>{\mathbb Z}_n</m>,
-        we write the group operation additively and the exponential operation multiplicatively;
-        that is, we write <m>ng</m> instead of <m>g^n</m>.
-        The laws of exponents now become
+        Deixaremos a demonstração desse teorema como exercício.
+        Observe que, em geral, <m>(gh)^n \neq g^nh^n</m>,
+        pois o grupo pode não ser abeliano.
+        Se o grupo é <m>{\mathbb Z}</m> ou <m>{\mathbb Z}_n</m>,
+        escrevemos a operação de grupo aditivamente e a operação exponencial multiplicativamente;
+        isto é, escrevemos <m>ng</m> em vez de <m>g^n</m>.
+        As leis dos expoentes tornam-se agora
 
         <ol>
           <li>
             <p>
-              <m>mg + ng = (m+n)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+              <m>mg + ng = (m+n)g</m> para todos os <m>m, n \in {\mathbb Z}</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>m(ng) = (mn)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+              <m>m(ng) = (mn)g</m> para todos os <m>m, n \in {\mathbb Z}</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>m(g + h) = mg + mh</m> for all <m>n \in {\mathbb Z}</m>.
+              <m>m(g + h) = mg + mh</m> para todo <m>n \in {\mathbb Z}</m>.
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        It is important to realize that the last statement can be made only because <m>{\mathbb Z}</m> and
-        <m>{\mathbb Z}_n</m> are commutative groups.
+        É importante perceber que a última afirmação só pode ser feita porque <m>{\mathbb Z}</m> e
+        <m>{\mathbb Z}_n</m> são grupos comutativos.
       </p>
     </subsection>
 
     <subsection xml:id="groups-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Although the first clear axiomatic definition of a group was not given until the late 1800s,
-        group-theoretic methods had been employed before this time in the development of many areas of mathematics,
-        including geometry and the theory of algebraic equations.
+        Embora a primeira definição axiomática clara de grupo só tenha sido dada no final do século XIX,
+        métodos da teoria dos grupos já haviam sido empregados antes disso no desenvolvimento de muitas áreas da matemática,
+        incluindo a geometria e a teoria das equações algébricas.
       </p>
 
       <p>
         Joseph-Louis Lagrange<idx><h>Lagrange, Joseph-Louis</h></idx>
-        used group-theoretic methods in a 1770<ndash/>1771 memoir to study methods of solving polynomial equations.
-        Later, Évariste Galois<idx><h>Galois, Évariste</h></idx>
-        (1811<ndash/>1832) succeeded in developing the mathematics necessary to determine exactly which polynomial equations could be solved in terms of the coefficients of the polynomial.
-        Galois' primary tool was group theory.
+        usou métodos da teoria dos grupos em uma memória de 1770<ndash/>1771 para estudar métodos de resolução de equações polinomiais.
+        Mais tarde, Évariste Galois<idx><h>Galois, Évariste</h></idx>
+        (1811<ndash/>1832) conseguiu desenvolver a matemática necessária para determinar exatamente quais equações polinomiais podiam ser resolvidas em função dos coeficientes do polinômio.
+        A principal ferramenta de Galois foi a teoria dos grupos.
       </p>
 
       <p>
-        The study of geometry was revolutionized in 1872 when Felix Klein<idx><h>Klein, Felix</h></idx>
-        proposed that geometric spaces should be studied by examining those properties that are invariant under a transformation of the space.
+        O estudo da geometria foi revolucionado em 1872, quando Felix Klein<idx><h>Klein, Felix</h></idx>
+        propôs que os espaços geométricos deveriam ser estudados examinando as propriedades invariantes sob uma transformação do espaço.
         Sophus Lie,<idx><h>Lie, Sophus</h></idx>
-        a contemporary of Klein,
-        used group theory to study solutions of partial differential equations.
-        One of the first modern treatments of group theory appeared in William Burnside's<idx><h>Burnside, William</h></idx>
-        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], first published in 1897.
+        contemporâneo de Klein,
+        usou a teoria dos grupos para estudar soluções de equações diferenciais parciais.
+        Um dos primeiros tratamentos modernos da teoria dos grupos apareceu em
+        William Burnside<idx><h>Burnside, William</h></idx>,
+        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], publicado pela primeira vez em 1897.
       </p>
     </subsection>
 
@@ -2867,4 +2868,3 @@
     </exercise>
 
   </exercises>
-</chapter>
