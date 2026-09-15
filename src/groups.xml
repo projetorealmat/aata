@@ -10,102 +10,102 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="groups">
-  <title>Groups</title>
+  <title>Grupos</title>
   <introduction>
     <p>
-      We begin our study of algebraic structures by investigating sets associated with single operations that satisfy certain reasonable axioms;
-      that is, we want to define an operation on a set in a way that will generalize such familiar structures as the integers
-      <m>{\mathbb Z}</m> together with the single operation of addition,
-      or invertible <m>2 \times 2</m> matrices together with the single operation of matrix multiplication.
-      The integers and the <m>2 \times 2</m> matrices,
-      together with their respective single operations,
-      are examples of algebraic structures known as groups.
+      Começamos nosso estudo das estruturas algébricas investigando conjuntos associados a operações únicas que satisfazem certos axiomas razoáveis;
+      isto é, queremos definir uma operação em um conjunto de modo a generalizar estruturas familiares como os inteiros
+      <m>{\mathbb Z}</m> munidos da única operação de adição,
+      ou matrizes invertíveis <m>2 \times 2</m> munidas da única operação de multiplicação de matrizes.
+      Os inteiros e as matrizes <m>2 \times 2</m>,
+      juntamente com suas respectivas operações únicas,
+      são exemplos de estruturas algébricas conhecidas como grupos.
     </p>
 
     <p>
-      The theory of groups occupies a central position in mathematics.
-      Modern group theory arose from an attempt to find the roots of a polynomial in terms of its coefficients.
-      Groups now play a central role in such areas as coding theory,
-      counting, and the study of symmetries;
-      many areas of biology, chemistry,
-      and physics have benefited from group theory.
+      A teoria dos grupos ocupa uma posição central na matemática.
+      A teoria moderna dos grupos surgiu da tentativa de encontrar as raízes de um polinômio em função de seus coeficientes.
+      Hoje, os grupos desempenham um papel central em áreas como teoria de códigos,
+      contagem e estudo de simetrias;
+      muitas áreas da biologia, da química
+      e da física se beneficiaram da teoria dos grupos.
     </p>
   </introduction>
 
   <section xml:id="groups-section-mod-n-sym">
-    <title>Integer Equivalence Classes and Symmetries</title>
+    <title>Classes de equivalência de inteiros e simetrias</title>
     <introduction>
       <p>
-        Let us now investigate some mathematical structures that can be viewed as sets with single operations.
+        Vamos agora investigar algumas estruturas matemáticas que podem ser vistas como conjuntos com operações únicas.
       </p>
     </introduction>
 
     <subsection xml:id="groups-subsection-integers-mod-n">
-      <title>The Integers mod <m>n</m></title>
+      <title>Os inteiros módulo <m>n</m></title>
       <p>
-        The integers mod <m>n</m> have become indispensable in the theory and applications of algebra.
-        In mathematics they are used in cryptography, coding theory,
-        and the detection of errors in identification codes.
+        Os inteiros módulo <m>n</m> tornaram-se indispensáveis na teoria e nas aplicações da álgebra.
+        Na matemática, eles são usados em criptografia, teoria de códigos
+        e detecção de erros em códigos de identificação.
       </p>
 
       <p>
-        We have already seen that two integers <m>a</m> and <m>b</m> are equivalent mod <m>n</m> if <m>n</m> divides <m>a - b</m>.
-        The integers mod <m>n</m> also partition
-        <m>{\mathbb Z}</m> into <m>n</m> different equivalence classes;
-        we will denote the set of these equivalence classes by <m>{\mathbb Z}_n</m>.
+        Já vimos que dois inteiros <m>a</m> e <m>b</m> são equivalentes módulo <m>n</m> se <m>n</m> divide <m>a - b</m>.
+        Os inteiros módulo <m>n</m> também particionam
+        <m>{\mathbb Z}</m> em <m>n</m> classes de equivalência diferentes;
+        denotaremos o conjunto dessas classes de equivalência por <m>{\mathbb Z}_n</m>.
 
         <notation>
           <usage><m>\mathbb Z_n</m></usage>
-          <description>the integers modulo <m>n</m></description>
+          <description>os inteiros módulo <m>n</m></description>
         </notation>
 
-        Consider the integers modulo <m>12</m> and the corresponding partition of the integers:
+        Considere os inteiros módulo <m>12</m> e a partição correspondente dos inteiros:
         <md>
           <mrow>{[0]} &amp; = \{ \ldots, -12, 0, 12, 24, \ldots \},</mrow>
           <mrow>{[1]} &amp; = \{ \ldots, -11, 1, 13, 25, \ldots \},</mrow>
           <mrow>&amp; \aatavdots{=}</mrow>
           <mrow>{[11]} &amp; = \{ \ldots, -1, 11, 23, 35, \ldots \}</mrow>
         </md>.
-        When no confusion can arise,
-        we will use <m>0, 1, \ldots, 11</m> to indicate the equivalence classes  <m>{[0]}, {[1]}, \ldots, {[11]}</m> respectively.
-        We can do arithmetic on <m>{\mathbb Z}_n</m>.
-        For two integers <m>a</m> and <m>b</m>,
-        define addition modulo <m>n</m> to be <m>(a + b) \pmod{n}</m>;
-        that is, the remainder when <m>a + b</m> is divided by <m>n</m>.
-        Similarly, multiplication modulo <m>n</m> is defined as <m>(a  b) \pmod{ n}</m>,
-        the remainder when <m>a  b</m> is divided by <m>n</m>.
+        Quando não houver risco de confusão,
+        usaremos <m>0, 1, \ldots, 11</m> para indicar, respectivamente, as classes de equivalência <m>{[0]}, {[1]}, \ldots, {[11]}</m>.
+        Podemos fazer aritmética em <m>{\mathbb Z}_n</m>.
+        Para dois inteiros <m>a</m> e <m>b</m>,
+        definimos a adição módulo <m>n</m> como <m>(a + b) \pmod{n}</m>;
+        isto é, o resto da divisão de <m>a + b</m> por <m>n</m>.
+        Analogamente, a multiplicação módulo <m>n</m> é definida como <m>(a  b) \pmod{ n}</m>,
+        o resto da divisão de <m>a  b</m> por <m>n</m>.
       </p>
 
       <example xml:id="groups-example-zn-addition">
         <p>
-          The following examples illustrate integer arithmetic modulo <m>n</m>:
+          Os exemplos a seguir ilustram a aritmética inteira módulo <m>n</m>:
           <md>
             <mrow>7 + 4 &amp; \equiv  1 \pmod{ 5} &amp; 7 \cdot 3 &amp; \equiv 1 \pmod{ 5}</mrow>
             <mrow>3 + 5 &amp; \equiv  0 \pmod{ 8} &amp; 3 \cdot 5 &amp; \equiv 7 \pmod{ 8}</mrow>
             <mrow>3 + 4 &amp; \equiv 7 \pmod{ 12} &amp; 3 \cdot 4 &amp; \equiv 0 \pmod{ 12}</mrow>
           </md>.
-          In particular,
-          notice that it is possible that the product of two nonzero numbers modulo <m>n</m> can be equivalent to <m>0</m> modulo <m>n</m>.
+          Em particular,
+          observe que é possível que o produto de dois números não nulos módulo <m>n</m> seja equivalente a <m>0</m> módulo <m>n</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-zn-arithmetic-laws">
         <p>
-          Most, but not all,
-          of the usual laws of arithmetic hold for addition and multiplication in <m>{\mathbb Z}_n</m>.
-          For instance,
-          it is not necessarily true that there is a multiplicative inverse.
-          Consider the multiplication table for
-          <m>{\mathbb Z}_8</m> in <xref ref="groups-table-z8-mult"/>.
-          Notice that <m>2</m>, <m>4</m>,
-          and <m>6</m> do not have multiplicative inverses;
-          that is, for <m>n = 2</m>, <m>4</m>, or <m>6</m>,
-          there is no integer <m>k</m> such that <m>k n \equiv 1 \pmod{ 8}</m>.
+          A maioria, mas não todas,
+          das leis usuais da aritmética vale para a adição e a multiplicação em <m>{\mathbb Z}_n</m>.
+          Por exemplo,
+          não é necessariamente verdade que exista um inverso multiplicativo.
+          Considere a tabela de multiplicação de
+          <m>{\mathbb Z}_8</m> em <xref ref="groups-table-z8-mult"/>.
+          Observe que <m>2</m>, <m>4</m>
+          e <m>6</m> não possuem inversos multiplicativos;
+          isto é, para <m>n = 2</m>, <m>4</m> ou <m>6</m>,
+          não existe inteiro <m>k</m> tal que <m>k n \equiv 1 \pmod{ 8}</m>.
         </p>
 
         <figure xml:id="groups-table-z8-mult">
             <!-- math table -->
-          <caption>Multiplication table for <m>{\mathbb Z_8}</m></caption>
+            <caption>Tabela de multiplicação de <m>{\mathbb Z_8}</m></caption>
           <p>
             <md>
               \begin{array}{c|cccccccc}
@@ -129,13 +129,13 @@
       <proposition xml:id="groups-proposition-zn-equiv-classes">
         <statement>
           <p>
-            Let <m>{\mathbb Z}_n</m> be the set of equivalence classes of the integers mod <m>n</m> and <m>a,
+            Seja <m>{\mathbb Z}_n</m> o conjunto das classes de equivalência dos inteiros módulo <m>n</m> e sejam <m>a,
             b, c \in {\mathbb Z}_n</m>.
 
             <ol>
               <li>
                 <p>
-                  Addition and multiplication are commutative:
+                  A adição e a multiplicação são comutativas:
                   <md>
                     <mrow>a + b &amp; \equiv b + a \pmod{ n}</mrow>
                     <mrow>a  b &amp; \equiv b  a \pmod{ n}</mrow>
@@ -145,7 +145,7 @@
 
               <li>
                 <p>
-                  Addition and multiplication are associative:
+                  A adição e a multiplicação são associativas:
                   <md>
                     <mrow>(a + b) + c &amp; \equiv  a + (b + c)\pmod{ n}</mrow>
                     <mrow>(a  b) c &amp; \equiv  a   (b  c) \pmod{ n}</mrow>
@@ -155,7 +155,7 @@
 
               <li>
                 <p>
-                  There are both additive and multiplicative identities:
+                  Existem elementos neutros aditivo e multiplicativo:
                   <md>
                     <mrow>a + 0  &amp; \equiv  a \pmod{ n}</mrow>
                     <mrow>a \cdot  1  &amp; \equiv  a \pmod{ n}</mrow>
@@ -165,7 +165,7 @@
 
               <li>
                 <p>
-                  Multiplication distributes over addition:
+                  A multiplicação é distributiva em relação à adição:
                   <md>
                     a  (b  + c)  \equiv a  b + a  c  \pmod{ n}
                   </md>.
@@ -174,7 +174,7 @@
 
               <li>
                 <p>
-                  For every integer <m>a</m> there is an additive inverse <m>-a</m>:
+                  Para todo inteiro <m>a</m> existe um inverso aditivo <m>-a</m>:
                   <md>
                     a + (-a)  \equiv 0 \pmod{ n}
                   </md>.
@@ -183,9 +183,9 @@
 
               <li>
                 <p>
-                  Let <m>a</m> be a nonzero integer.
-                  Then <m>\gcd(a,n) = 1</m> if and only if there exists a multiplicative inverse <m>b</m> for <m>a \pmod{n}</m>;
-                  that is, a nonzero integer <m>b</m> such that
+                  Seja <m>a</m> um inteiro não nulo.
+                  Então <m>\gcd(a,n) = 1</m> se, e somente se, existe um inverso multiplicativo <m>b</m> para <m>a \pmod{n}</m>;
+                  isto é, um inteiro não nulo <m>b</m> tal que
                   <md>
                     a  b  \equiv 1 \pmod{ n}
                   </md>.
@@ -199,42 +199,42 @@
 
         <proof>
           <p>
-            We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.
+          Demonstraremos (1) e (6), deixando as propriedades restantes para os exercícios.
           </p>
 
           <p>
-            (1) Addition and multiplication are commutative modulo <m>n</m> since the remainder of <m>a + b</m> divided by <m>n</m> is the same as the remainder of <m>b + a</m> divided by <m>n</m>.
+          (1) A adição e a multiplicação são comutativas módulo <m>n</m>, pois o resto da divisão de <m>a + b</m> por <m>n</m> é o mesmo que o resto da divisão de <m>b + a</m> por <m>n</m>.
           </p>
 
           <p>
-            (6) Suppose that <m>\gcd(a, n) = 1</m>.
-            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + ns = 1</m>.
-            Since <m>ns = 1 - ar</m>,
-            it must be the case that <m>ar \equiv 1 \pmod{n}</m>.
-            Letting <m>b</m> be the equivalence class of <m>r</m>,
-            <m>a b \equiv 1\pmod{n}</m>.
+          (6) Suponha que <m>\gcd(a, n) = 1</m>.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + ns = 1</m>.
+            Como <m>ns = 1 - ar</m>,
+            necessariamente <m>ar \equiv 1 \pmod{n}</m>.
+            Seja <m>b</m> a classe de equivalência de <m>r</m>;
+            então <m>a b \equiv 1\pmod{n}</m>.
           </p>
 
           <p>
-            Conversely, suppose that there exists an integer <m>b</m> such that <m>ab \equiv 1 \pmod{ n}</m>.
-            Then <m>n</m> divides <m>ab -1</m>,
-            so there is an integer <m>k</m> such that <m>ab - nk = 1</m>.
-            Let <m>d = \gcd(a,n)</m>.
-            Since <m>d</m> divides <m>ab - nk</m>,
-            <m>d</m> must also divide <m>1</m>; hence, <m>d = 1</m>.
+            Reciprocamente, suponha que exista um inteiro <m>b</m> tal que <m>ab \equiv 1 \pmod{ n}</m>.
+            Então <m>n</m> divide <m>ab -1</m>,
+            logo existe um inteiro <m>k</m> tal que <m>ab - nk = 1</m>.
+            Seja <m>d = \gcd(a,n)</m>.
+            Como <m>d</m> divide <m>ab - nk</m>,
+            <m>d</m> também deve dividir <m>1</m>; portanto, <m>d = 1</m>.
           </p>
         </proof>
       </proposition>
     </subsection>
 
     <subsection xml:id="groups-subsection-symmetries">
-      <title>Symmetries</title>
+      <title>Simetrias</title>
             <!-- Symmetries of a rectangle  Replaced diagram with a tikz figure - TWJ 5/4/2010 -->
  
       <figure xml:id="groups-figure-rectangle-symmetries">
-        <caption>Rigid motions of a rectangle</caption>
+        <caption>Movimentos rígidos de um retângulo</caption>
         <image xml:id="groups-rectangle">
-          <description>The four symmetries ot a rectangle: (1) sending rectangle ABCD to rectangle ABCD, (2) sending rectangle ABCD to rectangle CDAB, (3) sending rectangle ABCD to rectangle BADC, and (4) sending rectangle ABCD to rectangle DCBA.</description>
+          <description>As quatro simetrias de um retângulo: (1) levando o retângulo ABCD ao retângulo ABCD, (2) levando o retângulo ABCD ao retângulo CDAB, (3) levando o retângulo ABCD ao retângulo BADC e (4) levando o retângulo ABCD ao retângulo DCBA.</description>
 
             <latex-image>
                 <xi:include href="tikz/groups-rectangle.tex" parse="text"/>
@@ -244,21 +244,21 @@
       </figure>
 
       <p>
-        A <term>symmetry</term> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.
-        A map from the plane to itself preserving the symmetry of an object is called a
-        <idx><h>Rigid motion</h></idx><term>rigid motion</term>.
-        For example,
-        if we look at the rectangle in <xref ref="groups-figure-rectangle-symmetries"/>,
-        it is easy to see that a rotation of <m>180^{\circ}</m> or
-        <m>360^{\circ}</m> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.
-        A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.
-        However, a <m>90^{\circ}</m> rotation in either direction cannot be a symmetry unless the rectangle is a square.
+        Uma <term>simetria</term> de uma figura geométrica é um rearranjo da figura que preserva a disposição de seus lados e vértices, bem como suas distâncias e ângulos.
+        Uma aplicação do plano nele mesmo que preserva a simetria de um objeto é chamada de
+        <idx><h>Movimento rígido</h></idx><term>movimento rígido</term>.
+        Por exemplo,
+        observando o retângulo em <xref ref="groups-figure-rectangle-symmetries"/>,
+        é fácil ver que uma rotação de <m>180^{\circ}</m> ou
+        <m>360^{\circ}</m> devolve um retângulo no plano com a mesma orientação do retângulo original e a mesma relação entre os vértices.
+        Uma reflexão do retângulo em torno do eixo vertical ou do eixo horizontal também é uma simetria.
+        Entretanto, uma rotação de <m>90^{\circ}</m> em qualquer direção não pode ser uma simetria, a menos que o retângulo seja um quadrado.
       </p>
             <!-- Replaced diagram with a tikz figure - TWJ 5/5/2010 -->
       <figure xml:id="groups-figure-s3-symmetry">
-        <caption>Symmetries of a triangle</caption>
+        <caption>Simetrias de um triângulo</caption>
         <image xml:id="groups-s3-symmetry">
-          <description>The six symmetries of a triangle: (1) triangle ABC to triangle ABC, (2) ABC to CAB, (3) ABC to BCA, (4) ABC to ACB, (5) ABC to CBA, and (6) ABC to BAC</description>
+          <description>As seis simetrias de um triângulo: (1) o triângulo ABC no triângulo ABC, (2) ABC em CAB, (3) ABC em BCA, (4) ABC em ACB, (5) ABC em CBA e (6) ABC em BAC.</description>
 
             <latex-image>
                 <xi:include href="tikz/groups-s3-symmetry.tex" parse="text"/>
@@ -268,65 +268,65 @@
       </figure>
 
       <p>
-        Let us find the symmetries of the equilateral triangle <m>\bigtriangleup ABC</m>.
-        To find a symmetry of <m>\bigtriangleup ABC</m>,
-        we must first examine the permutations of the vertices <m>A</m>,
-        <m>B</m>,
-        and <m>C</m> and then ask if a permutation extends to a symmetry of the triangle.
-        Recall that a <term>permutation</term>
-        of a set <m>S</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
-        The three vertices have <m>3! = 6</m> permutations,
-        so the triangle has at most six symmetries.
-        To see that there are six permutations,
-        observe there are three different possibilities for the first vertex,
-        and two for the second,
-        and the remaining vertex is determined by the placement of the first two.
-        So we have <m>3 \cdot 2 \cdot 1 = 3! = 6</m> different arrangements.
-        To denote the permutation of the vertices of an equilateral triangle that sends <m>A</m> to <m>B</m>,
-        <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>, we write the array
+        Vamos determinar as simetrias do triângulo equilátero <m>\bigtriangleup ABC</m>.
+        Para encontrar uma simetria de <m>\bigtriangleup ABC</m>,
+        devemos primeiro examinar as permutações dos vértices <m>A</m>,
+        <m>B</m>
+        e <m>C</m> e então perguntar se uma permutação se estende a uma simetria do triângulo.
+        Lembre-se de que uma <term>permutação</term>
+        de um conjunto <m>S</m> é uma aplicação injetiva e sobrejetiva <m>\pi :S \rightarrow S</m>.
+        Os três vértices têm <m>3! = 6</m> permutações,
+        portanto o triângulo tem no máximo seis simetrias.
+        Para ver que há seis permutações,
+        observe que há três possibilidades diferentes para o primeiro vértice
+        e duas para o segundo,
+        enquanto o vértice restante é determinado pela posição dos dois primeiros.
+        Assim, temos <m>3 \cdot 2 \cdot 1 = 3! = 6</m> arranjos diferentes.
+        Para denotar a permutação dos vértices de um triângulo equilátero que leva <m>A</m> a <m>B</m>,
+        <m>B</m> a <m>C</m> e <m>C</m> a <m>A</m>, escrevemos a matriz
         <md>
           \begin{pmatrix}
           A &amp; B &amp; C \\
           B &amp; C &amp; A
           \end{pmatrix}
         </md>.
-        Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by
-        <m>120^{\circ}</m> in a clockwise direction.
-        In fact, every permutation gives rise to a symmetry of the triangle.
-        All of these symmetries are shown in <xref ref="groups-figure-s3-symmetry"/>.
+        Observe que essa permutação específica corresponde ao movimento rígido de girar o triângulo em
+        <m>120^{\circ}</m> no sentido horário.
+        De fato, toda permutação dá origem a uma simetria do triângulo.
+        Todas essas simetrias são mostradas em <xref ref="groups-figure-s3-symmetry"/>.
       </p>
 
       <p>
-        A natural question to ask is what happens if one motion of the triangle
-        <m>\bigtriangleup ABC</m> is followed by another.
-        Which symmetry is <m>\mu_1 \rho_1</m>?
-        That is, what happens when we do the permutation <m>\rho_1</m> and then the permutation <m>\mu_1</m>? 
-        <em>Remember that we are composing functions here.
-        Although we usually multiply left to right,
-        we compose functions right to left.</em> We have
+        Uma pergunta natural é o que acontece quando um movimento do triângulo
+        <m>\bigtriangleup ABC</m> é seguido por outro.
+        Qual simetria é <m>\mu_1 \rho_1</m>?
+        Em outras palavras, o que acontece quando fazemos a permutação <m>\rho_1</m> e depois a permutação <m>\mu_1</m>?
+        <em>Lembre-se de que estamos compondo funções.
+        Embora normalmente multipliquemos da esquerda para a direita,
+        compomos funções da direita para a esquerda.</em> Temos
         <md>
           <mrow>(\mu_1 \rho_1)(A) &amp; = \mu_1( \rho_1( A ) ) = \mu_1( B ) = C</mrow>
           <mrow>(\mu_1 \rho_1)(B) &amp; = \mu_1( \rho_1( B ) ) = \mu_1( C ) = B</mrow>
           <mrow>(\mu_1 \rho_1)(C) &amp; = \mu_1( \rho_1( C ) ) = \mu_1( A ) = A</mrow>
         </md>.
-        This is the same symmetry as <m>\mu_2</m>.
-        Suppose we do these motions in the opposite order,
-        <m>\mu_1</m> then <m>\rho_1</m>.
-        It is easy to determine that this is the same as the symmetry <m>\mu_3</m>;
-        hence, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
-        A multiplication table for the symmetries of an equilateral triangle
-        <m>\bigtriangleup ABC</m> is given in <xref ref="groups-table-s3"/>.
+        Essa é a mesma simetria que <m>\mu_2</m>.
+        Suponha que façamos esses movimentos na ordem oposta,
+        primeiro <m>\mu_1</m> e depois <m>\rho_1</m>.
+        É fácil determinar que isso é o mesmo que a simetria <m>\mu_3</m>;
+        portanto, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
+        Uma tabela de multiplicação para as simetrias de um triângulo equilátero
+        <m>\bigtriangleup ABC</m> é dada em <xref ref="groups-table-s3"/>.
       </p>
 
       <p>
-        Notice that in the multiplication table for the symmetries of an equilateral triangle,
-        for every motion of the triangle <m>\alpha</m> there is another motion <m>\beta</m> such that <m>\alpha \beta = \identity</m>;
-        that is, for every motion there is another motion that takes the triangle back to its original orientation.
+        Observe que, na tabela de multiplicação das simetrias de um triângulo equilátero,
+        para cada movimento do triângulo <m>\alpha</m> existe outro movimento <m>\beta</m> tal que <m>\alpha \beta = \identity</m>;
+        isto é, para cada movimento existe outro movimento que leva o triângulo de volta à sua orientação original.
       </p>
 
       <figure xml:id="groups-table-s3">
             <!-- math table -->
-        <caption>Symmetries of an equilateral triangle</caption>
+        <caption>Simetrias de um triângulo equilátero</caption>
         <p>
           <md>
             \begin{array}{c|cccccc}
@@ -347,39 +347,39 @@
   </section>
 
   <section xml:id="groups-section-defnitions">
-    <title>Definitions and Examples</title>
+    <title>Definições e exemplos</title>
         <!-- % TWJ, 2010/03/31 -->
         <!-- % Fixed the error  <m>(a,b) \in G \times G</m> -->
     <introduction>
       <p>
-        The integers mod <m>n</m> and the symmetries of a triangle or a rectangle are examples of groups.
-        A <term>binary operation</term><idx><h>Binary operation</h></idx>
-        or <term>law of composition</term>
-        on a set <m>G</m> is a function
-        <m>G \times G \rightarrow G</m> that assigns to each pair
-        <m>(a,b) \in G \times G</m> a unique element <m>a \circ b</m>,
-        or <m>ab</m> in <m>G</m>, called the composition of <m>a</m> and <m>b</m>.
-        A <term>group</term><idx><h>Group</h><h>definition of</h></idx>
-        <m>(G, \circ )</m> is a set <m>G</m> together with a law of composition
-        <m>(a,b) \mapsto a \circ b</m> that satisfies the following axioms.
+        Os inteiros módulo <m>n</m> e as simetrias de um triângulo ou de um retângulo são exemplos de grupos.
+        Uma <term>operação binária</term><idx><h>Operação binária</h></idx>
+        ou <term>lei de composição</term>
+        em um conjunto <m>G</m> é uma função
+        <m>G \times G \rightarrow G</m> que associa a cada par
+        <m>(a,b) \in G \times G</m> um único elemento <m>a \circ b</m>,
+        ou <m>ab</m> em <m>G</m>, chamado composição de <m>a</m> e <m>b</m>.
+        Um <term>grupo</term><idx><h>Grupo</h><h>definição de</h></idx>
+        <m>(G, \circ )</m> é um conjunto <m>G</m> munido de uma lei de composição
+        <m>(a,b) \mapsto a \circ b</m> que satisfaz os axiomas a seguir.
 
         <ul>
           <li>
             <p>
-              The law of composition is <term>associative</term>.
-              That is,
+              A lei de composição é <term>associativa</term>.
+              Isto é,
               <md>
                 (a \circ b) \circ c = a \circ (b \circ c)
               </md>
-              for <m>a, b, c \in G</m>.
+              para <m>a, b, c \in G</m>.
             </p>
           </li>
 
           <li>
             <p>
-              There exists an element <m>e \in G</m>,
-              called the <term>identity element</term>,<idx><h>Element</h><h>identity</h></idx>
-              such that for any element <m>a \in G</m>
+              Existe um elemento <m>e \in G</m>,
+              chamado <term>elemento identidade</term>,<idx><h>Elemento</h><h>identidade</h></idx>
+              tal que, para qualquer elemento <m>a \in G</m>,
               <md>
                 e \circ a = a \circ e = a
               </md>.
@@ -388,9 +388,9 @@
 
           <li>
             <p>
-              For each element <m>a \in G</m>,
-              there exists an <term>inverse element</term><idx><h>Element</h><h>inverse</h></idx>
-              in G, denoted by <m>a^{-1}</m>, such that
+              Para cada elemento <m>a \in G</m>,
+              existe um <term>elemento inverso</term><idx><h>Elemento</h><h>inverso</h></idx>
+              em G, denotado por <m>a^{-1}</m>, tal que
               <md>
                 a \circ a^{-1} = a^{-1} \circ a = e
               </md>.
@@ -400,64 +400,64 @@
       </p>
 
       <p>
-        A group <m>G</m> with the property that <m>a \circ b = b \circ a</m> for all
-        <m>a, b \in G</m> is called <term>abelian</term><idx><h>Abelian group</h></idx><idx><h>Group</h><h>abelian</h></idx>
-        or <idx><h>Group</h><h>commutative</h></idx><term>commutative</term>. 
-        Groups not satisfying this property are said to be <term>nonabelian</term><idx><h>Group</h><h>nonabelian</h></idx>
-        or <idx><h>Group</h><h>noncommutative</h></idx><term>noncommutative</term>.
+        Um grupo <m>G</m> com a propriedade de que <m>a \circ b = b \circ a</m> para todos os
+        <m>a, b \in G</m> é chamado <term>abeliano</term><idx><h>Grupo abeliano</h></idx><idx><h>Grupo</h><h>abeliano</h></idx>
+        ou <idx><h>Grupo</h><h>comutativo</h></idx><term>comutativo</term>.
+        Grupos que não satisfazem essa propriedade são chamados <term>não abelianos</term><idx><h>Grupo</h><h>não abeliano</h></idx>
+        ou <idx><h>Grupo</h><h>não comutativo</h></idx><term>não comutativos</term>.
       </p>
 
       <example xml:id="groups-example-integers">
         <p>
-          The integers <m>{\mathbb Z } = \{ \ldots , -1, 0, 1, 2, \ldots \}</m> form a group under the operation of addition.
-          The binary operation on two integers <m>m,
-          n \in {\mathbb Z}</m> is just their sum.
-          Since the integers under addition already have a well-established notation,
-          we will use the operator <m>+</m> instead of <m>\circ</m>;
-          that is, we shall write <m>m + n</m> instead of <m>m \circ n</m>.
-          The identity is <m>0</m>,
-          and the inverse of <m>n \in {\mathbb Z}</m> is written as <m>-n</m> instead of <m>n^{-1}</m>.
-          Notice that the set of integers under addition have the additional property that
-          <m>m + n = n + m</m> and therefore form an abelian group.
+          Os inteiros <m>{\mathbb Z } = \{ \ldots , -1, 0, 1, 2, \ldots \}</m> formam um grupo sob a operação de adição.
+          A operação binária em dois inteiros <m>m,
+          n \in {\mathbb Z}</m> é simplesmente sua soma.
+          Como os inteiros sob a adição já possuem uma notação bem estabelecida,
+          usaremos o operador <m>+</m> em vez de <m>\circ</m>;
+          isto é, escreveremos <m>m + n</m> em vez de <m>m \circ n</m>.
+          O elemento identidade é <m>0</m>,
+          e o inverso de <m>n \in {\mathbb Z}</m> é escrito como <m>-n</m> em vez de <m>n^{-1}</m>.
+          Observe que o conjunto dos inteiros sob a adição possui ainda a propriedade
+          <m>m + n = n + m</m> e, portanto, forma um grupo abeliano.
         </p>
       </example>
 
       <p>
-        Most of the time we will write <m>ab</m> instead of <m>a \circ b</m>;
-        however, if the group already has a natural operation such as addition in the integers,
-        we will use that operation.
-        That is, if we are adding two integers,
-        we still write <m>m + n</m>,
-        <m>-n</m> for the inverse, and <m>0</m> for the identity as usual.
-        We also write <m>m - n</m> instead of <m>m + (-n)</m>.
+        Na maior parte do tempo escreveremos <m>ab</m> em vez de <m>a \circ b</m>;
+        contudo, se o grupo já tiver uma operação natural, como a adição nos inteiros,
+        usaremos essa operação.
+        Ou seja, se estivermos adicionando dois inteiros,
+        continuaremos escrevendo <m>m + n</m>,
+        <m>-n</m> para o inverso e <m>0</m> para o elemento identidade, como de costume.
+        Também escreveremos <m>m - n</m> em vez de <m>m + (-n)</m>.
       </p>
 
       <p>
-        It is often convenient to describe a group in terms of an addition or multiplication table.
-        Such a table is called a <idx><h>Cayley table</h></idx><term>Cayley table</term>.
+        Muitas vezes é conveniente descrever um grupo por meio de uma tabela de adição ou de multiplicação.
+        Essa tabela é chamada de <idx><h>Tabela de Cayley</h></idx><term>tabela de Cayley</term>.
       </p>
 
       <example xml:id="groups-example-z5">
         <p>
-          The integers mod <m>n</m> form a group under addition modulo <m>n</m>.
-          Consider <m>{\mathbb Z}_5</m>,
-          consisting of the equivalence classes of the integers <m>0</m>,
+          Os inteiros módulo <m>n</m> formam um grupo sob a adição módulo <m>n</m>.
+          Considere <m>{\mathbb Z}_5</m>,
+          constituído pelas classes de equivalência dos inteiros <m>0</m>,
           <m>1</m>,
-          <m>2</m>, <m>3</m>, and <m>4</m>.
-          We define the group operation on <m>{\mathbb Z}_5</m> by modular addition.
-          We write the binary operation on the group additively;
-          that is, we write <m>m + n</m>.
-          The element <m>0</m> is the identity of the group and each element in <m>{\mathbb Z}_5</m> has an inverse.
-          For instance, <m>2 + 3 = 3 + 2 = 0</m>.
-          <xref ref="groups-table-z5-cayley"/> is a Cayley table for <m>{\mathbb Z}_5</m>.
-          By <xref ref="groups-proposition-zn-equiv-classes"/>,
+          <m>2</m>, <m>3</m> e <m>4</m>.
+          Definimos a operação de grupo em <m>{\mathbb Z}_5</m> pela adição modular.
+          Escrevemos a operação binária do grupo aditivamente;
+          isto é, escrevemos <m>m + n</m>.
+          O elemento <m>0</m> é o elemento identidade do grupo, e cada elemento de <m>{\mathbb Z}_5</m> possui um inverso.
+          Por exemplo, <m>2 + 3 = 3 + 2 = 0</m>.
+          <xref ref="groups-table-z5-cayley"/> é uma tabela de Cayley para <m>{\mathbb Z}_5</m>.
+          Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
           <m>{\mathbb Z}_n = \{0, 1, \ldots,
-          n-1 \}</m> is a group under the binary operation of addition mod <m>n</m>.
+          n-1 \}</m> é um grupo sob a operação binária de adição módulo <m>n</m>.
         </p>
 
         <figure xml:id="groups-table-z5-cayley">
             <!-- math table -->
-          <caption>Cayley table for <m>({\mathbb Z_5}, +)</m></caption>
+          <caption>Tabela de Cayley para <m>({\mathbb Z_5}, +)</m></caption>
           <p>
             <md>
               \begin{array}{c|ccccc}
@@ -476,42 +476,42 @@
 
       <example xml:id="groups-example-z6-mult">
         <p>
-          Not every set with a binary operation is a group.
-          For example,
-          if we let modular multiplication be the binary operation on <m>{\mathbb Z}_n</m>,
-          then <m>{\mathbb Z}_n</m> fails to be a group.
-          The element 1 acts as a group identity since
-          <m>1 \cdot k = k \cdot 1 = k</m> for any <m>k \in {\mathbb Z}_n</m>;
-          however, a multiplicative inverse for <m>0</m> does not exist since
-          <m>0 \cdot k = k \cdot 0 = 0</m> for every <m>k</m> in <m>{\mathbb Z}_n</m>.
-          Even if we consider the set <m>{\mathbb Z}_n \setminus \{0 \}</m>,
-          we still may not have a group.
-          For instance, let <m>2 \in {\mathbb Z}_6</m>.
-          Then <m>2</m> has no multiplicative inverse since
+          Nem todo conjunto com uma operação binária é um grupo.
+          Por exemplo,
+          se tomarmos a multiplicação modular como operação binária em <m>{\mathbb Z}_n</m>,
+          então <m>{\mathbb Z}_n</m> não será um grupo.
+          O elemento 1 atua como elemento identidade do grupo, pois
+          <m>1 \cdot k = k \cdot 1 = k</m> para qualquer <m>k \in {\mathbb Z}_n</m>;
+          contudo, não existe inverso multiplicativo para <m>0</m>, pois
+          <m>0 \cdot k = k \cdot 0 = 0</m> para todo <m>k</m> em <m>{\mathbb Z}_n</m>.
+          Mesmo se considerarmos o conjunto <m>{\mathbb Z}_n \setminus \{0 \}</m>,
+          ainda podemos não ter um grupo.
+          Por exemplo, seja <m>2 \in {\mathbb Z}_6</m>.
+          Então <m>2</m> não possui inverso multiplicativo, pois
           <md>
             <mrow>0 \cdot 2 &amp; = 0 \qquad 1 \cdot 2 = 2</mrow>
             <mrow>2 \cdot 2 &amp; = 4 \qquad 3 \cdot 2 = 0</mrow>
             <mrow>4 \cdot 2 &amp; = 2 \qquad 5 \cdot 2 = 4</mrow>
           </md>.
-          By <xref ref="groups-proposition-zn-equiv-classes"/>,
-          every nonzero <m>k</m> does have an inverse in
-          <m>{\mathbb Z}_n</m> if <m>k</m> is relatively prime to <m>n</m>.
-          Denote the set of all such nonzero elements in <m>{\mathbb Z}_n</m> by <m>U(n)</m>.
+          Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
+          todo <m>k</m> não nulo possui um inverso em
+          <m>{\mathbb Z}_n</m> se <m>k</m> é relativamente primo com <m>n</m>.
+          Denotemos o conjunto de todos esses elementos não nulos em <m>{\mathbb Z}_n</m> por <m>U(n)</m>.
 
           <notation>
             <usage><m>U(n)</m></usage>
-            <description>group of units in <m>\mathbb Z_n</m></description>
+            <description>grupo das unidades em <m>\mathbb Z_n</m></description>
           </notation>
 
-          Then <m>U(n)</m> is a group called the
-          <term>group of units</term><idx><h>Group</h><h>of units</h></idx>
-          of <m>{\mathbb Z}_n</m>.
-          <xref ref="groups-table-cayley-u8"/> is a Cayley table for the group <m>U(8)</m>.
+          Então <m>U(n)</m> é um grupo chamado
+          <term>grupo das unidades</term><idx><h>Grupo</h><h>das unidades</h></idx>
+          de <m>{\mathbb Z}_n</m>.
+          <xref ref="groups-table-cayley-u8"/> é uma tabela de Cayley para o grupo <m>U(8)</m>.
         </p>
 
         <figure xml:id="groups-table-cayley-u8">
             <!-- math table -->
-          <caption>Multiplication table for <m>U(8)</m></caption>
+          <caption>Tabela de multiplicação de <m>U(8)</m></caption>
           <p>
             <md>
               \begin{array}{c|cccc}
@@ -529,26 +529,26 @@
 
       <example xml:id="groups-example-nonabelian">
         <p>
-          The symmetries of an equilateral triangle described in <xref ref="groups-section-mod-n-sym"/> form a nonabelian group.
-          As we observed, it is not necessarily true that
-          <m>\alpha \beta = \beta \alpha</m> for two symmetries <m>\alpha</m> and <m>\beta</m>.
-          Using <xref ref="groups-table-s3"/>, which is a Cayley table for this group,
-          we can easily check that the symmetries of an equilateral triangle are indeed a group.
-          We will denote this group by either <m>S_3</m> or <m>D_3</m>,
-          for reasons that will be explained later.
+          As simetrias de um triângulo equilátero descritas em <xref ref="groups-section-mod-n-sym"/> formam um grupo não abeliano.
+          Como observamos, não é necessariamente verdade que
+          <m>\alpha \beta = \beta \alpha</m> para duas simetrias <m>\alpha</m> e <m>\beta</m>.
+          Usando <xref ref="groups-table-s3"/>, que é uma tabela de Cayley para esse grupo,
+          podemos verificar facilmente que as simetrias de um triângulo equilátero são de fato um grupo.
+          Denotaremos esse grupo por <m>S_3</m> ou <m>D_3</m>,
+          por razões que serão explicadas mais adiante.
         </p>
       </example>
 
       <example xml:id="groups-example-gl2">
         <p>
-          We use  <m>{\mathbb M}_2 ( {\mathbb R})</m> to denote the set of all <m>2 \times 2</m> matrices.
-          Let <m>GL_2({\mathbb R})</m> be the subset of
-          <m>{\mathbb M}_2 ( {\mathbb R})</m> consisting of invertible matrices;
-          that is, a matrix
+          Usamos <m>{\mathbb M}_2 ( {\mathbb R})</m> para denotar o conjunto de todas as matrizes <m>2 \times 2</m>.
+          Seja <m>GL_2({\mathbb R})</m> o subconjunto de
+          <m>{\mathbb M}_2 ( {\mathbb R})</m> constituído pelas matrizes invertíveis;
+          isto é, uma matriz
 
           <notation>
             <usage><m>\mathbb M_n(\mathbb R)</m></usage>
-            <description>the <m>n \times n</m> matrices with entries in <m>\mathbb R</m></description>
+            <description>as matrizes <m>n \times n</m> com entradas em <m>\mathbb R</m></description>
           </notation>
 
           <md>
@@ -558,21 +558,21 @@
             c &amp; d
             \end{pmatrix}
           </md>
-          is in  <m>GL_2( {\mathbb R})</m> if there exists a matrix <m>A^{-1}</m> such that <m>A A^{-1} = A^{-1} A = I</m>,
-          where <m>I</m> is the <m>2 \times 2</m> identity matrix.
-          For <m>A</m> to have an inverse is equivalent to requiring that the determinant of <m>A</m> be nonzero;
-          that is, <m>\det A = ad - bc \neq 0</m>.
+          pertence a <m>GL_2( {\mathbb R})</m> se existe uma matriz <m>A^{-1}</m> tal que <m>A A^{-1} = A^{-1} A = I</m>,
+          onde <m>I</m> é a matriz identidade <m>2 \times 2</m>.
+          A existência de um inverso para <m>A</m> equivale a exigir que o determinante de <m>A</m> seja não nulo;
+          isto é, <m>\det A = ad - bc \neq 0</m>.
           <notation>
             <usage><m>\det A</m></usage>
-            <description>the determinant of <m>A</m></description>
+            <description>o determinante de <m>A</m></description>
           </notation>
-          The set of invertible matrices forms a group called the
-          <idx><h>Group</h><h>general linear</h></idx><term>general linear group</term>.
+          O conjunto das matrizes invertíveis forma um grupo chamado
+          <idx><h>Grupo</h><h>linear geral</h></idx><term>grupo linear geral</term>.
           <notation>
             <usage><m>GL_n(\mathbb R)</m></usage>
-            <description>the general linear group</description>
+            <description>o grupo linear geral</description>
           </notation>
-          The identity of the group is the identity matrix
+          O elemento identidade do grupo é a matriz identidade
           <md>
             I =
             \begin{pmatrix}
@@ -580,7 +580,7 @@
             0 &amp; 1
             \end{pmatrix}
           </md>.
-          The inverse of <m>A \in GL_2( {\mathbb R})</m> is
+          O inverso de <m>A \in GL_2( {\mathbb R})</m> é
           <md>
             A^{-1} =
             \frac{1}{ad-bc}
@@ -589,11 +589,11 @@
             -c &amp; a
             \end{pmatrix}
           </md>.
-          The product of two invertible matrices is again invertible.
-          Matrix multiplication is associative,
-          satisfying the other group axiom.
-          For matrices it is not true in general that <m>AB = BA</m>;
-          hence, <m>GL_2({\mathbb R})</m> is another example of a nonabelian group.
+          O produto de duas matrizes invertíveis é novamente invertível.
+          A multiplicação de matrizes é associativa,
+          satisfazendo o outro axioma de grupo.
+          Para matrizes, em geral não é verdade que <m>AB = BA</m>;
+          portanto, <m>GL_2({\mathbb R})</m> é outro exemplo de grupo não abeliano.
         </p>
       </example>
             <!-- % Changed <m>AB \neq BA</m> to <m>AB = BA</m>. Suggested by Isaac Coombs. TWJ 8/24/2011 -->
@@ -625,100 +625,100 @@
             0 &amp; -i
             \end{pmatrix}</mrow>
           </md>,
-          where <m>i^2 = -1</m>.
-          Then the relations <m>I^2 = J^2 = K^2 = -1</m>,
+          onde <m>i^2 = -1</m>.
+          Então valem as relações <m>I^2 = J^2 = K^2 = -1</m>,
           <m>IJ=K</m>, <m>JK = I</m>, <m>KI = J</m>,
-          <m>JI = -K</m>, <m>KJ = -I</m>, and <m>IK = -J</m> hold.
-          The set
+          <m>JI = -K</m>, <m>KJ = -I</m> e <m>IK = -J</m> são válidas.
+          O conjunto
 
           <notation>
             <usage><m>Q_8</m></usage>
-            <description>the group of quaternions</description>
+            <description>o grupo dos quatérnios</description>
           </notation>
 
-          <m>Q_8 = \{\pm 1, \pm I, \pm J, \pm K  \}</m> is a group called the
-          <idx><h>Group</h><h>quaternion</h></idx><idx><h>Quaternions</h></idx><term>quaternion group</term>.
-          Notice that <m>Q_8</m> is noncommutative.
+          <m>Q_8 = \{\pm 1, \pm I, \pm J, \pm K  \}</m> é um grupo chamado
+          <idx><h>Grupo</h><h>quatérnio</h></idx><idx><h>Quatérnios</h></idx><term>grupo dos quatérnios</term>.
+          Observe que <m>Q_8</m> não é comutativo.
         </p>
       </example>
 
       <example xml:id="groups-example-c-star">
         <p>
-          Let <m>{\mathbb C}^\ast</m> be the set of nonzero complex numbers.
+          Seja <m>{\mathbb C}^\ast</m> o conjunto dos números complexos não nulos.
           <notation>
             <usage><m>\mathbb C^*</m></usage>
-            <description>the multiplicative group of complex numbers</description>
+            <description>o grupo multiplicativo dos números complexos</description>
           </notation>
-          Under the operation of multiplication <m>{\mathbb C}^\ast</m> forms a group.
-          The identity is <m>1</m>.
-          If <m>z = a+bi</m> is a nonzero complex number, then
+          Sob a operação de multiplicação, <m>{\mathbb C}^\ast</m> forma um grupo.
+          O elemento identidade é <m>1</m>.
+          Se <m>z = a+bi</m> é um número complexo não nulo, então
           <md>
             z^{-1} = \frac{a -bi}{a^2 +b^2}
           </md>
-          is the inverse of <m>z</m>.
-          It is easy to see that the remaining group axioms hold.
+          é o inverso de <m>z</m>.
+          É fácil ver que os demais axiomas de grupo são satisfeitos.
         </p>
       </example>
 
       <p>
-        A group is <term>finite</term>,<idx><h>Group</h><h>finite</h></idx>
-        or has <term>finite order</term>,
-        if it contains a finite number of elements;
-        otherwise, the group is said to be <term>infinite</term>
-        or to have <idx><h>Group</h><h>infinite</h></idx><term>infinite order</term>.
-        The <term>order</term><idx><h>Group</h><h>order of</h></idx>
-        of a finite group is the number of elements that it contains.
-        If <m>G</m> is a group containing <m>n</m> elements, we write <m>|G| = n</m>.
+        Um grupo é <term>finito</term>,<idx><h>Grupo</h><h>finito</h></idx>
+        ou tem <term>ordem finita</term>,
+        se contém um número finito de elementos;
+        caso contrário, o grupo é dito <term>infinito</term>
+        ou tem <idx><h>Grupo</h><h>infinito</h></idx><term>ordem infinita</term>.
+        A <term>ordem</term><idx><h>Grupo</h><h>ordem de</h></idx>
+        de um grupo finito é o número de elementos que ele contém.
+        Se <m>G</m> é um grupo contendo <m>n</m> elementos, escrevemos <m>|G| = n</m>.
         <notation>
           <usage><m>|G|</m></usage>
-          <description>the order of a group</description>
+          <description>a ordem de um grupo</description>
         </notation>
-        The group <m>{\mathbb Z}_5</m> is a finite group of order <m>5</m>;
-        the integers <m>{\mathbb Z}</m> form an infinite group under addition,
-        and we sometimes write <m>|{\mathbb Z}| = \infty</m>.
+        O grupo <m>{\mathbb Z}_5</m> é um grupo finito de ordem <m>5</m>;
+        os inteiros <m>{\mathbb Z}</m> formam um grupo infinito sob a adição,
+        e às vezes escrevemos <m>|{\mathbb Z}| = \infty</m>.
       </p>
     </introduction>
 
     <subsection xml:id="groups-subsection-basic-properties">
-      <title>Basic Properties of Groups</title>
+      <title>Propriedades básicas dos grupos</title>
       <proposition>
         <statement>
           <p>
-            The identity element in a group <m>G</m> is unique;
-            that is, there exists only one element <m>e \in G</m> such that
-            <m>eg = ge = g</m> for all <m>g \in G</m>.
+            O elemento identidade em um grupo <m>G</m> é único;
+            isto é, existe apenas um elemento <m>e \in G</m> tal que
+            <m>eg = ge = g</m> para todo <m>g \in G</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>e</m> and <m>e'</m> are both identities in <m>G</m>.
-            Then <m>eg = ge = g</m> and
-            <m>e'g = ge' = g</m> for all <m>g \in G</m>.
-            We need to show that <m>e = e'</m>.
-            If we think of <m>e</m> as the identity, then <m>ee' = e'</m>;
-            but if <m>e'</m> is the identity, then <m>ee' = e</m>.
-            Combining these two equations,
-            we have <m>e = ee' = e'</m>.
+            Suponha que <m>e</m> e <m>e'</m> sejam ambos elementos identidade em <m>G</m>.
+            Então <m>eg = ge = g</m> e
+            <m>e'g = ge' = g</m> para todo <m>g \in G</m>.
+            Precisamos mostrar que <m>e = e'</m>.
+            Se considerarmos <m>e</m> como o elemento identidade, então <m>ee' = e'</m>;
+            mas, se <m>e'</m> for o elemento identidade, então <m>ee' = e</m>.
+            Combinando essas duas equações,
+            temos <m>e = ee' = e'</m>.
           </p>
         </proof>
       </proposition>
 
       <p>
-        Inverses in a group are also unique.
-        If <m>g'</m> and <m>g''</m> are both inverses of an element <m>g</m> in a group <m>G</m>,
-        then <m>gg' = g'g = e</m> and <m>gg'' = g''g = e</m>.
-        We want to show that <m>g' = g''</m>,
-        but <m>g' = g'e = g'(gg'') = (g'g)g'' = eg'' = g''</m>.
-        We summarize this fact in the following proposition.
+        Os inversos em um grupo também são únicos.
+        Se <m>g'</m> e <m>g''</m> são ambos inversos de um elemento <m>g</m> em um grupo <m>G</m>,
+        então <m>gg' = g'g = e</m> e <m>gg'' = g''g = e</m>.
+        Queremos mostrar que <m>g' = g''</m>,
+        mas <m>g' = g'e = g'(gg'') = (g'g)g'' = eg'' = g''</m>.
+        Resumimos esse fato na proposição a seguir.
       </p>
 
       <proposition>
         <statement>
           <p>
-            If <m>g</m> is any element in a group <m>G</m>,
-            then the inverse of <m>g</m>,
-            denoted by <m>g^{-1}</m>, is unique.
+            Se <m>g</m> é qualquer elemento de um grupo <m>G</m>,
+            então o inverso de <m>g</m>,
+            denotado por <m>g^{-1}</m>, é único.
           </p>
         </statement>
       </proposition>
@@ -726,18 +726,18 @@
       <proposition xml:id="groups-proposition-inverse-of-products">
         <statement>
           <p>
-            Let <m>G</m> be a group.
-            If <m>a, b \in G</m>, then <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+            Seja <m>G</m> um grupo.
+            Se <m>a, b \in G</m>, então <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>a, b \in G</m>.
-            Then <m>abb^{-1}a^{-1} = aea^{-1} = aa^{-1} = e</m>.
-            Similarly, <m>b^{-1}a^{-1}ab = e</m>.
-            But by the previous proposition, inverses are unique;
-            hence, <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+            Sejam <m>a, b \in G</m>.
+            Então <m>abb^{-1}a^{-1} = aea^{-1} = aa^{-1} = e</m>.
+            Analogamente, <m>b^{-1}a^{-1}ab = e</m>.
+            Mas, pela proposição anterior, os inversos são únicos;
+            portanto, <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
           </p>
         </proof>
       </proposition>
@@ -745,16 +745,16 @@
       <proposition>
         <statement>
           <p>
-            Let <m>G</m> be a group.
-            For any <m>a \in G</m>, <m>(a^{-1})^{-1} = a</m>.
+            Seja <m>G</m> um grupo.
+            Para qualquer <m>a \in G</m>, <m>(a^{-1})^{-1} = a</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Observe that <m>a^{-1} (a^{-1})^{-1} = e</m>.
-            Consequently,
-            multiplying both sides of this equation by <m>a</m>, we have
+            Observe que <m>a^{-1} (a^{-1})^{-1} = e</m>.
+            Consequentemente,
+            multiplicando ambos os lados dessa equação por <m>a</m>, temos
             <md>
               (a^{-1})^{-1} = e (a^{-1})^{-1} = a a^{-1} (a^{-1})^{-1} = ae = a
             </md>.
@@ -763,34 +763,34 @@
       </proposition>
 
       <p>
-        It makes sense to write equations with group elements and group operations.
-        If <m>a</m> and <m>b</m> are two elements in a group <m>G</m>,
-        does there exist an element <m>x \in G</m> such that <m>ax = b</m>?
-        If such an <m>x</m> does exist, is it unique?
-        The following proposition answers both of these questions positively.
+        Faz sentido escrever equações com elementos e operações de grupo.
+        Se <m>a</m> e <m>b</m> são dois elementos de um grupo <m>G</m>,
+        existe um elemento <m>x \in G</m> tal que <m>ax = b</m>?
+        Se tal <m>x</m> existir, ele é único?
+        A proposição a seguir responde positivamente a ambas as perguntas.
       </p>
 
       <proposition xml:id="groups-proposition-group-equations">
         <statement>
           <p>
-            Let <m>G</m> be a group and <m>a</m> and <m>b</m> be any two elements in <m>G</m>.
-            Then the equations <m>ax = b</m> and <m>xa = b</m> have unique solutions in <m>G</m>.
+            Seja <m>G</m> um grupo e sejam <m>a</m> e <m>b</m> quaisquer dois elementos de <m>G</m>.
+            Então as equações <m>ax = b</m> e <m>xa = b</m> têm soluções únicas em <m>G</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>ax = b</m>.
-            We must show that such an <m>x</m> exists.
-            We can multiply both sides of <m>ax = b</m> by <m>a^{-1}</m> to find <m>x = ex = a^{-1}ax = a^{-1}b</m>.
+            Suponha que <m>ax = b</m>.
+            Devemos mostrar que tal <m>x</m> existe.
+            Podemos multiplicar ambos os lados de <m>ax = b</m> por <m>a^{-1}</m> para obter <m>x = ex = a^{-1}ax = a^{-1}b</m>.
           </p>
 
           <p>
-            To show uniqueness,
-            suppose that <m>x_1</m> and <m>x_2</m> are both solutions of <m>ax = b</m>;
-            then <m>ax_1 = b = ax_2</m>.
-            So <m>x_1 = a^{-1}ax_1 = a^{-1}ax_2 = x_2</m>.
-            The proof for the existence and uniqueness of the solution of <m>xa = b</m> is similar.
+            Para mostrar a unicidade,
+            suponha que <m>x_1</m> e <m>x_2</m> sejam ambas soluções de <m>ax = b</m>;
+            então <m>ax_1 = b = ax_2</m>.
+            Logo <m>x_1 = a^{-1}ax_1 = a^{-1}ax_2 = x_2</m>.
+            A demonstração da existência e unicidade da solução de <m>xa = b</m> é semelhante.
           </p>
         </proof>
       </proposition>
@@ -798,27 +798,27 @@
       <proposition>
         <statement>
           <p>
-            If <m>G</m> is a group and <m>a, b, c \in G</m>,
-            then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>.
+            Se <m>G</m> é um grupo e <m>a, b, c \in G</m>,
+            então <m>ba = ca</m> implica <m>b = c</m> e <m>ab = ac</m> implica <m>b = c</m>.
           </p>
         </statement>
       </proposition>
 
       <p>
-        This proposition tells us that the
-        <term>right and left cancellation laws</term><idx><h>Cancellation law</h><h>for groups</h></idx> are true in groups.
-        We leave the proof as an exercise.
+        Essa proposição nos diz que as
+        <term>leis do cancelamento à direita e à esquerda</term><idx><h>Lei do cancelamento</h><h>para grupos</h></idx> são válidas em grupos.
+        Deixamos a demonstração como exercício.
       </p>
 
       <p>
-        We can use exponential notation for groups just as we do in ordinary algebra.
-        If <m>G</m> is a group and <m>g \in G</m>,
-        then we define <m>g^0 = e</m>.
-        For <m>n \in {\mathbb N}</m>, we define
+        Podemos usar notação exponencial para grupos assim como fazemos na álgebra usual.
+        Se <m>G</m> é um grupo e <m>g \in G</m>,
+        definimos <m>g^0 = e</m>.
+        Para <m>n \in {\mathbb N}</m>, definimos
         <md>
           g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}
         </md>
-        and
+        e
         <md>
           g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}
         </md>.
@@ -827,27 +827,27 @@
       <theorem xml:id="groups-theorem-exponent-laws">
         <statement>
           <p>
-            In a group, the usual laws of exponents hold;
-            that is, for all <m>g, h \in G</m>,
+            Em um grupo, valem as leis usuais dos expoentes;
+            isto é, para todos os <m>g, h \in G</m>,
 
             <ol>
               <li>
                 <p>
-                  <m>g^mg^n = g^{m+n}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                  <m>g^mg^n = g^{m+n}</m> para todos os <m>m, n \in {\mathbb Z}</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>(g^m)^n = g^{mn}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                  <m>(g^m)^n = g^{mn}</m> para todos os <m>m, n \in {\mathbb Z}</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> for all <m>n \in {\mathbb Z}</m>.
-                  Furthermore, if <m>G</m> is abelian,
-                  then <m>(gh)^n = g^nh^n</m>.
+                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> para todo <m>n \in {\mathbb Z}</m>.
+                  Além disso, se <m>G</m> é abeliano,
+                  então <m>(gh)^n = g^nh^n</m>.
                 </p>
               </li>
             </ol>
@@ -856,143 +856,144 @@
       </theorem>
 
       <p>
-        We will leave the proof of this theorem as an exercise.
-        Notice that <m>(gh)^n \neq g^nh^n</m> in general,
-        since the group may not be abelian.
-        If the group is <m>{\mathbb Z}</m> or <m>{\mathbb Z}_n</m>,
-        we write the group operation additively and the exponential operation multiplicatively;
-        that is, we write <m>ng</m> instead of <m>g^n</m>.
-        The laws of exponents now become
+        Deixaremos a demonstração desse teorema como exercício.
+        Observe que, em geral, <m>(gh)^n \neq g^nh^n</m>,
+        pois o grupo pode não ser abeliano.
+        Se o grupo é <m>{\mathbb Z}</m> ou <m>{\mathbb Z}_n</m>,
+        escrevemos a operação de grupo aditivamente e a operação exponencial multiplicativamente;
+        isto é, escrevemos <m>ng</m> em vez de <m>g^n</m>.
+        As leis dos expoentes tornam-se agora
 
         <ol>
           <li>
             <p>
-              <m>mg + ng = (m+n)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+              <m>mg + ng = (m+n)g</m> para todos os <m>m, n \in {\mathbb Z}</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>m(ng) = (mn)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+              <m>m(ng) = (mn)g</m> para todos os <m>m, n \in {\mathbb Z}</m>;
             </p>
           </li>
 
           <li>
             <p>
-              <m>m(g + h) = mg + mh</m> for all <m>n \in {\mathbb Z}</m>.
+              <m>m(g + h) = mg + mh</m> para todo <m>n \in {\mathbb Z}</m>.
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        It is important to realize that the last statement can be made only because <m>{\mathbb Z}</m> and
-        <m>{\mathbb Z}_n</m> are commutative groups.
+        É importante perceber que a última afirmação só pode ser feita porque <m>{\mathbb Z}</m> e
+        <m>{\mathbb Z}_n</m> são grupos comutativos.
       </p>
     </subsection>
 
     <subsection xml:id="groups-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Although the first clear axiomatic definition of a group was not given until the late 1800s,
-        group-theoretic methods had been employed before this time in the development of many areas of mathematics,
-        including geometry and the theory of algebraic equations.
+        Embora a primeira definição axiomática clara de grupo só tenha sido dada no final do século XIX,
+        métodos da teoria dos grupos já haviam sido empregados antes disso no desenvolvimento de muitas áreas da matemática,
+        incluindo a geometria e a teoria das equações algébricas.
       </p>
 
       <p>
         Joseph-Louis Lagrange<idx><h>Lagrange, Joseph-Louis</h></idx>
-        used group-theoretic methods in a 1770<ndash/>1771 memoir to study methods of solving polynomial equations.
-        Later, Évariste Galois<idx><h>Galois, Évariste</h></idx>
-        (1811<ndash/>1832) succeeded in developing the mathematics necessary to determine exactly which polynomial equations could be solved in terms of the coefficients of the polynomial.
-        Galois' primary tool was group theory.
+        usou métodos da teoria dos grupos em uma memória de 1770<ndash/>1771 para estudar métodos de resolução de equações polinomiais.
+        Mais tarde, Évariste Galois<idx><h>Galois, Évariste</h></idx>
+        (1811<ndash/>1832) conseguiu desenvolver a matemática necessária para determinar exatamente quais equações polinomiais podiam ser resolvidas em função dos coeficientes do polinômio.
+        A principal ferramenta de Galois foi a teoria dos grupos.
       </p>
 
       <p>
-        The study of geometry was revolutionized in 1872 when Felix Klein<idx><h>Klein, Felix</h></idx>
-        proposed that geometric spaces should be studied by examining those properties that are invariant under a transformation of the space.
+        O estudo da geometria foi revolucionado em 1872, quando Felix Klein<idx><h>Klein, Felix</h></idx>
+        propôs que os espaços geométricos deveriam ser estudados examinando as propriedades invariantes sob uma transformação do espaço.
         Sophus Lie,<idx><h>Lie, Sophus</h></idx>
-        a contemporary of Klein,
-        used group theory to study solutions of partial differential equations.
-        One of the first modern treatments of group theory appeared in William Burnside's<idx><h>Burnside, William</h></idx>
-        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], first published in 1897.
+        contemporâneo de Klein,
+        usou a teoria dos grupos para estudar soluções de equações diferenciais parciais.
+        Um dos primeiros tratamentos modernos da teoria dos grupos apareceu em
+        William Burnside<idx><h>Burnside, William</h></idx>,
+        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], publicado pela primeira vez em 1897.
       </p>
     </subsection>
 
   </section>
 
   <section xml:id="groups-section-subgroups">
-    <title>Subgroups</title>
+    <title>Subgrupos</title>
     <subsection xml:id="groups-subsection-subgroup-examples">
-      <title>Definitions and Examples</title>
+      <title>Definições e exemplos</title>
       <p>
-        Sometimes we wish to investigate smaller groups sitting inside a larger group.
-        The set of even integers <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> is a group under the operation of addition.
-        This smaller group sits naturally inside of the group of integers under addition.
-        We define a <term>subgroup</term><idx><h>Subgroup</h><h>definition of</h></idx> <m>H</m> of a group <m>G</m> to be a subset <m>H</m> of <m>G</m> such that when the group operation of <m>G</m> is restricted to <m>H</m>,
-        <m>H</m> is a group in its own right.
-        Observe that every group <m>G</m> with at least two elements will always have at least two subgroups,
-        the subgroup consisting of the identity element alone and the entire group itself.
-        The subgroup <m>H = \{ e \}</m> of a group <m>G</m> is called the
-        <idx><h>Subgroup</h><h>trivial</h></idx><term>trivial subgroup</term>.
-        A subgroup that is a proper subset of <m>G</m> is called a
-        <idx><h>Subgroup</h><h>proper</h></idx><term>proper subgroup</term>.
-        In many of the examples that we have investigated up to this point,
-        there exist other subgroups besides the trivial and improper subgroups.
+        Às vezes queremos investigar grupos menores contidos em um grupo maior.
+        O conjunto dos inteiros pares <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> é um grupo sob a operação de adição.
+        Esse grupo menor está naturalmente contido no grupo dos inteiros sob a adição.
+        Definimos um <term>subgrupo</term><idx><h>Subgrupo</h><h>definição de</h></idx> <m>H</m> de um grupo <m>G</m> como um subconjunto <m>H</m> de <m>G</m> tal que, quando a operação de grupo de <m>G</m> é restrita a <m>H</m>,
+        <m>H</m> é, por si só, um grupo.
+        Observe que todo grupo <m>G</m> com pelo menos dois elementos sempre terá pelo menos dois subgrupos:
+        o subgrupo constituído apenas pelo elemento identidade e o próprio grupo inteiro.
+        O subgrupo <m>H = \{ e \}</m> de um grupo <m>G</m> é chamado de
+        <idx><h>Subgrupo</h><h>trivial</h></idx><term>subgrupo trivial</term>.
+        Um subgrupo que é um subconjunto próprio de <m>G</m> é chamado de
+        <idx><h>Subgrupo</h><h>próprio</h></idx><term>subgrupo próprio</term>.
+        Em muitos dos exemplos que investigamos até aqui,
+        existem outros subgrupos além dos subgrupos trivial e impróprio.
       </p>
 
       <example xml:id="groups-example-multiplicative-subgroup">
         <p>
-          Consider the set of nonzero real numbers,
-          <m>{\mathbb R}^*</m>, with the group operation of multiplication.
+          Considere o conjunto dos números reais não nulos,
+          <m>{\mathbb R}^*</m>, com a operação de grupo dada pela multiplicação.
 
           <notation>
             <usage><m>\mathbb R^*</m></usage>
-            <description>the multiplicative group of real numbers</description>
+            <description>o grupo multiplicativo dos números reais</description>
           </notation>
 
-          The identity of this group is <m>1</m> and the inverse of any element <m>a \in {\mathbb R}^*</m> is just <m>1/a</m>.
-          We will show that
+          O elemento identidade desse grupo é <m>1</m> e o inverso de qualquer elemento <m>a \in {\mathbb R}^*</m> é simplesmente <m>1/a</m>.
+          Mostraremos que
           <md>
             {\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}
           </md>
-          is a subgroup of <m>{\mathbb R}^*</m>.
+          é um subgrupo de <m>{\mathbb R}^*</m>.
 
           <notation>
             <usage><m>\mathbb Q^*</m></usage>
-            <description>the multiplicative group of rational numbers</description>
+            <description>o grupo multiplicativo dos números racionais</description>
           </notation>
 
-          The identity of <m>{\mathbb R}^*</m> is <m>1</m>;
-          however,  <m>1 = 1/1</m> is the quotient of two nonzero integers.
-          Hence, the identity of <m>{\mathbb R}^*</m> is in <m>{\mathbb Q}^*</m>.
-          Given two elements in <m>{\mathbb Q}^*</m>,
-          say <m>p/q</m> and <m>r/s</m>,
-          their product <m>pr/qs</m> is also in <m>{\mathbb Q}^*</m>.
-          The inverse of any element <m>p/q \in {\mathbb Q}^*</m> is again in
-          <m>{\mathbb Q}^*</m> since <m>(p/q)^{-1} = q/p</m>.
-          Since multiplication in <m>{\mathbb R}^*</m> is associative,
-          multiplication in <m>{\mathbb Q}^*</m> is associative.
+          O elemento identidade de <m>{\mathbb R}^*</m> é <m>1</m>;
+          contudo, <m>1 = 1/1</m> é o quociente de dois inteiros não nulos.
+          Portanto, o elemento identidade de <m>{\mathbb R}^*</m> pertence a <m>{\mathbb Q}^*</m>.
+          Dados dois elementos de <m>{\mathbb Q}^*</m>,
+          digamos <m>p/q</m> e <m>r/s</m>,
+          seu produto <m>pr/qs</m> também pertence a <m>{\mathbb Q}^*</m>.
+          O inverso de qualquer elemento <m>p/q \in {\mathbb Q}^*</m> também pertence a
+          <m>{\mathbb Q}^*</m>, pois <m>(p/q)^{-1} = q/p</m>.
+          Como a multiplicação em <m>{\mathbb R}^*</m> é associativa,
+          a multiplicação em <m>{\mathbb Q}^*</m> é associativa.
         </p>
       </example>
 
       <example xml:id="groups-example-subgroup-h">
         <p>
-          Recall that <m>{\mathbb C}^{\ast}</m> is the multiplicative group of nonzero complex numbers.
-          Let <m>H = \{ 1, -1, i, -i \}</m>.
-          Then <m>H</m> is a subgroup of <m>{\mathbb C}^{\ast}</m>.
-          It is quite easy to verify that <m>H</m> is a group under multiplication and that <m>H \subset {\mathbb C}^{\ast}</m>.
+          Lembre-se de que <m>{\mathbb C}^{\ast}</m> é o grupo multiplicativo dos números complexos não nulos.
+          Seja <m>H = \{ 1, -1, i, -i \}</m>.
+          Então <m>H</m> é um subgrupo de <m>{\mathbb C}^{\ast}</m>.
+          É fácil verificar que <m>H</m> é um grupo sob a multiplicação e que <m>H \subset {\mathbb C}^{\ast}</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-sl2">
         <p>
-          Let <m>SL_2( {\mathbb R})</m> be the subset of
-          <m>GL_2( {\mathbb R })</m> consisting of matrices of determinant one;
-          that is, a matrix
+          Seja <m>SL_2( {\mathbb R})</m> o subconjunto de
+          <m>GL_2( {\mathbb R })</m> constituído pelas matrizes de determinante um;
+          isto é, uma matriz
 
           <notation>
             <usage><m>SL_n(\mathbb R)</m></usage>
-            <description>the special linear group</description>
+            <description>o grupo linear especial</description>
           </notation>
 
           <md>
@@ -1002,11 +1003,11 @@
             c &amp; d
             \end{pmatrix}
           </md>
-          is in <m>SL_2( {\mathbb R})</m> exactly when <m>ad - bc = 1</m>.
-          To show that <m>SL_2( {\mathbb R})</m> is a subgroup of the general linear group,
-          we must show that it is a group under matrix multiplication.
-          The <m>2 \times 2</m> identity matrix is in <m>SL_2( {\mathbb R})</m>,
-          as is the inverse of the matrix <m>A</m>:
+          pertence a <m>SL_2( {\mathbb R})</m> exatamente quando <m>ad - bc = 1</m>.
+          Para mostrar que <m>SL_2( {\mathbb R})</m> é um subgrupo do grupo linear geral,
+          devemos mostrar que ele é um grupo sob a multiplicação de matrizes.
+          A matriz identidade <m>2 \times 2</m> pertence a <m>SL_2( {\mathbb R})</m>,
+          assim como o inverso da matriz <m>A</m>:
           <md>
             A^{-1} =
             \begin{pmatrix}
@@ -1014,27 +1015,27 @@
             -c &amp;  a
             \end{pmatrix}
           </md>.
-          It remains to show that multiplication is closed;
-          that is, that the product of two matrices of determinant one also has determinant one.
-          We will leave this task as an exercise.
-          The group <m>SL_2({\mathbb R})</m> is called the
-          <idx><h>Group</h><h>special linear</h></idx><term>special linear group</term>.
+          Resta mostrar que a multiplicação é fechada;
+          isto é, que o produto de duas matrizes de determinante um também tem determinante um.
+          Deixaremos essa tarefa como exercício.
+          O grupo <m>SL_2({\mathbb R})</m> é chamado de
+          <idx><h>Grupo</h><h>linear especial</h></idx><term>grupo linear especial</term>.
         </p>
       </example>
 
       <example xml:id="groups-example-gl2-subgroup">
         <p>
-          It is important to realize that a subset <m>H</m> of a group <m>G</m> can be a group without being a subgroup of <m>G</m>.
-          For <m>H</m> to be a subgroup of <m>G</m>, it must inherit the binary operation of <m>G</m>.
-          The set of all <m>2 \times 2</m> matrices,
+          É importante perceber que um subconjunto <m>H</m> de um grupo <m>G</m> pode ser um grupo sem ser um subgrupo de <m>G</m>.
+          Para que <m>H</m> seja um subgrupo de <m>G</m>, ele deve herdar a operação binária de <m>G</m>.
+          O conjunto de todas as matrizes <m>2 \times 2</m>,
           <m>{\mathbb M}_2(\mathbb R)</m>,
-          forms a group under the operation of addition.
-          The <m>2 \times 2</m> general linear group is a subset of
-          <m>{\mathbb M}_2(\mathbb R)</m> and is a group under matrix multiplication,
-          but it is not a subgroup of <m>{\mathbb M}_2(\mathbb R)</m>.
-          If we add two invertible matrices,
-          we do not necessarily obtain another invertible matrix.
-          Observe that
+          forma um grupo sob a operação de adição.
+          O grupo linear geral <m>2 \times 2</m> é um subconjunto de
+          <m>{\mathbb M}_2(\mathbb R)</m> e é um grupo sob a multiplicação de matrizes,
+          mas não é um subgrupo de <m>{\mathbb M}_2(\mathbb R)</m>.
+          Se adicionarmos duas matrizes invertíveis,
+          não necessariamente obteremos outra matriz invertível.
+          Observe que
           <md>
             \begin{pmatrix}
             1 &amp; 0 \\
@@ -1051,31 +1052,31 @@
             0 &amp; 0
             \end{pmatrix}
           </md>,
-          but the zero matrix is not in <m>GL_2( {\mathbb R })</m>.
+          mas a matriz nula não pertence a <m>GL_2( {\mathbb R })</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-z2xz2">
         <p>
-          One way of telling whether or not two groups are the same is by examining their subgroups.
-          Other than the trivial subgroup and the group itself,
-          the group <m>{\mathbb Z}_4</m> has a single subgroup consisting of the elements <m>0</m> and <m>2</m>.
-          From the group <m>{\mathbb Z}_2</m>,
-          we can form another group of four elements as follows.
-          As a set this group is <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          We perform the group operation coordinatewise;
-          that is, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
-          <xref ref="groups-table-z2xz2"/> is an addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
-          Since there are three nontrivial proper subgroups of <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
+          Uma maneira de determinar se dois grupos são ou não iguais é examinar seus subgrupos.
+          Além do subgrupo trivial e do próprio grupo,
+          o grupo <m>{\mathbb Z}_4</m> tem um único subgrupo constituído pelos elementos <m>0</m> e <m>2</m>.
+          A partir do grupo <m>{\mathbb Z}_2</m>,
+          podemos formar outro grupo com quatro elementos da seguinte maneira.
+          Como conjunto, esse grupo é <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          Efetuamos a operação de grupo coordenada a coordenada;
+          isto é, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
+          <xref ref="groups-table-z2xz2"/> é uma tabela de adição para <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          Como existem três subgrupos próprios não triviais de <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
           <m>H_1 = \{ (0,0), (0,1) \}</m>,
           <m>H_2 = \{ (0,0), (1,0) \}</m>,
-          and <m>H_3 = \{ (0,0), (1,1) \}</m>,
-          <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> must be different groups.
+          e <m>H_3 = \{ (0,0), (1,1) \}</m>,
+          <m>{\mathbb Z}_4</m> e <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> devem ser grupos diferentes.
         </p>
 
         <figure xml:id="groups-table-z2xz2">
             <!-- math table -->
-          <caption>Addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
+          <caption>Tabela de adição para <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
           <p>
             <md>
               \begin{array}{c|cccc}
@@ -1094,33 +1095,33 @@
     </subsection>
 
     <subsection xml:id="groups-subsection-subgroup-theorems">
-      <title>Some Subgroup Theorems</title>
+      <title>Alguns teoremas sobre subgrupos</title>
       <p>
-        Let us examine some criteria for determining exactly when a subset of
-        a group is a subgroup.
+        Examinemos alguns critérios para determinar exatamente quando um subconjunto de
+        um grupo é um subgrupo.
       </p>
 
       <proposition>
         <statement>
           <p>
-            A subset <m>H</m> of <m>G</m> is a subgroup if and only if it satisfies the following conditions.
+            Um subconjunto <m>H</m> de <m>G</m> é um subgrupo se, e somente se, satisfaz as condições a seguir.
 
             <ol>
               <li>
                 <p>
-                  The identity <m>e</m> of <m>G</m> is in <m>H</m>.
+                  O elemento identidade <m>e</m> de <m>G</m> pertence a <m>H</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>h_1, h_2 \in H</m>, then <m>h_1h_2 \in H</m>.
+                  Se <m>h_1, h_2 \in H</m>, então <m>h_1h_2 \in H</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>h \in H</m>, then <m>h^{-1} \in H</m>.
+                  Se <m>h \in H</m>, então <m>h^{-1} \in H</m>.
                 </p>
               </li>
             </ol>
@@ -1129,25 +1130,25 @@
 
         <proof>
           <p>
-            First suppose that <m>H</m> is a subgroup of <m>G</m>.
-            We must show that the three conditions hold.
-            Since <m>H</m> is a group, it must have an identity <m>e_H</m>.
-            We must show that <m>e_H = e</m>,
-            where <m>e</m> is the identity of <m>G</m>.
-            We know that <m>e_H e_H = e_H</m> and that <m>ee_H = e_H e = e_H</m>;
-            hence, <m>ee_H = e_H e_H</m>.
-            By right-hand cancellation, <m>e =e_H</m>.
-            The second condition holds since a subgroup <m>H</m> is a group.
-            To prove the third condition, let <m>h \in H</m>.
-            Since <m>H</m> is a group,
-            there is an element <m>h' \in H</m> such that <m>hh' = h'h = e</m>.
-            By the uniqueness of the inverse in <m>G</m>, <m>h' = h^{-1}</m>.
+            Primeiro suponha que <m>H</m> seja um subgrupo de <m>G</m>.
+            Devemos mostrar que as três condições são satisfeitas.
+            Como <m>H</m> é um grupo, ele deve ter um elemento identidade <m>e_H</m>.
+            Devemos mostrar que <m>e_H = e</m>,
+            onde <m>e</m> é o elemento identidade de <m>G</m>.
+            Sabemos que <m>e_H e_H = e_H</m> e que <m>ee_H = e_H e = e_H</m>;
+            logo, <m>ee_H = e_H e_H</m>.
+            Pelo cancelamento à direita, <m>e =e_H</m>.
+            A segunda condição vale porque um subgrupo <m>H</m> é um grupo.
+            Para provar a terceira condição, seja <m>h \in H</m>.
+            Como <m>H</m> é um grupo,
+            existe um elemento <m>h' \in H</m> tal que <m>hh' = h'h = e</m>.
+            Pela unicidade do inverso em <m>G</m>, <m>h' = h^{-1}</m>.
           </p>
 
           <p>
-            Conversely, if the three conditions hold,
-            we must show that <m>H</m> is a group under the same operation as <m>G</m>;
-            however, these conditions plus the associativity of the binary operation are exactly the axioms stated in the definition of a group.
+            Reciprocamente, se as três condições são satisfeitas,
+            devemos mostrar que <m>H</m> é um grupo sob a mesma operação que <m>G</m>;
+            contudo, essas condições, juntamente com a associatividade da operação binária, são exatamente os axiomas enunciados na definição de grupo.
           </p>
         </proof>
       </proposition>
@@ -1155,30 +1156,30 @@
       <proposition xml:id="groups-proposition-subgroup">
         <statement>
           <p>
-            Let <m>H</m> be a subset of a group <m>G</m>.
-            Then <m>H</m> is a subgroup of <m>G</m> if and only if <m>H \neq \emptyset</m>,
-            and whenever <m>g, h \in H</m> then <m>gh^{-1}</m> is in <m>H</m>.
+            Seja <m>H</m> um subconjunto de um grupo <m>G</m>.
+            Então <m>H</m> é um subgrupo de <m>G</m> se, e somente se, <m>H \neq \emptyset</m>
+            e, sempre que <m>g, h \in H</m>, então <m>gh^{-1}</m> pertence a <m>H</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            First assume that <m>H</m> is a subgroup of <m>G</m>.
-            We wish to show that <m>gh^{-1} \in H</m> whenever <m>g</m> and <m>h</m> are in <m>H</m>.
-            Since <m>h</m> is in <m>H</m>,
-            its inverse <m>h^{-1}</m> must also be in <m>H</m>.
-            Because of the closure of the group operation, <m>gh^{-1} \in H</m>.
+            Primeiro suponha que <m>H</m> seja um subgrupo de <m>G</m>.
+            Queremos mostrar que <m>gh^{-1} \in H</m> sempre que <m>g</m> e <m>h</m> estejam em <m>H</m>.
+            Como <m>h</m> está em <m>H</m>,
+            seu inverso <m>h^{-1}</m> também deve estar em <m>H</m>.
+            Pela propriedade de fechamento da operação de grupo, <m>gh^{-1} \in H</m>.
           </p>
 
           <p>
-            Conversely, suppose that <m>H \subset G</m> such that <m>H \neq \emptyset</m> and
-            <m>g h^{-1} \in H</m> whenever <m>g, h \in H</m>.
-            If <m>g \in H</m>, then <m>gg^{-1} = e</m> is in <m>H</m>.
-            If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>.
-            Now let <m>h_1, h_2 \in H</m>.
-            We must show that their product is also in <m>H</m>.
-            However, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
-            Hence, <m>H</m> is a subgroup of <m>G</m>.
+            Reciprocamente, suponha que <m>H \subset G</m>, que <m>H \neq \emptyset</m> e que
+            <m>g h^{-1} \in H</m> sempre que <m>g, h \in H</m>.
+            Se <m>g \in H</m>, então <m>gg^{-1} = e</m> pertence a <m>H</m>.
+            Se <m>g \in H</m>, então <m>eg^{-1} = g^{-1}</m> também pertence a <m>H</m>.
+            Agora sejam <m>h_1, h_2 \in H</m>.
+            Devemos mostrar que seu produto também pertence a <m>H</m>.
+            Contudo, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
+            Portanto, <m>H</m> é um subgrupo de <m>G</m>.
           </p>
         </proof>
       </proposition>
@@ -1189,11 +1190,11 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          The first half of this text is about group theory.
-          Sage includes Groups, Algorithms and Programming (<acro>GAP</acro>),
-          a program designed primarly for just group theory,
-          and in continuous development since 1986.
-          Many of Sage's computations for groups ultimately are performed by GAP.
+          A primeira metade deste texto trata da teoria dos grupos.
+          O Sage inclui o sistema Groups, Algorithms and Programming (<acro>GAP</acro>),
+          um programa projetado principalmente para a teoria dos grupos,
+          em desenvolvimento contínuo desde 1986.
+          Muitos dos cálculos de grupos do Sage são, em última instância, realizados pelo GAP.
         </p>
       </paragraphs>
 
@@ -1206,8 +1207,8 @@
     <exercise label="rq-groups-compute-in-z8">
       <statement>
         <p>
-          In the group <m>\mathbb Z_8</m> compute, (a) <m>6+7</m>,
-          and (b) <m>2^{-1}</m>.
+          No grupo <m>\mathbb Z_8</m>, calcule (a) <m>6+7</m>
+          e (b) <m>2^{-1}</m>.
         </p>
       </statement>
       <response/>
@@ -1216,8 +1217,8 @@
     <exercise label="rq-groups-compute-in-u16">
       <statement>
         <p>
-          In the group <m>U(16)</m> compute, (a)
-          <m>5\cdot 7</m>, and (b) <m>3^{-1}</m>.
+          No grupo <m>U(16)</m>, calcule (a)
+          <m>5\cdot 7</m> e (b) <m>3^{-1}</m>.
         </p>
       </statement>
       <response/>
@@ -1226,7 +1227,7 @@
     <exercise label="rq-groups-definition-group">
       <statement>
         <p>
-          State the definition of a group.
+          Enuncie a definição de grupo.
         </p>
       </statement>
       <response/>
@@ -1235,7 +1236,7 @@
     <exercise label="rq-groups-subset-is-subgroup">
       <statement>
         <p>
-          Explain a single method that will decide if a subset of a group is itself a subgroup.
+          Explique um método que permita decidir se um subconjunto de um grupo é ele próprio um subgrupo.
         </p>
       </statement>
       <response/>
@@ -1244,7 +1245,7 @@
     <exercise label="rq-groups-explain-abelian">
       <statement>
         <p>
-          Explain the origin of the term <q>abelian</q> for a commutative group.
+          Explique a origem do termo <q>abeliano</q> para um grupo comutativo.
         </p>
       </statement>
       <response/>
@@ -1253,8 +1254,8 @@
     <exercise label="rq-groups-new-example">
       <statement>
         <p>
-          Give an example of a group you have seen in your previous mathematical experience,
-          but that is not an example in this chapter.
+          Dê um exemplo de grupo que você tenha encontrado em sua experiência matemática anterior,
+          mas que não seja um exemplo deste capítulo.
         </p>
       </statement>
       <response/>
@@ -1265,12 +1266,12 @@
     <!-- File: groups.xml  -->
     <!-- Title: Groups -->
   <exercises xml:id="groups-exercises" filenamebase="groups">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="groups-exercise-find-x-modn">
       <statement>
         <p>
-          Find all <m>x \in {\mathbb Z}</m> satisfying each of the following equations.
+          Encontre todos os <m>x \in {\mathbb Z}</m> que satisfazem cada uma das equações a seguir.
 
           <ol cols="2">
             <li>
@@ -1322,8 +1323,8 @@
     <exercise number="2" xml:id="groups-exercise-caley-table-groups">
       <statement>
         <p>
-          Which of the following multiplication tables defined on the set <m>G = \{ a, b, c, d \}</m> form a group?
-          Support your answer in each case.
+          Quais das tabelas de multiplicação a seguir, definidas no conjunto <m>G = \{ a, b, c, d \}</m>, formam um grupo?
+          Justifique sua resposta em cada caso.
 
           <ol cols="2">
             <li>
@@ -1390,7 +1391,7 @@
       </statement>
       <hint>
         <p>
-          (a) Not a group; (c) a group.
+          (a) Não é um grupo; (c) é um grupo.
         </p>
       </hint>
     </exercise>
@@ -1398,10 +1399,10 @@
     <exercise number="3" xml:id="groups-exercise-rectangle-symmetries">
       <statement>
         <p>
-          Write out Cayley tables for groups formed by the symmetries of a rectangle and for <m>({\mathbb Z}_4, +)</m>.
-          How many elements are in each group?
-          Are the groups the same?
-          Why or why not?
+          Escreva as tabelas de Cayley dos grupos formados pelas simetrias de um retângulo e de <m>({\mathbb Z}_4, +)</m>.
+          Quantos elementos há em cada grupo?
+          Os grupos são iguais?
+          Por que sim ou por que não?
         </p>
       </statement>
     </exercise>
@@ -1409,9 +1410,9 @@
     <exercise number="4" xml:id="groups-exercise-symmetries-rhombus">
       <statement>
         <p>
-          Describe the symmetries of a rhombus and prove that the set of symmetries forms a group.
-          Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus.
-          Are the symmetries of a rectangle and those of a rhombus the same?
+          Descreva as simetrias de um losango e prove que o conjunto das simetrias forma um grupo.
+          Dê as tabelas de Cayley tanto das simetrias de um retângulo quanto das simetrias de um losango.
+          As simetrias de um retângulo e as de um losango são as mesmas?
         </p>
       </statement>
     </exercise>
@@ -1419,11 +1420,11 @@
     <exercise number="5" xml:id="groups-exercise-symmetries-square">
       <statement>
         <p>
-          Describe the symmetries of a square and prove that the set of symmetries is a group.
-          Give a Cayley table for the symmetries.
-          How many ways can the vertices of a square be permuted?
-          Is each permutation necessarily a symmetry of the square?
-          The symmetry group of the square is denoted by <m>D_4</m>.
+          Descreva as simetrias de um quadrado e prove que o conjunto das simetrias é um grupo.
+          Dê uma tabela de Cayley para as simetrias.
+          De quantas maneiras os vértices de um quadrado podem ser permutados?
+          Cada permutação é necessariamente uma simetria do quadrado?
+          O grupo de simetrias do quadrado é denotado por <m>D_4</m>.
         </p>
       </statement>
     </exercise>
@@ -1431,7 +1432,7 @@
     <exercise number="6" xml:id="groups-exercise-table-u12">
       <statement>
         <p>
-          Give a multiplication table for the group <m>U(12)</m>.
+          Dê uma tabela de multiplicação para o grupo <m>U(12)</m>.
         </p>
       </statement>
       <hint>
@@ -1451,8 +1452,8 @@
     <exercise number="7" xml:id="groups-exercise-group-operation-on-R-except-minus1">
       <statement>
         <p>
-          Let <m>S = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>S</m> by <m>a \ast b = a + b + ab</m>.
-          Prove that <m>(S, \ast)</m> is an abelian group.
+          Seja <m>S = {\mathbb R} \setminus \{ -1 \}</m> e defina uma operação binária em <m>S</m> por <m>a \ast b = a + b + ab</m>.
+          Prove que <m>(S, \ast)</m> é um grupo abeliano.
         </p>
       </statement>
     </exercise>
@@ -1460,14 +1461,14 @@
     <exercise number="8" xml:id="groups-exercise-matrices-dont-commute">
       <statement>
         <p>
-          Give an example of two elements <m>A</m> and <m>B</m> in
-          <m>GL_2({\mathbb R})</m> with <m>AB \neq BA</m>.
+          Dê um exemplo de dois elementos <m>A</m> e <m>B</m> em
+          <m>GL_2({\mathbb R})</m> tais que <m>AB \neq BA</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Pick two matrices.
-          Almost any pair will work.
+          Escolha duas matrizes.
+          Quase qualquer par servirá.
         </p>
       </hint>
     </exercise>
@@ -1475,7 +1476,7 @@
     <exercise number="9" xml:id="groups-exercise-sl2-closed">
       <statement>
         <p>
-          Prove that the product of two matrices in <m>SL_2({\mathbb R})</m> has determinant one.
+          Prove que o produto de duas matrizes em <m>SL_2({\mathbb R})</m> tem determinante um.
         </p>
       </statement>
     </exercise>
@@ -1485,7 +1486,7 @@
     <exercise number="10" xml:id="groups-exercise-heisenberg-group">
       <statement>
         <p>
-          Prove that the set of matrices of the form
+          Prove que o conjunto de matrizes da forma
           <md>
             \begin{pmatrix}
             1 &amp; x &amp; y \\
@@ -1493,11 +1494,11 @@
             0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>
-          is a group under matrix multiplication.
-          This group, known as the
-          <term>Heisenberg group</term>,
-          is important in quantum physics.
-          Matrix multiplication in the Heisenberg group is defined by
+          é um grupo sob a multiplicação de matrizes.
+          Esse grupo, conhecido como
+          <term>grupo de Heisenberg</term>,
+          é importante na física quântica.
+          A multiplicação de matrizes no grupo de Heisenberg é definida por
           <md>
             \begin{pmatrix}
             1 &amp; x &amp; y \\
@@ -1523,10 +1524,10 @@
     <exercise number="11" xml:id="groups-exercise-determinant-product">
       <statement>
         <p>
-          Prove that <m>\det(AB) = \det(A) \det(B)</m> in <m>GL_2({\mathbb R})</m>.
-          Use this result to show that the binary operation in the group <m>GL_2({\mathbb R})</m> is closed;
-          that is, if <m>A</m> and <m>B</m> are in <m>GL_2({\mathbb R})</m>,
-          then <m>AB \in GL_2({\mathbb R})</m>.
+          Prove que <m>\det(AB) = \det(A) \det(B)</m> em <m>GL_2({\mathbb R})</m>.
+          Use esse resultado para mostrar que a operação binária no grupo <m>GL_2({\mathbb R})</m> é fechada;
+          isto é, se <m>A</m> e <m>B</m> pertencem a <m>GL_2({\mathbb R})</m>,
+          então <m>AB \in GL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1534,14 +1535,14 @@
     <exercise number="12" xml:id="groups-exercise-Zn-group">
       <statement>
         <p>
-          Let <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
+          Seja <m>{\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
           a_n) : a_i \in {\mathbb Z}_2 \}</m>.
-          Define a binary operation on <m>{\mathbb Z}_2^n</m> by
+          Defina uma operação binária em <m>{\mathbb Z}_2^n</m> por
           <md>
             (a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n)
           </md>.
-          Prove that <m>{\mathbb Z}_2^n</m> is a group under this operation.
-          This group is important in algebraic coding theory.
+          Prove que <m>{\mathbb Z}_2^n</m> é um grupo sob essa operação.
+          Esse grupo é importante na teoria algébrica de códigos.
         </p>
       </statement>
     </exercise>
@@ -1549,7 +1550,7 @@
     <exercise number="13" xml:id="groups-exercise-R-star">
       <statement>
         <p>
-          Show that <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> is a group under the operation of multiplication.
+          Mostre que <m>{\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}</m> é um grupo sob a operação de multiplicação.
         </p>
       </statement>
     </exercise>
@@ -1557,11 +1558,11 @@
     <exercise number="14" xml:id="groups-exercise-product-R-star-Z">
       <statement>
         <p>
-          Given the groups <m>{\mathbb R}^{\ast}</m> and <m>{\mathbb Z}</m>,
-          let <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>.
-          Define a binary operation <m>\circ</m> on <m>G</m> by <m>(a,m) \circ (b,n) = (ab,
+          Dados os grupos <m>{\mathbb R}^{\ast}</m> e <m>{\mathbb Z}</m>,
+          seja <m>G = {\mathbb R}^{\ast} \times {\mathbb Z}</m>.
+          Defina uma operação binária <m>\circ</m> em <m>G</m> por <m>(a,m) \circ (b,n) = (ab,
           m + n)</m>.
-          Show that <m>G</m> is a group under this operation.
+          Mostre que <m>G</m> é um grupo sob essa operação.
         </p>
       </statement>
     </exercise>
@@ -1569,12 +1570,12 @@
     <exercise number="15" xml:id="groups-exercise-order-6-nonabelain">
       <statement>
         <p>
-          Prove or disprove that every group containing six elements is abelian.
+          Prove ou refute que todo grupo com seis elementos é abeliano.
         </p>
       </statement>
       <hint>
         <p>
-          There is a nonabelian group containing six elements.
+          Existe um grupo não abeliano com seis elementos.
         </p>
       </hint>
     </exercise>
@@ -1582,14 +1583,14 @@
     <exercise number="16" xml:id="groups-exercise-product-exponents">
       <statement>
         <p>
-          Give a specific example of some group <m>G</m> and elements
+          Dê um exemplo específico de um grupo <m>G</m> e de elementos
           <m>g,
-          h \in G</m> where <m>(gh)^n \neq g^nh^n</m>.
+          h \in G</m> tais que <m>(gh)^n \neq g^nh^n</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Look at the symmetry group of an equilateral triangle or a square.
+          Considere o grupo de simetrias de um triângulo equilátero ou de um quadrado.
         </p>
       </hint>
     </exercise>
@@ -1597,13 +1598,13 @@
     <exercise number="17" xml:id="groups-exercise-groups-8-elements">
       <statement>
         <p>
-          Give an example of three different groups with eight elements.
-          Why are the groups different?
+          Dê um exemplo de três grupos diferentes com oito elementos.
+          Por que os grupos são diferentes?
         </p>
       </statement>
       <hint>
         <p>
-          The are five different groups of order 8.
+          Existem cinco grupos diferentes de ordem 8.
         </p>
       </hint>
     </exercise>
@@ -1611,7 +1612,7 @@
     <exercise number="18" xml:id="groups-exercise-n-factorial-permutations">
       <statement>
         <p>
-          Show that there are <m>n!</m> permutations of a set containing <m>n</m> items.
+          Mostre que há <m>n!</m> permutações de um conjunto contendo <m>n</m> itens.
         </p>
       </statement>
       <hint>
@@ -1623,12 +1624,12 @@
             1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
             \end{pmatrix}
           </md>
-          be in <m>S_n</m>.
-          All of the <m>a_i</m>s must be distinct.
-          There are <m>n</m> ways to choose <m>a_1</m>,
-          <m>n - 1</m> ways to choose <m>a_2</m>, <ellipsis/>, two ways to choose <m>a_{n - 1}</m>,
-          and only one way to choose <m>a_n</m>.
-          Therefore, we can form <m>\sigma</m> in <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> ways.
+          pertença a <m>S_n</m>.
+          Todos os <m>a_i</m> devem ser distintos.
+          Há <m>n</m> maneiras de escolher <m>a_1</m>,
+          <m>n - 1</m> maneiras de escolher <m>a_2</m>, <ellipsis/>, duas maneiras de escolher <m>a_{n - 1}</m>
+          e apenas uma maneira de escolher <m>a_n</m>.
+          Portanto, podemos formar <m>\sigma</m> de <m>n(n - 1) \cdots 2 \cdot 1 = n!</m> maneiras.
         </p>
       </hint>
     </exercise>
@@ -1640,7 +1641,7 @@
           <md>
             0 + a  \equiv a + 0  \equiv a \pmod{ n }
           </md>
-          for all <m>a \in {\mathbb Z}_n</m>.
+          para todo <m>a \in {\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1648,7 +1649,7 @@
     <exercise number="20" xml:id="groups-exercise-multiplicative-identity-Zn">
       <statement>
         <p>
-          Prove that there is a multiplicative identity for the integers modulo <m>n</m>:
+          Prove que existe um elemento identidade multiplicativo para os inteiros módulo <m>n</m>:
           <md>
             a \cdot  1   \equiv  a \pmod{n}
           </md>.
@@ -1659,7 +1660,7 @@
     <exercise number="21" xml:id="groups-exercise-addition-commutative-Zn">
       <statement>
         <p>
-          For each <m>a \in {\mathbb Z}_n</m> find an element <m>b \in {\mathbb Z}_n</m> such that
+          Para cada <m>a \in {\mathbb Z}_n</m>, encontre um elemento <m>b \in {\mathbb Z}_n</m> tal que
           <md>
             a + b \equiv b + a  \equiv 0 \pmod{ n}
           </md>.
@@ -1670,8 +1671,8 @@
     <exercise number="22" xml:id="groups-exercise-Zn-operations-well-defined">
       <statement>
         <p>
-          Show that addition and multiplication mod <m>n</m> are well defined operations.
-          That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod <m>n</m>.
+          Mostre que a adição e a multiplicação módulo <m>n</m> são operações bem definidas.
+          Isto é, mostre que as operações não dependem da escolha do representante nas classes de equivalência módulo <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1679,7 +1680,7 @@
     <exercise number="23" xml:id="groups-exercise-Zn-associative">
       <statement>
         <p>
-          Show that addition and multiplication mod <m>n</m> are associative operations.
+          Mostre que a adição e a multiplicação módulo <m>n</m> são operações associativas.
         </p>
       </statement>
     </exercise>
@@ -1687,7 +1688,7 @@
     <exercise number="24" xml:id="groups-exercise-Zn-distribute">
       <statement>
         <p>
-          Show that multiplication distributes over addition modulo <m>n</m>:
+          Mostre que a multiplicação é distributiva em relação à adição módulo <m>n</m>:
           <md>
             a(b  + c)  \equiv ab + ac  \pmod{n}
           </md>.
@@ -1698,8 +1699,8 @@
     <exercise number="25" xml:id="groups-exercise-powers-of-inverses">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be elements in a group <m>G</m>.
-          Prove that <m>ab^na^{-1} = (aba^{-1})^n</m> for <m>n \in \mathbb Z</m>.
+          Sejam <m>a</m> e <m>b</m> elementos de um grupo <m>G</m>.
+          Prove que <m>ab^na^{-1} = (aba^{-1})^n</m> para <m>n \in \mathbb Z</m>.
         </p>
       </statement>
       <hint>
@@ -1716,9 +1717,9 @@
     <exercise number="26" xml:id="groups-exercise-Un-idempotent">
       <statement>
         <p>
-          Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>.
-          If <m>n \gt 2</m>, prove that there is an element
-          <m>k \in U(n)</m> such that <m>k^2 = 1</m> and <m>k \neq 1</m>.
+          Seja <m>U(n)</m> o grupo das unidades em <m>{\mathbb Z}_n</m>.
+          Se <m>n \gt 2</m>, prove que existe um elemento
+          <m>k \in U(n)</m> tal que <m>k^2 = 1</m> e <m>k \neq 1</m>.
         </p>
       </statement>
     </exercise>
@@ -1726,7 +1727,7 @@
     <exercise number="27" xml:id="groups-exercise-product-of-inverses">
       <statement>
         <p>
-          Prove that the inverse of <m>g _1 g_2 \cdots g_n</m> is <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.
+          Prove que o inverso de <m>g _1 g_2 \cdots g_n</m> é <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.
         </p>
       </statement>
     </exercise>
@@ -1734,9 +1735,9 @@
     <exercise number="28" xml:id="groups-exercise-prove-xa-equal-b-solution">
       <statement>
         <p>
-          Prove the remainder of <xref ref="groups-proposition-group-equations"/>:
-          if <m>G</m> is a group and <m>a, b \in G</m>,
-          then the equation <m>xa = b</m> has a unique solution in <m>G</m>.
+          Prove o restante da <xref ref="groups-proposition-group-equations"/>:
+          se <m>G</m> é um grupo e <m>a, b \in G</m>,
+          então a equação <m>xa = b</m> tem uma solução única em <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1744,7 +1745,7 @@
     <exercise number="29" xml:id="groups-exercise-prove-exponent-laws">
       <statement>
         <p>
-          Prove <xref ref="groups-theorem-exponent-laws"/>.
+          Prove o <xref ref="groups-theorem-exponent-laws"/>.
         </p>
       </statement>
     </exercise>
@@ -1752,9 +1753,9 @@
     <exercise number="30" xml:id="groups-exercise-cancellation-laws">
       <statement>
         <p>
-          Prove the right and left cancellation laws for a group <m>G</m>;
-          that is, show that in the group <m>G</m>,
-          <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m> for elements <m>a,
+          Prove as leis do cancelamento à direita e à esquerda para um grupo <m>G</m>;
+          isto é, mostre que, no grupo <m>G</m>,
+          <m>ba = ca</m> implica <m>b = c</m> e <m>ab = ac</m> implica <m>b = c</m> para elementos <m>a,
           b, c \in G</m>.
         </p>
       </statement>
@@ -1763,8 +1764,8 @@
     <exercise number="31" xml:id="groups-exercise-a-hat-square-equal-1">
       <statement>
         <p>
-          Show that if <m>a^2 = e</m> for all elements <m>a</m> in a group <m>G</m>,
-          then <m>G</m> must be abelian.
+          Mostre que, se <m>a^2 = e</m> para todos os elementos <m>a</m> de um grupo <m>G</m>,
+          então <m>G</m> deve ser abeliano.
         </p>
       </statement>
       <hint>
@@ -1778,8 +1779,8 @@
     <exercise number="32" xml:id="groups-exercise-finite-group-even-order">
       <statement>
         <p>
-          Show that if <m>G</m> is a finite group of even order,
-          then there is an <m>a \in G</m> such that <m>a</m> is not the identity and <m>a^2 = e</m>.
+          Mostre que, se <m>G</m> é um grupo finito de ordem par,
+          então existe um <m>a \in G</m> tal que <m>a</m> não é o elemento identidade e <m>a^2 = e</m>.
         </p>
       </statement>
     </exercise>
@@ -1787,9 +1788,9 @@
     <exercise number="33" xml:id="groups-exercise-ab-2-and-a2-b2">
       <statement>
         <p>
-          Let <m>G</m> be a group and suppose that
-          <m>(ab)^2 = a^2b^2</m> for all <m>a</m> and <m>b</m> in <m>G</m>.
-          Prove that <m>G</m> is an abelian group.
+          Seja <m>G</m> um grupo e suponha que
+          <m>(ab)^2 = a^2b^2</m> para todos os <m>a</m> e <m>b</m> em <m>G</m>.
+          Prove que <m>G</m> é um grupo abeliano.
         </p>
       </statement>
     </exercise>
@@ -1797,10 +1798,10 @@
     <exercise number="34" xml:id="groups-exercise-subgroups-Z3-times-Z3">
       <statement>
         <p>
-          Find all the subgroups of <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m>.
-          Use this information to show that
-          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> is not the same group as <m>{\mathbb Z}_9</m>.
-          (See <xref ref="groups-example-z2xz2"/> for a short description of the product of groups.)
+          Encontre todos os subgrupos de <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m>.
+          Use essa informação para mostrar que
+          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> não é o mesmo grupo que <m>{\mathbb Z}_9</m>.
+          (Veja <xref ref="groups-example-z2xz2"/> para uma breve descrição do produto de grupos.)
         </p>
       </statement>
     </exercise>
@@ -1808,7 +1809,7 @@
     <exercise number="35" xml:id="groups-exercise-subgroups-S3">
       <statement>
         <p>
-          Find all the subgroups of the symmetry group of an equilateral triangle.
+          Encontre todos os subgrupos do grupo de simetrias de um triângulo equilátero.
         </p>
       </statement>
       <hint>
@@ -1825,7 +1826,7 @@
     <exercise number="36" xml:id="groups-exercise-subgroups-D4">
       <statement>
         <p>
-          Compute the subgroups of the symmetry group of a square.
+          Calcule os subgrupos do grupo de simetrias de um quadrado.
         </p>
       </statement>
     </exercise>
@@ -1833,8 +1834,8 @@
     <exercise number="37" xml:id="groups-exercise-subgroup-powers-2">
       <statement>
         <p>
-          Let <m>H = \{2^k : k \in {\mathbb Z} \}</m>.
-          Show that <m>H</m> is a subgroup of <m>{\mathbb Q}^*</m>.
+          Seja <m>H = \{2^k : k \in {\mathbb Z} \}</m>.
+          Mostre que <m>H</m> é um subgrupo de <m>{\mathbb Q}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -1842,9 +1843,9 @@
     <exercise number="38" xml:id="groups-exercise-subgroup-Zn-times-Zn">
       <statement>
         <p>
-          Let <m>n = 0, 1, 2, \ldots</m> and <m>n {\mathbb Z} = \{ nk : k \in {\mathbb Z} \}</m>.
-          Prove that <m>n {\mathbb Z}</m> is a subgroup of <m>{\mathbb Z}</m>.
-          Show that these subgroups are the only subgroups of <m>\mathbb{Z}</m>.
+          Seja <m>n = 0, 1, 2, \ldots</m> e <m>n {\mathbb Z} = \{ nk : k \in {\mathbb Z} \}</m>.
+          Prove que <m>n {\mathbb Z}</m> é um subgrupo de <m>{\mathbb Z}</m>.
+          Mostre que esses subgrupos são os únicos subgrupos de <m>\mathbb{Z}</m>.
         </p>
       </statement>
     </exercise>
@@ -1852,8 +1853,8 @@
     <exercise number="39" xml:id="groups-exercise-circle-group">
       <statement>
         <p>
-          Let <m>{\mathbb T} = \{ z \in {\mathbb C}^* : |z| =1 \}</m>.
-          Prove that <m>{\mathbb T}</m> is a subgroup of <m>{\mathbb C}^*</m>.
+          Seja <m>{\mathbb T} = \{ z \in {\mathbb C}^* : |z| =1 \}</m>.
+          Prove que <m>{\mathbb T}</m> é um subgrupo de <m>{\mathbb C}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -1861,15 +1862,15 @@
     <exercise number="40" xml:id="groups-exercise-so-2">
       <statement>
         <p>
-          Let <m>G</m> consist of the <m>2 \times 2</m> matrices of the form
+          Seja <m>G</m> o conjunto das matrizes <m>2 \times 2</m> da forma
           <md>
             \begin{pmatrix}
             \cos \theta &amp; -\sin \theta \\
             \sin \theta &amp; \cos \theta
             \end{pmatrix}
           </md>,
-          where <m>\theta \in {\mathbb R}</m>.
-          Prove that <m>G</m> is a subgroup of <m>SL_2({\mathbb R})</m>.
+          onde <m>\theta \in {\mathbb R}</m>.
+          Prove que <m>G</m> é um subgrupo de <m>SL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1877,19 +1878,19 @@
     <exercise number="41" xml:id="groups-exercise-a-plus-b-sqrt-2">
       <statement>
         <p>
-          Prove that
+          Prove que
           <md>
             G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
           </md>
-          is a subgroup of <m>{\mathbb R}^{\ast}</m> under the group operation of multiplication.
+          é um subgrupo de <m>{\mathbb R}^{\ast}</m> sob a operação de grupo dada pela multiplicação.
         </p>
       </statement>
       <hint>
         <p>
-          The identity of <m>G</m> is <m>1 = 1 + 0 \sqrt{2}</m>.
-          Since <m>(a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}</m>,
-          <m>G</m> is closed under multiplication.
-          Finally, <m>(a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)</m>.
+          O elemento identidade de <m>G</m> é <m>1 = 1 + 0 \sqrt{2}</m>.
+          Como <m>(a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}</m>,
+          <m>G</m> é fechado sob a multiplicação.
+          Finalmente, <m>(a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)</m>.
         </p>
       </hint>
     </exercise>
@@ -1897,8 +1898,8 @@
     <exercise number="42" xml:id="groups-exercise-trace-0">
       <statement>
         <p>
-          Let <m>G</m> be the group of
-          <m>2 \times 2</m> matrices under addition and
+          Seja <m>G</m> o grupo das
+          matrizes <m>2 \times 2</m> sob a adição e
           <md>
             H =
             \left\{
@@ -1909,7 +1910,7 @@
             a + d = 0
             \right\}
           </md>.
-          Prove that <m>H</m> is a subgroup of <m>G</m>.
+          Prove que <m>H</m> é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1917,9 +1918,9 @@
     <exercise number="43" xml:id="groups-exercise-sl-2-Z">
       <statement>
         <p>
-          Prove or disprove: <m>SL_2( {\mathbb Z} )</m>,
-          the set of <m>2 \times 2</m> matrices with integer entries and determinant one,
-          is a subgroup of <m>SL_2( {\mathbb R} )</m>.
+          Prove ou refute: <m>SL_2( {\mathbb Z} )</m>,
+          o conjunto das matrizes <m>2 \times 2</m> com entradas inteiras e determinante um,
+          é um subgrupo de <m>SL_2( {\mathbb R} )</m>.
         </p>
       </statement>
     </exercise>
@@ -1927,7 +1928,7 @@
     <exercise number="44" xml:id="groups-exercise-subgroups-Q8">
       <statement>
         <p>
-          List the subgroups of the quaternion group, <m>Q_8</m>.
+          Liste os subgrupos do grupo dos quatérnios, <m>Q_8</m>.
         </p>
       </statement>
     </exercise>
@@ -1935,7 +1936,7 @@
     <exercise number="45" xml:id="groups-exercise-intersect-subgroups">
       <statement>
         <p>
-          Prove that the intersection of two subgroups of a group <m>G</m> is also a subgroup of <m>G</m>.
+          Prove que a interseção de dois subgrupos de um grupo <m>G</m> também é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1943,13 +1944,13 @@
     <exercise number="46" xml:id="groups-exercise-union-subgroups">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H \cup K</m> is a subgroup of <m>G</m>.
+          Prove ou refute: Se <m>H</m> e <m>K</m> são subgrupos de um grupo <m>G</m>,
+          então <m>H \cup K</m> é um subgrupo de <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Look at <m>S_3</m>.
+          Considere <m>S_3</m>.
         </p>
       </hint>
     </exercise>
@@ -1957,9 +1958,9 @@
     <exercise number="47" xml:id="groups-exercise-product-subgroups">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> is a subgroup of <m>G</m>.
-          What if <m>G</m> is abelian?
+          Prove ou refute: Se <m>H</m> e <m>K</m> são subgrupos de um grupo <m>G</m>,
+          então <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> é um subgrupo de <m>G</m>.
+          E se <m>G</m> for abeliano?
         </p>
       </statement>
     </exercise>
@@ -1967,17 +1968,17 @@
     <exercise number="48" xml:id="groups-exercise-center-group">
       <statement>
         <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Show that
+          Seja <m>G</m> um grupo e <m>g \in G</m>.
+          Mostre que
           <md>
             Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
           </md>
-          is a subgroup of <m>G</m>.
-          This subgroup is called the <term>center</term> of <m>G</m>.
+          é um subgrupo de <m>G</m>.
+          Esse subgrupo é chamado de <term>centro</term> de <m>G</m>.
 
           <notation>
             <usage><m>Z(G)</m></usage>
-            <description>the center of a group</description>
+            <description>o centro de um grupo</description>
           </notation>
 
         </p>
@@ -1987,9 +1988,9 @@
     <exercise number="49" xml:id="groups-exercise-a4b-a3">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be elements of a group <m>G</m>.
-          If <m>a^4 b = ba</m> and <m>a^3 = e</m>,
-          prove that <m>ab = ba</m>.
+          Sejam <m>a</m> e <m>b</m> elementos de um grupo <m>G</m>.
+          Se <m>a^4 b = ba</m> e <m>a^3 = e</m>,
+          prove que <m>ab = ba</m>.
         </p>
       </statement>
       <hint>
@@ -2002,7 +2003,7 @@
     <exercise number="50"  xml:id="groups-exercise-infinite-subgroups">
       <statement>
         <p>
-          Give an example of an infinite group in which every nontrivial subgroup is infinite.
+          Dê um exemplo de grupo infinito no qual todo subgrupo não trivial é infinito.
         </p>
       </statement>
     </exercise>
@@ -2022,8 +2023,8 @@
     <exercise number="51"  xml:id="groups-exercise-xy-equal-x-1-y-1">
       <statement>
         <p>
-          If <m>xy = x^{-1} y^{-1}</m> for all <m>x</m> and <m>y</m> in <m>G</m>,
-          prove that <m>G</m> must be abelian.
+          Se <m>xy = x^{-1} y^{-1}</m> para todos os <m>x</m> e <m>y</m> em <m>G</m>,
+          prove que <m>G</m> deve ser abeliano.
         </p>
       </statement>
     </exercise>
@@ -2031,7 +2032,7 @@
     <exercise number="52"  xml:id="groups-exercise-subgroups-of-nonabelian-groups">
       <statement>
         <p>
-          Prove or disprove: Every proper nontrivial subgroup of a nonabelian group is nonabelian.
+          Prove ou refute: todo subgrupo próprio não trivial de um grupo não abeliano é não abeliano.
         </p>
       </statement>
     </exercise>
@@ -2041,12 +2042,12 @@
     <exercise number="53" xml:id="groups-exercise-centralizer">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of <m>G</m> and
+          Seja <m>H</m> um subgrupo de <m>G</m> e
           <md>
             C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}
           </md>.
-          Prove <m>C(H)</m> is a subgroup of <m>G</m>.
-          This subgroup is called the <term>centralizer</term> of <m>H</m> in <m>G</m>.
+          Prove que <m>C(H)</m> é um subgrupo de <m>G</m>.
+          Esse subgrupo é chamado de <term>centralizador</term> de <m>H</m> em <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -2054,16 +2055,16 @@
     <exercise number="54"  xml:id="groups-exercise-commutator">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of <m>G</m>.
-          If <m>g \in G</m>, show that
-          <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> is also a subgroup of <m>G</m>.
+          Seja <m>H</m> um subgrupo de <m>G</m>.
+          Se <m>g \in G</m>, mostre que
+          <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> também é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
 
   </exercises>
   <exercises xml:id="groups-exercises-detecting-errors">
-    <title>Additional Exercises: Detecting Errors</title>
+    <title>Exercícios adicionais: detecção de erros</title>
         <!--EXERCISE GROUP
 
 		<introduction>
@@ -2076,60 +2077,60 @@
         <!-- % TWJ, 2012/10/21 -->
         <!-- % Deleted the word "now" in the description of <acro>UPC</acro> symbols.  Suggested by R. Beezer. -->
     <exercise>
-      <title><acro>UPC</acro> Symbols</title>
+      <title>Símbolos <acro>UPC</acro></title>
       <statement>
         <p>
-          Universal Product Code<idx><h>Universal Product Code</h></idx>
-          (<acro>UPC</acro>) symbols are found on most products in grocery and retail stores.
-          The <acro>UPC</acro> symbol is a 12-digit code identifying the manufacturer of a product and the product itself (<xref ref="groups-figure-upc-codes"/>).
-          The first 11 digits contain information about the product;
-          the twelfth digit is used for error detection.
-          If <m>d_1 d_2 \cdots d_{12}</m> is a valid <acro>UPC</acro> number, then
+          Os símbolos do Universal Product Code<idx><h>Universal Product Code</h></idx>
+          (<acro>UPC</acro>) são encontrados na maioria dos produtos de mercearias e lojas de varejo.
+          O símbolo <acro>UPC</acro> é um código de 12 dígitos que identifica o fabricante e o próprio produto (<xref ref="groups-figure-upc-codes"/>).
+          Os primeiros 11 dígitos contêm informações sobre o produto;
+          o décimo segundo dígito é usado para detecção de erros.
+          Se <m>d_1 d_2 \cdots d_{12}</m> é um número <acro>UPC</acro> válido, então
           <md>
             3 \cdot d_1 + 1 \cdot d_2 + 3 \cdot d_3 + \cdots + 3 \cdot d_{11} + 1 \cdot d_{12} \equiv 0 \pmod{10}
           </md>.
           <ol>
             <li>
               <p>
-                Show that the <acro>UPC</acro> number 0-50000-30042-6, which appears in <xref ref="groups-figure-upc-codes"/>, is a valid <acro>UPC</acro> number.
+                Mostre que o número <acro>UPC</acro> 0-50000-30042-6, que aparece em <xref ref="groups-figure-upc-codes"/>, é um número <acro>UPC</acro> válido.
               </p>
             </li>
 
             <li>
               <p>
-                Show that the number 0-50000-30043-6 is not a valid <acro>UPC</acro> number.
+                Mostre que o número 0-50000-30043-6 não é um número <acro>UPC</acro> válido.
               </p>
             </li>
 
             <li>
               <p>
-                Write a formula to calculate the check digit, <m>d_{12}</m>,
-                in the <acro>UPC</acro> number.
+                Escreva uma fórmula para calcular o dígito de verificação, <m>d_{12}</m>,
+                no número <acro>UPC</acro>.
               </p>
             </li>
 
             <li>
               <p>
-                The <acro>UPC</acro> error detection scheme can detect most transposition errors;
-                that is, it can determine if two digits have been interchanged.
-                Show that the transposition error 0-05000-30042-6 is not detected.
-                Find a transposition error that is detected.
-                Can you find a general rule for the types of transposition errors that can be detected?
+                O esquema de detecção de erros <acro>UPC</acro> pode detectar a maioria dos erros de transposição;
+                isto é, pode determinar se dois dígitos foram trocados.
+                Mostre que o erro de transposição 0-05000-30042-6 não é detectado.
+                Encontre um erro de transposição que seja detectado.
+                Você consegue encontrar uma regra geral para os tipos de erros de transposição que podem ser detectados?
               </p>
             </li>
 <!-- % Corrected exercise. Suggested by John Watterlond. TWJ 8/24/2011 -->
             <li>
               <p>
-                Write a program that will determine whether or not a <acro>UPC</acro> number is valid.
+                Escreva um programa que determine se um número <acro>UPC</acro> é válido.
               </p>
             </li>
           </ol>
         </p>
 
         <figure xml:id="groups-figure-upc-codes">
-          <caption>A <acro>UPC</acro> code</caption>
+          <caption>Um código <acro>UPC</acro></caption>
           <image width="50%" source="UPCcode">
-            <description>The vertical lines of a UPC bar scan code for 0-05000-30042-6</description>
+            <description>As linhas verticais do código de barras UPC para 0-05000-30042-6</description>
           </image>
         </figure>
       </statement>
@@ -2138,23 +2139,23 @@
     <exercise>
       <statement>
         <p>
-          It is often useful to use an inner product notation for this type of error detection scheme;
-          hence, we will use the notion
+          Muitas vezes é útil usar uma notação de produto interno para esse tipo de esquema de detecção de erros;
+          por isso, usaremos a notação
           <md>
             (d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots, w_k ) \equiv 0 \pmod{ n }
           </md>
-          to mean
+          para significar
           <md>
             d_1 w_1 +  d_2 w_2 + \cdots +  d_k w_k  \equiv 0  \pmod{ n}
           </md>.
         </p>
 
         <p>
-          Suppose that <m>(d_1, d_2, \ldots,
+          Suponha que <m>(d_1, d_2, \ldots,
           d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> is an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all single-digit errors are detected if and only if
+          w_k ) \equiv 0 \pmod{ n}</m> seja um esquema de detecção de erros para o número de identificação de <m>k</m> dígitos <m>d_1 d_2 \cdots d_k</m>,
+          onde <m>0 \leq d_i \lt n</m>.
+          Prove que todos os erros de um único dígito são detectados se, e somente se,
           <m>\gcd( w_i, n ) = 1</m> for <m>1 \leq i \leq k</m>.
         </p>
       </statement>
@@ -2163,66 +2164,66 @@
     <exercise>
       <statement>
         <p>
-          Let <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> be an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all transposition errors of two digits <m>d_i</m> and <m>d_j</m> are detected if and only if
+          Seja <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
+          w_k ) \equiv 0 \pmod{ n}</m> um esquema de detecção de erros para o número de identificação de <m>k</m> dígitos <m>d_1 d_2 \cdots d_k</m>,
+          onde <m>0 \leq d_i \lt n</m>.
+          Prove que todos os erros de transposição de dois dígitos <m>d_i</m> e <m>d_j</m> são detectados se, e somente se,
           <m>\gcd( w_i - w_j, n ) = 1</m> for <m>i</m> and <m>j</m> between <m>1</m> and <m>k</m>.
         </p>
       </statement>
     </exercise>
 
     <exercise>
-      <title><acro>ISBN</acro> Codes</title>
+      <title>Códigos <acro>ISBN</acro></title>
       <statement>
         <p>
-          Every book has an International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>) code.
-          This is a 10-digit code indicating the book's publisher and title.
-          The tenth digit is a check digit satisfying
+          Todo livro possui um código International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>).
+          É um código de 10 dígitos que indica a editora e o título do livro.
+          O décimo dígito é um dígito de verificação que satisfaz
           <md>
             (d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}
           </md>.
-          One problem is that <m>d_{10}</m> might have to be a 10 to make the inner product zero;
-          in this case, 11 digits would be  needed to make this scheme work.
-          Therefore, the character X is used for the eleventh digit.
-          So <acro>ISBN</acro> 3-540-96035-X is a valid <acro>ISBN</acro> code.
+          Um problema é que <m>d_{10}</m> talvez tivesse de ser 10 para tornar o produto interno nulo;
+          nesse caso, seriam necessários 11 dígitos para que esse esquema funcionasse.
+          Por isso, o caractere X é usado para o décimo primeiro dígito.
+          Assim, <acro>ISBN</acro> 3-540-96035-X é um código <acro>ISBN</acro> válido.
 
           <ol>
             <li>
               <p>
-                Is <acro>ISBN</acro> 0-534-91500-0 a valid <acro>ISBN</acro> code?
-                What about <acro>ISBN</acro> 0-534-91700-0 and <acro>ISBN</acro> 0-534-19500-0?
+                O código <acro>ISBN</acro> 0-534-91500-0 é um código <acro>ISBN</acro> válido?
+                E quanto a <acro>ISBN</acro> 0-534-91700-0 e <acro>ISBN</acro> 0-534-19500-0?
               </p>
             </li>
 
             <li>
               <p>
-                Does this method detect all single-digit errors?
-                What about all transposition errors?
+                Esse método detecta todos os erros de um único dígito?
+                E quanto a todos os erros de transposição?
               </p>
             </li>
 
             <li>
               <p>
-                How many different <acro>ISBN</acro> codes are there?
+                Quantos códigos <acro>ISBN</acro> diferentes existem?
               </p>
             </li>
 
             <li>
               <p>
-                Write a computer program that will calculate the check digit for the first nine digits of an <acro>ISBN</acro> code.
+                Escreva um programa de computador que calcule o dígito de verificação para os nove primeiros dígitos de um código <acro>ISBN</acro>.
               </p>
             </li>
 
             <li>
               <p>
-                A publisher has houses in Germany and the United States.
-                Its German prefix is 3-540.
-                If its United States prefix will be 0-<c>abc</c>,
-                find <c>abc</c> such that the rest of the <acro>ISBN</acro> code will be the same for a book printed in Germany and in the United States.
-                Under the <acro>ISBN</acro> coding method the first digit identifies the language; German is 3 and English is 0.
-                The next group of numbers identifies the publisher,
-                and the last group identifies the specific book.
+                Uma editora possui filiais na Alemanha e nos Estados Unidos.
+                Seu prefixo alemão é 3-540.
+                Se o prefixo dos Estados Unidos for 0-<c>abc</c>,
+                encontre <c>abc</c> de modo que o restante do código <acro>ISBN</acro> seja o mesmo para um livro impresso na Alemanha e nos Estados Unidos.
+                Pelo método de codificação <acro>ISBN</acro>, o primeiro dígito identifica o idioma; alemão é 3 e inglês é 0.
+                O grupo seguinte de números identifica a editora,
+                e o último grupo identifica o livro específico.
               </p>
             </li>
           </ol>
@@ -2234,7 +2235,7 @@
 
   <references xml:id="groups-references">
         <!--  references checked and updated - TWJ 6/22/2010 -->
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
         <!--Fix intro
 	 	<introduction>
 	 		<p>References [2] and [3] show how group theory can be used in error detection schemes.  Other sources cover more advanced topics in group theory.</p>
@@ -2288,21 +2289,21 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Many of the groups discussed in this chapter are available for study in Sage.
-        It is important to understand that sets that form algebraic objects
-        (groups in this chapter)
-        are called <q>parents</q> in Sage,
-        and elements of these objects are called, well,
-        <q>elements.</q> So every element belongs to a parent
-        (in other words, is contained in some set).
-        We can ask about properties of parents (finite? order? abelian?), and we can ask about properties of individual elements
-        (identity? inverse?).
-        In the following we will show you how to create some of these common groups and begin to explore their properties with Sage.
+        Muitos dos grupos discutidos neste capítulo estão disponíveis para estudo no Sage.
+        É importante entender que os conjuntos que formam objetos algébricos
+        (grupos, neste capítulo)
+        são chamados de <q>pais</q> no Sage,
+        e os elementos desses objetos são chamados, bem,
+        de <q>elementos.</q> Assim, todo elemento pertence a um pai
+        (em outras palavras, está contido em algum conjunto).
+        Podemos perguntar sobre propriedades dos pais (finito? ordem? abeliano?) e sobre propriedades de elementos individuais
+        (identidade? inverso?).
+        A seguir, mostraremos como criar alguns desses grupos comuns e começar a explorar suas propriedades com o Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Integers mod n</title>
+      <title>Inteiros módulo n</title>
 
             <sage>
                 <input>
@@ -2325,21 +2326,21 @@
             </sage>
 
       <p>
-        We would like to work with elements of <c>Z8</c>.
-        If you were to type a <c>6</c> into a compute cell right now,
-        what would you mean?
-        The integer <m>6</m>, the rational number <m>\frac{6}{1}</m>,
-        the real number <m>6.00000</m>,
-        or the complex number <m>6.00000+0.00000i</m>?
-        Or perhaps you really do want the integer <m>6</m> mod <m>8</m>?
-        Sage really has no idea what you mean or want.
-        To make this clear, you can <q>coerce</q>
-        <c>6</c> into <c>Z8</c> with the syntax <c>Z8(6)</c>.
-        Without this, Sage will treat a input number like <c>6</c> as an integer,
-        the simplest possible interpretation in some sense.
-        Study the following carefully,
-        where we first work with <q>normal</q>
-        integers and then with integers mod 8.
+        Gostaríamos de trabalhar com elementos de <c>Z8</c>.
+        Se você digitasse um <c>6</c> em uma célula de cálculo agora,
+        o que isso significaria?
+        O inteiro <m>6</m>, o número racional <m>\frac{6}{1}</m>,
+        o número real <m>6.00000</m>
+        ou o número complexo <m>6.00000+0.00000i</m>?
+        Ou talvez você realmente queira o inteiro <m>6</m> módulo <m>8</m>?
+        O Sage realmente não sabe o que você quer dizer ou deseja.
+        Para deixar isso claro, você pode <q>coagir</q>
+        <c>6</c> para <c>Z8</c> com a sintaxe <c>Z8(6)</c>.
+        Sem isso, o Sage tratará um número de entrada como <c>6</c> como um inteiro,
+        a interpretação mais simples possível, em certo sentido.
+        Estude cuidadosamente o que segue,
+        em que primeiro trabalhamos com inteiros <q>comuns</q>
+        e depois com inteiros módulo 8.
       </p>
 
             <sage>
@@ -2388,13 +2389,13 @@
             </sage>
 
       <p>
-        <c>Z8</c> is a bit unusual as a first example,
-        since it has two operations defined,
-        both addition and multiplication,
-        with addition forming a group,
-        and multiplication not forming a group.
-        Still, we can work with the additive portion,
-        here forming the Cayley table for the addition.
+        <c>Z8</c> é um pouco incomum como primeiro exemplo,
+        pois tem duas operações definidas,
+        adição e multiplicação,
+        sendo a adição um grupo
+        e a multiplicação não.
+        Ainda assim, podemos trabalhar com a parte aditiva,
+        formando aqui a tabela de Cayley da adição.
       </p>
 
             <sage>
@@ -2414,42 +2415,42 @@
             </sage>
 
       <p>
-        When <m>n</m> is a prime number,
-        the multipicative structure
-        (excluding zero),
-        will also form a group.
+        Quando <m>n</m> é um número primo,
+        a estrutura multiplicativa
+        (excluindo o zero)
+        também formará um grupo.
       </p>
 
       <p>
-        The integers mod <m>n</m> are very important,
-        so Sage implements both addition and multiplication together.
-        Groups of symmetries are a better example of how Sage implements groups,
-        since there is just one operation present.
+        Os inteiros módulo <m>n</m> são muito importantes,
+        por isso o Sage implementa conjuntamente a adição e a multiplicação.
+        Grupos de simetrias são um exemplo melhor de como o Sage implementa grupos,
+        pois há apenas uma operação presente.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection xml:id="groups-subsection-groups-of-symmetries">
-      <title>Groups of symmetries</title>
+      <title>Grupos de simetrias</title>
       <p>
-        The symmetries of some geometric shapes are already defined in Sage,
-        albeit with different names.
-        They are implemented as <q>permutation groups</q>
-        which we will begin to study carefully in <xref ref="permute"/>.
+        As simetrias de algumas formas geométricas já estão definidas no Sage,
+        embora com nomes diferentes.
+        Elas são implementadas como <q>grupos de permutações</q>,
+        que começaremos a estudar cuidadosamente em <xref ref="permute"/>.
       </p>
 
       <p>
-        Sage uses integers to label vertices,
-        starting the count at <c>1</c>, instead of letters.
-        Elements by default are printed using <q>cycle notation</q>
-        which we will see described carefully in <xref ref="permute"/>.
-        Here is an example, with both the mathematics and Sage.
-        For the Sage part,
-        we create the group of symmetries and then create the symmetry <m>\rho_2</m> with coercion,
-        followed by outputting the element in cycle notation.
-        Then we create just the <em>bottom row</em>
-        of the notation we are using for permutations.
+        O Sage usa inteiros para rotular os vértices,
+        começando a contagem em <c>1</c>, em vez de letras.
+        Por padrão, os elementos são impressos usando a <q>notação cíclica</q>,
+        que veremos descrita cuidadosamente em <xref ref="permute"/>.
+        Eis um exemplo, com a matemática e o Sage.
+        Para a parte do Sage,
+        criamos o grupo de simetrias e então criamos a simetria <m>\rho_2</m> por coerção,
+        seguida da exibição do elemento em notação cíclica.
+        Depois criamos apenas a <em>linha inferior</em>
+        da notação que estamos usando para permutações.
         <md>
           \rho_2=
           \begin{pmatrix}
@@ -2478,16 +2479,16 @@
             </sage>
 
       <p>
-        The final list comprehension deserves comment.
-        The <c>.domain()</c> method gives a list of the symbols used for the permutation group <c>triangle</c> and then <c>rho2</c> is employed with syntax like it is a function
-        (it <em>is</em> a function)
-        to create the images that would occupy the bottom row.
+        A compreensão de listas final merece um comentário.
+        O método <c>.domain()</c> fornece uma lista dos símbolos usados para o grupo de permutações <c>triangle</c>, e então <c>rho2</c> é empregado com uma sintaxe como se fosse uma função
+        (ele <em>é</em> uma função)
+        para criar as imagens que ocupariam a linha inferior.
       </p>
 
       <p>
-        With a double list comprehension we can list all six elements of the group in the
-        <q>bottom row</q> format.
-        A good exercise would be to pair up each element with its name as given in <xref ref="groups-figure-s3-symmetry"/>.
+        Com uma compreensão de listas dupla podemos listar os seis elementos do grupo no formato de
+        <q>linha inferior</q>.
+        Um bom exercício seria associar cada elemento ao seu nome, conforme dado em <xref ref="groups-figure-s3-symmetry"/>.
       </p>
 
             <sage>
@@ -2496,24 +2497,23 @@
             </sage>
 
       <p>
-        Different books, different authors,
-        different software all have different ideas about the order in which to write multiplication of functions.
-        This textbook builds on the idea of composition of functions,
-        so that <m>fg</m> is the composition
-        <m>(fg)(x)=f(g(x))</m> and it is natural to apply <m>g</m> first.
-        Sage takes the opposite view and since we write <m>fg</m>, Sage will understand that we want to do <m>f</m> first.
-        Neither approach is wrong, and neither is necessarily superior,
-        they are just different and there are good arguments for either one.
-        When you consult other books that work with permutation groups,
-        you want to first determine which approach it takes.
-        (Be aware that this discussion of Sage function composition is limited to permutations only<mdash/><q>regular</q>
-        functions in Sage compose in the order you might be familiar with from a calculus course.)
+        Livros diferentes, autores diferentes
+        e softwares diferentes têm ideias diferentes sobre a ordem em que se escreve a multiplicação de funções.
+        Este livro se baseia na ideia de composição de funções,
+        de modo que <m>fg</m> é a composição
+        <m>(fg)(x)=f(g(x))</m> e é natural aplicar <m>g</m> primeiro.
+        O Sage adota o ponto de vista oposto e, como escrevemos <m>fg</m>, o Sage entenderá que queremos aplicar <m>f</m> primeiro.
+        Nenhuma das abordagens está errada, e nenhuma é necessariamente superior;
+        elas são apenas diferentes, e há bons argumentos a favor de cada uma.
+        Ao consultar outros livros que trabalham com grupos de permutações,
+        você deve primeiro determinar qual abordagem eles adotam.
+        (Observe que esta discussão sobre composição de funções no Sage se limita apenas às permutações<mdash/>as funções <q>regulares</q> no Sage são compostas na ordem que talvez você conheça de um curso de cálculo.)
       </p>
 
       <p>
-        The translation here between the text and Sage will be worthwhile practice.
-        Here we will reprise the discussion at the end of <xref ref="groups-section-mod-n-sym"/>,
-        but reverse the order on each product to compute Sage-style and exactly mirror what the text does.
+        A tradução aqui entre o texto e o Sage será uma prática valiosa.
+        Retomaremos a discussão no final de <xref ref="groups-section-mod-n-sym"/>,
+        mas inverteremos a ordem em cada produto para calcular no estilo do Sage e espelhar exatamente o que o texto faz.
       </p>
 
             <sage>
@@ -2541,14 +2541,14 @@
             </sage>
 
       <p>
-        Now that we understand that Sage does multiplication in reverse,
-        we can compute the Cayley table for this group.
-        Default behavior is to just name elements of a group as letters, <c>a,
-        b, c</c>, <m>\dots{}</m> in the same order that the <c>.list()</c> command would produce the elements of the group.
-        But you can also print the elements in the table as themselves
-        (that uses cycle notation here),
-        or you can give the elements names.
-        We will use <c>u</c> as shorthand for <m>\mu</m> and <c>r</c> as shorthand for <m>\rho</m>.
+        Agora que entendemos que o Sage faz a multiplicação ao contrário,
+        podemos calcular a tabela de Cayley desse grupo.
+        O comportamento padrão é simplesmente nomear os elementos de um grupo com letras, <c>a,
+        b, c</c>, <m>\dots{}</m>, na mesma ordem em que o comando <c>.list()</c> produziria os elementos do grupo.
+        Mas você também pode imprimir os próprios elementos na tabela
+        (aqui isso usa a notação cíclica),
+        ou pode dar nomes aos elementos.
+        Usaremos <c>u</c> como abreviação de <m>\mu</m> e <c>r</c> como abreviação de <m>\rho</m>.
       </p>
 
             <sage>
@@ -2592,29 +2592,29 @@
             </sage>
 
       <p>
-        You should verify that the table above is correct,
-        just like Table 3.2 is correct.
-        Remember that the convention is to multiply a row label times a column label,
-        in that order.
-        However, to do a check across the two tables,
-        you will need to recall the difference in ordering between your textbook and Sage.
+        Você deve verificar que a tabela acima está correta,
+        assim como a Tabela 3.2 está correta.
+        Lembre-se de que a convenção é multiplicar o rótulo da linha pelo rótulo da coluna,
+        nessa ordem.
+        Contudo, para conferir entre as duas tabelas,
+        você precisará lembrar a diferença de ordem entre seu livro e o Sage.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection>
-      <title>Quaternions</title>
+      <title>Quatérnios</title>
       <p>
-        Sage implements the quaternions,
-        but the elements are not matrices,
-        but rather are permutations.
-        Despite appearances the structure is identical.
-        It should not matter which version you have in mind
-        (matrices or permutations)
-        if you build the Cayley table and use the default behavior of using letters to name the elements.
-        As permutations, or as letters,
-        can you identify <m>-1</m>, <m>I</m>, <m>J</m> and <m>K</m>?
+        O Sage implementa os quatérnios,
+        mas os elementos não são matrizes,
+        e sim permutações.
+        Apesar das aparências, a estrutura é idêntica.
+        Não deve importar qual versão você tem em mente
+        (matrizes ou permutações)
+        se construir a tabela de Cayley e usar o comportamento padrão de nomear os elementos com letras.
+        Como permutações ou como letras,
+        você consegue identificar <m>-1</m>, <m>I</m>, <m>J</m> e <m>K</m>?
       </p>
 
             <sage>
@@ -2646,11 +2646,11 @@
             </sage>
 
       <p>
-        It should be fairly obvious that <c>a</c> is the identity element of the group (<m>1</m>),
-        either from its behavior in the table,
-        or from its <q>bottom row</q> representation as the first element of the list above.
-        And if you prefer,
-        you can ask Sage for a list of its outputs when viewed as a function.
+        Deve ser bastante evidente que <c>a</c> é o elemento identidade do grupo (<m>1</m>),
+        seja pelo seu comportamento na tabela,
+        seja pela sua representação como <q>linha inferior</q>, sendo o primeiro elemento da lista acima.
+        E, se preferir,
+        você pode pedir ao Sage uma lista de suas imagens quando visto como função.
       </p>
 
             <sage>
@@ -2662,12 +2662,12 @@
             </sage>
 
       <p>
-        Now <m>-1</m> should have the property that <m>-1\cdot -1= 1</m>.
-        We see that the identity element <c>a</c> is on the diagonal of the Cayley table only when we compute <c>c*c</c>.
-        We can verify this easily,
-        by extracting the third element of the column headings of the Cayley table.
-        Now that we have identified <m>-1</m>, once we locate <m>I</m>,
-        we can easily compute <m>-I</m>, and so on.
+        Agora <m>-1</m> deve ter a propriedade <m>-1\cdot -1= 1</m>.
+        Vemos que o elemento identidade <c>a</c> está na diagonal da tabela de Cayley somente quando calculamos <c>c*c</c>.
+        Podemos verificar isso facilmente
+        extraindo o terceiro elemento dos cabeçalhos das colunas da tabela de Cayley.
+        Agora que identificamos <m>-1</m>, depois de localizar <m>I</m>,
+        podemos calcular facilmente <m>-I</m> e assim por diante.
       </p>
 
             <sage>
@@ -2686,20 +2686,20 @@
             </sage>
 
       <p>
-        See if you can pair up the letters with all eight elements of the quaternions.
-        Be a bit careful with your names,
-        the symbol <c>I</c> is used by Sage for the imaginary number <m>i=\sqrt{-1}</m>
-        (which we will use below),
-        but Sage will silently let you redefine it to be anything you like.
-        Same goes for using lower-case <c>i</c> in Sage.
-        So call your elements of the quaternions something like <c>QI, QJ, QK</c> to avoid confusion.
+        Veja se consegue associar as letras aos oito elementos dos quatérnios.
+        Tenha um pouco de cuidado com os nomes:
+        o símbolo <c>I</c> é usado pelo Sage para o número imaginário <m>i=\sqrt{-1}</m>
+        (que usaremos abaixo),
+        mas o Sage permite silenciosamente que você o redefina como quiser.
+        O mesmo vale para usar <c>i</c> minúsculo no Sage.
+        Portanto, chame seus elementos dos quatérnios de algo como <c>QI, QJ, QK</c> para evitar confusão.
       </p>
 
       <p>
-        As we begin to work with groups it is instructive to work with the actual elements.
-        But many properties of groups are totally independent of the order we use for multiplication,
-        or the names or representations we use for the elements.
-        Here are facts about the quaternions we can compute without any knowledge of just how the elements are written or multiplied.
+        Ao começarmos a trabalhar com grupos, é instrutivo trabalhar com os elementos efetivos.
+        Mas muitas propriedades dos grupos são totalmente independentes da ordem que usamos para a multiplicação,
+        ou dos nomes ou representações usados para os elementos.
+        Eis fatos sobre os quatérnios que podemos calcular sem saber exatamente como os elementos são escritos ou multiplicados.
       </p>
 
             <sage>
@@ -2718,18 +2718,18 @@
     </subsection>
 
     <subsection>
-      <title>Subgroups</title>
+      <title>Subgrupos</title>
       <p>
-        The best techniques for creating subgroups will come in future chapters,
-        but we can create some groups that are naturally subgroups of other groups.
+        As melhores técnicas para criar subgrupos aparecerão em capítulos futuros,
+        mas podemos criar alguns grupos que são naturalmente subgrupos de outros grupos.
       </p>
 
       <p>
-        Elements of the quaternions were represented by certain permutations of the integers 1 through 8.
-        We can also build the group of <em>all</em>
-        permutations of these eight integers.
-        It gets pretty big,
-        so do not list it unless you want a lot of output! (I dare you.)
+        Os elementos dos quatérnios foram representados por certas permutações dos inteiros de 1 a 8.
+        Também podemos construir o grupo de <em>todas</em>
+        as permutações desses oito inteiros.
+        Ele fica bastante grande,
+        portanto não o liste, a menos que queira uma saída enorme! (Eu desafio você.)
       </p>
 
             <sage>
@@ -2746,10 +2746,10 @@
             </sage>
 
       <p>
-        The quaternions, <c>Q</c>,
-        is a subgroup of the full group of all permutations,
-        the symmetric group <m>S_8</m> or <c>S8</c>,
-        and Sage regards this as a property of <c>Q</c>.
+        Os quatérnios, <c>Q</c>,
+        são um subgrupo do grupo completo de todas as permutações,
+        o grupo simétrico <m>S_8</m> ou <c>S8</c>,
+        e o Sage considera isso uma propriedade de <c>Q</c>.
       </p>
 
             <sage>
@@ -2758,10 +2758,10 @@
             </sage>
 
       <p>
-        In Sage the complex numbers are known by the name <c>CC</c>.
-        We can create a list of the elements in the subgroup described in <xref ref="groups-example-c-star"/>.
-        Then we can verify that this set is a subgroup by examining the Cayley table,
-        using multiplication as the operation.
+        No Sage, os números complexos são conhecidos pelo nome <c>CC</c>.
+        Podemos criar uma lista dos elementos do subgrupo descrito em <xref ref="groups-example-c-star"/>.
+        Em seguida, podemos verificar que esse conjunto é um subgrupo examinando a tabela de Cayley,
+        usando a multiplicação como operação.
       </p>
 
             <sage>
@@ -2785,24 +2785,24 @@
   </section>
 
   <exercises xml:id="groups-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        These exercises are about becoming comfortable working with groups in Sage.
-        Sage worksheets have extensive capabilities for making new cells with carefully formatted text,
-        include support for <latex/> syntax to express mathematics.
-        So when a question asks for explanation or commentary,
-        make a new cell and communicate clearly with your audience.
+        Estes exercícios têm por objetivo familiarizá-lo com o trabalho com grupos no Sage.
+        As planilhas do Sage oferecem amplos recursos para criar novas células com texto cuidadosamente formatado
+        e incluem suporte à sintaxe <latex/> para expressar matemática.
+        Portanto, quando uma questão pedir explicação ou comentário,
+        crie uma nova célula e comunique-se claramente com seu público.
       </p>
     </introduction>
 
     <exercise number="1" xml:id="groups-sage-exercise-order-8">
       <statement>
         <p>
-          Create the groups <c>CyclicPermutationGroup(8)</c> and <c>DihedralGroup(4)</c> and name these groups <c>C</c> and <c>D</c>,
-          respectively.
-          We will understand these constructions better shortly,
-          but for now just understand that both objects you create are actually groups.
+          Crie os grupos <c>CyclicPermutationGroup(8)</c> e <c>DihedralGroup(4)</c> e nomeie esses grupos como <c>C</c> e <c>D</c>,
+          respectivamente.
+          Em breve entenderemos melhor essas construções,
+          mas, por enquanto, apenas entenda que ambos os objetos criados são de fato grupos.
         </p>
       </statement>
     </exercise>
@@ -2810,9 +2810,9 @@
     <exercise number="2" xml:id="groups-sage-exercise-order">
       <statement>
         <p>
-          Check that <c>C</c> and <c>D</c> have the same size by using the <c>.order()</c> method.
-          Determine which group is abelian,
-          and which is not, by using the <c>.is_abelian()</c> method.
+          Verifique se <c>C</c> e <c>D</c> têm o mesmo tamanho usando o método <c>.order()</c>.
+          Determine qual grupo é abeliano
+          e qual não é usando o método <c>.is_abelian()</c>.
         </p>
       </statement>
     </exercise>
@@ -2820,7 +2820,7 @@
     <exercise number="3" xml:id="groups-sage-exercise-cayley-table">
       <statement>
         <p>
-          Use the <c>.cayley_table()</c> method to create the Cayley table for each group.
+          Use o método <c>.cayley_table()</c> para criar a tabela de Cayley de cada grupo.
         </p>
       </statement>
     </exercise>
@@ -2828,12 +2828,12 @@
     <exercise number="4" xml:id="groups-sage-exercise-formatted-cayley-table">
       <statement>
         <p>
-          Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables.
-          In other words,
-          what is <em>different</em> about these two groups that you can <q>see</q>
-          in the Cayley tables? (In the Sage notebook,
-          a Shift-click on a blue bar will bring up a mini-word-processor,
-          and you can use dollar signs to embed mathematics formatted using <tex/> syntax.)
+          Escreva uma discussão bem formatada identificando diferenças entre os dois grupos que possam ser discernidas nas propriedades de suas tabelas de Cayley.
+          Em outras palavras,
+          o que há de <em>diferente</em> nesses dois grupos que você consegue <q>ver</q>
+          nas tabelas de Cayley? (No caderno do Sage,
+          um Shift-clique em uma barra azul abrirá um miniprocessador de texto,
+          e você pode usar cifrões para inserir matemática formatada com a sintaxe <tex/>.)
         </p>
       </statement>
     </exercise>
@@ -2841,15 +2841,15 @@
     <exercise number="5" xml:id="groups-sage-exercise-subgroup">
       <statement>
         <p>
-          For <c>C</c> locate the one subgroup of order <m>4</m>.
-          The group <c>D</c> has three subgroups of order <m>4</m>.
-          Select one of the three subgroups of <c>D</c> that has a different structure than the subgroup you obtained from <c>C</c>.
+          Para <c>C</c>, localize o único subgrupo de ordem <m>4</m>.
+          O grupo <c>D</c> tem três subgrupos de ordem <m>4</m>.
+          Selecione um dos três subgrupos de <c>D</c> que tenha estrutura diferente da do subgrupo obtido de <c>C</c>.
         </p>
 
         <p>
-          The <c>.subgroups()</c> method will give you a list of all of the subgroups to help you get started.
-          A Cayley table will help you tell the difference between the two subgroups.
-          What properties of these tables did you use to determine the difference in the structure of the subgroups?
+          O método <c>.subgroups()</c> fornecerá uma lista de todos os subgrupos para ajudá-lo a começar.
+          Uma tabela de Cayley ajudará a distinguir os dois subgrupos.
+          Quais propriedades dessas tabelas você usou para determinar a diferença na estrutura dos subgrupos?
         </p>
       </statement>
     </exercise>
@@ -2857,11 +2857,11 @@
     <exercise number="6" xml:id="groups-sage-exercise-subgpoup-elements">
       <statement>
         <p>
-          The <c>.subgroup(elt_list)</c> method of a group will create the smallest subgroup containing the specified elements of the group,
-          when given the elements as a list <c>elt_list</c>.
-          Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise.
-          The equality comparison,
-          <c>==</c>, can be used to test if two subgroups are equal.
+          O método <c>.subgroup(elt_list)</c> de um grupo criará o menor subgrupo que contém os elementos especificados do grupo,
+          quando os elementos forem fornecidos como uma lista <c>elt_list</c>.
+          Use este comando para descobrir a lista mais curta de elementos necessária para recriar os subgrupos encontrados no exercício anterior.
+          A comparação de igualdade,
+          <c>==</c>, pode ser usada para testar se dois subgrupos são iguais.
         </p>
       </statement>
     </exercise>

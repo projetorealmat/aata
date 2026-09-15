@@ -10,150 +10,150 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="integers">
-  <title>The Integers</title>
+  <title>Os inteiros</title>
   <introduction>
     <p>
-      The integers are the building blocks of mathematics.
-      In this chapter we will investigate the fundamental properties of the integers,
-      including mathematical induction,
-      the division algorithm, and the Fundamental Theorem of Arithmetic.
+      Os inteiros são os blocos de construção da matemática.
+      Neste capítulo, investigaremos as propriedades fundamentais dos inteiros,
+      incluindo a indução matemática,
+      o algoritmo da divisão e o Teorema Fundamental da Aritmética.
     </p>
   </introduction>
 
   <section xml:id="integers-section-math-induction">
-    <title>Mathematical Induction</title>
+    <title>Indução matemática</title>
     <p>
-      Suppose we wish to show that
+      Suponha que desejemos mostrar que
       <md>
         1 + 2 + \cdots + n = \frac{n(n + 1)}{2}
       </md>
-      for any natural number <m>n</m>.
-      This formula is easily  verified for small numbers such as <m>n = 1</m>,
-      <m>2</m>, <m>3</m>, or <m>4</m>,
-      but it is impossible to verify for all natural numbers on a case-by-case basis.
-      To prove the formula true in general,
-      a more generic method is required.
+      para qualquer número natural <m>n</m>.
+      Essa fórmula é facilmente verificada para números pequenos, como <m>n = 1</m>,
+      <m>2</m>, <m>3</m> ou <m>4</m>,
+      mas é impossível verificá-la para todos os números naturais caso a caso.
+      Para provar a fórmula em geral,
+      é necessário um método mais genérico.
     </p>
 
     <p>
-      Suppose we have verified the equation for the first <m>n</m> cases.
-      We will attempt to show that we can generate the formula for the <m>(n + 1)</m>th case from this knowledge.
-      The formula is true for <m>n = 1</m> since
+      Suponha que tenhamos verificado a equação para os primeiros <m>n</m> casos.
+      Tentaremos mostrar que podemos obter a fórmula para o caso <m>(n + 1)</m>-ésimo a partir desse conhecimento.
+      A fórmula é verdadeira para <m>n = 1</m>, pois
       <md>
         1 = \frac{1(1 + 1)}{2}
       </md>.
-      If we have verified the first <m>n</m> cases, then
+      Se tivermos verificado os primeiros <m>n</m> casos, então
       <md>
         <mrow>1 + 2 + \cdots + n + (n + 1) &amp; = \frac{n(n + 1)}{2} + n + 1</mrow>
         <mrow>&amp; = \frac{n^2 + 3n + 2}{2}</mrow>
         <mrow>&amp; = \frac{(n + 1)[(n + 1) + 1]}{2}</mrow>
       </md>.
-      This is exactly the formula for the <m>(n + 1)</m>th case.
+      Essa é exatamente a fórmula para o caso <m>(n + 1)</m>-ésimo.
     </p>
 
     <p>
-      This method of proof is known as
-      <term>mathematical induction</term>.
-      Instead of attempting to verify a statement about some subset <m>S</m> of the positive integers
-      <m>{\mathbb N}</m> on a case-by-case basis,
-      an impossible task if <m>S</m> is an infinite set,
-      we give a specific proof for the smallest integer being considered,
-      followed by a generic argument showing that if the statement holds for a given case,
-      then it must also hold for the next case in the sequence.
-      We summarize mathematical induction in the following axiom.
+      Esse método de demonstração é conhecido como
+      <term>indução matemática</term>.
+      Em vez de tentar verificar uma afirmação sobre algum subconjunto <m>S</m> dos inteiros positivos
+      <m>{\mathbb N}</m> caso a caso,
+      tarefa impossível se <m>S</m> for um conjunto infinito,
+      damos uma demonstração específica para o menor inteiro considerado,
+      seguida de um argumento genérico mostrando que, se a afirmação vale para um caso dado,
+      então também deve valer para o caso seguinte da sequência.
+      Resumimos a indução matemática no axioma a seguir.
     </p>
 
     <principle xml:id="integers-principle-first-pmi">
-      <title>First Principle of Mathematical Induction</title>
+      <title>Primeiro princípio da indução matemática</title>
       <idx>
-      <h>Induction</h>
-      <h>first principle of</h>
+      <h>Indução</h>
+      <h>primeiro princípio de</h>
       </idx>
       <statement>
         <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If for all integers <m>k</m> with <m>k \geq n_0</m>,
-          <m>S(k)</m> implies that <m>S(k+1)</m> is true,
-          then <m>S(n)</m> is true for all integers <m>n</m> greater than or equal to <m>n_0</m>.
+          Seja <m>S(n)</m> uma afirmação sobre inteiros para
+          <m>n \in {\mathbb N}</m> e suponha que <m>S(n_0)</m> seja verdadeira para algum inteiro <m>n_0</m>.
+          Se, para todos os inteiros <m>k</m> com <m>k \geq n_0</m>,
+          <m>S(k)</m> implicar que <m>S(k+1)</m> é verdadeira,
+          então <m>S(n)</m> será verdadeira para todos os inteiros <m>n</m> maiores ou iguais a <m>n_0</m>.
         </p>
       </statement>
     </principle>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <example xml:id="integers-example-induction-greater-than">
       <p>
-        For all integers <m>n \geq 3</m>, <m>2^n \gt n + 4</m>.
-        Since
+        Para todos os inteiros <m>n \geq 3</m>, vale <m>2^n \gt n + 4</m>.
+        Como
         <md>
           8 = 2^3 \gt 3 + 4 = 7
         </md>,
-        the statement is true for <m>n_0 = 3</m>.
-        Assume that <m>2^k \gt k + 4</m> for <m>k \geq 3</m>.
-        Then <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.
-        But
+        a afirmação é verdadeira para <m>n_0 = 3</m>.
+        Suponha que <m>2^k \gt k + 4</m> para <m>k \geq 3</m>.
+        Então <m>2^{k + 1} = 2 \cdot 2^{k} \gt 2(k + 4)</m>.
+        Mas
         <md>
           2(k + 4) = 2k + 8 \gt k + 5 = (k + 1) + 4
         </md>
-        since <m>k</m> is positive.
-        Hence, by induction,
-        the statement holds for all integers <m>n \geq 3</m>.
+        pois <m>k</m> é positivo.
+        Logo, por indução,
+        a afirmação vale para todos os inteiros <m>n \geq 3</m>.
       </p>
     </example>
 
     <example xml:id="integers-example-induction-divisible">
       <p>
-        Every integer <m>10^{n + 1} + 3 \cdot 10^n + 5</m> is divisible by <m>9</m> for <m>n \in {\mathbb N}</m>.
-        For <m>n = 1</m>,
+        Todo número da forma <m>10^{n + 1} + 3 \cdot 10^n + 5</m> é divisível por <m>9</m> para <m>n \in {\mathbb N}</m>.
+        Para <m>n = 1</m>,
         <md>
           10^{1 + 1} + 3 \cdot 10 + 5 = 135 = 9 \cdot 15
         </md>
-        is divisible by <m>9</m>.
-        Suppose that <m>10^{k + 1} + 3 \cdot 10^k + 5</m> is divisible by <m>9</m> for <m>k \geq 1</m>.
-        Then
+        é divisível por <m>9</m>.
+        Suponha que <m>10^{k + 1} + 3 \cdot 10^k + 5</m> seja divisível por <m>9</m> para <m>k \geq 1</m>.
+        Então
         <md>
           <mrow>10^{(k + 1) + 1} + 3 \cdot 10^{k + 1} + 5&amp; = 10^{k + 2} + 3 \cdot 10^{k + 1} + 50 - 45</mrow>
           <mrow>&amp; = 10 (10^{k + 1} + 3 \cdot 10^{k} + 5) - 45</mrow>
         </md>
-        is divisible by <m>9</m>.
+        é divisível por <m>9</m>.
       </p>
     </example>
 
     <example xml:id="integers-example-binomial-theorem">
       <p>
-        We will prove the binomial theorem using mathematical induction; that is,
+        Demonstraremos o teorema binomial usando indução matemática; isto é,
         <md>
           (a + b)^n = \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}
         </md>,
-        where <m>a</m> and <m>b</m> are real numbers,
-        <m>n \in \mathbb{N}</m>, and
+        em que <m>a</m> e <m>b</m> são números reais,
+        <m>n \in \mathbb{N}</m> e
         <md>
           \binom{n}{k} = \frac{n!}{k! (n - k)!}
         </md>
-        is the binomial coefficient.
+        é o coeficiente binomial.
 
         <notation>
           <usage><m>n!</m></usage>
-          <description><m>n</m> factorial</description>
+          <description>fatorial de <m>n</m></description>
         </notation>
 
         <notation>
           <usage><m>\binom{n}{k}</m></usage>
-          <description>binomial coefficient <m>n!/(k!(n-k)!)</m></description>
+          <description>coeficiente binomial <m>n!/(k!(n-k)!)</m></description>
         </notation>
 
-        We first show that
+        Primeiro, mostramos que
         <md>
           \binom{n + 1}{k} = \binom{n}{k} + \binom{n}{k - 1}
         </md>.
-        This result follows from
+        Esse resultado segue de
         <md>
           <mrow>\binom{n}{k} + \binom{n}{k - 1} &amp; = \frac{n!}{k!(n - k)!} +\frac{n!}{(k-1)!(n - k + 1)!}</mrow>
           <mrow>&amp; = \frac{(n + 1)!}{k!(n + 1 - k)!}</mrow>
           <mrow>&amp; =\binom{n + 1}{k}</mrow>
         </md>.
-        If <m>n = 1</m>, the binomial theorem is easy to verify.
-        Now assume that the result is true for <m>n</m> greater than or equal to <m>1</m>.
-        Then
+        Se <m>n = 1</m>, o teorema binomial é fácil de verificar.
+        Agora suponha que o resultado seja verdadeiro para <m>n</m> maior ou igual a <m>1</m>.
+        Então
         <md>
           <mrow>(a + b)^{n + 1} &amp; = (a + b)(a + b)^n</mrow>
           <mrow>&amp; = (a + b) \left( \sum_{k = 0}^{n} \binom{n}{k} a^k b^{n - k}\right)</mrow>
@@ -166,65 +166,65 @@
     </example>
 
     <p>
-      We have an equivalent statement of the Principle of Mathematical Induction that is often very useful.
+      Temos uma formulação equivalente do princípio da indução matemática que costuma ser muito útil.
     </p>
 
     <principle xml:id="integers-principle-second-pmi">
-      <title>Second Principle of Mathematical Induction</title>
+      <title>Segundo princípio da indução matemática</title>
       <idx>
-      <h>Induction</h>
-      <h>second principle of</h>
+      <h>Indução</h>
+      <h>segundo princípio de</h>
       </idx>
       <statement>
         <p>
-          Let <m>S(n)</m> be a statement about integers for
-          <m>n \in {\mathbb N}</m> and suppose <m>S(n_0)</m> is true for some integer <m>n_0</m>.
-          If <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> imply that
-          <m>S(k + 1)</m> for <m>k \geq n_0</m>,
-          then the statement <m>S(n)</m> is true for all integers <m>n \geq n_0</m>.
+          Seja <m>S(n)</m> uma afirmação sobre inteiros para
+          <m>n \in {\mathbb N}</m> e suponha que <m>S(n_0)</m> seja verdadeira para algum inteiro <m>n_0</m>.
+          Se <m>S(n_0), S(n_0 + 1), \ldots, S(k)</m> implicarem
+          <m>S(k + 1)</m> para <m>k \geq n_0</m>,
+          então a afirmação <m>S(n)</m> será verdadeira para todos os inteiros <m>n \geq n_0</m>.
         </p>
       </statement>
     </principle>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <p>
-      A nonempty subset <m>S</m> of
-      <m>{\mathbb Z}</m> is <term>well-ordered</term><idx><h>Well-ordered set</h></idx>
-      if <m>S</m> contains a least element.
-      Notice that the set <m>{\mathbb Z}</m> is not well-ordered since it does not contain a smallest element.
-      However, the natural numbers are well-ordered.
+      Um subconjunto não vazio <m>S</m> de
+      <m>{\mathbb Z}</m> é <term>bem ordenado</term><idx><h>Conjunto bem ordenado</h></idx>
+      se <m>S</m> contém um menor elemento.
+      Observe que o conjunto <m>{\mathbb Z}</m> não é bem ordenado, pois não contém um menor elemento.
+      Contudo, os números naturais são bem ordenados.
     </p>
 
     <principle>
-      <title>Principle of Well-Ordering</title>
+      <title>Princípio da boa ordenação</title>
       <statement>
         <p>
-          Every nonempty subset of the natural numbers is well-ordered.
+          Todo subconjunto não vazio dos números naturais é bem ordenado.
         </p>
       </statement>
     </principle>
 
     <p>
-      The Principle of Well-Ordering is equivalent to the Principle of Mathematical Induction.
+      O princípio da boa ordenação é equivalente ao princípio da indução matemática.
     </p>
 
     <lemma xml:id="integers-lemma-smallest-number">
       <statement>
         <p>
-          The Principle of Mathematical Induction implies that <m>1</m> is the least positive natural number.
+          O princípio da indução matemática implica que <m>1</m> é o menor número natural positivo.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>S = \{ n \in {\mathbb N} : n \geq 1 \}</m>.
-          Then <m>1 \in S</m>.
-          Assume that <m>n \in S</m>.
-          Since <m>0 \lt 1</m>,
-          it must be the case that <m>n = n + 0 \lt n + 1</m>.
-          Therefore, <m>1 \leq n \lt n + 1</m>.
-          Consequently, if <m>n \in S</m>,
-          then <m>n + 1</m> must also be in <m>S</m>,
-          and by the Principle of Mathematical Induction, and we have <m>S = \mathbb N</m>.
+          Seja <m>S = \{ n \in {\mathbb N} : n \geq 1 \}</m>.
+          Então <m>1 \in S</m>.
+          Suponha que <m>n \in S</m>.
+          Como <m>0 \lt 1</m>,
+          deve ocorrer <m>n = n + 0 \lt n + 1</m>.
+          Portanto, <m>1 \leq n \lt n + 1</m>.
+          Consequentemente, se <m>n \in S</m>,
+          então <m>n + 1</m> também deve pertencer a <m>S</m>
+          e, pelo princípio da indução matemática, temos <m>S = \mathbb N</m>.
         </p>
       </proof>
     </lemma>
@@ -233,178 +233,178 @@
     <theorem xml:id="integers-theorem-pmi-implies-pwo">
       <statement>
         <p>
-          The Principle of Mathematical Induction implies the Principle of Well-Ordering.
-          That is, every nonempty subset of
-          <m>\mathbb N</m> contains a least element.
+          O princípio da indução matemática implica o princípio da boa ordenação.
+          Isto é, todo subconjunto não vazio de
+          <m>\mathbb N</m> contém um menor elemento.
         </p>
       </statement>
 
       <proof>
         <p>
-          We must show that if <m>S</m> is a nonempty subset of the natural numbers,
-          then <m>S</m> contains a least element.
-          If <m>S</m> contains <m>1</m>, then the theorem is true by <xref ref="integers-lemma-smallest-number"/>.
-          Assume that if <m>S</m> contains an integer <m>k</m> such that <m>1 \leq k \leq n</m>,
-          then <m>S</m> contains a least element.
-          We will show that if a set <m>S</m> contains an integer less than or equal to <m>n + 1</m>,
-          then <m>S</m> has a least element.
-          If <m>S</m> does not contain an integer less than <m>n+1</m>,
-          then <m>n+1</m> is the smallest integer in <m>S</m>.
-          Otherwise, since <m>S</m> is nonempty,
-          <m>S</m> must contain an integer less than or equal to <m>n</m>.
-          In this case, by induction, <m>S</m> contains a least element.
+          Devemos mostrar que, se <m>S</m> é um subconjunto não vazio dos números naturais,
+          então <m>S</m> contém um menor elemento.
+          Se <m>S</m> contém <m>1</m>, então o teorema é verdadeiro por <xref ref="integers-lemma-smallest-number"/>.
+          Suponha que, se <m>S</m> contém um inteiro <m>k</m> tal que <m>1 \leq k \leq n</m>,
+          então <m>S</m> contém um menor elemento.
+          Mostraremos que, se um conjunto <m>S</m> contém um inteiro menor ou igual a <m>n + 1</m>,
+          então <m>S</m> tem um menor elemento.
+          Se <m>S</m> não contém um inteiro menor que <m>n+1</m>,
+          então <m>n+1</m> é o menor inteiro de <m>S</m>.
+          Caso contrário, como <m>S</m> não é vazio,
+          <m>S</m> deve conter um inteiro menor ou igual a <m>n</m>.
+          Nesse caso, por indução, <m>S</m> contém um menor elemento.
         </p>
       </proof>
     </theorem>
         <!-- wording change.  Suggested by P. Diethelm.  TWJ 22/4/2013 -->
     <p>
-      Induction can also be very useful in formulating definitions.
-      For instance, there are two ways to define <m>n!</m>,
-      the factorial of a positive integer <m>n</m>.
+      A indução também pode ser muito útil na formulação de definições.
+      Por exemplo, há duas maneiras de definir <m>n!</m>,
+      o fatorial de um inteiro positivo <m>n</m>.
 
       <ul>
         <li>
           <p>
-            The <em>explicit</em> definition:
+            A definição <em>explícita</em>:
             <m>n! = 1 \cdot 2 \cdot 3 \cdots (n - 1) \cdot n</m>.
           </p>
         </li>
 
         <li>
           <p>
-            The <em>inductive</em> or <em>recursive</em> definition:
+            A definição <em>indutiva</em> ou <em>recursiva</em>:
             <m>1! = 1</m> and <m>n! = n(n - 1)!</m> for <m>n \gt 1</m>.
           </p>
         </li>
       </ul>
 
-      Every good mathematician or computer scientist knows that looking at problems recursively,
-      as opposed to explicitly,
-      often results in better understanding of complex issues.
+      Todo bom matemático ou cientista da computação sabe que examinar problemas recursivamente,
+      em oposição a explicitamente,
+      frequentemente resulta em uma melhor compreensão de questões complexas.
     </p>
   </section>
 
   <section xml:id="integers-section-division-algorithm">
-    <title>The Division Algorithm</title>
+    <title>O algoritmo da divisão</title>
     <introduction>
       <p>
-        An application of the Principle of Well-Ordering that we will use often is the division algorithm.
+        Uma aplicação do princípio da boa ordenação que usaremos frequentemente é o algoritmo da divisão.
       </p>
 
       <theorem xml:id="integers-theorem-division_algorithm">
-        <title>Division Algorithm</title>
+        <title>Algoritmo da divisão</title>
         <idx>
-        <h>Division algorithm</h>
-        <h>for integers</h>
+        <h>Algoritmo da divisão</h>
+        <h>para inteiros</h>
         </idx>
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be integers, with <m>b \gt 0</m>.
-            Then there exist unique integers <m>q</m> and <m>r</m> such that
+            Sejam <m>a</m> e <m>b</m> inteiros, com <m>b \gt 0</m>.
+            Então existem únicos inteiros <m>q</m> e <m>r</m> tais que
             <md>
               a = bq + r
             </md>
-            where <m>0 \leq r \lt b</m>.
+            em que <m>0 \leq r \lt b</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            This is a perfect example of the existence-and-uniqueness type of proof.
-            We must first prove that the numbers <m>q</m> and <m>r</m> actually exist.
-            Then we must show that if <m>q'</m> and <m>r'</m> are two other such numbers,
-            then <m>q = q'</m> and <m>r = r'</m>.
+            Este é um exemplo perfeito de demonstração do tipo existência e unicidade.
+            Primeiro devemos provar que os números <m>q</m> e <m>r</m> realmente existem.
+            Depois devemos mostrar que, se <m>q'</m> e <m>r'</m> são dois outros números desse tipo,
+            então <m>q = q'</m> e <m>r = r'</m>.
           </p>
 
           <case>
-            <title>Existence of <m>q</m> and <m>r</m></title>
+            <title>Existência de <m>q</m> e <m>r</m></title>
             <p>
               Let
               <md>
                 S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}
               </md>.
-              If <m>0 \in S</m>, then <m>b</m> divides <m>a</m>,
-              and  we can let <m>q = a/b</m> and <m>r = 0</m>.
-              If <m>0 \notin S</m>, we can use the Well-Ordering Principle.
-              We must first show that <m>S</m> is nonempty.
-              If <m>a \gt 0</m>, then <m>a - b \cdot 0 \in S</m>.
-              If <m>a \lt 0</m>, then <m>a - b(2a) = a(1 - 2b) \in S</m>.
-              In either case <m>S \neq \emptyset</m>.
-              By the Well-Ordering Principle,
-              <m>S</m> must have a smallest member, say <m>r = a - bq</m>.
-              Therefore, <m>a = bq + r</m>, <m>r \geq 0</m>.
-              We now show that <m>r \lt b</m>.
-              Suppose that <m>r \gt b</m>.
-              Then
+              Se <m>0 \in S</m>, então <m>b</m> divide <m>a</m>
+              e podemos tomar <m>q = a/b</m> e <m>r = 0</m>.
+              Se <m>0 \notin S</m>, podemos usar o princípio da boa ordenação.
+              Primeiro devemos mostrar que <m>S</m> não é vazio.
+              Se <m>a \gt 0</m>, então <m>a - b \cdot 0 \in S</m>.
+              Se <m>a \lt 0</m>, então <m>a - b(2a) = a(1 - 2b) \in S</m>.
+              Em ambos os casos, <m>S \neq \emptyset</m>.
+              Pelo princípio da boa ordenação,
+              <m>S</m> deve ter um menor elemento, digamos <m>r = a - bq</m>.
+              Portanto, <m>a = bq + r</m>, com <m>r \geq 0</m>.
+              Mostremos agora que <m>r \lt b</m>.
+              Suponha que <m>r \gt b</m>.
+              Então
               <md>
                 a - b(q + 1)= a - bq - b = r - b \gt 0
               </md>.
-              In this case we would have <m>a - b(q + 1)</m> in the set <m>S</m>.
-              But then <m>a - b(q + 1) \lt a - bq</m>,
-              which would contradict the fact that
-              <m>r = a - bq</m> is the smallest member  of <m>S</m>.
-              So <m>r \leq b</m>.
-              Since <m>0 \notin S</m>, <m>r \neq b</m> and so <m>r \lt b</m>.
+              Nesse caso, teríamos <m>a - b(q + 1)</m> no conjunto <m>S</m>.
+              Mas então <m>a - b(q + 1) \lt a - bq</m>,
+              o que contradiz o fato de que
+              <m>r = a - bq</m> é o menor elemento de <m>S</m>.
+              Logo, <m>r \leq b</m>.
+              Como <m>0 \notin S</m>, <m>r \neq b</m> e, portanto, <m>r \lt b</m>.
             </p>
           </case>
 
           <case>
-            <title>Uniqueness of <m>q</m> and <m>r</m></title>
+            <title>Unicidade de <m>q</m> e <m>r</m></title>
             <p>
-              <em>Uniqueness of <m>q</m> and <m>r</m>.</em>
-              Suppose there exist integers <m>r</m>, <m>r'</m>,
-              <m>q</m>, and <m>q'</m> such that
+              <em>Unicidade de <m>q</m> e <m>r</m>.</em>
+              Suponha que existam inteiros <m>r</m>, <m>r'</m>,
+              <m>q</m> e <m>q'</m> tais que
               <md>
                 a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b
               </md>.
-              Then <m> bq + r =  bq' + r'</m>.
-              Assume that <m>r' \geq r</m>.
-              From the last equation we have <m>b(q - q') = r' - r</m>;
-              therefore, <m>b</m> must divide <m>r' - r</m> and <m>0 \leq r'- r \leq r' \lt b</m>.
-              This is possible only if <m>r' - r = 0</m>.
-              Hence, <m>r = r'</m> and  <m>q = q'</m>.
+              Então <m> bq + r =  bq' + r'</m>.
+              Suponha que <m>r' \geq r</m>.
+              Da última equação temos <m>b(q - q') = r' - r</m>;
+              portanto, <m>b</m> deve dividir <m>r' - r</m> e <m>0 \leq r'- r \leq r' \lt b</m>.
+              Isso só é possível se <m>r' - r = 0</m>.
+              Logo, <m>r = r'</m> e <m>q = q'</m>.
             </p>
           </case>
         </proof>
       </theorem>
 
       <p>
-        Let <m>a</m> and <m>b</m> be integers.
-        If <m>b = ak</m> for some integer <m>k</m>, we write <m>a \mid b</m>.
-        An integer <m>d</m> is called a
-        <term>common divisor</term>
-        of <m>a</m> and <m>b</m> if <m>d \mid a</m> and <m>d \mid b</m>.
-        The <term>greatest common divisor</term><idx><h>Greatest common divisor</h><h>of two integers</h></idx> of integers <m>a</m> and <m>b</m> is a positive integer <m>d</m> such that <m>d</m> is a common divisor of <m>a</m> and <m>b</m> and if <m>d'</m> is any other common divisor of <m>a</m> and <m>b</m>,
-        then <m>d' \mid d</m>.
+        Sejam <m>a</m> e <m>b</m> inteiros.
+        Se <m>b = ak</m> para algum inteiro <m>k</m>, escrevemos <m>a \mid b</m>.
+        Um inteiro <m>d</m> é chamado de
+        <term>divisor comum</term>
+        de <m>a</m> e <m>b</m> se <m>d \mid a</m> e <m>d \mid b</m>.
+        O <term>máximo divisor comum</term><idx><h>Máximo divisor comum</h><h>de dois inteiros</h></idx> dos inteiros <m>a</m> e <m>b</m> é um inteiro positivo <m>d</m> tal que <m>d</m> é um divisor comum de <m>a</m> e <m>b</m> e, se <m>d'</m> é qualquer outro divisor comum de <m>a</m> e <m>b</m>,
+        então <m>d' \mid d</m>.
 
         <notation>
           <usage><m>a \mid b</m></usage>
-          <description><m>a</m> divides <m>b</m></description>
+          <description><m>a</m> divide <m>b</m></description>
         </notation>
 
         <notation>
           <usage><m>\gcd(a, b)</m></usage>
-          <description>greatest common divisor of <m>a</m> and <m>b</m></description>
+          <description>máximo divisor comum de <m>a</m> e <m>b</m></description>
         </notation>
 
-        We write <m>d = \gcd(a, b)</m>;
-        for example,
-        <m>\gcd( 24, 36) = 12</m> and <m>\gcd(120, 102) = 6</m>.
-        We say that two integers <m>a</m> and <m>b</m> are
-        <term>relatively prime</term>
-        if <m>\gcd( a, b ) = 1</m>.
+        Escrevemos <m>d = \gcd(a, b)</m>;
+        por exemplo,
+        <m>\gcd( 24, 36) = 12</m> e <m>\gcd(120, 102) = 6</m>.
+        Dizemos que dois inteiros <m>a</m> e <m>b</m> são
+        <term>primos entre si</term>
+        se <m>\gcd( a, b ) = 1</m>.
       </p>
 
       <theorem xml:id="integers-theorem-gcd">
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be nonzero integers.
-            Then there exist integers <m>r</m> and <m>s</m> such that
+            Sejam <m>a</m> e <m>b</m> inteiros não nulos.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que
             <md>
               \gcd( a, b) = ar + bs
             </md>.
-            Furthermore,
-            the greatest common divisor of <m>a</m> and <m>b</m> is unique.
+            Além disso,
+            o máximo divisor comum de <m>a</m> e <m>b</m> é único.
           </p>
         </statement>
 
@@ -414,35 +414,35 @@
             <md>
               S = \{ am + bn : m, n \in {\mathbb Z} \text{ and } am + bn \gt 0 \}
             </md>.
-            Clearly, the set <m>S</m> is nonempty;
-            hence, by the Well-Ordering Principle <m>S</m> must have a smallest member,
-            say <m>d = ar + bs</m>.
-            We claim that <m>d = \gcd( a, b)</m>.
-            Write <m>a = dq + r'</m> where <m>0 \leq r' \lt d</m>.
-            If <m>r' \gt 0</m>,
-            then <!-- r changed to r' - TWJ 1/31/2011 -->
+            Claramente, o conjunto <m>S</m> não é vazio;
+            portanto, pelo princípio da boa ordenação, <m>S</m> deve ter um menor elemento,
+            digamos <m>d = ar + bs</m>.
+            Afirmamos que <m>d = \gcd( a, b)</m>.
+            Escreva <m>a = dq + r'</m>, em que <m>0 \leq r' \lt d</m>.
+            Se <m>r' \gt 0</m>,
+            então <!-- r changed to r' - TWJ 1/31/2011 -->
             <md>
               <mrow>r'&amp; = a - dq</mrow>
               <mrow>&amp; = a - (ar + bs)q</mrow>
               <mrow>&amp; = a - arq - bsq</mrow>
               <mrow>&amp; = a( 1 - rq ) + b( -sq )</mrow>
             </md>,
-            which is in <m>S</m>.
-            But this would contradict the fact that <m>d</m> is the smallest member of <m>S</m>.
-            Hence, <m>r' = 0</m> and <m>d</m> divides <m>a</m>.
-            A similar argument shows that <m>d</m> divides <m>b</m>.
-            Therefore, <m>d</m> is a common divisor of <m>a</m> and <m>b</m>.
+            que pertence a <m>S</m>.
+            Mas isso contradiz o fato de que <m>d</m> é o menor elemento de <m>S</m>.
+            Logo, <m>r' = 0</m> e <m>d</m> divide <m>a</m>.
+            Um argumento semelhante mostra que <m>d</m> divide <m>b</m>.
+            Portanto, <m>d</m> é um divisor comum de <m>a</m> e <m>b</m>.
           </p>
 
           <p>
-            Suppose that <m>d'</m> is another common divisor of <m>a</m> and <m>b</m>,
-            and we want to show that <m>d' \mid d</m>.
-            If we let <m>a = d'h</m> and <m>b = d'k</m>, then
+            Suponha que <m>d'</m> seja outro divisor comum de <m>a</m> e <m>b</m>,
+            e queremos mostrar que <m>d' \mid d</m>.
+            Sejam <m>a = d'h</m> e <m>b = d'k</m>, então
             <md>
               d = ar + bs = d'hr + d'ks = d'(hr + ks)
             </md>.
-            So <m>d'</m> must divide <m>d</m>.
-            Hence, <m>d</m> must be the unique greatest common divisor of <m>a</m> and <m>b</m>.
+            Assim, <m>d'</m> deve dividir <m>d</m>.
+            Portanto, <m>d</m> deve ser o único máximo divisor comum de <m>a</m> e <m>b</m>.
           </p>
         </proof>
             <!-- Notation error in proof fixed (pointed out by Rocco Rossi) - TWJ 9/13/2010 -->
@@ -451,43 +451,43 @@
       <corollary xml:id="integers-corollary-coprime">
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be two integers that are relatively prime.
-            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.
+            Sejam <m>a</m> e <m>b</m> dois inteiros primos entre si.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + bs = 1</m>.
           </p>
         </statement>
       </corollary>
     </introduction>
 
     <subsection xml:id="integers-subsection-euclidean-algorithm">
-      <title>The Euclidean Algorithm</title>
+      <title>O algoritmo de Euclides</title>
       <p>
-        Among other things, <xref ref="integers-theorem-gcd"/> allows us to compute the greatest common divisor of two integers.
+        Entre outras coisas, o <xref ref="integers-theorem-gcd"/> nos permite calcular o máximo divisor comum de dois inteiros.
       </p>
 
       <example xml:id="integers-example-gcd">
         <p>
-          Let us compute the greatest common divisor of <m>945</m> and <m>2415</m>.
-          First observe that
+          Calculemos o máximo divisor comum de <m>945</m> e <m>2415</m>.
+          Primeiro, observe que
           <md>
             <mrow>2415 &amp; = 945 \cdot 2 + 525</mrow>
             <mrow>945 &amp; = 525 \cdot 1 + 420</mrow>
             <mrow>525 &amp; = 420 \cdot 1 + 105</mrow>
             <mrow>420 &amp; = 105 \cdot 4 + 0</mrow>
           </md>.
-          Reversing our steps, <m>105</m> divides <m>420</m>,
-          <m>105</m> divides <m>525</m>,
-          <m>105</m> divides <m>945</m>,
-          and <m>105</m> divides <m>2415</m>.
-          Hence, <m>105</m> divides both <m>945</m> and <m>2415</m>.
-          If <m>d</m> were another common divisor of <m>945</m> and <m>2415</m>,
-          then <m>d</m> would also have to divide <m>105</m>.
-          Therefore, <m>\gcd( 945, 2415 ) = 105</m>.
+          Revertendo nossos passos, <m>105</m> divide <m>420</m>,
+          <m>105</m> divide <m>525</m>,
+          <m>105</m> divide <m>945</m>
+          e <m>105</m> divide <m>2415</m>.
+          Logo, <m>105</m> divide tanto <m>945</m> quanto <m>2415</m>.
+          Se <m>d</m> fosse outro divisor comum de <m>945</m> e <m>2415</m>,
+          então <m>d</m> também teria de dividir <m>105</m>.
+          Portanto, <m>\gcd( 945, 2415 ) = 105</m>.
         </p>
 
         <p>
-          If we work backward through the above sequence of equations,
-          we can also obtain numbers <m>r</m> and <m>s</m> such that <m>945 r + 2415 s = 105</m>.
-          Observe that
+          Se trabalharmos de trás para frente na sequência de equações acima,
+          também poderemos obter números <m>r</m> e <m>s</m> tais que <m>945 r + 2415 s = 105</m>.
+          Observe que
           <md>
             <mrow>105 &amp; = 525 + (-1) \cdot 420</mrow>
             <mrow>&amp; = 525 + (-1) \cdot [945 + (-1) \cdot 525]</mrow>
@@ -495,15 +495,15 @@
             <mrow>&amp; = 2 \cdot [2415 + (-2) \cdot 945] + (-1) \cdot 945</mrow>
             <mrow>&amp; = 2 \cdot 2415 + (-5) \cdot 945</mrow>
           </md>.
-          So <m>r = -5</m> and <m>s= 2</m>.
-          Notice that <m>r</m> and <m>s</m> are not unique,
-          since <m>r = 41</m> and <m>s = -16</m> would also work.
+          Assim, <m>r = -5</m> e <m>s= 2</m>.
+          Observe que <m>r</m> e <m>s</m> não são únicos,
+          pois <m>r = 41</m> e <m>s = -16</m> também funcionariam.
         </p>
       </example>
 
       <p>
-        To compute <m>\gcd(a,b) = d</m>,
-        we are using repeated divisions to obtain a decreasing sequence of positive integers <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; that is,
+        Para calcular <m>\gcd(a,b) = d</m>,
+        usamos divisões repetidas para obter uma sequência decrescente de inteiros positivos <m>r_1 \gt r_2 \gt \cdots \gt r_n = d</m>; isto é,
         <md>
           <mrow>b &amp; = a q_1 + r_1</mrow>
           <mrow>a &amp; = r_1 q_2 + r_2</mrow>
@@ -512,8 +512,8 @@
           <mrow>r_{n - 2} &amp; = r_{n - 1} q_{n} + r_{n}</mrow>
           <mrow>r_{n - 1} &amp; = r_n q_{n + 1}</mrow>
         </md>.
-        To find <m>r</m> and <m>s</m> such that <m>ar + bs = d</m>,
-        we begin with this last equation and substitute results obtained from the previous equations:
+        Para encontrar <m>r</m> e <m>s</m> tais que <m>ar + bs = d</m>,
+        começamos com esta última equação e substituímos os resultados obtidos nas equações anteriores:
         <md>
           <mrow>d &amp; = r_n</mrow>
           <mrow>&amp; = r_{n - 2} - r_{n - 1} q_n</mrow>
@@ -522,142 +522,142 @@
           <mrow>&amp; \aatavdots{=}</mrow>
           <mrow>&amp; = ra + sb</mrow>
         </md>.
-        The algorithm that we have just used to find the greatest common divisor <m>d</m> of two integers <m>a</m> and <m>b</m> and to write <m>d</m> as the linear combination of <m>a</m> and <m>b</m> is known as the
-        <idx><h>Euclidean algorithm</h></idx><idx><h>Algorithm</h><h>Euclidean</h></idx><term>Euclidean algorithm</term>.
+        O algoritmo que acabamos de usar para encontrar o máximo divisor comum <m>d</m> de dois inteiros <m>a</m> e <m>b</m> e escrever <m>d</m> como combinação linear de <m>a</m> e <m>b</m> é conhecido como
+        <idx><h>Algoritmo de Euclides</h></idx><idx><h>Algoritmo</h><h>Euclides</h></idx><term>algoritmo de Euclides</term>.
       </p>
     </subsection>
 
     <subsection xml:id="integers-subsection-prime-numbers">
-      <title>Prime Numbers</title>
+      <title>Números primos</title>
       <p>
-        Let <m>p</m> be an integer such that <m>p \gt 1</m>.
-        We say that <m>p</m> is a <term>prime number</term>,<idx><h>Prime integer</h></idx>
-        or simply <m>p</m> is <term>prime</term>,
-        if the only positive numbers that divide <m>p</m> are <m>1</m> and <m>p</m> itself.
-        An integer <m>n \gt 1</m> that is not prime is said to be <idx><h>Composite integer</h></idx><term>composite</term>.
+        Seja <m>p</m> um inteiro tal que <m>p \gt 1</m>.
+        Dizemos que <m>p</m> é um <term>número primo</term>,<idx><h>Inteiro primo</h></idx>
+        ou simplesmente que <m>p</m> é <term>primo</term>,
+        se os únicos números positivos que dividem <m>p</m> são <m>1</m> e o próprio <m>p</m>.
+        Um inteiro <m>n \gt 1</m> que não é primo é chamado de <idx><h>Inteiro composto</h></idx><term>composto</term>.
       </p>
 
       <lemma xml:id="integers-theorem-prime-divisor">
-        <title>Euclid</title>
+        <title>Euclides</title>
         <statement>
           <p>
-            Let <m>a</m> and <m>b</m> be integers and <m>p</m> be a prime number.
-            If <m>p \mid ab</m>, then either <m>p \mid a</m> or <m>p \mid b</m>.
+            Sejam <m>a</m> e <m>b</m> inteiros e seja <m>p</m> um número primo.
+            Se <m>p \mid ab</m>, então <m>p \mid a</m> ou <m>p \mid b</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>p</m> does not divide <m>a</m>.
-            We must show that <m>p \mid b</m>.
-            Since <m>\gcd( a, p ) = 1</m>,
-            there exist integers <m>r</m> and <m>s</m> such that <m>ar + ps = 1</m>.
-            So
+            Suponha que <m>p</m> não divida <m>a</m>.
+            Devemos mostrar que <m>p \mid b</m>.
+            Como <m>\gcd( a, p ) = 1</m>,
+            existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + ps = 1</m>.
+            Assim,
             <md>
               b = b(ar + ps) = (ab)r + p(bs)
             </md>.
-            Since <m>p</m> divides both <m>ab</m> and itself,
-            <m>p</m> must divide <m>b = (ab)r + p(bs)</m>.
+            Como <m>p</m> divide tanto <m>ab</m> quanto a si próprio,
+            <m>p</m> deve dividir <m>b = (ab)r + p(bs)</m>.
           </p>
         </proof>
       </lemma>
 
       <theorem xml:id="integers-theorem-infinite-primes">
-        <title>Euclid</title>
+        <title>Euclides</title>
         <statement>
           <p>
-            There exist an infinite number of primes.
+            Existem infinitos números primos.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will prove this theorem by contradiction.
-            Suppose that there are only a finite number of primes,
-            say <m>p_1, p_2, \ldots, p_n</m>.
-            Let <m>P = p_1 p_2 \cdots p_n + 1</m>.
-            Then <m>P</m> must be divisible by some <m>p_i</m> for <m>1 \leq i \leq n</m>.
-            In this case, <m>p_i</m> must divide
-            <m>P - p_1 p_2 \cdots p_n = 1</m>, which is a contradiction.
-            Hence, either <m>P</m> is prime or there exists an additional prime number
-            <m>p \neq p_i</m> that divides <m>P</m>.
+            Demonstraremos este teorema por contradição.
+            Suponha que exista apenas um número finito de primos,
+            digamos <m>p_1, p_2, \ldots, p_n</m>.
+            Seja <m>P = p_1 p_2 \cdots p_n + 1</m>.
+            Então <m>P</m> deve ser divisível por algum <m>p_i</m> para <m>1 \leq i \leq n</m>.
+            Nesse caso, <m>p_i</m> deve dividir
+            <m>P - p_1 p_2 \cdots p_n = 1</m>, o que é uma contradição.
+            Logo, ou <m>P</m> é primo ou existe um número primo adicional
+            <m>p \neq p_i</m> que divide <m>P</m>.
           </p>
         </proof>
       </theorem>
             <!-- Error in proof fixed.  Suggested by R. Rossi.  TWJ 12/19/2011 -->
       <theorem xml:id="integers-theorem-fund-theorem-arithmetic">
-        <title>Fundamental Theorem of Arithmetic</title>
+        <title>Teorema fundamental da aritmética</title>
         <idx>
-        <h>Fundamental Theorem</h>
-        <h>of Arithmetic</h>
+        <h>Teorema fundamental</h>
+        <h>da aritmética</h>
         </idx>
         <statement>
           <p>
-            Let <m>n</m> be an integer such that <m>n \gt 1</m>.
-            Then
+            Seja <m>n</m> um inteiro tal que <m>n \gt 1</m>.
+            Então
             <md>
               n = p_1 p_2 \cdots p_k
             </md>,
-            where <m>p_1, \ldots, p_k</m> are  primes
-            (not necessarily distinct).
-            Furthermore, this factorization is unique; that is, if
+            em que <m>p_1, \ldots, p_k</m> são primos
+            (não necessariamente distintos).
+            Além disso, essa fatoração é única; isto é, se
             <md>
               n = q_1 q_2 \cdots q_l
             </md>,
-            then <m>k = l</m> and the <m>q_i</m>'s are just the <m>p_i</m>'s rearranged.
+            então <m>k = l</m> e os <m>q_i</m> são apenas os <m>p_i</m> rearranjados.
           </p>
         </statement>
 
         <proof>
           <case>
-            <title>Uniqueness</title>
+            <title>Unicidade</title>
             <p>
-              To show uniqueness we will use induction on <m>n</m>.
-              The theorem is certainly true for <m>n = 2</m> since in this case <m>n</m> is prime.
-              Now assume that the result holds for all integers <m>m</m> such that <m>1 \leq m \lt n</m>, and
+              Para mostrar a unicidade, usaremos indução sobre <m>n</m>.
+              O teorema certamente é verdadeiro para <m>n = 2</m>, pois nesse caso <m>n</m> é primo.
+              Agora suponha que o resultado valha para todos os inteiros <m>m</m> tais que <m>1 \leq m \lt n</m> e
               <md>
                 n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l
               </md>,
-              where <m>p_1 \leq p_2 \leq \cdots \leq p_k</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_l</m>.
-              By <xref ref="integers-theorem-prime-divisor"/>, <m>p_1  \mid  q_i</m> for some
+              em que <m>p_1 \leq p_2 \leq \cdots \leq p_k</m> e <m>q_1 \leq q_2 \leq \cdots \leq q_l</m>.
+              Pelo <xref ref="integers-theorem-prime-divisor"/>, <m>p_1  \mid  q_i</m> para algum
               <m>i = 1, \ldots,
-              l</m> and <m>q_1  \mid  p_j</m> for some <m>j = 1, \ldots, k</m>.
-              Since all of the <m>p_i</m>'s and <m>q_i</m>'s are prime,
-              <m>p_1 = q_i</m> and  <m>q_1 = p_j</m>.
-              Hence, <m>p_1 = q_1</m> since <m>p_1 \leq p_j = q_1 \leq q_i = p_1</m>.
-              By the induction hypothesis,
+              l</m> e <m>q_1  \mid  p_j</m> para algum <m>j = 1, \ldots, k</m>.
+              Como todos os <m>p_i</m> e <m>q_i</m> são primos,
+              <m>p_1 = q_i</m> e <m>q_1 = p_j</m>.
+              Logo, <m>p_1 = q_1</m>, pois <m>p_1 \leq p_j = q_1 \leq q_i = p_1</m>.
+              Pela hipótese de indução,
               <md>
                 n' = p_2 \cdots p_k = q_2 \cdots q_l
               </md>
-              has a unique factorization.
-              Hence, <m>k = l</m> and <m>q_i = p_i</m> for <m>i = 1, \ldots, k</m>.
+              tem uma fatoração única.
+              Logo, <m>k = l</m> e <m>q_i = p_i</m> para <m>i = 1, \ldots, k</m>.
             </p>
           </case>
 
           <case>
-            <title>Existence</title>
+            <title>Existência</title>
             <p>
-              To show existence,
-              suppose that there is some integer that cannot be written as the product of primes.
-              Let <m>S</m> be the set of all such numbers.
-              By the Principle of Well-Ordering,
-              <m>S</m> has a smallest number, say <m>a</m>.
-              If the only positive factors of <m>a</m> are <m>a</m> and <m>1</m>,
-              then <m>a</m> is prime, which is a contradiction.
-              Hence, <m>a = a_1 a_2</m> where
-              <m>1 \lt a_1 \lt a</m> and <m>1 \lt a_2 \lt a</m>.
-              Neither <m>a_1\in S</m> nor <m>a_2 \in S</m>,
-              since <m>a</m> is the smallest element in <m>S</m>.
-              So
+              Para mostrar a existência,
+              suponha que exista algum inteiro que não possa ser escrito como produto de primos.
+              Seja <m>S</m> o conjunto de todos esses números.
+              Pelo princípio da boa ordenação,
+              <m>S</m> tem um menor número, digamos <m>a</m>.
+              Se os únicos fatores positivos de <m>a</m> forem <m>a</m> e <m>1</m>,
+              então <m>a</m> é primo, o que é uma contradição.
+              Logo, <m>a = a_1 a_2</m>, em que
+              <m>1 \lt a_1 \lt a</m> e <m>1 \lt a_2 \lt a</m>.
+              Nem <m>a_1\in S</m> nem <m>a_2 \in S</m>,
+              pois <m>a</m> é o menor elemento de <m>S</m>.
+              Assim,
               <md>
                 <mrow>a_1 &amp; = p_1 \cdots p_r</mrow>
                 <mrow>a_2 &amp; = q_1 \cdots q_s</mrow>
               </md>.
-              Therefore,
+              Portanto,
               <md>
                 a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s
               </md>.
-              So <m>a \notin S</m>, which is a contradiction.
+              Assim, <m>a \notin S</m>, o que é uma contradição.
             </p>
           </case>
         </proof>
@@ -665,34 +665,34 @@
     </subsection>
 
     <subsection xml:id="integers-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Prime numbers were first studied by the ancient Greeks.
-        Two important results from antiquity are Euclid's proof that an infinite number of primes exist and the Sieve of Eratosthenes,
-        a method of computing all of the prime numbers less than a fixed positive integer <m>n</m>.
-        One problem in number theory is to find a function <m>f</m> such that <m>f(n)</m> is prime for each integer <m>n</m>.
-        Pierre Fermat (1601?<ndash/>1665) conjectured that
-        <m>2^{2^n} + 1</m> was prime for all <m>n</m>,
-        but later it was shown by Leonhard Euler (1707<ndash/>1783) that
+        Os números primos foram estudados pela primeira vez pelos antigos gregos.
+        Dois resultados importantes da Antiguidade são a demonstração de Euclides de que existem infinitos números primos e o crivo de Eratóstenes,
+        um método para calcular todos os números primos menores que um inteiro positivo fixo <m>n</m>.
+        Um problema da teoria dos números é encontrar uma função <m>f</m> tal que <m>f(n)</m> seja primo para cada inteiro <m>n</m>.
+        Pierre Fermat (1601?<ndash/>1665) conjecturou que
+        <m>2^{2^n} + 1</m> seria primo para todo <m>n</m>,
+        mas mais tarde Leonhard Euler (1707<ndash/>1783) mostrou que
         <md>
           2^{2^5} + 1 = 4{,}294{,}967{,}297
         </md>
-        is a composite number.
-        One of the many unproven conjectures about prime numbers is Goldbach's Conjecture.
-        In a letter to Euler in 1742, Christian Goldbach stated the conjecture that every even integer with the exception of <m>2</m> seemed to be the sum of two primes:
+        é um número composto.
+        Uma das muitas conjecturas não demonstradas sobre números primos é a conjectura de Goldbach.
+        Em uma carta a Euler, em 1742, Christian Goldbach formulou a conjectura de que todo inteiro par, com exceção de <m>2</m>, parecia ser a soma de dois primos:
         <m>4 = 2 + 2</m>, <m>6 = 3 + 3</m>,
         <m>8 =3 + 5</m>, <m>\ldots</m>.
-        Although the conjecture has been verified for the numbers up through <m>4 \times 10^{18}</m>,
-        it has yet to be proven in general.
-        Since prime numbers play an important role in public key cryptography,
-        there is currently a great deal of interest in determining whether or not a large number is prime.
+        Embora a conjectura tenha sido verificada para os números até <m>4 \times 10^{18}</m>,
+        ela ainda não foi demonstrada em geral.
+        Como os números primos desempenham um papel importante na criptografia de chave pública,
+        há atualmente grande interesse em determinar se um número grande é primo.
       </p>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage's original purpose was to support research in number theory,
-          so it is perfect for the types of computations with the integers that we have in this chapter.
+          O propósito original do Sage era apoiar a pesquisa em teoria dos números,
+          portanto ele é perfeito para os tipos de cálculos com inteiros que fazemos neste capítulo.
         </p>
       </paragraphs>
     </subsection>
@@ -704,7 +704,7 @@
     <exercise label="rq-integers-factor">
       <statement>
         <p>
-          Use Sage to express <m>123456792</m> as a product of prime numbers.
+          Use o Sage para expressar <m>123456792</m> como produto de números primos.
         </p>
       </statement>
       <response/>
@@ -713,7 +713,7 @@
     <exercise label="rq-integers-gcd">
       <statement>
         <p>
-          Find the greatest common divisor of <m>84</m> and <m>52</m>.
+          Encontre o máximo divisor comum de <m>84</m> e <m>52</m>.
         </p>
       </statement>
       <response/>
@@ -722,7 +722,7 @@
     <exercise label="rq-integers-euclid">
       <statement>
         <p>
-          Find integers <m>r</m> and <m>s</m> so that <m>r(84)+s(52)=\gcd(84,52)</m>.
+          Encontre inteiros <m>r</m> e <m>s</m> tais que <m>r(84)+s(52)=\gcd(84,52)</m>.
         </p>
       </statement>
       <response/>
@@ -731,7 +731,7 @@
     <exercise label="rq-integers-induction">
       <statement>
         <p>
-          Explain the use of the term <q>induction hypothesis.</q>
+          Explique o uso do termo <q>hipótese de indução</q>.
         </p>
       </statement>
       <response/>
@@ -740,8 +740,8 @@
     <exercise label="rq-integers-goldbach">
       <statement>
         <p>
-          What is Goldbach's Conjecture?
-          And why is it called a <q>conjecture</q>?
+          O que é a conjectura de Goldbach?
+          E por que ela é chamada de <q>conjectura</q>?
         </p>
       </statement>
       <response/>
@@ -752,30 +752,30 @@
     <!-- File: integers.xml  -->
     <!-- Title: The Integers -->
   <exercises xml:id="integers-exercises" filenamebase="integers">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="integers-exercise-pmi-sum-squares">
       <statement>
         <p>
-          Prove that
+          Demonstre que
           <md>
             1^2 + 2^2 + \cdots + n^2 = \frac{n(n + 1)(2n + 1)}{6}
           </md>
-          for <m>n \in {\mathbb N}</m>.
+          para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          The base case,
-          <m>S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2</m> is true.
-          Assume that <m>S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6</m> is true.
-          Then
+          O caso base,
+          <m>S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2</m> é verdadeiro.
+          Suponha que <m>S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6</m> seja verdadeiro.
+          Então
           <md>
             <mrow>1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 &amp; = [k(k + 1)(2k + 1)]/6 + (k + 1)^2</mrow>
             <mrow>&amp; = [(k + 1)((k + 1) + 1)(2(k + 1) + 1)]/6</mrow>
           </md>,
-          and so <m>S(k + 1)</m> is true.
-          Thus, <m>S(n)</m> is true for all positive integers <m>n</m>.
+          e, portanto, <m>S(k + 1)</m> é verdadeiro.
+          Assim, <m>S(n)</m> é verdadeiro para todos os inteiros positivos <m>n</m>.
         </p>
       </hint>
     </exercise>
@@ -783,11 +783,11 @@
     <exercise number="2" xml:id="integers-exercise-pmi-sum-cubes">
       <statement>
         <p>
-          Prove that
+          Demonstre que
           <md>
             1^3 + 2^3 + \cdots + n^3 = \frac{n^2(n + 1)^2}{4}
           </md>
-          for <m>n \in {\mathbb N}</m>.
+          para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -795,16 +795,16 @@
     <exercise number="3" xml:id="integers-exercise-pmi-factorial">
       <statement>
         <p>
-          Prove that <m>n! \gt 2^n</m> for <m>n \geq 4</m>.
+          Demonstre que <m>n! \gt 2^n</m> para <m>n \geq 4</m>.
         </p>
       </statement>
       <hint>
         <p>
-          The base case, <m>S(4): 4! = 24 \gt 16 =2^4</m> is true.
-          Assume <m>S(k): k! \gt 2^k</m> is true.
-          Then <m>(k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}</m>,
-          so <m>S(k + 1)</m> is true.
-          Thus, <m>S(n)</m> is true for all positive integers <m>n</m>.
+          O caso base, <m>S(4): 4! = 24 \gt 16 =2^4</m>, é verdadeiro.
+          Suponha que <m>S(k): k! \gt 2^k</m> seja verdadeiro.
+          Então <m>(k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}</m>,
+          logo <m>S(k + 1)</m> é verdadeiro.
+          Assim, <m>S(n)</m> é verdadeiro para todos os inteiros positivos <m>n</m>.
         </p>
       </hint>
     </exercise>
@@ -812,11 +812,11 @@
     <exercise number="4" xml:id="integers-exercise-pmi-odd-times-x">
       <statement>
         <p>
-          Prove that
+          Demonstre que
           <md>
             x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
           </md>
-          for <m>n \in {\mathbb N}</m>.
+          para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -824,7 +824,7 @@
     <exercise number="5" xml:id="integers-exercise-pmi-divisible-by-3">
       <statement>
         <p>
-          Prove that <m>10^{n + 1} + 10^n + 1</m> is divisible by <m>3</m> for <m>n \in {\mathbb N}</m>.
+          Demonstre que <m>10^{n + 1} + 10^n + 1</m> é divisível por <m>3</m> para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -832,7 +832,7 @@
     <exercise number="6" xml:id="integers-exercise-pmi-divisible-by-99">
       <statement>
         <p>
-          Prove that <m>4 \cdot 10^{2n} + 9 \cdot 10^{2n - 1} + 5</m> is divisible by <m>99</m> for <m>n \in {\mathbb N}</m>.
+          Demonstre que <m>4 \cdot 10^{2n} + 9 \cdot 10^{2n - 1} + 5</m> é divisível por <m>99</m> para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -840,7 +840,7 @@
     <exercise number="7" xml:id="integers-exercise-pmi-geometric-arithmetic-mean">
       <statement>
         <p>
-          Show that
+          Mostre que
           <md>
             \sqrt[n]{a_1 a_2 \cdots a_n} \leq \frac{1}{n} \sum_{k = 1}^{n} a_k
           </md>.
@@ -851,9 +851,9 @@
     <exercise number="8" xml:id="integers-exercise-pmi-leibniz">
       <statement>
         <p>
-          Prove the Leibniz rule for <m>f^{(n)} (x)</m>,
-          where <m>f^{(n)}</m> is the <m>n</m>th derivative of <m>f</m>; that is,
-          show that
+          Demonstre a regra de Leibniz para <m>f^{(n)} (x)</m>,
+          em que <m>f^{(n)}</m> é a <m>n</m>-ésima derivada de <m>f</m>; isto é,
+          mostre que
           <md>
             (fg)^{(n)}(x) = \sum_{k = 0}^{n} \binom{n}{k} f^{(k)}(x) g^{(n - k)}(x)
           </md>.
@@ -861,7 +861,7 @@
       </statement>
       <hint>
         <p>
-          Follow the proof in <xref ref="integers-example-binomial-theorem"/>.
+          Siga a demonstração em <xref ref="integers-example-binomial-theorem"/>.
         </p>
       </hint>
     </exercise>
@@ -869,8 +869,8 @@
     <exercise number="9" xml:id="integers-exercise-pmi-sum-powers-of-2">
       <statement>
         <p>
-          Use induction to prove that
-          <m>1 + 2 + 2^2 + \cdots + 2^n = 2^{n + 1} - 1</m> for <m>n \in {\mathbb N}</m>.
+          Use indução para demonstrar que
+          <m>1 + 2 + 2^2 + \cdots + 2^n = 2^{n + 1} - 1</m> para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -878,11 +878,11 @@
     <exercise number="10" xml:id="integers-exercise-pmi-sum-n-over-n-plus-one">
       <statement>
         <p>
-          Prove that
+          Demonstre que
           <md>
             \frac{1}{2}+ \frac{1}{6} + \cdots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}
           </md>
-          for <m>n \in {\mathbb N}</m>.
+          para <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -890,16 +890,16 @@
     <exercise number="11" xml:id="integers-exercise-pmi-less-than-nx">
       <statement>
         <p>
-          If <m>x</m> is a nonnegative real number,
-          then show that <m>(1 + x)^n - 1 \geq nx</m> for <m>n = 0, 1, 2, \ldots</m>.
+          Se <m>x</m> é um número real não negativo,
+          mostre que <m>(1 + x)^n - 1 \geq nx</m> para <m>n = 0, 1, 2, \ldots</m>.
         </p>
       </statement>
       <hint>
         <p>
-          The base case,
-          <m>S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x</m> is true.
-          Assume <m>S(k): (1 + x)^k -1 \geq kx</m> is true.
-          Then
+          O caso base,
+          <m>S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x</m> é verdadeiro.
+          Suponha que <m>S(k): (1 + x)^k -1 \geq kx</m> seja verdadeiro.
+          Então
           <md>
             <mrow>(1 + x)^{k + 1} - 1 &amp; = (1 + x)(1 + x)^k -1</mrow>
             <mrow>&amp; = (1 + x)^k + x(1 + x)^k - 1</mrow>
@@ -907,32 +907,32 @@
             <mrow>&amp; \geq kx + x</mrow>
             <mrow>&amp; = (k + 1)x</mrow>
           </md>,
-          so <m>S(k + 1)</m> is true.
-          Therefore, <m>S(n)</m> is true for all positive integers <m>n</m>.
+          logo <m>S(k + 1)</m> é verdadeiro.
+          Portanto, <m>S(n)</m> é verdadeiro para todos os inteiros positivos <m>n</m>.
         </p>
       </hint>
     </exercise>
 
     <exercise number="12" xml:id="integers-exercise-power-sets">
-      <title>Power Sets</title>
+      <title>Conjuntos das partes</title>
       <statement>
         <p>
-          Let <m>X</m> be a set.
-          Define the <term>power set</term> of <m>X</m>,
-          denoted <m>{\mathcal P}(X)</m>,
-          to be the set of all subsets  of <m>X</m>.
+          Seja <m>X</m> um conjunto.
+          Defina o <term>conjunto das partes</term> de <m>X</m>,
+          denotado por <m>{\mathcal P}(X)</m>,
+          como o conjunto de todos os subconjuntos de <m>X</m>.
 
           <notation>
             <usage><m>\mathcal P(X)</m></usage>
-            <description>power set of <m>X</m></description>
+            <description>conjunto das partes de <m>X</m></description>
           </notation>
 
-          For example,
+          Por exemplo,
           <md>
             {\mathcal P}( \{a, b\} ) = \{ \emptyset, \{a\}, \{b\}, \{a, b\} \}
           </md>.
-          For every positive integer <m>n</m>,
-          show that a set with exactly <m>n</m> elements has a power set with exactly <m>2^n</m> elements.
+          Para todo inteiro positivo <m>n</m>,
+          mostre que um conjunto com exatamente <m>n</m> elementos tem um conjunto das partes com exatamente <m>2^n</m> elementos.
         </p>
       </statement>
     </exercise>
@@ -940,7 +940,7 @@
     <exercise number="13" xml:id="integers-exercise-pmi-equivalent">
       <statement>
         <p>
-          Prove that the two principles of mathematical induction stated in <xref ref="integers-section-math-induction"/> are equivalent.
+          Demonstre que os dois princípios da indução matemática enunciados em <xref ref="integers-section-math-induction"/> são equivalentes.
         </p>
       </statement>
     </exercise>
@@ -948,11 +948,11 @@
     <exercise number="14" xml:id="integers-exercise-smallest-natural-number">
       <statement>
         <p>
-          Show that the Principle of Well-Ordering for the natural numbers implies that <m>1</m> is the smallest natural number.
-          Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction;
-          that is, show that if <m>S \subset {\mathbb N}</m> such that <m>1 \in S</m> and
-          <m>n + 1 \in S</m> whenever <m>n \in S</m>,
-          then <m>S = {\mathbb N}</m>.
+          Mostre que o princípio da boa ordenação para os números naturais implica que <m>1</m> é o menor número natural.
+          Use esse resultado para mostrar que o princípio da boa ordenação implica o princípio da indução matemática;
+          isto é, mostre que, se <m>S \subset {\mathbb N}</m> é tal que <m>1 \in S</m> e
+          <m>n + 1 \in S</m> sempre que <m>n \in S</m>,
+          então <m>S = {\mathbb N}</m>.
         </p>
       </statement>
     </exercise>
@@ -960,43 +960,43 @@
     <exercise number="15" xml:id="integers-exercise--gcd-linear-combination">
       <statement>
         <p>
-          For each of the following pairs of numbers <m>a</m> and <m>b</m>,
-          calculate <m>\gcd(a,b)</m> and find integers <m>r</m> and <m>s</m> such that <m>\gcd(a,b) = ra + sb</m>.
+          Para cada um dos pares de números <m>a</m> e <m>b</m> a seguir,
+          calcule <m>\gcd(a,b)</m> e encontre inteiros <m>r</m> e <m>s</m> tais que <m>\gcd(a,b) = ra + sb</m>.
 
           <ol cols="2">
             <li>
               <p>
-                <m>14</m> and <m>39</m>
+                <m>14</m> e <m>39</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>234</m> and <m>165</m>
+                <m>234</m> e <m>165</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>1739</m> and <m>9923</m>
+                <m>1739</m> e <m>9923</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>471</m> and <m>562</m>
+                <m>471</m> e <m>562</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>23771</m> and <m>19945</m>
+                <m>23771</m> e <m>19945</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>-4357</m> and <m>3754</m>
+                <m>-4357</m> e <m>3754</m>
               </p>
             </li>
           </ol>
@@ -1007,9 +1007,9 @@
     <exercise number="16" xml:id="integers-exercise-gcd-1">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be nonzero integers.
-          If there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs =1</m>,
-          show that <m>a</m> and <m>b</m> are relatively prime.
+          Sejam <m>a</m> e <m>b</m> inteiros não nulos.
+          Se existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + bs =1</m>,
+          mostre que <m>a</m> e <m>b</m> são primos entre si.
         </p>
       </statement>
     </exercise>
@@ -1017,45 +1017,45 @@
     <!--Todo Check references to the Fibonacci numbers-->
 
     <exercise number="17" xml:id="integers-exercise-fibonacci">
-      <title>Fibonacci Numbers</title>
+      <title>Números de Fibonacci</title>
       <statement>
         <p>
-          The Fibonacci numbers are
+          Os números de Fibonacci são
           <md>
             1, 1, 2, 3, 5, 8, 13, 21, \ldots
           </md>.
-          We can define them inductively by <m>f_1 = 1</m>, <m>f_2 = 1</m>,
-          and <m>f_{n + 2} = f_{n + 1} + f_n</m> for <m>n \in {\mathbb N}</m>.
+          Podemos defini-los indutivamente por <m>f_1 = 1</m>, <m>f_2 = 1</m>
+          e <m>f_{n + 2} = f_{n + 1} + f_n</m> para <m>n \in {\mathbb N}</m>.
 
           <ol>
             <li>
               <p>
-                Prove that <m>f_n \lt 2^n</m>.
+                Demonstre que <m>f_n \lt 2^n</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>f_{n + 1} f_{n - 1} = f^2_n + (-1)^n</m>,
+                Demonstre que <m>f_{n + 1} f_{n - 1} = f^2_n + (-1)^n</m>,
                 <m>n \geq 2</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>f_n = [(1 + \sqrt{5}\, )^n - (1 - \sqrt{5}\, )^n]/ 2^n \sqrt{5}</m>.
+                Demonstre que <m>f_n = [(1 + \sqrt{5}\, )^n - (1 - \sqrt{5}\, )^n]/ 2^n \sqrt{5}</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>\phi = \lim_{n \rightarrow \infty}  f_{n + 1} / f_n  = (\sqrt{5} + 1)/2</m>.  The constant <m>\phi</m> is known as the <term>golden ratio</term>.
+                Mostre que <m>\phi = \lim_{n \rightarrow \infty}  f_{n + 1} / f_n  = (\sqrt{5} + 1)/2</m>. A constante <m>\phi</m> é conhecida como <term>razão áurea</term>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>f_n</m> and <m>f_{n + 1}</m> are relatively prime.
+                Demonstre que <m>f_n</m> e <m>f_{n + 1}</m> são primos entre si.
               </p>
             </li>
           </ol>
@@ -1063,9 +1063,9 @@
       </statement>
       <hint>
         <p>
-          For (a) and (b) use mathematical induction. (c) Show that <m>f_1 = 1</m>,
+          Para (a) e (b), use indução matemática. (c) Mostre que <m>f_1 = 1</m>,
           <m>f_2 = 1</m>,
-          and <m>f_{n + 2} = f_{n + 1} + f_n</m>. (e) Use part (b) and <xref ref="integers-exercise-gcd-1"/>.
+          e <m>f_{n + 2} = f_{n + 1} + f_n</m>. (e) Use a parte (b) e <xref ref="integers-exercise-gcd-1"/>.
         </p>
       </hint>
     </exercise>
@@ -1073,9 +1073,9 @@
     <exercise number="18" xml:id="integers-exercise-coprime-gcd-as-rb-rs">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be integers such that <m>\gcd(a,b) = 1</m>.
-          Let <m>r</m> and <m>s</m> be integers such that <m>ar + bs = 1</m>.
-          Prove that
+          Sejam <m>a</m> e <m>b</m> inteiros tais que <m>\gcd(a,b) = 1</m>.
+          Sejam <m>r</m> e <m>s</m> inteiros tais que <m>ar + bs = 1</m>.
+          Demonstre que
           <md>
             \gcd(a,s) = \gcd(r,b) = \gcd(r,s) =  1
           </md>.
@@ -1086,14 +1086,14 @@
     <exercise number="19" xml:id="integers-exercise-coprime-perfect-squares">
       <statement>
         <p>
-          Let <m>x, y \in {\mathbb N}</m> be relatively prime.
-          If <m>xy</m> is a perfect square,
-          prove that <m>x</m> and <m>y</m> must both be perfect squares.
+          Sejam <m>x, y \in {\mathbb N}</m> primos entre si.
+          Se <m>xy</m> é um quadrado perfeito,
+          demonstre que <m>x</m> e <m>y</m> devem ser ambos quadrados perfeitos.
         </p>
       </statement>
       <hint>
         <p>
-          Use the Fundamental Theorem of Arithmetic.
+          Use o Teorema Fundamental da Aritmética.
         </p>
       </hint>
     </exercise>
@@ -1101,8 +1101,8 @@
     <exercise number="20" xml:id="integers-exercise-perfect-square-4k">
       <statement>
         <p>
-          Using the division algorithm,
-          show that every perfect square is of the form <m>4k</m> or <m>4k + 1</m> for some nonnegative integer <m>k</m>.
+          Usando o algoritmo da divisão,
+          mostre que todo quadrado perfeito tem a forma <m>4k</m> ou <m>4k + 1</m> para algum inteiro não negativo <m>k</m>.
         </p>
       </statement>
     </exercise>
@@ -1110,13 +1110,13 @@
     <exercise number="21" xml:id="integers-exercise-relatively-prime-squares">
       <statement>
         <p>
-          Suppose that <m>a, b, r, s</m> are pairwise relatively prime and that
+          Suponha que <m>a, b, r, s</m> sejam primos entre si dois a dois e que
           <md>
             <mrow>a^2 + b^2 &amp; = r^2</mrow>
             <mrow>a^2 - b^2 &amp; = s^2</mrow>
           </md>.
-          Prove that <m>a</m>, <m>r</m>,
-          and <m>s</m> are odd and <m>b</m> is even.
+          Demonstre que <m>a</m>, <m>r</m>
+          e <m>s</m> são ímpares e <m>b</m> é par.
         </p>
       </statement>
     </exercise>
@@ -1124,12 +1124,12 @@
     <exercise number="22" xml:id="integers-exercise-Zn-conguence">
       <statement>
         <p>
-          Let <m>n \in {\mathbb N}</m>.
-          Use the division algorithm to prove that every integer is congruent mod <m>n</m> to precisely one of the integers <m>0, 1, \ldots, n-1</m>.
-          Conclude that if <m>r</m> is an integer,
-          then there is exactly one <m>s</m> in <m>{\mathbb Z}</m> such that
-          <m>0 \leq s \lt n</m> and <m>[r] = [s]</m>.
-          Hence, the integers are indeed partitioned by congruence mod <m>n</m>.
+          Seja <m>n \in {\mathbb N}</m>.
+          Use o algoritmo da divisão para demonstrar que todo inteiro é congruente módulo <m>n</m> a exatamente um dos inteiros <m>0, 1, \ldots, n-1</m>.
+          Conclua que, se <m>r</m> é um inteiro,
+          então existe exatamente um <m>s</m> em <m>{\mathbb Z}</m> tal que
+          <m>0 \leq s \lt n</m> e <m>[r] = [s]</m>.
+          Portanto, os inteiros são de fato particionados pela congruência módulo <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1137,24 +1137,24 @@
     <exercise number="23" xml:id="integers-exercise-lcm">
       <statement>
         <p>
-          Define the <term>least common multiple</term>
-          of two nonzero integers <m>a</m> and <m>b</m>,
-          denoted by <m>\lcm(a,b)</m>,
-          to be the nonnegative integer <m>m</m> such that both <m>a</m> and <m>b</m> divide <m>m</m>,
-          and if <m>a</m> and <m>b</m> divide any other integer <m>n</m>,
-          then <m>m</m> also divides <m>n</m>.
+          Defina o <term>mínimo múltiplo comum</term>
+          de dois inteiros não nulos <m>a</m> e <m>b</m>,
+          denotado por <m>\lcm(a,b)</m>,
+          como o inteiro não negativo <m>m</m> tal que tanto <m>a</m> quanto <m>b</m> dividem <m>m</m>
+          e, se <m>a</m> e <m>b</m> dividem qualquer outro inteiro <m>n</m>,
+          então <m>m</m> também divide <m>n</m>.
 
           <notation>
             <usage><m>\lcm(m,n)</m></usage>
-            <description>the least common multiple of <m>m</m> and <m>n</m></description>
+            <description>o mínimo múltiplo comum de <m>m</m> e <m>n</m></description>
           </notation>
 
-          Prove there exists a unique least common multiple for any two integers <m>a</m> and <m>b</m>.
+          Demonstre que existe um único mínimo múltiplo comum para quaisquer dois inteiros <m>a</m> e <m>b</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Use the Principle of Well-Ordering and the division algorithm.
+          Use o princípio da boa ordenação e o algoritmo da divisão.
         </p>
       </hint>
     </exercise>
@@ -1162,8 +1162,8 @@
     <exercise number="24" xml:id="integers-exercise-lcm-gcd">
       <statement>
         <p>
-          If <m>d= \gcd(a, b)</m> and <m>m = \lcm(a, b)</m>,
-          prove that <m>dm = |ab|</m>.
+          Se <m>d= \gcd(a, b)</m> e <m>m = \lcm(a, b)</m>,
+          demonstre que <m>dm = |ab|</m>.
         </p>
       </statement>
     </exercise>
@@ -1171,7 +1171,7 @@
     <exercise number="25" xml:id="integers-exercise-coprime-lcd">
       <statement>
         <p>
-          Show that <m>\lcm(a,b) = ab</m> if and only if <m>\gcd(a,b) = 1</m>.
+          Mostre que <m>\lcm(a,b) = ab</m> se, e somente se, <m>\gcd(a,b) = 1</m>.
         </p>
       </statement>
     </exercise>
@@ -1179,9 +1179,9 @@
     <exercise number="26" xml:id="integers-exercise-gcd-products">
       <statement>
         <p>
-          Prove that <m>\gcd(a,c) = \gcd(b,c) =1</m> if and only if
-          <m>\gcd(ab,c) = 1</m> for integers <m>a</m>, <m>b</m>,
-          and <m>c</m>.
+          Demonstre que <m>\gcd(a,c) = \gcd(b,c) =1</m> se, e somente se,
+          <m>\gcd(ab,c) = 1</m> para inteiros <m>a</m>, <m>b</m>
+          e <m>c</m>.
         </p>
       </statement>
     </exercise>
@@ -1189,16 +1189,16 @@
     <exercise number="27" xml:id="integers-exercise-coprime-divides-factor">
       <statement>
         <p>
-          Let <m>a, b, c \in {\mathbb Z}</m>.
-          Prove that if <m>\gcd(a,b) = 1</m> and
-          <m>a \mid bc</m>, then <m>a \mid c</m>.
+          Sejam <m>a, b, c \in {\mathbb Z}</m>.
+          Demonstre que, se <m>\gcd(a,b) = 1</m> e
+          <m>a \mid bc</m>, então <m>a \mid c</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Since <m>\gcd(a,b) = 1</m>,
-          there exist integers <m>r</m> and <m>s</m> such that <m>ar + bs = 1</m>.
-          Thus, <m>acr + bcs = c</m>.
+          Como <m>\gcd(a,b) = 1</m>,
+          existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + bs = 1</m>.
+          Assim, <m>acr + bcs = c</m>.
         </p>
       </hint>
     </exercise>
@@ -1206,9 +1206,9 @@
     <exercise number="28" xml:id="integers-exercise-2-hat-p-minus-1-prime">
       <statement>
         <p>
-          Let <m>p \geq 2</m>.
-          Prove that if <m>2^p - 1</m> is prime,
-          then <m>p</m> must also be prime.
+          Seja <m>p \geq 2</m>.
+          Demonstre que, se <m>2^p - 1</m> é primo,
+          então <m>p</m> também deve ser primo.
         </p>
       </statement>
     </exercise>
@@ -1216,14 +1216,14 @@
     <exercise number="29" xml:id="integers-exercise-prime-6n-plus-5">
       <statement>
         <p>
-          Prove that there are an infinite number of primes of the form <m>6n + 5</m>.
+          Demonstre que existem infinitos primos da forma <m>6n + 5</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Every prime must be of the form <m>2</m>, <m>3</m>,
-          <m>6n + 1</m>, or <m>6n + 5</m>.
-          Suppose there are only finitely many primes of the form <m>6k + 5</m>.
+          Todo primo deve ter a forma <m>2</m>, <m>3</m>,
+          <m>6n + 1</m> ou <m>6n + 5</m>.
+          Suponha que existam apenas finitos primos da forma <m>6k + 5</m>.
         </p>
       </hint>
     </exercise>
@@ -1231,7 +1231,7 @@
     <exercise number="30" xml:id="integers-exercise-infinite-primes-4n-1">
       <statement>
         <p>
-          Prove that there are an infinite number of primes of the form <m>4n - 1</m>.
+          Demonstre que existem infinitos primos da forma <m>4n - 1</m>.
         </p>
       </statement>
     </exercise>
@@ -1239,64 +1239,64 @@
     <exercise number="31" xml:id="integers-exercise-sqrt-2-irrational">
       <statement>
         <p>
-          Using the fact that <m>2</m> is prime,
-          show that there do not exist integers <m>p</m> and <m>q</m> such that <m>p^2 = 2 q^2</m>.
-          Demonstrate that therefore
-          <m>\sqrt{2}</m> cannot be a rational number.
+          Usando o fato de que <m>2</m> é primo,
+          mostre que não existem inteiros <m>p</m> e <m>q</m> tais que <m>p^2 = 2 q^2</m>.
+          Demonstre que, portanto,
+          <m>\sqrt{2}</m> não pode ser um número racional.
         </p>
       </statement>
     </exercise>
 
   </exercises>
   <exercises xml:id="integers-exercises-programming">
-    <title>Programming Exercises</title>
+    <title>Exercícios de programação</title>
 
     <exercise xml:id="integers-exercise-eratosthenes">
-      <title>The Sieve of Eratosthenes</title>
+      <title>O crivo de Eratóstenes</title>
       <idx>
-      <h>Sieve of Eratosthenes</h>
+      <h>Crivo de Eratóstenes</h>
       </idx>
       <statement>
         <p>
-          One method of computing all of the prime numbers less than a certain fixed positive integer <m>N</m> is to list all of the numbers <m>n</m> such that <m>1 \lt n \lt N</m>.
-          Begin by eliminating all of the multiples of <m>2</m>.
-          Next eliminate all of the multiples of <m>3</m>.
-          Now eliminate all of the multiples of <m>5</m>.
-          Notice that <m>4</m> has already been crossed out.
-          Continue in this manner,
-          noticing that we do not have to go all the way to <m>N</m>;
-          it suffices to stop at <m>\sqrt{N}</m>.
-          Using this method,
-          compute all of the prime numbers less than <m>N = 250</m>.
-          We can also use this method to find all of the integers that are relatively prime to an integer <m>N</m>.
-          Simply eliminate the prime factors of <m>N</m> and all of their multiples.
-          Using this method,
-          find all of the numbers that are relatively prime to <m>N= 120</m>.
-          Using the Sieve of Eratosthenes,
-          write a program that will compute all of the primes less than an integer <m>N</m>.
+          Um método para calcular todos os números primos menores que um certo inteiro positivo fixo <m>N</m> é listar todos os números <m>n</m> tais que <m>1 \lt n \lt N</m>.
+          Comece eliminando todos os múltiplos de <m>2</m>.
+          Em seguida, elimine todos os múltiplos de <m>3</m>.
+          Agora elimine todos os múltiplos de <m>5</m>.
+          Observe que <m>4</m> já foi riscado.
+          Continue dessa maneira,
+          observando que não precisamos ir até <m>N</m>;
+          basta parar em <m>\sqrt{N}</m>.
+          Usando esse método,
+          calcule todos os números primos menores que <m>N = 250</m>.
+          Também podemos usar esse método para encontrar todos os inteiros primos entre si com um inteiro <m>N</m>.
+          Basta eliminar os fatores primos de <m>N</m> e todos os seus múltiplos.
+          Usando esse método,
+          encontre todos os números primos entre si com <m>N= 120</m>.
+          Usando o crivo de Eratóstenes,
+          escreva um programa que calcule todos os primos menores que um inteiro <m>N</m>.
         </p>
       </statement>
     </exercise>
 
     <exercise xml:id="integers-exercise-ackermann">
       <idx>
-      <h>Ackermann's function</h>
+      <h>Função de Ackermann</h>
       </idx>
       <statement>
         <p>
-          Let <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>.
-          Ackermann's function is the function
-          <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> defined by the equations
+          Seja <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>.
+          A função de Ackermann é a função
+          <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> definida pelas equações
           <md>
             <mrow>A(0, y) &amp; = y + 1,</mrow>
             <mrow>A(x + 1, 0) &amp; = A(x, 1),</mrow>
             <mrow>A(x + 1, y + 1) &amp; = A(x, A(x + 1, y))</mrow>
           </md>.
-          Use this definition to compute <m>A(3, 1)</m>.
-          Write a program to evaluate Ackermann's function.
-          Modify the  program to count the number of statements executed in the program when Ackermann's function is evaluated.
-          How many statements are executed in the evaluation of <m>A(4, 1)</m>?
-          What about <m>A(5, 1)</m>?
+          Use essa definição para calcular <m>A(3, 1)</m>.
+          Escreva um programa para avaliar a função de Ackermann.
+          Modifique o programa para contar o número de instruções executadas quando a função de Ackermann é avaliada.
+          Quantas instruções são executadas na avaliação de <m>A(4, 1)</m>?
+          E de <m>A(5, 1)</m>?
         </p>
       </statement>
     </exercise>
@@ -1304,9 +1304,9 @@
     <exercise xml:id="integers-exercise-program-euclidean-algorithm">
       <statement>
         <p>
-          Write a computer program that will implement the Euclidean algorithm.
-          The program should accept two positive integers <m>a</m> and <m>b</m> as input and should output
-          <m>\gcd( a,b)</m> as well as integers <m>r</m> and <m>s</m> such that
+          Escreva um programa de computador que implemente o algoritmo de Euclides.
+          O programa deve aceitar como entrada dois inteiros positivos <m>a</m> e <m>b</m> e deve produzir como saída
+          <m>\gcd( a,b)</m>, bem como inteiros <m>r</m> e <m>s</m> tais que
           <md>
             \gcd( a,b) = ra + sb
           </md>.
@@ -1318,14 +1318,14 @@
   <!--Todo Fix intro to references-->
 
   <references xml:id="integers-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
         <!-- References updated - TWJ 5/4/2010 -->
         <!--			<p>References [2], [3], and [4] are good sources for elementary number
 theory.</p> -->
     <biblio type="raw">
 <!-- was [1] -->
       Brookshear, J. G.
-      <title>Theory of Computation: Formal Languages, Automata, and Complexity</title>.  Benjamin/Cummings, Redwood City, CA, 1989. Shows the relationships of the theoretical aspects of computer science to set theory and the integers.
+      <title>Theory of Computation: Formal Languages, Automata, and Complexity</title>.  Benjamin/Cummings, Redwood City, CA, 1989. Mostra as relações entre os aspectos teóricos da ciência da computação, a teoria dos conjuntos e os inteiros.
     </biblio>
 
     <biblio type="raw">
@@ -1353,22 +1353,22 @@ theory.</p> -->
     <title>Sage</title>
     <introduction>
       <p>
-        Many properties of the algebraic objects we will study can be determined from properties of associated integers.
-        And Sage has many powerful functions for analyzing integers.
+        Muitas propriedades dos objetos algébricos que estudaremos podem ser determinadas a partir das propriedades dos inteiros associados.
+        E o Sage possui muitas funções poderosas para analisar inteiros.
       </p>
     </introduction>
 
     <subsection>
-      <title>Division Algorithm</title>
+      <title>Algoritmo da divisão</title>
       <p>
-        The code <c>a % b</c> will return the remainder upon division of <m>a</m> by <m>b</m>.
-        In other words,
-        the result is the unique integer <m>r</m> such that (1) <m>0\leq r\lt b</m>,
-        and (2) <m>a=bq+r</m> for some integer <m>q</m>
-        (the quotient),
-        as guaranteed by the Division Algorithm (<xref ref="integers-theorem-division_algorithm"/>).
-        Then <m>(a-r)/b</m> will equal <m>q</m>.
-        For example,
+        O código <c>a % b</c> retornará o resto da divisão de <m>a</m> por <m>b</m>.
+        Em outras palavras,
+        o resultado é o único inteiro <m>r</m> tal que (1) <m>0\leq r\lt b</m>
+        e (2) <m>a=bq+r</m> para algum inteiro <m>q</m>
+        (o quociente),
+        conforme garantido pelo algoritmo da divisão (<xref ref="integers-theorem-division_algorithm"/>).
+        Então <m>(a-r)/b</m> será igual a <m>q</m>.
+        Por exemplo,
       </p>
 
             <sage>
@@ -1387,8 +1387,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        It is also possible to get both the quotient and remainder at the same time with the <c>.quo_rem()</c> method
-        (quotient and remainder).
+        Também é possível obter o quociente e o resto ao mesmo tempo com o método <c>.quo_rem()</c>
+        (quociente e resto).
       </p>
 
             <sage>
@@ -1401,9 +1401,9 @@ theory.</p> -->
             </sage>
 
       <p>
-        A remainder of zero indicates divisibility.
-        So <c>(a % b) == 0</c> will return <c>True</c> if <m>b</m> divides <m>a</m>,
-        and will otherwise return <c>False</c>.
+        Um resto igual a zero indica divisibilidade.
+        Assim, <c>(a % b) == 0</c> retornará <c>True</c> se <m>b</m> dividir <m>a</m>
+        e, caso contrário, retornará <c>False</c>.
       </p>
 
             <sage>
@@ -1416,7 +1416,7 @@ theory.</p> -->
             </sage>
 
       <p>
-        The <c>.divides()</c> method is another option.
+        O método <c>.divides()</c> é outra opção.
       </p>
 
             <sage>
@@ -1436,13 +1436,13 @@ theory.</p> -->
     </subsection>
 
     <subsection>
-      <title>Greatest Common Divisor</title>
+      <title>Máximo divisor comum</title>
       <p>
-        The greatest common divisor of <m>a</m> and <m>b</m> is obtained with the command <c>gcd(a, b)</c>,
-        where in our first uses, <m>a</m> and <m>b</m> are integers.
-        Later, <m>a</m> and <m>b</m> can be other objects with a notion of divisibility and
-        <q>greatness,</q> such as polynomials.
-        For example,
+        O máximo divisor comum de <m>a</m> e <m>b</m> é obtido com o comando <c>gcd(a, b)</c>,
+        em que, nos primeiros usos, <m>a</m> e <m>b</m> são inteiros.
+        Mais tarde, <m>a</m> e <m>b</m> poderão ser outros objetos com uma noção de divisibilidade e
+        <q>grandeza</q>, como polinômios.
+        Por exemplo,
       </p>
 
             <sage>
@@ -1451,7 +1451,7 @@ theory.</p> -->
             </sage>
 
       <p>
-        We can use the <c>gcd</c> command to determine if a pair of integers are relatively prime.
+        Podemos usar o comando <c>gcd</c> para determinar se um par de inteiros é primo entre si.
       </p>
 
             <sage>
@@ -1472,8 +1472,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>xgcd(a,b)</c>(<q>eXtended GCD</q>) returns a triple where the first element is the greatest common divisor of <m>a</m> and <m>b</m> (as with the <c>gcd(a,b)</c> command above),
-        but the next two elements are values of <m>r</m> and <m>s</m> such that <m>ra+sb=\gcd(a,b)</m>.
+        O comando <c>xgcd(a,b)</c> (<q>GCD estendido</q>) retorna uma tripla cujo primeiro elemento é o máximo divisor comum de <m>a</m> e <m>b</m> (assim como no comando <c>gcd(a,b)</c> acima),
+        mas os dois elementos seguintes são valores de <m>r</m> e <m>s</m> tais que <m>ra+sb=\gcd(a,b)</m>.
       </p>
 
             <sage>
@@ -1482,13 +1482,13 @@ theory.</p> -->
             </sage>
 
       <p>
-        Portions of the triple can be extracted using <c>[ ]</c>(<q>indexing</q>) to access the entries of the triple,
-        starting with the first as number <c>0</c>.
-        For example,
-        the following should always return the result <c>True</c>,
-        even if you change the values of <c>a</c> and <c>b</c>.
-        Try changing the values of <c>a</c> and <c>b</c> below,
-        to see that the result is always <c>True</c>.
+        Partes da tripla podem ser extraídas usando <c>[ ]</c> (<q>indexação</q>) para acessar as entradas da tripla,
+        começando pela primeira, numerada <c>0</c>.
+        Por exemplo,
+        o código a seguir deve sempre retornar o resultado <c>True</c>,
+        mesmo que você altere os valores de <c>a</c> e <c>b</c>.
+        Tente alterar abaixo os valores de <c>a</c> e <c>b</c>
+        para verificar que o resultado é sempre <c>True</c>.
       </p>
 
             <sage>
@@ -1505,18 +1505,18 @@ theory.</p> -->
             </sage>
 
       <p>
-        Studying this block of code will go a long way towards helping you get the most out of Sage's output.
-        Note that <c>=</c> is how a value is
-        <em>assigned</em> to a variable,
-        while as in the last line,
-        <c>==</c> is how we compare two items for <em>equality</em>.
+        Estudar este bloco de código ajudará bastante você a aproveitar ao máximo a saída do Sage.
+        Observe que <c>=</c> é a forma de
+        <em>atribuir</em> um valor a uma variável,
+        enquanto, como na última linha,
+        <c>==</c> é a forma de comparar dois itens quanto à <em>igualdade</em>.
       </p>
     </subsection>
 
     <subsection>
-      <title>Primes and Factoring</title>
+      <title>Primos e fatoração</title>
       <p>
-        The method <c>.is_prime()</c> will determine if an integer is prime or not.
+        O método <c>.is_prime()</c> determina se um inteiro é primo ou não.
       </p>
 
             <sage>
@@ -1539,11 +1539,11 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>random_prime(a, proof=True)</c> will generate a random prime number between <m>2</m> and <m>a</m>.
-        Experiment by executing the following two compute cells several times.
-        (Replacing <c>proof=True</c> by <c>proof=False</c> will speed up the search,
-        but there will be a very, very,
-        very small probability the result will not be prime.)
+        O comando <c>random_prime(a, proof=True)</c> gera um número primo aleatório entre <m>2</m> e <m>a</m>.
+        Experimente executando as duas células de computação a seguir várias vezes.
+        (Substituir <c>proof=True</c> por <c>proof=False</c> acelerará a busca,
+        mas haverá uma probabilidade muito, muito,
+        muito pequena de o resultado não ser primo.)
       </p>
 
             <sage doctest="random">
@@ -1559,9 +1559,9 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>prime_range(a, b)</c> returns an ordered list of all the primes from <m>a</m> to <m>b-1</m>,
+        O comando <c>prime_range(a, b)</c> retorna uma lista ordenada de todos os primos de <m>a</m> a <m>b-1</m>,
         inclusive.
-        For example,
+        Por exemplo,
       </p>
 
             <sage>
@@ -1570,21 +1570,21 @@ theory.</p> -->
             </sage>
 
       <p>
-        The commands <c>next_prime(a)</c> and <c>previous_prime(a)</c> are other ways to get a single prime number of a desired size.
-        Give them a try below if you have an empty compute cell there
-        (as you will if you are reading in the Sage Notebook,
-        or are reading the online version). (The hash symbol, <c>#</c>,
-        is used to indicate a <q>comment</q> line,
-        which will not be evaluated by Sage.
-        So erase this line, or start on the one below it.)
+        Os comandos <c>next_prime(a)</c> e <c>previous_prime(a)</c> são outras maneiras de obter um único número primo de tamanho desejado.
+        Experimente-os abaixo se houver uma célula de computação vazia
+        (como haverá se você estiver lendo no Sage Notebook
+        ou na versão on-line). (O símbolo de cerquilha, <c>#</c>,
+        é usado para indicar uma linha de <q>comentário</q>,
+        que não será avaliada pelo Sage.
+        Portanto, apague esta linha ou comece na linha abaixo dela.)
       </p>
 
       <sage type="practice"/>
 
       <p>
-        In addition to checking if integers are prime or not,
-        or generating prime numbers, Sage can also decompose any integer into its prime factors,
-        as described by the Fundamental Theorem of Arithmetic (<xref ref="integers-theorem-fund-theorem-arithmetic"/>).
+        Além de verificar se os inteiros são primos ou não
+        e gerar números primos, o Sage também pode decompor qualquer inteiro em seus fatores primos,
+        como descrito pelo Teorema Fundamental da Aritmética (<xref ref="integers-theorem-fund-theorem-arithmetic"/>).
       </p>
 
             <sage>
@@ -1596,16 +1596,16 @@ theory.</p> -->
             </sage>
 
       <p>
-        So <m>2600 = 2^3\times 5^2\times 13</m> and this is the unique way to write <m>2600</m> as a product of prime numbers
-        (other than rearranging the order of the primes themselves in the product).
+        Assim, <m>2600 = 2^3\times 5^2\times 13</m> e esta é a única maneira de escrever <m>2600</m> como produto de números primos
+        (além de rearranjar a ordem dos próprios primos no produto).
       </p>
 
       <p>
-        While Sage will print a factorization nicely,
-        it is carried internally as a list of pairs of integers,
-        with each pair being a base (a prime number) and an exponent (a positive integer).
-        Study the following carefully,
-        as it is another good exercise in working with Sage output in the form of lists.
+        Embora o Sage imprima uma fatoração de forma organizada,
+        internamente ela é mantida como uma lista de pares de inteiros,
+        em que cada par é formado por uma base (um número primo) e um expoente (um inteiro positivo).
+        Estude cuidadosamente o que segue,
+        pois é outro bom exercício de trabalho com a saída do Sage na forma de listas.
       </p>
 
             <sage>
@@ -1647,8 +1647,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        The next compute cell reveals the internal version of the factorization by asking for the actual list.
-        And we show how you could determine exactly how many terms the factorization has by using the length command,
+        A próxima célula de computação revela a versão interna da fatoração solicitando a lista efetiva.
+        Também mostramos como determinar exatamente quantos termos a fatoração possui usando o comando de comprimento,
         <c>len()</c>.
       </p>
 
@@ -1662,8 +1662,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        Can you extract the next two primes,
-        and their exponents, from <c>a</c>?
+        Você consegue extrair de <c>a</c> os próximos dois primos
+        e seus expoentes?
       </p>
 
       <sage type="practice"/>
@@ -1671,22 +1671,22 @@ theory.</p> -->
   </section>
 
   <exercises xml:id="integers-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        These exercises are about investigating basic properties of the integers,
-        something we will frequently do when investigating groups.
-        Sage worksheets have extensive capabilities for making new cells with carefully formatted text,
-        include support for <latex/> syntax to express mathematics.
-        So when a question asks for explanation or commentary,
-        make a new cell and communicate clearly with your audience.
+        Estes exercícios tratam da investigação de propriedades básicas dos inteiros,
+        algo que faremos frequentemente ao investigar grupos.
+        As planilhas do Sage têm amplos recursos para criar novas células com texto cuidadosamente formatado
+        e incluem suporte à sintaxe <latex/> para expressar matemática.
+        Portanto, quando uma questão pedir explicação ou comentário,
+        crie uma nova célula e comunique-se claramente com seu público.
       </p>
     </introduction>
 
     <exercise number="1" xml:id="integers-sage-exercise-next-prime">
       <statement>
         <p>
-          Use the <c>next_prime()</c> command to construct two different 8-digit prime numbers and save them in variables named <c>a</c> and <c>b</c>.
+          Use o comando <c>next_prime()</c> para construir dois números primos de 8 algarismos diferentes e salve-os nas variáveis chamadas <c>a</c> e <c>b</c>.
         </p>
       </statement>
     </exercise>
@@ -1694,7 +1694,7 @@ theory.</p> -->
     <exercise number="2" xml:id="integers-sage-exercise-is-prime">
       <statement>
         <p>
-          Use the <c>.is_prime()</c> method to verify that your primes <c>a</c> and <c>b</c> are really prime.
+          Use o método <c>.is_prime()</c> para verificar se seus primos <c>a</c> e <c>b</c> são realmente primos.
         </p>
       </statement>
     </exercise>
@@ -1702,7 +1702,7 @@ theory.</p> -->
     <exercise number="3" xml:id="integers-sage-exercise-gcd">
       <statement>
         <p>
-          Verify that <m>1</m> is the greatest common divisor of your two primes from the previous exercises.
+          Verifique que <m>1</m> é o máximo divisor comum dos dois primos dos exercícios anteriores.
         </p>
       </statement>
     </exercise>
@@ -1710,9 +1710,9 @@ theory.</p> -->
     <exercise number="4" xml:id="integers-sage-exercise-gcd-linear-combination">
       <statement>
         <p>
-          Find two integers that make a <q>linear combination</q>
-          of your two primes equal to <m>1</m>.
-          Include a verification of your result.
+          Encontre dois inteiros que formem uma <q>combinação linear</q>
+          dos seus dois primos igual a <m>1</m>.
+          Inclua uma verificação do resultado.
         </p>
       </statement>
     </exercise>
@@ -1720,7 +1720,7 @@ theory.</p> -->
     <exercise number="5" xml:id="integers-sage-exercise-prime-factorization">
       <statement>
         <p>
-          Determine a factorization into powers of primes for <m>c=4\,598\,037\,234</m>.
+          Determine uma fatoração em potências de primos para <m>c=4\,598\,037\,234</m>.
         </p>
       </statement>
     </exercise>
@@ -1728,11 +1728,11 @@ theory.</p> -->
     <exercise number="6" xml:id="integers-sage-exercise-divisor">
       <statement>
         <p>
-          Write a compute cell that defines the same value of <c>c</c> again,
-          and then defines a candidate divisor of <c>c</c> named <c>d</c>.
-          The third line of the cell should return <c>True</c> if and only if <c>d</c> is a divisor of <c>c</c>.
-          Illustrate the use of your cell by testing your code with <m>d=7</m> and in a new copy of the cell,
-          testing your code with <m>d=11</m>.
+          Escreva uma célula de computação que defina novamente o mesmo valor de <c>c</c>
+          e depois defina um divisor candidato de <c>c</c> chamado <c>d</c>.
+          A terceira linha da célula deve retornar <c>True</c> se, e somente se, <c>d</c> for um divisor de <c>c</c>.
+          Ilustre o uso da célula testando seu código com <m>d=7</m> e, em uma nova cópia da célula,
+          testando seu código com <m>d=11</m>.
         </p>
       </statement>
     </exercise>

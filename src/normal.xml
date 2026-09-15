@@ -11,17 +11,10 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="normal">
-  <title>Normal Subgroups and Factor Groups</title>
+  <title>Subgrupos normais e grupos quocientes</title>
   <introduction>
     <p>
-      If <m>H</m> is a subgroup of a group <m>G</m>,
-      then right cosets are not always the same as left cosets;
-      that is, it is not always the case that <m>gH = Hg</m> for all <m>g \in G</m>.
-      The subgroups for which this property holds play a critical role in group theory<mdash/>they allow for the construction of a new class of groups,
-      called factor or quotient groups.
-      Factor groups may be studied directly or by using homomorphisms,
-      a generalization of isomorphisms.
-      We will study homomorphisms in <xref ref="homomorph"/>.
+      Se <m>H</m> é um subgrupo de um grupo <m>G</m>, então as classes laterais à direita nem sempre são iguais às classes laterais à esquerda; isto é, nem sempre ocorre que <m>gH = Hg</m> para todo <m>g \in G</m>. Os subgrupos para os quais essa propriedade vale desempenham um papel fundamental na teoria dos grupos<mdash/>eles permitem construir uma nova classe de grupos, chamados grupos fatores ou grupos quocientes. Os grupos quocientes podem ser estudados diretamente ou usando homomorfismos, uma generalização dos isomorfismos. Estudaremos homomorfismos em <xref ref="homomorph"/>.
     </p>
   </introduction>
     <!-- % TWJ, 2010/03/31 -->
@@ -29,35 +22,27 @@
     <!-- % two chapters: (10) NORMAL SUBGROUPS AND FACTOR GROUPS -->
     <!-- % (11) HOMOMORPHISMS -->
   <section xml:id="normal-section-factor-groups">
-    <title>Factor Groups and Normal Subgroups</title>
+    <title>Grupos quocientes e subgrupos normais</title>
     <subsection xml:id="normal-subsection-normal-subgroups">
-      <title>Normal Subgroups</title>
+      <title>Subgrupos normais</title>
       <p>
-        A subgroup <m>H</m> of a group <m>G</m> is <term>normal</term><idx><h>Subgroup</h><h>normal</h></idx><idx><h>Normal subgroup</h></idx>
-        in G if <m>gH = Hg</m> for all <m>g \in G</m>.
-        That is, a normal subgroup of a group <m>G</m> is one in which the right and left cosets are precisely the same.
+        Um subgrupo <m>H</m> de um grupo <m>G</m> é <term>normal</term><idx><h>Subgrupo</h><h>normal</h></idx><idx><h>Subgrupo normal</h></idx>
+        em G se <m>gH = Hg</m> para todo <m>g \in G</m>. Isto é, um subgrupo normal de um grupo <m>G</m> é aquele no qual as classes laterais à direita e à esquerda são exatamente as mesmas.
       </p>
 
       <example xml:id="normal-example-abelian">
         <p>
-          Let <m>G</m> be an abelian group.
-          Every subgroup <m>H</m> of <m>G</m> is a normal subgroup.
-          Since <m>gh = hg</m> for all <m>g \in G</m> and <m>h \in H</m>,
-          it will always be the case that <m>gH = Hg</m>.
+          Seja <m>G</m> um grupo abeliano. Todo subgrupo <m>H</m> de <m>G</m> é um subgrupo normal. Como <m>gh = hg</m> para todo <m>g \in G</m> e <m>h \in H</m>, sempre teremos <m>gH = Hg</m>.
         </p>
       </example>
 
       <example xml:id="normal-example-s3">
         <p>
-          Let <m>H</m> be the subgroup of <m>S_3</m> consisting of elements <m>(1)</m> and <m>(12)</m>.
-          Since
+          Seja <m>H</m> o subgrupo de <m>S_3</m> constituído pelos elementos <m>(1)</m> e <m>(12)</m>. Como
           <md>
             (123) H = \{ (1 \, 2 \, 3), (1 \, 3) \} \quad \text{and} \quad H (1 \, 2 \, 3) = \{ (1 \, 2 \, 3), (2 \, 3) \}
           </md>,
-          <m>H</m> cannot be a normal subgroup of <m>S_3</m>.
-          However, the subgroup <m>N</m>,
-          consisting of the permutations <m>(1)</m>, <m>(1 \, 2 \, 3)</m>,
-          and <m>(1 \, 3 \, 2)</m>, is normal since the cosets of <m>N</m> are
+          <m>H</m> não pode ser um subgrupo normal de <m>S_3</m>. Entretanto, o subgrupo <m>N</m>, constituído pelas permutações <m>(1)</m>, <m>(1 \, 2 \, 3)</m>, e <m>(1 \, 3 \, 2)</m>, é normal, pois as classes laterais de <m>N</m> são
           <md>
             <mrow>N  =   \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</mrow>
             <mrow>(1 \, 2) N =  N (1 \, 2)  =  \{ (1 \, 2), (1 \, 3), (2 \, 3) \}</mrow>
@@ -66,31 +51,30 @@
       </example>
 
       <p>
-        The following theorem is fundamental to our understanding of normal subgroups.
+        O teorema a seguir é fundamental para nossa compreensão dos subgrupos normais.
       </p>
 
       <theorem xml:id="normal-theorem-normal-equivalents">
         <statement>
           <p>
-            Let <m>G</m> be a group and <m>N</m> be a subgroup of <m>G</m>.
-            Then the following statements are equivalent.
+            Seja <m>G</m> um grupo e seja <m>N</m> um subgrupo de <m>G</m>. Então as seguintes afirmações são equivalentes.
 
             <ol>
               <li>
                 <p>
-                  The subgroup <m>N</m> is normal in <m>G</m>.
+                  O subgrupo <m>N</m> é normal em <m>G</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  For all <m>g \in G</m>, <m>gNg^{-1} \subset N</m>.
+                  Para todo <m>g \in G</m>, <m>gNg^{-1} \subset N</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  For all <m>g \in G</m>, <m>gNg^{-1} = N</m>.
+                  Para todo <m>g \in G</m>, <m>gNg^{-1} = N</m>.
                 </p>
               </li>
             </ol>
@@ -99,98 +83,70 @@
 
         <proof>
           <p>
-            (1) <m>\Rightarrow</m> (2).
-            Since <m>N</m> is normal in <m>G</m>,
-            <m>gN = Ng</m> for all <m>g \in G</m>.
-            Hence, for a given <m>g \in G</m> and <m>n \in N</m>,
-            there exists an <m>n'</m> in <m>N</m> such that <m>g n = n' g</m>.
-            Therefore, <m>gng^{-1} = n' \in N</m> or <m>gNg^{-1} \subset N</m>.
+            (1) <m>\Rightarrow</m> (2). Como <m>N</m> é normal em <m>G</m>,
+            <m>gN = Ng</m> para todo <m>g \in G</m>. Assim, dados <m>g \in G</m> e <m>n \in N</m>, existe um <m>n'</m> em <m>N</m> tal que <m>g n = n' g</m>. Portanto, <m>gng^{-1} = n' \in N</m> ou <m>gNg^{-1} \subset N</m>.
           </p>
 
           <p>
-            (2) <m>\Rightarrow</m> (3).
-            Let <m>g \in G</m>.
-            Since <m>gNg^{-1} \subset N</m>,
-            we need only show <m>N \subset gNg^{-1}</m>.
-            For <m>n \in N</m>, <m>g^{-1}ng=g^{-1}n(g^{-1})^{-1} \in N</m>.
-            Hence, <m>g^{-1}ng = n'</m> for some <m>n' \in N</m>.
-            Therefore, <m>n = g n' g^{-1}</m> is in <m>g N g^{-1}</m>.
+            (2) <m>\Rightarrow</m> (3). Seja <m>g \in G</m>. Como <m>gNg^{-1} \subset N</m>, basta mostrar que <m>N \subset gNg^{-1}</m>. Para <m>n \in N</m>, <m>g^{-1}ng=g^{-1}n(g^{-1})^{-1} \in N</m>. Assim, <m>g^{-1}ng = n'</m> para algum <m>n' \in N</m>. Portanto, <m>n = g n' g^{-1}</m> está em <m>g N g^{-1}</m>.
           </p>
 
           <p>
-            (3) <m>\Rightarrow</m> (1).
-            Suppose that <m>gNg^{-1} = N</m> for all <m>g \in G</m>.
-            Then for any <m>n \in N</m> there exists an
-            <m>n' \in N</m> such that <m>gng^{-1} = n'</m>.
-            Consequently, <m>gn = n' g</m> or <m>gN \subset Ng</m>.
-            Similarly, <m>Ng \subset gN</m>.
+            (3) <m>\Rightarrow</m> (1). Suponha que <m>gNg^{-1} = N</m> para todo <m>g \in G</m>. Então, para qualquer <m>n \in N</m> existe um
+            <m>n' \in N</m> tal que <m>gng^{-1} = n'</m>. Consequentemente, <m>gn = n' g</m> ou <m>gN \subset Ng</m>. Analogamente, <m>Ng \subset gN</m>.
           </p>
         </proof>
       </theorem>
     </subsection>
 
     <subsection xml:id="normal-subsection-factor-groups">
-      <title>Factor Groups</title>
+      <title>Grupos quocientes</title>
       <p>
-        If <m>N</m> is a normal subgroup of a group <m>G</m>,
-        then the cosets of <m>N</m> in <m>G</m> form a group <m>G/N</m> under the operation <m>(aN) (bN) = abN</m>.
-        This group is called the <term>factor</term><idx><h>Group</h><h>factor</h></idx>
-        or <term>quotient group</term><idx><h>Group</h><h>quotient</h></idx>
-        of <m>G</m> and <m>N</m>.
+        Se <m>N</m> é um subgrupo normal de um grupo <m>G</m>, então as classes laterais de <m>N</m> em <m>G</m> formam um grupo <m>G/N</m> com a operação <m>(aN) (bN) = abN</m>. Esse grupo é chamado de <term>grupo fator</term><idx><h>Grupo</h><h>quociente</h></idx>
+        ou <term>grupo quociente</term><idx><h>Grupo</h><h>quociente</h></idx>
+        de <m>G</m> e <m>N</m>.
         <notation>
           <usage><m>G/N</m></usage>
-          <description>factor group of <m>G</m> mod <m>N</m></description>
+          <description>grupo quociente de <m>G</m> módulo <m>N</m></description>
         </notation>
-        Our first task is to prove that <m>G/N</m> is indeed a group.
+        Nossa primeira tarefa é demonstrar que <m>G/N</m> é de fato um grupo.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>N</m> be a normal subgroup of a group <m>G</m>.
-            The cosets of <m>N</m> in <m>G</m> form a group <m>G/N</m> of order <m>[G:N]</m>.
+            Seja <m>N</m> um subgrupo normal de um grupo <m>G</m>. As classes laterais de <m>N</m> em <m>G</m> formam um grupo <m>G/N</m> de ordem <m>[G:N]</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            The group operation on <m>G/N</m> is <m>(a N ) (b N)= a b N</m>.
-            This operation must be shown to be well-defined;
-            that is, group multiplication must be independent of the choice of  coset representative.
-            Let <m>aN = bN</m> and <m>cN = dN</m>.
-            We must show that
+            A operação do grupo <m>G/N</m> é <m>(a N ) (b N)= a b N</m>. Devemos mostrar que essa operação está bem definida; isto é, a multiplicação no grupo deve ser independente da escolha do representante da classe lateral. Sejam <m>aN = bN</m> e <m>cN = dN</m>. Devemos mostrar que
             <md>
               (aN) (cN) = acN = bd N = (b N)(d N)
-            </md>.
-            Then <m>a = b n_1</m> and <m>c = d n_2</m> for some <m>n_1</m> and <m>n_2</m> in <m>N</m>.
-            Hence,
+            </md>. Então <m>a = b n_1</m> e <m>c = d n_2</m> para alguns <m>n_1</m> e <m>n_2</m> em <m>N</m>. Assim,
             <md>
               <mrow>acN &amp; = b n_1 d n_2 N</mrow>
               <mrow>&amp; = b n_1 d N</mrow>
               <mrow>&amp; = b n_1 N d</mrow>
               <mrow>&amp; = b N d</mrow>
               <mrow>&amp; = b d N</mrow>
-            </md>.
-            The remainder of the theorem is easy:
-            <m>eN = N</m> is the identity and
-            <m>g^{-1} N</m> is the inverse of <m>gN</m>.
-            The order of <m>G/N</m> is,
-            of course, the number of cosets of <m>N</m> in <m>G</m>.
+            </md>. O restante do teorema é fácil:
+            <m>eN = N</m> é a identidade e
+            <m>g^{-1} N</m> é o inverso de <m>gN</m>. A ordem de <m>G/N</m> é, naturalmente, o número de classes laterais de <m>N</m> em <m>G</m>.
           </p>
         </proof>
       </theorem>
 
       <p>
-        It is very important to remember that the elements in a factor group are
-        <em>sets of elements</em> in the original group.
+        É muito importante lembrar que os elementos de um grupo quociente são
+        <em>conjuntos de elementos</em> do grupo original.
       </p>
 
       <example xml:id="normal-example-factor-s3">
         <p>
-          Consider the normal subgroup of <m>S_3</m>,
-          <m>N = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>.
-          The cosets of <m>N</m> in <m>S_3</m> are <m>N</m> and <m>(12) N</m>.
-          The factor group <m>S_3 / N</m> has the following multiplication table.
+          Considere o subgrupo normal de <m>S_3</m>,
+          <m>N = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>. As classes laterais de <m>N</m> em <m>S_3</m> são <m>N</m> e <m>(12) N</m>. O grupo quociente <m>S_3 / N</m> tem a seguinte tabela de multiplicação.
         </p>
 
         <p>
@@ -204,29 +160,19 @@
         </p>
 
         <p>
-          This group is isomorphic to <m>{\mathbb Z}_2</m>.
-          At first, multiplying cosets seems both complicated and strange;
-          however, notice that <m>S_3 / N</m> is a smaller group.
-          The factor group displays a certain amount of information about <m>S_3</m>.
-          Actually, <m>N = A_3</m>, the group of even permutations,
-          and <m>(1 \, 2) N = \{ (1 \, 2), (1 \, 3), (2 \, 3) \}</m> is the set of odd permutations.
-          The information captured in <m>G/N</m> is parity;
-          that is, multiplying two even or two odd permutations results in an even permutation,
-          whereas multiplying an odd permutation by an even permutation yields an odd permutation.
+          Esse grupo é isomorfo a <m>{\mathbb Z}_2</m>. À primeira vista, multiplicar classes laterais parece complicado e estranho; entretanto, observe que <m>S_3 / N</m> é um grupo menor. O grupo quociente apresenta certa quantidade de informação sobre <m>S_3</m>. Na verdade, <m>N = A_3</m>, o grupo das permutações pares, e <m>(1 \, 2) N = \{ (1 \, 2), (1 \, 3), (2 \, 3) \}</m> é o conjunto das permutações ímpares. A informação capturada em <m>G/N</m> é a paridade; isto é, multiplicar duas permutações pares ou duas ímpares resulta em uma permutação par, enquanto multiplicar uma permutação ímpar por uma par produz uma permutação ímpar.
         </p>
       </example>
 
       <example xml:id="normal-example-factor-z3">
         <p>
-          Consider the normal subgroup
-          <m>3 {\mathbb Z}</m> of <m>{\mathbb Z}</m>.
-          The cosets of <m>3 {\mathbb Z}</m> in <m>{\mathbb Z}</m> are
+          Considere o subgrupo normal
+          <m>3 {\mathbb Z}</m> de <m>{\mathbb Z}</m>. As classes laterais de <m>3 {\mathbb Z}</m> em <m>{\mathbb Z}</m> são
           <md>
             <mrow>0 + 3 {\mathbb Z} &amp; = \{ \ldots, -3, 0, 3, 6, \ldots \}</mrow>
             <mrow>1 + 3 {\mathbb Z} &amp; = \{ \ldots, -2, 1, 4, 7, \ldots \}</mrow>
             <mrow>2 + 3 {\mathbb Z} &amp; = \{ \ldots, -1, 2, 5, 8, \ldots \}</mrow>
-          </md>.
-          The group <m>{\mathbb Z}/ 3 {\mathbb Z}</m> is given by the Cayley table below.
+          </md>. O grupo <m>{\mathbb Z}/ 3 {\mathbb Z}</m> é dado pela tabela de Cayley abaixo.
         </p>
 
         <p>
@@ -241,38 +187,27 @@
         </p>
 
         <p>
-          In general, the subgroup <m>n {\mathbb Z}</m> of <m>{\mathbb Z}</m> is normal.
-          The cosets of <m>{\mathbb Z } / n {\mathbb Z}</m> are
+          Em geral, o subgrupo <m>n {\mathbb Z}</m> de <m>{\mathbb Z}</m> é normal. As classes laterais de <m>{\mathbb Z } / n {\mathbb Z}</m> são
           <md>
             <mrow>n {\mathbb Z}</mrow>
             <mrow>1 + n {\mathbb Z}</mrow>
             <mrow>2 + n {\mathbb Z}</mrow>
             <mrow>\vdots</mrow>
             <mrow>(n-1) + n {\mathbb Z}</mrow>
-          </md>.
-          The sum of the cosets <m>k + n{\mathbb Z}</m> and
-          <m>l + n{\mathbb Z}</m> is <m>k+l + n{\mathbb Z}</m>.
-          Notice that we have written our cosets additively,
-          because the group operation is integer addition.
+          </md>. A soma das classes laterais <m>k + n{\mathbb Z}</m> e
+          <m>l + n{\mathbb Z}</m> é <m>k+l + n{\mathbb Z}</m>. Observe que escrevemos nossas classes laterais aditivamente, pois a operação do grupo é a adição de inteiros.
         </p>
       </example>
 
       <example xml:id="normal-example-factor_dn">
         <p>
-          Consider the dihedral group <m>D_n</m>,
-          generated by the two elements <m>r</m> and <m>s</m>, satisfying the relations
+          Considere o grupo diedral <m>D_n</m>, gerado pelos dois elementos <m>r</m> e <m>s</m>, que satisfazem as relações
           <md>
             <mrow>r^n &amp; = \identity</mrow>
             <mrow>s^2 &amp; = \identity</mrow>
             <mrow>srs &amp; = r^{-1}</mrow>
-          </md>.
-          The element <m>r</m> actually generates the cyclic subgroup of rotations,
-          <m>R_n</m>, of <m>D_n</m>.
-          Since <m>srs^{-1} = srs = r^{-1} \in R_n</m>,
-          the group of rotations is a normal subgroup of <m>D_n</m>;
-          therefore, <m>D_n / R_n</m> is a group.
-          Since there are exactly two elements in this group,
-          it must be isomorphic to <m>{\mathbb Z}_2</m>.
+          </md>. O elemento <m>r</m> de fato gera o subgrupo cíclico das rotações,
+          <m>R_n</m>, de <m>D_n</m>. Como <m>srs^{-1} = srs = r^{-1} \in R_n</m>, o grupo das rotações é um subgrupo normal de <m>D_n</m>; portanto, <m>D_n / R_n</m> é um grupo. Como existem exatamente dois elementos nesse grupo, ele deve ser isomorfo a <m>{\mathbb Z}_2</m>.
         </p>
       </example>
     </subsection>
@@ -280,33 +215,24 @@
   </section>
 
   <section xml:id="normal-section-simplicity-of-an">
-    <title>The Simplicity of the Alternating Group</title>
+    <title>A simplicidade do grupo alternado</title>
     <introduction>
       <p>
-        Of special interest are groups with no nontrivial normal subgroups.
-        Such groups are called <idx><h>Group</h><h>simple</h></idx><idx><h>Simple group</h></idx><term>simple groups</term>.
-        Of course, we already have a whole class of examples of simple groups,
-        <m>{\mathbb Z}_p</m>, where <m>p</m> is prime.
-        These groups are trivially simple since they have no proper subgroups other than the subgroup consisting solely of the identity.
-        Other examples of simple groups are not so easily found.
-        We can, however, show that the alternating group,
-        <m>A_n</m>, is simple for <m>n \geq 5</m>.
-        The proof of this result requires several lemmas.
+        São de especial interesse os grupos sem subgrupos normais não triviais. Tais grupos são chamados de <idx><h>Grupo</h><h>simples</h></idx><idx><h>Grupo simples</h></idx><term>grupos simples</term>. Naturalmente, já temos toda uma classe de exemplos de grupos simples,
+        <m>{\mathbb Z}_p</m>, onde <m>p</m> é primo. Esses grupos são trivialmente simples, pois não possuem subgrupos próprios além do subgrupo constituído apenas pela identidade. Outros exemplos de grupos simples não são tão fáceis de encontrar. Podemos, entretanto, mostrar que o grupo alternado,
+        <m>A_n</m>, é simples para <m>n \geq 5</m>. A demonstração desse resultado requer vários lemas.
       </p>
 
       <lemma xml:id="normal-lemma-1-normal-3cycle">
         <statement>
           <p>
-            The alternating group <m>A_n</m> is generated by <m>3</m>-cycles for <m>n \geq 3</m>.
+            O grupo alternado <m>A_n</m> é gerado por <m>3</m>-ciclos para <m>n \geq 3</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            To show that the <m>3</m>-cycles generate <m>A_n</m>,
-            we need only show that any pair of transpositions can be written as the product of <m>3</m>-cycles.
-            Since <m>(a, b) = (b, a)</m>,
-            every pair of transpositions must be one of the following:
+            Para mostrar que os <m>3</m>-ciclos geram <m>A_n</m>, basta mostrar que qualquer par de transposições pode ser escrito como produto de <m>3</m>-ciclos. Como <m>(a, b) = (b, a)</m>, todo par de transposições deve ser um dos seguintes:
             <md>
               <mrow>(a,b)(a,b) &amp; = \identity</mrow>
               <mrow>(a,b)(c,d) &amp; = (a,c,b)(a,c,d)</mrow>
@@ -319,34 +245,26 @@
       <lemma xml:id="normal-lemma-2-normal-3cycle">
         <statement>
           <p>
-            Let <m>N</m> be a normal subgroup of <m>A_n</m>, where <m>n \geq 3</m>.
-            If <m>N</m> contains a <m>3</m>-cycle, then <m>N = A_n</m>.
+            Seja <m>N</m> um subgrupo normal de <m>A_n</m>, onde <m>n \geq 3</m>. Se <m>N</m> contém um <m>3</m>-ciclo, então <m>N = A_n</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will first show that <m>A_n</m> is generated by <m>3</m>-cycles of the specific form <m>(i,j,k)</m>,
-            where <m>i</m> and <m>j</m> are fixed in 
+            Primeiro mostraremos que <m>A_n</m> é gerado por <m>3</m>-ciclos da forma específica <m>(i,j,k)</m>, onde <m>i</m> e <m>j</m> são fixados em
             <m>\{ 1, 2, \ldots,
-            n \}</m> and we let <m>k</m> vary.
-            Every <m>3</m>-cycle is the product of <m>3</m>-cycles of this form, since
+            n \}</m> e deixamos <m>k</m> variar. Todo <m>3</m>-ciclo é o produto de <m>3</m>-ciclos dessa forma, pois
             <md>
               <mrow>(i, a, j) &amp; = (i, j, a)^2</mrow>
               <mrow>(i, a, b) &amp; = (i, j, b) (i, j, a)^2</mrow>
               <mrow>(j, a, b) &amp; = (i, j, b)^2 (i, j, a)</mrow>
               <mrow>(a, b, c) &amp; = (i, j, a)^2 (i, j, c) (i, j, b)^2 (i, j, a)</mrow>
-            </md>.
-            Now suppose that <m>N</m> is a nontrivial normal subgroup of <m>A_n</m> for
-            <m>n  \geq 3</m> such that <m>N</m> contains a <m>3</m>-cycle of the form <m>(i, j, a)</m>.
-            Using the normality of <m>N</m>, we see that
+            </md>. Agora suponha que <m>N</m> é um subgrupo normal não trivial de <m>A_n</m> para
+            <m>n  \geq 3</m> tal que <m>N</m> contém um <m>3</m>-ciclo da forma <m>(i, j, a)</m>. Usando a normalidade de <m>N</m>, vemos que
             <md>
               [(i, j)(a, k)](i, j, a)^2 [(i, j)(a, k)]^{-1} = (i, j, k)
             </md>
-            is in <m>N</m>.
-            Hence, <m>N</m> must contain all of the <m>3</m>-cycles <m>(i, j, k)</m>  for <m>1 \leq k \leq n</m>.
-            By <xref ref="normal-lemma-1-normal-3cycle"/>, these <m>3</m>-cycles generate <m>A_n</m>;
-            hence, <m>N = A_n</m>.
+            está em <m>N</m>. Assim, <m>N</m> deve conter todos os <m>3</m>-ciclos <m>(i, j, k)</m>  para <m>1 \leq k \leq n</m>. Pelo <xref ref="normal-lemma-1-normal-3cycle"/>, esses <m>3</m>-ciclos geram <m>A_n</m>; portanto, <m>N = A_n</m>.
           </p>
         </proof>
       </lemma>
@@ -354,138 +272,117 @@
       <lemma xml:id="normal-lemma-3-normal-3cycle">
         <statement>
           <p>
-            For <m>n \geq 5</m>,
-            every nontrivial normal subgroup <m>N</m> of <m>A_n</m> contains a <m>3</m>-cycle.
+            Para <m>n \geq 5</m>, todo subgrupo normal não trivial <m>N</m> de <m>A_n</m> contém um <m>3</m>-ciclo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\sigma</m> be an arbitrary element in a normal subgroup <m>N</m>.
-            There are several possible cycle structures for <m>\sigma</m>.
+            Seja <m>\sigma</m> um elemento arbitrário de um subgrupo normal <m>N</m>. Existem várias estruturas de ciclos possíveis para <m>\sigma</m>.
 
             <ul>
               <li>
                 <p>
-                  <m>\sigma</m> is a <m>3</m>-cycle.
+                  <m>\sigma</m> é um <m>3</m>-ciclo.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>\sigma</m> is the product of disjoint cycles,
-                  <m>\sigma = \tau(a_1, a_2, \ldots, a_r) \in N</m>, where <m>r \gt 3</m>.
+                  <m>\sigma</m> é o produto de ciclos disjuntos,
+                  <m>\sigma = \tau(a_1, a_2, \ldots, a_r) \in N</m>, onde <m>r \gt 3</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>\sigma</m> is the product of disjoint cycles,
+                  <m>\sigma</m> é o produto de ciclos disjuntos,
                   <m>\sigma = \tau(a_1, a_2, a_3)(a_4, a_5, a_6)</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>\sigma = \tau(a_1, a_2, a_3)</m>,
-                  where <m>\tau</m> is the product of disjoint 2-cycles.
+                  <m>\sigma = \tau(a_1, a_2, a_3)</m>, onde <m>\tau</m> é o produto de 2-ciclos disjuntos.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>\sigma = \tau (a_1, a_2) (a_3, a_4)</m>,
-                  where <m>\tau</m> is the product of an even number of disjoint 2-cycles.
+                  <m>\sigma = \tau (a_1, a_2) (a_3, a_4)</m>, onde <m>\tau</m> é o produto de um número par de 2-ciclos disjuntos.
                 </p>
               </li>
             </ul>
 
-            If <m>\sigma</m> is a <m>3</m>-cycle, then we are done.
-            If <m>N</m> contains a product of disjoint cycles, <m>\sigma</m>,
-            and at least one of these cycles has length greater than 3, say <m>\sigma = \tau(a_1, a_2, \ldots, a_r)</m>, then
+            Se <m>\sigma</m> é um <m>3</m>-ciclo, terminamos. Se <m>N</m> contém um produto de ciclos disjuntos, <m>\sigma</m>, e pelo menos um desses ciclos tem comprimento maior que 3, digamos <m>\sigma = \tau(a_1, a_2, \ldots, a_r)</m>, então
             <md>
               (a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1}
             </md>
-            is in <m>N</m> since <m>N</m> is normal; hence,
+            está em <m>N</m> pois <m>N</m> é normal; assim,
             <md>
               \sigma^{-1}(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1}
             </md>
-            is also in <m>N</m>.
-            Since
+            também está em <m>N</m>. Como
             <md>
               <mrow>\sigma^{-1}(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1} &amp; = \sigma^{-1}(a_1, a_2, a_3)\sigma(a_1, a_3, a_2)</mrow>
               <mrow>&amp; = (a_1, a_2, \ldots, a_r)^{-1}\tau^{-1}(a_1, a_2, a_3) \tau(a_1, a_2, \ldots, a_r)(a_1, a_3, a_2)</mrow>
               <mrow>&amp; = (a_1, a_r, a_{r-1}, \ldots, a_2 )(a_1, a_2, a_3) (a_1, a_2, \ldots, a_r)(a_1, a_3, a_2)</mrow>
               <mrow>&amp; = (a_1, a_3, a_r)</mrow>
             </md>,
-            <m>N</m> must contain a <m>3</m>-cycle;
-            hence, <m>N = A_n</m>.
+            <m>N</m> deve conter um <m>3</m>-ciclo; portanto, <m>N = A_n</m>.
           </p>
 
           <p>
-            Now suppose that <m>N</m> contains a disjoint product of the form
+            Agora suponha que <m>N</m> contém um produto disjunto da forma
             <md>
               \sigma = \tau(a_1, a_2, a_3)(a_4, a_5, a_6)
-            </md>.
-            Then
+            </md>. Então
             <md>
               \sigma^{-1}(a_1, a_2, a_4)\sigma(a_1, a_2, a_4)^{-1} \in N
             </md>
-            since
+            pois
             <md>
               (a_1, a_2, a_4)\sigma(a_1, a_2, a_4)^{-1} \in N
-            </md>.
-            So
+            </md>. Logo
             <md>
               <mrow>\sigma^{-1}(a_1, a_2, a_4) \sigma(a_1, a_2, a_4)^{-1} &amp; = [ \tau (a_1, a_2, a_3) (a_4, a_5, a_6) ]^{-1} (a_1, a_2, a_4) \tau (a_1, a_2, a_3) (a_4, a_5, a_6) (a_1, a_2, a_4)^{-1}</mrow>
               <mrow>&amp; = (a_4, a_6, a_5) (a_1, a_3, a_2) \tau^{-1}(a_1, a_2, a_4) \tau (a_1, a_2, a_3) (a_4, a_5, a_6) (a_1, a_4, a_2)</mrow>
               <mrow>&amp; = (a_4, a_6, a_5)(a_1, a_3, a_2) (a_1, a_2, a_4) (a_1, a_2, a_3) (a_4, a_5, a_6)(a_1, a_4, a_2)</mrow>
               <mrow>&amp; = (a_1, a_4, a_2, a_6, a_3)</mrow>
-            </md>.
-            So <m>N</m> contains a disjoint cycle of length greater than <m>3</m>, and we can apply the previous case.
+            </md>. Logo <m>N</m> contém um ciclo disjunto de comprimento maior que <m>3</m>, e podemos aplicar o caso anterior.
           </p>
 
           <p>
-            Suppose <m>N</m> contains a disjoint product of the form <m>\sigma = \tau(a_1, a_2, a_3)</m>,
-            where <m>\tau</m> is the product of disjoint <m>2</m>-cycles.
-            Since <m>\sigma \in N</m>, <m>\sigma^2 \in N</m>, and
+            Suponha que <m>N</m> contém um produto disjunto da forma <m>\sigma = \tau(a_1, a_2, a_3)</m>, onde <m>\tau</m> é o produto de <m>2</m>-ciclos disjuntos. Como <m>\sigma \in N</m>, <m>\sigma^2 \in N</m>, e
             <md>
               <mrow>\sigma^2 &amp; = \tau(a_1, a_2, a_3)\tau(a_1, a_2, a_3)</mrow>
               <mrow>&amp; =(a_1, a_3, a_2)</mrow>
-            </md>.
-            So <m>N</m> contains a <m>3</m>-cycle.
+            </md>. Logo <m>N</m> contém um <m>3</m>-ciclo.
           </p>
 
           <p>
-            The only remaining possible case is a disjoint product of the form
+            O único caso possível restante é um produto disjunto da forma
             <md>
               \sigma = \tau (a_1, a_2) (a_3, a_4)
-            </md>,
-            where <m>\tau</m> is the product of an even number of disjoint <m>2</m>-cycles.
-            But
+            </md>, onde <m>\tau</m> é o produto de um número par de <m>2</m>-ciclos disjuntos. Mas
             <md>
               \sigma^{-1}(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1}
             </md>
-            is in <m>N</m> since <m>(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1}</m> is in <m>N</m>; and so
+            está em <m>N</m> pois <m>(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1}</m> está em <m>N</m>; e assim
             <md>
               <mrow>\sigma^{-1}(a_1, a_2, a_3)\sigma(a_1, a_2, a_3)^{-1} &amp; = \tau^{-1} (a_1, a_2) (a_3, a_4) (a_1, a_2, a_3) \tau (a_1, a_2)(a_3, a_4)(a_1, a_2, a_3)^{-1}</mrow>
               <mrow>&amp; = (a_1, a_3)(a_2, a_4)</mrow>
-            </md>.
-            Since <m>n \geq 5</m>, we can find
+            </md>. Como <m>n \geq 5</m>, podemos encontrar
             <m>b \in \{1, 2, \ldots,
-            n \}</m> such that <m>b \neq a_1, a_2, a_3, a_4</m>.
-            Let <m>\mu = (a_1, a_3, b)</m>.
-            Then
+            n \}</m> tal que <m>b \neq a_1, a_2, a_3, a_4</m>. Seja <m>\mu = (a_1, a_3, b)</m>. Então
             <md>
               \mu^{-1} (a_1, a_3)(a_2, a_4) \mu (a_1, a_3)(a_2, a_4) \in N
             </md>
-            and
+            e
             <md>
               <mrow>\mu^{-1} (a_1, a_3)(a_2, a_4) \mu (a_1, a_3)(a_2, a_4) &amp; = (a_1, b a_3)(a_1, a_3)(a_2, a_4) (a_1, a_3, b)(a_1, a_3)(a_2, a_4)</mrow>
               <mrow>&amp; = (a_1 a_3 b )</mrow>
-            </md>.
-            Therefore, <m>N</m> contains a <m>3</m>-cycle.
-            This completes the proof of the lemma.
+            </md>. Portanto, <m>N</m> contém um <m>3</m>-ciclo. Isso completa a demonstração do lema.
           </p>
         </proof>
       </lemma>
@@ -494,17 +391,13 @@
       <theorem xml:id="normal-theorem-an-simple">
         <statement>
           <p>
-            The alternating group, <m>A_n</m>,
-            is simple for <m>n \geq 5</m>.
+            O grupo alternado, <m>A_n</m>, é simples para <m>n \geq 5</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>N</m> be a normal subgroup of <m>A_n</m>.
-            By <xref ref="normal-lemma-3-normal-3cycle"/>, <m>N</m> contains a <m>3</m>-cycle.
-            By <xref ref="normal-lemma-2-normal-3cycle"/>, <m>N = A_n</m>;
-            therefore, <m>A_n</m> contains no proper nontrivial normal subgroups for <m>n \geq 5</m>.
+            Seja <m>N</m> um subgrupo normal de <m>A_n</m>. Pelo <xref ref="normal-lemma-3-normal-3cycle"/>, <m>N</m> contém um <m>3</m>-ciclo. Pelo <xref ref="normal-lemma-2-normal-3cycle"/>, <m>N = A_n</m>; portanto, <m>A_n</m> não contém subgrupos normais próprios não triviais para <m>n \geq 5</m>.
           </p>
         </proof>
       </theorem>
@@ -512,44 +405,24 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage can easily determine if a subgroup is normal or not.
-          If so, it can create the quotient group.
-          However, the construction creates a new permuation group,
-          isomorphic to the quotient group,
-          so its utility is limited.
+          O Sage pode determinar facilmente se um subgrupo é normal ou não. Se for, ele pode criar o grupo quociente. Entretanto, a construção cria um novo grupo de permutações, isomorfo ao grupo quociente, de modo que sua utilidade é limitada.
         </p>
       </paragraphs>
     </introduction>
 
     <subsection xml:id="normal-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        One of the foremost problems of group theory has been to classify all <idx><h>Group</h><h>simple</h></idx>simple finite groups.
-        This problem is over a century old and has been solved only in the last few decades of the twentieth century.
-        In a sense, finite simple groups are the building blocks of all finite groups.
-        The first nonabelian simple groups to be discovered were the alternating groups.
-        Galois was the first to prove that <m>A_5</m> was simple.
-        Later, mathematicians such as C. Jordan<idx><h>Jordan, C.</h></idx>
-        and L. E. Dickson<idx><h>Dickson, L. E.</h></idx>
-        found several infinite families of matrix groups that were simple.
-        Other families of simple groups were discovered in the 1950s.
-        At the turn of the century, William Burnside<idx><h>Burnside, William</h></idx>
-        conjectured that all nonabelian simple groups must have even order.
-        In 1963, W. Feit<idx><h>Feit, W.</h></idx>
-        and J. Thompson<idx><h>Thompson, J.</h></idx>
-        proved Burnside's conjecture and published their results in the paper
+        Um dos principais problemas da teoria dos grupos tem sido classificar todos os <idx><h>Grupo</h><h>simples</h></idx>grupos finitos simples. Esse problema tem mais de um século e só foi resolvido nas últimas décadas do século XX. Em certo sentido, os grupos finitos simples são os blocos de construção de todos os grupos finitos. Os primeiros grupos simples não abelianos descobertos foram os grupos alternados. Galois foi o primeiro a demonstrar que <m>A_5</m> era simples. Mais tarde, matemáticos como C. Jordan<idx><h>Jordan, C.</h></idx>
+        e L. E. Dickson<idx><h>Dickson, L. E.</h></idx>
+        encontraram várias famílias infinitas de grupos de matrizes que eram simples. Outras famílias de grupos simples foram descobertas na década de 1950. Na virada do século, William Burnside<idx><h>Burnside, William</h></idx>
+        conjecturou que todos os grupos simples não abelianos devem ter ordem par. Em 1963, W. Feit<idx><h>Feit, W.</h></idx>
+        e J. Thompson<idx><h>Thompson, J.</h></idx>
+        demonstraram a conjectura de Burnside e publicaram seus resultados no artigo
         <q>Solvability of Groups of Odd Order,</q>
-        which appeared in the <pubtitle>Pacific Journal of Mathematics</pubtitle>.
-        Their proof, running over 250 pages,
-        gave impetus to a program in the 1960s and 1970s to classify all finite simple groups.
-        Daniel Gorenstein<idx><h>Gorenstein, Daniel</h></idx>
-        was the organizer of this remarkable effort.
-        One of the last simple groups was the
-        <q>Monster,</q> discovered by <idx><h>Greiss, R.</h></idx>R. Greiss.
-        The Monster, a <m>196{,}833 \times 196{,}833</m> matrix group,
-        is one of the 26 sporadic, or special, simple groups.
-        These sporadic simple groups are groups that fit into no infinite family of simple groups.
-        Some of the sporadic groups play an important role in physics.
+        que apareceu no <pubtitle>Pacific Journal of Mathematics</pubtitle>. Sua demonstração, com mais de 250 páginas, impulsionou um programa nas décadas de 1960 e 1970 para classificar todos os grupos finitos simples. Daniel Gorenstein<idx><h>Gorenstein, Daniel</h></idx>
+        foi o organizador desse esforço notável. Um dos últimos grupos simples foi o
+        <q>Monstro,</q> descoberto por <idx><h>Greiss, R.</h></idx>R. Greiss. O Monstro, um grupo de matrizes <m>196{,}833 \times 196{,}833</m> , é um dos 26 grupos simples esporádicos, ou especiais. Esses grupos simples esporádicos são grupos que não se enquadram em nenhuma família infinita de grupos simples. Alguns dos grupos esporádicos desempenham um papel importante na física.
       </p>
     </subsection>
 
@@ -560,10 +433,7 @@
     <exercise label="rq-normal-equilateral">
       <statement>
         <p>
-          Let <m>G</m> be the group of symmetries of an equilateral triangle,
-          expressed as permutations of the vertices numbered <m>1,2,3</m>.
-          Let <m>H</m> be the subgroup <m>H=\langle (1\,2) \rangle</m>.
-          Build the left and right cosets of <m>H</m> in <m>G</m>.
+          Seja <m>G</m> o grupo de simetrias de um triângulo equilátero, expresso como permutações dos vértices numerados <m>1,2,3</m>. Seja <m>H</m> o subgrupo <m>H=\langle (1\,2) \rangle</m>. Construa as classes laterais à esquerda e à direita de <m>H</m> em <m>G</m>.
         </p>
       </statement>
       <response/>
@@ -572,9 +442,7 @@
     <exercise label="rq-normal-is-normal">
       <statement>
         <p>
-          Based on your answer to the previous question,
-          is <m>H</m> normal in <m>G</m>?
-          Explain why or why not.
+          Com base em sua resposta à pergunta anterior, <m>H</m> é normal em <m>G</m>? Explique por que sim ou por que não.
         </p>
       </statement>
       <response/>
@@ -583,9 +451,8 @@
     <exercise label="rq-normal-8Z">
       <statement>
         <p>
-          The subgroup <m>8\mathbb Z</m> is normal in <m>\mathbb Z</m>.
-          In the factor group <m>\mathbb Z/8\mathbb Z</m>
-          perform the computation <m>(3+8\mathbb Z)+(7+8\mathbb Z)</m>.
+          O subgrupo <m>8\mathbb Z</m> é normal em <m>\mathbb Z</m>. No grupo quociente <m>\mathbb Z/8\mathbb Z</m>
+          efetue o cálculo <m>(3+8\mathbb Z)+(7+8\mathbb Z)</m>.
         </p>
       </statement>
       <response/>
@@ -594,8 +461,8 @@
     <exercise label="rq-normal-equivalent">
       <statement>
         <p>
-          List two statements about a group <m>G</m> and a subgroup <m>H</m> that are equivalent to
-          <q><m>H</m> is normal in <m>G</m>.</q>
+          Liste duas afirmações sobre um grupo <m>G</m> e um subgrupo <m>H</m> que sejam equivalentes a
+          <q><m>H</m> é normal em <m>G</m>.</q>
         </p>
       </statement>
       <response/>
@@ -604,7 +471,7 @@
     <exercise label="rq-normal-factor">
       <statement>
         <p>
-          In your own words, what is a factor group?
+          Em suas próprias palavras, o que é um grupo quociente?
         </p>
       </statement>
       <response/>
@@ -615,44 +482,41 @@
     <!-- File: normal.xml  -->
     <!-- Title: Normal Subgroups and Factor Groups -->
   <exercises xml:id="normal-exercises" filenamebase="normal">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="normal-exercise-normal-subgroup">
       <statement>
         <p>
-          For each of the following groups <m>G</m>,
-          determine whether <m>H</m> is a normal subgroup of <m>G</m>.
-          If <m>H</m> is a normal subgroup,
-          write out a Cayley table for the factor group <m>G/H</m>.
+          Para cada um dos seguintes grupos <m>G</m>, determine se <m>H</m> é um subgrupo normal de <m>G</m>. Se <m>H</m> for um subgrupo normal, escreva uma tabela de Cayley para o grupo quociente <m>G/H</m>.
 
           <ol>
             <li>
               <p>
-                <m>G = S_4</m> and <m>H = A_4</m>
+                <m>G = S_4</m> e <m>H = A_4</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>G = A_5</m> and <m>H = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>
+                <m>G = A_5</m> e <m>H = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>G = S_4</m> and <m>H = D_4</m>
+                <m>G = S_4</m> e <m>H = D_4</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>G = Q_8</m> and <m>H = \{ 1, -1, I, -I \}</m>
+                <m>G = Q_8</m> e <m>H = \{ 1, -1, I, -I \}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>G = {\mathbb Z}</m> and <m>H = 5 {\mathbb Z}</m>
+                <m>G = {\mathbb Z}</m> e <m>H = 5 {\mathbb Z}</m>
               </p>
             </li>
           </ol>
@@ -671,7 +535,7 @@
         </p>
 
         <p>
-          (c) <m>D_4</m> is not normal in <m>S_4</m>.
+          (c) <m>D_4</m> não é normal em <m>S_4</m>.
         </p>
       </hint>
     </exercise>
@@ -679,9 +543,7 @@
     <exercise number="2" xml:id="normal-exercise-D4">
       <statement>
         <p>
-          Find all the subgroups of <m>D_4</m>.
-          Which subgroups are normal?
-          What are all the factor groups of <m>D_4</m> up to isomorphism?
+          Encontre todos os subgrupos de <m>D_4</m>. Quais subgrupos são normais? Quais são todos os grupos quocientes de <m>D_4</m> a menos de isomorfismo?
         </p>
       </statement>
     </exercise>
@@ -689,9 +551,7 @@
     <exercise number="3" xml:id="normal-exercise-Q8">
       <statement>
         <p>
-          Find all the subgroups of the quaternion group, <m>Q_8</m>.
-          Which subgroups are normal?
-          What are all the factor groups of <m>Q_8</m> up to isomorphism?
+          Encontre todos os subgrupos do grupo dos quatérnios, <m>Q_8</m>. Quais subgrupos são normais? Quais são todos os grupos quocientes de <m>Q_8</m> a menos de isomorfismo?
         </p>
       </statement>
     </exercise>
@@ -699,54 +559,50 @@
     <exercise number="4" xml:id="normal-exercise-triangular-matrices">
       <statement>
         <p>
-          Let <m>T</m> be the group of nonsingular upper triangular
-          <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>;
-          that is, matrices of the form
+          Seja <m>T</m> o grupo das matrizes triangulares superiores não singulares
+          <m>2 \times 2</m> com entradas em <m>{\mathbb R}</m>; isto é, matrizes da forma
           <md>
             \begin{pmatrix}
             a &amp; b \\
             0 &amp; c
             \end{pmatrix}
-          </md>,
-          where <m>a</m>,
-          <m>b</m>, <m>c \in {\mathbb R}</m> and <m>ac \neq 0</m>.
-          Let <m>U</m> consist of matrices of the form
+          </md>, onde <m>a</m>,
+          <m>b</m>, <m>c \in {\mathbb R}</m> e <m>ac \neq 0</m>. Seja <m>U</m> constituído pelas matrizes da forma
           <md>
             \begin{pmatrix}
             1 &amp; x \\
             0 &amp; 1
             \end{pmatrix}
-          </md>,
-          where <m>x \in {\mathbb R}</m>.
+          </md>, onde <m>x \in {\mathbb R}</m>.
 
           <ol>
             <li>
               <p>
-                Show that <m>U</m> is a subgroup of <m>T</m>.
+                Mostre que <m>U</m> é um subgrupo de <m>T</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>U</m> is abelian.
+                Demonstre que <m>U</m> é abeliano.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>U</m> is normal in <m>T</m>.
+                Demonstre que <m>U</m> é normal em <m>T</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>T/U</m> is abelian.
+                Mostre que <m>T/U</m> é abeliano.
               </p>
             </li>
 
             <li>
               <p>
-                Is <m>T</m> normal in <m>GL_2( {\mathbb R})</m>?
+                O subgrupo <m>T</m> é normal em <m>GL_2( {\mathbb R})</m>?
               </p>
             </li>
           </ol>
@@ -757,7 +613,7 @@
     <exercise number="5" xml:id="normal-exercise-intersection">
       <statement>
         <p>
-          Show that the intersection of two normal subgroups is a normal subgroup.
+          Mostre que a interseção de dois subgrupos normais é um subgrupo normal.
         </p>
       </statement>
     </exercise>
@@ -765,7 +621,7 @@
     <exercise number="6" xml:id="normal-exercise-abelian">
       <statement>
         <p>
-          If <m>G</m> is abelian, prove that <m>G/H</m> must also be abelian.
+          Se <m>G</m> é abeliano, demonstre que <m>G/H</m> também deve ser abeliano.
         </p>
       </statement>
     </exercise>
@@ -773,8 +629,7 @@
     <exercise number="7" xml:id="normal-exercise-H-GmodH">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> is a normal subgroup of <m>G</m> such that <m>H</m> and <m>G/H</m> are abelian,
-          then <m>G</m> is abelian.
+          Demonstre ou refute: se <m>H</m> é um subgrupo normal de <m>G</m> tal que <m>H</m> e <m>G/H</m> são abelianos, então <m>G</m> é abeliano.
         </p>
       </statement>
     </exercise>
@@ -784,13 +639,12 @@
     <exercise number="8" xml:id="normal-exercise-cyclic">
       <statement>
         <p>
-          If <m>G</m> is cyclic, prove that <m>G/H</m> must also be cyclic.
+          Se <m>G</m> é cíclico, demonstre que <m>G/H</m> também deve ser cíclico.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>a \in G</m> is a generator for <m>G</m>,
-          then <m>aH</m> is a generator for <m>G/H</m>.
+          Se <m>a \in G</m> é um gerador de <m>G</m>, então <m>aH</m> é um gerador de <m>G/H</m>.
         </p>
       </hint>
     </exercise>
@@ -798,8 +652,7 @@
     <exercise number="9" xml:id="normal-exercise-H-GmodH-cyclic">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> and <m>G/H</m> are cyclic,
-          then <m>G</m> is cyclic.
+          Demonstre ou refute: se <m>H</m> e <m>G/H</m> são cíclicos, então <m>G</m> é cíclico.
         </p>
       </statement>
     </exercise>
@@ -807,9 +660,7 @@
     <exercise number="10" xml:id="normal-exercise-index-2">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of index <m>2</m> of a group <m>G</m>.
-          Prove that <m>H</m> must be a normal subgroup of <m>G</m>.
-          Conclude that <m>S_n</m> is not simple for <m>n \geq 3</m>.
+          Seja <m>H</m> um subgrupo de índice <m>2</m> de um grupo <m>G</m>. Demonstre que <m>H</m> deve ser um subgrupo normal de <m>G</m>. Conclua que <m>S_n</m> não é simples para <m>n \geq 3</m>.
         </p>
       </statement>
     </exercise>
@@ -817,15 +668,13 @@
     <exercise number="11" xml:id="normal-exercise-one-subgroup">
       <statement>
         <p>
-          If a group <m>G</m> has exactly one subgroup <m>H</m> of order <m>k</m>,
-          prove that <m>H</m> is normal in <m>G</m>.
+          Se um grupo <m>G</m> tem exatamente um subgrupo <m>H</m> de ordem <m>k</m>, demonstre que <m>H</m> é normal em <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          For any <m>g \in G</m>, show that the map <m>i_g : G \to G</m> defined by
-          <m>i_g : x \mapsto gxg^{-1}</m> is an isomorphism of <m>G</m> with itself.
-          Then consider <m>i_g(H)</m>.
+          Para qualquer <m>g \in G</m>, mostre que a aplicação <m>i_g : G \to G</m> definida por
+          <m>i_g : x \mapsto gxg^{-1}</m> é um isomorfismo de <m>G</m> consigo mesmo. Então considere <m>i_g(H)</m>.
         </p>
       </hint>
     </exercise>
@@ -833,22 +682,17 @@
     <exercise number="12" xml:id="normal-exercise-centralizer">
       <statement>
         <p>
-          Define the <term>centralizer</term>
-          of an element <m>g</m> in a group <m>G</m> to be the set
+          Defina o <term>centralizador</term>
+          de um elemento <m>g</m> em um grupo <m>G</m> como o conjunto
           <md>
             C(g) = \{ x \in G : xg = gx \}
-          </md>.
-          Show that <m>C(g)</m> is a subgroup of <m>G</m>.
-          If <m>g</m> generates a normal subgroup of <m>G</m>,
-          prove that <m>C(g)</m> is normal in <m>G</m>.
+          </md>. Mostre que <m>C(g)</m> é um subgrupo de <m>G</m>. Se <m>g</m> gera um subgrupo normal de <m>G</m>, demonstre que <m>C(g)</m> é normal em <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Suppose that <m>\langle g \rangle</m> is normal in <m>G</m> and let <m>y</m> be an arbitrary element of <m>G</m>.
-          If <m>x \in C(g)</m>, we must show that
-          <m>y x y^{-1}</m> is also in <m>C(g)</m>.
-          Show that <m>(y x y^{-1}) g = g (y x y^{-1})</m>.
+          Suponha que <m>\langle g \rangle</m> é normal em <m>G</m> e seja <m>y</m> um elemento arbitrário de <m>G</m>. Se <m>x \in C(g)</m>, devemos mostrar que
+          <m>y x y^{-1}</m> também está em <m>C(g)</m>. Mostre que <m>(y x y^{-1}) g = g (y x y^{-1})</m>.
         </p>
       </hint>
     </exercise>
@@ -856,34 +700,33 @@
     <exercise number="13" xml:id="normal-exercise-center">
       <statement>
         <p>
-          Recall that the <term>center</term>
-          of a group <m>G</m> is the set
+          Lembre-se de que o <term>centro</term>
+          de um grupo <m>G</m> é o conjunto
           <md>
             Z(G) = \{ x \in G : xg = gx \text{ for all } g \in G \}
           </md>.
           <ol>
             <li>
               <p>
-                Calculate the center of <m>S_3</m>.
+                Calcule o centro de <m>S_3</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Calculate the center of <m>GL_2 ( {\mathbb R} )</m>.
+                Calcule o centro de <m>GL_2 ( {\mathbb R} )</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that the center of any group <m>G</m> is a normal subgroup of <m>G</m>.
+                Mostre que o centro de qualquer grupo <m>G</m> é um subgrupo normal de <m>G</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>G / Z(G)</m> is cyclic,
-                show that <m>G</m> is abelian.
+                Se <m>G / Z(G)</m> é cíclico, mostre que <m>G</m> é abeliano.
               </p>
             </li>
           </ol>
@@ -894,27 +737,24 @@
     <exercise number="14" xml:id="normal-exercise-commutator">
       <statement>
         <p>
-          Let <m>G</m> be a group and let <m>G' = \langle aba^{- 1} b^{-1} \rangle</m>;
-          that is, <m>G'</m> is the subgroup of all finite products of elements in <m>G</m> of the form <m>aba^{-1}b^{-1}</m>.
-          The subgroup <m>G'</m> is called the
-          <term>commutator subgroup</term> of <m>G</m>.
+          Seja <m>G</m> um grupo e seja <m>G' = \langle aba^{- 1} b^{-1} \rangle</m>; isto é, <m>G'</m> é o subgrupo de todos os produtos finitos de elementos de <m>G</m> da forma <m>aba^{-1}b^{-1}</m>. O subgrupo <m>G'</m> é chamado de
+          <term>subgrupo comutador</term> de <m>G</m>.
 
           <notation>
             <usage><m>G'</m></usage>
-            <description>commutator subgroup of <m>G</m></description>
+            <description>subgrupo comutador de <m>G</m></description>
           </notation>
 
           <ol>
             <li>
               <p>
-                Show that <m>G'</m> is a normal subgroup of <m>G</m>.
+                Mostre que <m>G'</m> é um subgrupo normal de <m>G</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>N</m> be a normal subgroup of <m>G</m>.
-                Prove that <m>G/N</m> is abelian if and only if <m>N</m> contains the commutator subgroup of <m>G</m>.
+                Seja <m>N</m> um subgrupo normal de <m>G</m>. Demonstre que <m>G/N</m> é abeliano se e somente se <m>N</m> contém o subgrupo comutador de <m>G</m>.
               </p>
             </li>
           </ol>
@@ -922,17 +762,13 @@
       </statement>
       <hint>
         <p>
-          (a) Let <m>g \in G</m> and <m>h \in G'</m>.
-          If <m>h = aba^{-1}b^{-1}</m>, then
+          (a) Sejam <m>g \in G</m> e <m>h \in G'</m>. Se <m>h = aba^{-1}b^{-1}</m>, então
           <md>
             <mrow>ghg^{-1} &amp; = gaba^{-1}b^{-1}g^{-1}</mrow>
             <mrow>&amp; = (gag^{-1})(gbg^{-1})(ga^{-1}g^{-1})(gb^{-1}g^{-1})</mrow>
             <mrow>&amp; = (gag^{-1})(gbg^{-1})(gag^{-1})^{-1}(gbg^{-1})^{-1}</mrow>
-          </md>.
-          We also need to show that if
-          <m>h = h_1 \cdots h_n</m> with <m>h_i = a_i b_i a_i^{-1} b_i^{-1}</m>,
-          then <m>ghg^{-1}</m> is a product of elements of the same type.
-          However, <m>ghg^{-1} = g h_1 \cdots h_n g^{-1} = (gh_1g^{-1})(gh_2g^{-1}) \cdots (gh_ng^{-1})</m>.
+          </md>. Também precisamos mostrar que se
+          <m>h = h_1 \cdots h_n</m> com <m>h_i = a_i b_i a_i^{-1} b_i^{-1}</m>, então <m>ghg^{-1}</m> é um produto de elementos do mesmo tipo. Entretanto, <m>ghg^{-1} = g h_1 \cdots h_n g^{-1} = (gh_1g^{-1})(gh_2g^{-1}) \cdots (gh_ng^{-1})</m>.
         </p>
       </hint>
     </exercise>
@@ -943,34 +779,20 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage has several convenient functions that will allow us to investigate quickly if a subgroup is normal,
-        and if so, the nature of the resulting quotient group.
-        But for an initial understanding,
-        we can also work with the raw cosets.
-        Let us get our hands dirty first,
-        then learn about the easy way.
+        O Sage tem várias funções convenientes que nos permitirão investigar rapidamente se um subgrupo é normal e, em caso afirmativo, a natureza do grupo quociente resultante. Mas, para uma compreensão inicial, também podemos trabalhar diretamente com as classes laterais. Vamos primeiro pôr a mão na massa e depois aprender o caminho fácil.
       </p>
     </introduction>
 
     <subsection>
-      <title>Multiplying Cosets</title>
+      <title>Multiplicando classes laterais</title>
       <p>
-        The definiton of a factor group requires a normal subgroup,
-        and then we <em>define</em> a way to <q>multiply</q>
-        two cosets of the subgroup to produce another coset.
-        It is important to realize that we can interpret the definition of a normal subgroup to be <em>exactly</em>
-        the condition we need for our new multiplication to be workable.
-        We will do two examples <mdash/> first with a normal subgroup,
-        then with a subgroup that is not normal.
+        A definição de um grupo quociente requer um subgrupo normal, e então <em>definimos</em> uma maneira de <q>multiplicar</q>
+        duas classes laterais do subgrupo para produzir outra classe lateral. É importante perceber que podemos interpretar a definição de um subgrupo normal como sendo <em>exatamente</em>
+        a condição de que precisamos para que nossa nova multiplicação funcione. Faremos dois exemplos <mdash/> primeiro com um subgrupo normal e depois com um subgrupo que não é normal.
       </p>
 
       <p>
-        Consider the dihedral group <m>D_{8}</m> that is the symmetry group of an <m>8</m>-gon.
-        If we take the element that creates a quarter-turn,
-        we can use it generate a cyclic subgroup of order 4.
-        This will be a normal subgroup
-        (trust us for the moment on this).
-        First, build the (right) cosets (notice there is no output):
+        Considere o grupo diedral <m>D_{8}</m> que é o grupo de simetrias de um <m>8</m>-gono. Se tomarmos o elemento que produz um quarto de volta, podemos usá-lo para gerar um subgrupo cíclico de ordem 4. Esse será um subgrupo normal (confie em nós por enquanto). Primeiro, construa as classes laterais (à direita) (observe que não há saída):
       </p>
 
             <sage>
@@ -983,24 +805,8 @@
             </sage>
 
       <p>
-        So <c>C</c> is a list of lists,
-        with every element of the group <c>G</c> occuring exactly once somewhere.
-        You could ask Sage to print out <c>C</c> for you if you like,
-        but we will try to avoid that here.
-        We want to multiply two cosets (lists) together.
-        How do we do this?
-        Take <em>any</em> element out of the first list,
-        and <em>any</em> element out of the second list and multiply them together
-        (which we know how to do since they are elements of <c>G</c>).
-        Now we have an element of <c>G</c>.
-        What do we do with this element,
-        since we really want a coset as the result of the product of two cosets?
-        Simple <mdash/> we see which coset the product is in.
-        Let us give it a try.
-        We will multiply coset <m>1</m> with coset <m>3</m>
-        (there are <m>4</m> cosets by Lagrange's Theorem).
-        Study the following code carefully to see if you can understand what it is doing,
-        and <em>then</em> read the explanation that follows.
+        Assim, <c>C</c> é uma lista de listas, com cada elemento do grupo <c>G</c> ocorrendo exatamente uma vez em algum lugar. Você poderia pedir ao Sage para exibir <c>C</c> se quiser, mas tentaremos evitar isso aqui. Queremos multiplicar duas classes laterais (listas). Como fazemos isso? Tome <em>qualquer</em> elemento da primeira lista e <em>qualquer</em> elemento da segunda lista e multiplique-os (o que sabemos fazer, pois são elementos de <c>G</c>). Agora temos um elemento de <c>G</c>. O que fazemos com esse elemento, já que queremos uma classe lateral como resultado do produto de duas classes laterais? Simples <mdash/> vemos em qual classe lateral o produto está. Vamos tentar. Multiplicaremos a classe lateral <m>1</m> pela classe lateral <m>3</m>
+        (existem <m>4</m> classes laterais pelo Teorema de Lagrange). Estude o código a seguir com cuidado para ver se consegue compreender o que ele faz e <em>depois</em> leia a explicação que segue.
       </p>
 
             <sage>
@@ -1014,30 +820,14 @@
             </sage>
 
       <p>
-        What have we accomplished?
-        In the first line we create <c>p</c> as the product of two group elements,
-        one from coset <m>1</m> and one from coset <m>3</m>
-        (<c>C[1]</c>, <c>C[3]</c>).
-        Since we can choose <em>any</em> element from each coset,
-        we choose the first element of each
-        (<c>C[ ][0]</c>).
-        Then we count our way through all the cosets,
-        selecting only cosets that contain <c>p</c>.
-        Since <c>p</c> will only be in one coset,
-        we expect a list with just one element.
-        Here, our one-element list contains only <c>2</c>.
-        So we say the product of coset <m>1</m> and coset <m>3</m> is coset <m>2</m>.
+        O que conseguimos? Na primeira linha, criamos <c>p</c> como o produto de dois elementos do grupo, um da classe lateral <m>1</m> e outro da classe lateral <m>3</m>
+        (<c>C[1]</c>, <c>C[3]</c>). Como podemos escolher <em>qualquer</em> elemento de cada classe lateral, escolhemos o primeiro elemento de cada uma (<c>C[ ][0]</c>). Então percorremos todas as classes laterais, selecionando apenas as que contêm <c>p</c>. Como <c>p</c> estará em apenas uma classe lateral, esperamos uma lista com um único elemento. Aqui, nossa lista de um elemento contém apenas <c>2</c>. Portanto, dizemos que o produto da classe lateral <m>1</m> pela classe lateral <m>3</m> é a classe lateral <m>2</m>.
       </p>
 
       <p>
-        The point here is that this result
-        (coset <m>1</m> times coset <m>3</m> is coset <m>2</m>)
-        should always be the same,
-        <em>no matter which elements we pick from the two cosets to form</em> <c>p</c>.
-        So let us do it again,
-        but this time we will not simply choose the first element from each of coset <m>1</m> and coset <m>3</m>,
-        instead we will choose the third element of coset <m>1</m> and the second element of coset <m>3</m>
-        (remember, we are counting from zero!).
+        O ponto aqui é que esse resultado (a classe lateral <m>1</m> vezes a classe lateral <m>3</m> é a classe lateral <m>2</m>) deve ser sempre o mesmo,
+        <em>independentemente dos elementos que escolhermos das duas classes laterais para formar</em> <c>p</c>. Então vamos fazer isso novamente, mas desta vez não escolheremos simplesmente o primeiro elemento de cada uma das classes laterais <m>1</m> e <m>3</m>; em vez disso, escolheremos o terceiro elemento da classe lateral <m>1</m> e o segundo elemento da classe lateral <m>3</m>
+        (lembre-se de que estamos contando a partir de zero!).
       </p>
 
             <sage>
@@ -1051,21 +841,13 @@
             </sage>
 
       <p>
-        Good.
-        We have the same result.
-        If you are still trusting us on <c>S</c> being a normal subgroup of <c>G</c>,
-        then this is the result that the theory predicts.
-        Make a copy of the above compute cell and try other choices for the representatives of each coset.
-        Then try the product of other cosets,
-        with varying representatives.
+        Ótimo. Temos o mesmo resultado. Se você ainda está confiando em nós quanto a <c>S</c> ser um subgrupo normal de <c>G</c>, então esse é o resultado que a teoria prevê. Faça uma cópia da célula de cálculo acima e tente outras escolhas de representantes de cada classe lateral. Depois tente o produto de outras classes laterais, variando os representantes.
       </p>
 
       <sage type="practice"/>
 
       <p>
-        Now is a good time to introduce a way to extend Sage and add new functions.
-        We will design a coset-multiplication function.
-        Read the following carefully and then see the subsequent explanation.
+        Agora é uma boa hora para apresentar uma maneira de estender o Sage e acrescentar novas funções. Vamos elaborar uma função de multiplicação de classes laterais. Leia o que segue com atenção e depois veja a explicação subsequente.
       </p>
 
             <sage>
@@ -1078,21 +860,8 @@
             </sage>
 
       <p>
-        The first line creates a new Sage function named <c>coset_product</c>.
-        This is accomplished with the word <c>def</c>,
-        and note the colon ending the line.
-        The inputs to the function are the numbers of the cosets we want to multiply and the complete list of the cosets.
-        The middle two lines should look familiar from above.
-        We know <c>c</c> is a one-element list,
-        so <c>c[0]</c> will extract this one coset number,
-        and <c>return</c> is what determines that this is the output of the function.
-        Notice that the indentation above must be exactly as shown.
-        We could have written all this computation on a single line without making a new function,
-        but that begins to get unwieldly.
-        You need to execute the code block above to actually
-        <em>define</em> the function,
-        and there will be no output if successful.
-        Now we can use our new function to repeat our work above:
+        A primeira linha cria uma nova função do Sage chamada <c>coset_product</c>. Isso é feito com a palavra <c>def</c>, e observe os dois-pontos no fim da linha. As entradas da função são os números das classes laterais que queremos multiplicar e a lista completa das classes laterais. As duas linhas do meio devem parecer familiares pelo que vimos acima. Sabemos que <c>c</c> é uma lista de um elemento, de modo que <c>c[0]</c> extrairá esse único número de classe lateral, e <c>return</c> é o que determina que essa seja a saída da função. Observe que a indentação acima deve ser exatamente como mostrada. Poderíamos ter escrito todo esse cálculo em uma única linha sem criar uma nova função, mas isso começa a ficar difícil de manejar. Você precisa executar o bloco de código acima para de fato
+        <em>definir</em> a função, e não haverá saída se tudo der certo. Agora podemos usar nossa nova função para repetir nosso trabalho acima:
       </p>
 
             <sage>
@@ -1105,25 +874,15 @@
             </sage>
 
       <p>
-        Now you know the basics of how to add onto Sage and do much more than it was designed for.
-        And with some practice,
-        you could suggest and contribute new functions to Sage,
-        since it is an open source project.
-        Nice.
+        Agora você conhece os fundamentos de como acrescentar recursos ao Sage e fazer muito mais do que aquilo para que ele foi projetado. E, com alguma prática, você poderia sugerir e contribuir com novas funções para o Sage, pois ele é um projeto de código aberto. Legal.
       </p>
 
       <p>
-        Now let us examine a situation where the subgroup is not normal.
-        So we will see that our definition of coset multiplication is insufficient in this case.
-        And realize that our new <c>coset_product</c> function is also useless since it assumes the cosets come from a normal subgroup.
+        Agora vamos examinar uma situação em que o subgrupo não é normal. Veremos, então, que nossa definição de multiplicação de classes laterais é insuficiente nesse caso. E perceba que nossa nova função <c>coset_product</c> também é inútil, pois supõe que as classes laterais vêm de um subgrupo normal.
       </p>
 
       <p>
-        Consider the alternating group <m>A_4</m> which we can interpet as the symmetry group of a tetrahedron.
-        For a subgroup,
-        take an element that fixes one vertex and rotates the opposite face <mdash/> this will generate a cyclic subgroup of order 3, and by Lagrange's Theorem we will get four cosets.
-        We compute them here.
-        (Again, no output is requested.)
+        Considere o grupo alternado <m>A_4</m> que podemos interpretar como o grupo de simetrias de um tetraedro. Para um subgrupo, tome um elemento que fixa um vértice e gira a face oposta <mdash/> isso gerará um subgrupo cíclico de ordem 3 e, pelo Teorema de Lagrange, obteremos quatro classes laterais. Nós as calculamos aqui. (Novamente, nenhuma saída é solicitada.)
       </p>
 
             <sage>
@@ -1136,7 +895,7 @@
             </sage>
 
       <p>
-        Again, let's consider the product of coset <m>1</m> and coset <m>3</m>:
+        Novamente, consideremos o produto da classe lateral <m>1</m> pela classe lateral <m>3</m>:
       </p>
 
             <sage>
@@ -1150,8 +909,7 @@
             </sage>
 
       <p>
-        Again, but now for coset <m>3</m>,
-        choose the second element of the coset to produce the product <c>p</c>:
+        Novamente, mas agora, para a classe lateral <m>3</m>, escolha o segundo elemento da classe lateral para produzir o produto <c>p</c>:
       </p>
 
             <sage>
@@ -1165,21 +923,14 @@
             </sage>
 
       <p>
-        So, is the product of coset <m>1</m> and coset <m>3</m> equal to coset <m>0</m> or coset <m>2</m>?
-        We cannot say!
-        So there is <em>no way</em> to construct a quotient group for this subgroup.
-        You can experiment some more with this subgroup, but in some sense,
-        we are done with this example <mdash/> there is nothing left to say.
+        Então, o produto da classe lateral <m>1</m> pela classe lateral <m>3</m> é igual à classe lateral <m>0</m> ou à classe lateral <m>2</m>? Não podemos dizer! Portanto, não há <em>nenhuma maneira</em> de construir um grupo quociente para esse subgrupo. Você pode experimentar um pouco mais com esse subgrupo, mas, em certo sentido, terminamos com esse exemplo <mdash/> não há mais nada a dizer.
       </p>
     </subsection>
 
     <subsection>
-      <title>Sage Methods for Normal Subgroups</title>
+      <title>Métodos do Sage para subgrupos normais</title>
       <p>
-        You can easily ask Sage if a subgroup is normal or not.
-        This is viewed as a property of the subgroup,
-        but you must tell Sage what the <q>supergroup</q> is,
-        since the answer can change depending on this value. (For example <c>H.is_normal(H)</c> will always be <c>True</c>.) Here are our two examples from above.
+        Você pode facilmente perguntar ao Sage se um subgrupo é normal ou não. Isso é visto como uma propriedade do subgrupo, mas você precisa informar ao Sage qual é o <q>supergrupo</q>, pois a resposta pode mudar dependendo desse valor. (Por exemplo, <c>H.is_normal(H)</c> sempre será <c>True</c>.) Aqui estão nossos dois exemplos anteriores.
       </p>
 
             <sage>
@@ -1206,10 +957,8 @@
             </sage>
 
       <p>
-        The text proves in <xref ref="normal-section-simplicity-of-an"/> that <m>A_5</m> is simple,
-        <ie/> <m>A_5</m> has no normal subgroups.
-        We could build every subgroup of <m>A_5</m> and ask if it is normal in <m>A_5</m> using the <c>.is_normal()</c> method.
-        But Sage has this covered for us already.
+        O texto demonstra em <xref ref="normal-section-simplicity-of-an"/> que <m>A_5</m> é simples,
+        <ie/> <m>A_5</m> não tem subgrupos normais. Poderíamos construir todos os subgrupos de <m>A_5</m> e perguntar se cada um é normal em <m>A_5</m> usando o método <c>.is_normal()</c>. Mas o Sage já cuida disso para nós.
       </p>
 
             <sage>
@@ -1223,7 +972,7 @@
             </sage>
 
       <p>
-        We can also build a quotient group when we have a normal subgroup.
+        Também podemos construir um grupo quociente quando temos um subgrupo normal.
       </p>
 
             <sage>
@@ -1240,18 +989,7 @@
             </sage>
 
       <p>
-        This is useful, but also a bit unsettling.
-        We have the quotient group, but any notion of cosets has been lost,
-        since <c>Q</c> is returned as a new permutation group on a different set of symbols.
-        We cannot presume that the numbers used for the new permutation group <c>Q</c> bear any resemblance to the cosets we get from the <c>.cosets()</c> method.
-        But we can see that the quotient group is described as a group generated by two elements of order two.
-        We could ask for the order of the group,
-        or by Lagrange's Theorem we know the quotient has order <m>4</m>.
-        We can say now that there are only two groups of order four,
-        the cyclic group of order <m>4</m> and a non-cyclic group of order <m>4</m>,
-        known to us as the Klein <m>4</m>-group or <m>{\mathbb Z}_2\times{\mathbb Z}_2</m>.
-        This quotient group looks like the non-cyclic one since the cyclic group of order 4 has just one element of order 2.
-        Let us see what Sage says.
+        Isso é útil, mas também um pouco desconcertante. Temos o grupo quociente, mas toda noção de classes laterais se perdeu, pois <c>Q</c> é retornado como um novo grupo de permutações em um conjunto diferente de símbolos. Não podemos presumir que os números usados para o novo grupo de permutações <c>Q</c> tenham qualquer semelhança com as classes laterais que obtemos pelo método <c>.cosets()</c>. Mas podemos ver que o grupo quociente é descrito como um grupo gerado por dois elementos de ordem dois. Poderíamos perguntar a ordem do grupo ou, pelo Teorema de Lagrange, sabemos que o quociente tem ordem <m>4</m>. Podemos dizer agora que existem apenas dois grupos de ordem quatro, o grupo cíclico de ordem <m>4</m> e um grupo não cíclico de ordem <m>4</m>, que conhecemos como o <m>4</m>-grupo de Klein ou <m>{\mathbb Z}_2\times{\mathbb Z}_2</m>. Esse grupo quociente parece ser o não cíclico, pois o grupo cíclico de ordem 4 tem apenas um elemento de ordem 2. Vejamos o que o Sage diz.
       </p>
 
             <sage>
@@ -1264,14 +1002,11 @@
             </sage>
 
       <p>
-        Yes, that's it.
+        Sim, é isso.
       </p>
 
       <p>
-        Finally, Sage can build us a list of all of the normal subgroups of a group.
-        The list of groups themselves, as we have seen before,
-        is sometimes an overwhelming amount of information.
-        We will demonstrate by just listing the orders of the normal subgroups produced.
+        Finalmente, o Sage pode construir uma lista de todos os subgrupos normais de um grupo. A lista dos próprios grupos, como já vimos, às vezes é uma quantidade excessiva de informação. Demonstraremos isso listando apenas as ordens dos subgrupos normais produzidos.
       </p>
 
             <sage>
@@ -1286,27 +1021,23 @@
             </sage>
 
       <p>
-        So, in particular, we see that our
-        <q>quarter-turn</q> subgroup is the <em>only</em>
-        normal subgroup of order <m>4</m> in this group.
+        Assim, em particular, vemos que nosso subgrupo de
+        <q>um quarto de volta</q> é o <em>único</em>
+        subgrupo normal de ordem <m>4</m> nesse grupo.
       </p>
     </subsection>
 
   </section>
 
   <exercises xml:id="normal-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="normal-sage-exercise-A5">
       <statement>
         <p>
-          Build every subgroup of the alternating group on 5 symbols,
-          <m>A_5</m>, and check that each is not a normal subgroup
-          (except for the two trivial cases).
-          This command might take a couple seconds to run.
-          Compare this with the time needed to run the <c>.is_simple()</c> method and realize that there is a significant amount of theory and cleverness brought to bear in speeding up commands like this.
-          (It is possible that your Sage installation lacks <acro>GAP</acro>'s <q>Table of Marks</q>
-          library and you will be unable to compute the list of subgroups.)
+          Construa todos os subgrupos do grupo alternado em 5 símbolos,
+          <m>A_5</m>, e verifique que nenhum é um subgrupo normal (exceto nos dois casos triviais). Esse comando pode levar alguns segundos para executar. Compare isso com o tempo necessário para executar o método <c>.is_simple()</c> e perceba que uma quantidade significativa de teoria e engenhosidade é empregada para acelerar comandos como esse. (É possível que sua instalação do <acro>GAP</acro>no Sage não tenha a biblioteca <q>Table of Marks</q>
+          e você não consiga calcular a lista de subgrupos.)
         </p>
       </statement>
     </exercise>
@@ -1314,14 +1045,8 @@
     <exercise number="2" xml:id="normal-sage-exercise-D8-quotient">
       <statement>
         <p>
-          Consider the quotient group of the group of symmetries of an <m>8</m>-gon,
-          formed with the cyclic subgroup of order <m>4</m> generated by a quarter-turn.
-          Use the <c>coset_product</c> function to determine the Cayley table for this quotient group.
-          Use the number of each coset,
-          as produced by the <c>.cosets()</c> method as names for the elements of the quotient group.
-          You will need to build the table <q>by hand</q>
-          as there is no easy way to have Sage's Cayley table command do this one for you.
-          You can build a table in the Sage Notebook pop-up editor (shift-click on a blue line) or you might read the documentation of the <c>html.table()</c> method.
+          Considere o grupo quociente do grupo de simetrias de um <m>8</m>-gono, formado com o subgrupo cíclico de ordem <m>4</m> gerado por um quarto de volta. Use a função <c>coset_product</c> para determinar a tabela de Cayley desse grupo quociente. Use o número de cada classe lateral, conforme produzido pelo método <c>.cosets()</c>, como nome dos elementos do grupo quociente. Você precisará construir a tabela <q>à mão</q>
+          , pois não há uma maneira fácil de fazer o comando de tabela de Cayley do Sage produzi-la para você. Você pode construir uma tabela no editor pop-up do Sage Notebook (clique em uma linha azul mantendo Shift pressionado) ou pode ler a documentação do método <c>html.table()</c>.
         </p>
       </statement>
     </exercise>
@@ -1329,9 +1054,7 @@
     <exercise number="3" xml:id="normal-sage-exercise-D8-cyclic-subgroup">
       <statement>
         <p>
-          Consider the cyclic subgroup of order <m>4</m> in the symmetries of an <m>8</m>-gon.
-          Verify that the subgroup is normal by first building the raw left and right cosets (without using the <c>.cosets()</c> method) and then checking their equality in Sage,
-          all with a single command that employs sorting with the <c>sorted()</c> command.
+          Considere o subgrupo cíclico de ordem <m>4</m> nas simetrias de um <m>8</m>-gono. Verifique que o subgrupo é normal construindo primeiro diretamente as classes laterais à esquerda e à direita (sem usar o método <c>.cosets()</c>) e depois verificando sua igualdade no Sage, tudo com um único comando que empregue ordenação com o comando <c>sorted()</c>.
         </p>
       </statement>
     </exercise>
@@ -1339,13 +1062,7 @@
     <exercise number="4" xml:id="normal-sage-exercise-D8-normal-subgroup">
       <statement>
         <p>
-          Again, use the same cyclic subgroup of order <m>4</m> in the group of symmetries of an <m>8</m>-gon.
-          Check that the subgroup is normal by using part (2) of <xref ref="normal-theorem-normal-equivalents"/>.
-          Construct a one-line command that does the complete check and returns <c>True</c>.
-          Maybe sort the elements of the subgroup <c>S</c> first,
-          then slowly build up the necessary lists,
-          commands, and conditions in steps.
-          Notice that this check does not require ever building the cosets.
+          Novamente, use o mesmo subgrupo cíclico de ordem <m>4</m> no grupo de simetrias de um <m>8</m>-gono. Verifique que o subgrupo é normal usando a parte (2) de <xref ref="normal-theorem-normal-equivalents"/>. Construa um comando de uma linha que faça a verificação completa e retorne <c>True</c>. Talvez ordene primeiro os elementos do subgrupo <c>S</c> e depois construa lentamente as listas, os comandos e as condições necessárias, em etapas. Observe que essa verificação não exige construir as classes laterais em nenhum momento.
         </p>
       </statement>
     </exercise>
@@ -1353,12 +1070,7 @@
     <exercise number="5" xml:id="normal-sage-exercise-tetrahedron">
       <statement>
         <p>
-          Repeat the demonstration from the previous subsection that for the symmetries of a tetrahedron,
-          a cyclic subgroup of order <m>3</m> results in an undefined coset multiplication.
-          Above, the default setting for the <c>.cosets()</c> method builds right cosets <mdash/> but in this problem,
-          work instead with left cosets.
-          You need to choose two cosets to multiply,
-          and then demonstrate two choices for representatives that lead to different results for the product of the cosets.
+          Repita a demonstração da subseção anterior de que, para as simetrias de um tetraedro, um subgrupo cíclico de ordem <m>3</m> resulta em uma multiplicação de classes laterais não definida. Acima, a configuração padrão do método <c>.cosets()</c> constrói classes laterais à direita <mdash/> mas, neste problema, trabalhe com classes laterais à esquerda. Você precisa escolher duas classes laterais para multiplicar e depois apresentar duas escolhas de representantes que levem a resultados diferentes para o produto das classes laterais.
         </p>
       </statement>
     </exercise>
@@ -1366,20 +1078,13 @@
     <exercise number="6" xml:id="normal-sage-exercise-n-gon">
       <statement>
         <p>
-          Construct some dihedral groups of order <m>2n</m> (<ie/> symmetries of an <m>n</m>-gon,
-          <m>D_{n}</m> in the text, <c>DihedralGroup(n)</c> in Sage).
-          Maybe all of them for <m>3\leq n \leq 100</m>.
-          For each dihedral group,
-          construct a list of the orders of each of the normal subgroups (so use <c>.normal_subgroups()</c>).
-          You may need to wait ten or twenty seconds for this to finish - be patient.
-          Observe enough examples to hypothesize a pattern to your observations,
-          check your hypothesis against each of your examples and then state your hypothesis clearly.
+          Construa alguns grupos diedrais de ordem <m>2n</m> (<ie/> simetrias de um <m>n</m>-gono,
+          <m>D_{n}</m> no texto, <c>DihedralGroup(n)</c> no Sage). Talvez todos eles para <m>3\leq n \leq 100</m>. Para cada grupo diedral, construa uma lista das ordens de cada um dos subgrupos normais (portanto, use <c>.normal_subgroups()</c>). Talvez você precise esperar dez ou vinte segundos para isso terminar — seja paciente. Observe exemplos suficientes para conjecturar um padrão em suas observações, verifique sua hipótese em cada um dos exemplos e depois enuncie sua hipótese claramente.
         </p>
 
         <p>
-          Can you predict how many normal subgroups there are in the dihedral group
-          <m>D_{470448}</m> without using Sage to build all the normal subgroups?
-          Can you <em>describe</em> all of the normal subgroups of a dihedral group in a way that would let us predict all of the normal subgroups of <m>D_{470448}</m> without using Sage?
+          Você consegue prever quantos subgrupos normais existem no grupo diedral
+          <m>D_{470448}</m> sem usar o Sage para construir todos os subgrupos normais? Você consegue <em>descrever</em> todos os subgrupos normais de um grupo diedral de uma maneira que nos permita prever todos os subgrupos normais de <m>D_{470448}</m> sem usar o Sage?
         </p>
       </statement>
     </exercise>

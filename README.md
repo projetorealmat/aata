@@ -1,19 +1,19 @@
-Abstract Algebra: Theory and Applications
-=========================================
+Álgebra Abstrata: Teoria e Aplicações
+=====================================
 
-by Tom Judson
+por Tom Judson
 -------------
 
-Source in [PreTeXt](http://mathbook.pugetsound.edu) format for open source [GFDL](https://www.gnu.org/copyleft/fdl.html)-licensed undergraduate textbook covering groups, rings, fields and more.
+Fonte em formato [PreTeXt](http://mathbook.pugetsound.edu) para um livro didático de graduação, de código aberto e licenciado sob a [GFDL](https://www.gnu.org/copyleft/fdl.html), que aborda grupos, anéis, corpos e outros tópicos.
 
-For copies in various formats, and to learn more, visit the book's website at [abstract.pugetsound.edu](http://abstract.pugetsound.edu).
+Para obter cópias em vários formatos e saber mais, visite o site do livro em [abstract.pugetsound.edu](http://abstract.pugetsound.edu).
 
 ## REALMat integration
 
-This repository is the REALMat edition in preparation, based on the English source repository. Translation and adaptation will take place here; the upstream repository is retained only for provenance, credits, and license information.
+Este repositório é a edição REALMat em preparação, baseada no repositório-fonte em inglês. A tradução e a adaptação serão feitas aqui; o repositório upstream é mantido apenas para fins de procedência, créditos e informações de licença.
 
 ## Publicações
 
 <!-- realmat-release:start -->
-Nenhuma Release REALMat foi publicada ainda. A primeira release listará aqui o PDF obrigatório e os demais formatos disponíveis.
+Nenhuma release REALMat foi publicada ainda. A primeira release listará aqui o PDF obrigatório e os demais formatos disponíveis.
 <!-- realmat-release:end -->
