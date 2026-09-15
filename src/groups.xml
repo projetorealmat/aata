@@ -1641,7 +1641,7 @@
           <md>
             0 + a  \equiv a + 0  \equiv a \pmod{ n }
           </md>
-          for all <m>a \in {\mathbb Z}_n</m>.
+          para todo <m>a \in {\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1649,7 +1649,7 @@
     <exercise number="20" xml:id="groups-exercise-multiplicative-identity-Zn">
       <statement>
         <p>
-          Prove that there is a multiplicative identity for the integers modulo <m>n</m>:
+          Prove que existe um elemento identidade multiplicativo para os inteiros módulo <m>n</m>:
           <md>
             a \cdot  1   \equiv  a \pmod{n}
           </md>.
@@ -1660,7 +1660,7 @@
     <exercise number="21" xml:id="groups-exercise-addition-commutative-Zn">
       <statement>
         <p>
-          For each <m>a \in {\mathbb Z}_n</m> find an element <m>b \in {\mathbb Z}_n</m> such that
+          Para cada <m>a \in {\mathbb Z}_n</m>, encontre um elemento <m>b \in {\mathbb Z}_n</m> tal que
           <md>
             a + b \equiv b + a  \equiv 0 \pmod{ n}
           </md>.
@@ -1671,8 +1671,8 @@
     <exercise number="22" xml:id="groups-exercise-Zn-operations-well-defined">
       <statement>
         <p>
-          Show that addition and multiplication mod <m>n</m> are well defined operations.
-          That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod <m>n</m>.
+          Mostre que a adição e a multiplicação módulo <m>n</m> são operações bem definidas.
+          Isto é, mostre que as operações não dependem da escolha do representante nas classes de equivalência módulo <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1680,7 +1680,7 @@
     <exercise number="23" xml:id="groups-exercise-Zn-associative">
       <statement>
         <p>
-          Show that addition and multiplication mod <m>n</m> are associative operations.
+          Mostre que a adição e a multiplicação módulo <m>n</m> são operações associativas.
         </p>
       </statement>
     </exercise>
@@ -1688,7 +1688,7 @@
     <exercise number="24" xml:id="groups-exercise-Zn-distribute">
       <statement>
         <p>
-          Show that multiplication distributes over addition modulo <m>n</m>:
+          Mostre que a multiplicação é distributiva em relação à adição módulo <m>n</m>:
           <md>
             a(b  + c)  \equiv ab + ac  \pmod{n}
           </md>.
@@ -1699,8 +1699,8 @@
     <exercise number="25" xml:id="groups-exercise-powers-of-inverses">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be elements in a group <m>G</m>.
-          Prove that <m>ab^na^{-1} = (aba^{-1})^n</m> for <m>n \in \mathbb Z</m>.
+          Sejam <m>a</m> e <m>b</m> elementos de um grupo <m>G</m>.
+          Prove que <m>ab^na^{-1} = (aba^{-1})^n</m> para <m>n \in \mathbb Z</m>.
         </p>
       </statement>
       <hint>
@@ -1717,9 +1717,9 @@
     <exercise number="26" xml:id="groups-exercise-Un-idempotent">
       <statement>
         <p>
-          Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>.
-          If <m>n \gt 2</m>, prove that there is an element
-          <m>k \in U(n)</m> such that <m>k^2 = 1</m> and <m>k \neq 1</m>.
+          Seja <m>U(n)</m> o grupo das unidades em <m>{\mathbb Z}_n</m>.
+          Se <m>n \gt 2</m>, prove que existe um elemento
+          <m>k \in U(n)</m> tal que <m>k^2 = 1</m> e <m>k \neq 1</m>.
         </p>
       </statement>
     </exercise>
@@ -1727,7 +1727,7 @@
     <exercise number="27" xml:id="groups-exercise-product-of-inverses">
       <statement>
         <p>
-          Prove that the inverse of <m>g _1 g_2 \cdots g_n</m> is <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.
+          Prove que o inverso de <m>g _1 g_2 \cdots g_n</m> é <m>g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}</m>.
         </p>
       </statement>
     </exercise>
@@ -1735,9 +1735,9 @@
     <exercise number="28" xml:id="groups-exercise-prove-xa-equal-b-solution">
       <statement>
         <p>
-          Prove the remainder of <xref ref="groups-proposition-group-equations"/>:
-          if <m>G</m> is a group and <m>a, b \in G</m>,
-          then the equation <m>xa = b</m> has a unique solution in <m>G</m>.
+          Prove o restante da <xref ref="groups-proposition-group-equations"/>:
+          se <m>G</m> é um grupo e <m>a, b \in G</m>,
+          então a equação <m>xa = b</m> tem uma solução única em <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1745,7 +1745,7 @@
     <exercise number="29" xml:id="groups-exercise-prove-exponent-laws">
       <statement>
         <p>
-          Prove <xref ref="groups-theorem-exponent-laws"/>.
+          Prove o <xref ref="groups-theorem-exponent-laws"/>.
         </p>
       </statement>
     </exercise>
@@ -1753,9 +1753,9 @@
     <exercise number="30" xml:id="groups-exercise-cancellation-laws">
       <statement>
         <p>
-          Prove the right and left cancellation laws for a group <m>G</m>;
-          that is, show that in the group <m>G</m>,
-          <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m> for elements <m>a,
+          Prove as leis do cancelamento à direita e à esquerda para um grupo <m>G</m>;
+          isto é, mostre que, no grupo <m>G</m>,
+          <m>ba = ca</m> implica <m>b = c</m> e <m>ab = ac</m> implica <m>b = c</m> para elementos <m>a,
           b, c \in G</m>.
         </p>
       </statement>
@@ -1764,8 +1764,8 @@
     <exercise number="31" xml:id="groups-exercise-a-hat-square-equal-1">
       <statement>
         <p>
-          Show that if <m>a^2 = e</m> for all elements <m>a</m> in a group <m>G</m>,
-          then <m>G</m> must be abelian.
+          Mostre que, se <m>a^2 = e</m> para todos os elementos <m>a</m> de um grupo <m>G</m>,
+          então <m>G</m> deve ser abeliano.
         </p>
       </statement>
       <hint>
@@ -1779,8 +1779,8 @@
     <exercise number="32" xml:id="groups-exercise-finite-group-even-order">
       <statement>
         <p>
-          Show that if <m>G</m> is a finite group of even order,
-          then there is an <m>a \in G</m> such that <m>a</m> is not the identity and <m>a^2 = e</m>.
+          Mostre que, se <m>G</m> é um grupo finito de ordem par,
+          então existe um <m>a \in G</m> tal que <m>a</m> não é o elemento identidade e <m>a^2 = e</m>.
         </p>
       </statement>
     </exercise>
@@ -1788,9 +1788,9 @@
     <exercise number="33" xml:id="groups-exercise-ab-2-and-a2-b2">
       <statement>
         <p>
-          Let <m>G</m> be a group and suppose that
-          <m>(ab)^2 = a^2b^2</m> for all <m>a</m> and <m>b</m> in <m>G</m>.
-          Prove that <m>G</m> is an abelian group.
+          Seja <m>G</m> um grupo e suponha que
+          <m>(ab)^2 = a^2b^2</m> para todos os <m>a</m> e <m>b</m> em <m>G</m>.
+          Prove que <m>G</m> é um grupo abeliano.
         </p>
       </statement>
     </exercise>
@@ -1798,10 +1798,10 @@
     <exercise number="34" xml:id="groups-exercise-subgroups-Z3-times-Z3">
       <statement>
         <p>
-          Find all the subgroups of <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m>.
-          Use this information to show that
-          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> is not the same group as <m>{\mathbb Z}_9</m>.
-          (See <xref ref="groups-example-z2xz2"/> for a short description of the product of groups.)
+          Encontre todos os subgrupos de <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m>.
+          Use essa informação para mostrar que
+          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> não é o mesmo grupo que <m>{\mathbb Z}_9</m>.
+          (Veja <xref ref="groups-example-z2xz2"/> para uma breve descrição do produto de grupos.)
         </p>
       </statement>
     </exercise>
@@ -1809,7 +1809,7 @@
     <exercise number="35" xml:id="groups-exercise-subgroups-S3">
       <statement>
         <p>
-          Find all the subgroups of the symmetry group of an equilateral triangle.
+          Encontre todos os subgrupos do grupo de simetrias de um triângulo equilátero.
         </p>
       </statement>
       <hint>
@@ -1826,7 +1826,7 @@
     <exercise number="36" xml:id="groups-exercise-subgroups-D4">
       <statement>
         <p>
-          Compute the subgroups of the symmetry group of a square.
+          Calcule os subgrupos do grupo de simetrias de um quadrado.
         </p>
       </statement>
     </exercise>
@@ -1834,8 +1834,8 @@
     <exercise number="37" xml:id="groups-exercise-subgroup-powers-2">
       <statement>
         <p>
-          Let <m>H = \{2^k : k \in {\mathbb Z} \}</m>.
-          Show that <m>H</m> is a subgroup of <m>{\mathbb Q}^*</m>.
+          Seja <m>H = \{2^k : k \in {\mathbb Z} \}</m>.
+          Mostre que <m>H</m> é um subgrupo de <m>{\mathbb Q}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -1843,9 +1843,9 @@
     <exercise number="38" xml:id="groups-exercise-subgroup-Zn-times-Zn">
       <statement>
         <p>
-          Let <m>n = 0, 1, 2, \ldots</m> and <m>n {\mathbb Z} = \{ nk : k \in {\mathbb Z} \}</m>.
-          Prove that <m>n {\mathbb Z}</m> is a subgroup of <m>{\mathbb Z}</m>.
-          Show that these subgroups are the only subgroups of <m>\mathbb{Z}</m>.
+          Seja <m>n = 0, 1, 2, \ldots</m> e <m>n {\mathbb Z} = \{ nk : k \in {\mathbb Z} \}</m>.
+          Prove que <m>n {\mathbb Z}</m> é um subgrupo de <m>{\mathbb Z}</m>.
+          Mostre que esses subgrupos são os únicos subgrupos de <m>\mathbb{Z}</m>.
         </p>
       </statement>
     </exercise>
@@ -1853,8 +1853,8 @@
     <exercise number="39" xml:id="groups-exercise-circle-group">
       <statement>
         <p>
-          Let <m>{\mathbb T} = \{ z \in {\mathbb C}^* : |z| =1 \}</m>.
-          Prove that <m>{\mathbb T}</m> is a subgroup of <m>{\mathbb C}^*</m>.
+          Seja <m>{\mathbb T} = \{ z \in {\mathbb C}^* : |z| =1 \}</m>.
+          Prove que <m>{\mathbb T}</m> é um subgrupo de <m>{\mathbb C}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -1862,15 +1862,15 @@
     <exercise number="40" xml:id="groups-exercise-so-2">
       <statement>
         <p>
-          Let <m>G</m> consist of the <m>2 \times 2</m> matrices of the form
+          Seja <m>G</m> o conjunto das matrizes <m>2 \times 2</m> da forma
           <md>
             \begin{pmatrix}
             \cos \theta &amp; -\sin \theta \\
             \sin \theta &amp; \cos \theta
             \end{pmatrix}
           </md>,
-          where <m>\theta \in {\mathbb R}</m>.
-          Prove that <m>G</m> is a subgroup of <m>SL_2({\mathbb R})</m>.
+          onde <m>\theta \in {\mathbb R}</m>.
+          Prove que <m>G</m> é um subgrupo de <m>SL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1878,19 +1878,19 @@
     <exercise number="41" xml:id="groups-exercise-a-plus-b-sqrt-2">
       <statement>
         <p>
-          Prove that
+          Prove que
           <md>
             G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
           </md>
-          is a subgroup of <m>{\mathbb R}^{\ast}</m> under the group operation of multiplication.
+          é um subgrupo de <m>{\mathbb R}^{\ast}</m> sob a operação de grupo dada pela multiplicação.
         </p>
       </statement>
       <hint>
         <p>
-          The identity of <m>G</m> is <m>1 = 1 + 0 \sqrt{2}</m>.
-          Since <m>(a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}</m>,
-          <m>G</m> is closed under multiplication.
-          Finally, <m>(a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)</m>.
+          O elemento identidade de <m>G</m> é <m>1 = 1 + 0 \sqrt{2}</m>.
+          Como <m>(a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}</m>,
+          <m>G</m> é fechado sob a multiplicação.
+          Finalmente, <m>(a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)</m>.
         </p>
       </hint>
     </exercise>
@@ -1898,8 +1898,8 @@
     <exercise number="42" xml:id="groups-exercise-trace-0">
       <statement>
         <p>
-          Let <m>G</m> be the group of
-          <m>2 \times 2</m> matrices under addition and
+          Seja <m>G</m> o grupo das
+          matrizes <m>2 \times 2</m> sob a adição e
           <md>
             H =
             \left\{
@@ -1910,7 +1910,7 @@
             a + d = 0
             \right\}
           </md>.
-          Prove that <m>H</m> is a subgroup of <m>G</m>.
+          Prove que <m>H</m> é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1918,9 +1918,9 @@
     <exercise number="43" xml:id="groups-exercise-sl-2-Z">
       <statement>
         <p>
-          Prove or disprove: <m>SL_2( {\mathbb Z} )</m>,
-          the set of <m>2 \times 2</m> matrices with integer entries and determinant one,
-          is a subgroup of <m>SL_2( {\mathbb R} )</m>.
+          Prove ou refute: <m>SL_2( {\mathbb Z} )</m>,
+          o conjunto das matrizes <m>2 \times 2</m> com entradas inteiras e determinante um,
+          é um subgrupo de <m>SL_2( {\mathbb R} )</m>.
         </p>
       </statement>
     </exercise>
@@ -1928,7 +1928,7 @@
     <exercise number="44" xml:id="groups-exercise-subgroups-Q8">
       <statement>
         <p>
-          List the subgroups of the quaternion group, <m>Q_8</m>.
+          Liste os subgrupos do grupo dos quatérnios, <m>Q_8</m>.
         </p>
       </statement>
     </exercise>
@@ -1936,7 +1936,7 @@
     <exercise number="45" xml:id="groups-exercise-intersect-subgroups">
       <statement>
         <p>
-          Prove that the intersection of two subgroups of a group <m>G</m> is also a subgroup of <m>G</m>.
+          Prove que a interseção de dois subgrupos de um grupo <m>G</m> também é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1944,13 +1944,13 @@
     <exercise number="46" xml:id="groups-exercise-union-subgroups">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H \cup K</m> is a subgroup of <m>G</m>.
+          Prove ou refute: Se <m>H</m> e <m>K</m> são subgrupos de um grupo <m>G</m>,
+          então <m>H \cup K</m> é um subgrupo de <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Look at <m>S_3</m>.
+          Considere <m>S_3</m>.
         </p>
       </hint>
     </exercise>
@@ -1958,9 +1958,9 @@
     <exercise number="47" xml:id="groups-exercise-product-subgroups">
       <statement>
         <p>
-          Prove or disprove: If <m>H</m> and <m>K</m> are subgroups of a group <m>G</m>,
-          then <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> is a subgroup of <m>G</m>.
-          What if <m>G</m> is abelian?
+          Prove ou refute: Se <m>H</m> e <m>K</m> são subgrupos de um grupo <m>G</m>,
+          então <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> é um subgrupo de <m>G</m>.
+          E se <m>G</m> for abeliano?
         </p>
       </statement>
     </exercise>
@@ -1968,17 +1968,17 @@
     <exercise number="48" xml:id="groups-exercise-center-group">
       <statement>
         <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Show that
+          Seja <m>G</m> um grupo e <m>g \in G</m>.
+          Mostre que
           <md>
             Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
           </md>
-          is a subgroup of <m>G</m>.
-          This subgroup is called the <term>center</term> of <m>G</m>.
+          é um subgrupo de <m>G</m>.
+          Esse subgrupo é chamado de <term>centro</term> de <m>G</m>.
 
           <notation>
             <usage><m>Z(G)</m></usage>
-            <description>the center of a group</description>
+            <description>o centro de um grupo</description>
           </notation>
 
         </p>
@@ -1988,9 +1988,9 @@
     <exercise number="49" xml:id="groups-exercise-a4b-a3">
       <statement>
         <p>
-          Let <m>a</m> and <m>b</m> be elements of a group <m>G</m>.
-          If <m>a^4 b = ba</m> and <m>a^3 = e</m>,
-          prove that <m>ab = ba</m>.
+          Sejam <m>a</m> e <m>b</m> elementos de um grupo <m>G</m>.
+          Se <m>a^4 b = ba</m> e <m>a^3 = e</m>,
+          prove que <m>ab = ba</m>.
         </p>
       </statement>
       <hint>
@@ -2003,7 +2003,7 @@
     <exercise number="50"  xml:id="groups-exercise-infinite-subgroups">
       <statement>
         <p>
-          Give an example of an infinite group in which every nontrivial subgroup is infinite.
+          Dê um exemplo de grupo infinito no qual todo subgrupo não trivial é infinito.
         </p>
       </statement>
     </exercise>
@@ -2023,8 +2023,8 @@
     <exercise number="51"  xml:id="groups-exercise-xy-equal-x-1-y-1">
       <statement>
         <p>
-          If <m>xy = x^{-1} y^{-1}</m> for all <m>x</m> and <m>y</m> in <m>G</m>,
-          prove that <m>G</m> must be abelian.
+          Se <m>xy = x^{-1} y^{-1}</m> para todos os <m>x</m> e <m>y</m> em <m>G</m>,
+          prove que <m>G</m> deve ser abeliano.
         </p>
       </statement>
     </exercise>
@@ -2032,7 +2032,7 @@
     <exercise number="52"  xml:id="groups-exercise-subgroups-of-nonabelian-groups">
       <statement>
         <p>
-          Prove or disprove: Every proper nontrivial subgroup of a nonabelian group is nonabelian.
+          Prove ou refute: todo subgrupo próprio não trivial de um grupo não abeliano é não abeliano.
         </p>
       </statement>
     </exercise>
@@ -2042,12 +2042,12 @@
     <exercise number="53" xml:id="groups-exercise-centralizer">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of <m>G</m> and
+          Seja <m>H</m> um subgrupo de <m>G</m> e
           <md>
             C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}
           </md>.
-          Prove <m>C(H)</m> is a subgroup of <m>G</m>.
-          This subgroup is called the <term>centralizer</term> of <m>H</m> in <m>G</m>.
+          Prove que <m>C(H)</m> é um subgrupo de <m>G</m>.
+          Esse subgrupo é chamado de <term>centralizador</term> de <m>H</m> em <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -2055,16 +2055,16 @@
     <exercise number="54"  xml:id="groups-exercise-commutator">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of <m>G</m>.
-          If <m>g \in G</m>, show that
-          <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> is also a subgroup of <m>G</m>.
+          Seja <m>H</m> um subgrupo de <m>G</m>.
+          Se <m>g \in G</m>, mostre que
+          <m>gHg^{-1} = \{ghg^{-1} : h\in H\}</m> também é um subgrupo de <m>G</m>.
         </p>
       </statement>
     </exercise>
 
   </exercises>
   <exercises xml:id="groups-exercises-detecting-errors">
-    <title>Additional Exercises: Detecting Errors</title>
+    <title>Exercícios adicionais: detecção de erros</title>
         <!--EXERCISE GROUP
 
 		<introduction>
