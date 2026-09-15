@@ -1353,22 +1353,22 @@ theory.</p> -->
     <title>Sage</title>
     <introduction>
       <p>
-        Many properties of the algebraic objects we will study can be determined from properties of associated integers.
-        And Sage has many powerful functions for analyzing integers.
+        Muitas propriedades dos objetos algébricos que estudaremos podem ser determinadas a partir das propriedades dos inteiros associados.
+        E o Sage possui muitas funções poderosas para analisar inteiros.
       </p>
     </introduction>
 
     <subsection>
-      <title>Division Algorithm</title>
+      <title>Algoritmo da divisão</title>
       <p>
-        The code <c>a % b</c> will return the remainder upon division of <m>a</m> by <m>b</m>.
-        In other words,
-        the result is the unique integer <m>r</m> such that (1) <m>0\leq r\lt b</m>,
-        and (2) <m>a=bq+r</m> for some integer <m>q</m>
-        (the quotient),
-        as guaranteed by the Division Algorithm (<xref ref="integers-theorem-division_algorithm"/>).
-        Then <m>(a-r)/b</m> will equal <m>q</m>.
-        For example,
+        O código <c>a % b</c> retornará o resto da divisão de <m>a</m> por <m>b</m>.
+        Em outras palavras,
+        o resultado é o único inteiro <m>r</m> tal que (1) <m>0\leq r\lt b</m>
+        e (2) <m>a=bq+r</m> para algum inteiro <m>q</m>
+        (o quociente),
+        conforme garantido pelo algoritmo da divisão (<xref ref="integers-theorem-division_algorithm"/>).
+        Então <m>(a-r)/b</m> será igual a <m>q</m>.
+        Por exemplo,
       </p>
 
             <sage>
@@ -1387,8 +1387,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        It is also possible to get both the quotient and remainder at the same time with the <c>.quo_rem()</c> method
-        (quotient and remainder).
+        Também é possível obter o quociente e o resto ao mesmo tempo com o método <c>.quo_rem()</c>
+        (quociente e resto).
       </p>
 
             <sage>
@@ -1401,9 +1401,9 @@ theory.</p> -->
             </sage>
 
       <p>
-        A remainder of zero indicates divisibility.
-        So <c>(a % b) == 0</c> will return <c>True</c> if <m>b</m> divides <m>a</m>,
-        and will otherwise return <c>False</c>.
+        Um resto igual a zero indica divisibilidade.
+        Assim, <c>(a % b) == 0</c> retornará <c>True</c> se <m>b</m> dividir <m>a</m>
+        e, caso contrário, retornará <c>False</c>.
       </p>
 
             <sage>
@@ -1416,7 +1416,7 @@ theory.</p> -->
             </sage>
 
       <p>
-        The <c>.divides()</c> method is another option.
+        O método <c>.divides()</c> é outra opção.
       </p>
 
             <sage>
@@ -1436,13 +1436,13 @@ theory.</p> -->
     </subsection>
 
     <subsection>
-      <title>Greatest Common Divisor</title>
+      <title>Máximo divisor comum</title>
       <p>
-        The greatest common divisor of <m>a</m> and <m>b</m> is obtained with the command <c>gcd(a, b)</c>,
-        where in our first uses, <m>a</m> and <m>b</m> are integers.
-        Later, <m>a</m> and <m>b</m> can be other objects with a notion of divisibility and
-        <q>greatness,</q> such as polynomials.
-        For example,
+        O máximo divisor comum de <m>a</m> e <m>b</m> é obtido com o comando <c>gcd(a, b)</c>,
+        em que, nos primeiros usos, <m>a</m> e <m>b</m> são inteiros.
+        Mais tarde, <m>a</m> e <m>b</m> poderão ser outros objetos com uma noção de divisibilidade e
+        <q>grandeza</q>, como polinômios.
+        Por exemplo,
       </p>
 
             <sage>
@@ -1451,7 +1451,7 @@ theory.</p> -->
             </sage>
 
       <p>
-        We can use the <c>gcd</c> command to determine if a pair of integers are relatively prime.
+        Podemos usar o comando <c>gcd</c> para determinar se um par de inteiros é primo entre si.
       </p>
 
             <sage>
@@ -1472,8 +1472,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>xgcd(a,b)</c>(<q>eXtended GCD</q>) returns a triple where the first element is the greatest common divisor of <m>a</m> and <m>b</m> (as with the <c>gcd(a,b)</c> command above),
-        but the next two elements are values of <m>r</m> and <m>s</m> such that <m>ra+sb=\gcd(a,b)</m>.
+        O comando <c>xgcd(a,b)</c> (<q>GCD estendido</q>) retorna uma tripla cujo primeiro elemento é o máximo divisor comum de <m>a</m> e <m>b</m> (assim como no comando <c>gcd(a,b)</c> acima),
+        mas os dois elementos seguintes são valores de <m>r</m> e <m>s</m> tais que <m>ra+sb=\gcd(a,b)</m>.
       </p>
 
             <sage>
@@ -1482,13 +1482,13 @@ theory.</p> -->
             </sage>
 
       <p>
-        Portions of the triple can be extracted using <c>[ ]</c>(<q>indexing</q>) to access the entries of the triple,
-        starting with the first as number <c>0</c>.
-        For example,
-        the following should always return the result <c>True</c>,
-        even if you change the values of <c>a</c> and <c>b</c>.
-        Try changing the values of <c>a</c> and <c>b</c> below,
-        to see that the result is always <c>True</c>.
+        Partes da tripla podem ser extraídas usando <c>[ ]</c> (<q>indexação</q>) para acessar as entradas da tripla,
+        começando pela primeira, numerada <c>0</c>.
+        Por exemplo,
+        o código a seguir deve sempre retornar o resultado <c>True</c>,
+        mesmo que você altere os valores de <c>a</c> e <c>b</c>.
+        Tente alterar abaixo os valores de <c>a</c> e <c>b</c>
+        para verificar que o resultado é sempre <c>True</c>.
       </p>
 
             <sage>
@@ -1505,18 +1505,18 @@ theory.</p> -->
             </sage>
 
       <p>
-        Studying this block of code will go a long way towards helping you get the most out of Sage's output.
-        Note that <c>=</c> is how a value is
-        <em>assigned</em> to a variable,
-        while as in the last line,
-        <c>==</c> is how we compare two items for <em>equality</em>.
+        Estudar este bloco de código ajudará bastante você a aproveitar ao máximo a saída do Sage.
+        Observe que <c>=</c> é a forma de
+        <em>atribuir</em> um valor a uma variável,
+        enquanto, como na última linha,
+        <c>==</c> é a forma de comparar dois itens quanto à <em>igualdade</em>.
       </p>
     </subsection>
 
     <subsection>
-      <title>Primes and Factoring</title>
+      <title>Primos e fatoração</title>
       <p>
-        The method <c>.is_prime()</c> will determine if an integer is prime or not.
+        O método <c>.is_prime()</c> determina se um inteiro é primo ou não.
       </p>
 
             <sage>
@@ -1539,11 +1539,11 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>random_prime(a, proof=True)</c> will generate a random prime number between <m>2</m> and <m>a</m>.
-        Experiment by executing the following two compute cells several times.
-        (Replacing <c>proof=True</c> by <c>proof=False</c> will speed up the search,
-        but there will be a very, very,
-        very small probability the result will not be prime.)
+        O comando <c>random_prime(a, proof=True)</c> gera um número primo aleatório entre <m>2</m> e <m>a</m>.
+        Experimente executando as duas células de computação a seguir várias vezes.
+        (Substituir <c>proof=True</c> por <c>proof=False</c> acelerará a busca,
+        mas haverá uma probabilidade muito, muito,
+        muito pequena de o resultado não ser primo.)
       </p>
 
             <sage doctest="random">
@@ -1559,9 +1559,9 @@ theory.</p> -->
             </sage>
 
       <p>
-        The command <c>prime_range(a, b)</c> returns an ordered list of all the primes from <m>a</m> to <m>b-1</m>,
+        O comando <c>prime_range(a, b)</c> retorna uma lista ordenada de todos os primos de <m>a</m> a <m>b-1</m>,
         inclusive.
-        For example,
+        Por exemplo,
       </p>
 
             <sage>
@@ -1570,21 +1570,21 @@ theory.</p> -->
             </sage>
 
       <p>
-        The commands <c>next_prime(a)</c> and <c>previous_prime(a)</c> are other ways to get a single prime number of a desired size.
-        Give them a try below if you have an empty compute cell there
-        (as you will if you are reading in the Sage Notebook,
-        or are reading the online version). (The hash symbol, <c>#</c>,
-        is used to indicate a <q>comment</q> line,
-        which will not be evaluated by Sage.
-        So erase this line, or start on the one below it.)
+        Os comandos <c>next_prime(a)</c> e <c>previous_prime(a)</c> são outras maneiras de obter um único número primo de tamanho desejado.
+        Experimente-os abaixo se houver uma célula de computação vazia
+        (como haverá se você estiver lendo no Sage Notebook
+        ou na versão on-line). (O símbolo de cerquilha, <c>#</c>,
+        é usado para indicar uma linha de <q>comentário</q>,
+        que não será avaliada pelo Sage.
+        Portanto, apague esta linha ou comece na linha abaixo dela.)
       </p>
 
       <sage type="practice"/>
 
       <p>
-        In addition to checking if integers are prime or not,
-        or generating prime numbers, Sage can also decompose any integer into its prime factors,
-        as described by the Fundamental Theorem of Arithmetic (<xref ref="integers-theorem-fund-theorem-arithmetic"/>).
+        Além de verificar se os inteiros são primos ou não
+        e gerar números primos, o Sage também pode decompor qualquer inteiro em seus fatores primos,
+        como descrito pelo Teorema Fundamental da Aritmética (<xref ref="integers-theorem-fund-theorem-arithmetic"/>).
       </p>
 
             <sage>
@@ -1596,16 +1596,16 @@ theory.</p> -->
             </sage>
 
       <p>
-        So <m>2600 = 2^3\times 5^2\times 13</m> and this is the unique way to write <m>2600</m> as a product of prime numbers
-        (other than rearranging the order of the primes themselves in the product).
+        Assim, <m>2600 = 2^3\times 5^2\times 13</m> e esta é a única maneira de escrever <m>2600</m> como produto de números primos
+        (além de rearranjar a ordem dos próprios primos no produto).
       </p>
 
       <p>
-        While Sage will print a factorization nicely,
-        it is carried internally as a list of pairs of integers,
-        with each pair being a base (a prime number) and an exponent (a positive integer).
-        Study the following carefully,
-        as it is another good exercise in working with Sage output in the form of lists.
+        Embora o Sage imprima uma fatoração de forma organizada,
+        internamente ela é mantida como uma lista de pares de inteiros,
+        em que cada par é formado por uma base (um número primo) e um expoente (um inteiro positivo).
+        Estude cuidadosamente o que segue,
+        pois é outro bom exercício de trabalho com a saída do Sage na forma de listas.
       </p>
 
             <sage>
@@ -1647,8 +1647,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        The next compute cell reveals the internal version of the factorization by asking for the actual list.
-        And we show how you could determine exactly how many terms the factorization has by using the length command,
+        A próxima célula de computação revela a versão interna da fatoração solicitando a lista efetiva.
+        Também mostramos como determinar exatamente quantos termos a fatoração possui usando o comando de comprimento,
         <c>len()</c>.
       </p>
 
@@ -1662,8 +1662,8 @@ theory.</p> -->
             </sage>
 
       <p>
-        Can you extract the next two primes,
-        and their exponents, from <c>a</c>?
+        Você consegue extrair de <c>a</c> os próximos dois primos
+        e seus expoentes?
       </p>
 
       <sage type="practice"/>
@@ -1671,22 +1671,22 @@ theory.</p> -->
   </section>
 
   <exercises xml:id="integers-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        These exercises are about investigating basic properties of the integers,
-        something we will frequently do when investigating groups.
-        Sage worksheets have extensive capabilities for making new cells with carefully formatted text,
-        include support for <latex/> syntax to express mathematics.
-        So when a question asks for explanation or commentary,
-        make a new cell and communicate clearly with your audience.
+        Estes exercícios tratam da investigação de propriedades básicas dos inteiros,
+        algo que faremos frequentemente ao investigar grupos.
+        As planilhas do Sage têm amplos recursos para criar novas células com texto cuidadosamente formatado
+        e incluem suporte à sintaxe <latex/> para expressar matemática.
+        Portanto, quando uma questão pedir explicação ou comentário,
+        crie uma nova célula e comunique-se claramente com seu público.
       </p>
     </introduction>
 
     <exercise number="1" xml:id="integers-sage-exercise-next-prime">
       <statement>
         <p>
-          Use the <c>next_prime()</c> command to construct two different 8-digit prime numbers and save them in variables named <c>a</c> and <c>b</c>.
+          Use o comando <c>next_prime()</c> para construir dois números primos de 8 algarismos diferentes e salve-os nas variáveis chamadas <c>a</c> e <c>b</c>.
         </p>
       </statement>
     </exercise>
@@ -1694,7 +1694,7 @@ theory.</p> -->
     <exercise number="2" xml:id="integers-sage-exercise-is-prime">
       <statement>
         <p>
-          Use the <c>.is_prime()</c> method to verify that your primes <c>a</c> and <c>b</c> are really prime.
+          Use o método <c>.is_prime()</c> para verificar se seus primos <c>a</c> e <c>b</c> são realmente primos.
         </p>
       </statement>
     </exercise>
@@ -1702,7 +1702,7 @@ theory.</p> -->
     <exercise number="3" xml:id="integers-sage-exercise-gcd">
       <statement>
         <p>
-          Verify that <m>1</m> is the greatest common divisor of your two primes from the previous exercises.
+          Verifique que <m>1</m> é o máximo divisor comum dos dois primos dos exercícios anteriores.
         </p>
       </statement>
     </exercise>
@@ -1710,9 +1710,9 @@ theory.</p> -->
     <exercise number="4" xml:id="integers-sage-exercise-gcd-linear-combination">
       <statement>
         <p>
-          Find two integers that make a <q>linear combination</q>
-          of your two primes equal to <m>1</m>.
-          Include a verification of your result.
+          Encontre dois inteiros que formem uma <q>combinação linear</q>
+          dos seus dois primos igual a <m>1</m>.
+          Inclua uma verificação do resultado.
         </p>
       </statement>
     </exercise>
@@ -1720,7 +1720,7 @@ theory.</p> -->
     <exercise number="5" xml:id="integers-sage-exercise-prime-factorization">
       <statement>
         <p>
-          Determine a factorization into powers of primes for <m>c=4\,598\,037\,234</m>.
+          Determine uma fatoração em potências de primos para <m>c=4\,598\,037\,234</m>.
         </p>
       </statement>
     </exercise>
@@ -1728,11 +1728,11 @@ theory.</p> -->
     <exercise number="6" xml:id="integers-sage-exercise-divisor">
       <statement>
         <p>
-          Write a compute cell that defines the same value of <c>c</c> again,
-          and then defines a candidate divisor of <c>c</c> named <c>d</c>.
-          The third line of the cell should return <c>True</c> if and only if <c>d</c> is a divisor of <c>c</c>.
-          Illustrate the use of your cell by testing your code with <m>d=7</m> and in a new copy of the cell,
-          testing your code with <m>d=11</m>.
+          Escreva uma célula de computação que defina novamente o mesmo valor de <c>c</c>
+          e depois defina um divisor candidato de <c>c</c> chamado <c>d</c>.
+          A terceira linha da célula deve retornar <c>True</c> se, e somente se, <c>d</c> for um divisor de <c>c</c>.
+          Ilustre o uso da célula testando seu código com <m>d=7</m> e, em uma nova cópia da célula,
+          testando seu código com <m>d=11</m>.
         </p>
       </statement>
     </exercise>
