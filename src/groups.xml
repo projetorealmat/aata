@@ -10,102 +10,102 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="groups">
-  <title>Groups</title>
+  <title>Grupos</title>
   <introduction>
     <p>
-      We begin our study of algebraic structures by investigating sets associated with single operations that satisfy certain reasonable axioms;
-      that is, we want to define an operation on a set in a way that will generalize such familiar structures as the integers
-      <m>{\mathbb Z}</m> together with the single operation of addition,
-      or invertible <m>2 \times 2</m> matrices together with the single operation of matrix multiplication.
-      The integers and the <m>2 \times 2</m> matrices,
-      together with their respective single operations,
-      are examples of algebraic structures known as groups.
+      Começamos nosso estudo das estruturas algébricas investigando conjuntos associados a operações únicas que satisfazem certos axiomas razoáveis;
+      isto é, queremos definir uma operação em um conjunto de modo a generalizar estruturas familiares como os inteiros
+      <m>{\mathbb Z}</m> munidos da única operação de adição,
+      ou matrizes invertíveis <m>2 \times 2</m> munidas da única operação de multiplicação de matrizes.
+      Os inteiros e as matrizes <m>2 \times 2</m>,
+      juntamente com suas respectivas operações únicas,
+      são exemplos de estruturas algébricas conhecidas como grupos.
     </p>
 
     <p>
-      The theory of groups occupies a central position in mathematics.
-      Modern group theory arose from an attempt to find the roots of a polynomial in terms of its coefficients.
-      Groups now play a central role in such areas as coding theory,
-      counting, and the study of symmetries;
-      many areas of biology, chemistry,
-      and physics have benefited from group theory.
+      A teoria dos grupos ocupa uma posição central na matemática.
+      A teoria moderna dos grupos surgiu da tentativa de encontrar as raízes de um polinômio em função de seus coeficientes.
+      Hoje, os grupos desempenham um papel central em áreas como teoria de códigos,
+      contagem e estudo de simetrias;
+      muitas áreas da biologia, da química
+      e da física se beneficiaram da teoria dos grupos.
     </p>
   </introduction>
 
   <section xml:id="groups-section-mod-n-sym">
-    <title>Integer Equivalence Classes and Symmetries</title>
+    <title>Classes de equivalência de inteiros e simetrias</title>
     <introduction>
       <p>
-        Let us now investigate some mathematical structures that can be viewed as sets with single operations.
+        Vamos agora investigar algumas estruturas matemáticas que podem ser vistas como conjuntos com operações únicas.
       </p>
     </introduction>
 
     <subsection xml:id="groups-subsection-integers-mod-n">
-      <title>The Integers mod <m>n</m></title>
+      <title>Os inteiros módulo <m>n</m></title>
       <p>
-        The integers mod <m>n</m> have become indispensable in the theory and applications of algebra.
-        In mathematics they are used in cryptography, coding theory,
-        and the detection of errors in identification codes.
+        Os inteiros módulo <m>n</m> tornaram-se indispensáveis na teoria e nas aplicações da álgebra.
+        Na matemática, eles são usados em criptografia, teoria de códigos
+        e detecção de erros em códigos de identificação.
       </p>
 
       <p>
-        We have already seen that two integers <m>a</m> and <m>b</m> are equivalent mod <m>n</m> if <m>n</m> divides <m>a - b</m>.
-        The integers mod <m>n</m> also partition
-        <m>{\mathbb Z}</m> into <m>n</m> different equivalence classes;
-        we will denote the set of these equivalence classes by <m>{\mathbb Z}_n</m>.
+        Já vimos que dois inteiros <m>a</m> e <m>b</m> são equivalentes módulo <m>n</m> se <m>n</m> divide <m>a - b</m>.
+        Os inteiros módulo <m>n</m> também particionam
+        <m>{\mathbb Z}</m> em <m>n</m> classes de equivalência diferentes;
+        denotaremos o conjunto dessas classes de equivalência por <m>{\mathbb Z}_n</m>.
 
         <notation>
           <usage><m>\mathbb Z_n</m></usage>
-          <description>the integers modulo <m>n</m></description>
+          <description>os inteiros módulo <m>n</m></description>
         </notation>
 
-        Consider the integers modulo <m>12</m> and the corresponding partition of the integers:
+        Considere os inteiros módulo <m>12</m> e a partição correspondente dos inteiros:
         <md>
           <mrow>{[0]} &amp; = \{ \ldots, -12, 0, 12, 24, \ldots \},</mrow>
           <mrow>{[1]} &amp; = \{ \ldots, -11, 1, 13, 25, \ldots \},</mrow>
           <mrow>&amp; \aatavdots{=}</mrow>
           <mrow>{[11]} &amp; = \{ \ldots, -1, 11, 23, 35, \ldots \}</mrow>
         </md>.
-        When no confusion can arise,
-        we will use <m>0, 1, \ldots, 11</m> to indicate the equivalence classes  <m>{[0]}, {[1]}, \ldots, {[11]}</m> respectively.
-        We can do arithmetic on <m>{\mathbb Z}_n</m>.
-        For two integers <m>a</m> and <m>b</m>,
-        define addition modulo <m>n</m> to be <m>(a + b) \pmod{n}</m>;
-        that is, the remainder when <m>a + b</m> is divided by <m>n</m>.
-        Similarly, multiplication modulo <m>n</m> is defined as <m>(a  b) \pmod{ n}</m>,
-        the remainder when <m>a  b</m> is divided by <m>n</m>.
+        Quando não houver risco de confusão,
+        usaremos <m>0, 1, \ldots, 11</m> para indicar, respectivamente, as classes de equivalência <m>{[0]}, {[1]}, \ldots, {[11]}</m>.
+        Podemos fazer aritmética em <m>{\mathbb Z}_n</m>.
+        Para dois inteiros <m>a</m> e <m>b</m>,
+        definimos a adição módulo <m>n</m> como <m>(a + b) \pmod{n}</m>;
+        isto é, o resto da divisão de <m>a + b</m> por <m>n</m>.
+        Analogamente, a multiplicação módulo <m>n</m> é definida como <m>(a  b) \pmod{ n}</m>,
+        o resto da divisão de <m>a  b</m> por <m>n</m>.
       </p>
 
       <example xml:id="groups-example-zn-addition">
         <p>
-          The following examples illustrate integer arithmetic modulo <m>n</m>:
+          Os exemplos a seguir ilustram a aritmética inteira módulo <m>n</m>:
           <md>
             <mrow>7 + 4 &amp; \equiv  1 \pmod{ 5} &amp; 7 \cdot 3 &amp; \equiv 1 \pmod{ 5}</mrow>
             <mrow>3 + 5 &amp; \equiv  0 \pmod{ 8} &amp; 3 \cdot 5 &amp; \equiv 7 \pmod{ 8}</mrow>
             <mrow>3 + 4 &amp; \equiv 7 \pmod{ 12} &amp; 3 \cdot 4 &amp; \equiv 0 \pmod{ 12}</mrow>
           </md>.
-          In particular,
-          notice that it is possible that the product of two nonzero numbers modulo <m>n</m> can be equivalent to <m>0</m> modulo <m>n</m>.
+          Em particular,
+          observe que é possível que o produto de dois números não nulos módulo <m>n</m> seja equivalente a <m>0</m> módulo <m>n</m>.
         </p>
       </example>
 
       <example xml:id="groups-example-zn-arithmetic-laws">
         <p>
-          Most, but not all,
-          of the usual laws of arithmetic hold for addition and multiplication in <m>{\mathbb Z}_n</m>.
-          For instance,
-          it is not necessarily true that there is a multiplicative inverse.
-          Consider the multiplication table for
-          <m>{\mathbb Z}_8</m> in <xref ref="groups-table-z8-mult"/>.
-          Notice that <m>2</m>, <m>4</m>,
-          and <m>6</m> do not have multiplicative inverses;
-          that is, for <m>n = 2</m>, <m>4</m>, or <m>6</m>,
-          there is no integer <m>k</m> such that <m>k n \equiv 1 \pmod{ 8}</m>.
+          A maioria, mas não todas,
+          das leis usuais da aritmética vale para a adição e a multiplicação em <m>{\mathbb Z}_n</m>.
+          Por exemplo,
+          não é necessariamente verdade que exista um inverso multiplicativo.
+          Considere a tabela de multiplicação de
+          <m>{\mathbb Z}_8</m> em <xref ref="groups-table-z8-mult"/>.
+          Observe que <m>2</m>, <m>4</m>
+          e <m>6</m> não possuem inversos multiplicativos;
+          isto é, para <m>n = 2</m>, <m>4</m> ou <m>6</m>,
+          não existe inteiro <m>k</m> tal que <m>k n \equiv 1 \pmod{ 8}</m>.
         </p>
 
         <figure xml:id="groups-table-z8-mult">
             <!-- math table -->
-          <caption>Multiplication table for <m>{\mathbb Z_8}</m></caption>
+            <caption>Tabela de multiplicação de <m>{\mathbb Z_8}</m></caption>
           <p>
             <md>
               \begin{array}{c|cccccccc}
@@ -129,13 +129,13 @@
       <proposition xml:id="groups-proposition-zn-equiv-classes">
         <statement>
           <p>
-            Let <m>{\mathbb Z}_n</m> be the set of equivalence classes of the integers mod <m>n</m> and <m>a,
+            Seja <m>{\mathbb Z}_n</m> o conjunto das classes de equivalência dos inteiros módulo <m>n</m> e sejam <m>a,
             b, c \in {\mathbb Z}_n</m>.
 
             <ol>
               <li>
                 <p>
-                  Addition and multiplication are commutative:
+                  A adição e a multiplicação são comutativas:
                   <md>
                     <mrow>a + b &amp; \equiv b + a \pmod{ n}</mrow>
                     <mrow>a  b &amp; \equiv b  a \pmod{ n}</mrow>
@@ -145,7 +145,7 @@
 
               <li>
                 <p>
-                  Addition and multiplication are associative:
+                  A adição e a multiplicação são associativas:
                   <md>
                     <mrow>(a + b) + c &amp; \equiv  a + (b + c)\pmod{ n}</mrow>
                     <mrow>(a  b) c &amp; \equiv  a   (b  c) \pmod{ n}</mrow>
@@ -155,7 +155,7 @@
 
               <li>
                 <p>
-                  There are both additive and multiplicative identities:
+                  Existem elementos neutros aditivo e multiplicativo:
                   <md>
                     <mrow>a + 0  &amp; \equiv  a \pmod{ n}</mrow>
                     <mrow>a \cdot  1  &amp; \equiv  a \pmod{ n}</mrow>
@@ -165,7 +165,7 @@
 
               <li>
                 <p>
-                  Multiplication distributes over addition:
+                  A multiplicação é distributiva em relação à adição:
                   <md>
                     a  (b  + c)  \equiv a  b + a  c  \pmod{ n}
                   </md>.
@@ -174,7 +174,7 @@
 
               <li>
                 <p>
-                  For every integer <m>a</m> there is an additive inverse <m>-a</m>:
+                  Para todo inteiro <m>a</m> existe um inverso aditivo <m>-a</m>:
                   <md>
                     a + (-a)  \equiv 0 \pmod{ n}
                   </md>.
@@ -183,9 +183,9 @@
 
               <li>
                 <p>
-                  Let <m>a</m> be a nonzero integer.
-                  Then <m>\gcd(a,n) = 1</m> if and only if there exists a multiplicative inverse <m>b</m> for <m>a \pmod{n}</m>;
-                  that is, a nonzero integer <m>b</m> such that
+                  Seja <m>a</m> um inteiro não nulo.
+                  Então <m>\gcd(a,n) = 1</m> se, e somente se, existe um inverso multiplicativo <m>b</m> para <m>a \pmod{n}</m>;
+                  isto é, um inteiro não nulo <m>b</m> tal que
                   <md>
                     a  b  \equiv 1 \pmod{ n}
                   </md>.
@@ -199,42 +199,42 @@
 
         <proof>
           <p>
-            We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.
+          Demonstraremos (1) e (6), deixando as propriedades restantes para os exercícios.
           </p>
 
           <p>
-            (1) Addition and multiplication are commutative modulo <m>n</m> since the remainder of <m>a + b</m> divided by <m>n</m> is the same as the remainder of <m>b + a</m> divided by <m>n</m>.
+          (1) A adição e a multiplicação são comutativas módulo <m>n</m>, pois o resto da divisão de <m>a + b</m> por <m>n</m> é o mesmo que o resto da divisão de <m>b + a</m> por <m>n</m>.
           </p>
 
           <p>
-            (6) Suppose that <m>\gcd(a, n) = 1</m>.
-            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + ns = 1</m>.
-            Since <m>ns = 1 - ar</m>,
-            it must be the case that <m>ar \equiv 1 \pmod{n}</m>.
-            Letting <m>b</m> be the equivalence class of <m>r</m>,
-            <m>a b \equiv 1\pmod{n}</m>.
+          (6) Suponha que <m>\gcd(a, n) = 1</m>.
+            Então existem inteiros <m>r</m> e <m>s</m> tais que <m>ar + ns = 1</m>.
+            Como <m>ns = 1 - ar</m>,
+            necessariamente <m>ar \equiv 1 \pmod{n}</m>.
+            Seja <m>b</m> a classe de equivalência de <m>r</m>;
+            então <m>a b \equiv 1\pmod{n}</m>.
           </p>
 
           <p>
-            Conversely, suppose that there exists an integer <m>b</m> such that <m>ab \equiv 1 \pmod{ n}</m>.
-            Then <m>n</m> divides <m>ab -1</m>,
-            so there is an integer <m>k</m> such that <m>ab - nk = 1</m>.
-            Let <m>d = \gcd(a,n)</m>.
-            Since <m>d</m> divides <m>ab - nk</m>,
-            <m>d</m> must also divide <m>1</m>; hence, <m>d = 1</m>.
+            Reciprocamente, suponha que exista um inteiro <m>b</m> tal que <m>ab \equiv 1 \pmod{ n}</m>.
+            Então <m>n</m> divide <m>ab -1</m>,
+            logo existe um inteiro <m>k</m> tal que <m>ab - nk = 1</m>.
+            Seja <m>d = \gcd(a,n)</m>.
+            Como <m>d</m> divide <m>ab - nk</m>,
+            <m>d</m> também deve dividir <m>1</m>; portanto, <m>d = 1</m>.
           </p>
         </proof>
       </proposition>
     </subsection>
 
     <subsection xml:id="groups-subsection-symmetries">
-      <title>Symmetries</title>
+      <title>Simetrias</title>
             <!-- Symmetries of a rectangle  Replaced diagram with a tikz figure - TWJ 5/4/2010 -->
  
       <figure xml:id="groups-figure-rectangle-symmetries">
-        <caption>Rigid motions of a rectangle</caption>
+        <caption>Movimentos rígidos de um retângulo</caption>
         <image xml:id="groups-rectangle">
-          <description>The four symmetries ot a rectangle: (1) sending rectangle ABCD to rectangle ABCD, (2) sending rectangle ABCD to rectangle CDAB, (3) sending rectangle ABCD to rectangle BADC, and (4) sending rectangle ABCD to rectangle DCBA.</description>
+          <description>As quatro simetrias de um retângulo: (1) levando o retângulo ABCD ao retângulo ABCD, (2) levando o retângulo ABCD ao retângulo CDAB, (3) levando o retângulo ABCD ao retângulo BADC e (4) levando o retângulo ABCD ao retângulo DCBA.</description>
 
             <latex-image>
                 <xi:include href="tikz/groups-rectangle.tex" parse="text"/>
@@ -244,21 +244,21 @@
       </figure>
 
       <p>
-        A <term>symmetry</term> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.
-        A map from the plane to itself preserving the symmetry of an object is called a
-        <idx><h>Rigid motion</h></idx><term>rigid motion</term>.
-        For example,
-        if we look at the rectangle in <xref ref="groups-figure-rectangle-symmetries"/>,
-        it is easy to see that a rotation of <m>180^{\circ}</m> or
-        <m>360^{\circ}</m> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.
-        A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.
-        However, a <m>90^{\circ}</m> rotation in either direction cannot be a symmetry unless the rectangle is a square.
+        Uma <term>simetria</term> de uma figura geométrica é um rearranjo da figura que preserva a disposição de seus lados e vértices, bem como suas distâncias e ângulos.
+        Uma aplicação do plano nele mesmo que preserva a simetria de um objeto é chamada de
+        <idx><h>Movimento rígido</h></idx><term>movimento rígido</term>.
+        Por exemplo,
+        observando o retângulo em <xref ref="groups-figure-rectangle-symmetries"/>,
+        é fácil ver que uma rotação de <m>180^{\circ}</m> ou
+        <m>360^{\circ}</m> devolve um retângulo no plano com a mesma orientação do retângulo original e a mesma relação entre os vértices.
+        Uma reflexão do retângulo em torno do eixo vertical ou do eixo horizontal também é uma simetria.
+        Entretanto, uma rotação de <m>90^{\circ}</m> em qualquer direção não pode ser uma simetria, a menos que o retângulo seja um quadrado.
       </p>
             <!-- Replaced diagram with a tikz figure - TWJ 5/5/2010 -->
       <figure xml:id="groups-figure-s3-symmetry">
-        <caption>Symmetries of a triangle</caption>
+        <caption>Simetrias de um triângulo</caption>
         <image xml:id="groups-s3-symmetry">
-          <description>The six symmetries of a triangle: (1) triangle ABC to triangle ABC, (2) ABC to CAB, (3) ABC to BCA, (4) ABC to ACB, (5) ABC to CBA, and (6) ABC to BAC</description>
+          <description>As seis simetrias de um triângulo: (1) o triângulo ABC no triângulo ABC, (2) ABC em CAB, (3) ABC em BCA, (4) ABC em ACB, (5) ABC em CBA e (6) ABC em BAC.</description>
 
             <latex-image>
                 <xi:include href="tikz/groups-s3-symmetry.tex" parse="text"/>
@@ -268,65 +268,65 @@
       </figure>
 
       <p>
-        Let us find the symmetries of the equilateral triangle <m>\bigtriangleup ABC</m>.
-        To find a symmetry of <m>\bigtriangleup ABC</m>,
-        we must first examine the permutations of the vertices <m>A</m>,
-        <m>B</m>,
-        and <m>C</m> and then ask if a permutation extends to a symmetry of the triangle.
-        Recall that a <term>permutation</term>
-        of a set <m>S</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
-        The three vertices have <m>3! = 6</m> permutations,
-        so the triangle has at most six symmetries.
-        To see that there are six permutations,
-        observe there are three different possibilities for the first vertex,
-        and two for the second,
-        and the remaining vertex is determined by the placement of the first two.
-        So we have <m>3 \cdot 2 \cdot 1 = 3! = 6</m> different arrangements.
-        To denote the permutation of the vertices of an equilateral triangle that sends <m>A</m> to <m>B</m>,
-        <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>, we write the array
+        Vamos determinar as simetrias do triângulo equilátero <m>\bigtriangleup ABC</m>.
+        Para encontrar uma simetria de <m>\bigtriangleup ABC</m>,
+        devemos primeiro examinar as permutações dos vértices <m>A</m>,
+        <m>B</m>
+        e <m>C</m> e então perguntar se uma permutação se estende a uma simetria do triângulo.
+        Lembre-se de que uma <term>permutação</term>
+        de um conjunto <m>S</m> é uma aplicação injetiva e sobrejetiva <m>\pi :S \rightarrow S</m>.
+        Os três vértices têm <m>3! = 6</m> permutações,
+        portanto o triângulo tem no máximo seis simetrias.
+        Para ver que há seis permutações,
+        observe que há três possibilidades diferentes para o primeiro vértice
+        e duas para o segundo,
+        enquanto o vértice restante é determinado pela posição dos dois primeiros.
+        Assim, temos <m>3 \cdot 2 \cdot 1 = 3! = 6</m> arranjos diferentes.
+        Para denotar a permutação dos vértices de um triângulo equilátero que leva <m>A</m> a <m>B</m>,
+        <m>B</m> a <m>C</m> e <m>C</m> a <m>A</m>, escrevemos a matriz
         <md>
           \begin{pmatrix}
           A &amp; B &amp; C \\
           B &amp; C &amp; A
           \end{pmatrix}
         </md>.
-        Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by
-        <m>120^{\circ}</m> in a clockwise direction.
-        In fact, every permutation gives rise to a symmetry of the triangle.
-        All of these symmetries are shown in <xref ref="groups-figure-s3-symmetry"/>.
+        Observe que essa permutação específica corresponde ao movimento rígido de girar o triângulo em
+        <m>120^{\circ}</m> no sentido horário.
+        De fato, toda permutação dá origem a uma simetria do triângulo.
+        Todas essas simetrias são mostradas em <xref ref="groups-figure-s3-symmetry"/>.
       </p>
 
       <p>
-        A natural question to ask is what happens if one motion of the triangle
-        <m>\bigtriangleup ABC</m> is followed by another.
-        Which symmetry is <m>\mu_1 \rho_1</m>?
-        That is, what happens when we do the permutation <m>\rho_1</m> and then the permutation <m>\mu_1</m>? 
-        <em>Remember that we are composing functions here.
-        Although we usually multiply left to right,
-        we compose functions right to left.</em> We have
+        Uma pergunta natural é o que acontece quando um movimento do triângulo
+        <m>\bigtriangleup ABC</m> é seguido por outro.
+        Qual simetria é <m>\mu_1 \rho_1</m>?
+        Em outras palavras, o que acontece quando fazemos a permutação <m>\rho_1</m> e depois a permutação <m>\mu_1</m>?
+        <em>Lembre-se de que estamos compondo funções.
+        Embora normalmente multipliquemos da esquerda para a direita,
+        compomos funções da direita para a esquerda.</em> Temos
         <md>
           <mrow>(\mu_1 \rho_1)(A) &amp; = \mu_1( \rho_1( A ) ) = \mu_1( B ) = C</mrow>
           <mrow>(\mu_1 \rho_1)(B) &amp; = \mu_1( \rho_1( B ) ) = \mu_1( C ) = B</mrow>
           <mrow>(\mu_1 \rho_1)(C) &amp; = \mu_1( \rho_1( C ) ) = \mu_1( A ) = A</mrow>
         </md>.
-        This is the same symmetry as <m>\mu_2</m>.
-        Suppose we do these motions in the opposite order,
-        <m>\mu_1</m> then <m>\rho_1</m>.
-        It is easy to determine that this is the same as the symmetry <m>\mu_3</m>;
-        hence, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
-        A multiplication table for the symmetries of an equilateral triangle
-        <m>\bigtriangleup ABC</m> is given in <xref ref="groups-table-s3"/>.
+        Essa é a mesma simetria que <m>\mu_2</m>.
+        Suponha que façamos esses movimentos na ordem oposta,
+        primeiro <m>\mu_1</m> e depois <m>\rho_1</m>.
+        É fácil determinar que isso é o mesmo que a simetria <m>\mu_3</m>;
+        portanto, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
+        Uma tabela de multiplicação para as simetrias de um triângulo equilátero
+        <m>\bigtriangleup ABC</m> é dada em <xref ref="groups-table-s3"/>.
       </p>
 
       <p>
-        Notice that in the multiplication table for the symmetries of an equilateral triangle,
-        for every motion of the triangle <m>\alpha</m> there is another motion <m>\beta</m> such that <m>\alpha \beta = \identity</m>;
-        that is, for every motion there is another motion that takes the triangle back to its original orientation.
+        Observe que, na tabela de multiplicação das simetrias de um triângulo equilátero,
+        para cada movimento do triângulo <m>\alpha</m> existe outro movimento <m>\beta</m> tal que <m>\alpha \beta = \identity</m>;
+        isto é, para cada movimento existe outro movimento que leva o triângulo de volta à sua orientação original.
       </p>
 
       <figure xml:id="groups-table-s3">
             <!-- math table -->
-        <caption>Symmetries of an equilateral triangle</caption>
+        <caption>Simetrias de um triângulo equilátero</caption>
         <p>
           <md>
             \begin{array}{c|cccccc}
