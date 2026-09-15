@@ -4,8 +4,14 @@
   "short_title": "Álgebra Abstrata",
   "subject": "Álgebra abstrata",
   "translation_stage": "unreviewed",
-  "entrypoint": "pdf",
+  "entrypoint": "html",
   "publications": [
+    {
+      "id": "html",
+      "label": "Ler no navegador",
+      "format": "html",
+      "url": "https://projetorealmat.github.io/aata/"
+    },
     {
       "id": "pdf",
       "label": "PDF",
