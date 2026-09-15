@@ -12,44 +12,44 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sets">
     <!-- % TWJ, 2010/03/31 -->
     <!-- % Chapters now begin with Chapter 1 -->
-  <title>Preliminaries</title>
+  <title>Preliminares</title>
   <introduction>
     <p>
-      A certain amount of mathematical maturity is necessary to find and study applications of abstract algebra.
-      A basic knowledge of set theory,
-      mathematical induction, equivalence relations, and matrices is a must.
-      Even more important is the ability to read and understand mathematical proofs.
-      In this chapter we will outline the background needed for a course in abstract algebra.
+      É necessária certa maturidade matemática para encontrar e estudar aplicações da álgebra abstrata.
+      Um conhecimento básico de teoria dos conjuntos,
+      indução matemática, relações de equivalência e matrizes é indispensável.
+      Ainda mais importante é a capacidade de ler e compreender demonstrações matemáticas.
+      Neste capítulo, apresentaremos um esboço dos conhecimentos prévios necessários para um curso de álgebra abstrata.
     </p>
   </introduction>
 
   <section xml:id="sets-section-note-on-proofs">
-    <title>A Short Note on Proofs</title>
+    <title>Uma breve nota sobre demonstrações</title>
     <introduction>
       <p>
-        Abstract mathematics is different from other sciences.
-        In laboratory sciences such as chemistry and physics,
-        scientists perform experiments to discover new principles and verify theories.
-        Although mathematics is often motivated by physical experimentation or by computer simulations,
-        it is made rigorous through the use of logical arguments.
-        In studying abstract mathematics,
-        we take what is called an axiomatic approach;
-        that is, we take a collection of objects
-        <m>\mathcal S</m> and assume some rules about their structure.
-        These rules are called <term>axioms</term>.
-        Using the axioms for <m>\mathcal S</m>,
-        we wish to derive other information about
-        <m>\mathcal S</m> by using logical arguments.
-        We require that our axioms be consistent;
-        that is, they should not contradict one another.
-        We also demand that there not be too many axioms.
-        If a system of axioms is too restrictive,
-        there will be few examples of the mathematical structure.
+        A matemática abstrata é diferente das outras ciências.
+        Nas ciências experimentais, como a química e a física,
+        os cientistas realizam experimentos para descobrir novos princípios e verificar teorias.
+        Embora a matemática seja frequentemente motivada por experimentação física ou por simulações computacionais,
+        ela se torna rigorosa por meio do uso de argumentos lógicos.
+        Ao estudar matemática abstrata,
+        adotamos o que se chama abordagem axiomática;
+        isto é, tomamos uma coleção de objetos
+        <m>\mathcal S</m> e supomos algumas regras sobre sua estrutura.
+        Essas regras são chamadas de <term>axiomas</term>.
+        Usando os axiomas para <m>\mathcal S</m>,
+        desejamos deduzir outras informações sobre
+        <m>\mathcal S</m> por meio de argumentos lógicos.
+        Exigimos que nossos axiomas sejam consistentes;
+        isto é, que não contradigam uns aos outros.
+        Também exigimos que não haja axiomas em excesso.
+        Se um sistema de axiomas for restritivo demais,
+        haverá poucos exemplos da estrutura matemática.
       </p>
 
       <p>
-        A <term>statement</term> in logic or mathematics is an assertion that is either true or false.
-        Consider the following examples:
+        Uma <term>afirmação</term> em lógica ou matemática é uma asserção que é verdadeira ou falsa.
+        Considere os exemplos a seguir:
 
         <ul>
           <li>
@@ -60,7 +60,7 @@
 
           <li>
             <p>
-              All cats are black.
+              Todos os gatos são pretos.
             </p>
           </li>
 
@@ -72,7 +72,7 @@
 
           <li>
             <p>
-              <m>2x = 6</m> exactly when <m>x = 4</m>.
+              <m>2x = 6</m> se, e somente se, <m>x = 4</m>.
             </p>
           </li>
 
@@ -92,56 +92,56 @@
           </li>
         </ul>
 
-        All but the first  and last examples are statements,
-        and must be either true or false.
+        Todos os exemplos, exceto o primeiro e o último, são afirmações
+        e devem ser verdadeiros ou falsos.
       </p>
 
       <p>
-        A <term>mathematical proof</term>
-        is nothing more than a convincing argument about the accuracy of a statement.
-        Such an argument should contain enough detail to convince the audience;
-        for instance, we can see that the statement
-        <q><m>2x = 6</m> exactly when <m>x = 4</m></q>
-        is false by evaluating <m>2 \cdot 4</m> and noting that <m>6 \neq 8</m>,
-        an argument that would satisfy anyone.
-        Of course, audiences may vary widely:
-        proofs can be addressed to another student,
-        to a professor, or to the reader of a text.
-        If more detail than needed is presented in the proof,
-        then the explanation will be either long-winded or poorly written.
-        If too much detail is omitted,
-        then the proof may not be convincing.
-        Again it is important to keep the audience in mind.
-        High school students require much more detail than do graduate students.
-        A good rule of thumb for an argument in an introductory abstract algebra course is that it should be written to convince one's peers,
-        whether those peers be other students or other readers of the text.
+        Uma <term>demonstração matemática</term>
+        nada mais é que um argumento convincente sobre a correção de uma afirmação.
+        Tal argumento deve conter detalhes suficientes para convencer o público;
+        por exemplo, podemos ver que a afirmação
+        <q><m>2x = 6</m> se, e somente se, <m>x = 4</m></q>
+        é falsa calculando <m>2 \cdot 4</m> e observando que <m>6 \neq 8</m>,
+        um argumento que convenceria qualquer pessoa.
+        É claro que os públicos podem variar bastante:
+        as demonstrações podem ser dirigidas a outro estudante,
+        a um professor ou ao leitor de um texto.
+        Se forem apresentados na demonstração mais detalhes do que o necessário,
+        a explicação será prolixa ou mal escrita.
+        Se detalhes demais forem omitidos,
+        a demonstração poderá não ser convincente.
+        Novamente, é importante levar o público em consideração.
+        Estudantes do ensino médio exigem muito mais detalhes do que estudantes de pós-graduação.
+        Uma boa regra prática para um argumento em um curso introdutório de álgebra abstrata é que ele deve ser escrito de modo a convencer seus pares,
+        sejam eles outros estudantes ou outros leitores do texto.
       </p>
 
       <p>
-        Let us examine different types of statements.
-        A statement could be as simple as
-        <q><m>10/5 = 2</m>;</q> however,
-        mathematicians are usually interested in more complex statements such as <q>If <m>p</m>,
-        then <m>q</m>,</q> where <m>p</m> and <m>q</m> are both statements.
-        If certain statements are known or assumed to be true,
-        we wish to know what we can say about other statements.
-        Here <m>p</m> is called the <term>hypothesis</term>
-        and <m>q</m> is known as the <term>conclusion</term>.
-        Consider the following statement: If
-        <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>, then
+        Examinemos diferentes tipos de afirmações.
+        Uma afirmação pode ser tão simples quanto
+        <q><m>10/5 = 2</m>;</q> contudo,
+        os matemáticos geralmente se interessam por afirmações mais complexas, como <q>Se <m>p</m>,
+        então <m>q</m>,</q> em que <m>p</m> e <m>q</m> são ambas afirmações.
+        Se algumas afirmações são conhecidas ou supostas verdadeiras,
+        queremos saber o que podemos dizer sobre outras afirmações.
+        Aqui, <m>p</m> é chamada de <term>hipótese</term>
+        e <m>q</m> é conhecida como <term>conclusão</term>.
+        Considere a seguinte afirmação: Se
+        <m>ax^2 + bx + c = 0</m> e <m>a \neq 0</m>, então
         <md>
           x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
         </md>.
-        The hypothesis is <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>;
-        the conclusion is
+        A hipótese é <m>ax^2 + bx + c = 0</m> e <m>a \neq 0</m>;
+        a conclusão é
         <md>
           x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
         </md>.
-        Notice that the  statement says nothing about whether or not the hypothesis is true.
-        However, if this entire statement is true and we can show that
-        <m>ax^2 + bx + c = 0</m> with <m>a \neq 0</m> is true,
-        then the conclusion <em>must</em> be true.
-        A proof of this statement might simply be a series of equations:
+        Observe que a afirmação nada diz sobre a hipótese ser ou não verdadeira.
+        Entretanto, se toda essa afirmação for verdadeira e pudermos mostrar que
+        <m>ax^2 + bx + c = 0</m> com <m>a \neq 0</m> é verdadeira,
+        então a conclusão <em>deve</em> ser verdadeira.
+        Uma demonstração dessa afirmação poderia ser simplesmente uma série de equações:
         <md>
           <mrow>ax^2 + bx + c &amp; =  0</mrow>
           <mrow>x^2 + \frac{b}{a}x &amp; =  - \frac{c}{a}</mrow>
@@ -153,89 +153,89 @@
       </p>
 
       <p>
-        If we can prove a statement true,
-        then that statement is called a <term>proposition</term>.
-        A proposition of major importance is called a <term>theorem</term>.
-        Sometimes instead of proving a theorem or proposition all at once,
-        we break the proof down into modules;
-        that is, we prove several supporting propositions,
-        which are called <term>lemmas</term>,
-        and use the results of these propositions to prove the main result.
-        If we can prove a proposition or a theorem,
-        we will often, with very little effort,
-        be able to derive other related propositions called <term>corollaries</term>.
+        Se pudermos provar que uma afirmação é verdadeira,
+        então ela é chamada de <term>proposição</term>.
+        Uma proposição de grande importância é chamada de <term>teorema</term>.
+        Às vezes, em vez de provar um teorema ou uma proposição de uma só vez,
+        dividimos a demonstração em módulos;
+        isto é, provamos várias proposições auxiliares,
+        chamadas <term>lemas</term>,
+        e usamos os resultados dessas proposições para provar o resultado principal.
+        Se pudermos provar uma proposição ou um teorema,
+        muitas vezes, com muito pouco esforço,
+        poderemos deduzir outras proposições relacionadas, chamadas <term>corolários</term>.
       </p>
     </introduction>
 
     <subsection xml:id="sets-subsection-cautions">
-      <title>Some Cautions and Suggestions</title>
+      <title>Alguns cuidados e sugestões</title>
       <p>
-        There are several different strategies for proving propositions.
-        In addition to using different methods of proof,
-        students often make some common mistakes when they are first learning how to prove theorems.
-        To aid students who are studying abstract mathematics for the first time,
-        we list here some of the difficulties that they may encounter and some of the strategies of proof available to them.
-        It is a good idea to keep referring back to this list as a reminder.
-        (Other techniques of proof will become apparent throughout this chapter and the remainder of the text.)
+        Há várias estratégias diferentes para demonstrar proposições.
+        Além de usar métodos diferentes de demonstração,
+        os estudantes frequentemente cometem alguns erros comuns quando estão aprendendo a demonstrar teoremas.
+        Para ajudar estudantes que estão estudando matemática abstrata pela primeira vez,
+        listamos aqui algumas dificuldades que eles podem encontrar e algumas estratégias de demonstração disponíveis.
+        É uma boa ideia consultar esta lista repetidamente como lembrete.
+        (Outras técnicas de demonstração se tornarão evidentes ao longo deste capítulo e do restante do texto.)
 
         <ul>
           <li>
             <p>
-              A theorem cannot be proved by example;
-              however, the standard way to show that a statement is not a theorem is to provide a counterexample.
+              Um teorema não pode ser demonstrado por meio de exemplos;
+              no entanto, a maneira padrão de mostrar que uma afirmação não é um teorema é fornecer um contraexemplo.
             </p>
           </li>
 
           <li>
             <p>
-              Quantifiers are important.
-              Words and phrases such as <em>only</em>, <em>for all</em>,
-              <em>for every</em>, and <em>for some</em>
-              possess different meanings.
+              Os quantificadores são importantes.
+              Palavras e expressões como <em>somente</em>, <em>para todo</em>,
+              <em>para cada</em> e <em>para algum</em>
+              possuem significados diferentes.
             </p>
           </li>
 
           <li>
             <p>
-              Never assume any hypothesis that is not explicitly stated in the theorem.
-              <em>You cannot take things for granted.</em>
+              Nunca suponha nenhuma hipótese que não esteja explicitamente declarada no teorema.
+              <em>Você não pode tomar nada como dado.</em>
             </p>
           </li>
 
           <li>
             <p>
-              Suppose you wish to show that an object
-              <em>exists</em> and is <em>unique</em>.
-              First show that there actually is such an object.
-              To show that it is unique, assume that there are two such objects,
-              say <m>r</m> and <m>s</m>, and then show that <m>r = s</m>.
+              Suponha que você queira mostrar que um objeto
+              <em>existe</em> e é <em>único</em>.
+              Primeiro mostre que tal objeto realmente existe.
+              Para mostrar que ele é único, suponha que existam dois objetos desse tipo,
+              digamos <m>r</m> e <m>s</m>, e então mostre que <m>r = s</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Sometimes it is easier to prove the contrapositive of a statement.
-              Proving the statement <q>If <m>p</m>,
-              then <m>q</m></q> is exactly the same as proving the statement
-              <q>If not <m>q</m>, then not <m>p</m>.</q>
+              Às vezes é mais fácil demonstrar a contrapositiva de uma afirmação.
+              Demonstrar a afirmação <q>Se <m>p</m>,
+              então <m>q</m></q> é exatamente o mesmo que demonstrar a afirmação
+              <q>Se não <m>q</m>, então não <m>p</m>.</q>
             </p>
           </li>
 
           <li>
             <p>
-              Although it is usually better to find a direct proof of a theorem,
-              this task can sometimes be difficult.
-              It may be easier to assume that the theorem that you are trying to prove is false,
-              and to hope that in the course of your argument you are forced to make some statement that cannot possibly be true.
+              Embora geralmente seja melhor encontrar uma demonstração direta de um teorema,
+              essa tarefa às vezes pode ser difícil.
+              Pode ser mais fácil supor que o teorema que você está tentando demonstrar é falso
+              e esperar que, no decorrer do argumento, você seja forçado a fazer alguma afirmação que não possa ser verdadeira.
             </p>
           </li>
         </ul>
 
-        Remember that one of the main objectives of higher mathematics is proving theorems.
-        Theorems are tools that make new and productive applications of mathematics possible.
-        We use examples to give insight  into existing theorems and to foster intuitions as to what new theorems might be true.
-        Applications, examples,
-        and proofs are tightly interconnected<mdash/>much more so than they may seem at first appearance.
+        Lembre-se de que um dos principais objetivos da matemática superior é demonstrar teoremas.
+        Os teoremas são ferramentas que tornam possíveis aplicações novas e produtivas da matemática.
+        Usamos exemplos para compreender melhor teoremas existentes e para desenvolver intuições sobre quais novos teoremas podem ser verdadeiros.
+        Aplicações, exemplos
+        e demonstrações estão intimamente interligados<mdash/>muito mais do que pode parecer à primeira vista.
       </p>
     </subsection>
 
