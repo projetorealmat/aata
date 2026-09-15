@@ -2077,60 +2077,60 @@
         <!-- % TWJ, 2012/10/21 -->
         <!-- % Deleted the word "now" in the description of <acro>UPC</acro> symbols.  Suggested by R. Beezer. -->
     <exercise>
-      <title><acro>UPC</acro> Symbols</title>
+      <title>Símbolos <acro>UPC</acro></title>
       <statement>
         <p>
-          Universal Product Code<idx><h>Universal Product Code</h></idx>
-          (<acro>UPC</acro>) symbols are found on most products in grocery and retail stores.
-          The <acro>UPC</acro> symbol is a 12-digit code identifying the manufacturer of a product and the product itself (<xref ref="groups-figure-upc-codes"/>).
-          The first 11 digits contain information about the product;
-          the twelfth digit is used for error detection.
-          If <m>d_1 d_2 \cdots d_{12}</m> is a valid <acro>UPC</acro> number, then
+          Os símbolos do Universal Product Code<idx><h>Universal Product Code</h></idx>
+          (<acro>UPC</acro>) são encontrados na maioria dos produtos de mercearias e lojas de varejo.
+          O símbolo <acro>UPC</acro> é um código de 12 dígitos que identifica o fabricante e o próprio produto (<xref ref="groups-figure-upc-codes"/>).
+          Os primeiros 11 dígitos contêm informações sobre o produto;
+          o décimo segundo dígito é usado para detecção de erros.
+          Se <m>d_1 d_2 \cdots d_{12}</m> é um número <acro>UPC</acro> válido, então
           <md>
             3 \cdot d_1 + 1 \cdot d_2 + 3 \cdot d_3 + \cdots + 3 \cdot d_{11} + 1 \cdot d_{12} \equiv 0 \pmod{10}
           </md>.
           <ol>
             <li>
               <p>
-                Show that the <acro>UPC</acro> number 0-50000-30042-6, which appears in <xref ref="groups-figure-upc-codes"/>, is a valid <acro>UPC</acro> number.
+                Mostre que o número <acro>UPC</acro> 0-50000-30042-6, que aparece em <xref ref="groups-figure-upc-codes"/>, é um número <acro>UPC</acro> válido.
               </p>
             </li>
 
             <li>
               <p>
-                Show that the number 0-50000-30043-6 is not a valid <acro>UPC</acro> number.
+                Mostre que o número 0-50000-30043-6 não é um número <acro>UPC</acro> válido.
               </p>
             </li>
 
             <li>
               <p>
-                Write a formula to calculate the check digit, <m>d_{12}</m>,
-                in the <acro>UPC</acro> number.
+                Escreva uma fórmula para calcular o dígito de verificação, <m>d_{12}</m>,
+                no número <acro>UPC</acro>.
               </p>
             </li>
 
             <li>
               <p>
-                The <acro>UPC</acro> error detection scheme can detect most transposition errors;
-                that is, it can determine if two digits have been interchanged.
-                Show that the transposition error 0-05000-30042-6 is not detected.
-                Find a transposition error that is detected.
-                Can you find a general rule for the types of transposition errors that can be detected?
+                O esquema de detecção de erros <acro>UPC</acro> pode detectar a maioria dos erros de transposição;
+                isto é, pode determinar se dois dígitos foram trocados.
+                Mostre que o erro de transposição 0-05000-30042-6 não é detectado.
+                Encontre um erro de transposição que seja detectado.
+                Você consegue encontrar uma regra geral para os tipos de erros de transposição que podem ser detectados?
               </p>
             </li>
 <!-- % Corrected exercise. Suggested by John Watterlond. TWJ 8/24/2011 -->
             <li>
               <p>
-                Write a program that will determine whether or not a <acro>UPC</acro> number is valid.
+                Escreva um programa que determine se um número <acro>UPC</acro> é válido.
               </p>
             </li>
           </ol>
         </p>
 
         <figure xml:id="groups-figure-upc-codes">
-          <caption>A <acro>UPC</acro> code</caption>
+          <caption>Um código <acro>UPC</acro></caption>
           <image width="50%" source="UPCcode">
-            <description>The vertical lines of a UPC bar scan code for 0-05000-30042-6</description>
+            <description>As linhas verticais do código de barras UPC para 0-05000-30042-6</description>
           </image>
         </figure>
       </statement>
@@ -2139,23 +2139,23 @@
     <exercise>
       <statement>
         <p>
-          It is often useful to use an inner product notation for this type of error detection scheme;
-          hence, we will use the notion
+          Muitas vezes é útil usar uma notação de produto interno para esse tipo de esquema de detecção de erros;
+          por isso, usaremos a notação
           <md>
             (d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots, w_k ) \equiv 0 \pmod{ n }
           </md>
-          to mean
+          para significar
           <md>
             d_1 w_1 +  d_2 w_2 + \cdots +  d_k w_k  \equiv 0  \pmod{ n}
           </md>.
         </p>
 
         <p>
-          Suppose that <m>(d_1, d_2, \ldots,
+          Suponha que <m>(d_1, d_2, \ldots,
           d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> is an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all single-digit errors are detected if and only if
+          w_k ) \equiv 0 \pmod{ n}</m> seja um esquema de detecção de erros para o número de identificação de <m>k</m> dígitos <m>d_1 d_2 \cdots d_k</m>,
+          onde <m>0 \leq d_i \lt n</m>.
+          Prove que todos os erros de um único dígito são detectados se, e somente se,
           <m>\gcd( w_i, n ) = 1</m> for <m>1 \leq i \leq k</m>.
         </p>
       </statement>
@@ -2164,66 +2164,66 @@
     <exercise>
       <statement>
         <p>
-          Let <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
-          w_k ) \equiv 0 \pmod{ n}</m> be an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
-          where <m>0 \leq d_i \lt n</m>.
-          Prove that all transposition errors of two digits <m>d_i</m> and <m>d_j</m> are detected if and only if
+          Seja <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
+          w_k ) \equiv 0 \pmod{ n}</m> um esquema de detecção de erros para o número de identificação de <m>k</m> dígitos <m>d_1 d_2 \cdots d_k</m>,
+          onde <m>0 \leq d_i \lt n</m>.
+          Prove que todos os erros de transposição de dois dígitos <m>d_i</m> e <m>d_j</m> são detectados se, e somente se,
           <m>\gcd( w_i - w_j, n ) = 1</m> for <m>i</m> and <m>j</m> between <m>1</m> and <m>k</m>.
         </p>
       </statement>
     </exercise>
 
     <exercise>
-      <title><acro>ISBN</acro> Codes</title>
+      <title>Códigos <acro>ISBN</acro></title>
       <statement>
         <p>
-          Every book has an International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>) code.
-          This is a 10-digit code indicating the book's publisher and title.
-          The tenth digit is a check digit satisfying
+          Todo livro possui um código International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>).
+          É um código de 10 dígitos que indica a editora e o título do livro.
+          O décimo dígito é um dígito de verificação que satisfaz
           <md>
             (d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}
           </md>.
-          One problem is that <m>d_{10}</m> might have to be a 10 to make the inner product zero;
-          in this case, 11 digits would be  needed to make this scheme work.
-          Therefore, the character X is used for the eleventh digit.
-          So <acro>ISBN</acro> 3-540-96035-X is a valid <acro>ISBN</acro> code.
+          Um problema é que <m>d_{10}</m> talvez tivesse de ser 10 para tornar o produto interno nulo;
+          nesse caso, seriam necessários 11 dígitos para que esse esquema funcionasse.
+          Por isso, o caractere X é usado para o décimo primeiro dígito.
+          Assim, <acro>ISBN</acro> 3-540-96035-X é um código <acro>ISBN</acro> válido.
 
           <ol>
             <li>
               <p>
-                Is <acro>ISBN</acro> 0-534-91500-0 a valid <acro>ISBN</acro> code?
-                What about <acro>ISBN</acro> 0-534-91700-0 and <acro>ISBN</acro> 0-534-19500-0?
+                O código <acro>ISBN</acro> 0-534-91500-0 é um código <acro>ISBN</acro> válido?
+                E quanto a <acro>ISBN</acro> 0-534-91700-0 e <acro>ISBN</acro> 0-534-19500-0?
               </p>
             </li>
 
             <li>
               <p>
-                Does this method detect all single-digit errors?
-                What about all transposition errors?
+                Esse método detecta todos os erros de um único dígito?
+                E quanto a todos os erros de transposição?
               </p>
             </li>
 
             <li>
               <p>
-                How many different <acro>ISBN</acro> codes are there?
+                Quantos códigos <acro>ISBN</acro> diferentes existem?
               </p>
             </li>
 
             <li>
               <p>
-                Write a computer program that will calculate the check digit for the first nine digits of an <acro>ISBN</acro> code.
+                Escreva um programa de computador que calcule o dígito de verificação para os nove primeiros dígitos de um código <acro>ISBN</acro>.
               </p>
             </li>
 
             <li>
               <p>
-                A publisher has houses in Germany and the United States.
-                Its German prefix is 3-540.
-                If its United States prefix will be 0-<c>abc</c>,
-                find <c>abc</c> such that the rest of the <acro>ISBN</acro> code will be the same for a book printed in Germany and in the United States.
-                Under the <acro>ISBN</acro> coding method the first digit identifies the language; German is 3 and English is 0.
-                The next group of numbers identifies the publisher,
-                and the last group identifies the specific book.
+                Uma editora possui filiais na Alemanha e nos Estados Unidos.
+                Seu prefixo alemão é 3-540.
+                Se o prefixo dos Estados Unidos for 0-<c>abc</c>,
+                encontre <c>abc</c> de modo que o restante do código <acro>ISBN</acro> seja o mesmo para um livro impresso na Alemanha e nos Estados Unidos.
+                Pelo método de codificação <acro>ISBN</acro>, o primeiro dígito identifica o idioma; alemão é 3 e inglês é 0.
+                O grupo seguinte de números identifica a editora,
+                e o último grupo identifica o livro específico.
               </p>
             </li>
           </ol>
@@ -2235,7 +2235,7 @@
 
   <references xml:id="groups-references">
         <!--  references checked and updated - TWJ 6/22/2010 -->
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
         <!--Fix intro
 	 	<introduction>
 	 		<p>References [2] and [3] show how group theory can be used in error detection schemes.  Other sources cover more advanced topics in group theory.</p>
@@ -2289,21 +2289,21 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Many of the groups discussed in this chapter are available for study in Sage.
-        It is important to understand that sets that form algebraic objects
-        (groups in this chapter)
-        are called <q>parents</q> in Sage,
-        and elements of these objects are called, well,
-        <q>elements.</q> So every element belongs to a parent
-        (in other words, is contained in some set).
-        We can ask about properties of parents (finite? order? abelian?), and we can ask about properties of individual elements
-        (identity? inverse?).
-        In the following we will show you how to create some of these common groups and begin to explore their properties with Sage.
+        Muitos dos grupos discutidos neste capítulo estão disponíveis para estudo no Sage.
+        É importante entender que os conjuntos que formam objetos algébricos
+        (grupos, neste capítulo)
+        são chamados de <q>pais</q> no Sage,
+        e os elementos desses objetos são chamados, bem,
+        de <q>elementos.</q> Assim, todo elemento pertence a um pai
+        (em outras palavras, está contido em algum conjunto).
+        Podemos perguntar sobre propriedades dos pais (finito? ordem? abeliano?) e sobre propriedades de elementos individuais
+        (identidade? inverso?).
+        A seguir, mostraremos como criar alguns desses grupos comuns e começar a explorar suas propriedades com o Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Integers mod n</title>
+      <title>Inteiros módulo n</title>
 
             <sage>
                 <input>
@@ -2326,21 +2326,21 @@
             </sage>
 
       <p>
-        We would like to work with elements of <c>Z8</c>.
-        If you were to type a <c>6</c> into a compute cell right now,
-        what would you mean?
-        The integer <m>6</m>, the rational number <m>\frac{6}{1}</m>,
-        the real number <m>6.00000</m>,
-        or the complex number <m>6.00000+0.00000i</m>?
-        Or perhaps you really do want the integer <m>6</m> mod <m>8</m>?
-        Sage really has no idea what you mean or want.
-        To make this clear, you can <q>coerce</q>
-        <c>6</c> into <c>Z8</c> with the syntax <c>Z8(6)</c>.
-        Without this, Sage will treat a input number like <c>6</c> as an integer,
-        the simplest possible interpretation in some sense.
-        Study the following carefully,
-        where we first work with <q>normal</q>
-        integers and then with integers mod 8.
+        Gostaríamos de trabalhar com elementos de <c>Z8</c>.
+        Se você digitasse um <c>6</c> em uma célula de cálculo agora,
+        o que isso significaria?
+        O inteiro <m>6</m>, o número racional <m>\frac{6}{1}</m>,
+        o número real <m>6.00000</m>
+        ou o número complexo <m>6.00000+0.00000i</m>?
+        Ou talvez você realmente queira o inteiro <m>6</m> módulo <m>8</m>?
+        O Sage realmente não sabe o que você quer dizer ou deseja.
+        Para deixar isso claro, você pode <q>coagir</q>
+        <c>6</c> para <c>Z8</c> com a sintaxe <c>Z8(6)</c>.
+        Sem isso, o Sage tratará um número de entrada como <c>6</c> como um inteiro,
+        a interpretação mais simples possível, em certo sentido.
+        Estude cuidadosamente o que segue,
+        em que primeiro trabalhamos com inteiros <q>comuns</q>
+        e depois com inteiros módulo 8.
       </p>
 
             <sage>
@@ -2389,13 +2389,13 @@
             </sage>
 
       <p>
-        <c>Z8</c> is a bit unusual as a first example,
-        since it has two operations defined,
-        both addition and multiplication,
-        with addition forming a group,
-        and multiplication not forming a group.
-        Still, we can work with the additive portion,
-        here forming the Cayley table for the addition.
+        <c>Z8</c> é um pouco incomum como primeiro exemplo,
+        pois tem duas operações definidas,
+        adição e multiplicação,
+        sendo a adição um grupo
+        e a multiplicação não.
+        Ainda assim, podemos trabalhar com a parte aditiva,
+        formando aqui a tabela de Cayley da adição.
       </p>
 
             <sage>
@@ -2415,42 +2415,42 @@
             </sage>
 
       <p>
-        When <m>n</m> is a prime number,
-        the multipicative structure
-        (excluding zero),
-        will also form a group.
+        Quando <m>n</m> é um número primo,
+        a estrutura multiplicativa
+        (excluindo o zero)
+        também formará um grupo.
       </p>
 
       <p>
-        The integers mod <m>n</m> are very important,
-        so Sage implements both addition and multiplication together.
-        Groups of symmetries are a better example of how Sage implements groups,
-        since there is just one operation present.
+        Os inteiros módulo <m>n</m> são muito importantes,
+        por isso o Sage implementa conjuntamente a adição e a multiplicação.
+        Grupos de simetrias são um exemplo melhor de como o Sage implementa grupos,
+        pois há apenas uma operação presente.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection xml:id="groups-subsection-groups-of-symmetries">
-      <title>Groups of symmetries</title>
+      <title>Grupos de simetrias</title>
       <p>
-        The symmetries of some geometric shapes are already defined in Sage,
-        albeit with different names.
-        They are implemented as <q>permutation groups</q>
-        which we will begin to study carefully in <xref ref="permute"/>.
+        As simetrias de algumas formas geométricas já estão definidas no Sage,
+        embora com nomes diferentes.
+        Elas são implementadas como <q>grupos de permutações</q>,
+        que começaremos a estudar cuidadosamente em <xref ref="permute"/>.
       </p>
 
       <p>
-        Sage uses integers to label vertices,
-        starting the count at <c>1</c>, instead of letters.
-        Elements by default are printed using <q>cycle notation</q>
-        which we will see described carefully in <xref ref="permute"/>.
-        Here is an example, with both the mathematics and Sage.
-        For the Sage part,
-        we create the group of symmetries and then create the symmetry <m>\rho_2</m> with coercion,
-        followed by outputting the element in cycle notation.
-        Then we create just the <em>bottom row</em>
-        of the notation we are using for permutations.
+        O Sage usa inteiros para rotular os vértices,
+        começando a contagem em <c>1</c>, em vez de letras.
+        Por padrão, os elementos são impressos usando a <q>notação cíclica</q>,
+        que veremos descrita cuidadosamente em <xref ref="permute"/>.
+        Eis um exemplo, com a matemática e o Sage.
+        Para a parte do Sage,
+        criamos o grupo de simetrias e então criamos a simetria <m>\rho_2</m> por coerção,
+        seguida da exibição do elemento em notação cíclica.
+        Depois criamos apenas a <em>linha inferior</em>
+        da notação que estamos usando para permutações.
         <md>
           \rho_2=
           \begin{pmatrix}
@@ -2479,16 +2479,16 @@
             </sage>
 
       <p>
-        The final list comprehension deserves comment.
-        The <c>.domain()</c> method gives a list of the symbols used for the permutation group <c>triangle</c> and then <c>rho2</c> is employed with syntax like it is a function
-        (it <em>is</em> a function)
-        to create the images that would occupy the bottom row.
+        A compreensão de listas final merece um comentário.
+        O método <c>.domain()</c> fornece uma lista dos símbolos usados para o grupo de permutações <c>triangle</c>, e então <c>rho2</c> é empregado com uma sintaxe como se fosse uma função
+        (ele <em>é</em> uma função)
+        para criar as imagens que ocupariam a linha inferior.
       </p>
 
       <p>
-        With a double list comprehension we can list all six elements of the group in the
-        <q>bottom row</q> format.
-        A good exercise would be to pair up each element with its name as given in <xref ref="groups-figure-s3-symmetry"/>.
+        Com uma compreensão de listas dupla podemos listar os seis elementos do grupo no formato de
+        <q>linha inferior</q>.
+        Um bom exercício seria associar cada elemento ao seu nome, conforme dado em <xref ref="groups-figure-s3-symmetry"/>.
       </p>
 
             <sage>
@@ -2497,24 +2497,23 @@
             </sage>
 
       <p>
-        Different books, different authors,
-        different software all have different ideas about the order in which to write multiplication of functions.
-        This textbook builds on the idea of composition of functions,
-        so that <m>fg</m> is the composition
-        <m>(fg)(x)=f(g(x))</m> and it is natural to apply <m>g</m> first.
-        Sage takes the opposite view and since we write <m>fg</m>, Sage will understand that we want to do <m>f</m> first.
-        Neither approach is wrong, and neither is necessarily superior,
-        they are just different and there are good arguments for either one.
-        When you consult other books that work with permutation groups,
-        you want to first determine which approach it takes.
-        (Be aware that this discussion of Sage function composition is limited to permutations only<mdash/><q>regular</q>
-        functions in Sage compose in the order you might be familiar with from a calculus course.)
+        Livros diferentes, autores diferentes
+        e softwares diferentes têm ideias diferentes sobre a ordem em que se escreve a multiplicação de funções.
+        Este livro se baseia na ideia de composição de funções,
+        de modo que <m>fg</m> é a composição
+        <m>(fg)(x)=f(g(x))</m> e é natural aplicar <m>g</m> primeiro.
+        O Sage adota o ponto de vista oposto e, como escrevemos <m>fg</m>, o Sage entenderá que queremos aplicar <m>f</m> primeiro.
+        Nenhuma das abordagens está errada, e nenhuma é necessariamente superior;
+        elas são apenas diferentes, e há bons argumentos a favor de cada uma.
+        Ao consultar outros livros que trabalham com grupos de permutações,
+        você deve primeiro determinar qual abordagem eles adotam.
+        (Observe que esta discussão sobre composição de funções no Sage se limita apenas às permutações<mdash/>as funções <q>regulares</q> no Sage são compostas na ordem que talvez você conheça de um curso de cálculo.)
       </p>
 
       <p>
-        The translation here between the text and Sage will be worthwhile practice.
-        Here we will reprise the discussion at the end of <xref ref="groups-section-mod-n-sym"/>,
-        but reverse the order on each product to compute Sage-style and exactly mirror what the text does.
+        A tradução aqui entre o texto e o Sage será uma prática valiosa.
+        Retomaremos a discussão no final de <xref ref="groups-section-mod-n-sym"/>,
+        mas inverteremos a ordem em cada produto para calcular no estilo do Sage e espelhar exatamente o que o texto faz.
       </p>
 
             <sage>
@@ -2542,14 +2541,14 @@
             </sage>
 
       <p>
-        Now that we understand that Sage does multiplication in reverse,
-        we can compute the Cayley table for this group.
-        Default behavior is to just name elements of a group as letters, <c>a,
-        b, c</c>, <m>\dots{}</m> in the same order that the <c>.list()</c> command would produce the elements of the group.
-        But you can also print the elements in the table as themselves
-        (that uses cycle notation here),
-        or you can give the elements names.
-        We will use <c>u</c> as shorthand for <m>\mu</m> and <c>r</c> as shorthand for <m>\rho</m>.
+        Agora que entendemos que o Sage faz a multiplicação ao contrário,
+        podemos calcular a tabela de Cayley desse grupo.
+        O comportamento padrão é simplesmente nomear os elementos de um grupo com letras, <c>a,
+        b, c</c>, <m>\dots{}</m>, na mesma ordem em que o comando <c>.list()</c> produziria os elementos do grupo.
+        Mas você também pode imprimir os próprios elementos na tabela
+        (aqui isso usa a notação cíclica),
+        ou pode dar nomes aos elementos.
+        Usaremos <c>u</c> como abreviação de <m>\mu</m> e <c>r</c> como abreviação de <m>\rho</m>.
       </p>
 
             <sage>
@@ -2593,29 +2592,29 @@
             </sage>
 
       <p>
-        You should verify that the table above is correct,
-        just like Table 3.2 is correct.
-        Remember that the convention is to multiply a row label times a column label,
-        in that order.
-        However, to do a check across the two tables,
-        you will need to recall the difference in ordering between your textbook and Sage.
+        Você deve verificar que a tabela acima está correta,
+        assim como a Tabela 3.2 está correta.
+        Lembre-se de que a convenção é multiplicar o rótulo da linha pelo rótulo da coluna,
+        nessa ordem.
+        Contudo, para conferir entre as duas tabelas,
+        você precisará lembrar a diferença de ordem entre seu livro e o Sage.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection>
-      <title>Quaternions</title>
+      <title>Quatérnios</title>
       <p>
-        Sage implements the quaternions,
-        but the elements are not matrices,
-        but rather are permutations.
-        Despite appearances the structure is identical.
-        It should not matter which version you have in mind
-        (matrices or permutations)
-        if you build the Cayley table and use the default behavior of using letters to name the elements.
-        As permutations, or as letters,
-        can you identify <m>-1</m>, <m>I</m>, <m>J</m> and <m>K</m>?
+        O Sage implementa os quatérnios,
+        mas os elementos não são matrizes,
+        e sim permutações.
+        Apesar das aparências, a estrutura é idêntica.
+        Não deve importar qual versão você tem em mente
+        (matrizes ou permutações)
+        se construir a tabela de Cayley e usar o comportamento padrão de nomear os elementos com letras.
+        Como permutações ou como letras,
+        você consegue identificar <m>-1</m>, <m>I</m>, <m>J</m> e <m>K</m>?
       </p>
 
             <sage>
@@ -2647,11 +2646,11 @@
             </sage>
 
       <p>
-        It should be fairly obvious that <c>a</c> is the identity element of the group (<m>1</m>),
-        either from its behavior in the table,
-        or from its <q>bottom row</q> representation as the first element of the list above.
-        And if you prefer,
-        you can ask Sage for a list of its outputs when viewed as a function.
+        Deve ser bastante evidente que <c>a</c> é o elemento identidade do grupo (<m>1</m>),
+        seja pelo seu comportamento na tabela,
+        seja pela sua representação como <q>linha inferior</q>, sendo o primeiro elemento da lista acima.
+        E, se preferir,
+        você pode pedir ao Sage uma lista de suas imagens quando visto como função.
       </p>
 
             <sage>
@@ -2663,12 +2662,12 @@
             </sage>
 
       <p>
-        Now <m>-1</m> should have the property that <m>-1\cdot -1= 1</m>.
-        We see that the identity element <c>a</c> is on the diagonal of the Cayley table only when we compute <c>c*c</c>.
-        We can verify this easily,
-        by extracting the third element of the column headings of the Cayley table.
-        Now that we have identified <m>-1</m>, once we locate <m>I</m>,
-        we can easily compute <m>-I</m>, and so on.
+        Agora <m>-1</m> deve ter a propriedade <m>-1\cdot -1= 1</m>.
+        Vemos que o elemento identidade <c>a</c> está na diagonal da tabela de Cayley somente quando calculamos <c>c*c</c>.
+        Podemos verificar isso facilmente
+        extraindo o terceiro elemento dos cabeçalhos das colunas da tabela de Cayley.
+        Agora que identificamos <m>-1</m>, depois de localizar <m>I</m>,
+        podemos calcular facilmente <m>-I</m> e assim por diante.
       </p>
 
             <sage>
@@ -2687,20 +2686,20 @@
             </sage>
 
       <p>
-        See if you can pair up the letters with all eight elements of the quaternions.
-        Be a bit careful with your names,
-        the symbol <c>I</c> is used by Sage for the imaginary number <m>i=\sqrt{-1}</m>
-        (which we will use below),
-        but Sage will silently let you redefine it to be anything you like.
-        Same goes for using lower-case <c>i</c> in Sage.
-        So call your elements of the quaternions something like <c>QI, QJ, QK</c> to avoid confusion.
+        Veja se consegue associar as letras aos oito elementos dos quatérnios.
+        Tenha um pouco de cuidado com os nomes:
+        o símbolo <c>I</c> é usado pelo Sage para o número imaginário <m>i=\sqrt{-1}</m>
+        (que usaremos abaixo),
+        mas o Sage permite silenciosamente que você o redefina como quiser.
+        O mesmo vale para usar <c>i</c> minúsculo no Sage.
+        Portanto, chame seus elementos dos quatérnios de algo como <c>QI, QJ, QK</c> para evitar confusão.
       </p>
 
       <p>
-        As we begin to work with groups it is instructive to work with the actual elements.
-        But many properties of groups are totally independent of the order we use for multiplication,
-        or the names or representations we use for the elements.
-        Here are facts about the quaternions we can compute without any knowledge of just how the elements are written or multiplied.
+        Ao começarmos a trabalhar com grupos, é instrutivo trabalhar com os elementos efetivos.
+        Mas muitas propriedades dos grupos são totalmente independentes da ordem que usamos para a multiplicação,
+        ou dos nomes ou representações usados para os elementos.
+        Eis fatos sobre os quatérnios que podemos calcular sem saber exatamente como os elementos são escritos ou multiplicados.
       </p>
 
             <sage>
@@ -2719,18 +2718,18 @@
     </subsection>
 
     <subsection>
-      <title>Subgroups</title>
+      <title>Subgrupos</title>
       <p>
-        The best techniques for creating subgroups will come in future chapters,
-        but we can create some groups that are naturally subgroups of other groups.
+        As melhores técnicas para criar subgrupos aparecerão em capítulos futuros,
+        mas podemos criar alguns grupos que são naturalmente subgrupos de outros grupos.
       </p>
 
       <p>
-        Elements of the quaternions were represented by certain permutations of the integers 1 through 8.
-        We can also build the group of <em>all</em>
-        permutations of these eight integers.
-        It gets pretty big,
-        so do not list it unless you want a lot of output! (I dare you.)
+        Os elementos dos quatérnios foram representados por certas permutações dos inteiros de 1 a 8.
+        Também podemos construir o grupo de <em>todas</em>
+        as permutações desses oito inteiros.
+        Ele fica bastante grande,
+        portanto não o liste, a menos que queira uma saída enorme! (Eu desafio você.)
       </p>
 
             <sage>
@@ -2747,10 +2746,10 @@
             </sage>
 
       <p>
-        The quaternions, <c>Q</c>,
-        is a subgroup of the full group of all permutations,
-        the symmetric group <m>S_8</m> or <c>S8</c>,
-        and Sage regards this as a property of <c>Q</c>.
+        Os quatérnios, <c>Q</c>,
+        são um subgrupo do grupo completo de todas as permutações,
+        o grupo simétrico <m>S_8</m> ou <c>S8</c>,
+        e o Sage considera isso uma propriedade de <c>Q</c>.
       </p>
 
             <sage>
@@ -2759,10 +2758,10 @@
             </sage>
 
       <p>
-        In Sage the complex numbers are known by the name <c>CC</c>.
-        We can create a list of the elements in the subgroup described in <xref ref="groups-example-c-star"/>.
-        Then we can verify that this set is a subgroup by examining the Cayley table,
-        using multiplication as the operation.
+        No Sage, os números complexos são conhecidos pelo nome <c>CC</c>.
+        Podemos criar uma lista dos elementos do subgrupo descrito em <xref ref="groups-example-c-star"/>.
+        Em seguida, podemos verificar que esse conjunto é um subgrupo examinando a tabela de Cayley,
+        usando a multiplicação como operação.
       </p>
 
             <sage>
@@ -2786,24 +2785,24 @@
   </section>
 
   <exercises xml:id="groups-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        These exercises are about becoming comfortable working with groups in Sage.
-        Sage worksheets have extensive capabilities for making new cells with carefully formatted text,
-        include support for <latex/> syntax to express mathematics.
-        So when a question asks for explanation or commentary,
-        make a new cell and communicate clearly with your audience.
+        Estes exercícios têm por objetivo familiarizá-lo com o trabalho com grupos no Sage.
+        As planilhas do Sage oferecem amplos recursos para criar novas células com texto cuidadosamente formatado
+        e incluem suporte à sintaxe <latex/> para expressar matemática.
+        Portanto, quando uma questão pedir explicação ou comentário,
+        crie uma nova célula e comunique-se claramente com seu público.
       </p>
     </introduction>
 
     <exercise number="1" xml:id="groups-sage-exercise-order-8">
       <statement>
         <p>
-          Create the groups <c>CyclicPermutationGroup(8)</c> and <c>DihedralGroup(4)</c> and name these groups <c>C</c> and <c>D</c>,
-          respectively.
-          We will understand these constructions better shortly,
-          but for now just understand that both objects you create are actually groups.
+          Crie os grupos <c>CyclicPermutationGroup(8)</c> e <c>DihedralGroup(4)</c> e nomeie esses grupos como <c>C</c> e <c>D</c>,
+          respectivamente.
+          Em breve entenderemos melhor essas construções,
+          mas, por enquanto, apenas entenda que ambos os objetos criados são de fato grupos.
         </p>
       </statement>
     </exercise>
@@ -2811,9 +2810,9 @@
     <exercise number="2" xml:id="groups-sage-exercise-order">
       <statement>
         <p>
-          Check that <c>C</c> and <c>D</c> have the same size by using the <c>.order()</c> method.
-          Determine which group is abelian,
-          and which is not, by using the <c>.is_abelian()</c> method.
+          Verifique se <c>C</c> e <c>D</c> têm o mesmo tamanho usando o método <c>.order()</c>.
+          Determine qual grupo é abeliano
+          e qual não é usando o método <c>.is_abelian()</c>.
         </p>
       </statement>
     </exercise>
@@ -2821,7 +2820,7 @@
     <exercise number="3" xml:id="groups-sage-exercise-cayley-table">
       <statement>
         <p>
-          Use the <c>.cayley_table()</c> method to create the Cayley table for each group.
+          Use o método <c>.cayley_table()</c> para criar a tabela de Cayley de cada grupo.
         </p>
       </statement>
     </exercise>
@@ -2829,12 +2828,12 @@
     <exercise number="4" xml:id="groups-sage-exercise-formatted-cayley-table">
       <statement>
         <p>
-          Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables.
-          In other words,
-          what is <em>different</em> about these two groups that you can <q>see</q>
-          in the Cayley tables? (In the Sage notebook,
-          a Shift-click on a blue bar will bring up a mini-word-processor,
-          and you can use dollar signs to embed mathematics formatted using <tex/> syntax.)
+          Escreva uma discussão bem formatada identificando diferenças entre os dois grupos que possam ser discernidas nas propriedades de suas tabelas de Cayley.
+          Em outras palavras,
+          o que há de <em>diferente</em> nesses dois grupos que você consegue <q>ver</q>
+          nas tabelas de Cayley? (No caderno do Sage,
+          um Shift-clique em uma barra azul abrirá um miniprocessador de texto,
+          e você pode usar cifrões para inserir matemática formatada com a sintaxe <tex/>.)
         </p>
       </statement>
     </exercise>
@@ -2842,15 +2841,15 @@
     <exercise number="5" xml:id="groups-sage-exercise-subgroup">
       <statement>
         <p>
-          For <c>C</c> locate the one subgroup of order <m>4</m>.
-          The group <c>D</c> has three subgroups of order <m>4</m>.
-          Select one of the three subgroups of <c>D</c> that has a different structure than the subgroup you obtained from <c>C</c>.
+          Para <c>C</c>, localize o único subgrupo de ordem <m>4</m>.
+          O grupo <c>D</c> tem três subgrupos de ordem <m>4</m>.
+          Selecione um dos três subgrupos de <c>D</c> que tenha estrutura diferente da do subgrupo obtido de <c>C</c>.
         </p>
 
         <p>
-          The <c>.subgroups()</c> method will give you a list of all of the subgroups to help you get started.
-          A Cayley table will help you tell the difference between the two subgroups.
-          What properties of these tables did you use to determine the difference in the structure of the subgroups?
+          O método <c>.subgroups()</c> fornecerá uma lista de todos os subgrupos para ajudá-lo a começar.
+          Uma tabela de Cayley ajudará a distinguir os dois subgrupos.
+          Quais propriedades dessas tabelas você usou para determinar a diferença na estrutura dos subgrupos?
         </p>
       </statement>
     </exercise>
@@ -2858,11 +2857,11 @@
     <exercise number="6" xml:id="groups-sage-exercise-subgpoup-elements">
       <statement>
         <p>
-          The <c>.subgroup(elt_list)</c> method of a group will create the smallest subgroup containing the specified elements of the group,
-          when given the elements as a list <c>elt_list</c>.
-          Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise.
-          The equality comparison,
-          <c>==</c>, can be used to test if two subgroups are equal.
+          O método <c>.subgroup(elt_list)</c> de um grupo criará o menor subgrupo que contém os elementos especificados do grupo,
+          quando os elementos forem fornecidos como uma lista <c>elt_list</c>.
+          Use este comando para descobrir a lista mais curta de elementos necessária para recriar os subgrupos encontrados no exercício anterior.
+          A comparação de igualdade,
+          <c>==</c>, pode ser usada para testar se dois subgrupos são iguais.
         </p>
       </statement>
     </exercise>
