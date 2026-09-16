@@ -1126,21 +1126,21 @@
   </exercises>
 
   <exercises xml:id="sylow-exercises-project">
-    <title>A Project</title>
+    <title>Um Projeto</title>
     <introduction>
       <p>
-        The main objective of finite group theory is to classify all possible finite groups up to isomorphism.
-        This problem is very difficult even if we try to classify the groups of order less than or equal to <m>60</m>.
-        However, we can break the problem down into several intermediate problems.
-        This is a challenging project that requires a working knowledge of the group theory you have learned up to this point.
-        Even if you do not complete it,
-        it will teach you a great deal about finite groups.
-        You can use <xref ref="table-sylow-project"/> as a guide.
+        O principal objetivo da teoria dos grupos finitos é classificar todos os grupos finitos possíveis, a menos de isomorfismo.
+        Esse problema é muito difícil, mesmo se tentarmos classificar os grupos de ordem menor ou igual a <m>60</m>.
+        No entanto, podemos decompor o problema em vários problemas intermediários.
+        Este é um projeto desafiador que exige um conhecimento funcional da teoria dos grupos que você aprendeu até este ponto.
+        Mesmo que você não o conclua,
+        ele lhe ensinará muito sobre grupos finitos.
+        Você pode usar <xref ref="table-sylow-project"/> como guia.
       </p>
     </introduction>
 
     <table xml:id="table-sylow-project">
-      <title>Numbers of distinct groups <m>G</m>, <m>|G| \leq 60</m></title>
+      <title>Números de grupos distintos <m>G</m>, <m>|G| \leq 60</m></title>
       <tabular halign="center" top="medium" left="medium">
         <col/>
         <col right="medium"/>
@@ -1151,14 +1151,14 @@
         <col/>
         <col right="medium"/>
         <row bottom="medium">
-          <cell>Order</cell>
-          <cell>Number</cell>
-          <cell>Order</cell>
-          <cell>Number</cell>
-          <cell>Order</cell>
-          <cell>Number</cell>
-          <cell>Order</cell>
-          <cell>Number</cell>
+          <cell>Ordem</cell>
+          <cell>Número</cell>
+          <cell>Ordem</cell>
+          <cell>Número</cell>
+          <cell>Ordem</cell>
+          <cell>Número</cell>
+          <cell>Ordem</cell>
+          <cell>Número</cell>
         </row>
         <row>
           <cell><m>1</m></cell>
@@ -1318,8 +1318,8 @@
     <exercise xml:id="sylow-exercise-simple-groups-order-leq-60">
       <statement>
         <p>
-          Find all simple groups <m>G</m> ( <m>|G| \leq 60</m>).
-          <em>Do not use the Odd Order Theorem unless you are prepared to prove it.</em>
+          Encontre todos os grupos simples <m>G</m> (<m>|G| \leq 60</m>).
+          <em>Não use o Teorema da Ordem Ímpar, a menos que esteja preparado para demonstrá-lo.</em>
         </p>
       </statement>
     </exercise>
@@ -1327,8 +1327,8 @@
     <exercise xml:id="sylow-exercise-groups-number-distinct-groups-order-leq-60">
       <statement>
         <p>
-          Find the number of distinct groups <m>G</m>,
-          where the order of <m>G</m> is <m>n</m> for <m>n = 1, \ldots, 60</m>.
+          Encontre o número de grupos distintos <m>G</m>,
+          em que a ordem de <m>G</m> é <m>n</m>, para <m>n = 1, \ldots, 60</m>.
         </p>
       </statement>
     </exercise>
@@ -1336,9 +1336,9 @@
     <exercise xml:id="sylow-exercise-find-groups-leq-60">
       <statement>
         <p>
-          Find the actual groups
-          (up to isomorphism)
-          for each <m>n</m>.
+          Encontre os grupos propriamente ditos
+          (a menos de isomorfismo)
+          para cada <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1347,7 +1347,7 @@
 
   <references xml:id="sylow-references">
         <!-- %TWJ 8/13/2010 - References checked and updated -->
-    <title>References and Suggested Readings</title>
+    <title>Referências e Leituras Sugeridas</title>
     <biblio type="raw">
 <!-- was [1] -->
       Edwards, H. <q>A Short History of the Fields Medal,</q>
