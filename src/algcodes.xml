@@ -1538,18 +1538,18 @@
   </section>
 
   <section xml:id="algcodes-section-efficient-decoding">
-    <title>Efficient Decoding</title>
+    <title>Decodificação eficiente</title>
     <introduction>
       <p>
-        We are now at the stage where we are able to generate linear codes that detect and correct errors fairly easily,
-        but it is still a time-consuming process to decode a received <m>n</m>-tuple and determine which is the closest codeword,
-        because the received <m>n</m>-tuple must be compared to each possible codeword to determine the proper decoding.
-        This can be a serious impediment if the code is very large.
+        Chegamos agora ao ponto em que somos capazes de gerar códigos lineares que detectam e corrigem erros com relativa facilidade,
+        mas ainda é demorado decodificar uma <m>n</m>-upla recebida e determinar qual é a palavra-código mais próxima,
+        pois a <m>n</m>-upla recebida deve ser comparada com cada palavra-código possível para determinar a decodificação adequada.
+        Isso pode ser um impedimento sério se o código for muito grande.
       </p>
 
       <example xml:id="algcodes-example-syndrome">
         <p>
-          Given the binary matrix
+          Dada a matriz binária
           <md>
             H =
             \begin{pmatrix}
@@ -1558,8 +1558,8 @@
             1 &amp; 0 &amp; 0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>
-          and the <m>5</m>-tuples <m>{\mathbf x} = (\codeword{11011})^\transpose</m> and <m>{\mathbf y} = (\codeword{01011})^\transpose</m>,
-          we can compute
+          e as <m>5</m>-uplas <m>{\mathbf x} = (\codeword{11011})^\transpose</m> e <m>{\mathbf y} = (\codeword{01011})^\transpose</m>,
+          podemos calcular
           <md>
             H{\mathbf x} =
             \begin{pmatrix}
@@ -1573,40 +1573,40 @@
             1 \\ 0 \\ 1 
             \end{pmatrix}
           </md>.
-          Hence, <m>{\mathbf x}</m> is a codeword and <m>{\mathbf y}</m> is not,
-          since <m>{\mathbf x}</m> is in the null space and <m>{\mathbf y}</m> is not.
-          Notice that <m>H{\mathbf y}</m> is identical to the first column of <m>H</m>.
-          In fact, this is where the error occurred.
-          If we flip the first bit in
-          <m>{\mathbf y}</m> from <m>0</m> to <m>1</m>,
-          then we obtain <m>{\mathbf x}</m>.
+          Portanto, <m>{\mathbf x}</m> é uma palavra-código e <m>{\mathbf y}</m> não é,
+          pois <m>{\mathbf x}</m> pertence ao espaço nulo e <m>{\mathbf y}</m> não.
+          Observe que <m>H{\mathbf y}</m> é idêntico à primeira coluna de <m>H</m>.
+          De fato, foi aí que ocorreu o erro.
+          Se invertermos o primeiro bit de
+          <m>{\mathbf y}</m> de <m>0</m> para <m>1</m>,
+          obteremos <m>{\mathbf x}</m>.
         </p>
       </example>
             <!-- typo correction.  Suggested by E. Martin. -->
             <!-- TWJ - 1/2/2013 -->
       <p>
-        If <m>H</m> is an <m>m \times n</m> matrix and <m>{\mathbf x} \in {\mathbb Z}_2^n</m>,
-        then we say that the <term>syndrome</term><idx><h>Syndrome of a code</h></idx>
-        of <m>{\mathbf x}</m> is <m>H{\mathbf x}</m>.
-        The following proposition allows the quick detection and correction of errors.
+        Se <m>H</m> é uma matriz <m>m \times n</m> e <m>{\mathbf x} \in {\mathbb Z}_2^n</m>,
+        dizemos que o <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
+        de <m>{\mathbf x}</m> é <m>H{\mathbf x}</m>.
+        A proposição a seguir permite a detecção e a correção rápidas de erros.
       </p>
 
       <proposition xml:id="algcodes-proposition-syndrome">
         <statement>
           <p>
-            Let the <m>m \times n</m> binary matrix <m>H</m> determine a linear code and let
-            <m>{\mathbf x}</m> be the received <m>n</m>-tuple.
-            Write <m>{\mathbf x}</m> as <m>{\mathbf x} = {\mathbf c} +{\mathbf e}</m>,
-            where <m>{\mathbf c}</m> is the transmitted codeword and
-            <m>{\mathbf e}</m> is the transmission error.
-            Then the syndrome <m>H{\mathbf x}</m> of the received codeword
-            <m>{\mathbf x}</m> is also the syndrome of the error <m>{\mathbf e}</m>.
+            Seja a matriz binária <m>m \times n</m> <m>H</m> determinante de um código linear e seja
+            <m>{\mathbf x}</m> a <m>n</m>-upla recebida.
+            Escreva <m>{\mathbf x}</m> como <m>{\mathbf x} = {\mathbf c} +{\mathbf e}</m>,
+            onde <m>{\mathbf c}</m> é a palavra-código transmitida e
+            <m>{\mathbf e}</m> é o erro de transmissão.
+            Então o síndrome <m>H{\mathbf x}</m> da palavra recebida
+            <m>{\mathbf x}</m> também é o síndrome do erro <m>{\mathbf e}</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            The proof follows from the fact that
+            A demonstração segue do fato de que
             <md>
               H{\mathbf x} = H({\mathbf c} +{\mathbf e}) = H{\mathbf c} + H{\mathbf e} = {\mathbf 0} + H{\mathbf e} = H{\mathbf e}
             </md>.
@@ -1615,21 +1615,21 @@
       </proposition>
             <!--Made the proof into a complete sentence.  TWJ 3/6/2014-->
       <p>
-        This proposition tells us that the syndrome of a received word depends solely on the error and not on the transmitted codeword.
-        The proof of the following theorem follows immediately from <xref ref="algcodes-proposition-syndrome"/> and from the fact that
-        <m>H{\mathbf e}</m> is the <m>i</m>th column of the matrix <m>H</m>.
+        Essa proposição nos diz que o síndrome de uma palavra recebida depende apenas do erro, e não da palavra-código transmitida.
+        A demonstração do teorema seguinte segue imediatamente de <xref ref="algcodes-proposition-syndrome"/> e do fato de que
+        <m>H{\mathbf e}</m> é a <m>i</m>-ésima coluna da matriz <m>H</m>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>H \in {\mathbb M}_{ m \times n} ( {\mathbb Z}_2)</m> and suppose that the linear code corresponding to <m>H</m> is single error-correcting.
-            Let <m>{\mathbf r}</m> be a received <m>n</m>-tuple that was transmitted with at most one error.
-            If the syndrome of <m>{\mathbf r}</m> is <m>{\mathbf 0}</m>,
-            then no error has occurred;
-            otherwise, if the syndrome of
-            <m>{\mathbf r}</m> is equal to some column of <m>H</m>,
-            say the <m>i</m>th column, then the error has occurred in the <m>i</m>th bit.
+            Seja <m>H \in {\mathbb M}_{ m \times n} ( {\mathbb Z}_2)</m> e suponha que o código linear correspondente a <m>H</m> seja corretor de erros únicos.
+            Seja <m>{\mathbf r}</m> uma <m>n</m>-upla recebida que foi transmitida com no máximo um erro.
+            Se o síndrome de <m>{\mathbf r}</m> for <m>{\mathbf 0}</m>,
+            então não ocorreu erro;
+            caso contrário, se o síndrome de
+            <m>{\mathbf r}</m> for igual a alguma coluna de <m>H</m>,
+            digamos a <m>i</m>-ésima coluna, então o erro ocorreu no <m>i</m>-ésimo bit.
           </p>
         </statement>
       </theorem>
