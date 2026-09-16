@@ -771,36 +771,36 @@
   </section>
 
   <section xml:id="matrix-section-symmetry">
-    <title>Symmetry</title>
+    <title>Simetria</title>
     <introduction>
       <p>
-        An <term>isometry</term><idx><h>Isometry</h></idx>
-        or <term>rigid motion</term><idx><h>Rigid motion</h></idx>
-        in <m>{\mathbb R}^n</m> is a distance-preserving function <m>f</m> from
-        <m>{\mathbb R}^n</m> to <m>{\mathbb R}^n</m>.
-        This means that <m>f</m> must satisfy
+        Uma <term>isometria</term><idx><h>Isometria</h></idx>
+        ou <term>movimento rígido</term><idx><h>Movimento rígido</h></idx>
+        em <m>{\mathbb R}^n</m> é uma função que preserva distâncias <m>f</m> de
+        <m>{\mathbb R}^n</m> em <m>{\mathbb R}^n</m>.
+        Isso significa que <m>f</m> deve satisfazer
         <md>
           \| f({\mathbf x}) - f({\mathbf y}) \| =\|{\mathbf x} - {\mathbf y} \|
         </md>
-        for all <m>{\mathbf x}, {\mathbf y} \in {\mathbb R}^n</m>.
-        It is not difficult to show that <m>f</m> must be a one-to-one map.
-        By <xref ref="matrix-theorem-orthnormal-matrix"/>,
-        any element in <m>O(n)</m> is an isometry on <m>{\mathbb R}^n</m>;
-        however, <m>O(n)</m> does not include all possible isometries on <m>{\mathbb R}^n</m>.
-        Translation by a vector <m>{\mathbf x}</m>,
-        <m>T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}</m> is also an isometry (<xref ref="matrix-figure-isometries"/>);
-        however, <m>T</m> cannot be in <m>O(n)</m> since it is not a linear map.
+        para todos <m>{\mathbf x}, {\mathbf y} \in {\mathbb R}^n</m>.
+        Não é difícil mostrar que <m>f</m> deve ser uma aplicação injetiva.
+        Pelo <xref ref="matrix-theorem-orthnormal-matrix"/>,
+        qualquer elemento de <m>O(n)</m> é uma isometria em <m>{\mathbb R}^n</m>;
+        no entanto, <m>O(n)</m> não inclui todas as isometrias possíveis em <m>{\mathbb R}^n</m>.
+        A translação por um vetor <m>{\mathbf x}</m>,
+        <m>T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}</m> também é uma isometria (<xref ref="matrix-figure-isometries"/>);
+        no entanto, <m>T</m> não pode pertencer a <m>O(n)</m>, pois não é uma aplicação linear.
       </p>
 
       <p>
-        We are mostly interested in isometries in <m>{\mathbb R}^2</m>.
-        In fact, the only isometries in
-        <m>{\mathbb R}^2</m> are rotations and reflections about the origin,
-        translations, and combinations of the two.
-        For example, a <term>glide reflection</term><idx><h>Glide reflection</h></idx>
-        is a translation followed by a reflection (<xref ref="matrix-figure-glide"/>).
-        In <m>{\mathbb R}^n</m> all isometries are given in the same manner.
-        The proof is very easy to generalize.
+        Estamos principalmente interessados em isometrias em <m>{\mathbb R}^2</m>.
+        De fato, as únicas isometrias em
+        <m>{\mathbb R}^2</m> são rotações e reflexões em torno da origem,
+        translações e combinações dessas duas operações.
+        Por exemplo, uma <term>reflexão deslizante</term><idx><h>Reflexão deslizante</h></idx>
+        é uma translação seguida de uma reflexão (<xref ref="matrix-figure-glide"/>).
+        Em <m>{\mathbb R}^n</m>, todas as isometrias são dadas da mesma maneira.
+        A demonstração é muito fácil de generalizar.
       </p>
 <!--
       <figure xml:id="matrix-figure-glide">
@@ -815,17 +815,17 @@
       </figure>
 -->
       <figure xml:id="matrix-figure-glide">
-        <caption>Glide reflections</caption>
+        <caption>Reflexões deslizantes</caption>
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-glide-reflections-a">
-            <description>A set of axes with an arrow pointing up and right from the origin to a point x.</description>
+            <description>Um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até um ponto x.</description>
               <latex-image>
                   <xi:include href="tikz/matrix-glide-reflections-a.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="matrix-glide-reflections-b">
-            <description>A set of axes with an arrow of the same length but pointing down and right from a point on the horizontal axis to a point T(x).</description>
+            <description>Um conjunto de eixos com uma seta do mesmo comprimento, mas apontando para baixo e para a direita, de um ponto no eixo horizontal até um ponto T(x).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-glide-reflections-b.tex" parse="text"/>
               </latex-image>
@@ -837,18 +837,18 @@
             <lemma>
         <statement>
           <p>
-            An isometry <m>f</m> that fixes the origin in
-            <m>{\mathbb R}^2</m> is a linear transformation.
-            In particular, <m>f</m> is given by an element in <m>O(2)</m>.
+            Uma isometria <m>f</m> que fixa a origem em
+            <m>{\mathbb R}^2</m> é uma transformação linear.
+            Em particular, <m>f</m> é dada por um elemento de <m>O(2)</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>f</m> be an isometry in <m>{\mathbb R}^2</m> fixing the origin.
-            We will first show that <m>f</m> preserves inner products.
-            Since <m>f(0) = 0</m>,
-            <m>\| f({\mathbf x})\| = \| {\mathbf x} \|</m>; therefore,
+            Seja <m>f</m> uma isometria em <m>{\mathbb R}^2</m> que fixa a origem.
+            Primeiro mostraremos que <m>f</m> preserva produtos internos.
+            Como <m>f(0) = 0</m>,
+            <m>\| f({\mathbf x})\| = \| {\mathbf x} \|</m>; portanto,
             <md>
               <mrow>\| {\mathbf x} \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| {\mathbf y} \|^2  &amp; = \| f({\mathbf x}) \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| f({\mathbf y}) \|^2</mrow>
               <mrow>&amp; = \langle f({\mathbf x}) -  f({\mathbf y}), f({\mathbf x}) - f({\mathbf y}) \rangle</mrow>
@@ -857,81 +857,81 @@
               <mrow>&amp; = \langle {\mathbf x} - {\mathbf y}, {\mathbf x} - {\mathbf y} \rangle</mrow>
               <mrow>&amp; = \| {\mathbf x} \|^2 - 2 \langle {\mathbf x}, {\mathbf y} \rangle + \| {\mathbf y} \|^2</mrow>
             </md>.
-            Consequently,
+            Consequentemente,
             <md>
               \langle f({\mathbf x}), f({\mathbf y}) \rangle = \langle {\mathbf x}, {\mathbf y} \rangle
             </md>.
-            Now let <m>{\mathbf e}_1</m> and <m>{\mathbf e_2}</m> be
-            <m>(1, 0)^\transpose</m> and <m>(0, 1)^\transpose</m>,
-            respectively.
-            If
+            Agora sejam <m>{\mathbf e}_1</m> e <m>{\mathbf e_2}</m>
+            <m>(1, 0)^\transpose</m> e <m>(0, 1)^\transpose</m>,
+            respectivamente.
+            Se
             <md>
               {\mathbf x} = (x_1, x_2) = x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2
             </md>,
-            then
+            então
             <md>
               f({\mathbf x}) = \langle f({\mathbf x}), f({\mathbf e}_1) \rangle f({\mathbf e}_1) + \langle f({\mathbf x}), f({\mathbf e}_2) \rangle f({\mathbf e}_2) = x_1 f({\mathbf e}_1)+x_2 f({\mathbf e}_2)
             </md>.
-            The linearity of <m>f</m> easily follows.
+            A linearidade de <m>f</m> segue facilmente.
           </p>
         </proof>
       </lemma>
 
       <p>
-        For any arbitrary isometry, <m>f</m>,
-        <m>T_{\mathbf x} f</m> will fix the origin for some vector
-        <m>{\mathbf x}</m> in <m>{\mathbb R}^2</m>;
-        hence, <m>T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}</m> for some matrix <m>A \in O(2)</m>.
-        Consequently,
+        Para uma isometria arbitrária, <m>f</m>,
+        <m>T_{\mathbf x} f</m> fixará a origem para algum vetor
+        <m>{\mathbf x}</m> em <m>{\mathbb R}^2</m>;
+        logo, <m>T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}</m> para alguma matriz <m>A \in O(2)</m>.
+        Consequentemente,
         <m>f({\mathbf y}) = A {\mathbf y} + {\mathbf x}</m>.
-        Given the isometries
+        Dadas as isometrias
         <md>
           <mrow>f({\mathbf y}) &amp; = A {\mathbf y} + {\mathbf x}_1</mrow>
           <mrow>g({\mathbf y}) &amp; = B {\mathbf y} + {\mathbf x}_2</mrow>
         </md>,
-        their composition is
+        sua composição é
         <md>
           f(g({\mathbf y})) = f(B {\mathbf y} + {\mathbf x}_2) = AB {\mathbf y} + A{\mathbf x}_2 + {\mathbf x}_1
         </md>.
-        This last computation allows us to identify the group of isometries on <m>{\mathbb R}^2</m> with <m>E(2)</m>.
+        Esse último cálculo nos permite identificar o grupo das isometrias em <m>{\mathbb R}^2</m> com <m>E(2)</m>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            The group of isometries on
-            <m>{\mathbb R}^2</m> is the Euclidean group, <m>E(2)</m>.
+            O grupo das isometrias em
+            <m>{\mathbb R}^2</m> é o grupo euclidiano, <m>E(2)</m>.
           </p>
         </statement>
       </theorem>
 
       <p>
-        A <term>symmetry group</term><idx><h>Group</h><h>symmetry</h></idx>
-        in <m>{\mathbb R}^n</m> is a subgroup of the group of isometries on
-        <m>{\mathbb R}^n</m> that fixes a set of points <m>X \subset {\mathbb R}^n</m>.
-        It is important to realize that the symmetry group of <m>X</m> depends <em>both</em>
-        on <m>{\mathbb R}^n</m> and on <m>X</m>.
-        For example, the symmetry group of the origin in
-        <m>{\mathbb R}^1</m> is <m>{\mathbb Z}_2</m>,
-        but the symmetry group of the origin in <m>{\mathbb R}^2</m> is <m>O(2)</m>.
+        Um <term>grupo de simetria</term><idx><h>Grupo</h><h>simetria</h></idx>
+        em <m>{\mathbb R}^n</m> é um subgrupo do grupo das isometrias em
+        <m>{\mathbb R}^n</m> que fixa um conjunto de pontos <m>X \subset {\mathbb R}^n</m>.
+        É importante perceber que o grupo de simetria de <m>X</m> depende <em>tanto</em>
+        de <m>{\mathbb R}^n</m> quanto de <m>X</m>.
+        Por exemplo, o grupo de simetria da origem em
+        <m>{\mathbb R}^1</m> é <m>{\mathbb Z}_2</m>,
+        mas o grupo de simetria da origem em <m>{\mathbb R}^2</m> é <m>O(2)</m>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            The only finite symmetry groups in
-            <m>{\mathbb R}^2</m> are <m>{\mathbb Z}_n</m> and <m>D_n</m>.
+            Os únicos grupos de simetria finitos em
+            <m>{\mathbb R}^2</m> são <m>{\mathbb Z}_n</m> e <m>D_n</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-          	We simply need to find all of the finite subgroups <m>G</m> of <m>E(2)</m>.
-            Any finite symmetry group <m>G</m> in
-            <m>{\mathbb R}^2</m> must fix the origin  and must be a finite subgroup of <m>O(2)</m>,
-            since translations and glide reflections have infinite order.
-            By <xref ref="matrix-example-o2"/>,
-            elements in <m>O(2)</m> are either rotations of the form
+          	Precisamos simplesmente encontrar todos os subgrupos finitos <m>G</m> de <m>E(2)</m>.
+            Qualquer grupo de simetria finito <m>G</m> em
+            <m>{\mathbb R}^2</m> deve fixar a origem e ser um subgrupo finito de <m>O(2)</m>,
+            pois translações e reflexões deslizantes têm ordem infinita.
+            Pelo <xref ref="matrix-example-o2"/>,
+            os elementos de <m>O(2)</m> são rotações da forma
             <md>
               R_{\theta}
               =
@@ -940,7 +940,7 @@
               \sin \theta &amp; \cos \theta
               \end{pmatrix}
             </md>
-            or reflections of the form
+            ou reflexões da forma
             <md>
               T_{\phi}
               =
@@ -958,49 +958,49 @@
               \sin \phi &amp; - \cos \phi
               \end{pmatrix}
             </md>.
-            Notice that <m>\det(R_{\theta})=1</m>,
-            <m>\det(T_{\phi})=-1</m>, and <m>T_{\phi}^2=I</m>.
-            We can divide the proof up into two cases.
-            In the first case,
-            all of the elements in <m>G</m> have determinant one.
-            In the second case,
-            there exists at least one element in <m>G</m> with determinant <m>-1</m>.
+            Observe que <m>\det(R_{\theta})=1</m>,
+            <m>\det(T_{\phi})=-1</m> e <m>T_{\phi}^2=I</m>.
+            Podemos dividir a demonstração em dois casos.
+            No primeiro caso,
+            todos os elementos de <m>G</m> têm determinante igual a um.
+            No segundo caso,
+            existe pelo menos um elemento de <m>G</m> com determinante <m>-1</m>.
           </p>
           <case>
-            <title>Case 1</title>
+            <title>Caso 1</title>
             <p>
-              The determinant of every element in <m>G</m> is one.
-              In this case every element in <m>G</m> must be a rotation.
-              Since <m>G</m> is finite, there is a smallest angle, say <m>\theta_0</m>,
-              such that the corresponding element
-              <m>R_{\theta_0}</m> is the smallest rotation in the positive direction.
-              We claim that <m>R_{\theta_0}</m> generates <m>G</m>.
-              If not, then for some positive integer <m>n</m> there is an angle <m>\theta_1</m> between
-              <m>n \theta_0</m> and <m>(n+1) \theta_0</m>.
-              If so, then <m>(n+1) \theta_0 - \theta_1</m> corresponds to a rotation smaller than <m>\theta_0</m>,
-              which contradicts the minimality of <m>\theta_0</m>.
+              O determinante de todo elemento de <m>G</m> é igual a um.
+              Nesse caso, todo elemento de <m>G</m> deve ser uma rotação.
+              Como <m>G</m> é finito, existe um menor ângulo, digamos <m>\theta_0</m>,
+              tal que o elemento correspondente
+              <m>R_{\theta_0}</m> seja a menor rotação no sentido positivo.
+              Afirmamos que <m>R_{\theta_0}</m> gera <m>G</m>.
+              Caso contrário, para algum inteiro positivo <m>n</m> haveria um ângulo <m>\theta_1</m> entre
+              <m>n \theta_0</m> e <m>(n+1) \theta_0</m>.
+              Se isso ocorrer, <m>(n+1) \theta_0 - \theta_1</m> corresponderá a uma rotação menor que <m>\theta_0</m>,
+              o que contradiz a minimalidade de <m>\theta_0</m>.
             </p>
           </case>
           <case>
-            <title>Case 2</title>
+            <title>Caso 2</title>
             <p>
-              The group <m>G</m> contains a reflection <m>T</m>.
-              The kernel of the homomorphism <m>\phi : G \rightarrow \{-1, 1\}</m> given by
-              <m>A \mapsto \det(A)</m> consists of elements whose determinant is 1.
-              Therefore, <m>|G/ \ker \phi|=2</m>.
-              We know that the kernel is cyclic by the first case and is a subgroup of <m>G</m> of, say,
-              order <m>n</m>.
-              Hence, <m>|G| = 2n</m>.
-              The elements of <m>G</m> are
+              O grupo <m>G</m> contém uma reflexão <m>T</m>.
+              O núcleo do homomorfismo <m>\phi : G \rightarrow \{-1, 1\}</m> dado por
+              <m>A \mapsto \det(A)</m> consiste nos elementos cujo determinante é igual a um.
+              Portanto, <m>|G/ \ker \phi|=2</m>.
+              Sabemos, pelo primeiro caso, que o núcleo é cíclico e é um subgrupo de <m>G</m> de, digamos,
+              ordem <m>n</m>.
+              Logo, <m>|G| = 2n</m>.
+              Os elementos de <m>G</m> são
               <md>
                 R_{\theta}, \ldots, R_{\theta}^{n-1},  TR_{\theta}, \ldots, TR_{\theta}^{n-1}
               </md>.
-              These elements satisfy the relation
+              Esses elementos satisfazem a relação
               <md>
                 TR_{\theta}T = R_{\theta}^{-1}
               </md>.
-              Consequently,
-              <m>G</m> must be isomorphic to <m>D_n</m> in this case.
+              Consequentemente,
+              <m>G</m> deve ser isomorfo a <m>D_n</m> nesse caso.
             </p>
           </case>
         </proof>
@@ -1008,21 +1008,21 @@
     </introduction>
 
     <subsection xml:id="matrix-subsection-wallpaper">
-      <title>The Wallpaper Groups</title>
+      <title>Os grupos de papel de parede</title>
       <p>
-        Suppose that we wish to study wallpaper patterns in the plane or crystals in three dimensions.
-        Wallpaper patterns are simply repeating patterns in the plane (<xref ref="matrix-figure-wallpaper"/>).
-        The analogs of wallpaper patterns in <m>{\mathbb R}^3</m> are crystals,
-        which we can think of as repeating patterns of molecules in three dimensions (<xref ref="matrix-figure-crystals"/>).
-        The mathematical equivalent of a wallpaper or crystal pattern is called a lattice.
+        Suponha que desejemos estudar padrões de papel de parede no plano ou cristais em três dimensões.
+        Padrões de papel de parede são simplesmente padrões repetitivos no plano (<xref ref="matrix-figure-wallpaper"/>).
+        Os análogos dos padrões de papel de parede em <m>{\mathbb R}^3</m> são cristais,
+        que podemos imaginar como padrões repetitivos de moléculas em três dimensões (<xref ref="matrix-figure-crystals"/>).
+        O equivalente matemático de um padrão de papel de parede ou de um cristal é chamado de reticulado.
       </p>
 
 
       <figure xml:id="matrix-figure-wallpaper">
-        <caption>A wallpaper pattern in <m>\mathbb R^2</m></caption>
+        <caption>Um padrão de papel de parede em <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image xml:id="matrix-wallpaper-r2">
-        	<description>A wallpaper of chevrons with the top row of chevrons pointing downward, the second row of chevrons pointing upwards, and so on.</description>
+        	<description>Um padrão de papel de parede com desenhos em zigue-zague, cuja primeira linha aponta para baixo, a segunda linha aponta para cima e assim por diante.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-wallpaper-r2.tex" parse="text"/>
             </latex-image>
@@ -1031,10 +1031,10 @@
       </figure>
 
       <figure xml:id="matrix-figure-crystals">
-        <caption>A crystal structure in <m>\mathbb R^3</m></caption>
+        <caption>Uma estrutura cristalina em <m>\mathbb R^3</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image width="50%" xml:id="matrix-crystal-r3">
-        	<description>A three-dimensional lattice of cubes that are slanted to the right.  The vertices are highlighted with small filled circles.</description>
+        	<description>Um reticulado tridimensional de cubos inclinados para a direita. Os vértices são destacados com pequenos círculos preenchidos.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-crystal-r3.tex" parse="text"/>
             </latex-image>
@@ -1043,34 +1043,34 @@
       </figure>
 
       <p>
-        Let us examine wallpaper patterns in the plane a little more closely.
-        Suppose that <m>{\mathbf x}</m> and
-        <m>{\mathbf y}</m> are linearly independent vectors in <m>{\mathbb R}^2</m>;
-        that is, one vector cannot be a scalar multiple of the other.
-        A <term>lattice</term><idx><h>Lattice of points</h></idx>
-        of <m>{\mathbf x}</m> and <m>{\mathbf y}</m> is the set of all linear combinations <m>m {\mathbf x} + n {\mathbf y}</m>,
-        where <m>m</m> and <m>n</m> are integers.
-        The vectors <m>{\mathbf x}</m> and
-        <m>{\mathbf y}</m> are said to be a <term>basis</term><idx><h>Basis of a lattice</h></idx>
-        for the lattice.
+        Examinemos um pouco mais de perto os padrões de papel de parede no plano.
+        Suponha que <m>{\mathbf x}</m> e
+        <m>{\mathbf y}</m> sejam vetores linearmente independentes em <m>{\mathbb R}^2</m>;
+        isto é, um vetor não pode ser múltiplo escalar do outro.
+        Um <term>reticulado</term><idx><h>Conjunto de pontos de um reticulado</h></idx>
+        de <m>{\mathbf x}</m> e <m>{\mathbf y}</m> é o conjunto de todas as combinações lineares <m>m {\mathbf x} + n {\mathbf y}</m>,
+        em que <m>m</m> e <m>n</m> são inteiros.
+        Os vetores <m>{\mathbf x}</m> e
+        <m>{\mathbf y}</m> são chamados de uma <term>base</term><idx><h>Base de um reticulado</h></idx>
+        do reticulado.
       </p>
 
       <p>
-        Notice that a lattice can have several bases.
-        For example, the vectors <m>(1,1)^\transpose</m> and
-        <m>(2,0)^\transpose</m> have the  same lattice as the vectors <m>(-1, 1)^\transpose</m> and
+        Observe que um reticulado pode ter várias bases.
+        Por exemplo, os vetores <m>(1,1)^\transpose</m> e
+        <m>(2,0)^\transpose</m> têm o mesmo reticulado que os vetores <m>(-1, 1)^\transpose</m> e
         <m>(-1, -1)^\transpose</m> (<xref ref="matrix-figure-lattice"/>).
-        However, any lattice is completely determined by a basis.
-        Given two bases for the same lattice,
-        say <m>\{ {\mathbf x}_1, {\mathbf x}_2 \}</m> and <m>\{ {\mathbf y}_1, {\mathbf y}_2 \}</m>,
-        we can write
+        No entanto, qualquer reticulado é completamente determinado por uma base.
+        Dadas duas bases para o mesmo reticulado,
+        digamos <m>\{ {\mathbf x}_1, {\mathbf x}_2 \}</m> e <m>\{ {\mathbf y}_1, {\mathbf y}_2 \}</m>,
+        podemos escrever
         <md>
           <mrow>{\mathbf y}_1 &amp; = \alpha_1  {\mathbf x}_1 + \alpha_2 {\mathbf x}_2</mrow>
           <mrow>{\mathbf y}_2 &amp; = \beta_1  {\mathbf x}_1 + \beta_2 {\mathbf x}_2</mrow>
         </md>,
-        where <m>\alpha_1</m>, <m>\alpha_2</m>, <m>\beta_1</m>,
-        and <m>\beta_2</m> are integers.
-        The matrix corresponding to this transformation is
+        em que <m>\alpha_1</m>, <m>\alpha_2</m>, <m>\beta_1</m>,
+        e <m>\beta_2</m> são inteiros.
+        A matriz correspondente a essa transformação é
         <md>
           U
           =
@@ -1079,9 +1079,9 @@
           \beta_1 &amp; \beta_2
           \end{pmatrix}
         </md>.
-        If we wish to give <m>{\mathbf x}_1</m> and <m>{\mathbf x}_2</m> in terms of
-        <m>{\mathbf y}_1</m> and <m>{\mathbf y}_2</m>,
-        we need only calculate <m>U^{-1}</m>; that is,
+        Se quisermos escrever <m>{\mathbf x}_1</m> e <m>{\mathbf x}_2</m> em termos de
+        <m>{\mathbf y}_1</m> e <m>{\mathbf y}_2</m>,
+        basta calcular <m>U^{-1}</m>; isto é,
         <md>
           U^{-1}
           \begin{pmatrix}
@@ -1092,32 +1092,32 @@
           {\mathbf x}_1 \\ {\mathbf x}_2
           \end{pmatrix}
         </md>.
-        Since <m>U</m> has integer entries,
-        <m>U^{-1}</m> must also have integer entries;
-        hence the determinants of both <m>U</m> and <m>U^{-1}</m> must be integers.
-        Because <m>U U^{-1} = I</m>,
+        Como <m>U</m> tem entradas inteiras,
+        <m>U^{-1}</m> também deve ter entradas inteiras;
+        portanto, os determinantes de <m>U</m> e <m>U^{-1}</m> devem ser inteiros.
+        Como <m>U U^{-1} = I</m>,
         <md>
           \det(U U^{-1}) =\det(U) \det( U^{-1}) = 1;
         </md>
-        consequently, <m>\det(U) = \pm 1</m>.
-        A matrix with determinant <m>\pm 1</m> and integer entries is called <idx><h>Matrix</h><h>unimodular</h></idx><term>unimodular</term>.
-        For example, the matrix
+        consequentemente, <m>\det(U) = \pm 1</m>.
+        Uma matriz com determinante <m>\pm 1</m> e entradas inteiras é chamada de <idx><h>Matriz</h><h>unimodular</h></idx><term>unimodular</term>.
+        Por exemplo, a matriz
         <md>
           \begin{pmatrix}
           3 &amp; 1 \\
           5 &amp; 2
           \end{pmatrix}
         </md>
-        is unimodular.
-        It should be clear that there is a minimum length for vectors in a lattice.
+        é unimodular.
+        Deve estar claro que existe um comprimento mínimo para os vetores de um reticulado.
       </p>
 
       <figure xml:id="matrix-figure-lattice">
-        <caption>A lattice in  <m>\mathbb R^2</m></caption>
+        <caption>Um reticulado em <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image xml:id="matrix-lattice-r2">
-        	<description>A lattice of parallelograms slanted to the right.  There are four arrows, each beginning in the center at the origin and pointing to the right to (2,0), pointing up and right to (1,1), pointing up and left to (
-        		minus one, one), and pointing down and left to (minus one, minus one).</description>
+        	<description>Um reticulado de paralelogramos inclinados para a direita. Há quatro setas, cada uma começando no centro, na origem, e apontando para a direita até (2,0), para cima e para a direita até (1,1), e para cima e para a esquerda até
+        		menos um, um), e para baixo e para a esquerda até (menos um, menos um).</description>
             <latex-image>
                 <xi:include href="tikz/matrix-lattice-r2.tex" parse="text"/>
             </latex-image>
@@ -1126,86 +1126,86 @@
       </figure>
 
       <p>
-        We can classify lattices by studying their symmetry groups.
-        The symmetry group of a lattice is the subgroup of <m>E(2)</m> that maps the lattice to itself.
-        We consider two lattices in
-        <m>{\mathbb R}^2</m> to be equivalent if they have the same symmetry group.
-        Similarly, classification of crystals in
-        <m>{\mathbb R}^3</m> is accomplished by associating a symmetry group,
-        called a <term>space group</term>,<idx><h>Group</h><h>space</h></idx>
-        with each type of crystal.
-        Two lattices are considered different if their space groups are not the same.
-        The natural question that now arises is how many space groups exist.
+        Podemos classificar os reticulados estudando seus grupos de simetria.
+        O grupo de simetria de um reticulado é o subgrupo de <m>E(2)</m> que leva o reticulado a si mesmo.
+        Consideramos dois reticulados em
+        <m>{\mathbb R}^2</m> equivalentes se tiverem o mesmo grupo de simetria.
+        De modo semelhante, a classificação dos cristais em
+        <m>{\mathbb R}^3</m> é realizada associando um grupo de simetria,
+        chamado de <term>grupo espacial</term>,<idx><h>Grupo</h><h>espacial</h></idx> a cada tipo de cristal.
+        Dois reticulados são considerados diferentes se seus grupos espaciais não forem iguais.
+        A pergunta natural que surge agora é quantos grupos espaciais existem.
+        A pergunta natural que surge agora é quantos grupos espaciais existem.
       </p>
 
       <p>
-        A space group is composed of two parts:
-        a <term>translation subgroup</term><idx><h>Subgroup</h><h>translation</h></idx> and a <idx><h>Group</h><h>point</h></idx><term>point</term>.
-        The translation subgroup is an infinite abelian subgroup of the space group made up of the translational symmetries of the crystal;
-        the point group is a finite group consisting of rotations and reflections of the crystal about a point.
-        More specifically, a space group is a subgroup of
-        <m>G \subset E(2)</m> whose translations are a set of the form <m>\{ (I, t) : t \in L \}</m>,
-        where <m>L</m> is a lattice.
-        Space groups are, of course, infinite.
-        Using geometric arguments, we can prove the following theorem
-        (see [5] or [6]).
+        Um grupo espacial é composto de duas partes:
+        um <term>subgrupo de translações</term><idx><h>Subgrupo</h><h>translações</h></idx> e um <idx><h>Grupo</h><h>ponto</h></idx><term>ponto</term>.
+        O subgrupo de translações é um subgrupo abeliano infinito do grupo espacial, composto pelas simetrias de translação do cristal;
+        o grupo pontual é um grupo finito que consiste em rotações e reflexões do cristal em torno de um ponto.
+        Mais especificamente, um grupo espacial é um subgrupo de
+        <m>G \subset E(2)</m> cujas translações são um conjunto da forma <m>\{ (I, t) : t \in L \}</m>,
+        em que <m>L</m> é um reticulado.
+        Os grupos espaciais são, naturalmente, infinitos.
+        Usando argumentos geométricos, podemos provar o teorema a seguir
+        (veja [5] ou [6]).
       </p>
 
       <theorem>
         <statement>
           <p>
-            Every translation group in
-            <m>{\mathbb R}^2</m> is isomorphic to <m>{\mathbb Z} \times {\mathbb Z}</m>.
+            Todo grupo de translações em
+            <m>{\mathbb R}^2</m> é isomorfo a <m>{\mathbb Z} \times {\mathbb Z}</m>.
           </p>
         </statement>
       </theorem>
 
       <p>
-        The point group of <m>G</m> is <m>G_0 = \{A : (A,b) \in G \text{ for some } b \}</m>.
-        In particular, <m>G_0</m> must be a subgroup of <m>O(2)</m>.
-        Suppose that <m>{\mathbf x}</m> is a vector in a lattice <m>L</m> with space group <m>G</m>,
-        translation group <m>H</m>, and point group <m>G_0</m>.
-        For any element <m>(A, {\mathbf y})</m> in <m>G</m>,
+        O grupo pontual de <m>G</m> é <m>G_0 = \{A : (A,b) \in G \text{ for some } b \}</m>.
+        Em particular, <m>G_0</m> deve ser um subgrupo de <m>O(2)</m>.
+        Suponha que <m>{\mathbf x}</m> seja um vetor em um reticulado <m>L</m> com grupo espacial <m>G</m>,
+        grupo de translações <m>H</m> e grupo pontual <m>G_0</m>.
+        Para qualquer elemento <m>(A, {\mathbf y})</m> de <m>G</m>,
         <md>
           <mrow>(A, {\mathbf y}) (I, {\mathbf x}) (A, {\mathbf y})^{-1} &amp; = (A,A {\mathbf x} + {\mathbf y}) (A^{-1},-A^{-1} {\mathbf y})</mrow>
           <mrow>&amp; = (A A^{-1},-A A^{-1} {\mathbf y} + A {\mathbf x} + {\mathbf y})</mrow>
           <mrow>&amp; = (I, A {\mathbf x});</mrow>
         </md>
-        hence, <m>(I, A {\mathbf x})</m> is in the translation group of <m>G</m>.
-        More specifically,
-        <m>A {\mathbf x}</m> must be in the lattice <m>L</m>.
-        It is important to note that <m>G_0</m> is not usually a subgroup of the space group <m>G</m>;
-        however, if <m>T</m> is the translation subgroup of <m>G</m>,
-        then <m>G/T \cong G_0</m>.
-        The proof of the following theorem can be found in [2], [5], or [6].
+        portanto, <m>(I, A {\mathbf x})</m> pertence ao grupo de translações de <m>G</m>.
+        Mais especificamente,
+        <m>A {\mathbf x}</m> deve pertencer ao reticulado <m>L</m>.
+        É importante observar que <m>G_0</m> geralmente não é um subgrupo do grupo espacial <m>G</m>;
+        no entanto, se <m>T</m> for o subgrupo de translações de <m>G</m>,
+        então <m>G/T \cong G_0</m>.
+        A demonstração do teorema a seguir pode ser encontrada em [2], [5] ou [6].
       </p>
 
       <theorem>
         <statement>
           <p>
-            The point group in the wallpaper groups is isomorphic to <m>{\mathbb Z}_n</m> or <m>D_n</m>,
-            where <m>n = 1, 2, 3, 4, 6</m>.
+            O grupo pontual nos grupos de papel de parede é isomorfo a <m>{\mathbb Z}_n</m> ou <m>D_n</m>,
+            em que <m>n = 1, 2, 3, 4, 6</m>.
           </p>
         </statement>
       </theorem>
 
       <p>
-        To answer the question of how the point groups and the translation groups can be combined,
-        we must look at the different types of lattices.
-        Lattices can be classified by the structure of a single lattice cell.
-        The possible cell shapes are parallelogram,
-        rectangular, square, rhombic,
-        and hexagonal (<xref ref="matrix-figure-lattice-types"/>).
-        The wallpaper groups can now be classified according to the types of reflections that occur in each group:
-        these are ordinarily reflections,
-        glide reflections, both, or none.
+        Para responder à questão de como os grupos pontuais e os grupos de translações podem ser combinados,
+        devemos examinar os diferentes tipos de reticulados.
+        Os reticulados podem ser classificados pela estrutura de uma única célula do reticulado.
+        As formas possíveis das células são paralelogramo,
+        retangular, quadrada, rômbica,
+        e hexagonal (<xref ref="matrix-figure-lattice-types"/>).
+        Os grupos de papel de parede podem agora ser classificados de acordo com os tipos de reflexões que ocorrem em cada grupo:
+        são reflexões comuns,
+        reflexões deslizantes, ambas ou nenhuma.
       </p>
 
 
       <figure xml:id="matrix-figure-lattice-types">
-        <caption>Types of lattices in  <m>\mathbb R^2</m></caption>
+        <caption>Tipos de reticulados em <m>\mathbb R^2</m></caption>
         <image xml:id="matrix-lattices-r2">
-        	<description>There are two rows of figures.  The left top figure is a lattice of squares, the middle top figure is a lattice of rectangles that are not squares, the right top figure is  a lattice of rhombuses slanted to the left. The bottom left figure is a lattice of parallelograms that are not rhombuses slanted to the left.  The bottom right figure is a lattice of equilateral triangles, six of which make up a regular hexagon.</description>
+        	<description>Há duas fileiras de figuras. A figura superior esquerda é um reticulado de quadrados, a figura superior central é um reticulado de retângulos que não são quadrados, e a figura superior direita é um reticulado de losangos inclinados para a esquerda. A figura inferior esquerda é um reticulado de paralelogramos que não são losangos, inclinados para a esquerda. A figura inferior direita é um reticulado de triângulos equiláteros, seis dos quais formam um hexágono regular.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-lattices-r2.tex" parse="text"/>
             </latex-image>
@@ -1267,109 +1267,109 @@
 
 -->
       <table xml:id="matrix-table-wallpaper">
-        <title>The 17 wallpaper groups</title>
+        <title>Os 17 grupos de papel de parede</title>
         <tabular halign="center" top="medium">
           <row>
-            <cell>Notation and</cell>
+            <cell>Notação e</cell>
             <cell/>
             <cell/>
-            <cell>Reflections or</cell>
+            <cell>Reflexões ou</cell>
           </row>
           <row bottom="medium">
-            <cell>Space Groups</cell>
-            <cell>Point Group</cell>
-            <cell>Lattice Type</cell>
-            <cell>Glide Reflections?</cell>
+            <cell>Grupos espaciais</cell>
+            <cell>Grupo pontual</cell>
+            <cell>Tipo de reticulado</cell>
+            <cell>Reflexões deslizantes?</cell>
           </row>
           <row>
             <cell>p1</cell>
             <cell><m>{\mathbb Z}_1</m></cell>
-            <cell>parallelogram</cell>
-            <cell>none</cell>
+            <cell>paralelogramo</cell>
+            <cell>nenhuma</cell>
           </row>
           <row>
             <cell>p2</cell>
             <cell><m>{\mathbb Z}_2</m></cell>
-            <cell>parallelogram</cell>
-            <cell>none</cell>
+            <cell>paralelogramo</cell>
+            <cell>nenhuma</cell>
           </row>
           <row>
             <cell>p3</cell>
             <cell><m>{\mathbb Z}_3</m></cell>
             <cell>hexagonal</cell>
-            <cell>none</cell>
+            <cell>nenhuma</cell>
           </row>
           <row>
             <cell>p4</cell>
             <cell><m>{\mathbb Z}_4</m></cell>
-            <cell>square</cell>
-            <cell>none</cell>
+            <cell>quadrada</cell>
+            <cell>nenhuma</cell>
           </row>
           <row>
             <cell>p6</cell>
             <cell><m>{\mathbb Z}_6</m></cell>
             <cell>hexagonal</cell>
-            <cell>none</cell>
+            <cell>nenhuma</cell>
           </row>
           <row>
             <cell>pm</cell>
             <cell><m>D_1</m></cell>
-            <cell>rectangular</cell>
-            <cell>reflections</cell>
+            <cell>retangular</cell>
+            <cell>reflexões</cell>
           </row>
           <row>
             <cell>pg</cell>
             <cell><m>D_1</m></cell>
-            <cell>rectangular</cell>
-            <cell>glide reflections</cell>
+            <cell>retangular</cell>
+            <cell>reflexões deslizantes</cell>
           </row>
           <row>
             <cell>cm</cell>
             <cell><m>D_1</m></cell>
-            <cell>rhombic</cell>
-            <cell>both</cell>
+            <cell>rômbico</cell>
+            <cell>ambas</cell>
           </row>
           <row>
             <cell>pmm</cell>
             <cell><m>D_2</m></cell>
-            <cell>rectangular</cell>
-            <cell>reflections</cell>
+            <cell>retangular</cell>
+            <cell>reflexões</cell>
           </row>
           <row>
             <cell>pmg</cell>
             <cell><m>D_2</m></cell>
-            <cell>rectangular</cell>
-            <cell>glide reflections</cell>
+            <cell>retangular</cell>
+            <cell>reflexões deslizantes</cell>
           </row>
           <row>
             <cell>pgg</cell>
             <cell><m>D_2</m></cell>
-            <cell>rectangular</cell>
-            <cell>both</cell>
+            <cell>retangular</cell>
+            <cell>ambas</cell>
           </row>
           <row>
             <cell>c2mm</cell>
             <cell><m>D_2</m></cell>
-            <cell>rhombic</cell>
-            <cell>both</cell>
+            <cell>rômbico</cell>
+            <cell>ambas</cell>
           </row>
           <row>
             <cell>p3m1, p31m</cell>
             <cell><m>D_3</m></cell>
             <cell>hexagonal</cell>
-            <cell>both</cell>
+            <cell>ambas</cell>
           </row>
           <row>
             <cell>p4m, p4g</cell>
             <cell><m>D_4</m></cell>
-            <cell>square</cell>
-            <cell>both</cell>
+            <cell>quadrada</cell>
+            <cell>ambas</cell>
           </row>
           <row bottom="medium">
             <cell>p6m</cell>
             <cell><m>D_6</m></cell>
             <cell>hexagonal</cell>
-            <cell>both</cell>
+            <cell>ambas</cell>
           </row>
         </tabular>
 
@@ -1378,7 +1378,7 @@
       <theorem>
         <statement>
           <p>
-            There are exactly 17 wallpaper groups.
+            Há exatamente 17 grupos de papel de parede.
           </p>
         </statement>
       </theorem>
@@ -1397,18 +1397,18 @@
 
 -->
       <figure xml:id="matrix-figure-p4m">
-        <caption>The wallpaper groups p4m and p4g</caption>
+        <caption>Os grupos de papel de parede p4m e p4g</caption>
         <sidebyside width="40%" margins="auto" valign="middle">
 
           <image xml:id="matrix-p4m-p4g-a">
-            <description>A square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0).</description>
+            <description>Um quadrado sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (0,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-p4m-p4g-a.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="matrix-p4m-p4g-b">
-            <description>A parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0).</description>
+            <description>Um paralelogramo sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (1,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-p4m-p4g-b.tex" parse="text"/>
               </latex-image>
@@ -1418,39 +1418,39 @@
       </figure>
 
       <p>
-        The 17 wallpaper groups are listed in <xref ref="matrix-table-wallpaper"/>.
-        The groups p3m1 and p31m can be distinguished by whether or not all of their threefold centers lie on the reflection axes:
-        those of p3m1 must, whereas those of p31m may not.
-        Similarly, the fourfold centers of p4m must lie on the reflection axes whereas those of p4g need not (<xref ref="matrix-figure-p4m"/>).
-        The complete proof of this theorem can be found in several of the references at the end of this chapter,
-        including [5], [6], [10], and [11].
+        Os 17 grupos de papel de parede estão listados em <xref ref="matrix-table-wallpaper"/>.
+        Os grupos p3m1 e p31m podem ser distinguidos verificando se todos os seus centros de ordem três estão ou não sobre os eixos de reflexão:
+        os centros de p3m1 devem estar, enquanto os de p31m podem não estar.
+        De modo semelhante, os centros de ordem quatro de p4m devem estar sobre os eixos de reflexão, enquanto os de p4g não precisam estar (<xref ref="matrix-figure-p4m"/>).
+        A demonstração completa desse teorema pode ser encontrada em várias das referências ao final deste capítulo,
+        incluindo [5], [6], [10] e [11].
       </p>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          We have not seen how to use Sage profitably with the material in this chapter.
+          Ainda não vimos como usar proveitosamente o Sage com o material deste capítulo.
         </p>
       </paragraphs>
 
     </subsection>
 
     <subsection xml:id="matrix-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Symmetry groups have intrigued mathematicians for a long time.
-        Leonardo da Vinci was probably the first person to know all of the point groups.
-        At the International Congress of Mathematicians in 1900, David Hilbert<idx><h>Hilbert, David</h></idx>
-        gave a now-famous address outlining 23 problems to guide mathematics in the twentieth century.
-        Hilbert's eighteenth problem asked whether or not crystallographic groups in <m>n</m> dimensions were always finite.
-        In 1910, L. Bieberbach<idx><h>Bieberbach, L.</h></idx>
-        proved that crystallographic groups are finite in every dimension.
-        Finding out how many of these groups there are in each dimension is another matter.
-        In <m>{\mathbb R}^3</m> there are <m>230</m> different space groups;
-        in <m>{\mathbb R}^4</m> there are <m>4894</m>; in <m>{\mathbb R}^5</m> there are <m>222097</m>.
-        No one has been able to compute the number of space groups for <m>{\mathbb R}^6</m> and beyond (<url href="https://oeis.org/A006227" visual="oeis.org/A006227"><c>oeis.org/A006227</c></url>).
-        It is interesting to note that the crystallographic groups were found mathematically for
-        <m>{\mathbb R}^3</m> before the <m>230</m> different types of crystals were actually discovered in nature.
+        Os grupos de simetria intrigam os matemáticos há muito tempo.
+        Leonardo da Vinci foi provavelmente a primeira pessoa a conhecer todos os grupos pontuais.
+        No Congresso Internacional de Matemáticos de 1900, David Hilbert<idx><h>Hilbert, David</h></idx>
+        proferiu um discurso hoje famoso, delineando 23 problemas para orientar a matemática no século XX.
+        O décimo oitavo problema de Hilbert perguntava se os grupos cristalográficos em <m>n</m> dimensões eram sempre finitos.
+        Em 1910, L. Bieberbach<idx><h>Bieberbach, L.</h></idx>
+        provou que os grupos cristalográficos são finitos em todas as dimensões.
+        Descobrir quantos desses grupos existem em cada dimensão é outra questão.
+        Em <m>{\mathbb R}^3</m> há <m>230</m> grupos espaciais diferentes;
+        em <m>{\mathbb R}^4</m> há <m>4894</m>; em <m>{\mathbb R}^5</m> há <m>222097</m>.
+        Ninguém conseguiu calcular o número de grupos espaciais para <m>{\mathbb R}^6</m> e além (<url href="https://oeis.org/A006227" visual="oeis.org/A006227"><c>oeis.org/A006227</c></url>).
+        É interessante observar que os grupos cristalográficos foram encontrados matematicamente para
+        <m>{\mathbb R}^3</m> antes que os <m>230</m> tipos diferentes de cristais fossem de fato descobertos na natureza.
       </p>
     </subsection>
 
