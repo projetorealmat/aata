@@ -580,8 +580,8 @@
     <exercise label="rq-homomorph-Z10">
       <statement>
         <p>
-          Consider the function <m>\phi:\mathbb Z_{10}\rightarrow\mathbb Z_{10}</m> defined by <m>\phi(x)=x+x</m>.
-          Prove that <m>\phi</m> is a group homomorphism.
+          Considere a função <m>\phi:\mathbb Z_{10}\rightarrow\mathbb Z_{10}</m> definida por <m>\phi(x)=x+x</m>.
+          Prove que <m>\phi</m> é um homomorfismo de grupos.
         </p>
       </statement>
       <response/>
@@ -590,8 +590,8 @@
     <exercise label="rq-homomorph-phi">
       <statement>
         <p>
-          For <m>\phi</m> defined in the previous question,
-          explain why <m>\phi</m> is not a group isomorphism.
+          Para <m>\phi</m> definida na questão anterior,
+          explique por que <m>\phi</m> não é um isomorfismo de grupos.
         </p>
       </statement>
       <response/>
@@ -600,7 +600,7 @@
     <exercise label="rq-homomorph-isomorph">
       <statement>
         <p>
-          Compare and contrast isomorphisms and homomorphisms.
+          Compare e contraste isomorfismos e homomorfismos.
         </p>
       </statement>
       <response/>
@@ -609,8 +609,8 @@
     <exercise label="rq-homomorph-first-iso-ther">
       <statement>
         <p>
-          Paraphrase the First Isomorphism Theorem using <em>only words</em>.
-          No symbols allowed <em>at all</em>.
+          Parafraseie o Primeiro Teorema do Isomorfismo usando <em>somente palavras</em>.
+          Não são permitidos símbolos <em>de forma alguma</em>.
         </p>
       </statement>
       <response/>
@@ -619,9 +619,9 @@
     <exercise label="rq-homomorph-normal">
       <statement>
         <p>
-          <q>For every normal subgroup there is a homomorphism,
-          and for every homomorphism there is a normal subgroup.</q>
-          Explain the (precise) basis for this (vague) statement.
+          <q>Para todo subgrupo normal existe um homomorfismo,
+          e para todo homomorfismo existe um subgrupo normal.</q>
+          Explique a base (precisa) dessa afirmação (vaga).
         </p>
       </statement>
       <response/>
@@ -632,14 +632,14 @@
     <!-- File: homomorph.xml  -->
     <!-- Title: Homomorphisms -->
   <exercises xml:id="homomorph-exercises" filenamebase="homomorph">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1"  xml:id="homomorph-exercise-det-homomorph">
       <statement>
         <p>
-          Prove that <m>\det( AB) = \det(A) \det(B)</m> for <m>A, B \in GL_2( {\mathbb R} )</m>.
-          This shows that the determinant is a homomorphism from
-          <m>GL_2( {\mathbb R} )</m> to <m>{\mathbb R}^*</m>.
+          Prove que <m>\det( AB) = \det(A) \det(B)</m> para <m>A, B \in GL_2( {\mathbb R} )</m>.
+          Isso mostra que o determinante é um homomorfismo de
+          <m>GL_2( {\mathbb R} )</m> para <m>{\mathbb R}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -647,13 +647,13 @@
     <exercise number="2"  xml:id="homomorph-exercise-which-are-homomorph">
       <statement>
         <p>
-          Which of the following maps are homomorphisms?
-          If the map is a homomorphism, what is the kernel?
+          Quais dos mapas a seguir são homomorfismos?
+          Se o mapa for um homomorfismo, qual é o núcleo?
 
           <ol>
             <li>
               <p>
-                <m>\phi : {\mathbb R}^\ast \rightarrow GL_2 ( {\mathbb R})</m> defined by
+                <m>\phi : {\mathbb R}^\ast \rightarrow GL_2 ( {\mathbb R})</m> definida por
                 <md>
                   \phi( a ) =
                   \begin{pmatrix}
@@ -666,7 +666,7 @@
 
             <li>
               <p>
-                <m>\phi : {\mathbb R} \rightarrow GL_2 ( {\mathbb R})</m> defined by
+                <m>\phi : {\mathbb R} \rightarrow GL_2 ( {\mathbb R})</m> definida por
                 <md>
                   \phi( a ) =
                   \begin{pmatrix}
@@ -679,7 +679,7 @@
 
             <li>
               <p>
-                <m>\phi : GL_2 ({\mathbb R})   \rightarrow {\mathbb R}</m> defined by
+                <m>\phi : GL_2 ({\mathbb R})   \rightarrow {\mathbb R}</m> definida por
                 <md>
                   \phi
                   \left(
@@ -695,7 +695,7 @@
 
             <li>
               <p>
-                <m>\phi : GL_2 ( {\mathbb R})   \rightarrow {\mathbb R}^\ast</m> defined by
+                <m>\phi : GL_2 ( {\mathbb R})   \rightarrow {\mathbb R}^\ast</m> definida por
                 <md>
                   \phi
                   \left(
@@ -711,7 +711,7 @@
 
             <li>
               <p>
-                <m>\phi : {\mathbb M}_2( {\mathbb R}) \rightarrow {\mathbb R}</m> defined by
+                <m>\phi : {\mathbb M}_2( {\mathbb R}) \rightarrow {\mathbb R}</m> definida por
                 <md>
                   \phi
                   \left(
@@ -722,8 +722,8 @@
                   \right)
                   = b
                 </md>,
-                where <m>{\mathbb M}_2( {\mathbb R})</m> is the additive group of
-                <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>.
+                em que <m>{\mathbb M}_2( {\mathbb R})</m> é o grupo aditivo de
+                <m>2 \times 2</m> matrizes com entradas em <m>{\mathbb R}</m>.
               </p>
             </li>
           </ol>
@@ -731,7 +731,7 @@
       </statement>
       <hint>
         <p>
-          (a) is a homomorphism with kernel <m>\{ 1 \}</m>; (c) is not a homomorphism.
+          (a) é um homomorfismo com núcleo <m>\{ 1 \}</m>; (c) não é um homomorfismo.
         </p>
       </hint>
     </exercise>
@@ -739,9 +739,9 @@
     <exercise number="3"  xml:id="homomorph-exercise-matrix-mult">
       <statement>
         <p>
-          Let <m>A</m> be an <m>m \times n</m> matrix.
-          Show that matrix multiplication, <m>x \mapsto Ax</m>,
-          defines a homomorphism <m>\phi : {\mathbb R}^n \rightarrow {\mathbb R}^m</m>.
+          Seja <m>A</m> uma matriz <m>m \times n</m>.
+          Mostre que a multiplicação de matrizes, <m>x \mapsto Ax</m>,
+          define um homomorfismo <m>\phi : {\mathbb R}^n \rightarrow {\mathbb R}^m</m>.
         </p>
       </statement>
     </exercise>
@@ -749,15 +749,15 @@
     <exercise number="4"  xml:id="homomorph-exercise-n-to-7n">
       <statement>
         <p>
-          Let <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}</m> be given by <m>\phi(n) = 7n</m>.
-          Prove that <m>\phi</m> is a group homomorphism.
-          Find the kernel and the image of <m>\phi</m>.
+          Seja <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}</m> dada por <m>\phi(n) = 7n</m>.
+          Prove que <m>\phi</m> é um homomorfismo de grupos.
+          Encontre o núcleo e a imagem de <m>\phi</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Since <m>\phi(m + n) = 7(m+n) = 7m + 7n = \phi(m) + \phi(n)</m>,
-          <m>\phi</m> is a homomorphism.
+          Como <m>\phi(m + n) = 7(m+n) = 7m + 7n = \phi(m) + \phi(n)</m>,
+          <m>\phi</m> é um homomorfismo.
         </p>
       </hint>
     </exercise>
@@ -765,16 +765,16 @@
     <exercise number="5"  xml:id="homomorph-exercise-Z24-to-Z18">
       <statement>
         <p>
-          Describe all of the homomorphisms from
-          <m>{\mathbb Z}_{24}</m> to <m>{\mathbb Z}_{18}</m>.
+          Descreva todos os homomorfismos de
+          <m>{\mathbb Z}_{24}</m> para <m>{\mathbb Z}_{18}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          For any homomorphism <m>\phi : {\mathbb Z}_{24} \rightarrow {\mathbb Z}_{18}</m>,
-          the kernel of <m>\phi</m> must be a subgroup of
-          <m>{\mathbb Z}_{24}</m> and the image of <m>\phi</m> must be a subgroup of <m>{\mathbb Z}_{18}</m>.
-          Now use the fact that a generator must map to a generator.
+          Para qualquer homomorfismo <m>\phi : {\mathbb Z}_{24} \rightarrow {\mathbb Z}_{18}</m>,
+          o núcleo de <m>\phi</m> deve ser um subgrupo de
+          <m>{\mathbb Z}_{24}</m> e a imagem de <m>\phi</m> deve ser um subgrupo de <m>{\mathbb Z}_{18}</m>.
+          Agora use o fato de que um gerador deve ser levado a um gerador.
         </p>
       </hint>
     </exercise>
@@ -784,8 +784,8 @@
     <exercise number="6"  xml:id="homomorph-exercise-Z-to-Z12">
       <statement>
         <p>
-          Describe all of the homomorphisms from
-          <m>{\mathbb Z}</m> to <m>{\mathbb Z}_{12}</m>.
+          Descreva todos os homomorfismos de
+          <m>{\mathbb Z}</m> para <m>{\mathbb Z}_{12}</m>.
         </p>
       </statement>
     </exercise>
@@ -793,36 +793,36 @@
     <exercise number="7"  xml:id="homomorph-exercise-second-isomorph-ther">
       <statement>
         <p>
-          In the group <m>{\mathbb Z}_{24}</m>,
-          let <m>H = \langle 4 \rangle</m> and <m>N = \langle 6 \rangle</m>.
+          No grupo <m>{\mathbb Z}_{24}</m>,
+          sejam <m>H = \langle 4 \rangle</m> e <m>N = \langle 6 \rangle</m>.
 
           <ol>
             <li>
               <p>
-                List the elements in <m>HN</m>
-                (we usually write <m>H + N</m> for these additive groups)
-                and <m>H \cap N</m>.
+                Liste os elementos de <m>HN</m>
+                (em geral, escrevemos <m>H + N</m> para esses grupos aditivos)
+                e de <m>H \cap N</m>.
               </p>
             </li>
 
             <li>
               <p>
-                List the cosets in <m>HN/N</m>,
-                showing the elements in each coset.
+                Liste as classes laterais em <m>HN/N</m>,
+                mostrando os elementos de cada classe lateral.
               </p>
             </li>
 
             <li>
               <p>
-                List the cosets in <m>H/(H \cap N)</m>,
-                showing the elements in each coset.
+                Liste as classes laterais em <m>H/(H \cap N)</m>,
+                mostrando os elementos de cada classe lateral.
               </p>
             </li>
 
             <li>
               <p>
-                Give the correspondence between <m>HN/N</m> and
-                <m>H/(H \cap N)</m> described in the proof of the Second Isomorphism Theorem.
+                Dê a correspondência entre <m>HN/N</m> e
+                <m>H/(H \cap N)</m> descrita na demonstração do Segundo Teorema do Isomorfismo.
               </p>
             </li>
           </ol>
@@ -835,9 +835,9 @@
     <exercise number="8"  xml:id="homomorph-exercise-g-to-gn">
       <statement>
         <p>
-          If <m>G</m> is an abelian group and <m>n \in {\mathbb N}</m>,
-          show that <m>\phi : G \rightarrow G</m> defined by
-          <m>g \mapsto g^n</m> is a group homomorphism.
+          Se <m>G</m> for um grupo abeliano e <m>n \in {\mathbb N}</m>,
+          mostre que <m>\phi : G \rightarrow G</m> definida por
+          <m>g \mapsto g^n</m> é um homomorfismo de grupos.
         </p>
       </statement>
     </exercise>
@@ -845,14 +845,14 @@
     <exercise number="9"  xml:id="homomorph-exercise-phi-G-abelian">
       <statement>
         <p>
-          If <m>\phi : G \rightarrow H</m> is a group homomorphism and <m>G</m> is abelian,
-          prove that <m>\phi(G)</m> is also abelian.
+          Se <m>\phi : G \rightarrow H</m> for um homomorfismo de grupos e <m>G</m> for abeliano,
+          prove que <m>\phi(G)</m> também é abeliano.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a, b \in G</m>.
-          Then <m>\phi(a) \phi(b) = \phi(ab) = \phi(ba) = \phi(b)\phi(a)</m>.
+          Sejam <m>a, b \in G</m>.
+          Então <m>\phi(a) \phi(b) = \phi(ab) = \phi(ba) = \phi(b)\phi(a)</m>.
         </p>
       </hint>
     </exercise>
@@ -860,8 +860,8 @@
     <exercise number="10"  xml:id="homomorph-exercise-phi-G-cyclic">
       <statement>
         <p>
-          If <m>\phi : G \rightarrow H</m> is a group homomorphism and <m>G</m> is cyclic,
-          prove that <m>\phi(G)</m> is also cyclic.
+          Se <m>\phi : G \rightarrow H</m> for um homomorfismo de grupos e <m>G</m> for cíclico,
+          prove que <m>\phi(G)</m> também é cíclico.
         </p>
       </statement>
     </exercise>
@@ -869,7 +869,7 @@
     <exercise number="11"  xml:id="homomorph-exercise-cyclic-homomorph-generator">
       <statement>
         <p>
-          Show that a homomorphism defined on a cyclic group is completely determined by its action on the generator of the group.
+          Mostre que um homomorfismo definido em um grupo cíclico é completamente determinado por sua ação sobre um gerador do grupo.
         </p>
       </statement>
     </exercise>
@@ -886,8 +886,8 @@
     <exercise number="12"  xml:id="homomorph-exercise-one-subgroup-normal">
       <statement>
         <p>
-          If a group <m>G</m> has exactly one subgroup <m>H</m> of order <m>k</m>,
-          prove that <m>H</m> is normal in <m>G</m>.
+          Se um grupo <m>G</m> tiver exatamente um subgrupo <m>H</m> de ordem <m>k</m>,
+          prove que <m>H</m> é normal em <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -895,7 +895,7 @@
     <exercise number="13"  xml:id="homomorph-exercise-QmodZ-Q">
       <statement>
         <p>
-          Prove or disprove:
+          Prove ou refute:
           <m>{\mathbb Q} / {\mathbb Z} \cong {\mathbb Q}</m>.
         </p>
       </statement>
@@ -904,10 +904,10 @@
     <exercise number="14"  xml:id="homomorph-exercise-G-finitie-N-normal">
       <statement>
         <p>
-          Let <m>G</m> be a finite group and <m>N</m> a normal subgroup of <m>G</m>.
-          If <m>H</m> is a subgroup of <m>G/N</m>,
-          prove that <m>\phi^{-1}(H)</m> is a subgroup in <m>G</m> of order <m>|H| \cdot |N|</m>,
-          where <m>\phi : G \rightarrow G/N</m> is the canonical homomorphism.
+          Seja <m>G</m> um grupo finito e <m>N</m> um subgrupo normal de <m>G</m>.
+          Se <m>H</m> for um subgrupo de <m>G/N</m>,
+          prove que <m>\phi^{-1}(H)</m> é um subgrupo de <m>G</m> de ordem <m>|H| \cdot |N|</m>,
+          em que <m>\phi : G \rightarrow G/N</m> é o homomorfismo canônico.
         </p>
       </statement>
     </exercise>
@@ -915,11 +915,11 @@
     <exercise number="15"  xml:id="homomorph-exercise-quotient-to-quatient">
       <statement>
         <p>
-          Let <m>G_1</m> and <m>G_2</m> be groups,
-          and let <m>H_1</m> and <m>H_2</m> be normal subgroups of <m>G_1</m> and <m>G_2</m> respectively.
-          Let <m>\phi : G_1 \rightarrow G_2</m> be a homomorphism.
-          Show that <m>\phi</m> induces a homomorphism
-          <m>\overline{\phi} : (G_1/H_1) \rightarrow (G_2/H_2)</m> if <m>\phi(H_1) \subset H_2</m>.
+          Sejam <m>G_1</m> e <m>G_2</m> grupos,
+          e sejam <m>H_1</m> e <m>H_2</m> subgrupos normais de <m>G_1</m> e <m>G_2</m>, respectivamente.
+          Seja <m>\phi : G_1 \rightarrow G_2</m> um homomorfismo.
+          Mostre que <m>\phi</m> induz um homomorfismo
+          <m>\overline{\phi} : (G_1/H_1) \rightarrow (G_2/H_2)</m> se <m>\phi(H_1) \subset H_2</m>.
         </p>
       </statement>
     </exercise>
@@ -927,8 +927,8 @@
     <exercise number="16"  xml:id="homomorph-exercise-H-K-normal">
       <statement>
         <p>
-          If <m>H</m> and <m>K</m> are normal subgroups of <m>G</m> and <m>H \cap K = \{ e \}</m>,
-          prove that <m>G</m> is isomorphic to a subgroup of <m>G/H \times G/K</m>.
+          Se <m>H</m> e <m>K</m> forem subgrupos normais de <m>G</m> e <m>H \cap K = \{ e \}</m>,
+          prove que <m>G</m> é isomorfo a um subgrupo de <m>G/H \times G/K</m>.
         </p>
       </statement>
     </exercise>
@@ -936,14 +936,14 @@
     <exercise number="17"  xml:id="homomorph-exercise-isomorphic-quotients">
       <statement>
         <p>
-          Let <m>\phi : G_1 \rightarrow G_2</m> be a surjective group homomorphism.
-          Let <m>H_1</m> be a normal subgroup of <m>G_1</m> and suppose that <m>\phi(H_1) = H_2</m>.
-          Prove or disprove that <m>G_1/H_1 \cong G_2/H_2</m>.
+          Seja <m>\phi : G_1 \rightarrow G_2</m> um homomorfismo de grupos sobrejetivo.
+          Seja <m>H_1</m> um subgrupo normal de <m>G_1</m> e suponha que <m>\phi(H_1) = H_2</m>.
+          Prove ou refute que <m>G_1/H_1 \cong G_2/H_2</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Find a counterexample.
+          Encontre um contraexemplo.
         </p>
       </hint>
     </exercise>
@@ -951,8 +951,8 @@
     <exercise number="18" xml:id="homomorph-exercise-trivial-kernel">
       <statement>
         <p>
-          Let <m>\phi : G \rightarrow H</m> be a group homomorphism.
-          Show that <m>\phi</m> is one-to-one if and only if <m>\phi^{-1}(e) = \{ e \}</m>.
+          Seja <m>\phi : G \rightarrow H</m> um homomorfismo de grupos.
+          Mostre que <m>\phi</m> é injetiva se, e somente se, <m>\phi^{-1}(e) = \{ e \}</m>.
         </p>
       </statement>
     </exercise>
@@ -960,9 +960,9 @@
     <exercise number="19"  xml:id="homomorph-exercise-equivalence-relation">
       <statement>
         <p>
-          Given a homomorphism <m>\phi :G \rightarrow H</m> define a relation <m>\sim</m> on <m>G</m> by <m>a \sim b</m> if
-          <m>\phi(a) = \phi(b)</m> for <m>a, b \in G</m>.
-          Show this relation is an equivalence relation and describe the equivalence classes.
+          Dado um homomorfismo <m>\phi :G \rightarrow H</m>, defina uma relação <m>\sim</m> em <m>G</m> por <m>a \sim b</m> se
+          <m>\phi(a) = \phi(b)</m> para <m>a, b \in G</m>.
+          Mostre que essa relação é uma relação de equivalência e descreva as classes de equivalência.
         </p>
       </statement>
     </exercise>
