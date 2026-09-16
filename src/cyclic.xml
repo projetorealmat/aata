@@ -353,59 +353,59 @@
   </section>
 
   <section xml:id="cyclic-section-mult-group-c">
-    <title>Multiplicative Group of Complex Numbers</title>
+    <title>Grupo multiplicativo dos números complexos</title>
     <introduction>
       <p>
-        The <term>complex numbers</term> are defined as
+        Os <term>números complexos</term> são definidos como
         <md>
           {\mathbb C} = \{ a + bi : a, b \in {\mathbb R} \}
         </md>,
-        where <m>i^2 = -1</m>.
-        If <m>z = a + bi</m>, then <m>a</m> is the <term>real part</term>
-        of <m>z</m> and <m>b</m> is the
-        <term>imaginary part</term> of <m>z</m>.
+        onde <m>i^2 = -1</m>.
+        Se <m>z = a + bi</m>, então <m>a</m> é a <term>parte real</term>
+        de <m>z</m> e <m>b</m> é a
+        <term>parte imaginária</term> de <m>z</m>.
       </p>
 
       <p>
-        To add two complex numbers <m>z=a+bi</m> and <m>w= c+di</m>,
-        we just add the corresponding real and imaginary parts:
+        Para somar dois números complexos <m>z=a+bi</m> e <m>w= c+di</m>,
+        basta somar as partes real e imaginária correspondentes:
         <md>
           z + w=(a + bi ) + (c + di)  =  (a + c) + (b + d)i
         </md>.
-        Remembering that <m>i^2 = -1</m>,
-        we multiply complex numbers just like polynomials.
-        The product of <m>z</m> and <m>w</m> is
+        Lembrando que <m>i^2 = -1</m>,
+        multiplicamos números complexos como fazemos com polinômios.
+        O produto de <m>z</m> e <m>w</m> é
         <md>
           (a + bi )(c + di)  =   ac + bdi^2 + adi + bci =  (ac -bd) +(ad + bc)i
         </md>.
       </p>
 
       <p>
-        Every nonzero complex number
-        <m>z = a +bi</m> has a multiplicative inverse;
-        that is, there exists a <m>z^{-1} \in {\mathbb C}^\ast</m> such that <m>z z^{-1} = z^{-1} z = 1</m>.
-        If <m>z = a + bi</m>, then
+        Todo número complexo não nulo
+        <m>z = a +bi</m> possui um inverso multiplicativo;
+        isto é, existe um <m>z^{-1} \in {\mathbb C}^\ast</m> tal que <m>z z^{-1} = z^{-1} z = 1</m>.
+        Se <m>z = a + bi</m>, então
         <md>
           z^{-1} = \frac{a-bi}{ a^2 + b^2  }
         </md>.
-        The <term>complex conjugate</term><idx><h>Conjugate, complex</h></idx>
-        of a complex number <m>z = a + bi</m> is defined to be <m>\overline{z} = a- bi</m>.
-        The <term>absolute value</term> or <term>modulus</term>
-        of  <m>z = a + bi</m>  is <m>|z| = \sqrt{a^2 + b^2}</m>.
+        O <term>conjugado complexo</term><idx><h>Conjugado complexo</h></idx>
+        de um número complexo <m>z = a + bi</m> é definido por <m>\overline{z} = a- bi</m>.
+        O <term>valor absoluto</term> ou <term>módulo</term>
+        de <m>z = a + bi</m> é <m>|z| = \sqrt{a^2 + b^2}</m>.
       </p>
 
       <example xml:id="cyclic-example-complex-add">
         <p>
-          Let <m>z = 2 + 3i</m> and <m>w = 1-2i</m>.
-          Then
+          Sejam <m>z = 2 + 3i</m> e <m>w = 1-2i</m>.
+          Então
           <md>
             z + w = (2 + 3i) + (1 - 2i) = 3 + i
           </md>
-          and
+          e
           <md>
             z  w = (2 + 3i)(1 - 2i ) = 8 - i
           </md>.
-          Also,
+          Além disso,
           <md>
             <mrow>z^{-1} &amp; = \frac{2}{13} - \frac{3}{13}i</mrow>
             <mrow>|z| &amp; = \sqrt{13}</mrow>
@@ -415,10 +415,10 @@
       </example>
 
       <figure xml:id="cyclic-figure-rectcoord">
-        <caption>Rectangular coordinates of a complex number</caption>
+        <caption>Coordenadas retangulares de um número complexo</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
         <image xml:id="cyclic-complex-rectangular">
-          <description>The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis. The point z1 = 2 + 3i is in the upper right quadrant, the point z2 = 1 - 2i in the lower right quadrant, and z3 = -3 + 2i in the upper left quadrant.</description>
+          <description>O plano complexo, no qual o eixo horizontal é o eixo x ou eixo real e o eixo vertical é o eixo y ou eixo imaginário. O ponto z1 = 2 + 3i está no quadrante superior direito, o ponto z2 = 1 - 2i está no quadrante inferior direito e z3 = -3 + 2i está no quadrante superior esquerdo.</description>
 
             <latex-image>
                 <xi:include href="tikz/cyclic-complex-rectangular.tex" parse="text"/>
@@ -428,25 +428,24 @@
       </figure>
 
       <p>
-        There are several ways of graphically representing complex numbers.
-        We can represent a complex number
-        <m>z = a +bi</m> as an ordered pair on the <m>xy</m> plane where <m>a</m> is the <m>x</m>
-        (or real)
-        coordinate and <m>b</m> is the <m>y</m>
-        (or imaginary)
-        coordinate.
-        This is called the <term>rectangular</term>
-        or <term>Cartesian</term> representation.
-        The rectangular representations of
-        <m>z_1 = 2 + 3i</m>, <m>z_2 = 1 - 2i</m>,
-        and <m>z_3 = - 3 + 2i</m> are depicted in <xref ref="cyclic-figure-rectcoord"/>.
+        Há várias maneiras de representar graficamente os números complexos.
+        Podemos representar um número complexo
+        <m>z = a +bi</m> como um par ordenado no plano <m>xy</m>, em que <m>a</m> é a coordenada <m>x</m>
+        (ou real)
+        e <m>b</m> é a coordenada <m>y</m>
+        (ou imaginária).
+        Essa é chamada de representação <term>retangular</term>
+        ou <term>cartesiana</term>.
+        As representações retangulares de
+        <m>z_1 = 2 + 3i</m>, <m>z_2 = 1 - 2i</m>
+        e <m>z_3 = - 3 + 2i</m> são mostradas em <xref ref="cyclic-figure-rectcoord"/>.
       </p>
 
       <figure xml:id="cyclic-figure-polarcoord">
-        <caption>Polar coordinates of a complex number</caption>
+        <caption>Coordenadas polares de um número complexo</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
         <image xml:id="cyclic-complex-polar">
-          <description>The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis.  The point a + bi is in the upper right quadrant.  The point is also determined by a ray that at an angle of theta counterclockwise from the horizontal axis having a length of r.</description>
+          <description>O plano complexo, no qual o eixo horizontal é o eixo x ou eixo real e o eixo vertical é o eixo y ou eixo imaginário. O ponto a + bi está no quadrante superior direito. O ponto também é determinado por uma semirreta que forma um ângulo teta, no sentido anti-horário a partir do eixo horizontal, e tem comprimento r.</description>
 
             <latex-image>
                 <xi:include href="tikz/cyclic-complex-polar.tex" parse="text"/>
@@ -456,77 +455,77 @@
       </figure>
 
       <p>
-        Nonzero complex numbers can also be represented using
-        <term>polar coordinates</term>.
-        To specify any nonzero point on the plane,
-        it suffices to give an angle <m>\theta</m> from the positive <m>x</m> axis in the counterclockwise direction and a distance <m>r</m> from the origin,
-        as in  <xref ref="cyclic-figure-polarcoord"/>.
-        We can see that
+        Números complexos não nulos também podem ser representados usando
+        <term>coordenadas polares</term>.
+        Para especificar qualquer ponto não nulo do plano,
+        basta fornecer um ângulo <m>\theta</m> a partir do eixo <m>x</m> positivo, no sentido anti-horário, e uma distância <m>r</m> até a origem,
+        como em <xref ref="cyclic-figure-polarcoord"/>.
+        Podemos ver que
         <md>
           z = a + bi = r( \cos \theta + i \sin \theta)
         </md>.
-        Hence,
+        Portanto,
         <md>
           r = |z| = \sqrt{a^2 + b^2}
         </md>
-        and
+        e
         <md>
           <mrow>a &amp; = r \cos \theta</mrow>
           <mrow>b &amp; = r \sin \theta</mrow>
         </md>.
-        We sometimes abbreviate <m>r( \cos \theta + i \sin \theta)</m> as <m>r \cis \theta</m>.
+        Às vezes, abreviamos <m>r( \cos \theta + i \sin \theta)</m> como <m>r \cis \theta</m>.
 
         <notation>
           <usage><m>\cis \theta</m></usage>
           <description><m>\cos \theta + i \sin \theta</m></description>
         </notation>
 
-        To assure that the representation of <m>z</m> is  well-defined,
-        we also require that <m>0^{\circ} \leq \theta \lt 360^{\circ}</m>.
-        If the measurement is in radians,
-        then <m>0 \leq \theta \lt2 \pi</m>.
+        Para garantir que a representação de <m>z</m> seja bem definida,
+        também exigimos que <m>0^{\circ} \leq \theta \lt 360^{\circ}</m>.
+        Se a medida estiver em radianos,
+        então <m>0 \leq \theta \lt2 \pi</m>.
       </p>
 
       <example xml:id="cyclic-example-polar">
         <p>
-          Suppose that <m>z = 2 \cis  60^{\circ}</m>.
-          Then
+          Suponha que <m>z = 2 \cis  60^{\circ}</m>.
+          Então
           <md>
             a  =  2 \cos 60^{\circ} = 1
           </md>
-          and
+          e
           <md>
             b = 2 \sin 60^{\circ} = \sqrt{3}
           </md>.
-          Hence, the rectangular representation is <m>z = 1+\sqrt{3}\, i</m>.
+          Portanto, a representação retangular é <m>z = 1+\sqrt{3}\, i</m>.
         </p>
 
         <p>
-          Conversely, if we are given a rectangular representation of a complex number,
-          it is often useful to know the number's polar representation.
-          If <m>z = 3 \sqrt{2} - 3 \sqrt{2}\, i</m>, then
+          Reciprocamente, se nos for dada uma representação retangular de um número complexo,
+          muitas vezes é útil conhecer sua representação polar.
+          Se <m>z = 3 \sqrt{2} - 3 \sqrt{2}\, i</m>, então
           <md>
             r = \sqrt{a^2 + b^2} = \sqrt{36 } = 6
           </md>
-          and
+          e
           <md>
             \theta = \arctan \left( \frac{b}{a} \right) = \arctan( - 1) = 315^{\circ}
           </md>,
-          so <m>3 \sqrt{2} - 3 \sqrt{2}\, i=6 \cis  315^{\circ}</m>.
+          portanto, <m>3 \sqrt{2} - 3 \sqrt{2}\, i=6 \cis  315^{\circ}</m>.
         </p>
       </example>
 
       <p>
-        The polar representation of a complex number makes it easy to find products and powers of complex numbers.
-        The proof of the following proposition is straightforward and is left as an exercise.
+        A representação polar de um número complexo facilita encontrar produtos e potências de números complexos.
+        A demonstração da proposição a seguir é direta e fica como exercício.
       </p>
 
       <proposition xml:id="cyclic-proposition-polar-mult">
         <statement>
           <p>
-            Let <m>z = r \cis \theta</m> and
-            <m>w = s \cis \phi</m> be two nonzero complex numbers.
-            Then
+            Sejam <m>z = r \cis \theta</m> e
+            <m>w = s \cis \phi</m> dois números complexos não nulos.
+            Então
             <md>
               zw = r s \cis( \theta + \phi)
             </md>.
@@ -536,33 +535,33 @@
 
       <example xml:id="cyclic-example-polar-mult">
         <p>
-          If <m>z = 3 \cis( \pi / 3 )</m> and <m>w = 2 \cis(\pi / 6 )</m>,
-          then <m>zw = 6 \cis( \pi / 2 ) = 6i</m>.
+          Se <m>z = 3 \cis( \pi / 3 )</m> e <m>w = 2 \cis(\pi / 6 )</m>,
+          então <m>zw = 6 \cis( \pi / 2 ) = 6i</m>.
         </p>
       </example>
 
       <theorem>
         <title>DeMoivre</title>
         <idx>
-        <h>DeMoivre's Theorem</h>
+        <h>Teorema de DeMoivre</h>
         </idx>
         <statement>
           <p>
-            Let <m>z = r \cis \theta</m> be a nonzero complex number.
-            Then
+            Seja <m>z = r \cis \theta</m> um número complexo não nulo.
+            Então
             <md>
               [r \cis \theta  ]^n = r^n \cis( n \theta)
             </md>
-            for <m>n = 1, 2, \ldots</m>.
+            para <m>n = 1, 2, \ldots</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will use induction on <m>n</m>.
-            For <m>n = 1</m> the theorem is trivial.
-            Assume that the theorem is true for all <m>k</m> such that <m>1  \leq k \leq n</m>.
-            Then
+            Usaremos indução sobre <m>n</m>.
+            Para <m>n = 1</m>, o teorema é trivial.
+            Suponha que o teorema seja verdadeiro para todo <m>k</m> tal que <m>1  \leq k \leq n</m>.
+            Então
             <md>
               <mrow>z^{n+1} &amp; = z^n z</mrow>
               <mrow>&amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )</mrow>
@@ -576,9 +575,9 @@
 
       <example xml:id="cyclic-theorem-demoivre">
         <p>
-          Suppose that <m>z= 1+i</m> and we wish to compute <m>z^{10}</m>.
-          Rather than computing <m>(1 + i)^{10}</m> directly,
-          it is much easier to switch to polar coordinates and calculate <m>z^{10}</m> using DeMoivre's Theorem:
+          Suponha que <m>z= 1+i</m> e queiramos calcular <m>z^{10}</m>.
+          Em vez de calcular diretamente <m>(1 + i)^{10}</m>,
+          é muito mais fácil passar para coordenadas polares e calcular <m>z^{10}</m> usando o Teorema de DeMoivre:
           <md>
             <mrow>z^{10} &amp; = (1+i)^{10}</mrow>
             <mrow>&amp; = \left( \sqrt{2} \cis \left( \frac{\pi }{4} \right) \right)^{10}</mrow>
@@ -591,80 +590,80 @@
     </introduction>
 
     <subsection xml:id="cyclic-subsection-circle-group">
-      <title>The Circle Group and the Roots of Unity</title>
+      <title>O grupo circular e as raízes da unidade</title>
       <p>
-        The multiplicative group of the complex numbers,
-        <m>{\mathbb C}^*</m>, possesses some interesting subgroups.
-        Whereas <m>{\mathbb Q}^*</m> and
-        <m>{\mathbb R}^*</m> have no interesting subgroups of finite order,
-        <m>{\mathbb C}^*</m> has many.
-        We first consider the <term>circle group</term>,<idx><h>Group</h><h>circle</h></idx>
+        O grupo multiplicativo dos números complexos,
+        <m>{\mathbb C}^*</m>, possui alguns subgrupos interessantes.
+        Enquanto <m>{\mathbb Q}^*</m> e
+        <m>{\mathbb R}^*</m> não possuem subgrupos interessantes de ordem finita,
+        <m>{\mathbb C}^*</m> possui muitos.
+        Primeiro, consideremos o <term>grupo circular</term>,<idx><h>Grupo</h><h>circular</h></idx>
         <notation>
           <usage><m>\mathbb T</m></usage>
-          <description>the circle group</description>
+          <description>o grupo circular</description>
         </notation>
         <md>
           {\mathbb T} = \{ z \in {\mathbb C} : |z| = 1 \}
         </md>.
-        The following proposition is a direct result of <xref ref="cyclic-proposition-polar-mult"/>.
+        A proposição a seguir é uma consequência direta de <xref ref="cyclic-proposition-polar-mult"/>.
       </p>
 
       <proposition>
         <statement>
           <p>
-            The circle group is a subgroup of <m>{\mathbb C}^*</m>.
+            O grupo circular é um subgrupo de <m>{\mathbb C}^*</m>.
           </p>
         </statement>
       </proposition>
 
       <p>
-        Although the circle group has infinite order,
-        it has many interesting finite subgroups.
-        Suppose that <m>H = \{ 1, -1, i, -i \}</m>.
-        Then <m>H</m> is a subgroup of the circle group.
-        Also, <m>1</m>, <m>-1</m>, <m>i</m>,
-        and <m>-i</m> are exactly those complex numbers that satisfy the equation <m>z^4 = 1</m>.
-        The complex numbers satisfying the equation <m>z^n=1</m> are called the
-        <idx><h><m>n</m>th root of unity</h></idx><term><m>n</m>th roots of unity</term>.
+        Embora o grupo circular tenha ordem infinita,
+        ele possui muitos subgrupos finitos interessantes.
+        Suponha que <m>H = \{ 1, -1, i, -i \}</m>.
+        Então <m>H</m> é um subgrupo do grupo circular.
+        Além disso, <m>1</m>, <m>-1</m>, <m>i</m>
+        e <m>-i</m> são exatamente os números complexos que satisfazem a equação <m>z^4 = 1</m>.
+        Os números complexos que satisfazem a equação <m>z^n=1</m> são chamados de
+        <idx><h>Raiz <m>n</m>-ésima da unidade</h></idx><term>raízes <m>n</m>-ésimas da unidade</term>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            If <m>z^n = 1</m>, then the <m>n</m>th roots of unity are
+            Se <m>z^n = 1</m>, então as raízes <m>n</m>-ésimas da unidade são
             <md>
               z = \cis\left( \frac{2 k \pi}{n } \right)
             </md>,
-            where <m>k = 0, 1, \ldots, n-1</m>.
-            Furthermore,
-            the <m>n</m>th roots of unity form a cyclic subgroup of <m>{\mathbb T}</m> of order <m>n</m>
+            onde <m>k = 0, 1, \ldots, n-1</m>.
+            Além disso,
+            as raízes <m>n</m>-ésimas da unidade formam um subgrupo cíclico de <m>{\mathbb T}</m> de ordem <m>n</m>
           </p>
         </statement>
 
         <proof>
           <p>
-            By DeMoivre's Theorem,
+            Pelo Teorema de DeMoivre,
             <md>
               z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1
             </md>.
-            The <m>z</m>'s are distinct since the numbers
-            <m>2 k \pi /n</m> are all distinct and are greater than or equal to 0 but less than <m>2 \pi</m>.
-            The fact that these are all of the roots of the equation <m>z^n=1</m> follows from from <xref ref="poly-corollary-zeros"/>,
-            which states that a polynomial of degree <m>n</m> can have at most <m>n</m> roots.
-            We will leave the proof that the <m>n</m>th roots of unity form a cyclic subgroup of <m>{\mathbb T}</m> as an exercise.
+            Os valores de <m>z</m> são distintos, pois os números
+            <m>2 k \pi /n</m> são todos distintos e maiores ou iguais a 0, mas menores que <m>2 \pi</m>.
+            O fato de serem todas as raízes da equação <m>z^n=1</m> segue de <xref ref="poly-corollary-zeros"/>,
+            que afirma que um polinômio de grau <m>n</m> pode ter no máximo <m>n</m> raízes.
+            Deixaremos como exercício a demonstração de que as raízes <m>n</m>-ésimas da unidade formam um subgrupo cíclico de <m>{\mathbb T}</m>.
           </p>
         </proof>
       </theorem>
 
       <p>
-        A generator for the group of the <m>n</m>th roots of unity is called a
-        <idx><h>Primitive <m>n</m>th root of unity</h></idx><term>primitive <m>n</m>th root of unity</term>.
+        Um gerador do grupo das raízes <m>n</m>-ésimas da unidade é chamado de
+        <idx><h>Raiz <m>n</m>-ésima primitiva da unidade</h></idx><term>raiz <m>n</m>-ésima primitiva da unidade</term>.
       </p>
 
       <example xml:id="example-roots_unity">
         <p>
-          The 8th roots of unity can be represented as eight equally spaced points on the unit circle (<xref ref="cyclic-figure-roots-unity"/>).
-          The primitive 8th roots of unity are
+          As raízes oitavas da unidade podem ser representadas como oito pontos igualmente espaçados no círculo unitário (<xref ref="cyclic-figure-roots-unity"/>).
+          As raízes oitavas primitivas da unidade são
           <md>
             <mrow>\omega &amp; = \frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i</mrow>
             <mrow>\omega^3 &amp; = -\frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i</mrow>
@@ -674,10 +673,10 @@
         </p>
 
         <figure xml:id="cyclic-figure-roots-unity">
-          <caption>8th roots of unity</caption>
+          <caption>Raízes oitavas da unidade</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
           <image width="80%" xml:id="cyclic-roots-unity">
-            <description>The 8 roots of unity are spaced evenly around the unit circle beginning with 1 on the positive horizontal axis and followed by omega, i, the cube of omega, -1, omega to the fifth power, -i, and omega to the seventh power.</description>
+            <description>As oito raízes da unidade estão espaçadas uniformemente ao redor do círculo unitário, começando com 1 no eixo horizontal positivo e seguidas por ômega, i, o cubo de ômega, -1, ômega elevado à quinta potência, -i e ômega elevado à sétima potência.</description>
 
             <latex-image>
                 <xi:include href="tikz/cyclic-roots-unity.tex" parse="text"/>
