@@ -370,226 +370,226 @@
   </section>
 
   <section xml:id="sylow-section-applications">
-    <title>Examples and Applications</title>
+    <title>Exemplos e Aplicações</title>
     <introduction>
       <example xml:id="sylow-example-5-sylow-subgroups" >
         <p>
-          Using the Sylow Theorems,
-          we can determine that <m>A_5</m> has subgroups of orders <m>2</m>,
-          <m>3</m>, <m>4</m>, and <m>5</m>.
-          The Sylow <m>p</m>-subgroups of <m>A_5</m> have orders <m>3</m>,
+          Usando os Teoremas de Sylow,
+          podemos determinar que <m>A_5</m> possui subgrupos de ordens <m>2</m>,
+          <m>3</m>, <m>4</m> e <m>5</m>.
+          Os subgrupos de Sylow <m>p</m> de <m>A_5</m> têm ordens <m>3</m>,
           <m>4</m>,
-          and <m>5</m>.
-          The Third Sylow Theorem tells us exactly how many Sylow <m>p</m>-subgroups <m>A_5</m> has.
-          Since the number of Sylow <m>5</m>-subgroups must divide <m>60</m> and also be congruent to <m>1 \pmod{5}</m>,
-          there are either one or six Sylow <m>5</m>-subgroups in <m>A_5</m>.
-          All Sylow <m>5</m>-subgroups are conjugate.
-          If there were only a single Sylow <m>5</m>-subgroup,
-          it would be conjugate to itself;
-          that is, it would be a normal subgroup of <m>A_5</m>.
-          Since <m>A_5</m> has no normal subgroups, this is impossible;
-          hence, we have determined that there are exactly six distinct Sylow <m>5</m>-subgroups of <m>A_5</m>.
+          e <m>5</m>.
+          O Terceiro Teorema de Sylow nos diz exatamente quantos subgrupos de Sylow <m>p</m> <m>A_5</m> possui.
+          Como o número de subgrupos de Sylow <m>5</m> deve dividir <m>60</m> e também ser congruente a <m>1 \pmod{5}</m>,
+          há um ou seis subgrupos de Sylow <m>5</m> em <m>A_5</m>.
+          Todos os subgrupos de Sylow <m>5</m> são conjugados.
+          Se houvesse apenas um único subgrupo de Sylow <m>5</m>,
+          ele seria conjugado a si mesmo;
+          isto é, seria um subgrupo normal de <m>A_5</m>.
+          Como <m>A_5</m> não possui subgrupos normais, isso é impossível;
+          portanto, concluímos que existem exatamente seis subgrupos de Sylow <m>5</m> distintos em <m>A_5</m>.
         </p>
       </example>
 
       <p>
-        The Sylow Theorems allow us to prove many useful results about finite groups.
-        By using them,
-        we can often conclude a great deal about groups of a particular order if certain hypotheses are satisfied.
+        Os Teoremas de Sylow permitem demonstrar muitos resultados úteis sobre grupos finitos.
+        Usando-os,
+        frequentemente podemos concluir muitas coisas sobre grupos de uma ordem específica quando certas hipóteses são satisfeitas.
       </p>
 
       <theorem xml:id="sylow-theorem-pq-cyclic">
         <statement>
           <p>
-            If <m>p</m> and <m>q</m> are distinct primes with <m>p \lt q </m>,
-            then every group <m>G</m> of order <m>pq</m> has a single subgroup of order <m>q</m> and this subgroup is normal in <m>G</m>.
-            Hence, <m>G</m> cannot be simple.
-            Furthermore,
-            if <m>q \not\equiv 1 \pmod{p}</m>, then <m>G</m> is cyclic.
+             Se <m>p</m> e <m>q</m> são primos distintos com <m>p \lt q </m>,
+             então todo grupo <m>G</m> de ordem <m>pq</m> possui um único subgrupo de ordem <m>q</m>, e esse subgrupo é normal em <m>G</m>.
+             Portanto, <m>G</m> não pode ser simples.
+             Além disso,
+             se <m>q \not\equiv 1 \pmod{p}</m>, então <m>G</m> é cíclico.
           </p>
         </statement>
 
         <proof>
           <p>
-            We know that <m>G</m> contains a subgroup <m>H</m> of order <m>q</m>.
-            The number of conjugates of <m>H</m> divides <m>pq</m> and is equal to <m>1 + kq</m> for <m>k = 0, 1, \ldots</m>.
-            However, <m>1 + q</m> is already too large to divide the order of the group;
-            hence, <m>H</m> can only be conjugate to itself.
-            That is, <m>H</m> must be normal in <m>G</m>.
+             Sabemos que <m>G</m> contém um subgrupo <m>H</m> de ordem <m>q</m>.
+             O número de conjugados de <m>H</m> divide <m>pq</m> e é igual a <m>1 + kq</m> para <m>k = 0, 1, \ldots</m>.
+             Contudo, <m>1 + q</m> já é grande demais para dividir a ordem do grupo;
+             portanto, <m>H</m> só pode ser conjugado a si mesmo.
+             Isto é, <m>H</m> deve ser normal em <m>G</m>.
           </p>
 
           <p>
-            The group <m>G</m> also has a Sylow <m>p</m>-subgroup,
-            say <m>K</m>.
-            The number of conjugates of <m>K</m> must divide <m>q</m> and be equal to <m>1 + kp</m> for <m>k = 0, 1, \ldots</m>.
-            Since <m>q</m> is prime, either
+             O grupo <m>G</m> também possui um subgrupo de Sylow <m>p</m>,
+             digamos <m>K</m>.
+             O número de conjugados de <m>K</m> deve dividir <m>q</m> e ser igual a <m>1 + kp</m> para <m>k = 0, 1, \ldots</m>.
+             Como <m>q</m> é primo, ou
             <m>1 + kp = q</m> or <m>1 + kp = 1</m>.
-            If <m>1 + kp = 1</m>, then <m>K</m> is normal in <m>G</m>.
-            In this case,
-            we can easily show that <m>G</m> satisfies the criteria,
-            given in <xref ref="isomorph"/>,
-            for the internal direct product of <m>H</m> and <m>K</m>.
-            Since <m>H</m> is isomorphic to
-            <m>{\mathbb Z}_q</m> and <m>K</m> is isomorphic to <m>{\mathbb Z}_p</m>,
-            <m>G \cong {\mathbb Z}_p \times {\mathbb Z}_q \cong {\mathbb Z}_{pq}</m> by <xref ref="isomorph-theorem-z-pq" />.
+             Se <m>1 + kp = 1</m>, então <m>K</m> é normal em <m>G</m>.
+             Nesse caso,
+             podemos mostrar facilmente que <m>G</m> satisfaz os critérios,
+             dados em <xref ref="isomorph"/>,
+             para o produto direto interno de <m>H</m> e <m>K</m>.
+             Como <m>H</m> é isomorfo a
+             <m>{\mathbb Z}_q</m> e <m>K</m> é isomorfo a <m>{\mathbb Z}_p</m>,
+             <m>G \cong {\mathbb Z}_p \times {\mathbb Z}_q \cong {\mathbb Z}_{pq}</m> por <xref ref="isomorph-theorem-z-pq" />.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="example-z15">
         <p>
-          Every group of order <m>15</m> is cyclic.
-          This is true because <m>15 = 5 \cdot 3</m> and <m>5 \not\equiv 1 \pmod{3}</m>.
+           Todo grupo de ordem <m>15</m> é cíclico.
+           Isso é verdade porque <m>15 = 5 \cdot 3</m> e <m>5 \not\equiv 1 \pmod{3}</m>.
         </p>
       </example>
 
       <example xml:id="example-group-99-subgroups">
         <p>
-          Let us classify all of the groups of order <m>99 = 3^2 \cdot 11</m> up to isomorphism.
-          First we will show that every group <m>G</m> of order <m>99</m> is abelian.
-          By the Third Sylow Theorem, there are <m>1 + 3k</m> Sylow <m>3</m>-subgroups,
-          each of order <m>9</m>, for some <m>k = 0, 1, 2, \ldots</m>.
-          Also, <m>1 + 3k</m> must divide <m>11</m>;
-          hence, there can only be a single normal Sylow <m>3</m>-subgroup <m>H</m> in <m>G</m>.
-          Similarly, there are <m>1 +11k</m> Sylow <m>11</m>-subgroups and <m>1 +11k</m> must divide <m>9</m>.
-          Consequently,
-          there is only one Sylow <m>11</m>-subgroup <m>K</m> in <m>G</m>.
-          By <xref ref="actions-corollary-p2abelian"/>,
-          any group of order <m>p^2</m> is abelian for <m>p</m> prime;
-          hence, <m>H</m> is isomorphic either to
+           Classifiquemos todos os grupos de ordem <m>99 = 3^2 \cdot 11</m> a menos de isomorfismo.
+           Primeiro mostraremos que todo grupo <m>G</m> de ordem <m>99</m> é abeliano.
+           Pelo Terceiro Teorema de Sylow, há <m>1 + 3k</m> subgrupos de Sylow <m>3</m>,
+           cada um de ordem <m>9</m>, para algum <m>k = 0, 1, 2, \ldots</m>.
+           Além disso, <m>1 + 3k</m> deve dividir <m>11</m>;
+           portanto, pode haver apenas um único subgrupo de Sylow <m>3</m> normal <m>H</m> em <m>G</m>.
+           De modo semelhante, há <m>1 +11k</m> subgrupos de Sylow <m>11</m>, e <m>1 +11k</m> deve dividir <m>9</m>.
+           Consequentemente,
+           há apenas um subgrupo de Sylow <m>11</m>, <m>K</m>, em <m>G</m>.
+           Pelo <xref ref="actions-corollary-p2abelian"/>,
+           qualquer grupo de ordem <m>p^2</m> é abeliano para <m>p</m> primo;
+           portanto, <m>H</m> é isomorfo a
           <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> or to <m>{\mathbb Z}_9</m>.
-          Since <m>K</m> has order <m>11</m>,
-          it must be isomorphic to <m>{\mathbb Z}_{11}</m>.
-          Therefore, the only possible groups of order <m>99</m> are
+           Como <m>K</m> tem ordem <m>11</m>,
+           ele deve ser isomorfo a <m>{\mathbb Z}_{11}</m>.
+           Portanto, os únicos grupos possíveis de ordem <m>99</m> são
           <m>{\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_{11}</m> or <m>{\mathbb Z}_9 \times {\mathbb Z}_{11}</m> up to isomorphism.
         </p>
       </example>
 
       <p>
-        To determine all of the groups of order <m>5 \cdot 7 \cdot 47 = 1645</m>,
-        we need the following theorem.
+         Para determinar todos os grupos de ordem <m>5 \cdot 7 \cdot 47 = 1645</m>,
+         precisamos do teorema a seguir.
       </p>
 
       <theorem xml:id="sylow-theorem-commutator-subgroup-theorem">
         <statement>
           <p>
-            Let <m>G' = \langle a b a^{-1} b^{-1} : a, b \in G \rangle</m> be the subgroup consisting of all finite products of elements of the form <m>aba^{-1}b^{-1}</m> in a group <m>G</m>.
-            Then <m>G'</m> is a normal subgroup of <m>G</m> and <m>G/G'</m> is abelian.
+             Seja <m>G' = \langle a b a^{-1} b^{-1} : a, b \in G \rangle</m> o subgrupo constituído de todos os produtos finitos de elementos da forma <m>aba^{-1}b^{-1}</m> em um grupo <m>G</m>.
+             Então <m>G'</m> é um subgrupo normal de <m>G</m> e <m>G/G'</m> é abeliano.
           </p>
         </statement>
       </theorem>
 
       <p>
-        The subgroup <m>G'</m> of <m>G</m> is called the
-        <term>commutator subgroup</term><idx><h>Subgroup</h><h>commutator</h></idx> of <m>G</m>.
-        We leave the proof of this theorem as an exercise (<xref ref="normal-exercise-commutator"/> in <xref ref="normal"/>).
+         O subgrupo <m>G'</m> de <m>G</m> é chamado de
+         <term>subgrupo comutador</term><idx><h>Subgrupo</h><h>comutador</h></idx> de <m>G</m>.
+         Deixamos a demonstração deste teorema como exercício (<xref ref="normal-exercise-commutator"/> em <xref ref="normal"/>).
       </p>
 
       <example xml:id="sylow-example-sylow-group-1645-subgroups">
         <p>
-          We will now show that every group of order <m>5 \cdot 7 \cdot 47 = 1645</m> is abelian,
-          and cyclic by <xref ref="isomorph-theorem-z-pq" />.
-          By the Third Sylow Theorem,
-          <m>G</m> has only one subgroup <m>H_1</m> of order <m>47</m>.
-          So <m>G/H_1</m> has order <m>35</m> and must be abelian by <xref ref="sylow-theorem-pq-cyclic"/>.
-          Hence, the commutator subgroup of <m>G</m> is contained in <m>H</m> which tells us that <m>|G'|</m> is either <m>1</m> or <m>47</m>.
-          If <m>|G'|=1</m>, we are done.
-          Suppose that <m>|G'|=47</m>.
-          The Third Sylow Theorem tells us that <m>G</m> has only one subgroup of order <m>5</m> and one subgroup of order <m>7</m>.
-          So there exist normal subgroups <m>H_2</m> and <m>H_3</m> in <m>G</m>,
-          where <m>|H_2| = 5</m> and <m>|H_3| = 7</m>.
-          In either case the quotient group is abelian;
-          hence, <m>G'</m> must be a subgroup of <m>H_i</m>, <m>i= 1, 2</m>.
-          Therefore, the order of <m>G'</m> is <m>1</m>, <m>5</m>,
-          or <m>7</m>.
-          However, we already have determined that <m>|G'| =1</m> or <m>47</m>.
-          So the commutator subgroup of <m>G</m> is trivial,
-          and consequently <m>G</m> is abelian.
+           Mostraremos agora que todo grupo de ordem <m>5 \cdot 7 \cdot 47 = 1645</m> é abeliano
+           e cíclico pelo <xref ref="isomorph-theorem-z-pq" />.
+           Pelo Terceiro Teorema de Sylow,
+           <m>G</m> possui apenas um subgrupo <m>H_1</m> de ordem <m>47</m>.
+           Assim, <m>G/H_1</m> tem ordem <m>35</m> e deve ser abeliano pelo <xref ref="sylow-theorem-pq-cyclic"/>.
+           Portanto, o subgrupo comutador de <m>G</m> está contido em <m>H</m>, o que nos diz que <m>|G'|</m> é <m>1</m> ou <m>47</m>.
+           Se <m>|G'|=1</m>, terminamos.
+           Suponha que <m>|G'|=47</m>.
+           O Terceiro Teorema de Sylow nos diz que <m>G</m> possui apenas um subgrupo de ordem <m>5</m> e um subgrupo de ordem <m>7</m>.
+           Assim, existem subgrupos normais <m>H_2</m> e <m>H_3</m> em <m>G</m>,
+           em que <m>|H_2| = 5</m> e <m>|H_3| = 7</m>.
+           Em qualquer dos casos, o grupo quociente é abeliano;
+           portanto, <m>G'</m> deve ser um subgrupo de <m>H_i</m>, <m>i= 1, 2</m>.
+           Portanto, a ordem de <m>G'</m> é <m>1</m>, <m>5</m>,
+           ou <m>7</m>.
+           Contudo, já determinamos que <m>|G'| =1</m> ou <m>47</m>.
+           Assim, o subgrupo comutador de <m>G</m> é trivial,
+           e, consequentemente, <m>G</m> é abeliano.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="sylow-subsection-finite-simple-groups">
-      <title>Finite Simple Groups</title>
+      <title>Grupos Simples Finitos</title>
       <p>
-        Given a finite group,
-        one can ask whether or not that group has any normal subgroups.
-        Recall that a simple group is one with no proper nontrivial normal subgroups.
-        As in the case of <m>A_5</m>,
-        proving a group to be simple can be a very difficult task;
-        however, the Sylow Theorems are useful tools for proving that a group is not simple.
-        Usually, some sort of counting argument is involved.
+         Dado um grupo finito,
+         podemos perguntar se esse grupo possui ou não subgrupos normais.
+         Recorde que um grupo simples é aquele que não possui subgrupos normais próprios não triviais.
+         Como no caso de <m>A_5</m>,
+         demonstrar que um grupo é simples pode ser uma tarefa muito difícil;
+         contudo, os Teoremas de Sylow são ferramentas úteis para provar que um grupo não é simples.
+         Geralmente, algum tipo de argumento de contagem está envolvido.
       </p>
 
       <example xml:id="sylow-example-group-20-not-simple">
         <p>
-          Let us show that no group <m>G</m> of order <m>20</m> can be simple.
-          By the Third Sylow Theorem,
-          <m>G</m> contains one or more Sylow <m>5</m>-subgroups.
-          The number of such subgroups is congruent to
-          <m>1 \pmod{5}</m> and must also divide <m>20</m>.
-          The only possible such number is <m>1</m>.
-          Since there is only a single Sylow <m>5</m>-subgroup and all Sylow <m>5</m>-subgroups are conjugate,
-          this subgroup must be normal.
+           Mostremos que nenhum grupo <m>G</m> de ordem <m>20</m> pode ser simples.
+           Pelo Terceiro Teorema de Sylow,
+           <m>G</m> contém um ou mais subgrupos de Sylow <m>5</m>.
+           O número desses subgrupos é congruente a
+           <m>1 \pmod{5}</m> e também deve dividir <m>20</m>.
+           O único número possível é <m>1</m>.
+           Como há apenas um único subgrupo de Sylow <m>5</m> e todos os subgrupos de Sylow <m>5</m> são conjugados,
+           esse subgrupo deve ser normal.
         </p>
       </example>
 
       <example xml:id="sylow-example-group-pn">
         <p>
-          Let <m>G</m> be a finite group of order <m>p^n</m>,
-          <m>n \gt 1</m> and <m>p</m> prime.
-          By <xref ref="actions-theorem-pn"/>, <m>G</m> has a nontrivial center.
-          Since the center of any group <m>G</m> is a normal subgroup,
-          <m>G</m> cannot be a simple group.
-          Therefore, groups of orders <m>4</m>,
+           Seja <m>G</m> um grupo finito de ordem <m>p^n</m>,
+           <m>n \gt 1</m> e <m>p</m> primo.
+           Pelo <xref ref="actions-theorem-pn"/>, <m>G</m> possui um centro não trivial.
+           Como o centro de qualquer grupo <m>G</m> é um subgrupo normal,
+           <m>G</m> não pode ser um grupo simples.
+           Portanto, grupos de ordens <m>4</m>,
           <m>8</m>, <m>9</m>, <m>16</m>,
           <m>25</m>, <m>27</m>, <m>32</m>,
-          <m>49</m>, <m>64</m>, and <m>81</m> are not simple.
-          In fact, the groups of order <m>4</m>, <m>9</m>, <m>25</m>,
-          and <m>49</m> are abelian by <xref ref="actions-corollary-p2abelian"/>.
+           <m>49</m>, <m>64</m> e <m>81</m> não são simples.
+           De fato, os grupos de ordem <m>4</m>, <m>9</m>, <m>25</m>,
+           e <m>49</m> são abelianos pelo <xref ref="actions-corollary-p2abelian"/>.
         </p>
       </example>
 
       <example xml:id="sylow-example-group-56">
         <p>
-          No group of order <m>56= 2^3 \cdot 7</m> is simple.
-          We have seen that if we can show that there is only one Sylow <m>p</m>-subgroup for some prime <m>p</m> dividing 56,
-          then this must be a normal subgroup and we are done.
-          By the Third Sylow Theorem,
-          there are either one or eight Sylow <m>7</m>-subgroups.
-          If there is only a single Sylow <m>7</m>-subgroup, then it must be normal.
+         Nenhum grupo de ordem <m>56= 2^3 \cdot 7</m> é simples.
+         Vimos que, se pudermos mostrar que existe apenas um subgrupo de Sylow <m>p</m> para algum primo <m>p</m> que divide 56,
+         então este deve ser um subgrupo normal e terminamos.
+         Pelo Terceiro Teorema de Sylow,
+         há um ou oito subgrupos de Sylow <m>7</m>.
+         Se houver apenas um único subgrupo de Sylow <m>7</m>, ele deve ser normal.
         </p>
 
         <p>
-          On the other hand,
-          suppose that there are eight Sylow <m>7</m>-subgroups.
-          Then each of these subgroups must be cyclic;
-          hence, the intersection of any two of these subgroups contains only the identity of the group.
-          This leaves <m>8 \cdot 6 = 48</m> distinct elements in the group,
-          each of order <m>7</m>.
-          Now let us count Sylow <m>2</m>-subgroups.
-          There are either one or seven Sylow <m>2</m>-subgroups.
-          Any element of a Sylow <m>2</m>-subgroup other than the identity must have as its order a power of <m>2</m>;
-          and therefore cannot be one of the <m>48</m> elements of order <m>7</m> in the Sylow <m>7</m>-subgroups.
-          Since a Sylow <m>2</m>-subgroup has order <m>8</m>,
-          there is only enough room for a single Sylow <m>2</m>-subgroup in a group of order <m>56</m>.
-          If there is only one Sylow <m>2</m>-subgroup, it must be normal.
+         Por outro lado,
+         suponha que existam oito subgrupos de Sylow <m>7</m>.
+         Então cada um desses subgrupos deve ser cíclico;
+         portanto, a interseção de quaisquer dois desses subgrupos contém apenas a identidade do grupo.
+         Isso deixa <m>8 \cdot 6 = 48</m> elementos distintos no grupo,
+         todos de ordem <m>7</m>.
+         Agora contemos os subgrupos de Sylow <m>2</m>.
+         Há um ou sete subgrupos de Sylow <m>2</m>.
+         Qualquer elemento de um subgrupo de Sylow <m>2</m> que não seja a identidade deve ter como ordem uma potência de <m>2</m>;
+         portanto, não pode ser um dos <m>48</m> elementos de ordem <m>7</m> nos subgrupos de Sylow <m>7</m>.
+         Como um subgrupo de Sylow <m>2</m> tem ordem <m>8</m>,
+         só há espaço para um único subgrupo de Sylow <m>2</m> em um grupo de ordem <m>56</m>.
+         Se houver apenas um subgrupo de Sylow <m>2</m>, ele deve ser normal.
         </p>
       </example>
 
       <p>
-        For other groups <m>G</m>,
-        it is more difficult to prove that <m>G</m> is not simple.
-        Suppose <m>G</m> has order <m>48</m>.
-        In this case the technique that we employed in the last example will not work.
-        We need the following lemma to prove that no group of order <m>48</m> is simple.
+         Para outros grupos <m>G</m>,
+         é mais difícil provar que <m>G</m> não é simples.
+         Suponha que <m>G</m> tenha ordem <m>48</m>.
+         Nesse caso, a técnica que empregamos no último exemplo não funcionará.
+         Precisamos do lema a seguir para provar que nenhum grupo de ordem <m>48</m> é simples.
       </p>
 
       <lemma xml:id="sylow-lemma-hk-subgroup">
         <statement>
           <p>
-            Let <m>H</m> and <m>K</m> be finite subgroups of a group <m>G</m>.
-            Then
+             Sejam <m>H</m> e <m>K</m> subgrupos finitos de um grupo <m>G</m>.
+             Então
             <md>
               |HK| = \frac{|H| \cdot |K|}{|H \cap K|}
             </md>.
@@ -598,20 +598,20 @@
 
         <proof>
           <p>
-            Recall that
+             Recorde que
             <md>
               HK = \{ hk : h \in H, k \in K \}
             </md>.
-            Certainly, <m>|HK| \leq |H| \cdot |K|</m> since some element in <m>HK</m> could be written as the product of different elements in <m>H</m> and <m>K</m>.
-            It is quite possible that <m>h_1 k_1 = h_2 k_2</m> for
+             Certamente, <m>|HK| \leq |H| \cdot |K|</m>, pois algum elemento de <m>HK</m> pode ser escrito como o produto de diferentes elementos de <m>H</m> e <m>K</m>.
+             É perfeitamente possível que <m>h_1 k_1 = h_2 k_2</m> para
             <m>h_1, h_2 \in H</m> and <m>k_1, k_2 \in K</m>.
-            If this is the case, let
+             Se este for o caso, seja
             <md>
               a = (h_1)^{-1} h_2 = k_1 (k_2)^{-1}
             </md>.
-            Notice that <m>a \in H \cap K</m>,
-            since <m>(h_1)^{-1} h_2</m> is in <m>H</m> and
-            <m>k_2 (k_1)^{-1}</m> is in <m>K</m>; consequently,
+             Observe que <m>a \in H \cap K</m>,
+             pois <m>(h_1)^{-1} h_2</m> pertence a <m>H</m> e
+             <m>k_2 (k_1)^{-1}</m> pertence a <m>K</m>; consequentemente,
             <md>
               <mrow>h_2 &amp; =  h_1 a^{-1}</mrow>
               <mrow>k_2 &amp; =  a k_1</mrow>
@@ -619,80 +619,80 @@
           </p>
 
           <p>
-            Conversely, let <m>h = h_1 b^{-1}</m> and
-            <m>k = b k_1</m> for <m>b \in H \cap K</m>.
-            Then <m>h k = h_1 k_1</m>, where <m>h \in H</m> and <m>k \in K</m>.
-            Hence, any element <m>hk \in HK</m> can be written in the form <m>h_i k_i</m> for
-            <m>h_i \in H</m> and <m>k_i \in K</m>,
-            as many times as there are elements in <m>H \cap K</m>;
-            that is, <m>|H \cap K|</m> times.
-            Therefore, <m>|HK| = (|H| \cdot |K|)/|H \cap K|</m>.
+             Reciprocamente, sejam <m>h = h_1 b^{-1}</m> e
+             <m>k = b k_1</m> para <m>b \in H \cap K</m>.
+             Então <m>h k = h_1 k_1</m>, em que <m>h \in H</m> e <m>k \in K</m>.
+             Portanto, qualquer elemento <m>hk \in HK</m> pode ser escrito na forma <m>h_i k_i</m> para
+             <m>h_i \in H</m> e <m>k_i \in K</m>,
+             tantas vezes quantos forem os elementos de <m>H \cap K</m>;
+             isto é, <m>|H \cap K|</m> vezes.
+             Portanto, <m>|HK| = (|H| \cdot |K|)/|H \cap K|</m>.
           </p>
         </proof>
       </lemma>
 
       <example xml:id="sylow-example-group-48">
         <p>
-          To demonstrate that a group <m>G</m> of order <m>48</m> is not simple,
-          we will show that <m>G</m> contains either a normal subgroup of order <m>8</m> or a normal subgroup of order <m>16</m>.
-          By the Third Sylow Theorem,
-          <m>G</m> has either one or three Sylow <m>2</m>-subgroups of order <m>16</m>.
-          If there is only one subgroup,
-          then it must be a normal subgroup.
+           Para demonstrar que um grupo <m>G</m> de ordem <m>48</m> não é simples,
+           mostraremos que <m>G</m> contém um subgrupo normal de ordem <m>8</m> ou um subgrupo normal de ordem <m>16</m>.
+           Pelo Terceiro Teorema de Sylow,
+           <m>G</m> possui um ou três subgrupos de Sylow <m>2</m> de ordem <m>16</m>.
+           Se houver apenas um subgrupo,
+           então ele deve ser um subgrupo normal.
         </p>
             <!-- %TWJ 11/30/2011 - Reference to the Lemma fixed.  Suggested by L. Franklin. -->
         <p>
-          Suppose that the other case is true,
-          and two of the three Sylow <m>2</m>-subgroups are <m>H</m> and <m>K</m>.
-          We claim that  <m>|H \cap K| = 8</m>.
-          If <m>|H \cap K| \leq 4</m>,
-          then by <xref ref="sylow-lemma-hk-subgroup"/>,
+         Suponha que o outro caso ocorra,
+         e que dois dos três subgrupos de Sylow <m>2</m> sejam <m>H</m> e <m>K</m>.
+         Afirmamos que <m>|H \cap K| = 8</m>.
+         Se <m>|H \cap K| \leq 4</m>,
+         então, pelo <xref ref="sylow-lemma-hk-subgroup"/>,
           <md>
             |HK| \geq \frac{16 \cdot 16}{4} =64
           </md>,
-          which is impossible.
-          Notice that <m>H \cap K</m> has index two in both of <m>H</m> and <m>K</m>,
-          so is normal in both,
-          and thus <m>H</m> and <m>K</m> are each in the normalizer of <m>H \cap K</m>.
-          Because <m>H</m> is a subgroup of <m>N(H \cap K)</m> and because
-          <m>N(H \cap K)</m> has strictly more than <m>16</m> elements,
-          <m>|N(H \cap K)|</m> must be a multiple of <m>16</m> greater than <m>1</m>,
-          as well as dividing <m>48</m>.
-          The only possibility is that <m>|N(H \cap K)|= 48</m>.
-          Hence, <m>N(H \cap K) = G</m>.
+         o que é impossível.
+         Observe que <m>H \cap K</m> tem índice dois em <m>H</m> e em <m>K</m>,
+         portanto é normal em ambos,
+         e assim <m>H</m> e <m>K</m> estão ambos no normalizador de <m>H \cap K</m>.
+         Como <m>H</m> é um subgrupo de <m>N(H \cap K)</m> e como
+         <m>N(H \cap K)</m> tem estritamente mais que <m>16</m> elementos,
+         <m>|N(H \cap K)|</m> deve ser um múltiplo de <m>16</m> maior que <m>1</m>,
+         além de dividir <m>48</m>.
+         A única possibilidade é que <m>|N(H \cap K)|= 48</m>.
+         Portanto, <m>N(H \cap K) = G</m>.
         </p>
             <!-- Proof revised.  Suggested by R. Beezer and C. Wall. -->
             <!-- TWJ - 12/19/2011 -->
       </example>
 
       <p>
-        The following famous conjecture of Burnside was proved in a long and difficult paper by Feit and Thompson [2].
+         A famosa conjectura de Burnside foi provada em um artigo longo e difícil de Feit e Thompson [2].
       </p>
 
       <theorem>
-        <title>Odd Order Theorem</title>
+        <title>Teorema da Ordem Ímpar</title>
         <idx>
-        <h>Odd Order Theorem</h>
+        <h>Teorema da Ordem Ímpar</h>
         </idx>
         <statement>
           <p>
-            Every finite simple group of nonprime order must be of even order.
+            Todo grupo simples finito de ordem não prima deve ter ordem par.
           </p>
         </statement>
       </theorem>
 
       <p>
-        The proof of this theorem laid the groundwork for a program in the 1960s and 1970s that classified all finite simple groups.
-        The success of this program is one of the outstanding achievements of modern mathematics.
+        A demonstração deste teorema lançou as bases para um programa, nas décadas de 1960 e 1970, que classificou todos os grupos simples finitos.
+        O sucesso desse programa é uma das realizações mais notáveis da matemática moderna.
       </p>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage will compute a single Sylow <m>p</m>-subgroup for each prime divisor <m>p</m> of the order of the group.
-          Then, with conjugacy,
-          all of the Sylow <m>p</m>-subgroups can be enumerated.
-          It is also possible to compute the normalizer of a subgroup.
+          O Sage calcula um único subgrupo de Sylow <m>p</m> para cada divisor primo <m>p</m> da ordem do grupo.
+          Então, por conjugação,
+          todos os subgrupos de Sylow <m>p</m> podem ser enumerados.
+          Também é possível calcular o normalizador de um subgrupo.
         </p>
       </paragraphs>
 
