@@ -67,7 +67,7 @@
           A({\mathbf x} + {\mathbf y} ) 
           = 
           A {\mathbf x }+ A {\mathbf y} 
-          \qquad \text{and} \qquad
+          \qquad \text{e} \qquad
           \alpha A {\mathbf x} 
           = 
           A ( \alpha {\mathbf x})
@@ -1160,7 +1160,7 @@
       </theorem>
 
       <p>
-        O grupo pontual de <m>G</m> é <m>G_0 = \{A : (A,b) \in G \text{ for some } b \}</m>.
+        O grupo pontual de <m>G</m> é <m>G_0 = \{A : (A,b) \in G \text{ para algum } b \}</m>.
         Em particular, <m>G_0</m> deve ser um subgrupo de <m>O(2)</m>.
         Suponha que <m>{\mathbf x}</m> seja um vetor em um reticulado <m>L</m> com grupo espacial <m>G</m>,
         grupo de translações <m>H</m> e grupo pontual <m>G_0</m>.
@@ -1681,7 +1681,7 @@
         <p>
           Verifique que
           <md>
-            E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ and } {\mathbf x} \in {\mathbb R}^n \}
+            E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ e } {\mathbf x} \in {\mathbb R}^n \}
           </md>
           é um grupo.
         </p>

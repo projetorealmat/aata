@@ -1666,7 +1666,7 @@
                 se, para todo <m>x, y \in X</m>,
                 existir uma <m>\sigma \in H</m> tal que <m>\sigma(x) = y</m>.
                 Prove que <m>\langle \sigma \rangle</m> é transitivo se, e somente se,
-                <m>{\mathcal O}_{x, \sigma} = X</m> for some <m>x \in X</m>.
+                <m>{\mathcal O}_{x, \sigma} = X</m> para algum <m>x \in X</m>.
               </p>
             </li>
           </ol>

@@ -347,7 +347,7 @@
       <theorem xml:id="isomorph-theorem-cayleys">
         <title>Cayley</title>
         <idx>
-        <h>Cayley's Theorem</h>
+        <h>Teorema de Cayley</h>
         </idx>
         <statement>
           <p>
@@ -638,7 +638,7 @@
             Observe que <m>mn/d</m> é divisível por <m>m</m> e por <m>n</m>;
             portanto, para qualquer elemento <m>(a,b) \in {\mathbb Z}_m \times {\mathbb Z}_n</m>,
             <md>
-              \underbrace{(a,b) + (a,b)+ \cdots + (a,b)}_{mn/d \; \text{times}} = (0, 0)
+              \underbrace{(a,b) + (a,b)+ \cdots + (a,b)}_{mn/d \; \text{vezes}} = (0, 0)
             </md>.
             Portanto, nenhum <m>(a, b)</m> pode gerar todo <m>{\mathbb Z}_m \times {\mathbb Z}_n</m>.
           </p>

@@ -399,7 +399,7 @@
           a &amp; b \\
           0 &amp; c
           \end{pmatrix}
-          \quad \text{and} \quad
+          \quad \text{e} \quad
           B =
           \begin{pmatrix}
           a' &amp; b' \\
@@ -1618,7 +1618,7 @@
 
             <li>
               <p>
-                <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ and } i^2 = -1 \}</m>
+                <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ e } i^2 = -1 \}</m>
               </p>
             </li>
 
@@ -2245,7 +2245,7 @@
           Seja <m>R</m> um anel.
           Defina o <term>centro</term> de <m>R</m> como
           <md>
-            Z(R) = \{ a \in R : ar = ra \text{ for all } r \in R \}
+            Z(R) = \{ a \in R : ar = ra \text{ para todo } r \in R \}
           </md>.
           Prove que <m>Z(R)</m> é um subanel comutativo de <m>R</m>.
         </p>

@@ -951,7 +951,7 @@
             Seja <m>a \in B</m>.
             Por <xref ref="lemma-atoms"/>,
             podemos escrever <m>a</m> unicamente como
-            <m>a = a_1 \vee \cdots \vee a_n</m> for <m>a_1, \ldots,
+            <m>a = a_1 \vee \cdots \vee a_n</m> para <m>a_1, \ldots,
             a_n \in X</m>.
             Consequentemente,
             podemos definir uma aplicação <m>\phi : B \rightarrow {\mathcal P}(X)</m> por

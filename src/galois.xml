@@ -1862,7 +1862,7 @@
       </statement>
       <hint>
         <p>
-          <m>G</m> is a subgroup of <m>S_n</m>.
+          <m>G</m> é um subgrupo de <m>S_n</m>.
         </p>
       </hint>
     </exercise>
@@ -2046,7 +2046,7 @@
                 <md>
                   \phi_i(a_0 + a_1 \omega + \cdots + a_{p - 2} \omega^{p - 2}) = a_0 + a_1 \omega^i + \cdots + c_{p - 2} (\omega^i)^{p - 2}
                 </md>,
-                where <m>a_i \in {\mathbb Q}</m>.
+                em que <m>a_i \in {\mathbb Q}</m>.
                 Prove que <m>\phi_i</m> é um isomorfismo de corpos.
                 Mostre que <m>\phi_2</m> gera <m>G({\mathbb Q}(\omega)/{\mathbb Q})</m>.
               </p>
@@ -2079,7 +2079,7 @@
       <statement>
         <p>
           Seja <m>F</m> um corpo de característica zero e seja
-          <m>f(x) \in F[x]</m> be a separable polynomial of degree <m>n</m>.
+          <m>f(x) \in F[x]</m> seja um polinômio separável de grau <m>n</m>.
           Se <m>E</m> é o corpo de decomposição de <m>f(x)</m>,
           sejam <m>\alpha_1, \ldots, \alpha_n</m> as raízes de <m>f(x)</m> em <m>E</m>.
           Seja <m>\Delta = \prod_{i \lt j} (\alpha_i - \alpha_j)</m>.

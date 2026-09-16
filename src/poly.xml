@@ -889,7 +889,7 @@
             <mrow>bd &amp; = 1</mrow>
           </md>.
           Como <m>bd = 1</m>,
-          <m>b = d = 1</m> or <m> b = d = -1</m>.
+          <m>b = d = 1</m> ou <m> b = d = -1</m>.
           Em ambos os casos, <m>b = d</m> e, portanto,
           <md>
             ad + bc  = b( a + c ) = 1
