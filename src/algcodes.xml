@@ -1901,9 +1901,9 @@
     <exercise label="rq-algcodes-min-distance">
       <statement>
         <p>
-          Suppose a binary code has minimum distance <m>d=6</m>.
-          How many errors can be detected?
-          How many errors can be corrected?
+          Suponha que um código binário tenha distância mínima <m>d=6</m>.
+          Quantos erros podem ser detectados?
+          Quantos erros podem ser corrigidos?
         </p>
       </statement>
       <response/>
@@ -1912,8 +1912,8 @@
     <exercise label="rq-algcodes-ascii-check">
       <statement>
         <p>
-          Explain why it is impossible for the 8-bit string with decimal value <m>56_{10}</m> to be an <acro>ASCII</acro> code for a character.
-          Assume the leftmost bit of the string is being used as a parity-check bit.
+          Explique por que é impossível que a cadeia de 8 bits com valor decimal <m>56_{10}</m> seja um código <acro>ASCII</acro> para um caractere.
+          Suponha que o bit mais à esquerda da cadeia esteja sendo usado como bit de verificação de paridade.
         </p>
       </statement>
       <response/>
@@ -1922,14 +1922,14 @@
     <exercise label="rq-algcodes-min-error">
       <statement>
         <p>
-          Suppose we receive the 8-bit string with decimal value <m>56_{10}</m> when we are expecting <acro>ASCII</acro> characters with a parity-check bit in the first bit
-          (leftmost).
-          We know an error has occurred in transmission.
-          Give one of the probable guesses for the character which was actually sent
-          (other than <sq>8</sq>),
-          under the assumption that any individual bit is rarely sent in error.
-          Explain the logic of your answer.
-          (You may need to consult a table of <acro>ASCII</acro> values online.)
+          Suponha que recebamos a cadeia de 8 bits com valor decimal <m>56_{10}</m> quando esperamos caracteres <acro>ASCII</acro> com um bit de verificação de paridade no primeiro bit
+          (o mais à esquerda).
+          Sabemos que ocorreu um erro na transmissão.
+          Dê uma das suposições prováveis para o caractere que foi realmente enviado
+          (diferente de <sq>8</sq>),
+          sob a hipótese de que é raro um bit individual ser transmitido com erro.
+          Explique a lógica de sua resposta.
+          (Talvez seja necessário consultar uma tabela de valores <acro>ASCII</acro> na internet.)
         </p>
       </statement>
       <response/>
@@ -1938,7 +1938,7 @@
     <exercise label="rq-algcodes-linear-code">
       <statement>
         <p>
-          Suppose a linear code <m>C</m> is created as the null space of the parity-check matrix
+          Suponha que um código linear <m>C</m> seja criado como o espaço nulo da matriz de verificação de paridade
           <md>
             H =\begin{bmatrix}
             0 \amp 1 \amp 0 \amp 1 \amp 0 \\
@@ -1946,9 +1946,9 @@
             0 \amp 0 \amp 1 \amp 1 \amp 1
             \end{bmatrix}
           </md>
-          Then <m>x=\codeword{11100}</m> is not a codeword.
-          Describe a computation, and give the result of that computation,
-          which verifies that <m>x</m> is not a codeword of the code <m>C</m>.
+          Então <m>x=\codeword{11100}</m> não é uma palavra-código.
+          Descreva um cálculo e dê o resultado desse cálculo
+          que verifique que <m>x</m> não é uma palavra-código do código <m>C</m>.
         </p>
       </statement>
       <response/>
@@ -1957,9 +1957,9 @@
     <exercise label="rq-algcodes-max-likelihood">
       <statement>
         <p>
-          For <m>H</m> and <m>x</m> as in the previous question,
-          suppose that <m>x</m> is received as a message.
-          Give a maximum likelihood decoding of the received message.
+          Para <m>H</m> e <m>x</m> como na questão anterior,
+          suponha que <m>x</m> seja recebido como mensagem.
+          Dê uma decodificação por máxima verossimilhança da mensagem recebida.
         </p>
       </statement>
       <response/>
@@ -1970,16 +1970,16 @@
     <!-- File: algcodes.xml  -->
     <!-- Title: Algebraic Coding Theory -->
   <exercises xml:id="algcodes-exercises" filenamebase="algcodes">
-    <title>Exercises</title>
+    <title>Exercícios</title>
     <exercise number="1" xml:id="algcodes-exercise-acceptable-codes">
       <statement>
         <p>
-          Why is the following encoding scheme not acceptable?
+          Por que o esquema de codificação a seguir não é aceitável?
         </p>
 
         <tabular halign="center" top="medium">
           <row bottom="medium">
-            <cell>Information</cell>
+            <cell>Informação</cell>
             <cell><m>0</m></cell>
             <cell><m>1</m></cell>
             <cell><m>2</m></cell>
@@ -1991,7 +1991,7 @@
             <cell><m>8</m></cell>
           </row>
           <row bottom="medium">
-            <cell>Codeword</cell>
+            <cell>Palavra-código</cell>
             <cell><m>\codeword{000}</m></cell>
             <cell><m>\codeword{001}</m></cell>
             <cell><m>\codeword{010}</m></cell>
@@ -2009,9 +2009,9 @@
     <exercise number="2" xml:id="algcodes-exercise-not-a-group-code">
       <statement>
         <p>
-          Without doing any addition,
-          explain why the following set of <m>4</m>-tuples in
-          <m>{\mathbb Z}_2^4</m> cannot be a group code.
+          Sem fazer nenhuma adição,
+          explique por que o conjunto seguinte de <m>4</m>-uplas em
+          <m>{\mathbb Z}_2^4</m> não pode ser um código de grupo.
           <md>
             (\codeword{0110}) \quad (\codeword{1001}) \quad (\codeword{1010}) \quad (\codeword{1100})
           </md>
@@ -2019,7 +2019,7 @@
       </statement>
       <hint>
         <p>
-          This cannot be a group code since <m>(\codeword{0000}) \notin C</m>.
+          Isso não pode ser um código de grupo, pois <m>(\codeword{0000}) \notin C</m>.
         </p>
       </hint>
     </exercise>
@@ -2027,7 +2027,7 @@
     <exercise number="3" xml:id="algcodes-exercise-hamming-distance">
       <statement>
         <p>
-          Compute the Hamming distances between the following pairs of <m>n</m>-tuples.
+          Calcule as distâncias de Hamming entre os seguintes pares de <m>n</m>-uplas.
 
           <ol cols="2">
             <li>
@@ -2066,7 +2066,7 @@
     <exercise number="4" xml:id="algcodes-exercise-weights">
       <statement>
         <p>
-          Compute the weights of the following <m>n</m>-tuples.
+          Calcule os pesos das seguintes <m>n</m>-uplas.
 
           <ol cols="2">
             <li>
@@ -2105,8 +2105,8 @@
     <exercise number="5" xml:id="algcodes-exercise-minimum-weight-7">
       <statement>
         <p>
-          Suppose that a linear code <m>C</m> has a minimum weight of <m>7</m>.
-          What are the error-detection and error-correction capabilities of <m>C</m>?
+          Suponha que um código linear <m>C</m> tenha peso mínimo <m>7</m>.
+          Quais são as capacidades de detecção e correção de erros de <m>C</m>?
         </p>
       </statement>
     </exercise>
@@ -2114,9 +2114,9 @@
     <exercise number="6" xml:id="algcodes-exercise-minimum-distance">
       <statement>
         <p>
-          In each of the following codes,
-          what is the minimum distance for the code?
-          What is the best situation we might hope for in connection with error detection and error correction?
+          Em cada um dos códigos a seguir,
+          qual é a distância mínima do código?
+          Qual é a melhor situação que podemos esperar em relação à detecção e à correção de erros?
 
           <ol>
             <li>
@@ -2155,12 +2155,12 @@
     <exercise number="7" xml:id="algcodes-exercise-null-space">
       <statement>
         <p>
-          Compute the null space of each of the following matrices.
-          What type of <m>(n,k)</m>-block codes are the null spaces?
-          Can you find a matrix
-          (not necessarily a standard generator matrix)
-          that generates each code?
-          Are your generator matrices unique?
+          Calcule o espaço nulo de cada uma das matrizes a seguir.
+          Que tipo de códigos de blocos <m>(n,k)</m> são os espaços nulos?
+          Você consegue encontrar uma matriz
+          (não necessariamente uma matriz geradora padrão)
+          que gere cada código?
+          Suas matrizes geradoras são únicas?
 
           <ol cols="2">
             <li>
@@ -2257,8 +2257,8 @@
     <exercise number="8" xml:id="algcodes-exercise-5-2-block-code">
       <statement>
         <p>
-          Construct a <m>(5,2)</m>-block code.
-          Discuss both the error-detection and error-correction capabilities of your code.
+          Construa um código de blocos <m>(5,2)</m>.
+          Discuta tanto as capacidades de detecção quanto as de correção de erros do seu código.
         </p>
       </statement>
     </exercise>
@@ -2266,7 +2266,7 @@
     <exercise number="9" xml:id="algcodes-exercise-null-space-code">
       <statement>
         <p>
-          Let <m>C</m> be the code obtained from the null space of the matrix
+          Seja <m>C</m> o código obtido do espaço nulo da matriz
           <md>
             H =
             \begin{pmatrix}
@@ -2275,16 +2275,16 @@
             0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
             \end{pmatrix}
           </md>.
-          Decode the message
+          Decodifique a mensagem
           <md>
             \codeword{01111} \quad \codeword{10101} \quad \codeword{01110} \quad \codeword{00011}
           </md>
-          if possible.
+          se possível.
         </p>
       </statement>
       <hint>
         <p>
-          Multiple errors occur in one of the received words.
+          Ocorrem vários erros em uma das palavras recebidas.
         </p>
       </hint>
     </exercise>
@@ -2292,12 +2292,12 @@
     <exercise number="10" xml:id="algcodes-exercise-probability">
       <statement>
         <p>
-          Suppose that a <m>1000</m>-bit binary message is transmitted.
-          Assume that the probability of a single error is <m>p</m> and that the errors occurring in different bits are independent of one another.
-          If <m>p = 0.01</m>,
-          what is the probability of more than one error occurring?
-          What is the probability of exactly two errors occurring?
-          Repeat this problem for <m>p = 0.0001</m>.
+          Suponha que uma mensagem binária de <m>1000</m> bits seja transmitida.
+          Suponha que a probabilidade de um erro simples seja <m>p</m> e que os erros ocorridos em bits diferentes sejam independentes entre si.
+          Se <m>p = 0.01</m>,
+          qual é a probabilidade de ocorrer mais de um erro?
+          Qual é a probabilidade de ocorrerem exatamente dois erros?
+          Repita este problema para <m>p = 0.0001</m>.
         </p>
       </statement>
     </exercise>
@@ -2305,10 +2305,10 @@
     <exercise number="11" xml:id="algcodes-exercise-check-matrices">
       <statement>
         <p>
-          Which matrices are canonical parity-check matrices?
-          For those matrices that are canonical parity-check matrices,
-          what are the corresponding standard generator matrices?
-          What are the error-detection and error-correction capabilities of the code generated by each of these matrices?
+          Quais matrizes são matrizes canônicas de verificação de paridade?
+          Para as matrizes que são matrizes canônicas de verificação de paridade,
+          quais são as matrizes geradoras padrão correspondentes?
+          Quais são as capacidades de detecção e correção de erros do código gerado por cada uma dessas matrizes?
 
           <ol cols="2">
             <li>
@@ -2365,7 +2365,7 @@
       </statement>
       <hint>
         <p>
-          (a) A canonical parity-check matrix with standard generator matrix
+          (a) Uma matriz canônica de verificação de paridade com matriz geradora padrão
           <md>
             G = 
             \begin{pmatrix}
@@ -2375,7 +2375,7 @@
         </p>
 
         <p>
-          (c) A canonical parity-check matrix with standard generator matrix
+          (c) Uma matriz canônica de verificação de paridade com matriz geradora padrão
           <md>
             G = 
             \begin{pmatrix}
@@ -2392,12 +2392,12 @@
     <exercise number="12" xml:id="algcodes-exercise-syndromes">
       <statement>
         <p>
-          List all possible syndromes for the codes generated by each of the matrices in <xref ref="algcodes-exercise-check-matrices"/>.
+          Liste todos os síndromes possíveis para os códigos gerados por cada uma das matrizes em <xref ref="algcodes-exercise-check-matrices"/>.
         </p>
       </statement>
       <hint>
         <p>
-          (a) All possible syndromes occur.
+          (a) Todos os síndromes possíveis ocorrem.
         </p>
       </hint>
     </exercise>
@@ -2405,7 +2405,7 @@
     <exercise number="13" xml:id="algcodes-exercise-syndrome-transmission-error">
       <statement>
         <p>
-          Let
+          Seja
           <md>
             H =
             \begin{pmatrix}
@@ -2414,30 +2414,30 @@
             1 &amp; 0 &amp; 1 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          Compute the syndrome caused by each of the following transmission errors.
+          Calcule o síndrome causado por cada um dos seguintes erros de transmissão.
 
           <ol>
             <li>
               <p>
-                An error in the first bit.
+                Um erro no primeiro bit.
               </p>
             </li>
 
             <li>
               <p>
-                An error in the third bit.
+                Um erro no terceiro bit.
               </p>
             </li>
 
             <li>
               <p>
-                An error in the last bit.
+                Um erro no último bit.
               </p>
             </li>
 
             <li>
               <p>
-                Errors in the third and fourth bits.
+                Erros no terceiro e no quarto bits.
               </p>
             </li>
           </ol>
@@ -2448,12 +2448,12 @@
     <exercise number="14" xml:id="algcodes-exercise-cosets-Z8">
       <statement>
         <p>
-          Let <m>C</m> be the group code in
-          <m>{\mathbb Z}_2^3</m> defined by the codewords <m>(\codeword{000})</m> and <m>(\codeword{111})</m>.
-          Compute the cosets of <m>C</m> in <m>{\mathbb Z}_2^3</m>.
-          Why was there no need to specify right or left cosets?
-          Give the single transmission error, if any,
-          to which each coset corresponds.
+          Seja <m>C</m> o código de grupo em
+          <m>{\mathbb Z}_2^3</m> definido pelas palavras-código <m>(\codeword{000})</m> e <m>(\codeword{111})</m>.
+          Calcule as classes laterais de <m>C</m> em <m>{\mathbb Z}_2^3</m>.
+          Por que não foi necessário especificar classes laterais à direita ou à esquerda?
+          Dê o erro de transmissão simples, se houver,
+          ao qual corresponde cada classe lateral.
         </p>
       </statement>
     </exercise>
@@ -2461,9 +2461,9 @@
     <exercise number="15" xml:id="algcodes-exercise-find-cosets">
       <statement>
         <p>
-          For each of the following matrices,
-          find the cosets of the corresponding code <m>C</m>.
-          Give a decoding table for each code if possible.
+          Para cada uma das matrizes a seguir,
+          encontre as classes laterais do código correspondente <m>C</m>.
+          Dê uma tabela de decodificação para cada código, se possível.
 
           <ol cols="2">
             <li>
@@ -2522,7 +2522,7 @@
           (a) <m>C</m>, <m>(\codeword{10000}) + C</m>,
           <m>(\codeword{01000}) + C</m>, <m>(\codeword{00100}) + C</m>, <m>(\codeword{00010}) + C</m>,
           <m>(\codeword{11000}) + C</m>, <m>(\codeword{01100}) + C</m>, <m>(\codeword{01010}) + C</m>.
-          A decoding table does not exist for <m>C</m> since this is only a single error-detecting code.
+          Não existe uma tabela de decodificação para <m>C</m>, pois este é apenas um código detector de erros simples.
         </p>
       </hint>
     </exercise>
@@ -2530,9 +2530,9 @@
     <exercise number="16" xml:id="algcodes-exercise-proof-distance">
       <statement>
         <p>
-          Let <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
-          and <m>{\mathbf z}</m> be binary <m>n</m>-tuples.
-          Prove each of the following statements.
+          Sejam <m>{\mathbf x}</m>, <m>{\mathbf y}</m>
+          e <m>{\mathbf z}</m> <m>n</m>-uplas binárias.
+          Prove cada uma das afirmações a seguir.
 
           <ol>
             <li>
@@ -2560,8 +2560,8 @@
     <exercise number="17" xml:id="algcodes-exercise-metric">
       <statement>
         <p>
-          A <term>metric</term> on a set <m>X</m> is a map
-          <m>d: X \times X \rightarrow {\mathbb R}</m> satisfying the following conditions.
+          Uma <term>métrica</term> em um conjunto <m>X</m> é uma aplicação
+          <m>d: X \times X \rightarrow {\mathbb R}</m> que satisfaz as seguintes condições.
 
           <ol>
             <li>
@@ -2589,10 +2589,10 @@
             </li>
           </ol>
 
-          In other words,
-          a metric is simply a generalization of the notion of distance.
-          Prove that Hamming distance is a metric on <m>{\mathbb Z}_2^n</m>.
-          Decoding a message actually reduces to deciding which is the closest codeword in terms of distance.
+          Em outras palavras,
+          uma métrica é simplesmente uma generalização da noção de distância.
+          Prove que a distância de Hamming é uma métrica em <m>{\mathbb Z}_2^n</m>.
+          Decodificar uma mensagem reduz-se, na verdade, a decidir qual é a palavra-código mais próxima em termos de distância.
         </p>
       </statement>
     </exercise>
@@ -2600,8 +2600,8 @@
     <exercise number="18" xml:id="algcodes-exercise-i-th-coordinate">
       <statement>
         <p>
-          Let <m>C</m> be a linear code.
-          Show that either the <m>i</m>th coordinates in the codewords of <m>C</m> are all zeros or exactly half of them are zeros.
+          Seja <m>C</m> um código linear.
+          Mostre que ou as coordenadas de índice <m>i</m> nas palavras-código de <m>C</m> são todas zero ou exatamente metade delas é zero.
         </p>
       </statement>
     </exercise>
@@ -2609,14 +2609,14 @@
     <exercise number="19" xml:id="algcodes-exercise-even-weight">
       <statement>
         <p>
-          Let <m>C</m> be a linear code.
-          Show that either every codeword has even weight or exactly half of the codewords have even weight.
+          Seja <m>C</m> um código linear.
+          Mostre que ou toda palavra-código tem peso par ou exatamente metade das palavras-código tem peso par.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>{\mathbf x} \in C</m> have odd weight and define a map from the set of odd codewords to the set of even codewords by <m>{\mathbf y} \mapsto {\mathbf x} + {\mathbf y}</m>.
-          Show that this map is a bijection.
+          Seja <m>{\mathbf x} \in C</m> de peso ímpar e defina uma aplicação do conjunto de palavras-código ímpares no conjunto de palavras-código pares por <m>{\mathbf y} \mapsto {\mathbf x} + {\mathbf y}</m>.
+          Mostre que essa aplicação é uma bijeção.
         </p>
       </hint>
     </exercise>
@@ -2624,7 +2624,7 @@
     <exercise number="20" xml:id="algcodes-exercise-even-weight-linear-code">
       <statement>
         <p>
-          Show that the codewords of even weight in a linear code <m>C</m> are also a linear code.
+          Mostre que as palavras-código de peso par em um código linear <m>C</m> também formam um código linear.
         </p>
       </statement>
     </exercise>
@@ -2632,10 +2632,10 @@
     <exercise number="21" xml:id="algcodes-exercise-ascii-characters">
       <statement>
         <p>
-          If we are to use an error-correcting linear code to transmit the <m>128</m> <acro>ASCII</acro> characters,
-          what size matrix must be used?
-          What size matrix must be used to transmit the extended <acro>ASCII</acro> character set of <m>256</m> characters?
-          What if we require only error detection in both cases?
+          Se quisermos usar um código linear corretor de erros para transmitir os <m>128</m> caracteres <acro>ASCII</acro>,
+          qual matriz deve ser usada?
+          Qual matriz deve ser usada para transmitir o conjunto estendido de caracteres <acro>ASCII</acro> com <m>256</m> caracteres?
+          E se exigirmos apenas detecção de erros em ambos os casos?
         </p>
       </statement>
     </exercise>
@@ -2643,9 +2643,9 @@
     <exercise number="22" xml:id="algcodes-exercise-canonical-parity-check-matrix">
       <statement>
         <p>
-          Find the canonical parity-check matrix that gives the even parity check bit code with three information positions.
-          What is the matrix for seven information positions?
-          What are the corresponding standard generator matrices?
+          Encontre a matriz canônica de verificação de paridade que fornece o código de bit de verificação de paridade par com três posições de informação.
+          Qual é a matriz para sete posições de informação?
+          Quais são as matrizes geradoras padrão correspondentes?
         </p>
       </statement>
     </exercise>
@@ -2653,14 +2653,14 @@
     <exercise number="23" xml:id="algcodes-exercise-20-information-positions">
       <statement>
         <p>
-          How many check positions are needed for a single error-correcting code with <m>20</m> information positions?
-          With <m>32</m> information positions?
+          Quantas posições de verificação são necessárias para um código corretor de erros simples com <m>20</m> posições de informação?
+          E com <m>32</m> posições de informação?
         </p>
       </statement>
       <hint>
         <p>
-          For <m>20</m> information positions,
-          at least <m>6</m> check bits are needed to ensure an error-correcting code.
+          Para <m>20</m> posições de informação,
+          são necessários pelo menos <m>6</m> bits de verificação para garantir um código corretor de erros.
         </p>
       </hint>
     </exercise>
@@ -2668,8 +2668,8 @@
     <exercise number="24" xml:id="algcodes-exercise-binary-code">
       <statement>
         <p>
-          Let <m>{\mathbf e}_i</m> be the binary <m>n</m>-tuple with a <m>1</m> in the <m>i</m>th coordinate and <m>0</m>'s elsewhere and suppose that <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
-          Show that <m>H{\mathbf e}_i</m> is the <m>i</m>th column of the matrix <m>H</m>.
+          Seja <m>{\mathbf e}_i</m> a <m>n</m>-upla binária com um <m>1</m> na coordenada de índice <m>i</m> e <m>0</m> nas demais, e suponha que <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
+          Mostre que <m>H{\mathbf e}_i</m> é a coluna de índice <m>i</m> da matriz <m>H</m>.
         </p>
       </statement>
     </exercise>
@@ -2677,16 +2677,16 @@
     <exercise number="25" xml:id="algcodes-exercise-dual-code">
       <statement>
         <p>
-          Let <m>C</m> be an <m>(n,k)</m>-linear code.
-          Define the <term>dual</term> or
-          <term>orthogonal code</term> of <m>C</m>  to be
+          Seja <m>C</m> um código linear <m>(n,k)</m>.
+          Defina o <term>código dual</term> ou
+          <term>código ortogonal</term> de <m>C</m> como
           <md>
             C^\perp = \{ {\mathbf x} \in {\mathbb Z}_2^n :  {\mathbf x} \cdot {\mathbf y} = 0 \text{ for all } {\mathbf y} \in C \}
           </md>.
           <ol>
             <li>
               <p>
-                Find the dual code of the linear code <m>C</m> where <m>C</m> is given by the matrix
+                Encontre o código dual do código linear <m>C</m>, onde <m>C</m> é dado pela matriz
                 <md>
                   \begin{pmatrix}
                   1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
@@ -2699,15 +2699,15 @@
 
             <li>
               <p>
-                Show that <m>C^\perp</m> is an <m>(n, n-k)</m>-linear code.
+                Mostre que <m>C^\perp</m> é um código linear <m>(n, n-k)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Find the standard generator and parity-check matrices of <m>C</m> and <m>C^\perp</m>.
-                What happens in general?
-                Prove your conjecture.
+                Encontre as matrizes geradora padrão e de verificação de paridade de <m>C</m> e <m>C^\perp</m>.
+                O que acontece em geral?
+                Prove sua conjectura.
               </p>
             </li>
           </ol>
@@ -2718,15 +2718,15 @@
     <exercise number="26" xml:id="algcodes-exercise-hamming-code">
       <statement>
         <p>
-          Let <m>H</m> be an <m>m \times n</m> matrix over <m>{\mathbb Z}_2</m>,
-          where the <m>i</m>th column is the number <m>i</m> written in binary with <m>m</m> bits.
-          The null space of such a matrix is called a
-          <term>Hamming code</term>.
+          Seja <m>H</m> uma matriz <m>m \times n</m> sobre <m>{\mathbb Z}_2</m>,
+          cuja coluna de índice <m>i</m> é o número <m>i</m> escrito em binário com <m>m</m> bits.
+          O espaço nulo de uma matriz desse tipo é chamado de
+          <term>código de Hamming</term>.
 
           <ol>
             <li>
               <p>
-                Show  that the matrix
+                Mostre que a matriz
                 <md>
                   H =
                   \begin{pmatrix}
@@ -2735,42 +2735,42 @@
                   1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0
                   \end{pmatrix}
                 </md>
-                generates a Hamming code.
-                What are the error-correcting properties of a Hamming code?
+                gera um código de Hamming.
+                Quais são as propriedades de correção de erros de um código de Hamming?
               </p>
             </li>
 
             <li>
               <p>
-                The column corresponding to the syndrome also marks the bit that was in error;
-                that is, the <m>i</m>th column of the matrix is <m>i</m> written as a binary number,
-                and the syndrome immediately tells us which bit is in error.
-                If the received word is <m>(101011)</m>, compute the syndrome.
-                In which bit did the error occur in this case,
-                and what codeword was originally transmitted?
+                A coluna correspondente ao síndrome também indica o bit que continha o erro;
+                isto é, a coluna de índice <m>i</m> da matriz é <m>i</m> escrito como um número binário,
+                e o síndrome informa imediatamente qual bit contém o erro.
+                Se a palavra recebida for <m>(101011)</m>, calcule o síndrome.
+                Em qual bit ocorreu o erro neste caso,
+                e qual palavra-código foi transmitida originalmente?
               </p>
             </li>
 
             <li>
               <p>
-                Give a binary matrix <m>H</m> for the Hamming code with six information positions and four check positions.
-                What are the check positions and what are the information positions?
-                Encode the messages <m>(\codeword{101101})</m> and <m>(\codeword{001001})</m>.
-                Decode the received words <m>(\codeword{0010000101})</m> and <m>(\codeword{0000101100})</m>.
-                What are the possible syndromes for this code?
+                Dê uma matriz binária <m>H</m> para o código de Hamming com seis posições de informação e quatro posições de verificação.
+                Quais são as posições de verificação e quais são as posições de informação?
+                Codifique as mensagens <m>(\codeword{101101})</m> e <m>(\codeword{001001})</m>.
+                Decodifique as palavras recebidas <m>(\codeword{0010000101})</m> e <m>(\codeword{0000101100})</m>.
+                Quais são os síndromes possíveis para esse código?
               </p>
             </li>
 
             <li>
               <p>
-                What is the number of check bits and the number of information bits in an <m>(m,n)</m>-block Hamming code?
-                Give both an upper and a lower bound on the number of information bits in terms of the number of check bits.
-                Hamming codes having the maximum possible number of information bits with <m>k</m> check bits are called <term>perfect</term>.
-                Every possible syndrome except <m>{\mathbf 0}</m> occurs as a column.
-                If the number of information bits is less than the maximum,
-                then the code is called <term>shortened</term>.
-                In this case,
-                give an example showing that some syndromes can represent multiple errors.
+                Qual é o número de bits de verificação e o número de bits de informação em um código de Hamming de blocos <m>(m,n)</m>?
+                Dê tanto um limite superior quanto um limite inferior para o número de bits de informação em termos do número de bits de verificação.
+                Os códigos de Hamming que têm o número máximo possível de bits de informação com <m>k</m> bits de verificação são chamados de <term>perfeitos</term>.
+                Todo síndrome possível, exceto <m>{\mathbf 0}</m>, ocorre como uma coluna.
+                Se o número de bits de informação for menor que o máximo,
+                então o código é chamado de <term>encurtado</term>.
+                Nesse caso,
+                dê um exemplo mostrando que alguns síndromes podem representar vários erros.
               </p>
             </li>
           </ol>
@@ -2780,15 +2780,15 @@
 
   </exercises>
   <exercises xml:id="algcodes-exercises-programming">
-    <title>Programming Exercises</title>
+    <title>Exercícios de programação</title>
     <exercise>
       <statement>
         <p>
-          Write a program to implement a <m>(16, 12)</m>-linear code.
-          Your program should be able to encode and decode messages using coset decoding.
-          Once your program is written,
-          write a program to simulate a binary symmetric channel with transmission noise.
-          Compare the results of your simulation with the theoretically predicted error probability.
+          Escreva um programa para implementar um código linear <m>(16, 12)</m>.
+          Seu programa deve ser capaz de codificar e decodificar mensagens usando a decodificação por classes laterais.
+          Depois de escrever seu programa,
+          escreva um programa para simular um canal binário simétrico com ruído de transmissão.
+          Compare os resultados de sua simulação com a probabilidade de erro prevista teoricamente.
         </p>
       </statement>
     </exercise>
@@ -2796,7 +2796,7 @@
   </exercises>
 
   <references xml:id="algcodes-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] -->
       Blake, I. F. <q>Codes and Designs,</q>
@@ -2864,16 +2864,16 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage has a full suite of linear codes and a variety of methods that may be used to investigate them.
+        O Sage oferece um conjunto completo de códigos lineares e vários métodos que podem ser usados para investigá-los.
       </p>
     </introduction>
 
     <subsection>
-      <title>Constructing Linear Codes</title>
+      <title>Construção de códigos lineares</title>
       <p>
-        The <c>codes</c> object can be used to get a concise listing of the available implemented codes.
-        Type <c>codes.</c> and press the <c>Tab</c> key and most interfaces to Sage will give you a list.
-        You can then use a question mark at the end of a method name to learn about the various parameters.
+        O objeto <c>codes</c> pode ser usado para obter uma lista concisa dos códigos implementados disponíveis.
+        Digite <c>codes.</c> e pressione a tecla <c>Tab</c>; a maioria das interfaces do Sage fornecerá uma lista.
+        Em seguida, você pode usar um ponto de interrogação ao final do nome de um método para conhecer os vários parâmetros.
       </p>
 
             <sage doctest="not tested">
@@ -2881,13 +2881,13 @@
             </sage>
 
       <p>
-        We will use the classic binary Hamming <m>(7,4)</m> code as an illustration.  <q>Binary</q>
-        means we have vectors with just 0's and 1's, the <m>7</m> is the length and means the vectors have <m>7</m> coordinates,
-        and the <m>4</m> is the dimension,
-        meaning this code has <m>2^4=16</m> vectors comprising the code.
-        The documentation assumes we know a few things from later in the course.
-        We use <c>GF(2)</c> to specify that our code is binary <mdash/> this will make more sense at the end of the course.
-        A second parameter is <c>r</c> and we can see from the formulas in the documenation that setting <c>r=3</c> will give length <m>7</m>.
+        Usaremos como ilustração o código de Hamming binário clássico <m>(7,4)</m>. <q>Binário</q>
+        significa que temos vetores com apenas 0 e 1; o <m>7</m> é o comprimento e significa que os vetores têm <m>7</m> coordenadas,
+        e o <m>4</m> é a dimensão,
+        o que significa que esse código tem <m>2^4=16</m> vetores.
+        A documentação supõe que conhecemos alguns conceitos de partes posteriores do curso.
+        Usamos <c>GF(2)</c> para especificar que nosso código é binário <mdash/> isso fará mais sentido ao final do curso.
+        Um segundo parâmetro é <c>r</c>, e podemos ver pelas fórmulas da documentação que definir <c>r=3</c> produzirá comprimento <m>7</m>.
       </p>
 
             <sage>
@@ -2897,10 +2897,10 @@
     </subsection>
 
     <subsection>
-      <title>Properties of Linear Codes</title>
+      <title>Propriedades dos códigos lineares</title>
       <p>
-        We can examine the Hamming code we just built.
-        First the dimension.
+        Podemos examinar o código de Hamming que acabamos de construir.
+        Primeiro, a dimensão.
       </p>
 
             <sage>
@@ -2909,7 +2909,7 @@
             </sage>
 
       <p>
-        The code is small enough that we can list all the codewords.
+        O código é suficientemente pequeno para que possamos listar todas as palavras-código.
       </p>
 
             <sage>
@@ -2925,9 +2925,9 @@
             </sage>
 
       <p>
-        The minimum distance is perhaps one of the most important properties.
-        Hamming codes always have minimum distance <m>d=3</m>,
-        so they are always single error-correcting.
+        A distância mínima talvez seja uma das propriedades mais importantes.
+        Os códigos de Hamming sempre têm distância mínima <m>d=3</m>,
+        portanto são sempre corretores de erros simples.
       </p>
 
             <sage>
@@ -2936,11 +2936,11 @@
             </sage>
 
       <p>
-        We know that the parity-check matrix and the generator matrix are useful for the construction,
-        description and analysis of linear codes.
-        The Sage method names are just a bit cryptic.
-        Sage has extensive routines for analyzing matrices with elements from different fields,
-        so we perform much of the subsequent analysis of these matrices within Sage.
+        Sabemos que a matriz de verificação de paridade e a matriz geradora são úteis para a construção,
+        descrição e análise de códigos lineares.
+        Os nomes dos métodos do Sage são um pouco enigmáticos.
+        O Sage possui rotinas extensas para analisar matrizes com elementos de diferentes corpos,
+        portanto realizaremos grande parte da análise subsequente dessas matrizes no Sage.
       </p>
 
             <sage>
@@ -2953,14 +2953,14 @@
             </sage>
 
       <p>
-        The generator matrix here in the text has
-        <em>columns</em> that are codewords,
-        and linear combinations of the columns
-        (the column space of the matrix)
-        are codewords.
-        In Sage the generator matrix has <em>rows</em>
-        that are codewords and the row space of the matrix is the code.
-        So here is another place where we need to mentally translate between a choice made in the text and a choice made by the Sage developers.
+        A matriz geradora apresentada no texto tem
+        <em>colunas</em> que são palavras-código,
+        e combinações lineares das colunas
+        (o espaço coluna da matriz)
+        são palavras-código.
+        No Sage, a matriz geradora tem <em>linhas</em>
+        que são palavras-código, e o espaço linha da matriz é o código.
+        Portanto, este é outro ponto em que precisamos traduzir mentalmente entre uma escolha feita no texto e uma escolha feita pelos desenvolvedores do Sage.
       </p>
 
             <sage>
@@ -2974,10 +2974,10 @@
             </sage>
 
       <p>
-        Here is a partial test that these two matrices are correct,
-        exercising <xref ref="algcodes-lemma-parity-check"/>.
-        Notice that we need to use the transpose of the generator matrix,
-        for reasons described above.
+        Eis um teste parcial de que essas duas matrizes estão corretas,
+        aplicando o <xref ref="algcodes-lemma-parity-check"/>.
+        Observe que precisamos usar a transposta da matriz geradora,
+        pelas razões descritas acima.
       </p>
 
             <sage>
@@ -2986,12 +2986,12 @@
             </sage>
 
       <p>
-        Note that the parity-check may not be canonical and the generator matrix may not be standard.
-        Sage can produce a generator matrix that has a set of columns that forms an identity matrix,
-        though no guarantee is made that these columns are the first columns.
-        (Columns, not rows.)
-        Such a matrix is said to be <term>systematic</term>,
-        and the Sage method is <c>.systematic_generator_matrix()</c>.
+        Observe que a matriz de verificação de paridade pode não ser canônica e a matriz geradora pode não ser padrão.
+        O Sage pode produzir uma matriz geradora que tem um conjunto de colunas que forma uma matriz identidade,
+        embora não haja garantia de que essas colunas sejam as primeiras.
+        (Colunas, não linhas.)
+        Uma matriz desse tipo é dita <term>sistemática</term>,
+        e o método do Sage é <c>.systematic_generator_matrix()</c>.
       </p>
 
             <sage>
@@ -3006,10 +3006,10 @@
     </subsection>
 
     <subsection>
-      <title>Decoding with a Linear Code</title>
+      <title>Decodificação com um código linear</title>
       <p>
-        We can decode received messages originating from a linear code.
-        Suppose we receive the length <m>7</m> binary vector <c>r</c>.
+        Podemos decodificar mensagens recebidas que se originam de um código linear.
+        Suponha que recebamos o vetor binário de comprimento <m>7</m> <c>r</c>.
       </p>
 
             <sage>
@@ -3018,9 +3018,9 @@
             </sage>
 
       <p>
-        We can recognize that one or more errors has occured,
-        since <c>r</c> is not in the code,
-        as the next computation does not yield the zero vector.
+        Podemos reconhecer que ocorreu um ou mais erros,
+        pois <c>r</c> não pertence ao código,
+        já que o cálculo seguinte não produz o vetor nulo.
       </p>
 
             <sage>
@@ -3029,10 +3029,10 @@
             </sage>
 
       <p>
-        A linear code has a <c>.decode</c> method.
-        You may choose from several different algorithms,
-        while the Hamming codes have their own custom algorithm.
-        The default algorithm is syndrome decoding.
+        Um código linear possui um método <c>.decode</c>.
+        Você pode escolher entre vários algoritmos diferentes,
+        enquanto os códigos de Hamming têm seu próprio algoritmo específico.
+        O algoritmo padrão é a decodificação por síndromes.
       </p>
 
             <sage>
@@ -3041,17 +3041,17 @@
             </sage>
 
       <p>
-        So if we are willing to assume that only one error occured
-        (which we might,
-        if the probability of an indivual entry of the vector being in error is very low),
-        then we see that an error occured in the third position.
+        Portanto, se estivermos dispostos a supor que ocorreu apenas um erro
+        (o que podemos fazer
+        se a probabilidade de uma entrada individual do vetor estar errada for muito baixa),
+        vemos que ocorreu um erro na terceira posição.
       </p>
 
       <p>
-        Remember that it could happen that there was more than just one error.
-        For example,
-        suppose the message was the same as before and errors occurred in the third,
-        fifth and sixth locations.
+        Lembre-se de que pode acontecer de haver mais de um erro.
+        Por exemplo,
+        suponha que a mensagem seja a mesma de antes e que ocorram erros na terceira,
+        quinta e sexta posições.
       </p>
 
             <sage>
@@ -3065,8 +3065,8 @@
             </sage>
 
       <p>
-        It then appears that we have received a codeword,
-        so we assume no errors at all, and decode incorrectly.
+        Nesse caso, parece que recebemos uma palavra-código,
+        então supomos que não houve erros e decodificamos incorretamente.
       </p>
 
             <sage>
@@ -3080,46 +3080,46 @@
     </subsection>
   </section>
   <exercises xml:id="algcodes-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <exercise number="1" xml:id="algcodes-sage-exercise-golay-code">
       <statement>
         <p>
-          Create the (binary) Golay code with the <c>codes.GolayCode()</c> constructor.
-          Read the documentation to be sure you build the binary version
-          (not ternary),
-          and do not build the extended version
-          (which is the default).
+          Crie o código de Golay (binário) com o construtor <c>codes.GolayCode()</c>.
+          Leia a documentação para ter certeza de que está construindo a versão binária
+          (não ternária)
+          e de que não está construindo a versão estendida
+          (que é a padrão).
         </p>
 
         <ol>
           <li>
             <p>
-              Use Sage methods to compute the length,
-              dimension and minimum distance of the code.
+              Use métodos do Sage para calcular o comprimento,
+              a dimensão e a distância mínima do código.
             </p>
           </li>
 
           <li>
             <p>
-              How many errors can this code detect?
-              How many can it correct?
+              Quantos erros esse código pode detectar?
+              Quantos pode corrigir?
             </p>
           </li>
 
           <li>
             <p>
-              Find a nonzero codeword and introduce three errors by adding a vector with three 1's
-              (your choice)
-              to create a received message.
-              Show that the message is decoded properly.
+              Encontre uma palavra-código não nula e introduza três erros adicionando um vetor com três 1
+              (à sua escolha)
+              para criar uma mensagem recebida.
+              Mostre que a mensagem é decodificada corretamente.
             </p>
           </li>
 
           <li>
             <p>
-              Recycle your choices from the previous part,
-              but now add one more error.
-              Does the new received message get decoded properly?
+              Reutilize suas escolhas da parte anterior,
+              mas agora adicione mais um erro.
+              A nova mensagem recebida é decodificada corretamente?
             </p>
           </li>
         </ol>
@@ -3129,39 +3129,39 @@
     <exercise number="2" xml:id="algcodes-sage-exercise-parity-check-bit">
       <statement>
         <p>
-          One technique for improving the characteristics of a code is to add an overall parity-check bit,
-          much like the lone parity-check bit of the <acro>ASCII</acro> code described in <xref ref="algcodes-example-even-parity"/>.
-          Such codes are referred to as the
-          <term>extended</term> version of the original.
+          Uma técnica para melhorar as características de um código é adicionar um bit geral de verificação de paridade,
+          semelhante ao único bit de verificação de paridade do código <acro>ASCII</acro> descrito em <xref ref="algcodes-example-even-parity"/>.
+          Esses códigos são chamados de versão
+          <term>estendida</term> do original.
         </p>
 
         <ol>
           <li>
             <p>
-              Construct the (binary) Golay code and obtain the parity-check matrix.
-              Use Sage commands to enlarge this matrix to create a new parity check matrix that has an additional overall parity-check bit.
-              You may find the matrix methods <c>.augment()</c> and <c>.stack()</c> useful,
-              as well as the constructors <c>zero_vector()</c> and <c>ones_matrix()</c>(remembering that we specify the binary entries as being from the field <c>GF(2)</c>.)
+              Construa o código de Golay (binário) e obtenha a matriz de verificação de paridade.
+              Use comandos do Sage para ampliar essa matriz e criar uma nova matriz de verificação de paridade que tenha um bit geral adicional de verificação de paridade.
+              Os métodos de matriz <c>.augment()</c> e <c>.stack()</c> podem ser úteis,
+              assim como os construtores <c>zero_vector()</c> e <c>ones_matrix()</c> (lembrando que especificamos as entradas binárias como pertencentes ao corpo <c>GF(2)</c>).
             </p>
 
             <p>
-              Create the extended code by supplying your enlarged parity-check matrix to the <c>codes.from_parity_check_matrix()</c> constructor and compute the length,
-              dimension and minimum distance of the extended code.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              How are the properties of this new code better?
-              At what cost?
+              Crie o código estendido fornecendo sua matriz ampliada de verificação de paridade ao construtor <c>codes.from_parity_check_matrix()</c> e calcule o comprimento,
+              a dimensão e a distância mínima do código estendido.
             </p>
           </li>
 
           <li>
             <p>
-              Now create the extended (binary) Golay code with the Sage constructor <c>codes.GolayCode()</c> and the correct keyword to obtain the extended version.
-              With luck, the sorted lists of your codewords and Sage's codewords will be equal.
-              If not, the linear code method <c>.is_permutation_equivalent()</c> should return <c>True</c> to indicate that your code and Sage's are just rearrangements of each other.
+              Em que sentido as propriedades desse novo código são melhores?
+              A que custo?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Agora crie o código de Golay (binário) estendido com o construtor do Sage <c>codes.GolayCode()</c> e a palavra-chave correta para obter a versão estendida.
+              Com sorte, as listas ordenadas de suas palavras-código e das palavras-código do Sage serão iguais.
+              Caso contrário, o método de código linear <c>.is_permutation_equivalent()</c> deverá retornar <c>True</c>, indicando que seu código e o do Sage são apenas rearranjos um do outro.
             </p>
           </li>
         </ol>
@@ -3171,33 +3171,33 @@
     <exercise number="3" xml:id="algcodes-sage-exercise-buggy-sage-code">
       <statement>
         <p>
-          <em>Note:</em> This problem is on holiday
-          (as of Sage 6.7),
-          while some buggy Sage code for the minimum distance of a Hamming code gets sorted out.
-          The <c>r = 2</c> case produces an error message and for <c>r &gt; 5</c> the computation of the minimum distance has become intolerably slow.
-          So it is a bit harder to make a reasonable conjecture from just <m>3</m> cases.
+          <em>Nota:</em> Este problema está suspenso
+          (a partir do Sage 6.7),
+          enquanto alguns códigos defeituosos do Sage para a distância mínima de um código de Hamming são corrigidos.
+          O caso <c>r = 2</c> produz uma mensagem de erro e, para <c>r &gt; 5</c>, o cálculo da distância mínima tornou-se intoleravelmente lento.
+          Assim, é um pouco mais difícil formular uma conjectura razoável com apenas <m>3</m> casos.
         </p>
 
         <p>
-          The dual of an <m>(n,k)</m> block code is formed as all the set of all binary vectors which are orthogonal to every vector of the original code.
-          <xref ref="algcodes-exercise-dual-code"/> describes this construction and asks about some of its properties.
+          O dual de um código de blocos <m>(n,k)</m> é formado pelo conjunto de todos os vetores binários que são ortogonais a todo vetor do código original.
+          <xref ref="algcodes-exercise-dual-code"/> descreve essa construção e pergunta sobre algumas de suas propriedades.
         </p>
 
         <p>
-          You can construct the dual of a code in Sage with the <c>.dual_code()</c> method.
-          Construct the binary Hamming codes, and their duals,
-          with the parameter <c>r</c> ranging from <c>2</c> to <c>5</c>,
+          Você pode construir o dual de um código no Sage com o método <c>.dual_code()</c>.
+          Construa os códigos de Hamming binários e seus duais,
+          com o parâmetro <c>r</c> variando de <c>2</c> a <c>5</c>,
           inclusive.
-          Build a table with six columns
-          (perhaps employing the <c>html.table()</c> function)
-          that lists <m>r</m>,
-          the length of the codes,
-          the dimensions of the original and the dual,
-          and the minimum distances of the orginal and the dual.
+          Construa uma tabela com seis colunas
+          (talvez usando a função <c>html.table()</c>)
+          que liste <m>r</m>,
+          o comprimento dos códigos,
+          as dimensões do original e do dual,
+          e as distâncias mínimas do original e do dual.
         </p>
 
         <p>
-          Conjecture formulas for the dimension and minimum distance of the dual of the Hamming code as expressions in the parameter <m>r</m>.
+          Conjecture fórmulas para a dimensão e a distância mínima do dual do código de Hamming como expressões no parâmetro <m>r</m>.
         </p>
       </statement>
     </exercise>
@@ -3205,35 +3205,35 @@
     <exercise number="4" xml:id="algcodes-sage-exercise-perfect-code">
       <statement>
         <p>
-          A code with minimum distance <m>d</m> is called <term>perfect</term>
-          if every possible vector is within Hamming distance <m>(d-1)/2</m> of some codeword.
-          If we expand our notion of geometry to account for the Hamming distance as the metric,
-          then we can speak of a sphere of radius <m>r</m> around a vector (or codeword.
-          For a code of length <m>n</m>,
-          such a sphere will contain
+          Um código com distância mínima <m>d</m> é chamado de <term>perfeito</term>
+          se todo vetor possível estiver a distância de Hamming <m>(d-1)/2</m> de alguma palavra-código.
+          Se ampliarmos nossa noção de geometria para considerar a distância de Hamming como métrica,
+          poderemos falar de uma esfera de raio <m>r</m> em torno de um vetor (ou palavra-código).
+          Para um código de comprimento <m>n</m>,
+          uma esfera desse tipo conterá
           <md>
             1 + {n\choose 1} + {n\choose 2} + \cdots + {n\choose r}
           </md>
-          vectors within in it.
-          For a perfect code,
-          the spheres of radius <m>d</m> centered at the codewords of the code will exactly partition the entire set of all possible vectors.
-          (This is the connection that means that coding theory meshes with sphere packing problems.)
+          vetores em seu interior.
+          Para um código perfeito,
+          as esferas de raio <m>d</m> centradas nas palavras-código do código particionarão exatamente o conjunto de todos os vetores possíveis.
+          (Essa é a conexão que faz a teoria dos códigos se relacionar com problemas de empacotamento de esferas.)
         </p>
 
         <p>
-          A consequence of a code of dimension <m>k</m> being perfect is that
+          Uma consequência de um código de dimensão <m>k</m> ser perfeito é que
           <md>
             2^k\left({n\choose 0} + {n\choose 1} + {n\choose 2} + \cdots + {n\choose \frac{d-1}{2}}\right) = 2^n
           </md>
-          Conversely, if a code has minimum distance <m>d</m> and the condition above is true,
-          then the code is perfect.
+          Reciprocamente, se um código tem distância mínima <m>d</m> e a condição acima é verdadeira,
+          então o código é perfeito.
         </p>
 
         <p>
-          Write a Python function,
-          named <c>is_perfect()</c> which accepts a linear code as input and returns <c>True</c> or <c>False</c>.
-          Demonstrate your function by checking that the (binary) Golay code is perfect,
-          and then use a loop to verify that the (binary) Hamming codes are perfect for all lengths below <m>32</m>.
+          Escreva uma função Python,
+          chamada <c>is_perfect()</c>, que aceite um código linear como entrada e retorne <c>True</c> ou <c>False</c>.
+          Demonstre sua função verificando que o código de Golay (binário) é perfeito
+          e, em seguida, use um laço para verificar que os códigos de Hamming (binários) são perfeitos para todos os comprimentos menores que <m>32</m>.
         </p>
       </statement>
     </exercise>
