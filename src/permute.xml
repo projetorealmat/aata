@@ -724,36 +724,36 @@
   </section>
 
   <section xml:id="permute-section-dihedral-groups">
-    <title>Dihedral Groups</title>
+    <title>Grupos diédricos</title>
     <introduction>
       <p>
-        Another special type of permutation group is the dihedral group.
-        Recall the symmetry group of an equilateral triangle in <xref ref="groups"/>.
-        Such groups consist of the rigid motions of a regular <m>n</m>-sided polygon or <m>n</m>-gon.
-        For <m>n = 3, 4, \ldots</m>, we define the
-        <term>nth dihedral group</term><idx><h>Group</h><h>dihedral</h></idx>
-        to be the group of rigid motions of a regular <m>n</m>-gon.
-        We will denote this group by <m>D_n</m>.
+        Outro tipo especial de grupo de permutações é o grupo diédrico.
+        Recorde o grupo de simetrias de um triângulo equilátero em <xref ref="groups"/>.
+        Esses grupos consistem nos movimentos rígidos de um polígono regular de <m>n</m> lados, ou <m>n</m>-gono.
+        Para <m>n = 3, 4, \ldots</m>, definimos o
+        <term>n-ésimo grupo diédrico</term><idx><h>Grupo</h><h>diédrico</h></idx>
+        como o grupo de movimentos rígidos de um <m>n</m>-gono regular.
+        Denotaremos esse grupo por <m>D_n</m>.
 
         <notation>
           <usage><m>D_n</m></usage>
-          <description>the dihedral group</description>
+          <description>o grupo diédrico</description>
         </notation>
 
-        We can number the vertices of a regular <m>n</m>-gon by
+        Podemos numerar os vértices de um <m>n</m>-gono regular por
         <m>1, 2, \ldots,
         n</m> (<xref ref="permute-figure-regular"/>).
-        Notice that there are exactly <m>n</m> choices to replace the first vertex.
-        If we replace the first vertex by <m>k</m>,
-        then the second vertex must be replaced either by vertex <m>k+1</m> or by vertex <m>k-1</m>;
-        hence, there are <m>2n</m> possible rigid motions of the <m>n</m>-gon.
-        We summarize these results in the following theorem.
+        Observe que há exatamente <m>n</m> escolhas para substituir o primeiro vértice.
+        Se substituirmos o primeiro vértice por <m>k</m>,
+        então o segundo vértice deve ser substituído pelo vértice <m>k+1</m> ou pelo vértice <m>k-1</m>;
+        portanto, há <m>2n</m> movimentos rígidos possíveis do <m>n</m>-gono.
+        Resumimos esses resultados no teorema a seguir.
       </p>
 
       <figure xml:id="permute-figure-regular">
-        <caption>A regular <m>n</m>-gon</caption>
+        <caption>Um <m>n</m>-gono regular</caption>
         <image width="60%" xml:id="permute-ngon">
-          <description>An n-gon with vertex 1 at the top, followed by 2, 3, 4, ..., n - 1, n.</description>
+          <description>Um n-gono com o vértice 1 no topo, seguido por 2, 3, 4, ..., n - 1, n.</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-ngon.tex" parse="text"/>
@@ -765,8 +765,8 @@
       <theorem>
         <statement>
           <p>
-            The dihedral group, <m>D_n</m>,
-            is a subgroup of <m>S_n</m> of order <m>2n</m>.
+            O grupo diédrico, <m>D_n</m>,
+            é um subgrupo de <m>S_n</m> de ordem <m>2n</m>.
           </p>
         </statement>
       </theorem>
@@ -774,31 +774,31 @@
       <theorem xml:id="permute-theorem-dn-generator">
         <statement>
           <p>
-            The group <m>D_n</m>, <m>n \geq 3</m>,
-            consists of all products of the two elements <m>r</m> and <m>s</m>, where <m>r</m> has order <m>n</m> and <m>s</m> has order <m>2</m>, and these two elements
-            satisfy the relation <m>srs = r^{-1}</m>.
+            O grupo <m>D_n</m>, <m>n \geq 3</m>,
+            consiste em todos os produtos dos dois elementos <m>r</m> e <m>s</m>, onde <m>r</m> tem ordem <m>n</m> e <m>s</m> tem ordem <m>2</m>, e esses dois elementos
+            satisfazem a relação <m>srs = r^{-1}</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            The possible motions of a regular <m>n</m>-gon are either reflections or rotations (<xref ref="permute-figure-rotations"/>).
-            There are exactly <m>n</m> possible rotations:
+            Os movimentos possíveis de um <m>n</m>-gono regular são reflexões ou rotações (<xref ref="permute-figure-rotations"/>).
+            Há exatamente <m>n</m> rotações possíveis:
             <md>
               \identity, \frac{360^{\circ} }{n}, 2 \cdot \frac{360^{\circ} }{n}, \ldots, (n-1) \cdot \frac{360^{\circ} }{n}
             </md>.
-            We will denote the rotation <m>360^{\circ} /n</m> by <m>r</m>.
-            The rotation <m>r</m> generates all  of the other rotations.
-            That is,
+            Denotaremos a rotação <m>360^{\circ} /n</m> por <m>r</m>.
+            A rotação <m>r</m> gera todas as outras rotações.
+            Isto é,
             <md>
               r^k = k \cdot \frac{360^{\circ} }{n}
             </md>.
           </p>
 
           <figure xml:id="permute-figure-rotations">
-            <caption>Rotations and reflections of a regular <m>n</m>-gon</caption>
+            <caption>Rotações e reflexões de um <m>n</m>-gono regular</caption>
             <image xml:id="permute-motions-ngon">
-              <description>Rotations and reflections of an octagon.  Where the top octagon (1 (top), 2, 3, 4, 5, 6, 7, 8) is rotated to an octagon (2 (top), 3, 4, 5, 6, 7, 8, 1), and the octagon below (1 (top), 2, 3, 4, 5, 6, 7, 8) is reflected about a vertical axis to (1 (top), 8, 7, 6, 5, 4, 3, 2).</description>
+              <description>Rotações e reflexões de um octógono. O octógono superior (1 no topo, 2, 3, 4, 5, 6, 7, 8) é rotacionado para um octógono (2 no topo, 3, 4, 5, 6, 7, 8, 1), e o octógono abaixo (1 no topo, 2, 3, 4, 5, 6, 7, 8) é refletido em torno de um eixo vertical, resultando em (1 no topo, 8, 7, 6, 5, 4, 3, 2).</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-motions-ngon.tex" parse="text"/>
@@ -808,36 +808,36 @@
           </figure>
 
           <p>
-            Label the <m>n</m> reflections <m>s_1, s_2, \ldots, s_n</m>,
-            where <m>s_k</m> is the reflection that leaves vertex <m>k</m> fixed.
-            There are two cases of reflections,
-            depending on whether <m>n</m> is even or odd.
-            If there are an even number of vertices,
-            then two vertices are left fixed by a reflection,
-            and <m>s_1 = s_{n/2 + 1}, s_2 = s_{n/2 + 2}, \ldots, s_{n/2}  = s_n</m>.
-            If there are an odd number of vertices,
-            then only a single vertex is left fixed by a reflection and
+            Denote as <m>n</m> reflexões por <m>s_1, s_2, \ldots, s_n</m>,
+            onde <m>s_k</m> é a reflexão que deixa fixo o vértice <m>k</m>.
+            Há dois casos de reflexões,
+            dependendo de <m>n</m> ser par ou ímpar.
+            Se houver um número par de vértices,
+            então dois vértices permanecem fixos por uma reflexão,
+            e <m>s_1 = s_{n/2 + 1}, s_2 = s_{n/2 + 2}, \ldots, s_{n/2}  = s_n</m>.
+            Se houver um número ímpar de vértices,
+            então apenas um vértice permanece fixo por uma reflexão e
             <m>s_1, s_2, \ldots,
-            s_n</m> are distinct (<xref ref="permute-figure-types"/>).
-            In either case, the order of each <m>s_k</m> is two.
-            Let <m>s = s_1</m>.
-            Then <m>s^2 = 1</m> and <m>r^n = 1</m>.
-            Since any rigid motion <m>t</m> of the <m>n</m>-gon replaces the first vertex by the vertex <m>k</m>,
-            the second vertex must be replaced by either <m>k+1</m> or by <m>k-1</m>.
-            If the second vertex is replaced by <m>k+1</m>, then <m>t = r^k</m>.
-            If the second vertex is replaced by <m>k-1</m>, then <m>t = r^k s</m>.<fn>Since we are in an abstract group, we will adopt the convention that group elements are multiplied left to right.</fn>
-            Hence, <m>r</m> and <m>s</m> generate <m>D_n</m>.
-            That is, <m>D_n</m> consists of all finite products of <m>r</m> and <m>s</m>,
+            s_n</m> são distintas (<xref ref="permute-figure-types"/>).
+            Em ambos os casos, a ordem de cada <m>s_k</m> é dois.
+            Seja <m>s = s_1</m>.
+            Então <m>s^2 = 1</m> e <m>r^n = 1</m>.
+            Como qualquer movimento rígido <m>t</m> do <m>n</m>-gono substitui o primeiro vértice pelo vértice <m>k</m>,
+            o segundo vértice deve ser substituído por <m>k+1</m> ou por <m>k-1</m>.
+            Se o segundo vértice for substituído por <m>k+1</m>, então <m>t = r^k</m>.
+            Se o segundo vértice for substituído por <m>k-1</m>, então <m>t = r^k s</m>.<fn>Como estamos em um grupo abstrato, adotaremos a convenção de que os elementos do grupo são multiplicados da esquerda para a direita.</fn>
+            Portanto, <m>r</m> e <m>s</m> geram <m>D_n</m>.
+            Isto é, <m>D_n</m> consiste em todos os produtos finitos de <m>r</m> e <m>s</m>,
             <md>
               D_n = \{1, r, r^2, \ldots, r^{n-1}, s, rs, r^2 s, \ldots, r^{n-1} s\}
             </md>.
-            We will leave the proof that <m>srs = r^{-1}</m> as an exercise.
+            Deixamos a demonstração de <m>srs = r^{-1}</m> como exercício.
           </p>
 
           <figure xml:id="permute-figure-types">
-              <caption>Types of  reflections of a regular <m>n</m>-gon</caption>
+              <caption>Tipos de reflexões de um <m>n</m>-gono regular</caption>
               <image xml:id="permute-reflections-ngon">
-                <description>The top hexagon (1 (top), 2, 3, 4, 5, 6) is relected to (1 (top), 6, 5, 4, 3,. 2).  The bottom pentqgon (1 (top), 2, 3, 4, 5) is relected to become (1 (top), 5, 4, 3, 2).</description>
+                <description>O hexágono superior (1 no topo, 2, 3, 4, 5, 6) é refletido para (1 no topo, 6, 5, 4, 3, 2). O pentágono inferior (1 no topo, 2, 3, 4, 5) é refletido, resultando em (1 no topo, 5, 4, 3, 2).</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-reflections-ngon.tex" parse="text"/>
@@ -850,23 +850,23 @@
 
       <example xml:id="permute-example-d4-group">
         <p>
-          The group of rigid motions of a square,
-          <m>D_4</m>, consists of eight elements.
-          With the vertices numbered <m>1</m>, <m>2</m>, <m>3</m>,
-          <m>4</m> (<xref ref="permute-figure-d4"/>), the rotations are
+          O grupo de movimentos rígidos de um quadrado,
+          <m>D_4</m>, consiste em oito elementos.
+          Com os vértices numerados <m>1</m>, <m>2</m>, <m>3</m>,
+          <m>4</m> (<xref ref="permute-figure-d4"/>), as rotações são
           <md>
             <mrow>r   &amp; = (1 \, 2 \, 3 \, 4)</mrow>
             <mrow>r^2 &amp; = (1 \, 3)(2 \, 4)</mrow>
             <mrow>r^3 &amp; = (1 \, 4 \, 3 \, 2)</mrow>
             <mrow>r^4 &amp; = (1)</mrow>
           </md>
-          and the reflections are
+          e as reflexões são
           <md>
             <mrow>s_1 &amp; = (2 \, 4)</mrow>
             <mrow>s_2 &amp; = (1 \, 3)</mrow>
           </md>.
-          The order of <m>D_4</m> is <m>8</m>.
-          The remaining two elements are
+          A ordem de <m>D_4</m> é <m>8</m>.
+          Os dois elementos restantes são
           <md>
             <mrow>r s_1   &amp; = (1 \, 2)(3 \, 4)</mrow>
             <mrow>r^3 s_1 &amp; = (1 \, 4)(2 \, 3)</mrow>
@@ -874,9 +874,9 @@
         </p>
 
         <figure xml:id="permute-figure-d4">
-          <caption>The group <m>D_4</m></caption>
+          <caption>O grupo <m>D_4</m></caption>
           <image width="60%" xml:id="permute-dihedral-four">
-            <description>A square with diagonal lines of symmetries connecting opposite vertices, a horizontal line of symmetry that bisects the two vertical sides of the square and a vertical line of symmetry that bisects the two horizaontal sides of the square.</description>
+            <description>Um quadrado com linhas diagonais de simetria ligando vértices opostos, uma linha horizontal de simetria que bissecta os dois lados verticais do quadrado e uma linha vertical de simetria que bissecta os dois lados horizontais do quadrado.</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-dihedral-four.tex" parse="text"/>
@@ -890,23 +890,23 @@
     </introduction>
 
     <subsection xml:id="permute-subsection-motion-group-cube">
-      <title>The Motion Group of a Cube</title>
+      <title>O grupo de movimentos de um cubo</title>
       <p>
-        We can investigate the groups of rigid motions of geometric objects other than a regular <m>n</m>-sided polygon to obtain interesting examples of permutation groups.
-        Let us consider the group of rigid motions of a cube.  By rigid motion, we mean a rotation with the axis of rotation about opposing faces, edges, or vertices.
-        One of the first questions that we can ask about this group is
-        <q>what is its order?</q>
-        A cube has <m>6</m> sides.
-        If a particular side is facing upward,
-        then there are four possible rotations of the cube that will preserve the upward-facing side.
-        Hence, the order of the group is <m>6 \cdot 4 = 24</m>.
-        We have just proved the following proposition.
+        Podemos investigar os grupos de movimentos rígidos de objetos geométricos diferentes de um polígono regular de <m>n</m> lados para obter exemplos interessantes de grupos de permutações.
+        Consideremos o grupo de movimentos rígidos de um cubo. Por movimento rígido, entendemos uma rotação cujo eixo passa por faces, arestas ou vértices opostos.
+        Uma das primeiras perguntas que podemos fazer sobre esse grupo é:
+        <q>qual é a sua ordem?</q>
+        Um cubo tem <m>6</m> faces.
+        Se uma face específica estiver voltada para cima,
+        haverá quatro rotações possíveis do cubo que preservarão a face voltada para cima.
+        Portanto, a ordem do grupo é <m>6 \cdot 4 = 24</m>.
+        Acabamos de demonstrar a proposição a seguir.
       </p>
 
       <proposition xml:id="permute-proposition-motions-cube">
         <statement>
           <p>
-            The group of rigid motions of a cube contains <m>24</m> elements.
+            O grupo de movimentos rígidos de um cubo contém <m>24</m> elementos.
           </p>
         </statement>
       </proposition>
@@ -914,33 +914,33 @@
       <theorem>
         <statement>
           <p>
-            The group of rigid motions of a cube is <m>S_4</m>.
+            O grupo de movimentos rígidos de um cubo é <m>S_4</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            From <xref ref="permute-proposition-motions-cube"/>,
-            we already know that the motion group of the cube has <m>24</m> elements,
-            the same number of elements as there are in <m>S_4</m>.
-            There are exactly four diagonals in the cube.
-            If we label these diagonals <m>1</m>,
-            <m>2</m>, <m>3</m>, and <m>4</m>,
-            we must show that the motion group of the cube will give us any permutation of the diagonals (<xref ref="permute-figure-motions"/>).
-            If we can obtain all of these permutations,
-            then <m>S_4</m> and the group of rigid motions of the cube must be the same.
-            To obtain a transposition we can rotate the cube
-            <m>180^{\circ}</m> about the axis joining the midpoints of opposite edges (<xref ref="permute-figure-transpose"/>).
-            There are six such axes, giving all transpositions in <m>S_4</m>.
-            Since every element in <m>S_4</m> is the product of a finite number of transpositions,
-            the motion group of a cube must be <m>S_4</m>.
+            A partir da <xref ref="permute-proposition-motions-cube"/>,
+            já sabemos que o grupo de movimentos do cubo tem <m>24</m> elementos,
+            o mesmo número de elementos que <m>S_4</m>.
+            Há exatamente quatro diagonais no cubo.
+            Se rotularmos essas diagonais por <m>1</m>,
+            <m>2</m>, <m>3</m> e <m>4</m>,
+            devemos mostrar que o grupo de movimentos do cubo nos fornece qualquer permutação das diagonais (<xref ref="permute-figure-motions"/>).
+            Se pudermos obter todas essas permutações,
+            então <m>S_4</m> e o grupo de movimentos rígidos do cubo devem ser o mesmo grupo.
+            Para obter uma transposição, podemos girar o cubo
+            <m>180^{\circ}</m> em torno do eixo que une os pontos médios de arestas opostas (<xref ref="permute-figure-transpose"/>).
+            Há seis desses eixos, fornecendo todas as transposições em <m>S_4</m>.
+            Como todo elemento de <m>S_4</m> é o produto de um número finito de transposições,
+            o grupo de movimentos do cubo deve ser <m>S_4</m>.
           </p>
 
           <figure xml:id="permute-figure-motions">
-            <caption>The motion group of a cube</caption>
+            <caption>O grupo de movimentos de um cubo</caption>
 
             <image width="60%" xml:id="permute-motions-cube">
-              <description>A cube where the top vetices are labled 1, 2, 3, 4 and the bottom vertices are labled 3, 4, 1, 2.  Diagonals connect vertex 1 on the top with vertex 1 on the bottom, vertex 2 on the top with vertex 2 on the bottom, vertex 3 on the top with vertex 3 on the bottom, and vertex 4 on the top with vertex 4 on the bottom,</description>
+              <description>Um cubo cujos vértices superiores estão rotulados 1, 2, 3, 4 e os vértices inferiores estão rotulados 3, 4, 1, 2. As diagonais ligam o vértice 1 superior ao vértice 1 inferior, o vértice 2 superior ao vértice 2 inferior, o vértice 3 superior ao vértice 3 inferior e o vértice 4 superior ao vértice 4 inferior.</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-motions-cube.tex" parse="text"/>
@@ -950,7 +950,7 @@
 <!--
 
           <figure xml:id="permute-figure-transpose">
-            <caption>Transpositions in the motion group of a cube</caption>
+            <caption>Transposições no grupo de movimentos de um cubo</caption>
             <image xml:id="permute-transpositions-cube">
               <description>Two cubes where the top vertices of the first cube are labeled 1, 2, 3, 4 and the bottom vertices are labled 3, 4, 1, 2 and the top vertices of the second cube are labled 2, 1, 3, 4 and the bottom vertices are labeled 3, 4, 2, 1.  Lines of symmetry connect the 12 edge on top with the 12 edge on the bottom in both cubes.</description>
 
@@ -963,18 +963,18 @@
 -->
 
       <figure xml:id="permute-figure-transpose">
-        <caption>Transpositions in the motion group of a cube</caption>
+        <caption>Transposições no grupo de movimentos de um cubo</caption>
             
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="permute-transpositions-cube-left">
-            <description>The top vertices of the left cube are labeled 1, 2, 3, 4 and the bottom vertices are labled 3, 4, 1, 2.  Lines of symmetry connect the 12 edge on top with the 12 edge on the bottom.</description>
+            <description>Os vértices superiores do cubo à esquerda estão rotulados 1, 2, 3, 4 e os vértices inferiores estão rotulados 3, 4, 1, 2. Linhas de simetria ligam a aresta 12 superior à aresta 12 inferior.</description>
               <latex-image>
                   <xi:include href="tikz/permute-transpositions-cube-left.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="permute-transpositions-cube-right">
-            <description>The top vertices of the right cube are labeled  2, 1, 3, 4 and the bottom vertices are labeled 3, 4, 2, 1.  Lines of symmetry connect the 12 edge on top with the 12 edge on the bottom.</description>
+            <description>Os vértices superiores do cubo à direita estão rotulados 2, 1, 3, 4 e os vértices inferiores estão rotulados 3, 4, 2, 1. Linhas de simetria ligam a aresta 12 superior à aresta 12 inferior.</description>
               <latex-image>
                   <xi:include href="tikz/permute-transpositions-cube-right.tex" parse="text"/>
               </latex-image>
@@ -989,8 +989,8 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          A permutation group is a very concrete representation of a group,
-          and Sage support for permutations groups is very good <mdash/> making Sage a natural place for beginners to learn about group theory.
+          Um grupo de permutações é uma representação muito concreta de um grupo,
+          e o suporte do Sage para grupos de permutações é muito bom <mdash/> tornando o Sage um lugar natural para iniciantes aprenderem teoria dos grupos.
         </p>
       </paragraphs>
 
