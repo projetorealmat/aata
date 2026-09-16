@@ -969,15 +969,15 @@
 
   </exercises>
   <exercises xml:id="homomorph-exercises-automorphisms">
-    <title>Additional Exercises: Automorphisms</title>
+    <title>Exercícios adicionais: Automorfismos</title>
 
     <exercise xml:id="homomorph-exercise-aut-G">
       <statement>
         <p>
-          Let <m>\aut(G)</m> be the set of all automorphisms of <m>G</m>;
-          that is, isomorphisms from <m>G</m> to itself.
-          Prove this set forms a group and is a subgroup of the group of permutations of <m>G</m>;
-          that is, <m>\aut(G) \leq S_G</m>.
+          Seja <m>\aut(G)</m> o conjunto de todos os automorfismos de <m>G</m>;
+          isto é, isomorfismos de <m>G</m> em si mesmo.
+          Prove que esse conjunto forma um grupo e é um subgrupo do grupo das permutações de <m>G</m>;
+          isto é, <m>\aut(G) \leq S_G</m>.
         </p>
       </statement>
     </exercise>
@@ -985,16 +985,16 @@
     <exercise xml:id="homomorph-exercise-inner-aut">
       <statement>
         <p>
-          An <term>inner automorphism</term><idx><h>Automorphism</h><h>inner</h></idx> of <m>G</m>,
+          Um <term>automorfismo interno</term><idx><h>Automorfismo</h><h>interno</h></idx> de <m>G</m>,
           <md>
             i_g : G \rightarrow G
           </md>,
-          is defined by the map
+          é definido pela aplicação
           <md>
             i_g(x) = g x g^{-1}
           </md>,
-          for <m>g \in G</m>.
-          Show that <m>i_g \in \aut(G)</m>.
+          para <m>g \in G</m>.
+          Mostre que <m>i_g \in \aut(G)</m>.
         </p>
       </statement>
     </exercise>
@@ -1002,8 +1002,8 @@
     <exercise xml:id="homomorph-exercise-Inn-G">
       <statement>
         <p>
-          The set of all inner automorphisms is denoted by <m>\inn(G)</m>.
-          Show that <m>\inn(G)</m> is a subgroup of <m>\aut(G)</m>.
+          O conjunto de todos os automorfismos internos é denotado por <m>\inn(G)</m>.
+          Mostre que <m>\inn(G)</m> é um subgrupo de <m>\aut(G)</m>.
         </p>
       </statement>
     </exercise>
@@ -1011,7 +1011,7 @@
     <exercise xml:id="homomorph-exercise-auto-not-inner">
       <statement>
         <p>
-          Find an automorphism of a group <m>G</m> that is not an inner automorphism.
+          Encontre um automorfismo de um grupo <m>G</m> que não seja um automorfismo interno.
         </p>
       </statement>
     </exercise>
@@ -1019,8 +1019,8 @@
     <exercise xml:id="homomorph-exercise-ZG-inner">
       <statement>
         <p>
-          Let <m>G</m> be a group and <m>i_g</m> be an inner automorphism of <m>G</m>,
-          and define a map
+          Seja <m>G</m> um grupo e seja <m>i_g</m> um automorfismo interno de <m>G</m>,
+          e defina uma aplicação
           <md>
             G \rightarrow \aut(G)
           </md>
@@ -1028,8 +1028,8 @@
           <md>
             g \mapsto i_g
           </md>.
-          Prove that this map is a homomorphism with image <m>\inn(G)</m> and kernel <m>Z(G)</m>.
-          Use this result to conclude that
+          Prove que essa aplicação é um homomorfismo cuja imagem é <m>\inn(G)</m> e cujo núcleo é <m>Z(G)</m>.
+          Use esse resultado para concluir que
           <md>
             G/Z(G) \cong \inn(G)
           </md>.
@@ -1040,8 +1040,8 @@
     <exercise xml:id="homomorph-exercise-aut-S3">
       <statement>
         <p>
-          Compute <m>\aut(S_3)</m> and <m>\inn(S_3)</m>.
-          Do the same thing for <m>D_4</m>.
+          Calcule <m>\aut(S_3)</m> e <m>\inn(S_3)</m>.
+          Faça o mesmo para <m>D_4</m>.
         </p>
       </statement>
     </exercise>
@@ -1049,8 +1049,8 @@
     <exercise xml:id="homomorph-exercise-aut-Z">
       <statement>
         <p>
-          Find all of the homomorphisms <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}</m>.
-          What is <m>\aut({\mathbb Z})</m>?
+          Encontre todos os homomorfismos <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}</m>.
+          Qual é <m>\aut({\mathbb Z})</m>?
         </p>
       </statement>
     </exercise>
@@ -1058,8 +1058,8 @@
     <exercise xml:id="homomorph-exercise-aut-Z8">
       <statement>
         <p>
-          Find all of the automorphisms of <m>{\mathbb Z}_8</m>.
-          Prove that <m>\aut({\mathbb Z}_8) \cong U(8)</m>.
+          Encontre todos os automorfismos de <m>{\mathbb Z}_8</m>.
+          Prove que <m>\aut({\mathbb Z}_8) \cong U(8)</m>.
         </p>
       </statement>
     </exercise>
@@ -1067,9 +1067,9 @@
     <exercise xml:id="homomorph-exercise-a-to-ka">
       <statement>
         <p>
-          For <m>k \in {\mathbb Z}_n</m>,
-          define a map <m>\phi_k : {\mathbb Z}_n \rightarrow {\mathbb Z}_n</m> by <m>a \mapsto ka</m>.
-          Prove that <m>\phi_k</m> is a homomorphism.
+          Para <m>k \in {\mathbb Z}_n</m>,
+          defina uma aplicação <m>\phi_k : {\mathbb Z}_n \rightarrow {\mathbb Z}_n</m> por <m>a \mapsto ka</m>.
+          Prove que <m>\phi_k</m> é um homomorfismo.
         </p>
       </statement>
     </exercise>
@@ -1077,7 +1077,7 @@
     <exercise xml:id="homomorph-exercise-phi-k-Zn">
       <statement>
         <p>
-          Prove that <m>\phi_k</m> is an isomorphism if and only if <m>k</m> is a generator of <m>{\mathbb Z}_n</m>.
+          Prove que <m>\phi_k</m> é um isomorfismo se, e somente se, <m>k</m> é um gerador de <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1085,9 +1085,9 @@
     <exercise xml:id="homomorph-exercise-aut-Zn">
       <statement>
         <p>
-          Show that every automorphism of
-          <m>{\mathbb Z}_n</m> is of the form <m>\phi_k</m>,
-          where <m>k</m> is a generator of <m>{\mathbb Z}_n</m>.
+          Mostre que todo automorfismo de
+          <m>{\mathbb Z}_n</m> tem a forma <m>\phi_k</m>,
+          em que <m>k</m> é um gerador de <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1095,8 +1095,8 @@
     <exercise xml:id="homomorph-exercise-Un-aut-Zn">
       <statement>
         <p>
-          Prove that <m>\psi : U(n) \rightarrow \aut({\mathbb Z}_n)</m> is an isomorphism,
-          where <m>\psi : k \mapsto \phi_k</m>.
+          Prove que <m>\psi : U(n) \rightarrow \aut({\mathbb Z}_n)</m> é um isomorfismo,
+          em que <m>\psi : k \mapsto \phi_k</m>.
         </p>
       </statement>
     </exercise>
