@@ -1916,25 +1916,25 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Cyclic groups are very important,
-        so it is no surprise that they appear in many different forms in Sage.
-        Each is slightly different,
-        and no one implementation is ideal for an introduction,
-        but together they can illustrate most of the important ideas.
-        Here is a guide to the various ways to construct,
-        and study, a cyclic group in Sage.
+        Os grupos cíclicos são muito importantes,
+        portanto não é surpresa que apareçam em muitas formas diferentes no Sage.
+        Cada uma delas é ligeiramente diferente,
+        e nenhuma implementação é ideal para uma introdução,
+        mas, juntas, podem ilustrar a maior parte das ideias importantes.
+        A seguir, apresentamos um guia das várias maneiras de construir
+        e estudar um grupo cíclico no Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Infinite Cyclic Groups</title>
+      <title>Grupos cíclicos infinitos</title>
       <p>
-        In Sage, the integers <m>\mathbb Z</m> are constructed with <c>ZZ</c>.
-        To build the infinite cyclic group such as
-        <m>3\mathbb Z</m> from <xref ref="cyclic-example-z3"/>, simply use <c>3*ZZ</c>.
-        As an infinite set, there is not a whole lot you can do with this.
-        You can test if integers are in this set, or not.
-        You can also recall the generator with the <c>.gen()</c> command.
+        No Sage, os inteiros <m>\mathbb Z</m> são construídos com <c>ZZ</c>.
+        Para construir o grupo cíclico infinito, como
+        <m>3\mathbb Z</m> em <xref ref="cyclic-example-z3"/>, basta usar <c>3*ZZ</c>.
+        Como conjunto infinito, não há muito que se possa fazer com ele.
+        Você pode testar se os inteiros pertencem ou não a esse conjunto.
+        Também pode recuperar o gerador com o comando <c>.gen()</c>.
       </p>
 
             <sage>
@@ -1959,11 +1959,11 @@
     </subsection>
 
     <subsection>
-      <title>Additive Cyclic Groups</title>
+      <title>Grupos cíclicos aditivos</title>
       <p>
-        The additive cyclic group <m>\mathbb Z_n</m> can be built as a special case of a more general Sage construction.
-        First we build <m>\mathbb Z_{14}</m> and capture its generator.
-        Throughout, pay close attention to the use of parentheses and square brackets for when you experiment on your own.
+        O grupo cíclico aditivo <m>\mathbb Z_n</m> pode ser construído como um caso particular de uma construção mais geral do Sage.
+        Primeiro, construímos <m>\mathbb Z_{14}</m> e guardamos seu gerador.
+        Ao experimentar por conta própria, preste muita atenção ao uso de parênteses e colchetes.
       </p>
 
             <sage>
@@ -1989,11 +1989,11 @@
             </sage>
 
       <p>
-        You can compute in this group, by using the generator,
-        or by using new elements formed by coercing integers into the group,
-        or by taking the result of operations on other elements.
-        And we can compute the order of elements in this group.
-        Notice that we can perform repeated additions with the shortcut of taking integer multiples of an element.
+        Você pode calcular nesse grupo usando o gerador,
+        novos elementos formados pela conversão de inteiros para o grupo
+        ou resultados de operações sobre outros elementos.
+        Também podemos calcular a ordem dos elementos desse grupo.
+        Observe que podemos realizar adições repetidas usando o atalho de tomar múltiplos inteiros de um elemento.
       </p>
 
             <sage>
@@ -2022,12 +2022,12 @@
             </sage>
 
       <p>
-        We can create, and then compute with,
-        new elements of the group by coercing an integer
-        (in a list of length <m>1</m>)
-        into the group.
-        You may get a <c>DeprecationWarning</c> the first time you use this syntax if you are using an old version of Sage.
-        The mysterious warning can be safely ignored.
+        Podemos criar e depois calcular com
+        novos elementos do grupo convertendo um inteiro
+        (em uma lista de comprimento <m>1</m>)
+        para o grupo.
+        Se estiver usando uma versão antiga do Sage, talvez você receba um <c>DeprecationWarning</c> na primeira vez que usar essa sintaxe.
+        Esse aviso misterioso pode ser ignorado com segurança.
       </p>
             <!-- Only to doctesting, warning to disappear "a few months" after 2015/05/20      -->
             <!-- This test evokes the warning, then next one tests fine, as it normally should -->
@@ -2090,10 +2090,10 @@
             </sage>
 
       <p>
-        It is possible to create cyclic subgroups,
-        from an element designated to be the new generator.
-        Unfortunately, to do this requires the <c>.submodule()</c> method
-        (which should be renamed in Sage).
+        É possível criar subgrupos cíclicos
+        a partir de um elemento designado como o novo gerador.
+        Infelizmente, para isso é necessário o método <c>.submodule()</c>
+        (que deveria ser renomeado no Sage).
       </p>
 
             <sage>
@@ -2122,8 +2122,8 @@
             </sage>
 
       <p>
-        The cyclic subgroup <c>H</c> just created has more than one generator.
-        We can test this by building a new subgroup and comparing the two subgroups.
+        O subgrupo cíclico <c>H</c> recém-criado tem mais de um gerador.
+        Podemos testar isso construindo um novo subgrupo e comparando os dois subgrupos.
       </p>
 
             <sage>
@@ -2156,29 +2156,29 @@
             </sage>
 
       <p>
-        Certainly the list of elements,
-        and the common generator of <c>(2)</c> lead us to belive that <c>H</c> and <c>K</c> are the same,
-        but the comparison in the last line leaves no doubt.
+        Certamente, a lista de elementos
+        e o gerador comum de <c>(2)</c> nos levam a acreditar que <c>H</c> e <c>K</c> são iguais,
+        mas a comparação na última linha não deixa dúvidas.
       </p>
 
       <p>
-        Results in this section,
-        especially <xref ref="cyclic-theorem-cyclic-orders"/> and <xref ref="cyclic-corollary-mod-n-generators"/>,
-        can be investigated by creating generators of subgroups from a generator of one additive cyclic group,
-        creating the subgroups,
-        and computing the orders of both elements and orders of groups.
+        Os resultados desta seção,
+        especialmente o <xref ref="cyclic-theorem-cyclic-orders"/> e o <xref ref="cyclic-corollary-mod-n-generators"/>,
+        podem ser investigados criando geradores de subgrupos a partir de um gerador de um grupo cíclico aditivo,
+        criando os subgrupos
+        e calculando as ordens tanto dos elementos quanto dos grupos.
       </p>
     </subsection>
 
     <subsection>
-      <title>Abstract Multiplicative Cyclic Groups</title>
+      <title>Grupos cíclicos multiplicativos abstratos</title>
       <p>
-        We can create an abstract cyclic group in the style of <xref ref="cyclic-theorem-subgroup"/>,
-        <xref ref="cyclic-theorem-abelian"/>, and <xref ref="cyclic-theorem-cyclic-subgroups"/>.
-        In the syntax below <c>a</c> is a name for the generator,
-        and <c>14</c> is the order of the element.
-        Notice that the notation is now multiplicative,
-        so we multiply elements, and repeated products can be written as powers.
+        Podemos criar um grupo cíclico abstrato no estilo de <xref ref="cyclic-theorem-subgroup"/>,
+        <xref ref="cyclic-theorem-abelian"/> e <xref ref="cyclic-theorem-cyclic-subgroups"/>.
+        Na sintaxe abaixo, <c>a</c> é o nome do gerador
+        e <c>14</c> é a ordem do elemento.
+        Observe que a notação agora é multiplicativa,
+        portanto multiplicamos elementos e produtos repetidos podem ser escritos como potências.
       </p>
 
             <sage>
@@ -2198,9 +2198,9 @@
             </sage>
 
       <p>
-        Computations in the group are similar to before,
-        only with different notation.
-        Now products, with repeated products written as exponentiation.
+        Os cálculos no grupo são semelhantes aos anteriores,
+        apenas com uma notação diferente.
+        Agora temos produtos, com produtos repetidos escritos como exponenciação.
       </p>
 
             <sage>
@@ -2235,10 +2235,10 @@
             </sage>
 
       <p>
-        Subgroups can be formed with a <c>.subgroup()</c> command.
-        But do not try to list the contents of a subgroup,
-        it'll look strangely unfamiliar.
-        Also, comparison of subgroups is not implemented.
+        Os subgrupos podem ser formados com o comando <c>.subgroup()</c>.
+        Mas não tente listar o conteúdo de um subgrupo:
+        ele parecerá estranhamente desconhecido.
+        Além disso, a comparação de subgrupos não está implementada.
       </p>
 
             <sage>
@@ -2265,10 +2265,10 @@
             </sage>
 
       <p>
-        One advantage of this implementation is the possibility to create all possible subgroups.
-        Here we create the list of subgroups, extract one in particular
-        (the third),
-        and check its order.
+        Uma vantagem dessa implementação é a possibilidade de criar todos os subgrupos possíveis.
+        Aqui, criamos a lista de subgrupos, extraímos um subgrupo específico
+        (o terceiro)
+        e verificamos sua ordem.
       </p>
 
             <sage>
@@ -2292,13 +2292,13 @@
     </subsection>
 
     <subsection>
-      <title>Cyclic Permutation Groups</title>
+      <title>Grupos cíclicos de permutações</title>
       <p>
-        We will learn more about permutation groups in the next chapter.
-        But we will mention here that it is easy to create cyclic groups as permutation groups,
-        and a variety of methods are available for working with them,
-        even if the actual elements get a bit cumbersome to work with.
-        As before, notice that the notation and syntax is multiplicative.
+        Aprenderemos mais sobre grupos de permutações no próximo capítulo.
+        Mas mencionamos aqui que é fácil criar grupos cíclicos como grupos de permutações,
+        e que há vários métodos disponíveis para trabalhar com eles,
+        mesmo que os elementos propriamente ditos sejam um pouco trabalhosos.
+        Como antes, observe que a notação e a sintaxe são multiplicativas.
       </p>
 
             <sage>
@@ -2333,7 +2333,7 @@
             </sage>
 
       <p>
-        We can create subgroups, check their orders, and list their elements.
+        Podemos criar subgrupos, verificar suas ordens e listar seus elementos.
       </p>
 
             <sage>
@@ -2361,24 +2361,24 @@
             </sage>
 
       <p>
-        It could help to visualize this group, and the subgroup,
-        as rotations of a regular <m>12</m>-gon with the vertices labeled with the integers <m>1</m> through <m>12</m>.
-        This is not the full group of symmetries,
-        since it does not include reflections,
-        just the <m>12</m> rotations.
+        Pode ser útil visualizar este grupo e o subgrupo
+        como rotações de um polígono regular de <m>12</m> lados, com os vértices rotulados pelos inteiros de <m>1</m> a <m>12</m>.
+        Este não é o grupo completo de simetrias,
+        pois não inclui reflexões,
+        apenas as <m>12</m> rotações.
       </p>
     </subsection>
 
     <subsection>
-      <title>Cayley Tables</title>
+      <title>Tabelas de Cayley</title>
       <p>
-        As groups, each of the examples above
-        (groups and subgroups)
-        have Cayley tables implemented.
-        Since the groups are cyclic, and their subgroups are therefore cyclic,
-        the Cayley tables should have a similar <q>cyclic</q> pattern.
-        Note that the letters used in the default table are generic,
-        and are not related to the letters used above for specific elements <mdash/> they just match up with the group elements in the order given by <c>.list()</c>.
+        Como grupos, cada um dos exemplos acima
+        (grupos e subgrupos)
+        possui tabelas de Cayley implementadas.
+        Como os grupos são cíclicos e, portanto, seus subgrupos também são cíclicos,
+        as tabelas de Cayley devem apresentar um padrão <q>cíclico</q> semelhante.
+        Observe que as letras usadas na tabela padrão são genéricas
+        e não estão relacionadas às letras usadas acima para elementos específicos <mdash/> elas apenas correspondem aos elementos do grupo na ordem fornecida por <c>.list()</c>.
       </p>
 
             <sage>
@@ -2407,8 +2407,8 @@
             </sage>
 
       <p>
-        If the real names of the elements are not too complicated,
-        the table could be more informative using these names.
+        Se os nomes reais dos elementos não forem muito complicados,
+        a tabela pode ser mais informativa usando esses nomes.
       </p>
 
             <sage>
@@ -2434,21 +2434,21 @@
     </subsection>
 
     <subsection>
-      <title>Complex Roots of Unity</title>
+      <title>Raízes complexas da unidade</title>
       <p>
-        The finite cyclic subgroups of <m>{\mathbb T}</m>,
-        generated by a primitive <m>n</m>th root of unity are implemented as a more general construction in Sage,
-        known as a cyclotomic field.
-        If you concentrate on just the multiplication of powers of a generator
-        (and ignore the infinitely many other elements)
-        then this is a finite cyclic group.
-        Since this is not implemented directly in Sage as a group,
+        Os subgrupos cíclicos finitos de <m>{\mathbb T}</m>,
+        gerados por uma raiz <m>n</m>-ésima primitiva da unidade, são implementados como uma construção mais geral no Sage,
+        conhecida como corpo ciclotômico.
+        Se você se concentrar apenas na multiplicação de potências de um gerador
+        (e ignorar os infinitos outros elementos),
+        terá um grupo cíclico finito.
+        Como isso não é implementado diretamente no Sage como um grupo,
         <foreign>per se</foreign>,
-        it is a bit harder to construct things like subgroups,
-        but it is an excellent exercise to try.
-        It is a nice example since the complex numbers are a concrete and familiar construction.
-        Here are a few sample calculations to provide you with some exploratory tools.
-        See the notes following the computations.
+        é um pouco mais difícil construir objetos como subgrupos,
+        mas é um excelente exercício para tentar.
+        É um bom exemplo, pois os números complexos formam uma construção concreta e familiar.
+        A seguir, há alguns cálculos de exemplo para fornecer ferramentas de exploração.
+        Consulte as notas depois dos cálculos.
       </p>
 
             <sage>
@@ -2534,56 +2534,56 @@
             </sage>
 
       <p>
-        Notes:
+        Notas:
 
         <ol>
           <li>
             <p>
-            <c>zeta14</c> is the name of the generator used for the cyclotomic field,
-              it is a primitive root of unity (a <m>14</m>th root of unity in this case).
-              We have captured it as <c>w</c>.
+            <c>zeta14</c> é o nome do gerador usado para o corpo ciclotômico;
+              ele é uma raiz primitiva da unidade (neste caso, uma raiz <m>14</m>-ésima da unidade).
+              Nós o armazenamos como <c>w</c>.
             </p>
           </li>
 
           <li>
             <p>
-              The syntax <c>CDF(w)</c> will convert the complex number <c>w</c> into the more familiar form with real and imaginary parts.
+              A sintaxe <c>CDF(w)</c> converte o número complexo <c>w</c> para a forma mais familiar, com partes real e imaginária.
             </p>
           </li>
 
           <li>
             <p>
-              The method <c>.abs()</c> will return the modulus of a complex number,
-              <m>r</m> as described in the text.
-              For elements of <m>{\mathbb C}^\ast</m> this should always equal <m>1</m>.
+              O método <c>.abs()</c> retorna o módulo de um número complexo,
+              <m>r</m>, conforme descrito no texto.
+              Para elementos de <m>{\mathbb C}^\ast</m>, esse valor deve ser sempre igual a <m>1</m>.
             </p>
           </li>
 
           <li>
             <p>
-              The method <c>.arg()</c> will return the argument of a complex number,
-              <m>\theta</m> as described in the text.
-              Every element of the cyclic group in this example should have an argument that is an integer multiple of <m>\frac{2\pi}{14}</m>.
-              The <c>N()</c> syntax converts the symbolic value of <c>pi</c> to a numerical approximation.
+              O método <c>.arg()</c> retorna o argumento de um número complexo,
+              <m>\theta</m>, conforme descrito no texto.
+              Cada elemento do grupo cíclico deste exemplo deve ter um argumento que seja um múltiplo inteiro de <m>\frac{2\pi}{14}</m>.
+              A sintaxe <c>N()</c> converte o valor simbólico de <c>pi</c> em uma aproximação numérica.
             </p>
           </li>
 
           <li>
             <p>
-            <c>sg</c> is a list of elements that form a cyclic subgroup of order 7, composed of the first 7 powers of <c>b = w^2</c>.
-              So, for example,
-              the last comparison multiplies the fifth power of <c>b</c> with the sixth power of <c>b</c>,
-              which would be the eleventh power of <c>b</c>.
-              But since <c>b</c> has order 7, this reduces to the fourth power.
+            <c>sg</c> é uma lista de elementos que formam um subgrupo cíclico de ordem 7, composto pelas 7 primeiras potências de <c>b = w^2</c>.
+              Assim, por exemplo,
+              a última comparação multiplica a quinta potência de <c>b</c> pela sexta potência de <c>b</c>,
+              o que daria a décima primeira potência de <c>b</c>.
+              Mas, como <c>b</c> tem ordem 7, isso se reduz à quarta potência.
             </p>
           </li>
 
           <li>
             <p>
-              If you know a subset of an infinite group forms a subgroup,
-              then you can produce its Cayley table by specifying the list of elements you want to use.
-              Here we ask for a multiplication table,
-              since that is the relevant operation.
+              Se você sabe que um subconjunto de um grupo infinito forma um subgrupo,
+              pode produzir sua tabela de Cayley especificando a lista de elementos que deseja usar.
+              Aqui, pedimos uma tabela de multiplicação,
+              pois essa é a operação relevante.
             </p>
           </li>
         </ol>
