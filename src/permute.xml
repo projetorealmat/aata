@@ -1002,10 +1002,10 @@
     <exercise label="rq-permute-disjoint-cycles">
       <statement>
         <p>
-          Express <m>(1\,3\,4)(3\,5\,4)</m> as a cycle,
-          or a product of disjoint cycles.
-          (Interpret the composition of functions in the order used by Sage,
-          which is the reverse of the order used in the book.)
+          Expresse <m>(1\,3\,4)(3\,5\,4)</m> como um ciclo
+          ou como um produto de ciclos disjuntos.
+          (Interprete a composição de funções na ordem usada pelo Sage,
+          que é a inversa da ordem usada no livro.)
         </p>
       </statement>
       <response/>
@@ -1014,7 +1014,7 @@
     <exercise label="rq-permute-transposition">
       <statement>
         <p>
-          What is a transposition?
+          O que é uma transposição?
         </p>
       </statement>
       <response/>
@@ -1023,7 +1023,7 @@
     <exercise label="rq-permute-even-odd">
       <statement>
         <p>
-          What does it mean for a permutation to be even or odd?
+          O que significa uma permutação ser par ou ímpar?
         </p>
       </statement>
       <response/>
@@ -1032,7 +1032,7 @@
     <exercise label="rq-permute-A3">
       <statement>
         <p>
-          Describe another group that is fundamentally the same as <m>A_3</m>.
+          Descreva outro grupo que seja fundamentalmente igual a <m>A_3</m>.
         </p>
       </statement>
       <response/>
@@ -1041,8 +1041,8 @@
     <exercise label="rq-permute-pentagon">
       <statement>
         <p>
-          Write the elements of the symmetry group of a pentagon using permutations in cycle notation.
-          Do this exercise by hand, and without the assistance of Sage.
+          Escreva os elementos do grupo de simetrias de um pentágono usando permutações na notação de ciclos.
+          Faça este exercício à mão e sem o auxílio do Sage.
         </p>
       </statement>
       <response/>
@@ -1051,7 +1051,7 @@
   </reading-questions>
 
   <exercises xml:id="permute-exercises" filenamebase="permute">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="permute-exercise-cycle-notation">
       <statement>
