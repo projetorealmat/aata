@@ -422,8 +422,8 @@
              O grupo <m>G</m> também possui um subgrupo de Sylow <m>p</m>,
              digamos <m>K</m>.
              O número de conjugados de <m>K</m> deve dividir <m>q</m> e ser igual a <m>1 + kp</m> para <m>k = 0, 1, \ldots</m>.
-             Como <m>q</m> é primo, ou
-            <m>1 + kp = q</m> or <m>1 + kp = 1</m>.
+             Como <m>q</m> é primo, temos
+            <m>1 + kp = q</m> ou <m>1 + kp = 1</m>.
              Se <m>1 + kp = 1</m>, então <m>K</m> é normal em <m>G</m>.
              Nesse caso,
              podemos mostrar facilmente que <m>G</m> satisfaz os critérios,
@@ -457,11 +457,11 @@
            Pelo <xref ref="actions-corollary-p2abelian"/>,
            qualquer grupo de ordem <m>p^2</m> é abeliano para <m>p</m> primo;
            portanto, <m>H</m> é isomorfo a
-          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> or to <m>{\mathbb Z}_9</m>.
+          <m>{\mathbb Z}_3 \times {\mathbb Z}_3</m> ou <m>{\mathbb Z}_9</m>.
            Como <m>K</m> tem ordem <m>11</m>,
            ele deve ser isomorfo a <m>{\mathbb Z}_{11}</m>.
            Portanto, os únicos grupos possíveis de ordem <m>99</m> são
-          <m>{\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_{11}</m> or <m>{\mathbb Z}_9 \times {\mathbb Z}_{11}</m> up to isomorphism.
+          <m>{\mathbb Z}_3 \times {\mathbb Z}_3 \times {\mathbb Z}_{11}</m> ou <m>{\mathbb Z}_9 \times {\mathbb Z}_{11}</m>, a menos de isomorfismo.
         </p>
       </example>
 
@@ -604,7 +604,7 @@
             </md>.
              Certamente, <m>|HK| \leq |H| \cdot |K|</m>, pois algum elemento de <m>HK</m> pode ser escrito como o produto de diferentes elementos de <m>H</m> e <m>K</m>.
              É perfeitamente possível que <m>h_1 k_1 = h_2 k_2</m> para
-            <m>h_1, h_2 \in H</m> and <m>k_1, k_2 \in K</m>.
+            <m>h_1, h_2 \in H</m> e <m>k_1, k_2 \in K</m>.
              Se este for o caso, seja
             <md>
               a = (h_1)^{-1} h_2 = k_1 (k_2)^{-1}
@@ -782,7 +782,7 @@
       </statement>
       <hint>
         <p>
-          The four Sylow <m>3</m>-subgroups of <m>S_4</m> are <m>P_1 = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>,
+          Os quatro subgrupos de Sylow <m>3</m> de <m>S_4</m> são <m>P_1 = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>,
           <m>P_2 = \{ (1), (1 \, 2 \, 4), (1 \, 4 \, 2) \}</m>,
           <m>P_3 = \{ (1), (1 \, 3 \, 4), (1 \, 4 \, 3) \}</m>,
           <m>P_4 = \{ (1), (2 \, 3 \, 4), (2 \, 4 \, 3) \}</m>.
@@ -842,7 +842,7 @@
       <statement>
         <p>
           Se <m>H</m> é um subgrupo normal de um grupo finito <m>G</m> e
-          <m>|H| = p^k</m> for some prime <m>p</m>,
+          <m>|H| = p^k</m> para algum primo <m>p</m>,
           mostre que <m>H</m> está contido em todo subgrupo de Sylow <m>p</m> de <m>G</m>.
         </p>
       </statement>
@@ -853,7 +853,7 @@
         <p>
           Seja <m>G</m> um grupo de ordem <m>p^2 q^2</m>,
           em que <m>p</m> e <m>q</m> são primos distintos tais que
-          <m>q \nmid p^2 - 1</m> and <m>p \nmid q^2 - 1</m>.
+          <m>q \nmid p^2 - 1</m> e <m>p \nmid q^2 - 1</m>.
           Prove que <m>G</m> deve ser abeliano.
           Encontre um par de primos para o qual isso seja verdadeiro.
         </p>
@@ -1118,7 +1118,7 @@
       <hint>
         <p>
            Sejam <m>a G', b G' \in G/G'</m>.
-          Then <m>(a G')( b G') = ab G' = ab(b^{-1}a^{-1}ba) G' = (abb^{-1}a^{-1})ba G' = ba G'</m>.
+          Então <m>(a G')( b G') = ab G' = ab(b^{-1}a^{-1}ba) G' = (abb^{-1}a^{-1})ba G'</m>.
         </p>
       </hint>
     </exercise>
