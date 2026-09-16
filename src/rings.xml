@@ -592,7 +592,7 @@
       <p>
         Para todo primo <m>p</m>,
         <m>{\mathbb Z}_p</m> é um corpo de característica <m>p</m>.
-        By <xref ref="groups-proposition-zn-equiv-classes"/>,
+        Pelo <xref ref="groups-proposition-zn-equiv-classes"/>,
         todo elemento não nulo de <m>{\mathbb Z}_p</m> possui um inverso;
         portanto, <m>{\mathbb Z}_p</m> é um corpo.
         Se <m>a</m> é qualquer elemento não nulo do corpo, então <m>pa =0</m>,
@@ -2519,97 +2519,97 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Rings are very important in your study of abstract algebra,
-        and similarly,
-        they are very important in the design and use of Sage.
-        There is a lot of material in this chapter,
-        and there are many corresponding commands in Sage.
+        Os anéis são muito importantes no estudo da álgebra abstrata
+        e, de modo semelhante,
+        são muito importantes no projeto e no uso do Sage.
+        Este capítulo contém muito material,
+        e há muitos comandos correspondentes no Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Creating Rings</title>
+      <title>Criando anéis</title>
       <p>
-        Here is a list of various rings,
-        domains and fields you can construct simply.
+        Esta é uma lista de vários anéis,
+        domínios e corpos que você pode construir de maneira simples.
 
         <ol>
           <li>
             <p>
             <c>Integers()</c>, <c>ZZ</c>:
-              the integral domain of positive and negative integers,
+              o domínio de integridade dos inteiros positivos e negativos,
               <m>{\mathbb Z}</m>.
             </p>
           </li>
 
           <li>
             <p>
-            <c>Integers(n)</c>: the integers mod <m>n</m>, <m>{\mathbb Z_n}</m>.
-              A field when <m>n</m> is prime,
-              but just a ring for composite <m>n</m>.
+            <c>Integers(n)</c>: os inteiros módulo <m>n</m>, <m>{\mathbb Z_n}</m>.
+              Um corpo quando <m>n</m> é primo,
+              mas apenas um anel quando <m>n</m> é composto.
             </p>
           </li>
 
           <li>
             <p>
-            <c>QQ</c>: the field of rational numbers, <m>{\mathbb Q}</m>.
+            <c>QQ</c>: o corpo dos números racionais, <m>{\mathbb Q}</m>.
             </p>
           </li>
 
           <li>
             <p>
             <c>RR</c>, <c>CC</c>:
-              the field of real numbers and the field of complex numbers,
+              o corpo dos números reais e o corpo dos números complexos,
               <m>{\mathbb R}</m>, <m>{\mathbb C}</m>.
-              It is impossible to create <em>every</em>
-              real number inside a computer,
-              so technically these sets do not behave as fields,
-              but only give a good imitiation of the real thing.
-              We say they are <term>inexact</term>
-              rings to make this point.
+              É impossível criar <em>todo</em>
+              número real dentro de um computador,
+              portanto, tecnicamente, esses conjuntos não se comportam como corpos,
+              mas apenas fornecem uma boa imitação do objeto real.
+              Dizemos que eles são anéis <term>inexatos</term>
+              para enfatizar esse ponto.
             </p>
           </li>
 
           <li>
             <p>
             <c>QuadraticField(n)</c>:
-              the field formed by combining the rationals with a solution to the polynomial equation <m>x^2-n=0</m>.
-              The notation in the text is <m>{\mathbb Q}[\sqrt{n}]</m>.
-              A functional equivalent can be made with the syntax <c>QQ[sqrt(n)]</c>.
-              Note that <c>n</c> can be negative.
+              o corpo formado combinando os racionais com uma solução da equação polinomial <m>x^2-n=0</m>.
+              A notação usada no texto é <m>{\mathbb Q}[\sqrt{n}]</m>.
+              Uma construção equivalente pode ser feita com a sintaxe <c>QQ[sqrt(n)]</c>.
+              Observe que <c>n</c> pode ser negativo.
             </p>
           </li>
 
           <li>
             <p>
             <c>CyclotomicField(n)</c>:
-              the field formed by combining the rationals with the solutions to the polynomial equation <m>x^n-1=0</m>.
+              o corpo formado combinando os racionais com as soluções da equação polinomial <m>x^n-1=0</m>.
             </p>
           </li>
 
           <li>
             <p>
             <c>QQbar</c>:
-              the field formed by combining the rationals with the solutions to <em>every</em>
-              polynomial equation with integer coefficients.
-              This is known as a the field of algebraic numbers,
-              denoted as <m>\overline{{\mathbb Q}}</m>.
+              o corpo formado combinando os racionais com as soluções de <em>toda</em>
+              equação polinomial com coeficientes inteiros.
+              Esse é conhecido como o corpo dos números algébricos,
+              denotado por <m>\overline{{\mathbb Q}}</m>.
             </p>
           </li>
 
           <li>
             <p>
-            <c>FiniteField(p)</c>: for a prime <m>p</m>,
-              the field of integers <m>{\mathbb Z_p}</m>.
+            <c>FiniteField(p)</c>: para um primo <m>p</m>,
+              o corpo dos inteiros <m>{\mathbb Z_p}</m>.
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        If you print a description of some of the above rings,
-        you will sometimes see a new symbol introduced.
-        Consider the following example:
+        Se você imprimir uma descrição de alguns dos anéis acima,
+        às vezes verá um novo símbolo sendo introduzido.
+        Considere o exemplo a seguir:
       </p>
 
             <sage>
@@ -2649,29 +2649,29 @@
             </sage>
 
       <p>
-        Here <c>Number Field</c> describes an object generally formed by combining the rationals with another number
-        (here <m>\sqrt{7}</m>). <q>a</q>
-        is a new symbol which behaves as a root of the polynomial <m>x^2-7</m>.
-        We do not say which root, <m>\sqrt{7}</m> or <m>-\sqrt{7}</m>,
-        and as we understand the theory better we will see that this does not really matter.
+        Aqui, <c>Number Field</c> descreve um objeto geralmente formado combinando os racionais com outro número
+        (neste caso, <m>\sqrt{7}</m>). <q>a</q>
+        é um novo símbolo que se comporta como uma raiz do polinômio <m>x^2-7</m>.
+        Não especificamos qual raiz, <m>\sqrt{7}</m> ou <m>-\sqrt{7}</m>,
+        e, à medida que compreendermos melhor a teoria, veremos que isso realmente não importa.
       </p>
 
       <p>
-        We can obtain this root as a generator of the number field,
-        and then manipulate it.
-        First squaring <c>root</c> yields 7.
-        Notice that <c>root</c> prints as <c>a</c>.
-        Notice, too,
-        that computations with <c>root</c> behave as if it was
-        <em>either</em> root of <m>x^2-7</m>,
-        and results print using <c>a</c>.
+        Podemos obter essa raiz como um gerador do corpo numérico
+        e então manipulá-la.
+        Primeiro, elevar <c>root</c> ao quadrado produz 7.
+        Observe que <c>root</c> é exibido como <c>a</c>.
+        Observe também
+        que os cálculos com <c>root</c> se comportam como se ele fosse
+        <em>qualquer uma das</em> raízes de <m>x^2-7</m>,
+        e os resultados são exibidos usando <c>a</c>.
       </p>
 
       <p>
-        This can get a bit confusing,
-        inputing computations with <c>root</c> and getting output in terms of <c>a</c>.
-        Fortunately, there is a better way.
-        Consider the following example:
+        Isso pode ficar um pouco confuso:
+        inserir cálculos com <c>root</c> e obter a saída em termos de <c>a</c>.
+        Felizmente, há uma maneira melhor.
+        Considere o exemplo a seguir:
       </p>
 
             <sage>
@@ -2702,53 +2702,53 @@
             </sage>
 
       <p>
-        With the syntax <c>F.&lt;b&gt;</c> we can create the field <c>F</c> along with specifying a generator <c>b</c> using a name of our choosing.
-        Then computations can use <c>b</c> in both input and output as a root of <m>x^2-7</m>.
+        Com a sintaxe <c>F.&lt;b&gt;</c>, podemos criar o corpo <c>F</c> e especificar um gerador <c>b</c> usando um nome de nossa escolha.
+        Assim, os cálculos podem usar <c>b</c> tanto na entrada quanto na saída como uma raiz de <m>x^2-7</m>.
       </p>
 
       <p>
-        Here are three new rings that are best created using this new syntax.
+        Eis três novos anéis que é melhor criar usando essa nova sintaxe.
 
         <ol>
           <li>
             <p>
-            <c>F.&lt;a&gt; = FiniteField(p^n)</c>: We will later have a theorem that tells us that finite fields only exist with orders equal to to a power of a prime.
-              When the power is larger than 1, then we need a generator,
-              here given as <c>a</c>.
+            <c>F.&lt;a&gt; = FiniteField(p^n)</c>: Mais adiante teremos um teorema que nos dirá que corpos finitos só existem com ordens iguais a uma potência de um primo.
+              Quando a potência é maior que 1, precisamos de um gerador,
+              indicado aqui por <c>a</c>.
             </p>
           </li>
 
           <li>
             <p>
             <c>P.&lt;x&gt;=R[]</c>:
-              the ring of all polynomials in the variable <c>x</c>,
-              with coefficients from the ring <c>R</c>.
-              Notice that <c>R</c> can be <em>any</em> ring,
-              so this is a very general construction that uses one ring to form another.
-              See an example below.
+              o anel de todos os polinômios na variável <c>x</c>,
+              com coeficientes no anel <c>R</c>.
+              Observe que <c>R</c> pode ser <em>qualquer</em> anel,
+              portanto esta é uma construção muito geral que usa um anel para formar outro.
+              Veja um exemplo abaixo.
             </p>
           </li>
 
           <li>
             <p>
             <c>Q.&lt;r,s,t&gt; = QuaternionAlgebra(n, m)</c>:
-              the rationals combined with indeterminates <c>r</c>,
-            <c>s</c> and <c>t</c> such that <m>r^2=n</m>,
-              <m>s^2=m</m> and <m>t = rs = -sr</m>.
-              This is a generalization of the quaternions described in this chapter,
-              though over the rationals rather than the reals, so it is an exact ring.
-              Notice that this is one of the few noncommutative rings in Sage.
-              The <q>usual</q> quaternions would be constructed with <c>Q.&lt;I,J,K&gt; = QuaternionAlgebra(-1, -1)</c>.
-              (Notice that using <c>I</c> here is not a good choice,
-              because it will then clobber the symbol <c>I</c> used for complex numbers.)
+              os racionais combinados com as indeterminadas <c>r</c>,
+            <c>s</c> e <c>t</c> tais que <m>r^2=n</m>,
+              <m>s^2=m</m> e <m>t = rs = -sr</m>.
+              Esta é uma generalização dos quatérnios descritos neste capítulo,
+              embora sobre os racionais em vez dos reais; portanto, é um anel exato.
+              Observe que este é um dos poucos anéis não comutativos do Sage.
+              Os quatérnios <q>usuais</q> seriam construídos com <c>Q.&lt;I,J,K&gt; = QuaternionAlgebra(-1, -1)</c>.
+              (Observe que usar <c>I</c> aqui não é uma boa escolha,
+              pois isso substituirá o símbolo <c>I</c> usado para números complexos.)
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        Syntax specifying names for generators can be used for many of the above rings as well,
-        such as demonstrated above for quadratic fields and below for cyclotomic fields.
+        A sintaxe que especifica nomes para geradores também pode ser usada em muitos dos anéis acima,
+        como demonstrado acima para corpos quadráticos e abaixo para corpos ciclotômicos.
       </p>
 
             <sage doctest="random">
@@ -2763,11 +2763,11 @@
     </subsection>
 
     <subsection>
-      <title>Properties of Rings</title>
+      <title>Propriedades dos anéis</title>
       <p>
-        The examples below demonstrate how to query certain properties of rings.
-        If you are playing along,
-        be sure to execute the first compute cell to define the various rings involved in the examples.
+        Os exemplos abaixo demonstram como consultar certas propriedades dos anéis.
+        Se você quiser acompanhar os exemplos,
+        certifique-se de executar primeiro a célula de cálculo para definir os vários anéis envolvidos.
       </p>
 
             <sage>
@@ -2784,7 +2784,7 @@
             </sage>
 
       <p>
-        Exact versus inexact.
+        Exatos versus inexatos.
       </p>
 
             <sage>
@@ -2805,7 +2805,7 @@
             </sage>
 
       <p>
-        Finite versus infinite.
+        Finitos versus infinitos.
       </p>
 
             <sage>
@@ -2826,7 +2826,7 @@
             </sage>
 
       <p>
-        Integral domain?
+        Domínio de integridade?
       </p>
 
             <sage>
@@ -2847,7 +2847,7 @@
             </sage>
 
       <p>
-        Field?
+        Corpo?
       </p>
 
             <sage>
@@ -2876,7 +2876,7 @@
             </sage>
 
       <p>
-        Commutative?
+        Comutativo?
       </p>
 
             <sage>
@@ -2897,7 +2897,7 @@
             </sage>
 
       <p>
-        Characteristic.
+        Característica.
       </p>
 
             <sage>
@@ -2950,11 +2950,11 @@
             </sage>
 
       <p>
-        Additive and multiplicative identities
-        <em>print</em> like you would expect,
-        but notice that while they may <em>print</em> identically,
-        they could be <em>different</em>
-        because of the ring they live in.
+        As identidades aditiva e multiplicativa
+        são <em>exibidas</em> como seria esperado,
+        mas observe que, embora possam ser <em>exibidas</em> de modo idêntico,
+        elas podem ser <em>diferentes</em>
+        por causa do anel ao qual pertencem.
       </p>
 
             <sage>
@@ -3041,10 +3041,10 @@
             </sage>
 
       <p>
-        There is some support for subrings.
-        For example,
-        <c>Q</c> and <c>S</c> are extensions of the rationals,
-        while <c>F</c> is totally distinct from the rationals.
+        Há algum suporte para subanéis.
+        Por exemplo,
+        <c>Q</c> e <c>S</c> são extensões dos racionais,
+        enquanto <c>F</c> é totalmente distinto dos racionais.
       </p>
 
             <sage>
@@ -3073,11 +3073,11 @@
             </sage>
 
       <p>
-        Not every element of a ring may have a multiplicative inverse,
-        in other words,
-        not every element has to be a unit
-        (unless the ring is a field).
-        It would now be good practice to check if an element is a unit before you try computing its inverse.
+        Nem todo elemento de um anel pode ter um inverso multiplicativo;
+        em outras palavras,
+        nem todo elemento precisa ser uma unidade
+        (a menos que o anel seja um corpo).
+        É uma boa prática verificar se um elemento é uma unidade antes de tentar calcular seu inverso.
       </p>
 
             <sage>
@@ -3125,21 +3125,21 @@
     </subsection>
 
     <subsection>
-      <title>Quotient Structure</title>
+      <title>Estrutura quociente</title>
       <p>
-        Ideals are the normal subgroups of rings and allow us to build <q>quotients</q>
-        <mdash/> basically new rings defined on equivalence classes of elements of the original ring.
-        Sage support for ideals is variable.
-        When they can be created, there is not always a lot you can do with them.
-        But they work well in certain very important cases.
+        Ideais são os subgrupos normais dos anéis e nos permitem construir <q>quocientes</q>
+        <mdash/> basicamente, novos anéis definidos sobre classes de equivalência de elementos do anel original.
+        O suporte do Sage para ideais é variável.
+        Quando eles podem ser criados, nem sempre há muito que se possa fazer com eles.
+        Mas eles funcionam bem em alguns casos muito importantes.
       </p>
 
       <p>
-        The integers, <m>{\mathbb Z}</m>,
-        have ideals that are just multiples of a single integer.
-        We can create them with the <c>.ideal()</c> method or just by wrting a scalar multiple of <c>ZZ</c>.
-        And then the quotient is isomorphic to a well-understood ring.
-        (Notice that <c>I</c> is a bad name for an ideal if we want to work with complex numbers later.)
+        Os inteiros, <m>{\mathbb Z}</m>,
+        têm ideais que são simplesmente múltiplos de um único inteiro.
+        Podemos criá-los com o método <c>.ideal()</c> ou simplesmente escrevendo um múltiplo escalar de <c>ZZ</c>.
+        Então o quociente é isomorfo a um anel bem conhecido.
+        (Observe que <c>I</c> é um nome ruim para um ideal se quisermos trabalhar com números complexos mais adiante.)
       </p>
 
             <sage>
@@ -3179,11 +3179,11 @@
             </sage>
 
       <p>
-        We might normally be more careful about the last statement.
-        The quotient is a set of equivalence classes, each infinite,
-        and certainly not a single integer.
-        But the quotient is <em>isomorphic</em> to <m>{\mathbb Z}_4</m>,
-        so Sage just makes this identification.
+        Normalmente deveríamos ser mais cuidadosos com a última afirmação.
+        O quociente é um conjunto de classes de equivalência, cada uma infinita,
+        e certamente não um único inteiro.
+        Mas o quociente é <em>isomorfo</em> a <m>{\mathbb Z}_4</m>,
+        então o Sage simplesmente faz essa identificação.
       </p>
 
             <sage>
@@ -3225,10 +3225,10 @@
             </sage>
 
       <p>
-        Notice that the construction of the quotient ring has created a new generator,
-        converting <c>y</c>(<m>y</m>) to <c>ybar</c>
+        Observe que a construção do anel quociente criou um novo gerador,
+        convertendo <c>y</c>(<m>y</m>) em <c>ybar</c>
         (<m>\overline{y}</m>).
-        We can override this as before with the syntax demonstrated below.
+        Podemos substituir esse nome como antes, usando a sintaxe demonstrada abaixo.
       </p>
 
             <sage>
@@ -3250,11 +3250,11 @@
             </sage>
 
       <p>
-        So from a quotient of an infinite ring and an ideal
-        (which is also a ring),
-        we create a field, which is finite.
-        Understanding this construction will be an important theme in the next few chapters.
-        To see how remarkable it is, consider what happens with just one little change.
+        Assim, a partir de um quociente de um anel infinito e de um ideal
+        (que também é um anel),
+        criamos um corpo que é finito.
+        Compreender essa construção será um tema importante nos próximos capítulos.
+        Para ver como isso é notável, considere o que acontece com uma pequena mudança.
       </p>
 
             <sage>
@@ -3296,10 +3296,10 @@
             </sage>
 
       <p>
-        There are a few methods available which will give us properties of ideals.
-        In particular,
-        we can check for prime and maximal ideals in rings of polynomials.
-        Examine the results above and below in the context of <xref ref="rings-theorem-maximal-ideal-field"/>.
+        Há alguns métodos disponíveis que nos fornecem propriedades dos ideais.
+        Em particular,
+        podemos verificar se há ideais primos e maximais em anéis de polinômios.
+        Examine os resultados acima e abaixo no contexto de <xref ref="rings-theorem-maximal-ideal-field"/>.
       </p>
 
             <sage>
@@ -3324,7 +3324,7 @@
             </sage>
 
       <p>
-        The fact that <c>M</c> is a prime ideal is verification of <xref ref="rings-corollary-maximal-ideal"/>.
+        O fato de <c>M</c> ser um ideal primo é uma verificação de <xref ref="rings-corollary-maximal-ideal"/>.
       </p>
 
             <sage>
@@ -3346,26 +3346,26 @@
     </subsection>
 
     <subsection>
-      <title>Ring Homomorphisms</title>
+      <title>Homomorfismos de anéis</title>
       <p>
-        When Sage is presented with <c>3 + 4/3</c>,
-        how does it know that 3 is meant to be an integer?
-        And then to add it to a rational,
-        how does it know that we really want to view the computation as 3/1 + 4/3?
-        This is really easy for you and me,
-        but devilishly hard for a program,
-        and you can imagine it getting ever more complicated with the many possible rings in Sage,
-        subrings,
-        matrices, etc.
-        Part of the answer is that Sage uses ring homomorphisms to <q>translate</q>
-        objects (numbers) between rings.
+        Quando o Sage recebe <c>3 + 4/3</c>,
+        como ele sabe que 3 deve ser considerado um inteiro?
+        E, para somá-lo a um racional,
+        como sabe que realmente queremos interpretar o cálculo como 3/1 + 4/3?
+        Isso é muito fácil para você e para mim,
+        mas diabolicamente difícil para um programa,
+        e você pode imaginar que a situação se torna cada vez mais complicada com os muitos anéis possíveis no Sage,
+        subanéis,
+        matrizes etc.
+        Parte da resposta é que o Sage usa homomorfismos de anéis para <q>traduzir</q>
+        objetos (números) entre anéis.
       </p>
 
       <p>
-        We will give an example below,
-        but not pursue the topic much further.
-        For the curious,
-        reading the Sage documentation and experimenting would be a good exercise.
+        Daremos um exemplo abaixo,
+        mas não desenvolveremos muito mais o assunto.
+        Para os curiosos,
+        ler a documentação do Sage e fazer experimentos seria um bom exercício.
       </p>
 
             <sage>
@@ -3423,33 +3423,33 @@
             </sage>
 
       <p>
-        So <c>phi</c> is a homomorphism (<q>morphism</q>) that converts integers
-        (the domain is <c>ZZ</c>)
-        into rationals
-        (the codomain is <c>QQ</c>),
-        whose parent is a set of homomorphisms that Sage calls a <q>homset.</q>
-        Even though <c>a</c> and <c>b</c> both print as <c>3</c>,
-        which is indistinguishable to our eyes,
-        the parents of <c>a</c> and <c>b</c> are different.
-        Yet the numerical value of the two objects has not changed.
+        Assim, <c>phi</c> é um homomorfismo (<q>morfismo</q>) que converte inteiros
+        (o domínio é <c>ZZ</c>)
+        em racionais
+        (o contradomínio é <c>QQ</c>),
+        cujo pai é um conjunto de homomorfismos que o Sage chama de <q>homset.</q>
+        Embora <c>a</c> e <c>b</c> sejam ambos exibidos como <c>3</c>,
+        o que é indistinguível aos nossos olhos,
+        os pais de <c>a</c> e <c>b</c> são diferentes.
+        Ainda assim, o valor numérico dos dois objetos não mudou.
       </p>
     </subsection>
   </section>
 
   <exercises xml:id="rings-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios de Sage</title>
 
     <exercise number="1" xml:id="rings-sage-exercise-Z11-Z12">
       <statement>
         <p>
-          Define the two rings <m>{\mathbb Z}_{11}</m> and
-          <m>{\mathbb Z}_{12}</m> with the commands <c>R = Integers(11)</c> and <c>S = Integers(12)</c>.
-          For each ring, use the relevant command to determine:
-          if the ring is finite, if it is commutative,
-          if it is an integral domain and if it is a field.
-          Then use single Sage commands to find the order of the ring,
-          list the elements, and output the multiplicative identity
-          (<ie/> <m>1</m>, if it exists).
+          Defina os dois anéis <m>{\mathbb Z}_{11}</m> e
+          <m>{\mathbb Z}_{12}</m> com os comandos <c>R = Integers(11)</c> e <c>S = Integers(12)</c>.
+          Para cada anel, use o comando relevante para determinar:
+          se o anel é finito, se é comutativo,
+          se é um domínio de integridade e se é um corpo.
+          Em seguida, use comandos individuais do Sage para encontrar a ordem do anel,
+          listar os elementos e exibir a identidade multiplicativa
+          (<ie/> <m>1</m>, se existir).
         </p>
       </statement>
     </exercise>
@@ -3457,13 +3457,13 @@
     <exercise number="2" xml:id="rings-sage-exercise-ideals">
       <statement>
         <p>
-          Define <c>R</c> to be the ring of integers, <m>{\mathbb Z}</m>,
-          by executing <c>R = ZZ</c> or <c>R = Integers()</c>.
-          A command like <c>R.ideal(4)</c> will create the principal ideal <m>\langle 4\rangle</m>.
-          The same command can accept more than one generator, so for example,
-          <c>R.ideal(3, 5)</c> will create the ideal <m>\{a\cdot 3+ b\cdot 5\mid a,b\in{\mathbb Z}\}</m>.
-          Create several ideals of <m>{\mathbb Z}</m> with two generators and ask Sage to print each as you create it.
-          Explain what you observe and then create code that will test your observation for thousands of different examples.
+          Defina <c>R</c> como o anel dos inteiros, <m>{\mathbb Z}</m>,
+          executando <c>R = ZZ</c> ou <c>R = Integers()</c>.
+          Um comando como <c>R.ideal(4)</c> criará o ideal principal <m>\langle 4\rangle</m>.
+          O mesmo comando pode aceitar mais de um gerador; por exemplo,
+          <c>R.ideal(3, 5)</c> criará o ideal <m>\{a\cdot 3+ b\cdot 5\mid a,b\in{\mathbb Z}\}</m>.
+          Crie vários ideais de <m>{\mathbb Z}</m> com dois geradores e peça ao Sage para exibir cada um à medida que for criado.
+          Explique o que observa e então crie um código que teste sua observação em milhares de exemplos diferentes.
         </p>
       </statement>
     </exercise>
@@ -3471,39 +3471,39 @@
     <exercise number="3" xml:id="rings-sage-exercise-finite-field">
       <statement>
         <p>
-          Create a finite field <m>F</m> of order 81 with <c>F.&lt;t&gt;=FiniteField(3^4)</c>.
+          Crie um corpo finito <m>F</m> de ordem 81 com <c>F.&lt;t&gt;=FiniteField(3^4)</c>.
         </p>
 
         <ol>
           <li>
             <p>
-              List the elements of <m>F</m>.
+              Liste os elementos de <m>F</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Obtain the generators of <m>F</m> with <c>F.gens()</c>.
+              Obtenha os geradores de <m>F</m> com <c>F.gens()</c>.
             </p>
           </li>
 
           <li>
             <p>
-              Obtain the first generator of <m>F</m> and save it as <c>u</c> with <c>u = F.0</c>(alternatively,
+              Obtenha o primeiro gerador de <m>F</m> e salve-o como <c>u</c> com <c>u = F.0</c>(alternativamente,
             <c>u = F.gen(0)</c>).
             </p>
           </li>
 
           <li>
             <p>
-              Compute the first 80 powers of <c>u</c> and comment.
+              Calcule as primeiras 80 potências de <c>u</c> e comente.
             </p>
           </li>
 
           <li>
             <p>
-              The generator you have worked with above is a root of a polynomial over <m>{\mathbb Z}_3</m>.
-              Obtain this polynomial with <c>F.modulus()</c> and use this observation to explain the entry in your list of powers that is the fourth power of the generator.
+              O gerador com o qual você trabalhou acima é uma raiz de um polinômio sobre <m>{\mathbb Z}_3</m>.
+              Obtenha esse polinômio com <c>F.modulus()</c> e use essa observação para explicar o elemento da sua lista de potências que é a quarta potência do gerador.
             </p>
           </li>
         </ol>
@@ -3513,39 +3513,39 @@
     <exercise number="4" xml:id="rings-sage-exercise-quotient-ring">
       <statement>
         <p>
-          Build and analyze a quotient ring as follows:
+          Construa e analise um anel quociente da seguinte maneira:
         </p>
 
         <ol>
           <li>
             <p>
-              Use <c>P.&lt;z&gt;=Integers(7)[]</c> to construct a ring <m>P</m> of polynomials in <m>z</m> with coefficients from <m>{\mathbb Z}_7</m>.
+              Use <c>P.&lt;z&gt;=Integers(7)[]</c> para construir um anel <m>P</m> de polinômios em <m>z</m> com coeficientes em <m>{\mathbb Z}_7</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use <c>K = P.ideal(z^2+z+3)</c> to build a principal ideal <m>K</m> generated by the polynomial <m>z^2+z+3</m>.
+              Use <c>K = P.ideal(z^2+z+3)</c> para construir um ideal principal <m>K</m> gerado pelo polinômio <m>z^2+z+3</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use <c>H = P.quotient(K)</c> to build <m>H</m>,
-              the quotient ring of <m>P</m> by <m>K</m>.
+              Use <c>H = P.quotient(K)</c> para construir <m>H</m>,
+              o anel quociente de <m>P</m> por <m>K</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use Sage to verify that <m>H</m> is a field.
+              Use o Sage para verificar que <m>H</m> é um corpo.
             </p>
           </li>
 
           <li>
             <p>
-              As in the previous exercise,
-              obtain a generator and examine the proper collection of powers of that generator.
+              Como no exercício anterior,
+              obtenha um gerador e examine a coleção apropriada de potências desse gerador.
             </p>
           </li>
         </ol>
