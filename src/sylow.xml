@@ -10,94 +10,94 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="sylow">
-  <title>The Sylow Theorems</title>
+  <title>Os Teoremas de Sylow</title>
   <introduction>
     <p>
-      We already know that the converse of Lagrange's Theorem is false.
-      If <m>G</m> is a group of order <m>m</m> and <m>n</m> divides <m>m</m>,
-      then <m>G</m> does not necessarily possess a subgroup of order <m>n</m>.
-      For example,
-      <m>A_4</m> has order <m>12</m> but does not possess a subgroup of order <m>6</m>.
-      However, the Sylow Theorems do provide a partial converse for Lagrange's Theorem<mdash/>in certain cases they guarantee us subgroups of specific orders.
-      These theorems yield a powerful set of tools for the classification of all finite nonabelian groups.
+       Já sabemos que a recíproca do Teorema de Lagrange é falsa.
+       Se <m>G</m> é um grupo de ordem <m>m</m> e <m>n</m> divide <m>m</m>,
+       então <m>G</m> não necessariamente possui um subgrupo de ordem <m>n</m>.
+       Por exemplo,
+       <m>A_4</m> tem ordem <m>12</m>, mas não possui um subgrupo de ordem <m>6</m>.
+       Contudo, os Teoremas de Sylow fornecem uma recíproca parcial para o Teorema de Lagrange<mdash/>em certos casos, eles garantem a existência de subgrupos de ordens específicas.
+       Esses teoremas fornecem um poderoso conjunto de ferramentas para a classificação de todos os grupos finitos não abelianos.
     </p>
   </introduction>
 
   <section xml:id="sylow-section-sylow-theorems">
-    <title>The Sylow Theorems</title>
+    <title>Os Teoremas de Sylow</title>
     <introduction>
       <p>
-        We will use what we have learned about group actions to prove the Sylow Theorems.
-        Recall for a moment what it means for <m>G</m> to act on itself by conjugation and how conjugacy classes are distributed in the group according to the class equation,
-        discussed in <xref ref="actions"/>.
-        A group  <m>G</m> acts on itself by conjugation via the map <m>(g,x) \mapsto gxg^{-1}</m>.
-        Let <m>x_1, \ldots,
-        x_k</m> be representatives from each  of the distinct conjugacy classes of <m>G</m> that consist of more than one element.
-        Then the class equation can be written as
+        Usaremos o que aprendemos sobre ações de grupos para demonstrar os Teoremas de Sylow.
+        Recordemos por um momento o que significa <m>G</m> agir sobre si mesmo por conjugação e como as classes de conjugação se distribuem no grupo de acordo com a equação das classes,
+        discutida em <xref ref="actions"/>.
+        Um grupo <m>G</m> age sobre si mesmo por conjugação por meio da aplicação <m>(g,x) \mapsto gxg^{-1}</m>.
+        Sejam <m>x_1, \ldots,
+        x_k</m> representantes de cada uma das classes de conjugação distintas de <m>G</m> que contêm mais de um elemento.
+        Então a equação das classes pode ser escrita como
         <md>
           |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]
         </md>,
-        where <m>Z(G) = \{g \in G : gx = xg \text{ for all } x \in G\}</m> is the center of <m>G</m> and 
-        <m>C(x_i) = \{ g \in G : g x_i = x_i g \}</m> is the centralizer subgroup of <m>x_i</m>.
+        onde <m>Z(G) = \{g \in G : gx = xg \text{ for all } x \in G\}</m> é o centro de <m>G</m> e
+        <m>C(x_i) = \{ g \in G : g x_i = x_i g \}</m> é o subgrupo centralizador de <m>x_i</m>.
       </p>
 
       <p>
-        We begin our investigation of the Sylow Theorems by examining subgroups of order <m>p</m>,
-        where <m>p</m> is prime.
-        A group <m>G</m> is a <term><m>p</m>-group</term><idx><h>Group</h><h><m>p</m>-group</h></idx>
-        if every element in <m>G</m> has as its order a power of <m>p</m>,
-        where <m>p</m> is a prime number.
-        A subgroup of a group <m>G</m> is a
-        <term><m>p</m>-subgroup</term><idx><h>Subgroup<m>p</m>-subgroup</h></idx> if it is a <m>p</m>-group.
+        Começamos nossa investigação dos Teoremas de Sylow examinando subgrupos de ordem <m>p</m>,
+        onde <m>p</m> é primo.
+        Um grupo <m>G</m> é um <term><m>p</m>-grupo</term><idx><h>Grupo</h><h><m>p</m>-grupo</h></idx>
+        se todo elemento de <m>G</m> tiver como ordem uma potência de <m>p</m>,
+        onde <m>p</m> é um número primo.
+        Um subgrupo de um grupo <m>G</m> é um
+        <term><m>p</m>-subgrupo</term><idx><h>Subgrupo<m>p</m>-subgrupo</h></idx> se for um <m>p</m>-grupo.
       </p>
 
       <theorem xml:id="sylow-theorem-cauchy">
         <title>Cauchy</title>
-        <idx><h>Cauchy's Theorem</h></idx>
+        <idx><h>Teorema de Cauchy</h></idx>
         <statement>
           <p>
-            Let <m>G</m> be a finite group and <m>p</m> a prime such that <m>p</m> divides the order of <m>G</m>.
-            Then <m>G</m> contains a subgroup of order <m>p</m>.
+            Seja <m>G</m> um grupo finito e <m>p</m> um primo tal que <m>p</m> divide a ordem de <m>G</m>.
+            Então <m>G</m> contém um subgrupo de ordem <m>p</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will use induction on the order of <m>G</m>.
-            If <m>|G|=p</m>,
-            then clearly <m>G</m> itself is the required subgroup.
-            We now assume that every group of order <m>k</m>,
-            where <m>p \leq k \lt n</m> and <m>p</m> divides <m>k</m>,
-            has an element of order <m>p</m>.
-            Assume that <m>|G|= n</m> and
-            <m>p \mid n</m> and consider the class equation of <m>G</m>:
+            Usaremos indução sobre a ordem de <m>G</m>.
+            Se <m>|G|=p</m>,
+            então, claramente, o próprio <m>G</m> é o subgrupo requerido.
+            Suponha agora que todo grupo de ordem <m>k</m>,
+            em que <m>p \leq k \lt n</m> e <m>p</m> divide <m>k</m>,
+            contenha um elemento de ordem <m>p</m>.
+            Suponha que <m>|G|= n</m> e
+            <m>p \mid n</m> e considere a equação das classes de <m>G</m>:
             <md>
               |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]
             </md>.
-            We have two cases.
+            Temos dois casos.
           </p>
           <case>
-            <title>Case 1</title>
+              <title>Caso 1</title>
             <p>
-              Suppose the order of one of the centralizer subgroups,
+               Suponha que a ordem de um dos subgrupos centralizadores,
               <m>C(x_i)</m>,
-              is divisible by <m>p</m> for some <m>i</m>, <m>i = 1, \ldots, k</m>.
-              In this case, by our induction hypothesis, we are done.
-              Since <m>C(x_i)</m> is a proper subgroup of <m>G</m> and <m>p</m> divides <m>|C(x_i)|</m>,
-              <m>C(x_i)</m> must contain an element of order <m>p</m>.
-              Hence, <m>G</m> must contain an element of order <m>p</m>.
+               seja divisível por <m>p</m> para algum <m>i</m>, <m>i = 1, \ldots, k</m>.
+               Nesse caso, pela nossa hipótese de indução, terminamos.
+               Como <m>C(x_i)</m> é um subgrupo próprio de <m>G</m> e <m>p</m> divide <m>|C(x_i)|</m>,
+               <m>C(x_i)</m> deve conter um elemento de ordem <m>p</m>.
+               Logo, <m>G</m> deve conter um elemento de ordem <m>p</m>.
             </p>
           </case>
           <case>
-            <title>Case 2</title>
+              <title>Caso 2</title>
             <p>
-              Suppose the order of no centralizer subgroup is divisible by <m>p</m>.
-              Then <m>p</m> divides <m>[G:C(x_i)]</m>,
-              the order of each conjugacy class in the class equation;
-              hence, <m>p</m> must divide the center of <m>G</m>, <m>Z(G)</m>.
-              Since <m>Z(G)</m> is abelian,
-              it must have a subgroup of order <m>p</m> by the Fundamental Theorem of Finite Abelian Groups.
-              Therefore, the center of <m>G</m> contains an element of order <m>p</m>.
+               Suponha que a ordem de nenhum subgrupo centralizador seja divisível por <m>p</m>.
+               Então <m>p</m> divide <m>[G:C(x_i)]</m>,
+               a ordem de cada classe de conjugação na equação das classes;
+               portanto, <m>p</m> deve dividir o centro de <m>G</m>, <m>Z(G)</m>.
+               Como <m>Z(G)</m> é abeliano,
+               ele deve ter um subgrupo de ordem <m>p</m> pelo Teorema Fundamental dos Grupos Abelianos Finitos.
+               Portanto, o centro de <m>G</m> contém um elemento de ordem <m>p</m>.
             </p>
           </case>
         </proof>
@@ -106,131 +106,131 @@
       <corollary>
         <statement>
           <p>
-            Let <m>G</m> be a finite group.
-            Then <m>G</m> is a <m>p</m>-group if and only if <m>|G| = p^n</m>.
+            Seja <m>G</m> um grupo finito.
+            Então <m>G</m> é um <m>p</m>-grupo se, e somente se, <m>|G| = p^n</m>.
           </p>
         </statement>
       </corollary>
 
       <example xml:id="sylow-example-a5-subgroups">
         <p>
-          Let us consider the group <m>A_5</m>.
-          We know that <m>|A_5| = 60 = 2^2 \cdot 3 \cdot 5</m>.
-          By Cauchy's Theorem,
-          we are guaranteed that <m>A_5</m> has subgroups of orders <m>2</m>,
-          <m>3</m> and <m>5</m>.
-          The Sylow Theorems will give us even more information about the possible subgroups of <m>A_5</m>.
+           Consideremos o grupo <m>A_5</m>.
+           Sabemos que <m>|A_5| = 60 = 2^2 \cdot 3 \cdot 5</m>.
+           Pelo Teorema de Cauchy,
+           temos a garantia de que <m>A_5</m> possui subgrupos de ordens <m>2</m>,
+           <m>3</m> e <m>5</m>.
+           Os Teoremas de Sylow nos fornecerão ainda mais informações sobre os possíveis subgrupos de <m>A_5</m>.
         </p>
       </example>
 
       <p>
-        We are now ready to state and prove the first of the Sylow Theorems.
-        The proof is very similar to the proof of Cauchy's Theorem.
+        Estamos agora prontos para enunciar e demonstrar o primeiro dos Teoremas de Sylow.
+        A demonstração é muito semelhante à demonstração do Teorema de Cauchy.
       </p>
 
       <theorem>
-        <title>First Sylow Theorem</title>
+          <title>Primeiro Teorema de Sylow</title>
         <statement>
           <p>
-            Let <m>G</m> be a finite group and <m>p</m> a prime such that <m>p^r</m> divides <m>|G|</m>.
-            Then <m>G</m> contains a subgroup of order <m>p^r</m>.
+            Seja <m>G</m> um grupo finito e <m>p</m> um primo tal que <m>p^r</m> divide <m>|G|</m>.
+            Então <m>G</m> contém um subgrupo de ordem <m>p^r</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We induct on the order of <m>G</m> once again.
-            If <m>|G| = p</m>, then we are done.
-            Now suppose that the order of <m>G</m> is <m>n</m> with <m>n \gt p</m> and that the theorem is true for all groups of order less than <m>n</m>,
-            where <m>p</m> divides <m>n</m>.
-            We shall apply the class equation once again:
+            Mais uma vez, usaremos indução sobre a ordem de <m>G</m>.
+            Se <m>|G| = p</m>, terminamos.
+            Suponha agora que a ordem de <m>G</m> seja <m>n</m>, com <m>n \gt p</m>, e que o teorema seja verdadeiro para todos os grupos de ordem menor que <m>n</m>,
+            em que <m>p</m> divide <m>n</m>.
+            Aplicaremos novamente a equação das classes:
             <md>
               |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]
             </md>.
-            First suppose that <m>p</m> does not divide <m>[G:C(x_i)]</m> for some <m>i</m>.
-            Then <m>p^r \mid |C(x_i)|</m>,
-            since <m>p^r</m> divides <m>|G| = |C(x_i)| \cdot [G:C(x_i)]</m>.
-            Now we can apply the induction hypothesis to <m>C(x_i)</m>.
+            Suponha primeiro que <m>p</m> não divida <m>[G:C(x_i)]</m> para algum <m>i</m>.
+            Então <m>p^r \mid |C(x_i)|</m>,
+            pois <m>p^r</m> divide <m>|G| = |C(x_i)| \cdot [G:C(x_i)]</m>.
+            Agora podemos aplicar a hipótese de indução a <m>C(x_i)</m>.
           </p>
 
           <p>
-            Hence, we may assume that <m>p</m> divides <m>[G:C(x_i)]</m> for all <m>i</m>.
-            Since <m>p</m> divides <m>|G|</m>,
-            the class equation says that <m>p</m> must divide <m>|Z(G)|</m>;
-            hence, by Cauchy's Theorem,
-            <m>Z(G)</m> has an element of order <m>p</m>, say <m>g</m>.
-            Let <m>N</m> be the group generated by <m>g</m>.
-            Clearly, <m>N</m> is a normal subgroup of <m>Z(G)</m> since <m>Z(G)</m> is abelian;
-            therefore, <m>N</m> is normal in <m>G</m> since every element in <m>Z(G)</m> commutes with every element in <m>G</m>.
-            Now consider the factor group <m>G/N</m> of order <m>|G|/p</m>.
-            By the induction hypothesis,
-            <m>G/N</m> contains a subgroup <m>H</m> of order <m>p^{r- 1}</m>.
-            The inverse image of <m>H</m> under the canonical homomorphism
-            <m>\phi : G \rightarrow G/N</m> is a subgroup of order <m>p^r</m> in <m>G</m>.
+            Portanto, podemos supor que <m>p</m> divide <m>[G:C(x_i)]</m> para todo <m>i</m>.
+            Como <m>p</m> divide <m>|G|</m>,
+            a equação das classes diz que <m>p</m> deve dividir <m>|Z(G)|</m>;
+            portanto, pelo Teorema de Cauchy,
+            <m>Z(G)</m> possui um elemento de ordem <m>p</m>, digamos <m>g</m>.
+            Seja <m>N</m> o grupo gerado por <m>g</m>.
+            Claramente, <m>N</m> é um subgrupo normal de <m>Z(G)</m>, pois <m>Z(G)</m> é abeliano;
+            portanto, <m>N</m> é normal em <m>G</m>, pois todo elemento de <m>Z(G)</m> comuta com todo elemento de <m>G</m>.
+            Considere agora o grupo quociente <m>G/N</m>, de ordem <m>|G|/p</m>.
+            Pela hipótese de indução,
+            <m>G/N</m> contém um subgrupo <m>H</m> de ordem <m>p^{r- 1}</m>.
+            A imagem inversa de <m>H</m> pelo homomorfismo canônico
+            <m>\phi : G \rightarrow G/N</m> é um subgrupo de ordem <m>p^r</m> em <m>G</m>.
           </p>
         </proof>
       </theorem>
 
       <p>
-        A <term>Sylow <m>p</m>-subgroup</term><idx><h>Subgroup</h><h>Sylow <m>p</m>-subgroup</h></idx><idx><h>Sylow <m>p</m>-subgroup</h></idx>
-        <m>P</m> of a group <m>G</m> is a maximal <m>p</m>-subgroup of <m>G</m>.
-        To prove the other two Sylow Theorems,
-        we need to consider conjugate subgroups as opposed to conjugate elements in a group.
-        For a group <m>G</m>,
-        let <m>{\mathcal S}</m> be the collection of all subgroups of <m>G</m>.
-        For any subgroup <m>H</m>, <m>{\mathcal S}</m> is a <m>H</m>-set,
-        where  <m>H</m> acts on <m>{\mathcal S}</m> by conjugation.
-        That is, we have an action
+        Um <term>subgrupo de Sylow <m>p</m></term><idx><h>Subgrupo</h><h>subgrupo de Sylow <m>p</m></h></idx><idx><h>Subgrupo de Sylow <m>p</m></h></idx>
+        <m>P</m> de um grupo <m>G</m> é um <m>p</m>-subgrupo máximo de <m>G</m>.
+        Para demonstrar os outros dois Teoremas de Sylow,
+        precisamos considerar subgrupos conjugados, em vez de elementos conjugados em um grupo.
+        Para um grupo <m>G</m>,
+        seja <m>{\mathcal S}</m> a coleção de todos os subgrupos de <m>G</m>.
+        Para qualquer subgrupo <m>H</m>, <m>{\mathcal S}</m> é um <m>H</m>-conjunto,
+        em que <m>H</m> age sobre <m>{\mathcal S}</m> por conjugação.
+        Isto é, temos uma ação
         <md>
           H \times {\mathcal S} \rightarrow {\mathcal S}
         </md>
-        defined by
+        definida por
         <md>
           h \cdot K \mapsto hKh^{-1}
         </md>
-        for <m>K</m> in <m>{\mathcal S}</m>.
+        para <m>K</m> em <m>{\mathcal S}</m>.
       </p>
 
       <p>
-        The set
+        O conjunto
 
         <notation>
           <usage><m>N(H)</m></usage>
-          <description>normalizer of s subgroup <m>H</m></description>
+          <description>normalizador de um subgrupo <m>H</m></description>
         </notation>
 
         <md>
           N(H) = \{  g \in G : g H g^{-1} = H\}
         </md>
-        is a subgroup of <m>G</m> called the the
-        <term>normalizer</term><idx><h>Subgroup</h><h>normalizer of</h></idx><idx><h>Normalizer</h></idx>
-        of <m>H</m> in <m>G</m>.
-        Notice that <m>H</m> is a normal subgroup of <m>N(H)</m>.
-        In fact, <m>N(H)</m> is the largest subgroup of <m>G</m> in which <m>H</m> is normal.
+        é um subgrupo de <m>G</m> chamado de
+        <term>normalizador</term><idx><h>Subgrupo</h><h>normalizador de</h></idx><idx><h>Normalizador</h></idx>
+        de <m>H</m> em <m>G</m>.
+        Observe que <m>H</m> é um subgrupo normal de <m>N(H)</m>.
+        Na verdade, <m>N(H)</m> é o maior subgrupo de <m>G</m> no qual <m>H</m> é normal.
       </p>
 
       <lemma xml:id="sylow-lemma-p-order">
         <statement>
           <p>
-            Let <m>P</m> be a Sylow <m>p</m>-subgroup of a finite group <m>G</m> and let <m>x</m> have as its order a power of <m>p</m>.
-            If <m>x^{-1} P x = P</m>, then <m>x \in P</m>.
+            Seja <m>P</m> um subgrupo de Sylow <m>p</m> de um grupo finito <m>G</m> e suponha que <m>x</m> tenha ordem uma potência de <m>p</m>.
+            Se <m>x^{-1} P x = P</m>, então <m>x \in P</m>.
           </p>
         </statement>
             <!-- typo corrected.  Suggested by L. Franklin. -->
             <!-- TWJ - 12/19/2011 -->
         <proof>
           <p>
-            Certainly <m>x \in N(P)</m>, and the cyclic subgroup,
+            Certamente, <m>x \in N(P)</m> e o subgrupo cíclico
             <m>\langle xP \rangle \subset N(P)/P</m>,
-            has as its order a power of <m>p</m>.
-            By the Correspondence Theorem there exists a subgroup <m>H</m> of <m>N(P)</m> containing <m>P</m> such that <m>H/P = \langle xP \rangle</m>.
-            Since <m>|H| = |P| \cdot |\langle xP \rangle|</m>,
-            the order of <m>H</m> must be a power of <m>p</m>.
-            However, <m>P</m> is a Sylow <m>p</m>-subgroup contained in <m>H</m>.
-            Since the order of <m>P</m> is the largest power of <m>p</m> dividing <m>|G|</m>,
+            tem ordem uma potência de <m>p</m>.
+            Pelo Teorema da Correspondência, existe um subgrupo <m>H</m> de <m>N(P)</m> contendo <m>P</m> tal que <m>H/P = \langle xP \rangle</m>.
+            Como <m>|H| = |P| \cdot |\langle xP \rangle|</m>,
+            a ordem de <m>H</m> deve ser uma potência de <m>p</m>.
+            Contudo, <m>P</m> é um subgrupo de Sylow <m>p</m> contido em <m>H</m>.
+            Como a ordem de <m>P</m> é a maior potência de <m>p</m> que divide <m>|G|</m>,
             <m>H=P</m>.
-            Therefore, <m>H/P</m> is the trivial subgroup and <m>xP = P</m>,
-            or <m>x \in P</m>.
+            Portanto, <m>H/P</m> é o subgrupo trivial e <m>xP = P</m>,
+            ou <m>x \in P</m>.
           </p>
         </proof>
       </lemma>
@@ -238,132 +238,132 @@
       <lemma xml:id="sylow-lemma-distinct-conjugates">
         <statement>
           <p>
-            Let <m>H</m> and <m>K</m> be subgroups of <m>G</m>.
-            The number of distinct <m>H</m>-conjugates of <m>K</m> is <m>[H:N(K) \cap H]</m>.
+            Sejam <m>H</m> e <m>K</m> subgrupos de <m>G</m>.
+            O número de <m>H</m>-conjugados distintos de <m>K</m> é <m>[H:N(K) \cap H]</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We define a bijection between the conjugacy classes of <m>K</m> and the right cosets of
-            <m>N(K) \cap H</m> by <m>h^{-1}Kh \mapsto (N(K) \cap H)h</m>.
-            To show that this map is a bijection,
-            let <m>h_1, h_2 \in H</m> and suppose that <m>(N(K) \cap H)h_1 = (N(K) \cap H)h_2</m>.
-            Then <m>h_2 h_1^{-1} \in N(K)</m>.
-            Therefore, <m>K = h_2 h_1^{-1} K h_1 h_2^{-1}</m> or <m>h_1^{-1} K h_1 = h_2^{-1} K h_2</m>,
-            and the map is an injection.
-            It is easy to see that this map is surjective;
-            hence, we have a one-to-one and onto map between the <m>H</m>-conjugates of <m>K</m> and the right cosets of <m>N(K) \cap H</m> in <m>H</m>.
+            Definimos uma bijeção entre as classes de conjugação de <m>K</m> e as classes laterais direitas de
+            <m>N(K) \cap H</m> por <m>h^{-1}Kh \mapsto (N(K) \cap H)h</m>.
+            Para mostrar que essa aplicação é uma bijeção,
+            sejam <m>h_1, h_2 \in H</m> e suponha que <m>(N(K) \cap H)h_1 = (N(K) \cap H)h_2</m>.
+            Então <m>h_2 h_1^{-1} \in N(K)</m>.
+            Portanto, <m>K = h_2 h_1^{-1} K h_1 h_2^{-1}</m> ou <m>h_1^{-1} K h_1 = h_2^{-1} K h_2</m>,
+            e a aplicação é injetiva.
+            É fácil ver que essa aplicação é sobrejetiva;
+            portanto, temos uma aplicação bijetiva entre os <m>H</m>-conjugados de <m>K</m> e as classes laterais direitas de <m>N(K) \cap H</m> em <m>H</m>.
           </p>
         </proof>
       </lemma>
 
       <theorem xml:id="sylow-theorem-second-sylow">
-        <title>Second Sylow Theorem</title>
+          <title>Segundo Teorema de Sylow</title>
         <statement>
           <p>
-            Let <m>G</m> be a finite group and <m>p</m> a prime dividing <m>|G|</m>.
-            Then all Sylow <m>p</m>-subgroups of <m>G</m> are conjugate.
-            That is, if <m>P_1</m> and <m>P_2</m> are two Sylow <m>p</m>-subgroups,
-            there exists a <m>g \in G</m> such that <m>g P_1 g^{-1} = P_2</m>.
+            Seja <m>G</m> um grupo finito e <m>p</m> um primo que divide <m>|G|</m>.
+            Então todos os subgrupos de Sylow <m>p</m> de <m>G</m> são conjugados.
+            Isto é, se <m>P_1</m> e <m>P_2</m> são dois subgrupos de Sylow <m>p</m>,
+            existe <m>g \in G</m> tal que <m>g P_1 g^{-1} = P_2</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>P</m> be a Sylow <m>p</m>-subgroup of <m>G</m> and suppose that <m>|G|=p^r m</m> with <m>|P|=p^r</m>.
-            Let
+            Seja <m>P</m> um subgrupo de Sylow <m>p</m> de <m>G</m> e suponha que <m>|G|=p^r m</m>, com <m>|P|=p^r</m>.
+            Seja
             <md>
               {\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}
             </md>
-            consist of the distinct conjugates of <m>P</m> in <m>G</m>.
-            By <xref ref="sylow-lemma-distinct-conjugates"/>, <m>k = [G: N(P)]</m>.
-            Notice that
+            seja constituído dos conjugados distintos de <m>P</m> em <m>G</m>.
+            Pelo <xref ref="sylow-lemma-distinct-conjugates"/>, <m>k = [G: N(P)]</m>.
+            Observe que
             <md>
               |G|= p^r m = |N(P)| \cdot [G: N(P)]= |N(P)| \cdot k
             </md>.
-            Since <m>p^r</m> divides <m>|N(P)|</m>,
-            <m>p</m> cannot divide <m>k</m>.
+            Como <m>p^r</m> divide <m>|N(P)|</m>,
+            <m>p</m> não pode dividir <m>k</m>.
           </p>
 
           <p>
-            Given any other Sylow <m>p</m>-subgroup <m>Q</m>,
-            we must show that <m>Q \in {\mathcal S}</m>.
-            Consider the <m>Q</m>-conjugacy classes of each <m>P_i</m>.
-            Clearly, these conjugacy classes partition <m>{\mathcal S}</m>.
-            The size of the partition containing <m>P_i</m> is
-            <m>[Q :N(P_i) \cap Q]</m> by <xref ref="sylow-lemma-distinct-conjugates"/>,
-            and Lagrange's Theorem tells us that <m>|Q| = [Q :N(P_i) \cap Q] |N(P_i) \cap Q|</m>.
-            Thus, <m>[Q :N(P_i) \cap Q]</m> must be a divisor of <m>|Q|= p^r</m>.
-            Hence, the number of conjugates in every equivalence class of the partition is a power of <m>p</m>.
-            However, since <m>p</m> does not divide <m>k</m>,
-            one of these equivalence classes must contain only a single Sylow <m>p</m>-subgroup,
-            say <m>P_j</m>.
-            In this case, <m>x^{-1} P_j x = P_j</m> for all <m>x \in Q</m>.
-            By <xref ref="sylow-lemma-p-order"/>, <m>P_j = Q</m>.
+            Dado qualquer outro subgrupo de Sylow <m>p</m> <m>Q</m>,
+            devemos mostrar que <m>Q \in {\mathcal S}</m>.
+            Considere as classes de conjugação por <m>Q</m> de cada <m>P_i</m>.
+            Claramente, essas classes de conjugação particionam <m>{\mathcal S}</m>.
+            O tamanho da parte que contém <m>P_i</m> é
+            <m>[Q :N(P_i) \cap Q]</m> pelo <xref ref="sylow-lemma-distinct-conjugates"/>,
+            e o Teorema de Lagrange nos diz que <m>|Q| = [Q :N(P_i) \cap Q] |N(P_i) \cap Q|</m>.
+            Assim, <m>[Q :N(P_i) \cap Q]</m> deve ser um divisor de <m>|Q|= p^r</m>.
+            Logo, o número de conjugados em cada classe de equivalência da partição é uma potência de <m>p</m>.
+            Contudo, como <m>p</m> não divide <m>k</m>,
+            uma dessas classes de equivalência deve conter apenas um subgrupo de Sylow <m>p</m>,
+            digamos <m>P_j</m>.
+            Nesse caso, <m>x^{-1} P_j x = P_j</m> para todo <m>x \in Q</m>.
+            Pelo <xref ref="sylow-lemma-p-order"/>, <m>P_j = Q</m>.
           </p>
         </proof>
       </theorem>
 
       <theorem xml:id="sylow-theorem-third-sylow">
-        <title>Third Sylow Theorem</title>
+          <title>Terceiro Teorema de Sylow</title>
         <statement>
           <p>
-            Let <m>G</m> be a finite group and let <m>p</m> be a prime dividing the order of <m>G</m>.
-            Then the number of Sylow <m>p</m>-subgroups is congruent to
-            <m>1 \pmod{p}</m> and divides <m>|G|</m>.
+            Seja <m>G</m> um grupo finito e seja <m>p</m> um primo que divide a ordem de <m>G</m>.
+            Então o número de subgrupos de Sylow <m>p</m> é congruente a
+            <m>1 \pmod{p}</m> e divide <m>|G|</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>P</m> be a Sylow <m>p</m>-subgroup acting on the set of Sylow <m>p</m>-subgroups,
+            Seja <m>P</m> um subgrupo de Sylow <m>p</m> agindo sobre o conjunto dos subgrupos de Sylow <m>p</m>,
             <md>
               {\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}
             </md>,
-            by conjugation.
-            From the proof of the Second Sylow Theorem,
-            the only <m>P</m>-conjugate of <m>P</m> is itself and the order of the other <m>P</m>-conjugacy classes is a power of <m>p</m>.
-            Each <m>P</m>-conjugacy class contributes a positive power of <m>p</m> toward
-            <m>|{\mathcal S}|</m> except the equivalence class  <m>\{ P \}</m>.
-            Since <m>|{\mathcal S}|</m> is the sum of positive powers of <m>p</m> and <m>1</m>,
+            por conjugação.
+            Pela demonstração do Segundo Teorema de Sylow,
+            o único conjugado de <m>P</m> por <m>P</m> é ele próprio, e a ordem das outras classes de conjugação por <m>P</m> é uma potência de <m>p</m>.
+            Cada classe de conjugação por <m>P</m> contribui com uma potência positiva de <m>p</m> para
+            <m>|{\mathcal S}|</m>, exceto a classe de equivalência <m>\{ P \}</m>.
+            Como <m>|{\mathcal S}|</m> é a soma de potências positivas de <m>p</m> e de <m>1</m>,
             <m>|{\mathcal S}| \equiv 1 \pmod{p}</m>.
           </p>
 
           <p>
-            Now suppose that <m>G</m> acts on <m>{\mathcal S}</m> by conjugation.
-            Since all Sylow <m>p</m>-subgroups are conjugate,
-            there can be only one orbit under this action.
-            For <m>P \in {\mathcal S}</m>,
+            Agora suponha que <m>G</m> aja sobre <m>{\mathcal S}</m> por conjugação.
+            Como todos os subgrupos de Sylow <m>p</m> são conjugados,
+            só pode haver uma órbita nessa ação.
+            Para <m>P \in {\mathcal S}</m>,
             <md>
               |{\mathcal S}| = |\text{orbit of }P| = [G : N(P)]
             </md>
-            by <xref ref="sylow-lemma-distinct-conjugates"/>.
-            But <m>[G : N(P)]</m> is a divisor of <m>|G|</m>;
-            consequently,
-            the number of Sylow <m>p</m>-subgroups of a finite group must divide the order of the group.
+            pelo <xref ref="sylow-lemma-distinct-conjugates"/>.
+            Mas <m>[G : N(P)]</m> é um divisor de <m>|G|</m>;
+            consequentemente,
+            o número de subgrupos de Sylow <m>p</m> de um grupo finito deve dividir a ordem do grupo.
           </p>
         </proof>
       </theorem>
     </introduction>
 
     <subsection xml:id="sylow-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
         Peter Ludvig Mejdell Sylow<idx><h>Sylow, Ludvig</h></idx>
-        was born in 1832 in Christiania, Norway
-        (now Oslo).
-        After attending Christiania University, Sylow taught high school.
-        In 1862 he obtained a temporary appointment at Christiania University.
-        Even though his appointment was relatively brief,
-        he influenced students such as Sophus Lie<idx><h>Lie, Sophus</h></idx>
+        nasceu em 1832 em Christiania, na Noruega
+        (atualmente, Oslo).
+        Depois de frequentar a Universidade de Christiania, Sylow lecionou no ensino médio.
+        Em 1862, obteve uma nomeação temporária na Universidade de Christiania.
+        Embora sua nomeação tenha sido relativamente breve,
+        ele influenciou estudantes como Sophus Lie<idx><h>Lie, Sophus</h></idx>
         (1842<ndash/>1899).
-        Sylow had a chance at a permanent chair in 1869,
-        but failed to obtain the appointment.
-        In 1872, he published a 10-page paper presenting the theorems that now bear his name.
-        Later Lie and Sylow collaborated on a new edition of Abel's works.
-        In 1898, a chair at Christiania University was finally created for Sylow through the efforts of his student and colleague Lie.
-        Sylow died in 1918.
+        Sylow teve a oportunidade de ocupar uma cátedra permanente em 1869,
+        mas não conseguiu obter a nomeação.
+        Em 1872, publicou um artigo de 10 páginas apresentando os teoremas que hoje levam seu nome.
+        Mais tarde, Lie e Sylow colaboraram em uma nova edição das obras de Abel.
+        Em 1898, uma cátedra na Universidade de Christiania foi finalmente criada para Sylow graças aos esforços de seu aluno e colega Lie.
+        Sylow morreu em 1918.
       </p>
     </subsection>
 
