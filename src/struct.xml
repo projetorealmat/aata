@@ -26,7 +26,7 @@
     <p>
       Neste capítulo, caracterizaremos todos os grupos abelianos finitos.
       Também investigaremos grupos com sequências de subgrupos.
-      If a group has a sequence of subgroups, say
+      Se um grupo possui uma sequência de subgrupos, digamos
       <md>
         G = H_n \supset H_{n - 1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
       </md>,
@@ -50,7 +50,7 @@
         {\mathbb Z}_{p_1^{\alpha_1}} \times \cdots \times {\mathbb Z}_{p_n^{\alpha_n}}
       </md>,
        onde cada <m>p_k</m> é primo
-      (not necessarily distinct).
+       (não necessariamente distintos).
     </p>
 
     <p>
@@ -64,8 +64,8 @@
        Se esse subgrupo de <m>G</m> for, de fato, todo <m>G</m>,
        então <m>G</m> é gerado pelo conjunto <m>\{g_i : i \in I \}</m>.
        Nesse caso, os <m>g_i</m>s são chamados de <term>geradores</term><idx><h>Geradores de um grupo</h></idx><idx><h>Grupo</h><h>geradores de</h></idx>
-      of <m>G</m>.
-      If there is a finite set <m>\{ g_i : i \in I \}</m> that generates <m>G</m>,
+       de <m>G</m>.
+       Se existe um conjunto finito <m>\{ g_i : i \in I \}</m> que gera <m>G</m>,
        então <m>G</m> é <idx><h>Grupo</h><h>finitamente gerado</h></idx><idx><h>Grupo finitamente gerado</h></idx><term>finitamente gerado</term>.
     </p>
 
@@ -82,7 +82,7 @@
       <p>
          Nem todos os grupos são finitamente gerados.
          Considere os números racionais
-        <m>{\mathbb Q}</m> under the operation of addition.
+         <m>{\mathbb Q}</m> sob a operação de adição.
          Suponha que <m>{\mathbb Q}</m> seja finitamente gerado, com geradores <m>p_1/q_1, \ldots,
         p_n/q_n</m>,
          em que cada <m>p_i/q_i</m> é uma fração expressa em sua forma irredutível.
@@ -170,7 +170,7 @@
             {\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }}
           </md>
            em que os <m>p_i</m>s são primos
-          (not necessarily distinct).
+           (não necessariamente distintos).
         </p>
       </statement>
     </theorem>
@@ -264,7 +264,7 @@
            Consequentemente, <m>p</m> deve dividir <m>|G/H|</m>.
            Como <m>|G/H| \lt |G| = n</m>,
            sabemos, pela hipótese de indução, que <m>G/H</m> contém um elemento <m>aH</m> de ordem <m>p</m>.
-          Thus,
+           Assim,
           <md>
             H = (aH)^p = a^pH
           </md>,
@@ -407,7 +407,7 @@
 					<md>|g| = p_1^{\beta_1}  p_2^{\beta_2} \cdots p_n^{\beta_n}</md>
 				for some integers <m>\beta_1, \ldots, \beta_n</m>. Letting <m>a_i = |g| / p_i^{\beta_i}</m>, the <m>a_i</m>'s are relatively prime; hence, there exist integers <m>b_1, \ldots, b_n</m> such that <m>a_1 b_1 + \cdots + a_n b_n = 1</m>. Consequently, 
 					<md>g = g^{a_1 b_1 + \cdots + a_n b_n} = g^{a_1 b_1} \cdots  g^{a_n b_n}.</md>
-				Since
+           Como
 					<md>g^{(a_i b_i ) p_i^{\beta_i}} = g^{b_i |g|} = e,</md>
 				it follows that <m>g^{a_i b_i}</m> must be in <m>G_{i}</m>. Let <m>g_i = g^{a_i b_i}</m>. Then <m>g = g_1 \cdots g_n</m> and <m>G_i \cap G_j = \{ e \}</m> for <m>i \neq j</m>.</p>
 
@@ -474,7 +474,7 @@
            a ordem de <m>h^p</m> é menor que a ordem de <m>h</m> e deve pertencer a
            <m>\langle g \rangle</m> pela minimalidade de <m>h</m>;
            isto é, <m>h^p = g^r</m> para algum número <m>r</m>.
-          Hence,
+           Portanto,
           <md>
             (g^r)^{p^{m - 1}} = (h^p)^{p^{m - 1}} = h^{p^{m}} = e
           </md>,
@@ -485,7 +485,7 @@
            Defina <m>a</m> como <m>g^{-s}h</m>.
            Então <m>a</m> não pode pertencer a <m>\langle g \rangle</m>;
            caso contrário, <m>h</m> também teria de pertencer a <m>\langle g \rangle</m>.
-          Also,
+           Além disso,
           <md>
             a^p = g^{-sp} h^p = g^{-r} h^p = h^{-p} h^p = e
           </md>.
@@ -540,29 +540,29 @@
             {\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }} \times {\mathbb Z} \times \cdots \times {\mathbb Z}
           </md>,
            em que os <m>p_i</m>s são primos
-          (not necessarily distinct).
+           (não necessariamente distintos).
         </p>
       </statement>
     </theorem>
   </section>
 
   <section xml:id="struct-section-solvable-groups">
-    <title>Solvable Groups</title>
+    <title>Grupos Solúveis</title>
     <p>
-      A <term>subnormal series</term><idx><h>Subnormal series of a group</h></idx>  of a group <m>G</m> is a finite sequence of subgroups
+      Uma <term>série subnormal</term><idx><h>Série subnormal de um grupo</h></idx> de um grupo <m>G</m> é uma sequência finita de subgrupos
       <md>
         G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
       </md>,
-      where <m>H_i</m> is a normal subgroup of <m>H_{i+1}</m>.
-      If each subgroup <m>H_i</m> is normal in <m>G</m>,
-      then the series is called a <idx><h>Normal series of a group</h></idx><term>normal series</term>.
-      The <term>length</term> of a  subnormal or normal series is the number of proper inclusions.
+      em que <m>H_i</m> é um subgrupo normal de <m>H_{i+1}</m>.
+      Se cada subgrupo <m>H_i</m> for normal em <m>G</m>,
+      então a série é chamada de <idx><h>Série normal de um grupo</h></idx><term>série normal</term>.
+      O <term>comprimento</term> de uma série subnormal ou normal é o número de inclusões próprias.
     </p>
 
     <example xml:id="struct-example-normal-series">
       <p>
-        Any series of subgroups of an abelian group is a normal series.
-        Consider the following  series of groups:
+        Toda série de subgrupos de um grupo abeliano é uma série normal.
+        Considere a seguinte série de grupos:
         <md>
           <mrow>{\mathbb Z} \supset 9{\mathbb Z} \supset 45{\mathbb Z} \supset 180{\mathbb Z} \supset \{0\},</mrow>
           <mrow>{\mathbb Z}_{24} \supset \langle 2 \rangle \supset \langle 6 \rangle \supset \langle 12 \rangle \supset \{0\}</mrow>
@@ -572,30 +572,30 @@
 
     <example xml:id="struct-example-subnormal-series">
       <p>
-        A subnormal series need not be a normal series.
-        Consider the following subnormal series of the group <m>D_4</m>:
+        Uma série subnormal não precisa ser uma série normal.
+        Considere a seguinte série subnormal do grupo <m>D_4</m>:
         <md>
           D_4 \supset \{ (1), (1 \, 2)(3 \, 4), (1 \, 3)(2 \, 4), (1 \, 4)(2 \, 3) \} \supset \{  (1), (1 \, 2)(3 \, 4) \} \supset \{ (1) \}
         </md>.
-        The subgroup <m>\{  (1), (1 \, 2)(3 \, 4) \}</m> is not normal in <m>D_4</m>;
-        consequently, this series is not a normal series.
+        O subgrupo <m>\{  (1), (1 \, 2)(3 \, 4)\}</m> não é normal em <m>D_4</m>;
+        consequentemente, esta série não é uma série normal.
       </p>
     </example>
 
     <p>
-      A subnormal (normal) series <m>\{ K_j \}</m> is a
-      <term>refinement of a subnormal (normal) series</term>
-      <m>\{ H_i \}</m> if <m>\{ H_i \} \subset \{ K_j \}</m>.
-      That is, each <m>H_i</m> is one of the <m>K_j</m>.
+      Uma série subnormal (normal) <m>\{ K_j \}</m> é um
+      <term>refinamento de uma série subnormal (normal)</term>
+      de uma série subnormal (normal) <m>\{ H_i \}</m> se <m>\{ H_i \} \subset \{ K_j \}</m>.
+      Isto é, cada <m>H_i</m> é um dos <m>K_j</m>.
     </p>
 
     <example xml:id="struct-example-refinement">
       <p>
-        The series
+        A série
         <md>
           {\mathbb Z} \supset 3{\mathbb Z} \supset 9{\mathbb Z} \supset 45{\mathbb Z} \supset 90{\mathbb Z} \supset 180{\mathbb Z} \supset \{0\}
         </md>
-        is a refinement of the series
+        é um refinamento da série
         <md>
           {\mathbb Z} \supset 9{\mathbb Z} \supset 45{\mathbb Z} \supset 180{\mathbb Z} \supset \{0\}
         </md>.
@@ -603,23 +603,23 @@
     </example>
 
     <p>
-      The best way to study a subnormal or normal series of subgroups,
-      <m>\{ H_i \}</m> of <m>G</m>,
-      is actually to study the factor groups <m>H_{i+1}/H_i</m>.
-      We say that two subnormal (normal) series <m>\{H_i \}</m> and
-      <m>\{ K_j \}</m> of a group <m>G</m> are <term>isomorphic</term>
-      if there is a one-to-one correspondence between the collections of factor groups
-      <m>\{H_{i+1}/H_i \}</m> and <m>\{ K_{j+1}/ K_j \}</m>.
+      A melhor maneira de estudar uma série subnormal ou normal de subgrupos,
+      <m>\{ H_i \}</m> de <m>G</m>,
+      é, na verdade, estudar os grupos quocientes <m>H_{i+1}/H_i</m>.
+      Dizemos que duas séries subnormais (normais) <m>\{H_i \}</m> e
+      <m>\{ K_j \}</m> de um grupo <m>G</m> são <term>isomorfas</term>
+      se existe uma correspondência biunívoca entre as coleções de grupos quocientes
+      <m>\{H_{i+1}/H_i \}</m> e <m>\{ K_{j+1}/ K_j \}</m>.
     </p>
 
     <example xml:id="struct-example-isomorph-series">
       <p>
-        The two normal series
+        As duas séries normais
         <md>
           <mrow>{\mathbb Z}_{60} \supset \langle 3 \rangle \supset  \langle 15 \rangle \supset \{ 0 \}</mrow>
           <mrow>{\mathbb Z}_{60} \supset \langle 4 \rangle \supset  \langle 20 \rangle \supset \{ 0 \}</mrow>
         </md>
-        of the group <m>{\mathbb Z}_{60}</m> are isomorphic since
+        do grupo <m>{\mathbb Z}_{60}</m> são isomorfas, pois
         <md>
           <mrow>{\mathbb Z}_{60} / \langle 3 \rangle \cong \langle 20 \rangle / \{ 0 \} \cong {\mathbb Z}_{3}</mrow>
           <mrow>\langle 3 \rangle / \langle 15 \rangle \cong \langle 4 \rangle /  \langle 20 \rangle \cong {\mathbb Z}_{5}</mrow>
@@ -629,193 +629,193 @@
     </example>
 
     <p>
-      A subnormal series <m>\{ H_i \}</m> of a group <m>G</m> is a
-      <term>composition series</term><idx><h>Composition series</h></idx>
-      if all the factor groups are simple;
-      that is, if none of the factor groups of the series contains a normal subgroup.
-      A normal series <m>\{ H_i \}</m> of <m>G</m> is a
-      <term>principal series</term><idx><h>Principal series</h></idx>
-      if all the factor groups are simple.
+      Uma série subnormal <m>\{ H_i \}</m> de um grupo <m>G</m> é uma
+      <term>série de composição</term><idx><h>Série de composição</h></idx>
+      se todos os grupos quocientes são simples;
+      isto é, se nenhum dos grupos quocientes da série contém um subgrupo normal.
+      Uma série normal <m>\{ H_i \}</m> de <m>G</m> é uma
+      <term>série principal</term><idx><h>Série principal</h></idx>
+      se todos os grupos quocientes são simples.
     </p>
 
     <example xml:id="struct-example-composition-series">
       <p>
-        The group <m>{\mathbb Z}_{60}</m> has  a composition series
+        O grupo <m>{\mathbb Z}_{60}</m> tem uma série de composição
         <md>
           {\mathbb Z}_{60} \supset \langle 3 \rangle \supset  \langle 15 \rangle \supset \langle 30 \rangle  \supset \{ 0 \}
         </md>
-        with factor groups
+        com grupos quocientes
         <md>
           <mrow>{\mathbb Z}_{60} / \langle 3 \rangle &amp; \cong  {\mathbb Z}_{3}</mrow>
           <mrow>\langle 3 \rangle / \langle 15 \rangle &amp; \cong  {\mathbb Z}_{5}</mrow>
           <mrow>\langle 15 \rangle / \langle 30 \rangle &amp; \cong  {\mathbb Z}_{2}</mrow>
           <mrow>\langle 30 \rangle / \{ 0 \} &amp; \cong  {\mathbb Z}_2</mrow>
         </md>.
-        Since <m>{\mathbb Z}_{60}</m> is an abelian group,
-        this series is automatically a principal series.
-        Notice that a composition series need not be unique.
-        The series
+        Como <m>{\mathbb Z}_{60}</m> é um grupo abeliano,
+        esta série é automaticamente uma série principal.
+        Observe que uma série de composição não precisa ser única.
+        A série
         <md>
           {\mathbb Z}_{60} \supset \langle 2 \rangle \supset \langle 4 \rangle \supset  \langle 20 \rangle \supset \{ 0 \}
         </md>
-        is also a composition series.
+        também é uma série de composição.
       </p>
     </example>
 
     <example xml:id="struct-example-sn_series">
       <p>
-        For <m>n \geq 5</m>, the series
+        Para <m>n \geq 5</m>, a série
         <md>
           S_n \supset A_n \supset \{ (1) \}
         </md>
-        is a composition series for <m>S_n</m> since
-        <m>S_n / A_n \cong {\mathbb Z}_2</m> and <m>A_n</m> is simple.
+        é uma série de composição para <m>S_n</m>, pois
+        <m>S_n / A_n \cong {\mathbb Z}_2</m> e <m>A_n</m> é simples.
       </p>
     </example>
         <!-- typo corrected.  Suggested by L. Franklin. -->
         <!-- TWJ - 12/19/2011 -->
     <example xml:id="struct-example-z-series">
       <p>
-        Not every group has a composition series or a principal series.
-        Suppose that
+        Nem todo grupo possui uma série de composição ou uma série principal.
+        Suponha que
         <md>
           \{ 0 \} = H_0 \subset H_1 \subset \cdots \subset H_{n-1} \subset H_n = {\mathbb Z}
         </md>
-        is a subnormal series for the integers under addition.
-        Then <m>H_1</m> must be of the form
-        <m>k {\mathbb Z}</m> for some <m>k \in {\mathbb N}</m>.
-        In this case <m>H_1 / H_0 \cong k {\mathbb Z}</m> is an infinite cyclic group with many nontrivial proper normal subgroups.
+        seja uma série subnormal dos inteiros sob a operação de adição.
+        Então <m>H_1</m> deve ser da forma
+        <m>k {\mathbb Z}</m> para algum <m>k \in {\mathbb N}</m>.
+        Nesse caso, <m>H_1 / H_0 \cong k {\mathbb Z}</m> é um grupo cíclico infinito com muitos subgrupos normais próprios não triviais.
       </p>
     </example>
         <!-- changed n to k in the example.  Suggested by P. Diethelm. -->
         <!-- TWJ 4/24/2013 -->
     <p>
-      Although composition series need not be unique as in the case of <m>{\mathbb Z}_{60}</m>,
-      it turns out that any two composition series are related.
-      The factor groups of the two composition series for
-      <m>{\mathbb Z}_{60}</m> are <m>{\mathbb Z}_2</m>,
-      <m>{\mathbb Z}_2</m>, <m>{\mathbb Z}_3</m>, and <m>{\mathbb Z}_5</m>;
-      that is, the two composition series are isomorphic.
-      The Jordan-Hölder Theorem says that this is always the case.
+      Embora as séries de composição não precisem ser únicas, como no caso de <m>{\mathbb Z}_{60}</m>,
+      verifica-se que quaisquer duas séries de composição estão relacionadas.
+      Os grupos quocientes das duas séries de composição para
+      <m>{\mathbb Z}_{60}</m> são <m>{\mathbb Z}_2</m>,
+      <m>{\mathbb Z}_2</m>, <m>{\mathbb Z}_3</m> e <m>{\mathbb Z}_5</m>;
+      isto é, as duas séries de composição são isomorfas.
+      O Teorema de Jordan-Hölder afirma que isso sempre ocorre.
     </p>
 
     <theorem>
       <title>Jordan-Hölder</title>
       <idx>
-      <h>Jordan-Hölder Theorem</h>
+      <h>Teorema de Jordan-Hölder</h>
       </idx>
       <statement>
         <p>
-          Any two composition series of <m>G</m> are isomorphic.
+          Quaisquer duas séries de composição de <m>G</m> são isomorfas.
         </p>
       </statement>
 
       <proof>
         <p>
-          We shall employ mathematical induction on the length of the composition series.
-          If the length of a composition series is <m>1</m>, then <m>G</m> must be a simple group.
-          In this case any two composition series are isomorphic.
+          Usaremos indução matemática sobre o comprimento da série de composição.
+          Se o comprimento de uma série de composição for <m>1</m>, então <m>G</m> deve ser um grupo simples.
+          Nesse caso, quaisquer duas séries de composição são isomorfas.
         </p>
 
         <p>
-          Suppose now that the theorem is true for all groups having a composition series of length <m>k</m>,
-          where <m>1 \leq k \lt n</m>.
-          Let
+          Suponha agora que o teorema seja verdadeiro para todos os grupos que possuem uma série de composição de comprimento <m>k</m>,
+          em que <m>1 \leq k \lt n</m>.
+          Sejam
           <md>
             <mrow>G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}</mrow>
             <mrow>G = K_m \supset K_{m-1} \supset \cdots \supset K_1 \supset K_0 = \{ e \}</mrow>
           </md>
-          be two composition series for <m>G</m>.
-          We can form two new subnormal series for <m>G</m> since
-          <m>H_i \cap K_{m-1}</m> is normal in <m>H_{i+1} \cap K_{m-1}</m> and
-          <m>K_j \cap H_{n-1}</m> is normal in <m>K_{j+1} \cap H_{n-1}</m>:
+          sejam duas séries de composição de <m>G</m>.
+          Podemos formar duas novas séries subnormais para <m>G</m>, pois
+          <m>H_i \cap K_{m-1}</m> é normal em <m>H_{i+1} \cap K_{m-1}</m> e
+          <m>K_j \cap H_{n-1}</m> é normal em <m>K_{j+1} \cap H_{n-1}</m>:
           <md>
             <mrow>G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}</mrow>
             <mrow>G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}</mrow>
           </md>.
-          Since <m>H_i \cap K_{m-1}</m> is normal in <m>H_{i+1} \cap K_{m-1}</m>,
-          the Second Isomorphism Theorem (<xref ref="homomorph-theorem-second-isomorphism"/>) implies that
+          Como <m>H_i \cap K_{m-1}</m> é normal em <m>H_{i+1} \cap K_{m-1}</m>,
+          o Segundo Teorema do Isomorfismo (<xref ref="homomorph-theorem-second-isomorphism"/>) implica que
           <md>
             <mrow>(H_{i+1} \cap K_{m-1}) / (H_i \cap K_{m-1}) &amp; =  (H_{i+1} \cap K_{m-1}) / (H_i \cap ( H_{i+1} \cap K_{m-1} ))</mrow>
             <mrow>&amp; \cong  H_i (H_{i+1} \cap K_{m-1})/ H_i</mrow>
           </md>,
-          where <m>H_i</m> is normal in <m>H_i (H_{i+1} \cap K_{m-1})</m>.
-          Since <m>\{ H_i \}</m> is a composition series,
-          <m>H_{i+1} / H_i</m> must be simple;
-          consequently,
-          <m>H_i (H_{i+1} \cap K_{m-1})/ H_i</m> is either <m>H_{i+1}/H_i</m> or <m>H_i/H_i</m>.
-          That is, <m>H_i (H_{i+1} \cap K_{m-1})</m> must be either <m>H_i</m> or <m>H_{i+1}</m>.
-          Removing any nonproper inclusions from the series
+          em que <m>H_i</m> é normal em <m>H_i (H_{i+1} \cap K_{m-1})</m>.
+          Como <m>\{ H_i \}</m> é uma série de composição,
+          <m>H_{i+1} / H_i</m> deve ser simples;
+          consequentemente,
+          <m>H_i (H_{i+1} \cap K_{m-1})/ H_i</m> é ou <m>H_{i+1}/H_i</m> ou <m>H_i/H_i</m>.
+          Isto é, <m>H_i (H_{i+1} \cap K_{m-1})</m> deve ser <m>H_i</m> ou <m>H_{i+1}</m>.
+          Removendo quaisquer inclusões não próprias da série
           <md>
             H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
           </md>,
-          we have a composition series for <m>H_{n-1}</m>.
-          Our induction hypothesis says that this series must be equivalent to the composition series
+          obtemos uma série de composição para <m>H_{n-1}</m>.
+          Nossa hipótese de indução diz que essa série deve ser equivalente à série de composição
           <md>
             H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
           </md>.
-          Hence, the composition series
+          Logo, as séries de composição
           <md>
             G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
           </md>
-          and
+          e
           <md>
             G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
           </md>
-          are equivalent.
-          If <m>H_{n-1} = K_{m-1}</m>,
-          then the composition series <m>\{H_i \}</m> and
-          <m>\{ K_j \}</m> are equivalent and we are done;
-          otherwise, <m>H_{n-1} K_{m-1}</m>  is a normal subgroup of <m>G</m> properly containing <m>H_{n-1}</m>.
-          In this case <m>H_{n-1} K_{m-1} = G</m> and we can apply the Second Isomorphism Theorem once again; that is,
+          são equivalentes.
+          Se <m>H_{n-1} = K_{m-1}</m>,
+          então a série de composição <m>\{H_i \}</m> e
+          <m>\{ K_j \}</m> são equivalentes e terminamos;
+          caso contrário, <m>H_{n-1} K_{m-1}</m> é um subgrupo normal de <m>G</m> que contém propriamente <m>H_{n-1}</m>.
+          Nesse caso, <m>H_{n-1} K_{m-1} = G</m> e podemos aplicar novamente o Segundo Teorema do Isomorfismo; isto é,
           <md>
             K_{m-1} / (K_{m-1} \cap H_{n-1}) \cong (H_{n-1} K_{m-1}) / H_{n-1} = G/H_{n-1}
           </md>.
-          Therefore,
+          Portanto,
           <md>
             G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
           </md>
-          and
+          e
           <md>
             G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}
           </md>
-          are equivalent and the proof of the theorem is complete.
+          são equivalentes e a demonstração do teorema está concluída.
         </p>
       </proof>
     </theorem>
 
     <p>
-      A group <m>G</m> is <term>solvable</term><idx><h>Group</h><h>solvable</h></idx>
-      if it has a subnormal series
-      <m>\{ H_i \}</m> such that all of the factor groups <m>H_{i+1} / H_i</m> are abelian.
-      Solvable groups will play a fundamental role when we study Galois theory and the solution of polynomial equations.
+      Um grupo <m>G</m> é <term>solúvel</term><idx><h>Grupo</h><h>solúvel</h></idx>
+      se possui uma série subnormal
+      <m>\{ H_i \}</m> tal que todos os grupos quocientes <m>H_{i+1} / H_i</m> são abelianos.
+      Os grupos solúveis terão um papel fundamental quando estudarmos a teoria de Galois e a resolução de equações polinomiais.
     </p>
         <!-- Corrected the definition of a solvable group.  Suggested by K. Halasz. -->
         <!-- TWJ 1/10/2014 -->
     <example xml:id="solvable">
       <p>
-        The group <m>S_4</m> is solvable since
+        O grupo <m>S_4</m> é solúvel, pois
         <md>
           S_4 \supset A_4 \supset \{ (1), (1 \, 2)(3 \, 4), (1 \, 3)(2 \, 4), (1 \, 4)(2 \, 3) \} \supset \{ (1) \}
         </md>
-        has abelian factor groups; however,
-        for <m>n \geq 5</m> the series
+        possui grupos quocientes abelianos; contudo,
+        para <m>n \geq 5</m>, a série
         <md>
           S_n \supset A_n \supset \{ (1) \}
         </md>
-        is a composition series for <m>S_n</m> with a nonabelian factor group.
-        Therefore, <m>S_n</m> is not a solvable group for <m>n \geq 5</m>.
+        é uma série de composição para <m>S_n</m> com um grupo quociente não abeliano.
+        Portanto, <m>S_n</m> não é um grupo solúvel para <m>n \geq 5</m>.
       </p>
     </example>
 
     <paragraphs component="sage-blurb">
       <title>Sage</title>
       <p>
-        Sage is able to create direct products of cyclic groups,
-        though they are realized as permutation groups.
-        This is a situation that should improve.
-        However, with a classification of finite abelian groups,
-        we can describe how to construct in Sage every group of order less than <m>16</m>.
+        O Sage é capaz de criar produtos diretos de grupos cíclicos,
+        embora eles sejam realizados como grupos de permutações.
+        Essa é uma situação que deveria melhorar.
+        Contudo, com uma classificação dos grupos abelianos finitos,
+        podemos descrever como construir no Sage todo grupo de ordem menor que <m>16</m>.
       </p>
     </paragraphs>
 
