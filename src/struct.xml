@@ -974,7 +974,7 @@
       <statement>
         <p>
           Mostre que o produto direto infinito
-          <m>G = {\mathbb Z}_2 \times {\mathbb Z}_2 \times \cdots</m> is not finitely generated.
+          <m>G = {\mathbb Z}_2 \times {\mathbb Z}_2 \times \cdots</m> não é finitamente gerado.
         </p>
       </statement>
     </exercise>
@@ -1158,9 +1158,9 @@
         <p>
           Relembre que o <term>subgrupo comutador</term>
           <m>G'</m> de um grupo <m>G</m> é definido como o subgrupo de <m>G</m> gerado pelos elementos da forma
-          <m>a^{-1} b ^{-1} ab</m> for <m>a, b \in G</m>.
+          <m>a^{-1} b ^{-1} ab</m> para <m>a, b \in G</m>.
           Podemos definir uma série de subgrupos de <m>G</m> por <m>G^{(0)} = G</m>,
-          <m>G^{(1)} = G'</m>, and <m>G^{(i + 1)} = (G^{(i)})'</m>.
+          <m>G^{(1)} = G'</m>, e <m>G^{(i + 1)} = (G^{(i)})'</m>.
 
           <ol>
             <li>
@@ -1326,7 +1326,7 @@
         (em que <m>p</m> é primo)
         é abeliano.
         Portanto, sabemos, a partir desta seção, que as únicas possibilidades são
-        <m>{\mathbb Z}_9</m> and <m>{\mathbb Z}_3\times{\mathbb Z}_3</m>.
+        <m>{\mathbb Z}_9</m> e <m>{\mathbb Z}_3\times{\mathbb Z}_3</m>.
         De modo semelhante, o próximo <xref ref="sylow-theorem-pq-cyclic"/> nos dirá que todo grupo de ordem <m>n=15</m> é abeliano.
         Agora resta apenas uma possibilidade para essa ordem:
         <m>{\mathbb Z}_3\times{\mathbb Z}_5\cong{\mathbb Z}_{15}</m>.
