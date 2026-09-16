@@ -10,176 +10,175 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="crypt">
-  <title>Introduction to Cryptography</title>
+  <title>Introdução à criptografia</title>
   <introduction>
     <p>
-      Cryptography is the study of sending and receiving secret messages.
-      The aim of cryptography is to send messages across a channel so that only the intended recipient of the message can read it.
-      In addition, when a message is received,
-      the recipient usually requires some assurance that the message is authentic;
-      that is, that it has not been sent by someone who is trying to deceive the recipient.
-      Modern cryptography is heavily dependent on abstract algebra and number theory.
+      A criptografia é o estudo do envio e do recebimento de mensagens secretas.
+      O objetivo da criptografia é enviar mensagens por um canal de modo que somente o destinatário pretendido possa lê-las.
+      Além disso, quando uma mensagem é recebida,
+      o destinatário geralmente precisa de alguma garantia de que a mensagem é autêntica;
+      isto é, de que ela não foi enviada por alguém que está tentando enganá-lo.
+      A criptografia moderna depende fortemente da álgebra abstrata e da teoria dos números.
     </p>
 
     <p>
-      The message to be sent is called the <term>plaintext</term><idx><h>Plaintext</h></idx>
-      message.
-      The disguised message is called the <idx><h>Ciphertext</h></idx><term>ciphertext</term>.  
-      The plaintext and the ciphertext are both written in an <term>alphabet</term>,
-      consisting of <term>letters</term>
-      or <term>characters</term>.
-      Characters can include not only the familiar alphabetic characters A, <m>\ldots</m>, Z and a, <m>\ldots</m>,
-      z but also digits, punctuation marks, and blanks.
-      A <term>cryptosystem</term>,<idx><h>Cryptosystem</h><h>definition of</h></idx> or <idx><h>Cipher</h></idx><term>cipher</term>,
-      has two parts: <term>encryption</term>,
-      the process of transforming a plaintext message to a ciphertext message,
-      and <term>decryption</term>,
-      the reverse transformation of changing a ciphertext message into a plaintext message.
+      A mensagem a ser enviada é chamada de mensagem em <term>texto claro</term><idx><h>Texto claro</h></idx>.
+      A mensagem disfarçada é chamada de <idx><h>Texto cifrado</h></idx><term>texto cifrado</term>.
+      Tanto o texto claro quanto o texto cifrado são escritos em um <term>alfabeto</term>,
+      constituído por <term>letras</term>
+      ou <term>caracteres</term>.
+      Os caracteres podem incluir não apenas os conhecidos caracteres alfabéticos A, <m>\ldots</m>, Z e a, <m>\ldots</m>,
+      z, mas também algarismos, sinais de pontuação e espaços.
+      Um <term>criptossistema</term>,<idx><h>Criptossistema</h><h>definição de</h></idx> ou <idx><h>Cifra</h></idx><term>cifra</term>,
+      possui duas partes: a <term>cifração</term>,
+      o processo de transformar uma mensagem em texto claro em uma mensagem em texto cifrado,
+      e a <term>decifração</term>,
+      a transformação inversa que converte uma mensagem em texto cifrado em uma mensagem em texto claro.
     </p>
 
     <p>
-      There are many different families of cryptosystems,
-      each distinguished by a particular encryption algorithm.
-      Cryptosystems in a specified cryptographic family are distinguished from one another by a parameter to the encryption function called a <idx><h>Key</h><h>definition of</h></idx><term>key</term>.
-      A classical cryptosystem has a single key,
-      which must be kept secret,
-      known only to the sender and the receiver of the message.
-      If person <m>A</m> wishes to send secret messages to two different people <m>B</m> and <m>C</m>,
-      and does not wish to have <m>B</m> understand <m>C</m>'s messages or vice versa,
-      <m>A</m> must use two separate keys,
-      so one cryptosystem is used for exchanging messages with <m>B</m>,
-      and another is used for exchanging messages with <m>C</m>.
+      Existem muitas famílias diferentes de criptossistemas,
+      cada uma distinguida por um algoritmo de cifração específico.
+      Os criptossistemas de uma determinada família criptográfica distinguem-se uns dos outros por um parâmetro da função de cifração chamado <idx><h>Chave</h><h>definição de</h></idx><term>chave</term>.
+      Um criptossistema clássico possui uma única chave,
+      que deve ser mantida em segredo,
+      conhecida apenas pelo remetente e pelo destinatário da mensagem.
+      Se a pessoa <m>A</m> quiser enviar mensagens secretas para duas pessoas diferentes, <m>B</m> e <m>C</m>,
+      e não quiser que <m>B</m> compreenda as mensagens de <m>C</m>, nem vice-versa,
+      <m>A</m> deverá usar duas chaves distintas,
+      de modo que um criptossistema seja usado para trocar mensagens com <m>B</m>,
+      e outro seja usado para trocar mensagens com <m>C</m>.
     </p>
 
     <p>
-      Systems that use two separate keys,
-      one for encoding and another for decoding,
-      are called <idx><h>Key</h><h>public</h></idx><idx><h>Cryptosystem</h><h>public key</h></idx><term>public key cryptosystems</term>.
-      Since knowledge of the encoding key does not allow anyone to guess at the decoding key,
-      the encoding key can be made public.
-      A public key cryptosystem allows <m>A</m> and <m>B</m> to send messages to <m>C</m> using the same encoding key.
-      Anyone is capable of encoding a message to be sent to <m>C</m>,
-      but only <m>C</m> knows how to decode such a message.
+      Os sistemas que usam duas chaves distintas,
+      uma para cifrar e outra para decifrar,
+      são chamados de <idx><h>Chave</h><h>pública</h></idx><idx><h>Criptossistema</h><h>chave pública</h></idx><term>criptossistemas de chave pública</term>.
+      Como conhecer a chave de cifração não permite que alguém descubra a chave de decifração,
+      a chave de cifração pode ser tornada pública.
+      Um criptossistema de chave pública permite que <m>A</m> e <m>B</m> enviem mensagens para <m>C</m> usando a mesma chave de cifração.
+      Qualquer pessoa pode cifrar uma mensagem para ser enviada a <m>C</m>,
+      mas somente <m>C</m> sabe como decifrar essa mensagem.
     </p>
   </introduction>
 
   <section xml:id="crypt-section-private-key">
-    <title>Private Key Cryptography</title>
+    <title>Criptografia de chave privada</title>
     <p>
-      In <idx><h>Key</h><h>single</h></idx><idx><h>Cryptosystem</h><h>single key</h></idx><term>single</term>
-      or <term>private key cryptosystems</term><idx><h>Key</h><h>private</h></idx><idx><h>Cryptosystem</h><h>private key</h></idx>
-      the same key is used for both encrypting and decrypting messages.
-      To encrypt a plaintext message,
-      we apply to the message some function which is kept secret,
-      say <m>f</m>.
-      This function will yield an encrypted message.
-      Given the encrypted form of the message,
-      we can recover the original message by applying the inverse transformation <m>f^{-1}</m>.
-      The transformation <m>f</m> must be relatively easy to compute,
-      as must <m>f^{-1}</m>;
-      however, <m>f</m> must be extremely difficult to guess from available examples of coded messages.
+      Nos <idx><h>Chave</h><h>única</h></idx><idx><h>Criptossistema</h><h>chave única</h></idx><term>criptossistemas de chave única</term>
+      ou <term>criptossistemas de chave privada</term><idx><h>Chave</h><h>privada</h></idx><idx><h>Criptossistema</h><h>chave privada</h></idx>,
+      a mesma chave é usada tanto para cifrar quanto para decifrar mensagens.
+      Para cifrar uma mensagem em texto claro,
+      aplicamos à mensagem alguma função mantida em segredo,
+      digamos <m>f</m>.
+      Essa função produzirá uma mensagem cifrada.
+      Dada a forma cifrada da mensagem,
+      podemos recuperar a mensagem original aplicando a transformação inversa <m>f^{-1}</m>.
+      A transformação <m>f</m> deve ser relativamente fácil de calcular,
+      assim como <m>f^{-1}</m>;
+      contudo, deve ser extremamente difícil deduzir <m>f</m> a partir dos exemplos disponíveis de mensagens cifradas.
     </p>
 
     <example xml:id="crypt-example-caesar">
       <p>
-        One of the first and most famous private key cryptosystems was the shift code used by Julius Caesar.
-        We first digitize the alphabet by letting <m>\text{A}  = 00, \text{B}  = 01, \ldots, \text{Z} = 25</m>.
-        The encoding function will be
+        Um dos primeiros e mais famosos criptossistemas de chave privada foi a cifra de deslocamento usada por Júlio César.
+        Primeiro digitalizamos o alfabeto fazendo <m>\text{A}  = 00, \text{B}  = 01, \ldots, \text{Z} = 25</m>.
+        A função de cifração será
         <md>
           f(p) = p + 3 \bmod 26;
         </md>
-        that is, <m>A \mapsto D, B \mapsto E, \ldots, Z \mapsto C</m>.
-        The decoding function is then
+        isto é, <m>A \mapsto D, B \mapsto E, \ldots, Z \mapsto C</m>.
+        A função de decifração é então
         <md>
           f^{-1}(p) = p - 3 \bmod 26 = p + 23 \bmod 26
         </md>.
-        Suppose we receive the encoded message <c>DOJHEUD</c>. To decode this message,
-        we first digitize it:
+        Suponha que recebamos a mensagem cifrada <c>DOJHEUD</c>. Para decifrar essa mensagem,
+        primeiro a digitalizamos:
         <md>
           3, 14, 9, 7, 4, 20, 3
         </md>.
-        Next we apply the inverse transformation to get
+        Em seguida, aplicamos a transformação inversa para obter
         <md>
           0, 11, 6, 4, 1, 17, 0
         </md>,
-        or <c>ALGEBRA</c>. Notice here that there is nothing special about either of the numbers <m>3</m> or <m>26</m>.
-        We could have used a larger alphabet or a different shift.
+        ou <c>ALGEBRA</c>. Observe que não há nada de especial em nenhum dos números <m>3</m> ou <m>26</m>.
+        Poderíamos ter usado um alfabeto maior ou um deslocamento diferente.
       </p>
     </example>
 
     <p>
-      <term>Cryptanalysis</term><idx><h>Cryptanalysis</h></idx>
-      is concerned with deciphering a received or intercepted message.
-      Methods from probability and statistics are great aids in deciphering an intercepted message;
-      for example,
-      the frequency analysis of the characters appearing in the intercepted message often makes its decryption possible.
+      A <term>criptoanálise</term><idx><h>Criptoanálise</h></idx>
+      ocupa-se da decifração de uma mensagem recebida ou interceptada.
+      Métodos de probabilidade e estatística são grandes auxiliares na decifração de uma mensagem interceptada;
+      por exemplo,
+      a análise de frequência dos caracteres que aparecem na mensagem interceptada frequentemente torna possível sua decifração.
     </p>
 
     <example xml:id="crypt-example-analysis">
       <p>
-        Suppose we receive a message that we know was encrypted by using a shift transformation on single letters of the <m>26</m>-letter alphabet.
-        To find out exactly what the shift transformation was,
-        we must compute <m>b</m> in the equation <m>f(p) = p + b \bmod 26</m>.
-        We can do this using frequency analysis.
-        The letter <m>\text{E} = 04</m> is the most commonly occurring letter in the English language.
-        Suppose that <m>\text{S} = 18</m> is the most commonly occurring letter in the ciphertext.
-        Then we have good reason to suspect that  <m>18 = 4 + b \bmod 26</m>,
-        or <m>b= 14</m>.
-        Therefore, the most likely encrypting function is
+        Suponha que recebamos uma mensagem que sabemos ter sido cifrada usando uma transformação de deslocamento sobre letras individuais do alfabeto de <m>26</m> letras.
+        Para descobrir exatamente qual era a transformação de deslocamento,
+        devemos calcular <m>b</m> na equação <m>f(p) = p + b \bmod 26</m>.
+        Podemos fazer isso usando a análise de frequência.
+        A letra <m>\text{E} = 04</m> é a que ocorre com maior frequência na língua inglesa.
+        Suponha que <m>\text{S} = 18</m> seja a letra que ocorre com maior frequência no texto cifrado.
+        Então temos boas razões para suspeitar que <m>18 = 4 + b \bmod 26</m>,
+        ou <m>b= 14</m>.
+        Portanto, a função de cifração mais provável é
         <md>
           f(p) = p + 14 \bmod 26
         </md>.
-        The corresponding decrypting function is
+        A função de decifração correspondente é
         <md>
           f^{-1}(p) = p + 12 \bmod 26
         </md>.
-        It is now easy to determine whether or not our guess is correct.
+        Agora é fácil determinar se nossa hipótese está correta.
       </p>
     </example>
 
     <p>
-      Simple shift codes are examples of
-      <idx><h>Cryptosystem</h><h>monoalphabetic</h></idx><term>monoalphabetic cryptosystems</term>.
-      In these ciphers a character in the enciphered message represents exactly one character in the original message.
-      Such cryptosystems are not very sophisticated and are quite easy to break.
-      In fact, in a simple shift as described in <xref ref="crypt-example-caesar"/>, there are only <m>26</m> possible keys.
-      It would be quite easy to try them all rather than to use frequency analysis.
+      As cifras de deslocamento simples são exemplos de
+      <idx><h>Criptossistema</h><h>monoalfabético</h></idx><term>criptossistemas monoalfabéticos</term>.
+      Nessas cifras, um caractere da mensagem cifrada representa exatamente um caractere da mensagem original.
+      Esses criptossistemas não são muito sofisticados e são bastante fáceis de quebrar.
+      De fato, em um deslocamento simples como o descrito em <xref ref="crypt-example-caesar"/>, há apenas <m>26</m> chaves possíveis.
+      Seria bastante fácil tentar todas elas, em vez de usar a análise de frequência.
     </p>
 
     <p>
-      Let us investigate a slightly more sophisticated cryptosystem.
-      Suppose that the encoding function is given by
+      Investiguemos um criptossistema um pouco mais sofisticado.
+      Suponha que a função de cifração seja dada por
       <md>
         f(p) = ap + b \bmod 26
       </md>.
-      We first need to find out when a decoding function <m>f^{-1}</m> exists.
-      Such a decoding function exists when we can solve the equation
+      Primeiro precisamos descobrir quando existe uma função de decifração <m>f^{-1}</m>.
+      Tal função de decifração existe quando podemos resolver a equação
       <md>
         c = ap + b \bmod 26
       </md>
-      for <m>p</m>.
-      By <xref ref="groups-proposition-zn-equiv-classes"/>,
-      this is possible exactly when <m>a</m> has an inverse or,
-      equivalently, when <m>\gcd( a, 26) =1</m>.
-      In this case
+      para <m>p</m>.
+      Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
+      isso é possível exatamente quando <m>a</m> possui um inverso ou,
+      equivalentemente, quando <m>\gcd( a, 26) =1</m>.
+      Nesse caso,
       <md>
         f^{-1}(p) = a^{-1} p - a^{-1} b \bmod 26
       </md>.
-      Such a cryptosystem is called an
-      <idx><h>Cryptosystem</h><h>affine</h></idx><term>affine cryptosystem</term>.  
+      Tal criptossistema é chamado de
+      <idx><h>Criptossistema</h><h>afim</h></idx><term>criptossistema afim</term>.
     </p>
 
     <example xml:id="crypt-example-affine-crypt">
       <p>
-        Let us consider the affine cryptosystem <m>f(p) = ap + b \bmod 26</m>.
-        For this cryptosystem to work we must choose an <m>a \in {\mathbb Z}_{26}</m> that is invertible.
-        This is only possible if <m>\gcd(a, 26) = 1</m>.
-        Recognizing this fact,
-        we will let <m>a = 5</m> since <m>\gcd(5, 26) = 1</m>.
-        It is easy to see that <m>a^{-1} = 21</m>.
-        Therefore, we can take our encryption function to be <m>f(p) = 5p + 3 \bmod 26</m>.
-        Thus, <c>ALGEBRA</c> is encoded as <m>3, 6, 7, 23, 8, 10, 3</m>,
-        or <c>DGHXIKD</c>. The decryption function will be
+        Consideremos o criptossistema afim <m>f(p) = ap + b \bmod 26</m>.
+        Para que esse criptossistema funcione, devemos escolher um <m>a \in {\mathbb Z}_{26}</m> que seja inversível.
+        Isso só é possível se <m>\gcd(a, 26) = 1</m>.
+        Reconhecendo esse fato,
+        tomaremos <m>a = 5</m>, pois <m>\gcd(5, 26) = 1</m>.
+        É fácil ver que <m>a^{-1} = 21</m>.
+        Portanto, podemos tomar como função de cifração <m>f(p) = 5p + 3 \bmod 26</m>.
+        Assim, <c>ALGEBRA</c> é cifrada como <m>3, 6, 7, 23, 8, 10, 3</m>,
+        ou <c>DGHXIKD</c>. A função de decifração será
         <md>
           f^{-1}(p) = 21 p - 21 \cdot 3 \bmod 26 = 21 p + 15 \bmod 26
         </md>.
@@ -187,25 +186,25 @@
     </example>
 
     <p>
-      A cryptosystem would be more secure if a ciphertext letter could represent more than one plaintext letter.
-      To give an example of this type of cryptosystem,
-      called a <term>polyalphabetic cryptosystem</term>,<idx><h>Cryptosystem</h><h>polyalphabetic</h></idx> we will generalize affine codes by using matrices.
-      The idea works roughly the same as before;
-      however, instead of encrypting one letter at a time we will encrypt pairs of letters.
-      We can store a pair of letters <m>p_1</m> and <m>p_2</m> in a vector
+      Um criptossistema seria mais seguro se uma letra do texto cifrado pudesse representar mais de uma letra do texto claro.
+      Para dar um exemplo desse tipo de criptossistema,
+      chamado <term>criptossistema polialfabético</term>,<idx><h>Criptossistema</h><h>polialfabético</h></idx> generalizaremos as cifras afins usando matrizes.
+      A ideia funciona aproximadamente como antes;
+      contudo, em vez de cifrar uma letra por vez, ciframos pares de letras.
+      Podemos armazenar um par de letras <m>p_1</m> e <m>p_2</m> em um vetor
       <md>
         {\mathbf p} = 
         \begin{pmatrix}
         p_1 \\ p_2
         \end{pmatrix}
       </md>.
-      Let <m>A</m> be a <m>2 \times 2</m> invertible matrix with entries in <m>{\mathbb Z}_{26}</m>.
-      We can define an encoding function by
+      Seja <m>A</m> uma matriz inversível <m>2 \times 2</m> com entradas em <m>{\mathbb Z}_{26}</m>.
+      Podemos definir uma função de cifração por
       <md>
         f({\mathbf p}) = A {\mathbf p} + {\mathbf b}
       </md>,
-      where <m>{\mathbf b}</m> is a fixed column vector and matrix operations are performed in <m>{\mathbb Z}_{26}</m>.
-      The decoding function must be
+      onde <m>{\mathbf b}</m> é um vetor coluna fixo e as operações matriciais são realizadas em <m>{\mathbb Z}_{26}</m>.
+      A função de decifração deve ser
       <md>
         f^{-1}({\mathbf p}) = A^{-1} {\mathbf p} - A^{-1} {\mathbf b}
       </md>.
@@ -213,8 +212,8 @@
 
     <example xml:id="crypt-example-help">
       <p>
-        Suppose that we wish to encode the word <c>HELP</c>. The corresponding digit string is <m>7, 4, 11, 15</m>.
-        If
+        Suponha que desejemos cifrar a palavra <c>HELP</c>. A sequência de algarismos correspondente é <m>7, 4, 11, 15</m>.
+        Se
         <md>
           A =
           \begin{pmatrix}
@@ -222,7 +221,7 @@
           1 &amp; 2
           \end{pmatrix}
         </md>,
-        then
+        então
         <md>
           A^{-1} 
           =
@@ -231,18 +230,18 @@
           25 &amp; 3
           \end{pmatrix}
         </md>.
-        If <m>{\mathbf b} = ( 2, 2)^\transpose</m>,
-        then our message is encrypted as <c>RRGR</c>. The encrypted letter R represents more than one plaintext letter.
+        Se <m>{\mathbf b} = ( 2, 2)^\transpose</m>,
+        então nossa mensagem é cifrada como <c>RRGR</c>. A letra cifrada R representa mais de uma letra do texto claro.
       </p>
     </example>
 
     <p>
-      Frequency analysis can still be performed on a polyalphabetic cryptosystem,
-      because we have a good understanding of how pairs of letters appear in the English language.
-      The pair <em>th</em> appears quite often;
-      the pair <em>qz</em> never appears.
-      To avoid decryption by a third party,
-      we must use a larger matrix than the one we used in <xref ref="crypt-example-help"/>.
+      Ainda é possível realizar uma análise de frequência em um criptossistema polialfabético,
+      pois compreendemos bem como os pares de letras aparecem na língua inglesa.
+      O par <em>th</em> aparece com bastante frequência;
+      o par <em>qz</em> nunca aparece.
+      Para evitar a decifração por terceiros,
+      devemos usar uma matriz maior que a utilizada em <xref ref="crypt-example-help"/>.
     </p>
         <!-- TWJ 4/7/2010 Need to resolve this reference -->
   </section>
