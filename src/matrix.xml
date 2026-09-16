@@ -1461,7 +1461,7 @@
     <exercise label="rq-matrix-nonsingular">
       <statement>
         <p>
-          What is a nonsingular matrix? Give an example of a <m>2 \times 2</m> nonsingular matrix. How do you know your example is nonsingular?
+          O que é uma matriz não singular? Dê um exemplo de uma matriz <m>2 \times 2</m> não singular. Como você sabe que seu exemplo é não singular?
         </p>
       </statement>
       <response/>
@@ -1470,7 +1470,7 @@
     <exercise label="rq-matrix-isometry">
       <statement>
         <p>
-          What is an isometry in <m>\mathbb R^n</m>? Can you give an example of an isometry in <m>\mathbb R^2</m>?
+          O que é uma isometria em <m>\mathbb R^n</m>? Você pode dar um exemplo de uma isometria em <m>\mathbb R^2</m>?
         </p>
       </statement>
       <response/>
@@ -1479,7 +1479,7 @@
     <exercise label="rq-matrix-orthonormal">
       <statement>
         <p>
-          What is an orthonormal set of vectors?
+          O que é um conjunto ortonormal de vetores?
         </p>
       </statement>
       <response/>
@@ -1488,7 +1488,7 @@
     <exercise label="rq-matrix-special-orthogonal">
       <statement>
         <p>
-          What is the difference between the orthogonal group and the special orthogonal group?
+          Qual é a diferença entre o grupo ortogonal e o grupo ortogonal especial?
         </p>
       </statement>
       <response/>
@@ -1497,7 +1497,7 @@
     <exercise label="rq-matrix-lattice">
       <statement>
         <p>
-          What is a lattice?
+          O que é um reticulado?
         </p>
       </statement>
       <response/>
@@ -1508,12 +1508,12 @@
     <!-- File: matrix.xml  -->
     <!-- Title: Matrix Groups and Symmetry -->
   <exercises xml:id="matrix-exercises" filenamebase="matrix">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="matrix-exercise-identity">
       <statement>
         <p>
-          Prove the identity
+          Prove a identidade
           <md>
             \langle {\mathbf x}, {\mathbf y} \rangle = \frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]
           </md>.
@@ -1533,7 +1533,7 @@
     <exercise number="2" xml:id="matrix-exercise-On">
       <statement>
         <p>
-          Show that <m>O(n)</m> is a group.
+          Mostre que <m>O(n)</m> é um grupo.
         </p>
       </statement>
     </exercise>
@@ -1541,8 +1541,8 @@
     <exercise number="3" xml:id="matrix-exercise-orthogonal">
       <statement>
         <p>
-          Prove that the following matrices are orthogonal.
-          Are any of these matrices in <m>SO(n)</m>?
+          Prove que as matrizes a seguir são ortogonais.
+          Alguma dessas matrizes pertence a <m>SO(n)</m>?
 
           <ol cols="2">
             <li>
@@ -1595,7 +1595,7 @@
       </statement>
       <hint>
         <p>
-          (a) is in <m>SO(2)</m>; (c) is not in <m>O(3)</m>.
+          (a) pertence a <m>SO(2)</m>; (c) não pertence a <m>O(3)</m>.
         </p>
       </hint>
     </exercise>
@@ -1603,7 +1603,7 @@
     <exercise number="4" xml:id="matrix-exercise-symmetry-figure">
       <statement>
         <p>
-          Determine the symmetry group of each of the figures below. <!--<xref ref="matrix-figure-exercise-symmetry-groups"/>.-->
+          Determine o grupo de simetria de cada uma das figuras abaixo. <!--<xref ref="matrix-figure-exercise-symmetry-groups"/>-->
         </p>
 
 <!--
@@ -1619,7 +1619,7 @@
 -->
 
           <image xml:id="exercise-symmetry-groups">
-            <description>There are two figures in the top row and one figure on bottom.  The top left figure, a,  is a rectangle.  Inside the rectangle is an oval in the lower left and a solid circle in the upper right.  The top right figure, c, is there intersecting circles of the same radii.  The bottom middle figure, b, is a large square with the two diagonals.  The midpoints of the large square are the vertices of a smaller inscribed square.</description>
+            <description>Há duas figuras na fileira superior e uma figura na parte inferior. A figura superior esquerda, a, é um retângulo. Dentro do retângulo há uma oval no canto inferior esquerdo e um círculo preenchido no canto superior direito. A figura superior direita, c, consiste em três círculos que se intersectam, com os mesmos raios. A figura inferior central, b, é um quadrado grande com as duas diagonais. Os pontos médios do quadrado grande são os vértices de um quadrado menor inscrito.</description>
             <latex-image>
                 <xi:include href="tikz/exercise-symmetry-groups.tex" parse="text"/>
             </latex-image>
@@ -1630,10 +1630,10 @@
     <exercise number="5" xml:id="matrix-exercise-inner-product">
       <statement>
         <p>
-          Let <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
-          and <m>{\mathbf w}</m> be vectors in
-          <m>{\mathbb R}^n</m> and <m>\alpha \in {\mathbb R}</m>.
-          Prove each of the following properties of inner products.
+          Sejam <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
+          e <m>{\mathbf w}</m> vetores em
+          <m>{\mathbb R}^n</m> e <m>\alpha \in {\mathbb R}</m>.
+          Prove cada uma das propriedades dos produtos internos a seguir.
 
           <ol>
             <li>
@@ -1656,15 +1656,15 @@
 
             <li>
               <p>
-                <m>\langle {\mathbf x}, {\mathbf x} \rangle \geq 0</m> with equality exactly when <m>{\mathbf x} = 0</m>.
+                <m>\langle {\mathbf x}, {\mathbf x} \rangle \geq 0</m> com igualdade exatamente quando <m>{\mathbf x} = 0</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>\langle {\mathbf x}, {\mathbf y} \rangle = 0</m> for all
+                Se <m>\langle {\mathbf x}, {\mathbf y} \rangle = 0</m> para todo
                 <m>{\mathbf x}</m> in <m>{\mathbb R}^n</m>,
-                then <m>{\mathbf y} = 0</m>.
+                então <m>{\mathbf y} = 0</m>.
               </p>
             </li>
           </ol>
@@ -1680,11 +1680,11 @@
     <exercise number="6" xml:id="matrix-exercise-en-group">
       <statement>
         <p>
-          Verify that
+          Verifique que
           <md>
             E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ and } {\mathbf x} \in {\mathbb R}^n \}
           </md>
-          is a group.
+          é um grupo.
         </p>
       </statement>
     </exercise>
@@ -1694,13 +1694,13 @@
     <exercise number="7" xml:id="matrix-exercise-bases-lattice">
       <statement>
         <p>
-          Prove that <m>\{ (2,1), (1,1) \}</m> and
-          <m>\{ ( 12, 5), ( 7, 3) \}</m> are bases for the same lattice.
+          Prove que <m>\{ (2,1), (1,1) \}</m> e
+          <m>\{ ( 12, 5), ( 7, 3) \}</m> são bases do mesmo reticulado.
         </p>
       </statement>
       <hint>
         <p>
-          Use the unimodular matrix
+          Use a matriz unimodular
           <md>
             \begin{pmatrix}
             5 &amp; 2 \\
@@ -1714,8 +1714,8 @@
     <exercise number="8" xml:id="matrix-exercise-E-2">
       <statement>
         <p>
-          Let <m>G</m> be a subgroup of <m>E(2)</m> and suppose that <m>T</m> is the translation subgroup of <m>G</m>.
-          Prove that the point group of <m>G</m> is isomorphic to <m>G/T</m>.
+          Seja <m>G</m> um subgrupo de <m>E(2)</m> e suponha que <m>T</m> seja o subgrupo de translações de <m>G</m>.
+          Prove que o grupo pontual de <m>G</m> é isomorfo a <m>G/T</m>.
         </p>
       </statement>
     </exercise>
@@ -1725,10 +1725,10 @@
     <exercise number="9" xml:id="matrix-exercise-SL2-R">
       <statement>
         <p>
-          Let <m>A \in SL_2({\mathbb R})</m> and suppose that the vectors <m>{\mathbf x}</m> and
-          <m>{\mathbf y}</m> form two sides of a parallelogram in <m>{\mathbb R}^2</m>.
-          Prove that the area of this parallelogram is the same as the area of the parallelogram with sides
-          <m>A{\mathbf x}</m> and <m>A{\mathbf y}</m>.
+          Seja <m>A \in SL_2({\mathbb R})</m> e suponha que os vetores <m>{\mathbf x}</m> e
+          <m>{\mathbf y}</m> formem dois lados de um paralelogramo em <m>{\mathbb R}^2</m>.
+          Prove que a área desse paralelogramo é igual à área do paralelogramo com lados
+          <m>A{\mathbf x}</m> e <m>A{\mathbf y}</m>.
         </p>
       </statement>
     </exercise>
@@ -1738,12 +1738,12 @@
     <exercise number="10" xml:id="matrix-exercise-SO-n">
       <statement>
         <p>
-          Prove that <m>SO(n)</m> is a normal subgroup of <m>O(n)</m>.
+          Prove que <m>SO(n)</m> é um subgrupo normal de <m>O(n)</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Show that the kernel of the map <m>\det : O(n) \rightarrow {\mathbb R}^*</m> is <m>SO(n)</m>.
+          Mostre que o núcleo da aplicação <m>\det : O(n) \rightarrow {\mathbb R}^*</m> é <m>SO(n)</m>.
         </p>
       </hint>
     </exercise>
@@ -1753,7 +1753,7 @@
     <exercise number="11" xml:id="matrix-exercise-isometry">
       <statement>
         <p>
-          Show that any isometry <m>f</m> in <m>{\mathbb R}^n</m> is a one-to-one map.
+          Mostre que toda isometria <m>f</m> em <m>{\mathbb R}^n</m> é uma aplicação injetiva.
         </p>
       </statement>
     </exercise>
@@ -1761,9 +1761,9 @@
     <exercise number="12" xml:id="matrix-exercise-A-x">
       <statement>
         <p>
-          Prove or disprove:
-          an element in <m>E(2)</m> of the form <m>(A, {\mathbf x})</m>,
-          where <m>{\mathbf x} \neq 0</m>, has infinite order.
+          Prove ou refute:
+          um elemento de <m>E(2)</m> da forma <m>(A, {\mathbf x})</m>,
+          em que <m>{\mathbf x} \neq 0</m>, tem ordem infinita.
         </p>
       </statement>
     </exercise>
@@ -1773,12 +1773,12 @@
     <exercise number="13" xml:id="matrix-exercise-O-n-abelian-subgroup">
       <statement>
         <p>
-          Prove or disprove: There exists an infinite abelian subgroup of <m>O(n)</m>.
+          Prove ou refute: existe um subgrupo abeliano infinito de <m>O(n)</m>.
         </p>
       </statement>
       <hint>
         <p>
-          True.
+          Verdadeiro.
         </p>
       </hint>
     </exercise>
@@ -1788,10 +1788,10 @@
     <exercise number="14" xml:id="matrix-exercise-unit-circle">
       <statement>
         <p>
-          Let <m>{\mathbf x} = (x_1, x_2)</m> be a point on the unit circle in <m>{\mathbb R}^2</m>;
-          that is, <m>x_1^2 + x_2^2 = 1</m>.
-          If <m>A \in O(2)</m>, show that
-          <m>A {\mathbf x}</m> is also a point on the unit circle.
+          Seja <m>{\mathbf x} = (x_1, x_2)</m> um ponto do círculo unitário em <m>{\mathbb R}^2</m>;
+          isto é, <m>x_1^2 + x_2^2 = 1</m>.
+          Se <m>A \in O(2)</m>, mostre que
+          <m>A {\mathbf x}</m> também é um ponto do círculo unitário.
         </p>
       </statement>
     </exercise>
@@ -1799,11 +1799,11 @@
     <exercise number="15" xml:id="matrix-exercise-semi-direct-product">
       <statement>
         <p>
-          Let <m>G</m> be a group with a subgroup <m>H</m>
-          (not necessarily normal)
-          and a normal subgroup <m>N</m>.
-          Then <m>G</m> is a <term>semidirect product</term>
-          of <m>N</m> by <m>H</m> if
+          Seja <m>G</m> um grupo com um subgrupo <m>H</m>
+          (não necessariamente normal)
+          e um subgrupo normal <m>N</m>.
+          Então <m>G</m> é um <term>produto semidireto</term>
+          de <m>N</m> por <m>H</m> se
 
           <ul>
             <li>
@@ -1819,26 +1819,26 @@
             </li>
           </ul>
 
-          Show that each of the following is true.
+          Mostre que cada uma das afirmações a seguir é verdadeira.
 
           <ol>
             <li>
               <p>
-                <m>S_3</m> is the semidirect product of <m>A_3</m> by <m>H = \{(1), (1 \,2) \}</m>.
+                <m>S_3</m> é o produto semidireto de <m>A_3</m> por <m>H = \{(1), (1 \,2) \}</m>.
               </p>
             </li>
 
             <li>
               <p>
-                The quaternion group, <m>Q_8</m>,
-                cannot be written as a semidirect product.
+                O grupo dos quatérnios, <m>Q_8</m>,
+                não pode ser escrito como um produto semidireto.
               </p>
             </li>
 
             <li>
               <p>
-                <m>E(2)</m> is the semidirect product of <m>O(2)</m> by <m>H</m>,
-                where <m>H</m> consists of all translations in <m>{\mathbb R}^2</m>.
+                <m>E(2)</m> é o produto semidireto de <m>O(2)</m> por <m>H</m>,
+                em que <m>H</m> consiste em todas as translações em <m>{\mathbb R}^2</m>.
               </p>
             </li>
           </ol>
@@ -1851,7 +1851,7 @@
     <exercise number="16" xml:id="matrix-exercise-17-wallpaper-1">
       <statement>
         <p>
-          Determine which of the <m>17</m> wallpaper groups preserves the symmetry of the pattern in <xref ref="matrix-figure-wallpaper"/>.
+          Determine qual dos <m>17</m> grupos de papel de parede preserva a simetria do padrão em <xref ref="matrix-figure-wallpaper"/>.
         </p>
       </statement>
     </exercise>
@@ -1859,7 +1859,7 @@
     <exercise number="17" xml:id="matrix-exercise-17-wallpaper-2">
       <statement>
         <p>
-          Determine which of the <m>17</m> wallpaper groups preserves the symmetry of the pattern in <xref ref="matrix-figure-exercise-wallpaper"/>.
+          Determine qual dos <m>17</m> grupos de papel de parede preserva a simetria do padrão em <xref ref="matrix-figure-exercise-wallpaper"/>.
         </p>
       </statement>
       <hint>
@@ -1870,10 +1870,10 @@
     </exercise>
 
     <figure xml:id="matrix-figure-exercise-wallpaper">
-      <caption>Lattice for <xref ref="matrix-exercise-17-wallpaper-2"/></caption>
+      <caption>Reticulado para <xref ref="matrix-exercise-17-wallpaper-2"/></caption>
             <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
       <image xml:id="exercise-wallpaper">
-            <description>A lattices of hexagons.  Each hexagon is divided into three rhombuses.</description>
+            <description>Um reticulado de hexágonos. Cada hexágono é dividido em três losangos.</description>
             <latex-image>
                 <xi:include href="tikz/exercise-wallpaper.tex" parse="text"/>
             </latex-image>
@@ -1884,7 +1884,7 @@
     <exercise number="18" xml:id="matrix-exercise-dodecahedron">
       <statement>
         <p>
-          Find the rotation group of a dodecahedron.
+          Encontre o grupo de rotações de um dodecaedro.
         </p>
       </statement>
     </exercise>
@@ -1894,8 +1894,8 @@
     <exercise number="19" xml:id="matrix-exercise-17-wallpaper-symmetry">
       <statement>
         <p>
-          For each of the <m>17</m> wallpaper groups,
-          draw a wallpaper pattern having that group as a symmetry group.
+          Para cada um dos <m>17</m> grupos de papel de parede,
+          desenhe um padrão de papel de parede que tenha esse grupo como grupo de simetria.
         </p>
       </statement>
     </exercise>
