@@ -690,89 +690,89 @@
   </section>
 
   <section xml:id="cyclic-section-method-of-repeated-squares">
-    <title>The Method of Repeated Squares</title>
+    <title>O método dos quadrados repetidos</title>
     <p>
-      Computing large powers can be very time-consuming.
-      Just as anyone can compute <m>2^2</m> or <m>2^8</m>,
-      everyone knows how to compute
+      Calcular potências grandes pode consumir muito tempo.
+      Assim como qualquer pessoa consegue calcular <m>2^2</m> ou <m>2^8</m>,
+      todos sabem como calcular
       <md>
         2^{2^{1{,}000{,}000} }
       </md>.
-      However, such numbers are so large that we do not want to attempt the calculations;
-      moreover, past a certain point the computations would not be feasible even if we had every computer in the world at our disposal.
-      Even writing down the decimal representation of a very large number may not be reasonable.
-      It could be thousands or even millions of digits long.
-      However, if we could compute something like
+      Entretanto, esses números são tão grandes que não queremos tentar efetuar os cálculos;
+      além disso, a partir de certo ponto, os cálculos não seriam viáveis nem mesmo se tivéssemos todos os computadores do mundo à nossa disposição.
+      Até mesmo escrever a representação decimal de um número muito grande pode não ser razoável.
+      Ela poderia ter milhares ou até milhões de algarismos.
+      Contudo, se pudéssemos calcular algo como
       <md>
         2^{37{,}398{,}332 } \pmod{ 46{,}389}
       </md>,
-      we could very easily write the result down since it would be a number between <m>0</m> and <m>46{,}388</m>.
-      If we want to compute powers modulo <m>n</m> quickly and efficiently,
-      we will have to be clever.<fn>
-      The results in this section are needed only in <xref ref="crypt"/>
+      poderíamos escrever facilmente o resultado, pois ele seria um número entre <m>0</m> e <m>46{,}388</m>.
+      Se quisermos calcular potências módulo <m>n</m> de forma rápida e eficiente,
+      teremos de ser engenhosos.<fn>
+      Os resultados desta seção são necessários apenas em <xref ref="crypt"/>
       </fn></p>
 
     <p>
-      The first thing to notice is that any number <m>a</m> can be written as the sum of distinct powers of <m>2</m>;
-      that is, we can write
+      A primeira coisa a observar é que qualquer número <m>a</m> pode ser escrito como a soma de potências distintas de <m>2</m>;
+      isto é, podemos escrever
       <md>
         a = 2^{k_1} + 2^{k_2} + \cdots + 2^{k_n}
       </md>,
-      where <m>k_1 \lt k_2 \lt \cdots \lt k_n</m>.
-      This is just the binary representation of <m>a</m>.
-      For example, the binary representation of <m>57</m> is <m>111001</m>,
-      since we can write <m>57 = 2^0 + 2^3 + 2^4 + 2^5</m>.
+      onde <m>k_1 \lt k_2 \lt \cdots \lt k_n</m>.
+      Essa é simplesmente a representação binária de <m>a</m>.
+      Por exemplo, a representação binária de <m>57</m> é <m>111001</m>,
+      pois podemos escrever <m>57 = 2^0 + 2^3 + 2^4 + 2^5</m>.
     </p>
 
     <p>
-      The laws of exponents still work in <m>{\mathbb Z}_n</m>;
-      that is, if <m>b \equiv a^x \pmod{ n}</m> and <m>c \equiv a^y \pmod{ n}</m>,
-      then <m>bc \equiv a^{x+y} \pmod{ n}</m>.
-      We can compute <m>a^{2^k} \pmod{ n}</m> in <m>k</m> multiplications by computing
+      As leis dos expoentes continuam válidas em <m>{\mathbb Z}_n</m>;
+      isto é, se <m>b \equiv a^x \pmod{ n}</m> e <m>c \equiv a^y \pmod{ n}</m>,
+      então <m>bc \equiv a^{x+y} \pmod{ n}</m>.
+      Podemos calcular <m>a^{2^k} \pmod{ n}</m> com <m>k</m> multiplicações, calculando
       <md>
         <mrow>a^{2^0} \pmod{ n}</mrow>
         <mrow>a^{2^1} \pmod{ n }</mrow>
         <mrow>\vdots</mrow>
         <mrow>a^{2^k} \pmod{ n}</mrow>
       </md>.
-      Each step involves squaring the answer obtained in the previous step,
-      dividing by <m>n</m>, and taking the remainder.
+      Cada etapa envolve elevar ao quadrado o resultado obtido na etapa anterior,
+      dividir por <m>n</m> e tomar o resto.
     </p>
 
     <example xml:id="cyclic-example-repeated-squares">
       <p>
-        We will compute <m>271^{321} \pmod{ 481}</m>.
-        Notice that
+        Vamos calcular <m>271^{321} \pmod{ 481}</m>.
+        Observe que
         <md>
           321 = 2^0 +2^6 + 2^8;
         </md>
-        hence, computing <m>271^{ 321} \pmod{ 481}</m> is the same as computing
+        portanto, calcular <m>271^{ 321} \pmod{ 481}</m> é o mesmo que calcular
         <md>
           271^{ 2^0 +2^6 + 2^8 } \equiv 271^{ 2^0 } \cdot 271^{2^6 } \cdot 271^{ 2^8 } \pmod{ 481}
         </md>.
-        So it will suffice to compute
-        <m>271^{ 2^i } \pmod{ 481}</m> where <m>i = 0, 6, 8</m>.
-        It is very easy to see that
+        Assim, será suficiente calcular
+        <m>271^{ 2^i } \pmod{ 481}</m> para <m>i = 0, 6, 8</m>.
+        É fácil ver que
         <md>
           271^{ 2^1}  = 73{,}441 \equiv 329 \pmod{ 481}
         </md>.
-        We can square this result to obtain a value for <m>271^{ 2^2} \pmod{481}</m>:
+        Podemos elevar esse resultado ao quadrado para obter um valor para <m>271^{ 2^2} \pmod{481}</m>:
         <md>
           <mrow>271^{ 2^2}  &amp; \equiv (271^{ 2^1})^2 \pmod{ 481}</mrow>
           <mrow>&amp; \equiv (329)^2 \pmod{481}</mrow>
           <mrow>&amp; \equiv 108{,}241 \pmod{481}</mrow>
           <mrow>&amp; \equiv 16 \pmod{481}</mrow>
         </md>.
-        We are using the fact that <m>(a^{2^n})^2  \equiv a^{2 \cdot 2^n} \equiv a^{ 2^{n+1} } \pmod{ n}</m>.
-        Continuing, we can calculate
+        Estamos usando o fato de que <m>(a^{2^n})^2  \equiv a^{2 \cdot 2^n} \equiv a^{ 2^{n+1} } \pmod{ n}</m>.
+        Continuando, podemos calcular
         <md>
           271^{ 2^6 } \equiv 419 \pmod{481}
         </md>
-        and
+        e
         <md>
           271^{ 2^8 }  \equiv 16 \pmod{481}
         </md>.
-        Therefore,
+        Portanto,
         <md>
           <mrow>271^{ 321} &amp; \equiv 271^{ 2^0 +2^6 + 2^8 } \pmod{481}</mrow>
           <mrow>&amp; \equiv 271^{ 2^0 } \cdot 271^{ 2^6 } \cdot 271^{ 2^8 } \pmod{481}</mrow>
@@ -784,15 +784,15 @@
     </example>
         <!-- Reformatted example.  TWJ 2/5/2013 -->
     <p>
-      The method of repeated squares will prove to be a very useful tool when we explore <acro>RSA</acro> cryptography in <xref ref="crypt"/>.
-      To encode and decode messages in a reasonable manner under this scheme,
-      it is necessary to be able to quickly compute large powers of integers mod <m>n</m>.
+      O método dos quadrados repetidos será uma ferramenta muito útil quando explorarmos a criptografia <acro>RSA</acro> em <xref ref="crypt"/>.
+      Para codificar e decodificar mensagens de maneira razoável nesse esquema,
+      é necessário ser capaz de calcular rapidamente potências grandes de inteiros módulo <m>n</m>.
     </p>
 
     <paragraphs component="sage-blurb">
       <title>Sage</title>
       <p>
-        Sage support for cyclic groups is a little spotty <mdash/> but we can still make effective use of Sage and perhaps this situation could change soon.
+        O suporte do Sage para grupos cíclicos é um pouco irregular <mdash/> mas ainda podemos fazer uso eficaz do Sage e talvez essa situação mude em breve.
       </p>
     </paragraphs>
   </section>
