@@ -15,5 +15,7 @@ Este repositório é a edição REALMat em preparação, baseada no repositório
 ## Publicações
 
 <!-- realmat-release:start -->
-Nenhuma release REALMat foi publicada ainda. A primeira release listará aqui o PDF obrigatório e os demais formatos disponíveis.
+- Release REALMat atualmente recomendada: [v0.1.0](https://github.com/projetorealmat/aata/releases/tag/v0.1.0).
+- [Ler no navegador](https://projetorealmat.github.io/aata/)
+- [PDF](https://github.com/projetorealmat/aata/releases/download/v0.1.0/aata.pdf)
 <!-- realmat-release:end -->
