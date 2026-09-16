@@ -10,63 +10,63 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="rings">
-  <title>Rings</title>
+  <title>Anéis</title>
   <introduction>
     <p>
-      Up to this point we have studied sets with a single binary operation satisfying certain axioms,
-      but we are often more interested in working with sets that have two binary operations.
-      For example,
-      one of the most natural algebraic structures to study is the integers with the operations of addition and multiplication.
-      These operations are related to one another by the distributive property.
-      If we consider a set with two such related binary operations satisfying certain axioms,
-      we have an algebraic structure called a ring.
-      In a ring we add and multiply elements such as real numbers,
-      complex numbers, matrices, and functions.
+      Até este ponto estudamos conjuntos com uma única operação binária que satisfaz certos axiomas,
+      mas frequentemente estamos mais interessados em trabalhar com conjuntos que possuem duas operações binárias.
+      Por exemplo,
+      uma das estruturas algébricas mais naturais a estudar é a dos inteiros com as operações de adição e multiplicação.
+      Essas operações estão relacionadas entre si pela propriedade distributiva.
+      Se considerarmos um conjunto com duas operações binárias relacionadas desse modo, que satisfazem certos axiomas,
+      obteremos uma estrutura algébrica chamada anel.
+      Em um anel, adicionamos e multiplicamos elementos como números reais,
+      números complexos, matrizes e funções.
     </p>
   </introduction>
 
   <section xml:id="rings-section-definitions">
-    <title>Rings</title>
+    <title>Anéis</title>
     <p>
-      A nonempty set <m>R</m> is a <term>ring</term><idx><h>Ring</h><h>definition of</h></idx> if it has two closed binary operations,
-      addition and multiplication, satisfying the following conditions.
+      Um conjunto não vazio <m>R</m> é um <term>anel</term><idx><h>Anel</h><h>definição de</h></idx> se possui duas operações binárias fechadas,
+      adição e multiplicação, que satisfazem as condições a seguir.
 
       <ol>
         <li>
           <p>
-            <m>a + b = b + a</m> for <m>a, b \in R</m>.
+            <m>a + b = b + a</m> para <m>a, b \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <m>(a + b) + c = a + ( b + c)</m> for <m>a, b, c \in R</m>.
+            <m>(a + b) + c = a + ( b + c)</m> para <m>a, b, c \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            There is an element <m>0</m> in <m>R</m> such that
-            <m>a + 0 = a</m> for all <m>a \in R</m>.
+            Existe um elemento <m>0</m> em <m>R</m> tal que
+            <m>a + 0 = a</m> para todo <m>a \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            For every element <m>a \in R</m>,
-            there exists an element <m>-a</m> in <m>R</m> such that <m>a + (-a) = 0</m>.
+            Para todo elemento <m>a \in R</m>,
+            existe um elemento <m>-a</m> em <m>R</m> tal que <m>a + (-a) = 0</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <m>(ab) c = a ( b c)</m> for <m>a, b, c \in R</m>.
+            <m>(ab) c = a ( b c)</m> para <m>a, b, c \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            For <m>a, b, c \in R</m>,
+            Para <m>a, b, c \in R</m>,
             <md>
               <mrow>a( b + c)&amp;= ab +ac</mrow>
               <mrow>(a + b)c &amp; = ac + bc</mrow>
@@ -75,40 +75,40 @@
         </li>
       </ol>
 
-      This last condition, the distributive axiom,
-      relates the binary operations of addition and multiplication.
-      Notice that the first four axioms simply require that a ring be an abelian group under addition,
-      so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.
+      Esta última condição, o axioma distributivo,
+      relaciona as operações binárias de adição e multiplicação.
+      Observe que os quatro primeiros axiomas simplesmente exigem que um anel seja um grupo abeliano sob a adição;
+      portanto, também poderíamos ter definido um anel como um grupo abeliano <m>(R, +)</m> juntamente com uma segunda operação binária que satisfaz as quinta e sexta condições dadas acima.
     </p>
 
     <p>
-      If there is an element <m>1 \in R</m> such that <m>1 \neq 0</m> and
-      <m>1a = a1 = a</m> for each element <m>a \in R</m>,
-      we say that <m>R</m> is a ring with <term>unity</term><idx><h>Ring</h><h>with unity</h></idx>
-      or <idx><h>Ring</h><h>with identity</h></idx><term>identity</term>.
-      A ring <m>R</m> for which <m>ab = ba</m> for all
+      Se existe um elemento <m>1 \in R</m> tal que <m>1 \neq 0</m> e
+      <m>1a = a1 = a</m> para cada elemento <m>a \in R</m>,
+      dizemos que <m>R</m> é um anel com <term>unidade</term><idx><h>Anel</h><h>com unidade</h></idx>
+      ou <idx><h>Anel</h><h>com identidade</h></idx><term>identidade</term>.
+      Um anel <m>R</m> para o qual <m>ab = ba</m> para todos
       <m>a,
-      b</m> in <m>R</m> is called a <idx><h>Ring</h><h>commutative</h></idx><idx><h>Commutative rings</h></idx><term>commutative ring</term>.
-      A commutative ring <m>R</m> with identity is called an
-      <term>integral domain</term><idx><h>Integral domain</h></idx>
-      if, for every <m>a, b \in R</m> such that <m>ab = 0</m>,
-      either <m>a = 0</m> or <m>b = 0</m>.
-      A <term>division ring</term><idx><h>Division ring</h></idx><idx><h>Ring</h><h>division</h></idx>
-      is a ring <m>R</m>, with an identity,
-      in which every nonzero element in <m>R</m> is a <term>unit</term>;<idx><h>Unit</h></idx>
-      that is, for each <m>a \in R</m> with <m>a \neq 0</m>,
-      there exists a unique element <m>a^{-1}</m> such that <m>a^{-1} a = a a^{-1} = 1</m>.
-      A commutative division ring is called a <idx><h>Field</h></idx><term>field</term>.
-      The relationship among rings,
-      integral domains, division rings,
-      and fields is shown in <xref ref="rings-figure-types"/>.
+      b</m> em <m>R</m> é chamado de <idx><h>Anel</h><h>comutativo</h></idx><idx><h>Anéis comutativos</h></idx><term>anel comutativo</term>.
+      Um anel comutativo <m>R</m> com identidade é chamado de
+      <term>domínio de integridade</term><idx><h>Domínio de integridade</h></idx>
+      se, para quaisquer <m>a, b \in R</m> tais que <m>ab = 0</m>,
+      tivermos <m>a = 0</m> ou <m>b = 0</m>.
+      Um <term>anel de divisão</term><idx><h>Anel de divisão</h></idx><idx><h>Anel</h><h>de divisão</h></idx>
+      é um anel <m>R</m>, com identidade,
+      no qual todo elemento não nulo de <m>R</m> é uma <term>unidade</term>;<idx><h>Unidade</h></idx>
+      isto é, para cada <m>a \in R</m> com <m>a \neq 0</m>,
+      existe um único elemento <m>a^{-1}</m> tal que <m>a^{-1} a = a a^{-1} = 1</m>.
+      Um anel de divisão comutativo é chamado de <idx><h>Corpo</h></idx><term>corpo</term>.
+      A relação entre anéis,
+      domínios de integridade, anéis de divisão
+      e corpos é apresentada em <xref ref="rings-figure-types"/>.
     </p>
 
     <figure xml:id="rings-figure-types">
-      <caption>Types of rings</caption>
+      <caption>Tipos de anéis</caption>
             <!-- Replaced figure with tikz figure - TWJ 8/13/2010 -->
       <image width="50%" xml:id="rings-types">
-      		<description>A graph with rings at the top level connected to commutative rings and rings with identity at the second level. Commutative rings is connected to integral domains on the third level while rings with identity is connected to both integral domains and division rings on the third level.  Integral domains and division rings are connected to fields on the bottom level.</description>
+        <description>Um grafo com anéis no nível superior ligados a anéis comutativos e anéis com identidade no segundo nível. Os anéis comutativos estão ligados aos domínios de integridade no terceiro nível, enquanto os anéis com identidade estão ligados tanto aos domínios de integridade quanto aos anéis de divisão no terceiro nível. Os domínios de integridade e os anéis de divisão estão ligados aos corpos no nível inferior.</description>
             <latex-image>
                 <xi:include href="tikz/rings-types.tex" parse="text"/>
             </latex-image>
@@ -118,71 +118,71 @@
 
     <example xml:id="rings-example-integers">
       <p>
-        As we have mentioned previously, the integers form a ring.
-        In fact, <m>{\mathbb Z}</m> is an integral domain.
-        Certainly if <m>a b = 0</m> for two integers <m>a</m> and <m>b</m>,
-        either <m>a=0</m> or <m>b=0</m>.
-        However, <m>{\mathbb Z}</m> is not a field.
-        There is no integer that is the multiplicative inverse of <m>2</m>,
-        since <m>1/2</m> is not an integer.
-        The only integers with multiplicative inverses are <m>1</m> and <m>-1</m>.
+        Como mencionamos anteriormente, os inteiros formam um anel.
+        De fato, <m>{\mathbb Z}</m> é um domínio de integridade.
+        Certamente, se <m>a b = 0</m> para dois inteiros <m>a</m> e <m>b</m>,
+        então <m>a=0</m> ou <m>b=0</m>.
+        No entanto, <m>{\mathbb Z}</m> não é um corpo.
+        Não existe inteiro que seja o inverso multiplicativo de <m>2</m>,
+        pois <m>1/2</m> não é um inteiro.
+        Os únicos inteiros que possuem inversos multiplicativos são <m>1</m> e <m>-1</m>.
       </p>
     </example>
 
     <example xml:id="rings-example-field">
       <p>
-        Under the ordinary operations of addition and multiplication,
-        all of the familiar number systems are rings:
-        the rationals, <m>{\mathbb Q}</m>;
-        the real numbers, <m>{\mathbb R}</m>;
-        and the complex numbers, <m>{\mathbb C}</m>.
-        Each of these rings is a field.
+        Sob as operações usuais de adição e multiplicação,
+        todos os sistemas numéricos familiares são anéis:
+        os racionais, <m>{\mathbb Q}</m>;
+        os números reais, <m>{\mathbb R}</m>;
+        e os números complexos, <m>{\mathbb C}</m>.
+        Cada um desses anéis é um corpo.
       </p>
     </example>
 
     <example xml:id="rings-example-zn">
       <p>
-        We can define the product of two elements <m>a</m> and <m>b</m> in
-        <m>{\mathbb Z}_n</m> by <m>ab \pmod{n}</m>.
-        For instance, in <m>{\mathbb Z}_{12}</m>,
+        Podemos definir o produto de dois elementos <m>a</m> e <m>b</m> em
+        <m>{\mathbb Z}_n</m> por <m>ab \pmod{n}</m>.
+        Por exemplo, em <m>{\mathbb Z}_{12}</m>,
         <m>5 \cdot 7 \equiv 11 \pmod{12}</m>.
-        This product makes the abelian group <m>{\mathbb Z}_n</m> into a ring.
-        Certainly <m>{\mathbb Z}_n</m> is a commutative ring;
-        however, it may fail to be an integral domain.
-        If we consider <m>3 \cdot 4 \equiv 0 \pmod{12}</m> in <m>{\mathbb Z}_{12}</m>,
-        it is easy to see that a product of two nonzero elements in the ring can be equal to zero.
+        Esse produto transforma o grupo abeliano <m>{\mathbb Z}_n</m> em um anel.
+        Certamente, <m>{\mathbb Z}_n</m> é um anel comutativo;
+        contudo, pode não ser um domínio de integridade.
+        Se considerarmos <m>3 \cdot 4 \equiv 0 \pmod{12}</m> em <m>{\mathbb Z}_{12}</m>,
+        será fácil ver que o produto de dois elementos não nulos do anel pode ser igual a zero.
       </p>
     </example>
 
     <p>
-      A nonzero element <m>a</m> in a commutative ring <m>R</m> is called a <term>zero divisor</term><idx><h>Zero divisor</h></idx>
-      if there is a nonzero element <m>b</m> in <m>R</m> such that <m>ab = 0</m>.
-      In the previous example,
-      <m>3</m> and <m>4</m> are zero divisors in <m>{\mathbb Z}_{12}</m>.
+      Um elemento não nulo <m>a</m> de um anel comutativo <m>R</m> é chamado de <term>divisor de zero</term><idx><h>Divisor de zero</h></idx>
+      se existe um elemento não nulo <m>b</m> em <m>R</m> tal que <m>ab = 0</m>.
+      No exemplo anterior,
+      <m>3</m> e <m>4</m> são divisores de zero em <m>{\mathbb Z}_{12}</m>.
     </p>
 
     <example xml:id="rings-example-functions">
       <p>
-        In calculus the continuous real-valued functions on an interval <m>[a,b]</m> form a commutative ring.
-        We add or multiply two functions by adding or multiplying the values of the functions.
-        If <m>f(x) = x^2</m> and <m>g(x) = \cos x</m>,
-        then <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> and <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.
+        Em cálculo, as funções contínuas de valores reais definidas em um intervalo <m>[a,b]</m> formam um anel comutativo.
+        Adicionamos ou multiplicamos duas funções adicionando ou multiplicando seus valores.
+        Se <m>f(x) = x^2</m> e <m>g(x) = \cos x</m>,
+        então <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> e <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.
       </p>
     </example>
 
     <example xml:id="rings-example-matrix">
       <p>
-        The <m>2 \times 2</m> matrices with entries in
-        <m>{\mathbb R}</m> form a ring under the usual operations of matrix addition and multiplication.
-        This ring is noncommutative,
-        since it is usually the case that <m>AB \neq BA</m>.
-        Also, notice that we can have <m>AB = 0</m> when neither <m>A</m> nor <m>B</m> is zero.
+        As matrizes <m>2 \times 2</m> com entradas em
+        <m>{\mathbb R}</m> formam um anel sob as operações usuais de adição e multiplicação de matrizes.
+        Esse anel não é comutativo,
+        pois geralmente ocorre que <m>AB \neq BA</m>.
+        Observe também que podemos ter <m>AB = 0</m> quando nem <m>A</m> nem <m>B</m> é zero.
       </p>
     </example>
 
     <example xml:id="rings-example-noncommutative">
       <p>
-        For an example of a noncommutative division ring, let
+        Como exemplo de um anel de divisão não comutativo, considere
         <md>
           1 = 
           \begin{pmatrix}
@@ -209,8 +209,8 @@
           0 &amp; -i
           \end{pmatrix}
         </md>,
-        where <m>i^2 = -1</m>.
-        These elements satisfy the following relations:
+        onde <m>i^2 = -1</m>.
+        Esses elementos satisfazem as relações a seguir:
         <md>
           <mrow>{\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1</mrow>
           <mrow>{\mathbf i}  {\mathbf j} &amp; =  {\mathbf k}</mrow>
@@ -220,14 +220,14 @@
           <mrow>{\mathbf k}  {\mathbf j} &amp; =  - {\mathbf i}</mrow>
           <mrow>{\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}</mrow>
         </md>.
-        Let <m>{\mathbb H}</m> consist of elements of the form <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>,
-        where <m>a, b , c, d</m> are real numbers.
-        Equivalently,
-        <m>{\mathbb H}</m> can be considered to be the set of all <m>2 \times 2</m> matrices of the form
+        Seja <m>{\mathbb H}</m> o conjunto dos elementos da forma <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>,
+        onde <m>a, b , c, d</m> são números reais.
+        Equivalentemente,
+        <m>{\mathbb H}</m> pode ser considerado o conjunto de todas as matrizes <m>2 \times 2</m> da forma
 
         <notation>
           <usage><m>\mathbb H</m></usage>
-          <description>the ring of quaternions</description>
+          <description>o anel dos quatérnios</description>
         </notation>
 
         <md>
@@ -236,43 +236,43 @@
           -\overline{\beta} &amp; \overline{\alpha }
           \end{pmatrix}
         </md>,
-        where <m>\alpha = a + di</m> and <m>\beta = b + ci</m> are complex numbers.
-        We can define addition and multiplication on
-        <m>{\mathbb H}</m> either by the usual matrix operations or in terms of the generators <m>1</m>,
-        <m>{\mathbf i}</m>, <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>:
+        onde <m>\alpha = a + di</m> e <m>\beta = b + ci</m> são números complexos.
+        Podemos definir a adição e a multiplicação em
+        <m>{\mathbb H}</m> tanto pelas operações usuais de matrizes quanto em termos dos geradores <m>1</m>,
+        <m>{\mathbf i}</m>, <m>{\mathbf j}</m> e <m>{\mathbf k}</m>:
         <md>
           <mrow>(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )</mrow>
           <mrow>= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k</mrow>
         </md>
-        and
+        e
         <md>
           (a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}
         </md>,
-        where
+        em que
         <md>
           <mrow>\alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2</mrow>
           <mrow>\beta &amp; =  a_1 b_2 + a_2 b_1 + c_1 d_2 - d_1 c_2</mrow>
           <mrow>\gamma &amp; =  a_1 c_2 - b_1 d_2 + c_1 a_2 + d_1 b_2</mrow>
           <mrow>\delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2</mrow>
         </md>.
-        Though multiplication looks complicated,
-        it is actually a straightforward computation if we remember that we just add and multiply elements in
-        <m>{\mathbb H}</m> like polynomials and keep in mind the relationships between the generators <m>{\mathbf i}</m>,
-        <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>.
-        The ring <m>{\mathbb H}</m> is called the ring of <idx><h>Quaternions</h></idx><term>quaternions</term>.
+        Embora a multiplicação pareça complicada,
+        na verdade ela é um cálculo direto se lembrarmos que simplesmente adicionamos e multiplicamos os elementos de
+        <m>{\mathbb H}</m> como polinômios, tendo em mente as relações entre os geradores <m>{\mathbf i}</m>,
+        <m>{\mathbf j}</m> e <m>{\mathbf k}</m>.
+        O anel <m>{\mathbb H}</m> é chamado de anel dos <idx><h>Quatérnios</h></idx><term>quatérnios</term>.
       </p>
             <!-- Subscript error corrected.  Suggested by K. Halasz. -->
             <!-- TWJ 2/6/2013  -->
       <p>
-        To show that the quaternions are a division ring,
-        we must be able to find an inverse for each nonzero element.
-        Notice that
+        Para mostrar que os quatérnios formam um anel de divisão,
+        devemos ser capazes de encontrar um inverso para cada elemento não nulo.
+        Observe que
         <md>
           ( a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k} )( a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} ) = a^2 + b^2 + c^2 + d^2
         </md>.
-        This element can be zero only if <m>a</m>, <m>b</m>,
-        <m>c</m>, and <m>d</m> are all zero.
-        So if <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
+        Esse elemento só pode ser zero se <m>a</m>, <m>b</m>,
+        <m>c</m> e <m>d</m> forem todos zero.
+        Assim, se <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
         <md>
           (a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left( \frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1
         </md>.
@@ -282,8 +282,8 @@
     <proposition>
       <statement>
         <p>
-          Let <m>R</m> be a ring with <m>a, b \in R</m>.
-          Then
+          Seja <m>R</m> um anel com <m>a, b \in R</m>.
+          Então
 
           <ol>
             <li>
@@ -309,33 +309,33 @@
 
       <proof>
         <p>
-          To prove (1), observe that
+          Para provar (1), observe que
           <md>
             a0 = a(0+0)= a0+ a0;
           </md>
-          hence, <m>a0=0</m>.
-          Similarly, <m>0a = 0</m>.
-          For (2), we have <m>ab + a(-b) = a(b-b) = a0 = 0</m>;
-          consequently, <m>-ab = a(-b)</m>.
-          Similarly, <m>-ab = (-a)b</m>.
-          Part (3) follows directly from (2) since <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.
+          portanto, <m>a0=0</m>.
+          Analogamente, <m>0a = 0</m>.
+          Para (2), temos <m>ab + a(-b) = a(b-b) = a0 = 0</m>;
+          consequentemente, <m>-ab = a(-b)</m>.
+          Analogamente, <m>-ab = (-a)b</m>.
+          A parte (3) segue diretamente de (2), pois <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.
         </p>
       </proof>
     </proposition>
 
     <p>
-      Just as we have subgroups of groups,
-      we have an analogous class of substructures for rings.
-      A <term>subring</term><idx><h>Subring</h></idx>
-      <m>S</m> of a ring <m>R</m> is a subset <m>S</m> of <m>R</m> such that <m>S</m> is also a ring under the inherited operations from <m>R</m>.
+      Assim como temos subgrupos de grupos,
+      temos uma classe análoga de subestruturas para anéis.
+      Um <term>subanel</term><idx><h>Subanel</h></idx>
+      <m>S</m> de um anel <m>R</m> é um subconjunto <m>S</m> de <m>R</m> tal que <m>S</m> também é um anel sob as operações herdadas de <m>R</m>.
     </p>
 
     <example xml:id="rings-example-subring-chain">
       <p>
-        The ring <m>n {\mathbb Z}</m> is a subring of <m>{\mathbb Z}</m>.
-        Notice that even though the original ring may have an identity,
-        we do not require that its subring have an identity.
-        We have the following chain of subrings:
+        O anel <m>n {\mathbb Z}</m> é um subanel de <m>{\mathbb Z}</m>.
+        Observe que, embora o anel original possa ter uma identidade,
+        não exigimos que seu subanel tenha uma identidade.
+        Temos a seguinte cadeia de subanéis:
         <md>
           {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}
         </md>.
@@ -343,15 +343,15 @@
     </example>
 
     <p>
-      The following proposition gives us some easy criteria for determining whether or not a subset of a ring is indeed a subring.
-      (We will leave the proof of this proposition as an exercise.)
+      A proposição a seguir fornece alguns critérios simples para determinar se um subconjunto de um anel é de fato um subanel.
+      (Deixaremos a demonstração desta proposição como exercício.)
     </p>
 
     <proposition xml:id="rings-prop-subring">
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
-          Then <m>S</m> is a subring of <m>R</m> if and only if the following conditions are satisfied.
+          Seja <m>R</m> um anel e <m>S</m> um subconjunto de <m>R</m>.
+          Então <m>S</m> é um subanel de <m>R</m> se, e somente se, as condições a seguir forem satisfeitas.
 
           <ol>
             <li>
@@ -362,13 +362,13 @@
 
             <li>
               <p>
-                <m>rs \in S</m> for all <m>r, s \in S</m>.
+                <m>rs \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>r-s \in S</m> for all <m>r, s \in S</m>.
+                <m>r-s \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
           </ol>
@@ -378,9 +378,9 @@
 
     <example xml:id="rings-example-m2">
       <p>
-        Let  <m>R ={\mathbb M}_2( {\mathbb R} )</m> be the ring of
-        <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>.
-        If <m>T</m> is the set of upper triangular matrices in <m>R</m>; i.e.,
+        Seja <m>R ={\mathbb M}_2( {\mathbb R} )</m> o anel das
+        matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb R}</m>.
+        Se <m>T</m> é o conjunto das matrizes triangulares superiores em <m>R</m>, isto é,
         <md>
           T =
           \left\{
@@ -391,23 +391,23 @@
           : a, b, c \in {\mathbb R}
           \right\}
         </md>,
-        then <m>T</m> is a subring of <m>R</m>.
-        If
+        então <m>T</m> é um subanel de <m>R</m>.
+        Se
         <md>
           A =
           \begin{pmatrix}
           a &amp; b \\
           0 &amp; c
           \end{pmatrix}
-          \quad \text{and} \quad
+          \quad \text{e} \quad
           B =
           \begin{pmatrix}
           a' &amp; b' \\
           0 &amp; c'
           \end{pmatrix}
         </md>
-        are in <m>T</m>, then clearly <m>A-B</m> is also in <m>T</m>.
-        Also,
+        pertencem a <m>T</m>, então claramente <m>A-B</m> também pertence a <m>T</m>.
+        Além disso,
         <md>
           AB =
           \begin{pmatrix}
@@ -415,55 +415,55 @@
           0 &amp; cc'
           \end{pmatrix}
         </md>
-        is in <m>T</m>.
+        pertence a <m>T</m>.
       </p>
     </example>
   </section>
 
   <section xml:id="rings-section-domains-and-fields">
-    <title>Integral Domains and Fields</title>
+    <title>Domínios de integridade e corpos</title>
     <p>
-      Let us briefly recall some definitions.
-      If <m>R</m> is a commutative ring and <m>r</m> is a nonzero element in <m>R</m>,
-      then <m>r</m> is said to be a <term>zero divisor</term>
-      if there is some nonzero element <m>s \in R</m> such that <m>rs = 0</m>.
-      A commutative ring with identity is said to be an
-      <term>integral domain</term> if it has no zero divisors.
-      If an element <m>a</m> in a ring <m>R</m> with identity has a multiplicative inverse,
-      we say that <m>a</m> is a <term>unit</term>.
-      If every nonzero element in a ring <m>R</m> is a unit,
-      then <m>R</m> is called a <term>division ring</term>.
-      A commutative division ring is called a <term>field</term>.
+      Recordemos brevemente algumas definições.
+      Se <m>R</m> é um anel comutativo e <m>r</m> é um elemento não nulo de <m>R</m>,
+      então <m>r</m> é chamado de <term>divisor de zero</term>
+      se existe algum elemento não nulo <m>s \in R</m> tal que <m>rs = 0</m>.
+      Um anel comutativo com identidade é chamado de
+      <term>domínio de integridade</term> se não possui divisores de zero.
+      Se um elemento <m>a</m> de um anel <m>R</m> com identidade possui inverso multiplicativo,
+      dizemos que <m>a</m> é uma <term>unidade</term>.
+      Se todo elemento não nulo de um anel <m>R</m> é uma unidade,
+      então <m>R</m> é chamado de <term>anel de divisão</term>.
+      Um anel de divisão comutativo é chamado de <term>corpo</term>.
     </p>
 
     <example xml:id="rings-example-gaussian-integers">
       <p>
-        If <m>i^2 = -1</m>, then the set
-        <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forms a ring known as the
-        <idx><h>Gaussian integers</h></idx><term>Gaussian integers</term>.
+        Se <m>i^2 = -1</m>, então o conjunto
+        <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forma um anel conhecido como
+        <idx><h>Inteiros gaussianos</h></idx><term>inteiros gaussianos</term>.
         <notation>
           <usage><m>\mathbb Z[i]</m></usage>
-          <description>the Gaussian integers</description>
+          <description>os inteiros gaussianos</description>
         </notation>
-        It is easily seen that the Gaussian integers are a subring of the complex numbers since they are closed under addition and multiplication.
-        Let <m>\alpha = a + bi</m> be a unit in <m>{\mathbb Z}[ i ]</m>.
-        Then <m>\overline{\alpha} = a - bi</m> is also a unit since if <m>\alpha \beta = 1</m>,
-        then <m>\overline{\alpha} \overline{\beta} = 1</m>.
-        If <m>\beta = c + di</m>, then
+        É fácil ver que os inteiros gaussianos são um subanel dos números complexos, pois são fechados sob a adição e a multiplicação.
+        Seja <m>\alpha = a + bi</m> uma unidade em <m>{\mathbb Z}[ i ]</m>.
+        Então <m>\overline{\alpha} = a - bi</m> também é uma unidade, pois, se <m>\alpha \beta = 1</m>,
+        então <m>\overline{\alpha} \overline{\beta} = 1</m>.
+        Se <m>\beta = c + di</m>, então
         <md>
           1 = \alpha \beta \overline{\alpha} \overline{\beta} = (a^2 + b^2 )(c^2 + d^2)
         </md>.
-        Therefore, <m>a^2 + b^2</m> must either be <m>1</m> or <m>-1</m>;
-        or, equivalently, <m>a + bi = \pm 1</m> or <m>a + bi = \pm i</m>.
-        Therefore, units of this ring are <m>\pm 1</m> and <m>\pm i</m>;
-        hence, the Gaussian integers are not a field.
-        We will leave it as an exercise to prove that the Gaussian integers are an integral domain.
+        Portanto, <m>a^2 + b^2</m> deve ser <m>1</m> ou <m>-1</m>;
+        ou, equivalentemente, <m>a + bi = \pm 1</m> ou <m>a + bi = \pm i</m>.
+        Portanto, as unidades desse anel são <m>\pm 1</m> e <m>\pm i</m>;
+        consequentemente, os inteiros gaussianos não são um corpo.
+        Deixaremos como exercício a demonstração de que os inteiros gaussianos são um domínio de integridade.
       </p>
     </example>
 
     <example xml:id="rings-example-matrix-z2">
       <p>
-        The set of matrices
+        O conjunto de matrizes
         <md>
           F =
           \left\{
@@ -485,14 +485,14 @@
           \end{pmatrix}
           \right\}
         </md>
-        with entries in <m>{\mathbb Z}_2</m> forms a field.
+        com entradas em <m>{\mathbb Z}_2</m> forma um corpo.
       </p>
     </example>
 
     <example xml:id="rings-example-q-sqrt2">
       <p>
-        The set <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is a field.
-        The inverse of an element <m>a + b \sqrt{2}</m> in <m>{\mathbb Q}( \sqrt{2}\, )</m> is
+        O conjunto <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> é um corpo.
+        O inverso de um elemento <m>a + b \sqrt{2}</m> em <m>{\mathbb Q}( \sqrt{2}\, )</m> é
         <md>
           \frac{a}{a^2 - 2 b^2} +\frac{- b}{ a^2 - 2 b^2} \sqrt{2}
         </md>.
@@ -500,126 +500,126 @@
     </example>
 
     <p>
-      We have the following alternative characterization of integral domains.
+      Temos a seguinte caracterização alternativa dos domínios de integridade.
     </p>
 
     <proposition>
-      <title>Cancellation Law</title>
+      <title>Lei do cancelamento</title>
       <idx>
-      <h>Cancellation law</h>
-      <h>for integral domains</h>
+      <h>Lei do cancelamento</h>
+      <h>para domínios de integridade</h>
       </idx>
       <statement>
         <p>
-          Let <m>D</m> be a commutative ring with identity.
-          Then <m>D</m> is an integral domain if and only if for all nonzero elements <m>a \in D</m> with <m>ab = ac</m>,
-          we have <m>b=c</m>.
+          Seja <m>D</m> um anel comutativo com identidade.
+          Então <m>D</m> é um domínio de integridade se, e somente se, para todo elemento não nulo <m>a \in D</m> tal que <m>ab = ac</m>,
+          tivermos <m>b=c</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be an integral domain.
-          Then <m>D</m> has no zero divisors.
-          Let <m>ab = ac</m> with <m>a \neq 0</m>.
-          Then <m>a(b - c) =0</m>.
-          Hence, <m>b - c = 0</m> and <m>b = c</m>.
+          Seja <m>D</m> um domínio de integridade.
+          Então <m>D</m> não possui divisores de zero.
+          Seja <m>ab = ac</m> com <m>a \neq 0</m>.
+          Então <m>a(b - c) =0</m>.
+          Logo, <m>b - c = 0</m> e <m>b = c</m>.
         </p>
 
         <p>
-          Conversely, let us suppose that cancellation is possible in <m>D</m>.
-          That is, suppose that <m>ab = ac</m> implies <m>b=c</m>.
-          Let <m>ab = 0</m>.
-          If <m>a \neq 0</m>, then <m>ab = a 0</m> or <m>b=0</m>.
-          Therefore, <m>a</m> cannot be a zero divisor.
+          Reciprocamente, suponhamos que o cancelamento seja possível em <m>D</m>.
+          Isto é, suponhamos que <m>ab = ac</m> implique <m>b=c</m>.
+          Seja <m>ab = 0</m>.
+          Se <m>a \neq 0</m>, então <m>ab = a 0</m>, ou <m>b=0</m>.
+          Portanto, <m>a</m> não pode ser um divisor de zero.
         </p>
       </proof>
     </proposition>
 
     <p>
-      The following surprising theorem is due to Wedderburn.
+      O surpreendente teorema a seguir é devido a Wedderburn.
     </p>
 
     <theorem>
       <statement>
         <p>
-          Every finite integral domain is a field.
+          Todo domínio de integridade finito é um corpo.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be a finite integral domain and <m>D^\ast</m> be the set of nonzero elements of <m>D</m>.
-          We must show that every element in <m>D^*</m> has an inverse.
-          For each <m>a \in D^\ast</m> we can define a map
-          <m>\lambda_a : D^\ast \rightarrow D^\ast</m> by <m>\lambda_a(d) = ad</m>.
-          This map makes sense, because if  <m>a \neq 0</m> and
-          <m>d \neq 0</m>, then <m>ad \neq 0</m>.
-          The map <m>\lambda_a</m> is one-to-one,
-          since for <m>d_1, d_2 \in D^*</m>,
+          Seja <m>D</m> um domínio de integridade finito e <m>D^\ast</m> o conjunto dos elementos não nulos de <m>D</m>.
+          Devemos mostrar que todo elemento de <m>D^*</m> possui um inverso.
+          Para cada <m>a \in D^\ast</m>, podemos definir uma aplicação
+          <m>\lambda_a : D^\ast \rightarrow D^\ast</m> por <m>\lambda_a(d) = ad</m>.
+          Essa aplicação faz sentido, pois, se <m>a \neq 0</m> e
+          <m>d \neq 0</m>, então <m>ad \neq 0</m>.
+          A aplicação <m>\lambda_a</m> é injetiva,
+          pois, para <m>d_1, d_2 \in D^*</m>,
           <md>
             ad_1 = \lambda_a(d_1) = \lambda_a(d_2) = ad_2
           </md>
-          implies <m>d_1 = d_2</m> by left cancellation.
-          Since <m>D^\ast</m> is a finite set,
-          the map <m>\lambda_a</m> must also be onto;
-          hence, for some <m>d \in D^\ast</m>,
+          implica <m>d_1 = d_2</m> pelo cancelamento à esquerda.
+          Como <m>D^\ast</m> é um conjunto finito,
+          a aplicação <m>\lambda_a</m> também deve ser sobrejetiva;
+          portanto, para algum <m>d \in D^\ast</m>,
           <m>\lambda_a(d) = ad = 1</m>.
-          Therefore, <m>a</m> has a left inverse.
-          Since <m>D</m> is commutative,
-          <m>d</m> must also be a right inverse for <m>a</m>.
-          Consequently, <m>D</m> is a field.
+          Logo, <m>a</m> possui um inverso à esquerda.
+          Como <m>D</m> é comutativo,
+          <m>d</m> também deve ser um inverso à direita de <m>a</m>.
+          Consequentemente, <m>D</m> é um corpo.
         </p>
       </proof>
     </theorem>
 
     <p>
-      For any nonnegative integer <m>n</m> and any element <m>r</m> in a ring <m>R</m> we write
-      <m>r + \cdots + r</m> (<m>n</m> times) as <m>nr</m>.
-      We define the <term>characteristic</term><idx><h>Characteristic of a ring</h></idx><idx><h>Ring</h><h>characteristic of</h></idx> of a ring <m>R</m> to be the least positive integer <m>n</m> such that <m>nr = 0</m> for all <m>r \in R</m>.
-      If no such integer exists,
-      then the characteristic of <m>R</m> is defined to be <m>0</m>.
-      We will denote the characteristic of <m>R</m> by <m>\chr R</m>.
+      Para qualquer inteiro não negativo <m>n</m> e qualquer elemento <m>r</m> de um anel <m>R</m>, escrevemos
+      <m>r + \cdots + r</m> (<m>n</m> vezes) como <m>nr</m>.
+      Definimos a <term>característica</term><idx><h>Característica de um anel</h></idx><idx><h>Anel</h><h>característica de</h></idx> de um anel <m>R</m> como o menor inteiro positivo <m>n</m> tal que <m>nr = 0</m> para todo <m>r \in R</m>.
+      Se tal inteiro não existir,
+      então a característica de <m>R</m> será definida como <m>0</m>.
+      Denotaremos a característica de <m>R</m> por <m>\chr R</m>.
 
       <notation>
         <usage><m>\chr R</m></usage>
-        <description>characteristic of a ring <m>R</m></description>
+        <description>característica de um anel <m>R</m></description>
       </notation>
 
     </p>
 
     <example xml:id="rings-example-zp-field">
       <p>
-        For every prime <m>p</m>,
-        <m>{\mathbb Z}_p</m> is a field of characteristic <m>p</m>.
-        By <xref ref="groups-proposition-zn-equiv-classes"/>,
-        every nonzero element in <m>{\mathbb Z}_p</m> has an inverse;
-        hence, <m>{\mathbb Z}_p</m> is a field.
-        If <m>a</m> is any nonzero element in the field, then <m>pa =0</m>,
-        since the order of any nonzero element in the abelian group <m>{\mathbb Z}_p</m> is <m>p</m>.
+        Para todo primo <m>p</m>,
+        <m>{\mathbb Z}_p</m> é um corpo de característica <m>p</m>.
+        Pelo <xref ref="groups-proposition-zn-equiv-classes"/>,
+        todo elemento não nulo de <m>{\mathbb Z}_p</m> possui um inverso;
+        portanto, <m>{\mathbb Z}_p</m> é um corpo.
+        Se <m>a</m> é qualquer elemento não nulo do corpo, então <m>pa =0</m>,
+        pois a ordem de qualquer elemento não nulo do grupo abeliano <m>{\mathbb Z}_p</m> é <m>p</m>.
       </p>
     </example>
 
     <lemma xml:id="rings-lemma-ring-characteristic">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity.
-          If <m>1</m> has order <m>n</m>,
-          then the characteristic of <m>R</m> is <m>n</m>.
+          Seja <m>R</m> um anel com identidade.
+          Se <m>1</m> tem ordem <m>n</m>,
+          então a característica de <m>R</m> é <m>n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          If <m>1</m> has order <m>n</m>,
-          then <m>n</m> is the least positive integer such that <m>n 1 = 0</m>.
-          Thus, for all <m>r \in R</m>,
+          Se <m>1</m> tem ordem <m>n</m>,
+          então <m>n</m> é o menor inteiro positivo tal que <m>n 1 = 0</m>.
+          Assim, para todo <m>r \in R</m>,
           <md>
             nr = n(1r) = (n 1) r = 0r = 0
           </md>.
-          On the other hand,
-          if no positive <m>n</m> exists such that <m>n1 = 0</m>,
-          then the characteristic of <m>R</m> is zero.
+          Por outro lado,
+          se não existe inteiro positivo <m>n</m> tal que <m>n1 = 0</m>,
+          então a característica de <m>R</m> é zero.
         </p>
       </proof>
     </lemma>
@@ -627,49 +627,49 @@
     <theorem xml:id="rings-theorem-integral-domain-characteristic">
       <statement>
         <p>
-          The characteristic of an integral domain is either prime or zero.
+          A característica de um domínio de integridade é prima ou zero.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be an integral domain and suppose that the characteristic of <m>D</m> is <m>n</m> with <m>n \neq 0</m>.
-          If <m>n</m> is not prime, then <m>n = ab</m>,
-          where <m>1 \lt a \lt n</m> and <m>1 \lt b \lt n</m>.
-          By <xref ref="rings-lemma-ring-characteristic"/>, we need only consider the case <m>n 1 = 0</m>.
-          Since <m>0 = n 1 = (ab)1 = (a1)(b1)</m> and there are no zero divisors in <m>D</m>,
-          either <m>a1 =0</m> or <m>b1=0</m>.
-          Hence, the characteristic of <m>D</m> must be less than <m>n</m>,
-          which is a contradiction.
-          Therefore, <m>n</m> must be prime.
+          Seja <m>D</m> um domínio de integridade e suponha que a característica de <m>D</m> seja <m>n</m>, com <m>n \neq 0</m>.
+          Se <m>n</m> não é primo, então <m>n = ab</m>,
+          onde <m>1 \lt a \lt n</m> e <m>1 \lt b \lt n</m>.
+          Pelo <xref ref="rings-lemma-ring-characteristic"/>, basta considerar o caso <m>n 1 = 0</m>.
+          Como <m>0 = n 1 = (ab)1 = (a1)(b1)</m> e não há divisores de zero em <m>D</m>,
+          temos <m>a1 =0</m> ou <m>b1=0</m>.
+          Portanto, a característica de <m>D</m> deve ser menor que <m>n</m>,
+          o que é uma contradição.
+          Consequentemente, <m>n</m> deve ser primo.
         </p>
       </proof>
     </theorem>
   </section>
 
   <section xml:id="rings-section-homomorphisms">
-    <title>Ring Homomorphisms and Ideals</title>
+    <title>Homomorfismos de anéis e ideais</title>
     <p>
-      In the study of groups,
-      a homomorphism is a map that preserves the operation of the group.
-      Similarly, a homomorphism between rings preserves the operations of addition and multiplication in the ring.
-      More specifically, if <m>R</m> and <m>S</m> are rings,
-      then a <term>ring homomorphism</term><idx><h>Homomorphism</h><h>ring</h></idx><idx><h>Ring</h><h>homomorphism</h></idx>
-      is a map <m>\phi : R \rightarrow S</m> satisfying
+      No estudo dos grupos,
+      um homomorfismo é uma aplicação que preserva a operação do grupo.
+      Analogamente, um homomorfismo entre anéis preserva as operações de adição e multiplicação do anel.
+      Mais especificamente, se <m>R</m> e <m>S</m> são anéis,
+      então um <term>homomorfismo de anéis</term><idx><h>Homomorfismo</h><h>de anéis</h></idx><idx><h>Anel</h><h>homomorfismo de</h></idx>
+      é uma aplicação <m>\phi : R \rightarrow S</m> que satisfaz
       <md>
         <mrow>\phi( a + b ) &amp; = \phi( a ) + \phi(b)</mrow>
         <mrow>\phi( a b ) &amp; = \phi( a ) \phi(b)</mrow>
       </md>
-      for all <m>a, b \in R</m>.
-      If <m>\phi : R \rightarrow S</m> is a one-to-one and onto homomorphism,
-      then <m>\phi</m> is called an <term>isomorphism</term><idx><h>Isomorphism</h><h>ring</h></idx><idx><h>Ring</h><h>isomorphism</h></idx>
-      of rings.
+      para todos <m>a, b \in R</m>.
+      Se <m>\phi : R \rightarrow S</m> é um homomorfismo injetivo e sobrejetivo,
+      então <m>\phi</m> é chamado de <term>isomorfismo</term><idx><h>Isomorfismo</h><h>de anéis</h></idx><idx><h>Anel</h><h>isomorfismo de</h></idx>
+      de anéis.
     </p>
 
     <p>
-      The set of elements that a ring homomorphism maps to <m>0</m> plays a fundamental role in the theory of rings.
-      For any ring homomorphism <m>\phi : R \rightarrow S</m>,
-      we define the <term>kernel</term><idx><h>Homomorphism</h><h>kernel of a ring</h></idx><idx><h>Kernel</h><h>of a ring homomorphism</h></idx> of a ring homomorphism to be the set
+      O conjunto de elementos que um homomorfismo de anéis leva a <m>0</m> desempenha um papel fundamental na teoria dos anéis.
+      Para qualquer homomorfismo de anéis <m>\phi : R \rightarrow S</m>,
+      definimos o <term>núcleo</term><idx><h>Homomorfismo</h><h>núcleo de um anel</h></idx><idx><h>Núcleo</h><h>de um homomorfismo de anéis</h></idx> de um homomorfismo de anéis como o conjunto
       <md>
         \ker \phi = \{ r \in R : \phi( r ) = 0 \}
       </md>.
@@ -677,55 +677,55 @@
 
     <example xml:id="rings-example-homo">
       <p>
-        For any integer <m>n</m> we can define a ring homomorphism
-        <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}_n</m> by <m>a \mapsto a \pmod{n}</m>.
-        This is indeed a ring homomorphism, since
+        Para qualquer inteiro <m>n</m>, podemos definir um homomorfismo de anéis
+        <m>\phi : {\mathbb Z} \rightarrow {\mathbb Z}_n</m> por <m>a \mapsto a \pmod{n}</m>.
+        Este é de fato um homomorfismo de anéis, pois
         <md>
           <mrow>\phi( a + b ) &amp; = (a + b) \pmod{n}</mrow>
           <mrow>&amp; = a \pmod{n} + b \pmod{n}</mrow>
           <mrow>&amp; = \phi( a ) + \phi(b)</mrow>
         </md>
-        and
+        e
         <md>
           <mrow>\phi( a b ) &amp; = ab \pmod{n}</mrow>
           <mrow>&amp; = a \pmod{n}\cdot b \pmod{n}</mrow>
           <mrow>&amp; = \phi( a ) \phi(b)</mrow>
         </md>.
-        The kernel of the homomorphism <m>\phi</m> is <m>n {\mathbb Z}</m>.
+        O núcleo do homomorfismo <m>\phi</m> é <m>n {\mathbb Z}</m>.
       </p>
     </example>
 
     <example xml:id="rings-example-continuous-function-homomorph">
       <p>
-        Let <m>C[a, b]</m> be the ring of continuous real-valued functions on an interval <m>[a,b]</m> as in <xref ref="rings-example-functions"/>.
-        For a fixed  <m>\alpha \in [a, b]</m>,
-        we can define a ring homomorphism
-        <m>\phi_{\alpha} : C[a, b] \rightarrow {\mathbb R}</m> by <m>\phi_{\alpha} (f ) = f( \alpha)</m>.
-        This  is a ring homomorphism since
+        Seja <m>C[a, b]</m> o anel das funções contínuas de valores reais em um intervalo <m>[a,b]</m>, como em <xref ref="rings-example-functions"/>.
+        Para um <m>\alpha \in [a, b]</m> fixado,
+        podemos definir um homomorfismo de anéis
+        <m>\phi_{\alpha} : C[a, b] \rightarrow {\mathbb R}</m> por <m>\phi_{\alpha} (f ) = f( \alpha)</m>.
+        Este é um homomorfismo de anéis, pois
         <md>
           <mrow>\phi_{\alpha}( f + g ) = (f + g)( \alpha) = f(\alpha) + g(\alpha) = \phi_{\alpha}( f ) + \phi_{\alpha}(g )</mrow>
           <mrow>\phi_{\alpha}( f g ) = (f  g)( \alpha) = f(\alpha) g(\alpha) = \phi_{\alpha}( f ) \phi_{\alpha}(g )</mrow>
         </md>.
-        Ring homomorphisms of the type <m>\phi_{\alpha}</m> are called
-        <idx><h>Homomorphism</h><h>evaluation</h></idx><term>evaluation homomorphisms</term>.  
+        Homomorfismos de anéis do tipo <m>\phi_{\alpha}</m> são chamados de
+        <idx><h>Homomorfismo</h><h>de avaliação</h></idx><term>homomorfismos de avaliação</term>.
       </p>
     </example>
 
     <p>
-      In the next proposition we will examine some fundamental properties of ring homomorphisms.
-      The proof of the proposition is left as an exercise.
+      Na proposição seguinte examinaremos algumas propriedades fundamentais dos homomorfismos de anéis.
+      A demonstração da proposição é deixada como exercício.
     </p>
 
     <proposition>
       <statement>
         <p>
-          Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
+          Seja <m>\phi : R \rightarrow S</m> um homomorfismo de anéis.
 
           <ol>
             <li>
               <p>
-                If <m>R</m> is a commutative ring,
-                then <m>\phi(R)</m> is a commutative ring.
+                Se <m>R</m> é um anel comutativo,
+                então <m>\phi(R)</m> é um anel comutativo.
               </p>
             </li>
 
@@ -737,16 +737,16 @@
 
             <li>
               <p>
-                Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
-                respectively.
-                If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
+                Sejam <m>1_R</m> e <m>1_S</m> as identidades de <m>R</m> e <m>S</m>,
+                respectivamente.
+                Se <m>\phi</m> é sobrejetiva, então <m>\phi(1_R) = 1_S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>R</m> is a field and <m>\phi(R) \neq \{ 0 \}</m>,
-                then <m>\phi(R)</m> is a field.
+                Se <m>R</m> é um corpo e <m>\phi(R) \neq \{ 0 \}</m>,
+                então <m>\phi(R)</m> é um corpo.
               </p>
             </li>
           </ol>
@@ -756,79 +756,79 @@
         <!-- Last statement changed from 0 to \{ 0 \}.  Suggested by B. Cohen. -->
         <!-- TWJ 2012/10/21 -->
     <p>
-      In group theory we found that normal subgroups play a special role.
-      These subgroups have nice characteristics that make them more interesting to study than arbitrary subgroups.
-      In ring theory the objects corresponding to normal subgroups are a special class of subrings called ideals.
-      An <term>ideal</term><idx><h>Ideal</h><h>definition of</h></idx> in a ring <m>R</m> is a subring <m>I</m> of <m>R</m> such that if <m>a</m> is in <m>I</m> and <m>r</m> is in <m>R</m>,
-      then both <m>ar</m> and <m>ra</m> are in <m>I</m>;
-      that is, <m>rI \subset I</m> and
-      <m>Ir \subset I</m> for all <m>r \in R</m>.
+      Na teoria dos grupos, descobrimos que os subgrupos normais desempenham um papel especial.
+      Esses subgrupos possuem características importantes que os tornam mais interessantes de estudar do que subgrupos arbitrários.
+      Na teoria dos anéis, os objetos correspondentes aos subgrupos normais são uma classe especial de subanéis chamados ideais.
+      Um <term>ideal</term><idx><h>Ideal</h><h>definição de</h></idx> em um anel <m>R</m> é um subanel <m>I</m> de <m>R</m> tal que, se <m>a</m> pertence a <m>I</m> e <m>r</m> pertence a <m>R</m>,
+      então tanto <m>ar</m> quanto <m>ra</m> pertencem a <m>I</m>;
+      isto é, <m>rI \subset I</m> e
+      <m>Ir \subset I</m> para todo <m>r \in R</m>.
     </p>
 
     <example xml:id="rings-example-trivial-ideal">
       <p>
-        Every ring <m>R</m> has at least two ideals,
-        <m>\{ 0 \}</m> and <m>R</m>.
-        These ideals are called the <idx><h>Ideal</h><h>trivial</h></idx><term>trivial ideals</term>.
+        Todo anel <m>R</m> possui pelo menos dois ideais,
+        <m>\{ 0 \}</m> e <m>R</m>.
+        Esses ideais são chamados de <idx><h>Ideal</h><h>trivial</h></idx><term>ideais triviais</term>.
       </p>
     </example>
         <!-- % TWJ, 2010/12/13 -->
         <!-- % Fixed the error <m>1</m> is in <m>I</m>.  Thanks to Stuart McAlpine -->
     <p>
-      Let <m>R</m> be a ring with identity and suppose that <m>I</m> is an ideal in <m>R</m> such that <m>1</m> is in <m>I</m>.
-      Since for any <m>r \in R</m>,
-      <m>r1 = r \in I</m> by the definition of an ideal, <m>I = R</m>.
+      Seja <m>R</m> um anel com identidade e suponha que <m>I</m> seja um ideal de <m>R</m> tal que <m>1</m> pertença a <m>I</m>.
+      Como, para todo <m>r \in R</m>,
+      <m>r1 = r \in I</m> pela definição de ideal, temos <m>I = R</m>.
     </p>
 
     <example xml:id="rings-example-principal-ideal">
       <p>
-        If <m>a</m> is any element in a commutative ring <m>R</m> with identity,
-        then the set
+        Se <m>a</m> é qualquer elemento de um anel comutativo <m>R</m> com identidade,
+        então o conjunto
         <md>
           \langle a \rangle = \{ ar : r \in R \}
         </md>
-        is an ideal in <m>R</m>.
-        Certainly, <m>\langle a \rangle</m> is nonempty since both <m>0 = a0</m> and <m>a = a1</m> are in <m>\langle a \rangle</m>.
-        The sum of two elements in <m>\langle a \rangle</m> is again in
-        <m>\langle a \rangle</m> since <m>ar + ar' = a(r + r')</m>.
-        The inverse of <m>ar</m> is <m>-ar = a (-r) \in \langle a \rangle</m>.
-        Finally, if we multiply an element
-        <m>ar \in \langle a \rangle</m> by an arbitrary element <m>s \in R</m>,
-        we have <m>s(ar) = a(sr)</m>.
-        Therefore, <m>\langle a \rangle</m> satisfies the definition of an ideal.
+        é um ideal em <m>R</m>.
+        Certamente, <m>\langle a \rangle</m> não é vazio, pois tanto <m>0 = a0</m> quanto <m>a = a1</m> pertencem a <m>\langle a \rangle</m>.
+        A soma de dois elementos de <m>\langle a \rangle</m> pertence novamente a
+        <m>\langle a \rangle</m>, pois <m>ar + ar' = a(r + r')</m>.
+        O inverso de <m>ar</m> é <m>-ar = a (-r) \in \langle a \rangle</m>.
+        Finalmente, se multiplicarmos um elemento
+        <m>ar \in \langle a \rangle</m> por um elemento arbitrário <m>s \in R</m>,
+        teremos <m>s(ar) = a(sr)</m>.
+        Portanto, <m>\langle a \rangle</m> satisfaz a definição de ideal.
       </p>
     </example>
 
     <p>
-      If <m>R</m> is a commutative ring with identity,
-      then an ideal of the form <m>\langle a \rangle = \{ ar : r \in R \}</m> is called a
-      <idx><h>Ideal</h><h>principal</h></idx><idx><h>Principal ideal</h></idx><term>principal ideal</term>.
+      Se <m>R</m> é um anel comutativo com identidade,
+      então um ideal da forma <m>\langle a \rangle = \{ ar : r \in R \}</m> é chamado de
+      <idx><h>Ideal</h><h>principal</h></idx><idx><h>Ideal principal</h></idx><term>ideal principal</term>.
     </p>
 
     <theorem xml:id="rings-theorem-z-ideals">
       <statement>
         <p>
-          Every ideal in the ring of integers
-          <m>{\mathbb Z}</m> is a principal ideal.
+          Todo ideal do anel dos inteiros
+          <m>{\mathbb Z}</m> é um ideal principal.
         </p>
       </statement>
 
       <proof>
         <p>
-          The zero ideal <m>\{ 0 \}</m> is a principal ideal since <m>\langle 0 \rangle = \{ 0 \}</m>.
-          If  <m>I</m> is any nonzero ideal in <m>{\mathbb Z}</m>,
-          then  <m>I</m> must contain some positive integer <m>m</m>.
-          There exists a least positive integer <m>n</m> in <m>I</m> by the Principle of Well-Ordering.
-          Now let <m>a</m> be any element in <m>I</m>.
-          Using the division algorithm,
-          we know that there exist integers <m>q</m> and <m>r</m> such that
+          O ideal nulo <m>\{ 0 \}</m> é um ideal principal, pois <m>\langle 0 \rangle = \{ 0 \}</m>.
+          Se <m>I</m> é um ideal não nulo qualquer de <m>{\mathbb Z}</m>,
+          então <m>I</m> deve conter algum inteiro positivo <m>m</m>.
+          Pelo Princípio da Boa Ordenação, existe um menor inteiro positivo <m>n</m> em <m>I</m>.
+          Seja agora <m>a</m> qualquer elemento de <m>I</m>.
+          Usando o algoritmo da divisão,
+          sabemos que existem inteiros <m>q</m> e <m>r</m> tais que
           <md>
             a = nq + r
           </md>
-          where <m>0 \leq r \lt n</m>.
-          This equation tells us that <m>r = a - nq \in I</m>,
-          but <m>r</m> must be <m>0</m> since <m>n</m> is the least positive element in <m>I</m>.
-          Therefore, <m>a = nq</m> and <m>I = \langle n \rangle</m>.
+          onde <m>0 \leq r \lt n</m>.
+          Essa equação nos diz que <m>r = a - nq \in I</m>,
+          mas <m>r</m> deve ser <m>0</m>, pois <m>n</m> é o menor elemento positivo de <m>I</m>.
+          Portanto, <m>a = nq</m> e <m>I = \langle n \rangle</m>.
         </p>
       </proof>
     </theorem>
@@ -836,32 +836,32 @@
         <!-- TWJ 24/4/2013 -->
     <example xml:id="rings-example-integer-ideal">
       <p>
-        The set <m>n {\mathbb Z}</m> is ideal in the ring of integers.
-        If <m>na</m> is in <m>n{\mathbb Z}</m> and <m>b</m> is in <m>{\mathbb Z}</m>,
-        then <m>nab</m> is in <m>n {\mathbb Z}</m> as required.
-        In fact, by <xref ref="rings-theorem-z-ideals"/>, these are the only ideals of <m>{\mathbb Z}</m>.
+        O conjunto <m>n {\mathbb Z}</m> é um ideal no anel dos inteiros.
+        Se <m>na</m> pertence a <m>n{\mathbb Z}</m> e <m>b</m> pertence a <m>{\mathbb Z}</m>,
+        então <m>nab</m> pertence a <m>n {\mathbb Z}</m>, como desejado.
+        De fato, pelo <xref ref="rings-theorem-z-ideals"/>, esses são os únicos ideais de <m>{\mathbb Z}</m>.
       </p>
     </example>
 
     <proposition>
       <statement>
         <p>
-          The kernel of any ring homomorphism
-          <m>\phi : R \rightarrow S</m> is an ideal in <m>R</m>.
+          O núcleo de qualquer homomorfismo de anéis
+          <m>\phi : R \rightarrow S</m> é um ideal em <m>R</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We know from group theory that
-          <m>\ker \phi</m> is an additive subgroup of <m>R</m>.
-          Suppose that <m>r \in R</m> and <m>a \in \ker \phi</m>.
-          Then we must show that <m>ar</m> and <m>ra</m> are in <m>\ker \phi</m>.
-          However,
+          Sabemos, pela teoria dos grupos, que
+          <m>\ker \phi</m> é um subgrupo aditivo de <m>R</m>.
+          Suponha que <m>r \in R</m> e <m>a \in \ker \phi</m>.
+          Então devemos mostrar que <m>ar</m> e <m>ra</m> pertencem a <m>\ker \phi</m>.
+          Entretanto,
           <md>
             \phi(ar) = \phi(a) \phi(r) = 0 \phi(r) = 0
           </md>
-          and
+          e
           <md>
             \phi(ra) = \phi(r) \phi(a) =  \phi(r)0 = 0
           </md>.
@@ -871,25 +871,25 @@
 
     <remark>
       <p>
-        In our definition of an ideal we have required that <m>rI \subset I</m> and
-        <m>Ir \subset I</m> for all <m>r \in R</m>.
-        Such ideals are sometimes referred to as
-        <idx><h>Ideal</h><h>two-sided</h></idx><term>two-sided ideals</term>.
-        We can also consider <term>one-sided ideals</term>;<idx><h>Ideal</h><h>one-sided</h></idx>
-        that is, we may require only that either <m>rI \subset I</m> or
-        <m>Ir \subset I</m> for <m>r \in R</m> hold but not both.
-        Such ideals are called <term>left ideals</term>
-        and <term>right ideals</term>, respectively.
-        Of course, in a commutative ring any ideal must be two-sided.
-        In this text we will concentrate on two-sided ideals.
+        Em nossa definição de ideal, exigimos que <m>rI \subset I</m> e
+        <m>Ir \subset I</m> para todo <m>r \in R</m>.
+        Esses ideais são às vezes chamados de
+        <idx><h>Ideal</h><h>bilateral</h></idx><term>ideais bilaterais</term>.
+        Também podemos considerar <term>ideais unilaterais</term>;<idx><h>Ideal</h><h>unilateral</h></idx>
+        isto é, podemos exigir apenas que valha <m>rI \subset I</m> ou
+        <m>Ir \subset I</m> para <m>r \in R</m>, mas não ambos.
+        Esses ideais são chamados de <term>ideais à esquerda</term>
+        e <term>ideais à direita</term>, respectivamente.
+        Naturalmente, em um anel comutativo todo ideal deve ser bilateral.
+        Neste texto, concentraremos nossa atenção nos ideais bilaterais.
       </p>
     </remark>
 
     <theorem xml:id="rings-theorem-factor-ring">
       <statement>
         <p>
-          Let <m>I</m> be an ideal of <m>R</m>.
-          The factor group <m>R/I</m> is a ring with multiplication defined by
+          Seja <m>I</m> um ideal de <m>R</m>.
+          O grupo quociente <m>R/I</m> é um anel com multiplicação definida por
           <md>
             (r + I)(s + I) = rs + I
           </md>.
@@ -898,89 +898,90 @@
 
       <proof>
         <p>
-          We already know that <m>R/I</m> is an abelian group under addition.
-          Let <m>r+I</m> and <m>s +I</m> be in <m>R/I</m>.
-          We must show that the product
-          <m>(r + I)(s + I) = rs + I</m> is independent of the choice of coset;
-          that is, if <m>r' \in r+I</m> and <m>s' \in s+I</m>,
-          then <m>r's'</m> must be in <m>rs+I</m>.
-          Since <m>r' \in r+I</m>,
-          there exists an element <m>a</m>  in <m>I</m> such that <m>r' = r + a</m>.
-          Similarly, there exists a <m>b \in I</m> such that <m>s' = s + b</m>.
-          Notice that
+          Já sabemos que <m>R/I</m> é um grupo abeliano sob a adição.
+          Sejam <m>r+I</m> e <m>s +I</m> elementos de <m>R/I</m>.
+          Devemos mostrar que o produto
+          <m>(r + I)(s + I) = rs + I</m> é independente da escolha da classe lateral;
+          isto é, se <m>r' \in r+I</m> e <m>s' \in s+I</m>,
+          então <m>r's'</m> deve pertencer a <m>rs+I</m>.
+          Como <m>r' \in r+I</m>,
+          existe um elemento <m>a</m> em <m>I</m> tal que <m>r' = r + a</m>.
+          Analogamente, existe um <m>b \in I</m> tal que <m>s' = s + b</m>.
+          Observe que
           <md>
             r' s' = (r+a)(s+b) = rs + as + rb + ab
           </md>
-          and <m>as + rb + ab \in I</m> since <m>I</m> is an ideal;
-          consequently, <m>r' s' \in rs + I</m>.
-          We will leave as an exercise the verification of the  associative law for multiplication and the distributive laws.
+          e <m>as + rb + ab \in I</m>, pois <m>I</m> é um ideal;
+          consequentemente, <m>r' s' \in rs + I</m>.
+          Deixaremos como exercício a verificação da lei associativa da multiplicação e das leis distributivas.
         </p>
       </proof>
     </theorem>
 
     <p>
-      The ring <m>R/I</m> in <xref ref="rings-theorem-factor-ring"/> is called the <term>factor</term><idx><h>Ring</h><h>factor</h></idx>
-      or <idx><h>Ring</h><h>quotient</h></idx><term>quotient ring</term>.
-      Just as with group homomorphisms and normal subgroups,
-      there is a relationship between ring homomorphisms and ideals.
+      O anel <m>R/I</m> em <xref ref="rings-theorem-factor-ring"/> é chamado de
+      <term>anel fator</term><idx><h>Anel</h><h>fator</h></idx>
+      ou <idx><h>Anel</h><h>quociente</h></idx><term>anel quociente</term>.
+      Assim como ocorre com homomorfismos de grupos e subgrupos normais,
+      há uma relação entre homomorfismos de anéis e ideais.
     </p>
 
     <theorem>
       <statement>
         <p>
-          Let <m>I</m> be an ideal of <m>R</m>.
-          The map <m>\phi : R \rightarrow R/I</m> defined by
-          <m>\phi( r ) = r + I</m> is a ring homomorphism of <m>R</m> onto <m>R/I</m> with kernel <m>I</m>.
+          Seja <m>I</m> um ideal de <m>R</m>.
+          A aplicação <m>\phi : R \rightarrow R/I</m> definida por
+          <m>\phi( r ) = r + I</m> é um homomorfismo de anéis de <m>R</m> sobre <m>R/I</m>, com núcleo <m>I</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Certainly <m>\phi : R \rightarrow R/I</m> is a surjective abelian group homomorphism.
-          It remains to show that <m>\phi</m> works correctly under ring multiplication.
-          Let <m>r</m> and <m>s</m> be in <m>R</m>.
-          Then
+          Certamente, <m>\phi : R \rightarrow R/I</m> é um homomorfismo sobrejetivo de grupos abelianos.
+          Resta mostrar que <m>\phi</m> funciona corretamente sob a multiplicação do anel.
+          Sejam <m>r</m> e <m>s</m> elementos de <m>R</m>.
+          Então
           <md>
             \phi(r) \phi(s) = (r + I)(s+I) = rs + I = \phi(rs)
           </md>,
-          which completes the proof of the theorem.
+          o que conclui a demonstração do teorema.
         </p>
       </proof>
     </theorem>
 
     <p>
-      The map <m>\phi : R \rightarrow R/I</m> is often called the
-      <term>natural</term><idx><h>Homomorphism</h><h>natural</h></idx> or
-      <idx><h>Homomorphism</h><h>canonical</h></idx><term>canonical homomorphism</term>.
-      In ring theory we have isomorphism theorems relating ideals and ring homomorphisms similar to the isomorphism theorems for groups that relate normal subgroups and homomorphisms in <xref ref="homomorph"/>.
-      We will prove only the First Isomorphism Theorem for rings in this chapter and leave the proofs of the other two theorems as exercises.
-      All of the proofs are similar to the proofs of the isomorphism theorems for groups.
+      A aplicação <m>\phi : R \rightarrow R/I</m> é frequentemente chamada de
+      <term>homomorfismo natural</term><idx><h>Homomorfismo</h><h>natural</h></idx> ou
+      <idx><h>Homomorfismo</h><h>canônico</h></idx><term>homomorfismo canônico</term>.
+      Na teoria dos anéis, temos teoremas de isomorfismo que relacionam ideais e homomorfismos de anéis, semelhantes aos teoremas de isomorfismo para grupos que relacionam subgrupos normais e homomorfismos em <xref ref="homomorph"/>.
+      Neste capítulo, provaremos apenas o Primeiro Teorema de Isomorfismo para anéis e deixaremos as demonstrações dos outros dois teoremas como exercícios.
+      Todas as demonstrações são semelhantes às demonstrações dos teoremas de isomorfismo para grupos.
     </p>
 
     <theorem>
-      <title>First Isomorphism Theorem</title>
+      <title>Primeiro Teorema de Isomorfismo</title>
       <idx>
-      <h>First Isomorphism Theorem</h>
-      <h>for rings</h>
+      <h>Primeiro Teorema de Isomorfismo</h>
+      <h>para anéis</h>
       </idx>
       <statement>
         <p>
-          Let <m>\psi : R \rightarrow S</m> be a ring homomorphism.
-          Then <m>\ker \psi</m> is an ideal of <m>R</m>.
-          If <m>\phi : R \rightarrow R/\ker \psi</m> is the canonical homomorphism,
-          then there exists a unique isomorphism
-          <m>\eta: R/\ker \psi \rightarrow \psi(R)</m> such that <m>\psi = \eta \phi</m>.
+          Seja <m>\psi : R \rightarrow S</m> um homomorfismo de anéis.
+          Então <m>\ker \psi</m> é um ideal de <m>R</m>.
+          Se <m>\phi : R \rightarrow R/\ker \psi</m> é o homomorfismo canônico,
+          então existe um único isomorfismo
+          <m>\eta: R/\ker \psi \rightarrow \psi(R)</m> tal que <m>\psi = \eta \phi</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>K = \ker \psi</m>.
-          By the First Isomorphism Theorem for groups,
-          there exists a well-defined group homomorphism <m>\eta: R/K \rightarrow \psi(R)</m> defined by
-          <m>\eta(r + K) = \psi(r)</m> for the additive abelian groups <m>R</m> and <m>R/K</m>.
-          To show that this is a ring homomorphism,
-          we need only show that <m>\eta( (r + K)(s + K) ) = \eta(r + K) \eta( s + K)</m>; but
+          Seja <m>K = \ker \psi</m>.
+          Pelo Primeiro Teorema de Isomorfismo para grupos,
+          existe um homomorfismo de grupos bem definido <m>\eta: R/K \rightarrow \psi(R)</m> definido por
+          <m>\eta(r + K) = \psi(r)</m> para os grupos abelianos aditivos <m>R</m> e <m>R/K</m>.
+          Para mostrar que este é um homomorfismo de anéis,
+          basta mostrar que <m>\eta( (r + K)(s + K) ) = \eta(r + K) \eta( s + K)</m>; mas
           <md>
             <mrow>\eta( (r + K)( s +K )) &amp; = \eta(r s +K )</mrow>
             <mrow>&amp; = \psi(r s)</mrow>
@@ -993,15 +994,15 @@
         <!-- Map corrected to be <m>\phi</m> in the proof.  Suggested by K. Halasz. -->
         <!-- TWJ 2/6/2013 -->
     <theorem>
-      <title>Second Isomorphism Theorem</title>
+      <title>Segundo Teorema de Isomorfismo</title>
       <idx>
-      <h>Second Isomorphism Theorem</h>
-      <h>for rings</h>
+      <h>Segundo Teorema de Isomorfismo</h>
+      <h>para anéis</h>
       </idx>
       <statement>
         <p>
-          Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal of <m>R</m>.
-          Then <m>I \cap J</m> is an ideal of <m>I</m> and
+          Seja <m>I</m> um subanel de um anel <m>R</m> e <m>J</m> um ideal de <m>R</m>.
+          Então <m>I \cap J</m> é um ideal de <m>I</m> e
           <md>
             I / I \cap J \cong (I+ J) /J
           </md>.
@@ -1010,15 +1011,15 @@
     </theorem>
 
     <theorem>
-      <title>Third Isomorphism Theorem</title>
+      <title>Terceiro Teorema de Isomorfismo</title>
       <idx>
-      <h>Third Isomorphism Theorem</h>
-      <h>for rings</h>
+      <h>Terceiro Teorema de Isomorfismo</h>
+      <h>para anéis</h>
       </idx>
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m> where <m>J \subset I</m>.
-          Then
+          Seja <m>R</m> um anel e sejam <m>I</m> e <m>J</m> ideais de <m>R</m>, onde <m>J \subset I</m>.
+          Então
           <md>
             R/I \cong \frac{R/J}{I/J}
           </md>.
@@ -1027,73 +1028,73 @@
     </theorem>
 
     <theorem xml:id="rings-theorem-correspondence">
-      <title>Correspondence Theorem</title>
+      <title>Teorema da Correspondência</title>
       <idx>
-      <h>Correspondence Theorem</h>
-      <h>for rings</h>
+      <h>Teorema da Correspondência</h>
+      <h>para anéis</h>
       </idx>
       <statement>
         <p>
-          Let <m>I</m> be an ideal of a ring <m>R</m>.
-          Then <m>S \mapsto S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
-          Furthermore,
-          the ideals of <m>R</m> containing <m>I</m> correspond to ideals of <m>R/I</m>.
+          Seja <m>I</m> um ideal de um anel <m>R</m>.
+          Então <m>S \mapsto S/I</m> é uma correspondência biunívoca entre o conjunto dos subanéis <m>S</m> que contêm <m>I</m> e o conjunto dos subanéis de <m>R/I</m>.
+          Além disso,
+          os ideais de <m>R</m> que contêm <m>I</m> correspondem aos ideais de <m>R/I</m>.
         </p>
       </statement>
     </theorem>
   </section>
 
   <section xml:id="rings-section-maximal-prime-ideals">
-    <title>Maximal and Prime Ideals</title>
+    <title>Ideais maximais e primos</title>
     <introduction>
       <p>
-        In this particular section we are especially interested in certain ideals of commutative rings.
-        These ideals give us special types of factor rings.
-        More specifically,
-        we would like to characterize those ideals <m>I</m> of a commutative ring <m>R</m> such that <m>R/I</m> is an integral domain or a field.
+        Nesta seção, estamos especialmente interessados em certos ideais de anéis comutativos.
+        Esses ideais nos fornecem tipos especiais de anéis quocientes.
+        Mais especificamente,
+        gostaríamos de caracterizar os ideais <m>I</m> de um anel comutativo <m>R</m> tais que <m>R/I</m> seja um domínio de integridade ou um corpo.
       </p>
 
       <p>
-        A proper ideal <m>M</m> of a ring <m>R</m> is a
-        <term>maximal ideal</term><idx><h>Ideal</h><h>maximal</h></idx><idx><h>Maximal ideal</h></idx>
-        of <m>R</m> if the ideal <m>M</m> is not a proper subset of any ideal of <m>R</m> except <m>R</m> itself.
-        That is, <m>M</m> is a maximal ideal if for any ideal <m>I</m> properly containing <m>M</m>,
+      Um ideal próprio <m>M</m> de um anel <m>R</m> é um
+        <term>ideal maximal</term><idx><h>Ideal</h><h>maximal</h></idx><idx><h>Ideal maximal</h></idx>
+        de <m>R</m> se o ideal <m>M</m> não é um subconjunto próprio de nenhum ideal de <m>R</m>, exceto do próprio <m>R</m>.
+        Isto é, <m>M</m> é um ideal maximal se, para qualquer ideal <m>I</m> que contenha propriamente <m>M</m>,
         <m>I = R</m>.
-        The following theorem completely characterizes maximal ideals for commutative rings with identity in terms of their corresponding factor rings.
+        O teorema a seguir caracteriza completamente os ideais maximais de anéis comutativos com identidade em termos de seus anéis quocientes correspondentes.
       </p>
 
       <theorem xml:id="rings-theorem-maximal-ideal-field">
         <statement>
           <p>
-            Let <m>R</m> be a commutative ring with identity and <m>M</m> an ideal in <m>R</m>.
-            Then <m>M</m> is a maximal ideal of <m>R</m> if and only if <m>R/M</m> is a field.
+            Seja <m>R</m> um anel comutativo com identidade e <m>M</m> um ideal em <m>R</m>.
+            Então <m>M</m> é um ideal maximal de <m>R</m> se, e somente se, <m>R/M</m> é um corpo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>M</m> be a maximal ideal in <m>R</m>.
-            If <m>R</m> is a commutative ring,
-            then <m>R/M</m> must also be a commutative ring.
-            Clearly, <m>1 + M</m> acts as an identity for <m>R/M</m>.
-            We must also show that every nonzero element in <m>R/M</m> has an inverse.
-            If <m>a + M</m> is a nonzero element in <m>R/M</m>, then <m>a \notin M</m>.
-            Define <m>I</m> to be the set <m>\{ ra + m : r \in R \text{ and } m \in M \}</m>.
-            We will show that <m>I</m> is an ideal in <m>R</m>.
-            The set <m>I</m> is nonempty since <m>0a+0=0</m> is in <m>I</m>.
-            If <m>r_1 a + m_1</m> and <m>r_2 a + m_2</m> are two elements in <m>I</m>, then
+            Seja <m>M</m> um ideal maximal em <m>R</m>.
+            Se <m>R</m> é um anel comutativo,
+            então <m>R/M</m> também deve ser um anel comutativo.
+            Claramente, <m>1 + M</m> funciona como identidade para <m>R/M</m>.
+            Devemos também mostrar que todo elemento não nulo de <m>R/M</m> possui um inverso.
+            Se <m>a + M</m> é um elemento não nulo de <m>R/M</m>, então <m>a \notin M</m>.
+            Defina <m>I</m> como o conjunto <m>\{ ra + m : r \in R \text{ e } m \in M \}</m>.
+            Mostraremos que <m>I</m> é um ideal em <m>R</m>.
+            O conjunto <m>I</m> não é vazio, pois <m>0a+0=0</m> pertence a <m>I</m>.
+            Se <m>r_1 a + m_1</m> e <m>r_2 a + m_2</m> são dois elementos de <m>I</m>, então
             <md>
               (r_1 a + m_1) - ( r_2 a + m_2) = (r_1 - r_2)a + (m_1 - m_2)
             </md>
-            is in <m>I</m>.
-            Also, for any <m>r \in R</m> it is true that <m>rI \subset I</m>;
-            hence, <m>I</m> is closed under multiplication and satisfies the necessary conditions to be an ideal.
-            Therefore, by <xref ref="rings-prop-subring"/> and the definition of an ideal,
-            <m>I</m> is an ideal properly containing <m>M</m>.
-            Since <m>M</m> is a maximal ideal, <m>I=R</m>;
-            consequently,
-            by the definition of <m>I</m> there must be an <m>m</m> in <m>M</m> and an element <m>b</m> in <m>R</m> such that <m>1=ab+m</m>.
-            Therefore,
+            pertence a <m>I</m>.
+            Além disso, para todo <m>r \in R</m>, vale <m>rI \subset I</m>;
+            logo, <m>I</m> é fechado sob a multiplicação e satisfaz as condições necessárias para ser um ideal.
+            Portanto, por <xref ref="rings-prop-subring"/> e pela definição de ideal,
+            <m>I</m> é um ideal que contém propriamente <m>M</m>.
+            Como <m>M</m> é um ideal maximal, <m>I=R</m>;
+            consequentemente,
+            pela definição de <m>I</m>, deve existir um <m>m</m> em <m>M</m> e um elemento <m>b</m> em <m>R</m> tais que <m>1=ab+m</m>.
+            Portanto,
             <md>
               1 + M = ab + M = ba + M = (a+M)(b+M)
             </md>.
@@ -1101,36 +1102,36 @@
             <!-- Label repaired.  Suggested by R. Beezer. -->
             <!-- TWJ - 12/19/2011 -->
           <p>
-            Conversely, suppose that <m>M</m> is an ideal and <m>R/M</m> is a field.
-            Since <m>R/M</m> is a field, it must contain at least two elements:
-            <m>0 + M = M</m> and <m>1 + M</m>.
-            Hence, <m>M</m> is a proper ideal of <m>R</m>.
-            Let <m>I</m> be any ideal properly containing <m>M</m>.
-            We need to show that <m>I = R</m>.
-            Choose <m>a</m> in <m>I</m> but not in <m>M</m>.
-            Since <m>a+ M</m> is a nonzero element in a field,
-            there exists an element <m>b +M</m> in <m>R/M</m> such that <m>(a+M)(b+M) = ab + M = 1+M</m>.
-            Consequently, there exists an element <m>m \in M</m> such that
-            <m>ab + m = 1</m> and <m>1</m> is in <m>I</m>.
-            Therefore, <m>r1 =r \in I</m> for all <m>r \in R</m>.
-            Consequently, <m>I = R</m>.
+            Reciprocamente, suponha que <m>M</m> seja um ideal e <m>R/M</m> seja um corpo.
+            Como <m>R/M</m> é um corpo, ele deve conter pelo menos dois elementos:
+            <m>0 + M = M</m> e <m>1 + M</m>.
+            Portanto, <m>M</m> é um ideal próprio de <m>R</m>.
+            Seja <m>I</m> qualquer ideal que contenha propriamente <m>M</m>.
+            Devemos mostrar que <m>I = R</m>.
+            Escolha <m>a</m> em <m>I</m>, mas não em <m>M</m>.
+            Como <m>a+ M</m> é um elemento não nulo de um corpo,
+            existe um elemento <m>b +M</m> em <m>R/M</m> tal que <m>(a+M)(b+M) = ab + M = 1+M</m>.
+            Consequentemente, existe um elemento <m>m \in M</m> tal que
+            <m>ab + m = 1</m> e <m>1</m> pertence a <m>I</m>.
+            Portanto, <m>r1 =r \in I</m> para todo <m>r \in R</m>.
+            Consequentemente, <m>I = R</m>.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="rings-example-prime-ideal">
         <p>
-          Let <m>p{\mathbb Z}</m> be an ideal in
-          <m>{\mathbb Z}</m>, where <m>p</m> is prime.
-          Then <m>p{\mathbb Z}</m> is a maximal ideal since <m>{\mathbb Z}/ p {\mathbb Z} \cong {\mathbb Z}_p</m> is a field.
+          Seja <m>p{\mathbb Z}</m> um ideal em
+          <m>{\mathbb Z}</m>, onde <m>p</m> é primo.
+          Então <m>p{\mathbb Z}</m> é um ideal maximal, pois <m>{\mathbb Z}/ p {\mathbb Z} \cong {\mathbb Z}_p</m> é um corpo.
         </p>
       </example>
 
       <p>
-        A proper ideal <m>P</m> in a commutative ring <m>R</m> is called a <term>prime ideal</term><idx><h>Ideal</h><h>prime</h></idx><idx><h>Prime ideal</h></idx>
-        if whenever <m>ab \in P</m>, then either <m>a \in P</m> or <m>b \in P</m>.<fn>
-        It is possible to define prime ideals in a noncommutative ring.
-        See [1] or [3].
+        Um ideal próprio <m>P</m> em um anel comutativo <m>R</m> é chamado de <term>ideal primo</term><idx><h>Ideal</h><h>primo</h></idx><idx><h>Ideal primo</h></idx>
+        se, sempre que <m>ab \in P</m>, então <m>a \in P</m> ou <m>b \in P</m>.<fn>
+        É possível definir ideais primos em um anel não comutativo.
+        Veja [1] ou [3].
         </fn></p>
             <!-- Required P to be a proper ideal.  Suggested by D. Keeler. -->
             <!--  TWJ 19/3/2013 -->
@@ -1138,41 +1139,41 @@
             <!-- TWJ 1/10/2014 -->
       <example xml:id="rings-example-z12-ideal">
         <p>
-          It is easy to check that the set
-          <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> is an ideal in <m>{\mathbb Z}_{12}</m>.
-          This ideal is prime.
-          In fact, it is a maximal ideal.
+          É fácil verificar que o conjunto
+          <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> é um ideal em <m>{\mathbb Z}_{12}</m>.
+          Esse ideal é primo.
+          De fato, é um ideal maximal.
         </p>
       </example>
 
       <proposition>
         <statement>
           <p>
-            Let <m>R</m> be a commutative ring with identity <m>1</m>,
-            where <m>1 \neq 0</m>.
-            Then <m>P</m> is a prime ideal in <m>R</m> if and only if <m>R/P</m> is an integral domain.
+            Seja <m>R</m> um anel comutativo com identidade <m>1</m>,
+            onde <m>1 \neq 0</m>.
+            Então <m>P</m> é um ideal primo em <m>R</m> se, e somente se, <m>R/P</m> é um domínio de integridade.
           </p>
         </statement>
 
         <proof>
           <p>
-            First let us assume that <m>P</m> is an ideal in <m>R</m> and <m>R/P</m> is an integral domain.
-            Suppose that <m>ab \in P</m>.
-            If <m>a + P</m> and <m>b + P</m> are two elements of <m>R/P</m> such that <m>(a + P)(b + P) = 0 + P = P</m>,
-            then either <m>a + P = P</m> or <m>b + P = P</m>.
-            This means that either <m>a</m> is in <m>P</m> or <m>b</m> is in <m>P</m>,
-            which shows that <m>P</m> must be prime.
+            Primeiro, suponhamos que <m>P</m> seja um ideal em <m>R</m> e que <m>R/P</m> seja um domínio de integridade.
+            Suponha que <m>ab \in P</m>.
+            Se <m>a + P</m> e <m>b + P</m> são dois elementos de <m>R/P</m> tais que <m>(a + P)(b + P) = 0 + P = P</m>,
+            então <m>a + P = P</m> ou <m>b + P = P</m>.
+            Isso significa que <m>a</m> pertence a <m>P</m> ou <m>b</m> pertence a <m>P</m>,
+            o que mostra que <m>P</m> deve ser primo.
           </p>
 
           <p>
-            Conversely, suppose that <m>P</m> is prime and
+            Reciprocamente, suponha que <m>P</m> seja primo e
             <md>
               (a + P)(b + P) = ab + P = 0 + P = P
             </md>.
-            Then <m>ab \in P</m>.
-            If <m>a \notin P</m>,
-            then <m>b</m> must be in <m>P</m> by the definition of a prime ideal;
-            hence, <m>b + P = 0 + P</m> and <m>R/P</m> is an integral domain.
+            Então <m>ab \in P</m>.
+            Se <m>a \notin P</m>,
+            então <m>b</m> deve pertencer a <m>P</m> pela definição de ideal primo;
+            portanto, <m>b + P = 0 + P</m> e <m>R/P</m> é um domínio de integridade.
           </p>
         </proof>
       </proposition>
@@ -1180,25 +1181,25 @@
             <!--  TWJ 19/3/2013 -->
       <example xml:id="rings-example-nz-ideal">
         <p>
-          Every ideal in <m>{\mathbb Z}</m> is of the form <m>n {\mathbb Z}</m>.
-          The factor ring <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> is an integral domain only when <m>n</m> is prime.
-          It is actually a field.
-          Hence, the nonzero prime ideals in <m>{\mathbb Z}</m> are the ideals
-          <m>p{\mathbb Z}</m>, where <m>p</m> is prime.
-          This example really justifies the use of the word <q>prime</q>
-          in our definition of prime ideals.
+          Todo ideal em <m>{\mathbb Z}</m> é da forma <m>n {\mathbb Z}</m>.
+          O anel fator <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> é um domínio de integridade somente quando <m>n</m> é primo.
+          Na verdade, ele é um corpo.
+          Portanto, os ideais primos não nulos em <m>{\mathbb Z}</m> são os ideais
+          <m>p{\mathbb Z}</m>, onde <m>p</m> é primo.
+          Este exemplo justifica plenamente o uso da palavra <q>primo</q>
+          em nossa definição de ideais primos.
         </p>
       </example>
 
       <p>
-        Since every field is an integral domain,
-        we have the following corollary.
+        Como todo corpo é um domínio de integridade,
+        temos o seguinte corolário.
       </p>
 
       <corollary xml:id="rings-corollary-maximal-ideal">
         <statement>
           <p>
-            Every maximal ideal in a commutative ring with identity is also a prime ideal.
+            Todo ideal maximal em um anel comutativo com identidade também é um ideal primo.
           </p>
         </statement>
       </corollary>
@@ -1207,143 +1208,143 @@
         <!-- Suggested by K. Halasz. -->
         <!-- TWJ 2/5/2013 -->
     <subsection xml:id="rings-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
         Amalie Emmy Noether,<idx><h>Noether, A. Emmy</h></idx>
-        one of the outstanding mathematicians of the twentieth century,
-        was born in Erlangen, Germany in 1882.
-        She was the daughter of Max Noether<idx><h>Noether, Max</h></idx>
-        (1844<ndash/>1921), a distinguished mathematician at the University of Erlangen.
-        Together with Paul Gordon (1837<ndash/>1912), Emmy Noether's father strongly influenced her early education.
-        She entered the University of Erlangen at the age of 18.
-        Although women had been admitted to universities in England, France,
-        and Italy for decades,
-        there was great resistance to their presence at universities in Germany.
-        Noether was one of only two women among the university's 986 students.
-        After completing her doctorate under Gordon in 1907,
-        she continued to do research at Erlangen,
-        occasionally lecturing when her father was ill.
+        uma das matemáticas mais importantes do século XX,
+        nasceu em Erlangen, Alemanha, em 1882.
+        Era filha de Max Noether<idx><h>Noether, Max</h></idx>
+        (1844<ndash/>1921), um matemático notável da Universidade de Erlangen.
+        Juntamente com Paul Gordon (1837<ndash/>1912), o pai de Emmy Noether exerceu forte influência sobre sua educação inicial.
+        Ela ingressou na Universidade de Erlangen aos 18 anos.
+        Embora as mulheres fossem admitidas havia décadas nas universidades da Inglaterra, França
+        e Itália,
+        havia grande resistência à sua presença nas universidades da Alemanha.
+        Noether era uma das apenas duas mulheres entre os 986 estudantes da universidade.
+        Depois de concluir seu doutorado sob a orientação de Gordon, em 1907,
+        continuou a fazer pesquisa em Erlangen,
+        lecionando ocasionalmente quando seu pai estava doente.
       </p>
 
       <p>
-        Noether went to Göttingen to study in 1916.
+        Noether foi estudar em Göttingen em 1916.
         David Hilbert<idx><h>Hilbert, David</h></idx>
-        and Felix Klein<idx><h>Klein, Felix</h></idx>
-        tried unsuccessfully to secure her an appointment at Göttingen.
-        Some of the faculty objected to women lecturers, saying,
-        <q>What will our soldiers think when they return to the university and are expected to learn at the feet of a woman?</q> Hilbert,
-        annoyed at the question, responded,
-        <q>Meine Herren, I do not see that the sex of a candidate is an argument against her admission as a Privatdozent.
-        After all, the Senate is not a bathhouse.</q>
-        At the end of World War I, attitudes changed and conditions greatly improved for women.
-        After Noether passed her habilitation examination in 1919,
-        she was given a title and was paid a small sum for her lectures.
+        e Felix Klein<idx><h>Klein, Felix</h></idx>
+        tentaram, sem sucesso, conseguir para ela uma nomeação em Göttingen.
+        Alguns membros do corpo docente se opunham a mulheres lecionando e diziam:
+        <q>O que nossos soldados pensarão quando retornarem à universidade e se esperar que aprendam aos pés de uma mulher?</q> Hilbert,
+        incomodado com a pergunta, respondeu:
+        <q>Meus senhores, não vejo que o sexo de uma candidata seja um argumento contra sua admissão como Privatdozent.
+        Afinal, o Senado não é uma casa de banhos.</q>
+        Ao final da Primeira Guerra Mundial, as atitudes mudaram e as condições para as mulheres melhoraram bastante.
+        Depois que Noether foi aprovada em seu exame de habilitação, em 1919,
+        recebeu um título e uma pequena remuneração por suas aulas.
       </p>
 
       <p>
-        In 1922, Noether became a Privatdozent at Göttingen.
-        Over the next 11 years she used axiomatic methods to develop an abstract theory of rings and ideals.
-        Though she was not good at lecturing, Noether was an inspiring teacher.
-        One of her many students was B. L. van der Waerden,
-        author of the first text treating abstract algebra from a modern point of view.
-        Some of the other mathematicians Noether influenced or closely worked with were Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin,
-        von Neumann,
-        and Weyl.
-        One of the high points of her career was an invitation to address the International Congress of Mathematicians in Zurich in 1932.
-        In spite of all the recognition she received from her colleagues, Noether's abilities were never recognized as they should have been during her lifetime.
-        She was never promoted to full professor by the Prussian academic bureaucracy.
+        Em 1922, Noether tornou-se Privatdozent em Göttingen.
+        Nos 11 anos seguintes, utilizou métodos axiomáticos para desenvolver uma teoria abstrata dos anéis e ideais.
+        Embora não fosse boa em lecionar, Noether era uma professora inspiradora.
+        Um de seus muitos alunos foi B. L. van der Waerden,
+        autor do primeiro texto que tratou a álgebra abstrata de um ponto de vista moderno.
+        Alguns dos outros matemáticos que Noether influenciou ou com quem trabalhou de perto foram Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin,
+        von Neumann
+        e Weyl.
+        Um dos pontos altos de sua carreira foi o convite para falar no Congresso Internacional de Matemáticos, em Zurique, em 1932.
+        Apesar de todo o reconhecimento que recebeu de seus colegas, as capacidades de Noether nunca foram reconhecidas como deveriam durante sua vida.
+        Ela nunca foi promovida a professora titular pela burocracia acadêmica prussiana.
       </p>
 
       <p>
-        In 1933, Noether, who was Jewish,
-        was banned from participation in all academic activities in Germany.
-        She emigrated to the United States,
-        took a position at Bryn Mawr College,
-        and became a member of the Institute for Advanced Study at Princeton.
-        Noether died suddenly on April 14, 1935.
-        After her death she was eulogized by such notable scientists as Albert Einstein.
+        Em 1933, Noether, que era judia,
+        foi proibida de participar de todas as atividades acadêmicas na Alemanha.
+        Ela emigrou para os Estados Unidos,
+        assumiu um cargo no Bryn Mawr College
+        e tornou-se membro do Institute for Advanced Study, em Princeton.
+        Noether morreu subitamente em 14 de abril de 1935.
+        Depois de sua morte, foi homenageada em discursos fúnebres por cientistas notáveis como Albert Einstein.
       </p>
     </subsection>
   </section>
 
   <section xml:id="rings-section-software-application">
-    <title>An Application to Software Design</title>
+    <title>Uma aplicação ao projeto de software</title>
     <p>
-      The Chinese Remainder Theorem is a result from elementary number theory about the solution of systems of simultaneous congruences.
-      The Chinese mathematician Sun-tsï wrote about the theorem in the first century A.D. This theorem has some interesting consequences in the design of software for parallel processors.
+      O Teorema Chinês do Resto é um resultado da teoria elementar dos números sobre a solução de sistemas de congruências simultâneas.
+      O matemático chinês Sun-tsï escreveu sobre o teorema no primeiro século d.C. Esse teorema tem consequências interessantes no projeto de software para processadores paralelos.
     </p>
 
     <lemma xml:id="rings-lemma-chinese-remainder">
       <statement>
         <p>
-          Let <m>m</m> and <m>n</m> be positive integers such that <m>\gcd( m, n) = 1</m>.
-          Then for <m>a, b \in {\mathbb Z}</m> the system
+          Sejam <m>m</m> e <m>n</m> inteiros positivos tais que <m>\gcd( m, n) = 1</m>.
+          Então, para <m>a, b \in {\mathbb Z}</m>, o sistema
           <md>
             <mrow>x &amp; \equiv  a \pmod{m}</mrow>
             <mrow>x &amp; \equiv  b \pmod{n}</mrow>
           </md>
-          has a solution.
-          If <m>x_1</m> and <m>x_2</m> are two solutions of the system,
-          then  <m>x_1 \equiv x_2 \pmod{mn}</m>.
+          possui uma solução.
+          Se <m>x_1</m> e <m>x_2</m> são duas soluções do sistema,
+          então <m>x_1 \equiv x_2 \pmod{mn}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          The equation <m>x \equiv a \pmod{m}</m> has a solution since <m>a + km</m> satisfies the equation for all <m>k \in {\mathbb Z}</m>.
-          We must show that there exists an integer <m>k_1</m> such that
+          A equação <m>x \equiv a \pmod{m}</m> possui uma solução, pois <m>a + km</m> satisfaz a equação para todo <m>k \in {\mathbb Z}</m>.
+          Devemos mostrar que existe um inteiro <m>k_1</m> tal que
           <md>
             a + k_1 m \equiv b \pmod{n}
           </md>.
-          This is equivalent to showing that
+          Isso equivale a mostrar que
           <md>
             k_1 m \equiv (b-a) \pmod{n}
           </md>
-          has a solution for <m>k_1</m>.
-          Since <m>m</m> and <m>n</m> are relatively prime,
-          there exist integers <m>s</m> and <m>t</m> such that <m>ms + nt = 1</m>.
-          Consequently,
+          possui uma solução para <m>k_1</m>.
+          Como <m>m</m> e <m>n</m> são relativamente primos,
+          existem inteiros <m>s</m> e <m>t</m> tais que <m>ms + nt = 1</m>.
+          Consequentemente,
           <md>
             (b-a) ms = (b-a) -(b-a) nt
           </md>,
-          or
+          ou
           <md>
             [(b-a)s]m \equiv (b-a) \pmod{n}
           </md>.
-          Now let <m>k_1 = (b-a)s</m>.
+          Agora, tome <m>k_1 = (b-a)s</m>.
         </p>
 
         <p>
-          To show that any two solutions are congruent modulo <m>mn</m>,
-          let <m>c_1</m> and <m>c_2</m> be two solutions of  the system.
-          That is,
+          Para mostrar que duas soluções quaisquer são congruentes módulo <m>mn</m>,
+          sejam <m>c_1</m> e <m>c_2</m> duas soluções do sistema.
+          Isto é,
           <md>
             <mrow>c_i &amp; \equiv  a \pmod{m}</mrow>
             <mrow>c_i &amp; \equiv  b \pmod{n}</mrow>
           </md>
-          for <m>i = 1, 2</m>.
-          Then
+          para <m>i = 1, 2</m>.
+          Então
           <md>
             <mrow>c_2 &amp; \equiv  c_1 \pmod{m}</mrow>
             <mrow>c_2 &amp; \equiv  c_1 \pmod{n}</mrow>
           </md>.
-          Therefore, both <m>m</m> and <m>n</m> divide <m>c_1 - c_2</m>.
-          Consequently, <m>c_2 \equiv c_1 \pmod{mn}</m>.
+          Portanto, tanto <m>m</m> quanto <m>n</m> dividem <m>c_1 - c_2</m>.
+          Consequentemente, <m>c_2 \equiv c_1 \pmod{mn}</m>.
         </p>
       </proof>
     </lemma>
 
     <example xml:id="rings-example-solve-system">
       <p>
-        Let us solve the system
+        Vamos resolver o sistema
         <md>
           <mrow>x &amp; \equiv  3 \pmod{4}</mrow>
           <mrow>x &amp; \equiv  4 \pmod{5}</mrow>
         </md>.
-        Using the Euclidean algorithm,
-        we can find integers <m>s</m> and <m>t</m> such that <m>4s + 5t = 1</m>.
-        Two such integers are <m>s = 4</m> and <m>t = -3</m>.
-        Consequently,
+        Usando o algoritmo euclidiano,
+        podemos encontrar inteiros <m>s</m> e <m>t</m> tais que <m>4s + 5t = 1</m>.
+        Dois desses inteiros são <m>s = 4</m> e <m>t = -3</m>.
+        Consequentemente,
         <md>
           x = a + k_1 m = 3 + 4k_1 = 3 + 4[(5 - 4)4] = 19
         </md>.
@@ -1352,168 +1353,168 @@
         <!-- changed the values of s and t to fit the proof of the previous theorem.  Suggested by K. Halasz. -->
         <!-- TWJ 2/6/2013 -->
     <theorem>
-      <title>Chinese Remainder Theorem</title>
+      <title>Teorema Chinês do Resto</title>
       <idx>
-      <h>Chinese Remainder Theorem</h>
-      <h>for integers</h>
+      <h>Teorema Chinês do Resto</h>
+      <h>para inteiros</h>
       </idx>
       <statement>
         <p>
-          Let <m>n_1, n_2, \ldots,
-          n_k</m> be positive integers such that <m>\gcd(n_i, n_j) = 1</m> for <m>i \neq j</m>.
-          Then for any integers <m>a_1, \ldots, a_k</m>, the system
+          Sejam <m>n_1, n_2, \ldots,
+          n_k</m> inteiros positivos tais que <m>\gcd(n_i, n_j) = 1</m> para <m>i \neq j</m>.
+          Então, para quaisquer inteiros <m>a_1, \ldots, a_k</m>, o sistema
           <md>
             <mrow>x &amp; \equiv  a_1 \pmod{n_1}</mrow>
             <mrow>x &amp; \equiv  a_2 \pmod{n_2}</mrow>
             <mrow>&amp;  \aatavdots{\equiv}</mrow>
             <mrow>x &amp; \equiv  a_k \pmod{n_k}</mrow>
           </md>
-          has a solution.
-          Furthermore,
-          any two solutions of the system are congruent modulo <m>n_1 n_2 \cdots n_k</m>.
+          possui uma solução.
+          Além disso,
+          duas soluções quaisquer do sistema são congruentes módulo <m>n_1 n_2 \cdots n_k</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will use mathematical induction on the number of equations in the system.
-          If there are <m>k= 2</m> equations,
-          then the theorem is true by  <xref ref="rings-lemma-chinese-remainder"/>.
-          Now suppose that the result is true for a system of <m>k</m> equations or less and that we wish to find a solution of
+          Usaremos indução matemática sobre o número de equações do sistema.
+          Se houver <m>k= 2</m> equações,
+          então o teorema é verdadeiro por <xref ref="rings-lemma-chinese-remainder"/>.
+          Suponha agora que o resultado seja verdadeiro para um sistema com <m>k</m> equações ou menos e que desejemos encontrar uma solução de
           <md>
             <mrow>x &amp; \equiv  a_1 \pmod{n_1}</mrow>
             <mrow>x &amp; \equiv  a_2 \pmod{n_2}</mrow>
             <mrow>&amp; \aatavdots{\equiv}</mrow>
             <mrow>x &amp; \equiv  a_{k+1} \pmod{n_{k+1}}</mrow>
           </md>.
-          Considering the first <m>k</m> equations,
-          there exists a solution that is unique modulo <m>n_1 \cdots n_k</m>,
-          say <m>a</m>.
-          Since <m>n_1 \cdots n_k</m> and <m>n_{k+1}</m> are relatively prime,
-          the system
+          Considerando as primeiras <m>k</m> equações,
+          existe uma solução que é única módulo <m>n_1 \cdots n_k</m>,
+          digamos, <m>a</m>.
+          Como <m>n_1 \cdots n_k</m> e <m>n_{k+1}</m> são relativamente primos,
+          o sistema
           <md>
             <mrow>x &amp; \equiv  a \pmod{n_1 \cdots n_k }</mrow>
             <mrow>x &amp; \equiv  a_{k+1} \pmod{n_{k+1}}</mrow>
           </md>
-          has a solution that is unique modulo <m>n_1 \ldots n_{k+1}</m> by the lemma.
+          possui uma solução que é única módulo <m>n_1 \ldots n_{k+1}</m>, pelo lema.
         </p>
       </proof>
     </theorem>
 
     <example xml:id="rings-example-system-mod-4-5-9-7">
       <p>
-        Let us solve the system
+        Vamos resolver o sistema
         <md>
           <mrow>x &amp; \equiv  3 \pmod{4}</mrow>
           <mrow>x &amp; \equiv  4 \pmod{5}</mrow>
           <mrow>x &amp; \equiv  1 \pmod{9}</mrow>
           <mrow>x &amp; \equiv  5 \pmod{7}</mrow>
         </md>.
-        From <xref ref="rings-example-solve-system"/> we know that <m>19</m> is a solution of the first two congruences and any other solution of the system is congruent to <m>19 \pmod{20}</m>.
-        Hence, we can reduce the system to a system of three congruences:
+        Pelo <xref ref="rings-example-solve-system"/>, sabemos que <m>19</m> é uma solução das duas primeiras congruências e que qualquer outra solução do sistema é congruente a <m>19 \pmod{20}</m>.
+        Portanto, podemos reduzir o sistema a um sistema de três congruências:
         <md>
           <mrow>x &amp; \equiv  19 \pmod{20}</mrow>
           <mrow>x &amp; \equiv  1 \pmod{9}</mrow>
           <mrow>x &amp; \equiv  5 \pmod{7}</mrow>
         </md>.
-        Solving the next two equations,
-        we can reduce the system to
+        Resolvendo as duas equações seguintes,
+        podemos reduzir o sistema a
         <md>
           <mrow>x &amp; \equiv  19 \pmod{180}</mrow>
           <mrow>x &amp; \equiv  5 \pmod{7}</mrow>
         </md>.
-        Solving this last system,
-        we find that <m>19</m> is a solution for the system that is unique up to modulo <m>1260</m>.
+        Resolvendo este último sistema,
+        descobrimos que <m>19</m> é uma solução do sistema, única módulo <m>1260</m>.
       </p>
     </example>
 
     <p>
-      One interesting application of the Chinese Remainder Theorem in the design of computer software is that the theorem allows us to break up a calculation involving large integers into several less formidable calculations.
-      A computer will handle integer calculations only up to a certain size due to the size of its processor chip,
-      which is usually a 32 or 64-bit processor chip.
-      For example,
-      the largest integer available on a computer with a 64-bit processor chip is
+      Uma aplicação interessante do Teorema Chinês do Resto no projeto de software para computadores é que o teorema nos permite decompor um cálculo envolvendo inteiros grandes em vários cálculos menos difíceis.
+      Um computador manipula cálculos com inteiros somente até certo tamanho, devido ao tamanho de seu chip processador,
+      que normalmente é um chip processador de 32 ou 64 bits.
+      Por exemplo,
+      o maior inteiro disponível em um computador com chip processador de 64 bits é
       <md>
         2^{63} - 1 = 9{,}223{,}372{,}036{,}854{,}775{,}807
       </md>.
-      Larger processors such as 128 or 256-bit have been proposed or are under development.
-      There is even talk of a 512-bit processor chip.
-      The largest integer that such a chip could store with be <m>2^{511} - 1</m>,
-      which would be a 154 digit number.
-      However, we would need to deal with much larger numbers to break sophisticated encryption schemes.
+      Processadores maiores, como os de 128 ou 256 bits, foram propostos ou estão em desenvolvimento.
+      Fala-se até mesmo em um chip processador de 512 bits.
+      O maior inteiro que um chip desse tipo poderia armazenar seria <m>2^{511} - 1</m>,
+      que teria 154 algarismos.
+      No entanto, precisaríamos lidar com números muito maiores para quebrar esquemas sofisticados de criptografia.
     </p>
 
     <p>
-      Special software is required for calculations involving larger integers which cannot be added directly by the machine.
-      By using the Chinese Remainder Theorem we can break down large integer additions and multiplications into calculations that the computer can handle directly.
-      This is especially useful on parallel processing computers which have the ability to run several programs concurrently.
+      É necessário um software especial para cálculos envolvendo inteiros maiores, que não podem ser adicionados diretamente pela máquina.
+      Usando o Teorema Chinês do Resto, podemos decompor adições e multiplicações de inteiros grandes em cálculos que o computador consegue manipular diretamente.
+      Isso é especialmente útil em computadores de processamento paralelo, que têm a capacidade de executar vários programas simultaneamente.
     </p>
 
     <p>
-      Most computers have a single central processing unit (<acro>CPU</acro>) containing one processor chip and can only add two numbers at a time.
-      To add a list of ten numbers,
-      the <acro>CPU</acro> must do nine additions in sequence.
-      However, a parallel processing computer has more than one <acro>CPU</acro>. A computer with 10 <acro>CPU</acro>s, for example,
-      can perform 10 different additions at the same time.
-      If we can take a large integer and break it down into parts,
-      sending each part to a different <acro>CPU</acro>, then by performing several additions or multiplications simultaneously on those parts,
-      we can work with an integer that the computer would not be able to handle as a whole.
+      A maioria dos computadores possui uma única unidade central de processamento (<acro>CPU</acro>), contendo um chip processador, e só pode adicionar dois números de cada vez.
+      Para adicionar uma lista de dez números,
+      a <acro>CPU</acro> deve realizar nove adições em sequência.
+      Entretanto, um computador de processamento paralelo possui mais de uma <acro>CPU</acro>. Um computador com 10 <acro>CPU</acro>s, por exemplo,
+      pode realizar 10 adições diferentes ao mesmo tempo.
+      Se pudermos decompor um inteiro grande em partes,
+      enviando cada parte para uma <acro>CPU</acro> diferente, e então realizar várias adições ou multiplicações simultaneamente nessas partes,
+      poderemos trabalhar com um inteiro que o computador não seria capaz de manipular como um todo.
     </p>
 
     <example xml:id="rings-example-2134x1531">
       <p>
-        Suppose that we wish to multiply <m>2134</m> by <m>1531</m>.
-        We will use the integers <m>95</m>, <m>97</m>,
-        <m>98</m>, and <m>99</m> because they are relatively prime.
-        We can break down each integer into four parts:
+        Suponha que desejemos multiplicar <m>2134</m> por <m>1531</m>.
+        Usaremos os inteiros <m>95</m>, <m>97</m>,
+        <m>98</m> e <m>99</m>, pois são relativamente primos.
+        Podemos decompor cada inteiro em quatro partes:
         <md>
           <mrow>2134 &amp; \equiv  44 \pmod{95}</mrow>
           <mrow>2134 &amp; \equiv  0 \pmod{97}</mrow>
           <mrow>2134 &amp; \equiv  76 \pmod{98}</mrow>
           <mrow>2134 &amp; \equiv  55 \pmod{99}</mrow>
         </md>
-        and
+        e
         <md>
           <mrow>1531 &amp; \equiv  11 \pmod{95}</mrow>
           <mrow>1531 &amp; \equiv  76 \pmod{97}</mrow>
           <mrow>1531 &amp; \equiv  61 \pmod{98}</mrow>
           <mrow>1531 &amp; \equiv  46 \pmod{99}</mrow>
         </md>.
-        Multiplying the corresponding equations, we obtain
+        Multiplicando as equações correspondentes, obtemos
         <md>
           <mrow>2134 \cdot 1531 &amp; \equiv  44 \cdot 11  \equiv  9 \pmod{95}</mrow>
           <mrow>2134 \cdot 1531 &amp; \equiv  0  \cdot 76  \equiv  0 \pmod{97}</mrow>
           <mrow>2134 \cdot 1531 &amp; \equiv  76 \cdot 61  \equiv  30 \pmod{98}</mrow>
           <mrow>2134 \cdot 1531 &amp; \equiv  55 \cdot 46  \equiv 55 \pmod{99}</mrow>
         </md>.
-        Each of these four computations can be sent to a different processor if our computer has several <acro>CPU</acro>s.
-        By the above calculation,
-        we know that <m>2134 \cdot 1531</m> is a solution of the system
+        Cada um desses quatro cálculos pode ser enviado a um processador diferente se nosso computador tiver várias <acro>CPU</acro>s.
+        Pelo cálculo acima,
+        sabemos que <m>2134 \cdot 1531</m> é uma solução do sistema
         <md>
           <mrow>x &amp; \equiv  9 \pmod{95}</mrow>
           <mrow>x &amp; \equiv  0 \pmod{97}</mrow>
           <mrow>x &amp; \equiv  30 \pmod{98}</mrow>
           <mrow>x &amp; \equiv  55 \pmod{99}</mrow>
         </md>.
-        The Chinese Remainder Theorem tells us that solutions are unique up to modulo <m>95 \cdot 97 \cdot 98 \cdot 99 = 89{,}403{,}930</m>.
-        Solving this system of congruences for <m>x</m> tells us that <m>2134 \cdot 1531 = 3{,}267{,}154</m>.
+        O Teorema Chinês do Resto nos diz que as soluções são únicas módulo <m>95 \cdot 97 \cdot 98 \cdot 99 = 89{,}403{,}930</m>.
+        Resolvendo este sistema de congruências para <m>x</m>, obtemos <m>2134 \cdot 1531 = 3{,}267{,}154</m>.
       </p>
 
       <p>
-        The conversion of the computation into the four subcomputations will take some computing time.
-        In addition,
-        solving the system of congruences can also take considerable time.
-        However, if we have many computations to be performed on a particular set of numbers,
-        it makes sense to transform the problem as we have done above and to perform the necessary calculations simultaneously.
+        A conversão do cálculo em quatro subcálculos consumirá algum tempo de processamento.
+        Além disso,
+        resolver o sistema de congruências também pode levar um tempo considerável.
+        Entretanto, se tivermos muitos cálculos a realizar sobre um determinado conjunto de números,
+        faz sentido transformar o problema como fizemos acima e realizar simultaneamente os cálculos necessários.
       </p>
     </example>
 
     <paragraphs component="sage-blurb">
       <title>Sage</title>
       <p>
-        Rings are at the heart of Sage's design,
-        so you will find a wide range of possibilities for computing with rings and fields.
-        Ideals, quotients, and homomorphisms are all available.
+        Os anéis estão no centro do projeto do Sage,
+        portanto, você encontrará uma ampla variedade de possibilidades para computar com anéis e corpos.
+        Ideais, quocientes e homomorfismos também estão disponíveis.
       </p>
     </paragraphs>
   </section>
@@ -1523,7 +1524,7 @@
     <exercise label="rq-rings-groups-rings">
       <statement>
         <p>
-          What is the fundamental difference between groups and rings?
+          Qual é a diferença fundamental entre grupos e anéis?
         </p>
       </statement>
       <response/>
@@ -1532,7 +1533,7 @@
     <exercise label="rq-rings-integral-domain">
       <statement>
         <p>
-          Give two characterizations of an integral domain.
+          Dê duas caracterizações de um domínio de integridade.
         </p>
       </statement>
       <response/>
@@ -1541,7 +1542,7 @@
     <exercise label="rq-rings-fields">
       <statement>
         <p>
-          Provide two examples of fields, one infinite, one finite.
+          Forneça dois exemplos de corpos, um infinito e um finito.
         </p>
       </statement>
       <response/>
@@ -1550,7 +1551,7 @@
     <exercise label="rq-rings-noether">
       <statement>
         <p>
-          Who was Emmy Noether?
+          Quem foi Emmy Noether?
         </p>
       </statement>
       <response/>
@@ -1559,7 +1560,7 @@
     <exercise label="rq-rings-chinese-remainder">
       <statement>
         <p>
-          Speculate on a computer program that might use the Chinese Remainder Theorem to speed up computations with large integers.
+          Especule sobre um programa de computador que poderia usar o Teorema Chinês do Resto para acelerar cálculos com inteiros grandes.
         </p>
       </statement>
       <response/>
@@ -1568,15 +1569,15 @@
   </reading-questions>
     <!-- Exercises with Solutions  -->
     <!-- File: rings.xml  -->
-    <!-- Title: Rings -->
+    <!-- Title: Anéis -->
   <exercises xml:id="rings-exercises" filenamebase="rings">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="rings-exercise-which-are-rings">
       <statement>
         <p>
-          Which of the following sets are rings with respect to the usual operations of addition and multiplication?
-          If the set is a ring, is it also a field?
+          Quais dos conjuntos a seguir são anéis em relação às operações usuais de adição e multiplicação?
+          Se o conjunto for um anel, ele também é um corpo?
 
           <ol>
             <li>
@@ -1617,7 +1618,7 @@
 
             <li>
               <p>
-                <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ and } i^2 = -1 \}</m>
+                <m>{\mathbb Z}[ i ] = \{ a + b i : a, b \in {\mathbb Z} \text{ e } i^2 = -1 \}</m>
               </p>
             </li>
 
@@ -1631,8 +1632,8 @@
       </statement>
       <hint>
         <p>
-          (a) <m>7 {\mathbb Z}</m> is a ring but not a field; (c)
-          <m>{\mathbb Q}(\sqrt{2}\, )</m> is a field; (f) <m>R</m> is not a ring.
+          (a) <m>7 {\mathbb Z}</m> é um anel, mas não um corpo; (c)
+          <m>{\mathbb Q}(\sqrt{2}\, )</m> é um corpo; (f) <m>R</m> não é um anel.
         </p>
       </hint>
     </exercise>
@@ -1640,16 +1641,16 @@
     <exercise number="2" xml:id="rings-exercise-2x2-matrix-ring">
       <statement>
         <p>
-          Let <m>R</m> be the ring of <m>2 \times 2</m> matrices of the form
+          Seja <m>R</m> o anel das matrizes <m>2 \times 2</m> da forma
           <md>
             \begin{pmatrix}
             a &amp; b \\
             0 &amp; 0
             \end{pmatrix}
           </md>,
-          where <m>a, b \in {\mathbb R}</m>.
-          Show that although <m>R</m> is a ring that has no identity,
-          we can find a subring <m>S</m> of <m>R</m> with an identity.
+          onde <m>a, b \in {\mathbb R}</m>.
+          Mostre que, embora <m>R</m> seja um anel que não possui identidade,
+          podemos encontrar um subanel <m>S</m> de <m>R</m> com identidade.
         </p>
       </statement>
     </exercise>
@@ -1657,7 +1658,7 @@
     <exercise number="3" xml:id="rings-exercise-units">
       <statement>
         <p>
-          List or characterize all of the units in each of the following rings.
+          Liste ou caracterize todas as unidades em cada um dos anéis a seguir.
 
           <ol>
             <li>
@@ -1681,14 +1682,14 @@
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}</m>
               </p>
             </li>
 
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z}_2 )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}_2</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}_2</m>
               </p>
             </li>
           </ol>
@@ -1732,8 +1733,8 @@
     <exercise number="4" xml:id="rings-exercise-ideals">
       <statement>
         <p>
-          Find all of the ideals in each of the following rings.
-          Which of these ideals are maximal and which are prime?
+          Encontre todos os ideais em cada um dos anéis a seguir.
+          Quais desses ideais são maximais e quais são primos?
 
           <ol>
             <li>
@@ -1751,14 +1752,14 @@
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb R} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb R}</m>
               </p>
             </li>
 
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}</m>
               </p>
             </li>
 
@@ -1774,7 +1775,7 @@
         <p>
           (a) <m>\{0 \}</m>, <m>\{0, 9 \}</m>,
           <m>\{0, 6, 12 \}</m>, <m>\{0, 3, 6, 9, 12, 15 \}</m>,
-          <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) there are no nontrivial ideals.
+          <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) não há ideais não triviais.
         </p>
       </hint>
     </exercise>
@@ -1782,19 +1783,19 @@
     <exercise number="5" xml:id="rings-exercise-RmodI-multiplication-table">
       <statement>
         <p>
-          For each of the following rings <m>R</m> with ideal <m>I</m>,
-          give an addition table and a multiplication table for <m>R/I</m>.
+          Para cada um dos anéis <m>R</m> com ideal <m>I</m> a seguir,
+          forneça uma tabela de adição e uma tabela de multiplicação para <m>R/I</m>.
 
           <ol>
             <li>
               <p>
-                <m>R = {\mathbb Z}</m> and <m>I = 6 {\mathbb Z}</m>
+                <m>R = {\mathbb Z}</m> e <m>I = 6 {\mathbb Z}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>R = {\mathbb Z}_{12}</m> and <m>I = \{ 0, 3, 6, 9 \}</m>
+                <m>R = {\mathbb Z}_{12}</m> e <m>I = \{ 0, 3, 6, 9 \}</m>
               </p>
             </li>
           </ol>
@@ -1805,7 +1806,7 @@
     <exercise number="6" xml:id="rings-exercise-homo-Z6-Z15">
       <statement>
         <p>
-          Find all homomorphisms <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
+          Encontre todos os homomorfismos <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
         </p>
       </statement>
     </exercise>
@@ -1815,13 +1816,13 @@
     <exercise number="7" xml:id="rings-exercise-R-not-iso-C">
       <statement>
         <p>
-          Prove that <m>{\mathbb R}</m> is not isomorphic to <m>{\mathbb C}</m>.
+          Prove que <m>{\mathbb R}</m> não é isomorfo a <m>{\mathbb C}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> with <m>\phi(i) = a</m>.
+          Suponha que exista um isomorfismo
+          <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> com <m>\phi(i) = a</m>.
         </p>
       </hint>
     </exercise>
@@ -1829,15 +1830,15 @@
     <exercise number="8" xml:id="rings-exercise-Q-root-2-Q-root-3">
       <statement>
         <p>
-          Prove or disprove: The ring
-          <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is isomorphic to the ring <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
+          Prove ou refute: o anel
+          <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> é isomorfo ao anel <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          False.
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> such that <m>\phi(\sqrt{2}\, ) = a</m>.
+          Falso.
+          Suponha que exista um isomorfismo
+          <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> tal que <m>\phi(\sqrt{2}\, ) = a</m>.
         </p>
       </hint>
     </exercise>
@@ -1845,7 +1846,7 @@
     <exercise number="9" xml:id="rings-exercise-characteristic">
       <statement>
         <p>
-          What is the characteristic of the field formed by the set of matrices
+          Qual é a característica do corpo formado pelo conjunto de matrizes
           <md>
             F =
             \left\{
@@ -1867,7 +1868,7 @@
             \end{pmatrix}
             \right\}
           </md>
-          with entries in <m>{\mathbb Z}_2</m>?
+          com entradas em <m>{\mathbb Z}_2</m>?
         </p>
       </statement>
     </exercise>
@@ -1875,7 +1876,7 @@
     <exercise number="10" xml:id="rings-exercise-C-iso-2x2-matrices">
       <statement>
         <p>
-          Define a map <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> by
+          Defina uma aplicação <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> por
           <md>
             \phi( a + bi) =
             \begin{pmatrix}
@@ -1883,8 +1884,8 @@
             -b &amp; a
             \end{pmatrix}
           </md>.
-          Show that <m>\phi</m> is an isomorphism of
-          <m>{\mathbb C}</m> with its image in <m>{\mathbb M}_2 ({\mathbb R})</m>.
+          Mostre que <m>\phi</m> é um isomorfismo de
+          <m>{\mathbb C}</m> sobre sua imagem em <m>{\mathbb M}_2 ({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1894,8 +1895,8 @@
     <exercise number="11" xml:id="rings-exercise-gaussian-integers">
       <statement>
         <p>
-          Prove that the Gaussian integers,
-          <m>{\mathbb Z}[i ]</m>, are an integral domain.
+          Prove que os inteiros gaussianos,
+          <m>{\mathbb Z}[i ]</m>, formam um domínio de integridade.
         </p>
       </statement>
     </exercise>
@@ -1903,7 +1904,7 @@
     <exercise number="12" xml:id="rings-exercise-gaussian">
       <statement>
         <p>
-          Prove that <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> is an integral domain.
+          Prove que <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> é um domínio de integridade.
         </p>
       </statement>
     </exercise>
@@ -1911,7 +1912,7 @@
     <exercise number="13" xml:id="rings-exercise-systems-congruences">
       <statement>
         <p>
-          Solve each of the following systems of congruences.
+          Resolva cada um dos sistemas de congruências a seguir.
 
           <ol cols="2">
             <li>
@@ -1967,9 +1968,9 @@
     <exercise number="14" xml:id="rings-exercise-parallel-computation">
       <statement>
         <p>
-          Use the method of parallel computation outlined in the text to calculate
-          <m>2234 + 4121</m> by dividing the calculation into four separate additions modulo <m>95</m>,
-          <m>97</m>, <m>98</m>, and <m>99</m>.
+          Use o método de computação paralela apresentado no texto para calcular
+          <m>2234 + 4121</m>, dividindo o cálculo em quatro adições separadas módulo <m>95</m>,
+          <m>97</m>, <m>98</m> e <m>99</m>.
         </p>
       </statement>
     </exercise>
@@ -1979,8 +1980,8 @@
     <exercise number="15" xml:id="rings-exercise-parallelcomputation-fails">
       <statement>
         <p>
-          Explain why the method of parallel computation outlined in the text fails for
-          <m>2134 \cdot 1531</m> if we attempt to break the calculation down into two smaller calculations modulo <m>98</m> and <m>99</m>.
+          Explique por que o método de computação paralela apresentado no texto falha para
+          <m>2134 \cdot 1531</m> se tentarmos decompor o cálculo em dois cálculos menores módulo <m>98</m> e <m>99</m>.
         </p>
       </statement>
     </exercise>
@@ -1988,13 +1989,13 @@
     <exercise number="16" xml:id="rings-exercise-field-ideals">
       <statement>
         <p>
-          If <m>R</m> is a field,
-          show that the only two ideals of <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself.
+          Se <m>R</m> é um corpo,
+          mostre que os únicos dois ideais de <m>R</m> são <m>\{ 0 \}</m> e o próprio <m>R</m>.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>I \neq \{ 0 \}</m>, show that <m>1 \in I</m>.
+          Se <m>I \neq \{ 0 \}</m>, mostre que <m>1 \in I</m>.
         </p>
       </hint>
     </exercise>
@@ -2002,8 +2003,8 @@
     <exercise number="17" xml:id="rings-exercise-minus-a">
       <statement>
         <p>
-          Let <m>a</m> be any element in a ring <m>R</m> with identity.
-          Show that <m>(-1)a = -a</m>.
+          Seja <m>a</m> qualquer elemento de um anel <m>R</m> com identidade.
+          Mostre que <m>(-1)a = -a</m>.
         </p>
       </statement>
     </exercise>
@@ -2011,14 +2012,14 @@
     <exercise number="18" xml:id="rings-exercise-ring-homomorphisms">
       <statement>
         <p>
-          Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
-          Prove each of the following statements.
+          Seja <m>\phi : R \rightarrow S</m> um homomorfismo de anéis.
+          Prove cada uma das afirmações a seguir.
 
           <ol>
             <li>
               <p>
-                If <m>R</m> is a commutative ring,
-                then <m>\phi(R)</m> is a commutative ring.
+                Se <m>R</m> é um anel comutativo,
+                então <m>\phi(R)</m> é um anel comutativo.
               </p>
             </li>
 
@@ -2030,16 +2031,16 @@
 
             <li>
               <p>
-                Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
-                respectively.
-                If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
+                Sejam <m>1_R</m> e <m>1_S</m> as identidades de <m>R</m> e <m>S</m>,
+                respectivamente.
+                Se <m>\phi</m> é sobrejetivo, então <m>\phi(1_R) = 1_S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>R</m> is a field and <m>\phi(R) \neq 0</m>,
-                then <m>\phi(R)</m> is a field.
+                Se <m>R</m> é um corpo e <m>\phi(R) \neq 0</m>,
+                então <m>\phi(R)</m> é um corpo.
               </p>
             </li>
           </ol>
@@ -2055,7 +2056,7 @@
     <exercise number="19" xml:id="rings-exercise-associative-distributive">
       <statement>
         <p>
-          Prove that the associative law for multiplication and the distributive laws hold in <m>R/I</m>.
+          Prove que a lei associativa da multiplicação e as leis distributivas valem em <m>R/I</m>.
         </p>
       </statement>
     </exercise>
@@ -2063,8 +2064,8 @@
     <exercise number="20" xml:id="rings-exercise-second-iso">
       <statement>
         <p>
-          Prove the Second Isomorphism Theorem for rings: Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal in <m>R</m>.
-          Then <m>I \cap J</m> is an ideal in <m>I</m> and
+          Prove o Segundo Teorema de Isomorfismo para anéis: seja <m>I</m> um subanel de um anel <m>R</m> e <m>J</m> um ideal em <m>R</m>.
+          Então <m>I \cap J</m> é um ideal em <m>I</m> e
           <md>
             I / I \cap J \cong I + J /J
           </md>.
@@ -2077,9 +2078,9 @@
     <exercise number="21" xml:id="rings-exercise-third-iso">
       <statement>
         <p>
-          Prove the Third Isomorphism Theorem for rings: Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m>,
-          where <m>J \subset I</m>.
-          Then
+          Prove o Terceiro Teorema de Isomorfismo para anéis: seja <m>R</m> um anel e sejam <m>I</m> e <m>J</m> ideais de <m>R</m>,
+          onde <m>J \subset I</m>.
+          Então
           <md>
             R/I \cong \frac{R/J}{I/J}
           </md>.
@@ -2092,10 +2093,10 @@
     <exercise number="22" xml:id="rings-exercise-correspondence">
       <statement>
         <p>
-          Prove the Correspondence Theorem: Let <m>I</m> be an ideal of a ring <m>R</m>.
-          Then <m>S \rightarrow S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
-          Furthermore,
-          the ideals of <m>R</m> correspond to ideals of <m>R/I</m>.
+          Prove o Teorema da Correspondência: seja <m>I</m> um ideal de um anel <m>R</m>.
+          Então <m>S \rightarrow S/I</m> é uma correspondência biunívoca entre o conjunto dos subanéis <m>S</m> que contêm <m>I</m> e o conjunto dos subanéis de <m>R/I</m>.
+          Além disso,
+          os ideais de <m>R</m> correspondem aos ideais de <m>R/I</m>.
         </p>
       </statement>
     </exercise>
@@ -2105,8 +2106,8 @@
     <exercise number="23" xml:id="rings-exercise-subring-conditions">
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
-          Show that <m>S</m> is a subring of <m>R</m> if and only if each of the following conditions is satisfied.
+          Seja <m>R</m> um anel e <m>S</m> um subconjunto de <m>R</m>.
+          Mostre que <m>S</m> é um subanel de <m>R</m> se, e somente se, cada uma das condições a seguir é satisfeita.
 
           <ol>
             <li>
@@ -2117,13 +2118,13 @@
 
             <li>
               <p>
-                <m>rs \in S</m> for all <m>r, s \in S</m>.
+                <m>rs \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>r - s \in S</m> for all <m>r, s \in S</m>.
+                <m>r - s \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
           </ol>
@@ -2134,9 +2135,9 @@
     <exercise number="24" xml:id="rings-exercise-subring-intersection">
       <statement>
         <p>
-          Let <m>R</m> be a ring with a collection of subrings <m>\{ R_{\alpha} \}</m>.
-          Prove that <m>\bigcap R_{\alpha}</m> is a subring of <m>R</m>.
-          Give an example to show that the union of two subrings is not necessarily a subring.
+          Seja <m>R</m> um anel com uma coleção de subanéis <m>\{ R_{\alpha} \}</m>.
+          Prove que <m>\bigcap R_{\alpha}</m> é um subanel de <m>R</m>.
+          Dê um exemplo que mostre que a união de dois subanéis não é necessariamente um subanel.
         </p>
       </statement>
     </exercise>
@@ -2144,10 +2145,10 @@
     <exercise number="25" xml:id="rings-exercise-collection-deals">
       <statement>
         <p>
-          Let <m>\{ I_{\alpha} \}_{\alpha \in A}</m> be a collection of ideals in a ring <m>R</m>.
-          Prove that <m>\bigcap_{\alpha \in A} I_{\alpha}</m> is also an ideal in <m>R</m>.
-          Give an example to show that if <m>I_1</m> and <m>I_2</m> are ideals in <m>R</m>,
-          then <m>I_1 \cup I_2</m> may not be an ideal.
+          Seja <m>\{ I_{\alpha} \}_{\alpha \in A}</m> uma coleção de ideais em um anel <m>R</m>.
+          Prove que <m>\bigcap_{\alpha \in A} I_{\alpha}</m> também é um ideal em <m>R</m>.
+          Dê um exemplo que mostre que, se <m>I_1</m> e <m>I_2</m> são ideais em <m>R</m>,
+          então <m>I_1 \cup I_2</m> pode não ser um ideal.
         </p>
       </statement>
     </exercise>
@@ -2155,16 +2156,16 @@
     <exercise number="26" xml:id="rings-exercise-integral-domain-ideals">
       <statement>
         <p>
-          Let <m>R</m> be an integral domain.
-          Show that if the only ideals in <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself,
-          <m>R</m> must be a field.
+          Seja <m>R</m> um domínio de integridade.
+          Mostre que, se os únicos ideais em <m>R</m> são <m>\{ 0 \}</m> e o próprio <m>R</m>,
+          então <m>R</m> deve ser um corpo.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a \in R</m> with <m>a \neq 0</m>.
-          Then the principal ideal generated by <m>a</m> is <m>R</m>.
-          Thus, there exists a <m>b \in R</m> such that <m>ab =1</m>.
+          Seja <m>a \in R</m> com <m>a \neq 0</m>.
+          Então o ideal principal gerado por <m>a</m> é <m>R</m>.
+          Assim, existe um <m>b \in R</m> tal que <m>ab =1</m>.
         </p>
       </hint>
     </exercise>
@@ -2172,10 +2173,10 @@
     <exercise number="27" xml:id="rings-exercise-nilpotent">
       <statement>
         <p>
-          Let <m>R</m> be a commutative ring.
-          An element <m>a</m> in <m>R</m> is <term>nilpotent</term>
-          if <m>a^n = 0</m> for some positive integer <m>n</m>.
-          Show that the set of all nilpotent elements forms an ideal in <m>R</m>.
+          Seja <m>R</m> um anel comutativo.
+          Um elemento <m>a</m> em <m>R</m> é <term>nilpotente</term>
+          se <m>a^n = 0</m> para algum inteiro positivo <m>n</m>.
+          Mostre que o conjunto de todos os elementos nilpotentes forma um ideal em <m>R</m>.
         </p>
       </statement>
     </exercise>
@@ -2183,14 +2184,14 @@
     <exercise number="28" xml:id="rings-exercise-boolean">
       <statement>
         <p>
-          A ring <m>R</m> is a <term>Boolean ring</term>
-          if for every <m>a \in R</m>, <m>a^2 = a</m>.
-          Show that every Boolean ring is a commutative ring.
+          Um anel <m>R</m> é um <term>anel booleano</term>
+          se, para todo <m>a \in R</m>, <m>a^2 = a</m>.
+          Mostre que todo anel booleano é um anel comutativo.
         </p>
       </statement>
       <hint>
         <p>
-          Compute <m>(a+b)^2</m> and <m>(-ab)^2</m>.
+          Calcule <m>(a+b)^2</m> e <m>(-ab)^2</m>.
         </p>
       </hint>
     </exercise>
@@ -2200,8 +2201,8 @@
     <exercise number="29" xml:id="rings-exercise-a3-commutative">
       <statement>
         <p>
-          Let <m>R</m> be a ring, where <m>a^3 =a</m> for all <m>a \in R</m>.
-          Prove that <m>R</m> must be a commutative ring.
+          Seja <m>R</m> um anel tal que <m>a^3 =a</m> para todo <m>a \in R</m>.
+          Prove que <m>R</m> deve ser um anel comutativo.
         </p>
       </statement>
     </exercise>
@@ -2211,8 +2212,8 @@
     <exercise number="30" xml:id="rings-exercise-1R-1S">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity <m>1_R</m> and <m>S</m> a subring of <m>R</m> with identity <m>1_S</m>.
-          Prove or disprove that <m>1_R = 1_S</m>.
+          Seja <m>R</m> um anel com identidade <m>1_R</m> e <m>S</m> um subanel de <m>R</m> com identidade <m>1_S</m>.
+          Prove ou refute que <m>1_R = 1_S</m>.
         </p>
       </statement>
     </exercise>
@@ -2222,9 +2223,9 @@
     <exercise number="31" xml:id="rings-exercise-R-0">
       <statement>
         <p>
-          If we do not require the identity of a ring to be distinct from 0, we will not have a very interesting mathematical structure.
-          Let <m>R</m> be a ring such that <m>1 = 0</m>.
-          Prove that <m>R = \{ 0 \}</m>.
+          Se não exigirmos que a identidade de um anel seja distinta de 0, não teremos uma estrutura matemática muito interessante.
+          Seja <m>R</m> um anel tal que <m>1 = 0</m>.
+          Prove que <m>R = \{ 0 \}</m>.
         </p>
       </statement>
     </exercise>
@@ -2241,12 +2242,12 @@
     <exercise number="32" xml:id="rings-exercise-center">
       <statement>
         <p>
-          Let <m>R</m> be a ring.
-          Define the <term>center</term> of <m>R</m> to be
+          Seja <m>R</m> um anel.
+          Defina o <term>centro</term> de <m>R</m> como
           <md>
-            Z(R) = \{ a \in R : ar = ra \text{ for all } r \in R \}
+            Z(R) = \{ a \in R : ar = ra \text{ para todo } r \in R \}
           </md>.
-          Prove that <m>Z(R)</m> is a commutative subring of <m>R</m>.
+          Prove que <m>Z(R)</m> é um subanel comutativo de <m>R</m>.
         </p>
       </statement>
     </exercise>
@@ -2254,28 +2255,28 @@
     <exercise number="33" xml:id="rings-exercise-localized-at-p">
       <statement>
         <p>
-          Let <m>p</m> be prime.
-          Prove that
+          Seja <m>p</m> primo.
+          Prove que
           <md>
-            {\mathbb Z}_{(p)} = \{ a / b :  a, b \in {\mathbb Z} \text{ and } \gcd( b,p) =  1 \}
+            {\mathbb Z}_{(p)} = \{ a / b :  a, b \in {\mathbb Z} \text{ e } \gcd( b,p) =  1 \}
           </md>
-          is a ring.
-          The ring <m>{\mathbb Z}_{(p)}</m> is called the
-          <term>ring of integers localized at</term> <m>p</m>.
+          é um anel.
+          O anel <m>{\mathbb Z}_{(p)}</m> é chamado de
+          <term>anel dos inteiros localizado em</term> <m>p</m>.
 
           <notation>
             <usage><m>\mathbb Z_{(p)}</m></usage>
-            <description>ring of integers localized at <m>p</m></description>
+            <description>anel dos inteiros localizado em <m>p</m></description>
           </notation>
 
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a/b, c/d \in {\mathbb Z}_{(p)}</m>.
-          Then <m>a/b + c/d = (ad + bc)/bd</m> and
-          <m>(a/b) \cdot (c/d) = (ac)/(bd)</m> are both in <m>{\mathbb Z}_{(p)}</m>,
-          since <m>\gcd(bd,p) = 1</m>.
+          Sejam <m>a/b, c/d \in {\mathbb Z}_{(p)}</m>.
+          Então <m>a/b + c/d = (ad + bc)/bd</m> e
+          <m>(a/b) \cdot (c/d) = (ac)/(bd)</m> pertencem a <m>{\mathbb Z}_{(p)}</m>,
+          pois <m>\gcd(bd,p) = 1</m>.
         </p>
       </hint>
     </exercise>
@@ -2285,7 +2286,7 @@
     <exercise number="34" xml:id="rings-exercise-Zp">
       <statement>
         <p>
-          Prove or disprove: Every finite integral domain is isomorphic to <m>{\mathbb Z}_p</m>.
+          Prove ou refute: todo domínio de integridade finito é isomorfo a <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </exercise>
@@ -2295,42 +2296,42 @@
     <exercise number="35" xml:id="rings-exercise-automorphisms">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity.
+          Seja <m>R</m> um anel com identidade.
 
           <ol>
             <li>
               <p>
-                Let <m>u</m> be a unit in <m>R</m>.
-                Define a map <m>i_u : R \rightarrow R</m> by <m>r \mapsto uru^{-1}</m>.
-                Prove that <m>i_u</m> is an automorphism of <m>R</m>.
-                Such an automorphism of <m>R</m> is called an inner automorphism of <m>R</m>.
-                Denote the set of all inner automorphisms of <m>R</m> by <m>\inn(R)</m>.
+                Seja <m>u</m> uma unidade em <m>R</m>.
+                Defina uma aplicação <m>i_u : R \rightarrow R</m> por <m>r \mapsto uru^{-1}</m>.
+                Prove que <m>i_u</m> é um automorfismo de <m>R</m>.
+                Tal automorfismo de <m>R</m> é chamado de automorfismo interno de <m>R</m>.
+                Denote o conjunto de todos os automorfismos internos de <m>R</m> por <m>\inn(R)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Denote the set of all automorphisms of <m>R</m> by <m>\aut(R)</m>.
-                Prove that <m>\inn(R)</m> is a normal subgroup of <m>\aut(R)</m>.
+                Denote o conjunto de todos os automorfismos de <m>R</m> por <m>\aut(R)</m>.
+                Prove que <m>\inn(R)</m> é um subgrupo normal de <m>\aut(R)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>U(R)</m> be the group of units in <m>R</m>.
-                Prove that the map
+                Seja <m>U(R)</m> o grupo das unidades de <m>R</m>.
+                Prove que a aplicação
                 <md>
                   \phi : U(R) \rightarrow \inn(R)
                 </md>
-                defined by <m>u \mapsto i_u</m> is a homomorphism.
-                Determine the kernel of <m>\phi</m>.
+                definida por <m>u \mapsto i_u</m> é um homomorfismo.
+                Determine o núcleo de <m>\phi</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Compute <m>\aut( {\mathbb Z})</m>,
-                <m>\inn( {\mathbb Z})</m>, and <m>U( {\mathbb Z})</m>.
+                Calcule <m>\aut( {\mathbb Z})</m>,
+                <m>\inn( {\mathbb Z})</m> e <m>U( {\mathbb Z})</m>.
               </p>
             </li>
           </ol>
@@ -2341,8 +2342,8 @@
     <exercise number="36" xml:id="rings-exercise-cartesian-product">
       <statement>
         <p>
-          Let <m>R</m> and <m>S</m> be arbitrary rings.
-          Show that their Cartesian product is a ring if we define addition and multiplication in <m>R \times S</m> by
+          Sejam <m>R</m> e <m>S</m> anéis arbitrários.
+          Mostre que seu produto cartesiano é um anel se definirmos a adição e a multiplicação em <m>R \times S</m> por
 
           <ol>
             <li>
@@ -2366,18 +2367,18 @@
     <exercise number="37" xml:id="rings-exercise-idempotent">
       <statement>
         <p>
-          An element <m>x</m> in a ring is called an
-          <term>idempotent</term> if <m>x^2 = x</m>.
-          Prove that the only idempotents in an integral domain are <m>0</m> and <m>1</m>.
-          Find a ring with a idempotent <m>x</m> not equal to <m>0</m> or <m>1</m>.
+          Um elemento <m>x</m> em um anel é chamado de
+          <term>idempotente</term> se <m>x^2 = x</m>.
+          Prove que os únicos idempotentes em um domínio de integridade são <m>0</m> e <m>1</m>.
+          Encontre um anel com um idempotente <m>x</m> diferente de <m>0</m> e <m>1</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Suppose that <m>x^2 = x</m> and <m>x \neq 0</m>.
-          Since <m>R</m> is an integral domain, <m>x = 1</m>.
-          To find a nontrivial idempotent,
-          look in <m>{\mathbb M}_2({\mathbb R})</m>.
+          Suponha que <m>x^2 = x</m> e <m>x \neq 0</m>.
+          Como <m>R</m> é um domínio de integridade, <m>x = 1</m>.
+          Para encontrar um idempotente não trivial,
+          procure em <m>{\mathbb M}_2({\mathbb R})</m>.
         </p>
       </hint>
     </exercise>
@@ -2387,8 +2388,8 @@
     <exercise number="38" xml:id="rings-exercise-solution-mod-n">
       <statement>
         <p>
-          Let <m>\gcd(a, n) = d</m> and <m>\gcd(b, d) \neq 1</m>.
-          Prove that <m>ax \equiv b \pmod{n}</m> does not have a solution.
+          Sejam <m>\gcd(a, n) = d</m> e <m>\gcd(b, d) \neq 1</m>.
+          Prove que <m>ax \equiv b \pmod{n}</m> não possui solução.
         </p>
       </statement>
     </exercise>
@@ -2396,34 +2397,34 @@
     <!--Todo Finish solution.-->
 
     <exercise number="39" xml:id="rings-exercise-chinese-remainder-theorem">
-      <title>The Chinese Remainder Theorem for Rings</title>
+      <title>O Teorema Chinês do Resto para anéis</title>
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals in <m>R</m> such that <m>I+J = R</m>.
+          Seja <m>R</m> um anel e sejam <m>I</m> e <m>J</m> ideais em <m>R</m> tais que <m>I+J = R</m>.
 
           <ol>
             <li>
               <p>
-                Show that for any <m>r</m> and <m>s</m> in <m>R</m>, the system of equations
+                Mostre que, para quaisquer <m>r</m> e <m>s</m> em <m>R</m>, o sistema de equações
                 <md>
                   <mrow>x &amp; \equiv r \pmod{I}</mrow>
                   <mrow>x &amp; \equiv s \pmod{J}</mrow>
                 </md>
-                has a solution.
+                possui uma solução.
               </p>
             </li>
 
             <li>
               <p>
-                In addition,
-                prove that any two solutions of the system are congruent modulo <m>I \cap J</m>.
+                Além disso,
+                prove que duas soluções quaisquer do sistema são congruentes módulo <m>I \cap J</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>I</m> and <m>J</m> be ideals in a ring <m>R</m> such that <m>I + J = R</m>.
-                Show that there exists a ring isomorphism
+                Sejam <m>I</m> e <m>J</m> ideais em um anel <m>R</m> tais que <m>I + J = R</m>.
+                Mostre que existe um isomorfismo de anéis
                 <md>
                   R/(I \cap J) \cong R/I \times R/J
                 </md>.
@@ -2438,11 +2439,11 @@
   </exercises>
 
   <exercises xml:id="rings-exercises-programming">
-    <title>Programming Exercise</title>
+    <title>Exercício de programação</title>
     <exercise xml:id="rings-exercise-program-chinese-remainder">
       <statement>
         <p>
-          Write a computer program implementing fast addition and multiplication using the Chinese Remainder Theorem and the method outlined in the text.
+          Escreva um programa de computador que implemente adição e multiplicação rápidas usando o Teorema Chinês do Resto e o método apresentado no texto.
         </p>
       </statement>
     </exercise>
@@ -2450,65 +2451,65 @@
   </exercises>
 
   <references xml:id="rings-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Anderson, F. W. and Fuller, K. R.
-      <title>Rings and Categories of  Modules</title>. 2nd ed.  Springer, New York, 1992.
+      Anderson, F. W. e Fuller, K. R.
+      <title>Anéis e categorias de módulos</title>. 2.ª ed. Springer, Nova York, 1992.
     </biblio>
 
     <biblio type="raw">
 <!-- was [2] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Atiyah, M. F.  and MacDonald, I. G.
-      <title>Introduction to Commutative Algebra</title>. Westview Press, Boulder, CO, 1994.
+      Atiyah, M. F. e MacDonald, I. G.
+      <title>Introdução à álgebra comutativa</title>. Westview Press, Boulder, Colorado, 1994.
     </biblio>
 
     <biblio type="raw">
 <!-- was [3] --><!-- Reference updated - TWJ 8/14/2010 -->
       Herstein, I. N.
-      <title>Noncommutative Rings</title>. Mathematical Association of America, Washington, DC, 1994.
+      <title>Anéis não comutativos</title>. Mathematical Association of America, Washington, D.C., 1994.
     </biblio>
 
     <biblio type="raw">
 <!-- was [4] --><!-- Out of print - TWJ 8/14/2010 -->
       Kaplansky, I.
-      <title>Commutative Rings</title>. Revised edition. University of Chicago Press, Chicago, 1974.
+      <title>Anéis comutativos</title>. Edição revisada. University of Chicago Press, Chicago, 1974.
     </biblio>
 
     <biblio type="raw">
 <!-- was [5] --><!-- Reference updated - TWJ 8/14/2010 -->
       Knuth, D. E.
-      <title>The Art of Computer Programming: Semi-Numerical Algorithms</title>, vol. 2. 3rd ed. Addison-Wesley Professional, Boston, 1997.
+      <title>A arte da programação de computadores: algoritmos seminuméricos</title>, v. 2. 3.ª ed. Addison-Wesley Professional, Boston, 1997.
     </biblio>
 
     <biblio type="raw">
 <!-- was [6] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Lidl, R. and Pilz, G.
-      <title>Applied Abstract Algebra</title>. 2nd ed. Springer, New York, 1998. A good source for applications.
+      Lidl, R. e Pilz, G.
+      <title>Álgebra abstrata aplicada</title>. 2.ª ed. Springer, Nova York, 1998. Uma boa fonte sobre aplicações.
     </biblio>
 
     <biblio type="raw">
 <!-- was [7] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       Mackiw, G.
-      <title>Applications of Abstract Algebra</title>. Wiley, New York, 1985.
+      <title>Aplicações da álgebra abstrata</title>. Wiley, Nova York, 1985.
     </biblio>
 
     <biblio type="raw">
 <!-- was [8] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       McCoy,  N. H.
-      <title>Rings and Ideals</title>. Carus Monograph Series, No. 8. Mathematical Association of America, Washington, DC, 1968.
+      <title>Anéis e ideais</title>. Carus Monograph Series, n.º 8. Mathematical Association of America, Washington, D.C., 1968.
     </biblio>
 
     <biblio type="raw">
 <!-- was [9] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       McCoy,  N. H.
-      <title>The Theory of Rings</title>. Chelsea, New York, 1972.
+      <title>A teoria dos anéis</title>. Chelsea, Nova York, 1972.
     </biblio>
 
     <biblio type="raw">
 <!-- was [10] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Zariski, O. and Samuel, P.
-      <title>Commutative Algebra</title>, vols. I and II. Springer, New York, 1975, 1960.
+      Zariski, O. e Samuel, P.
+      <title>Álgebra comutativa</title>, v. I e II. Springer, Nova York, 1975, 1960.
     </biblio>
   </references>
 
@@ -2518,97 +2519,97 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Rings are very important in your study of abstract algebra,
-        and similarly,
-        they are very important in the design and use of Sage.
-        There is a lot of material in this chapter,
-        and there are many corresponding commands in Sage.
+        Os anéis são muito importantes no estudo da álgebra abstrata
+        e, de modo semelhante,
+        são muito importantes no projeto e no uso do Sage.
+        Este capítulo contém muito material,
+        e há muitos comandos correspondentes no Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Creating Rings</title>
+      <title>Criando anéis</title>
       <p>
-        Here is a list of various rings,
-        domains and fields you can construct simply.
+        Esta é uma lista de vários anéis,
+        domínios e corpos que você pode construir de maneira simples.
 
         <ol>
           <li>
             <p>
             <c>Integers()</c>, <c>ZZ</c>:
-              the integral domain of positive and negative integers,
+              o domínio de integridade dos inteiros positivos e negativos,
               <m>{\mathbb Z}</m>.
             </p>
           </li>
 
           <li>
             <p>
-            <c>Integers(n)</c>: the integers mod <m>n</m>, <m>{\mathbb Z_n}</m>.
-              A field when <m>n</m> is prime,
-              but just a ring for composite <m>n</m>.
+            <c>Integers(n)</c>: os inteiros módulo <m>n</m>, <m>{\mathbb Z_n}</m>.
+              Um corpo quando <m>n</m> é primo,
+              mas apenas um anel quando <m>n</m> é composto.
             </p>
           </li>
 
           <li>
             <p>
-            <c>QQ</c>: the field of rational numbers, <m>{\mathbb Q}</m>.
+            <c>QQ</c>: o corpo dos números racionais, <m>{\mathbb Q}</m>.
             </p>
           </li>
 
           <li>
             <p>
             <c>RR</c>, <c>CC</c>:
-              the field of real numbers and the field of complex numbers,
+              o corpo dos números reais e o corpo dos números complexos,
               <m>{\mathbb R}</m>, <m>{\mathbb C}</m>.
-              It is impossible to create <em>every</em>
-              real number inside a computer,
-              so technically these sets do not behave as fields,
-              but only give a good imitiation of the real thing.
-              We say they are <term>inexact</term>
-              rings to make this point.
+              É impossível criar <em>todo</em>
+              número real dentro de um computador,
+              portanto, tecnicamente, esses conjuntos não se comportam como corpos,
+              mas apenas fornecem uma boa imitação do objeto real.
+              Dizemos que eles são anéis <term>inexatos</term>
+              para enfatizar esse ponto.
             </p>
           </li>
 
           <li>
             <p>
             <c>QuadraticField(n)</c>:
-              the field formed by combining the rationals with a solution to the polynomial equation <m>x^2-n=0</m>.
-              The notation in the text is <m>{\mathbb Q}[\sqrt{n}]</m>.
-              A functional equivalent can be made with the syntax <c>QQ[sqrt(n)]</c>.
-              Note that <c>n</c> can be negative.
+              o corpo formado combinando os racionais com uma solução da equação polinomial <m>x^2-n=0</m>.
+              A notação usada no texto é <m>{\mathbb Q}[\sqrt{n}]</m>.
+              Uma construção equivalente pode ser feita com a sintaxe <c>QQ[sqrt(n)]</c>.
+              Observe que <c>n</c> pode ser negativo.
             </p>
           </li>
 
           <li>
             <p>
             <c>CyclotomicField(n)</c>:
-              the field formed by combining the rationals with the solutions to the polynomial equation <m>x^n-1=0</m>.
+              o corpo formado combinando os racionais com as soluções da equação polinomial <m>x^n-1=0</m>.
             </p>
           </li>
 
           <li>
             <p>
             <c>QQbar</c>:
-              the field formed by combining the rationals with the solutions to <em>every</em>
-              polynomial equation with integer coefficients.
-              This is known as a the field of algebraic numbers,
-              denoted as <m>\overline{{\mathbb Q}}</m>.
+              o corpo formado combinando os racionais com as soluções de <em>toda</em>
+              equação polinomial com coeficientes inteiros.
+              Esse é conhecido como o corpo dos números algébricos,
+              denotado por <m>\overline{{\mathbb Q}}</m>.
             </p>
           </li>
 
           <li>
             <p>
-            <c>FiniteField(p)</c>: for a prime <m>p</m>,
-              the field of integers <m>{\mathbb Z_p}</m>.
+            <c>FiniteField(p)</c>: para um primo <m>p</m>,
+              o corpo dos inteiros <m>{\mathbb Z_p}</m>.
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        If you print a description of some of the above rings,
-        you will sometimes see a new symbol introduced.
-        Consider the following example:
+        Se você imprimir uma descrição de alguns dos anéis acima,
+        às vezes verá um novo símbolo sendo introduzido.
+        Considere o exemplo a seguir:
       </p>
 
             <sage>
@@ -2648,29 +2649,29 @@
             </sage>
 
       <p>
-        Here <c>Number Field</c> describes an object generally formed by combining the rationals with another number
-        (here <m>\sqrt{7}</m>). <q>a</q>
-        is a new symbol which behaves as a root of the polynomial <m>x^2-7</m>.
-        We do not say which root, <m>\sqrt{7}</m> or <m>-\sqrt{7}</m>,
-        and as we understand the theory better we will see that this does not really matter.
+        Aqui, <c>Number Field</c> descreve um objeto geralmente formado combinando os racionais com outro número
+        (neste caso, <m>\sqrt{7}</m>). <q>a</q>
+        é um novo símbolo que se comporta como uma raiz do polinômio <m>x^2-7</m>.
+        Não especificamos qual raiz, <m>\sqrt{7}</m> ou <m>-\sqrt{7}</m>,
+        e, à medida que compreendermos melhor a teoria, veremos que isso realmente não importa.
       </p>
 
       <p>
-        We can obtain this root as a generator of the number field,
-        and then manipulate it.
-        First squaring <c>root</c> yields 7.
-        Notice that <c>root</c> prints as <c>a</c>.
-        Notice, too,
-        that computations with <c>root</c> behave as if it was
-        <em>either</em> root of <m>x^2-7</m>,
-        and results print using <c>a</c>.
+        Podemos obter essa raiz como um gerador do corpo numérico
+        e então manipulá-la.
+        Primeiro, elevar <c>root</c> ao quadrado produz 7.
+        Observe que <c>root</c> é exibido como <c>a</c>.
+        Observe também
+        que os cálculos com <c>root</c> se comportam como se ele fosse
+        <em>qualquer uma das</em> raízes de <m>x^2-7</m>,
+        e os resultados são exibidos usando <c>a</c>.
       </p>
 
       <p>
-        This can get a bit confusing,
-        inputing computations with <c>root</c> and getting output in terms of <c>a</c>.
-        Fortunately, there is a better way.
-        Consider the following example:
+        Isso pode ficar um pouco confuso:
+        inserir cálculos com <c>root</c> e obter a saída em termos de <c>a</c>.
+        Felizmente, há uma maneira melhor.
+        Considere o exemplo a seguir:
       </p>
 
             <sage>
@@ -2701,53 +2702,53 @@
             </sage>
 
       <p>
-        With the syntax <c>F.&lt;b&gt;</c> we can create the field <c>F</c> along with specifying a generator <c>b</c> using a name of our choosing.
-        Then computations can use <c>b</c> in both input and output as a root of <m>x^2-7</m>.
+        Com a sintaxe <c>F.&lt;b&gt;</c>, podemos criar o corpo <c>F</c> e especificar um gerador <c>b</c> usando um nome de nossa escolha.
+        Assim, os cálculos podem usar <c>b</c> tanto na entrada quanto na saída como uma raiz de <m>x^2-7</m>.
       </p>
 
       <p>
-        Here are three new rings that are best created using this new syntax.
+        Eis três novos anéis que é melhor criar usando essa nova sintaxe.
 
         <ol>
           <li>
             <p>
-            <c>F.&lt;a&gt; = FiniteField(p^n)</c>: We will later have a theorem that tells us that finite fields only exist with orders equal to to a power of a prime.
-              When the power is larger than 1, then we need a generator,
-              here given as <c>a</c>.
+            <c>F.&lt;a&gt; = FiniteField(p^n)</c>: Mais adiante teremos um teorema que nos dirá que corpos finitos só existem com ordens iguais a uma potência de um primo.
+              Quando a potência é maior que 1, precisamos de um gerador,
+              indicado aqui por <c>a</c>.
             </p>
           </li>
 
           <li>
             <p>
             <c>P.&lt;x&gt;=R[]</c>:
-              the ring of all polynomials in the variable <c>x</c>,
-              with coefficients from the ring <c>R</c>.
-              Notice that <c>R</c> can be <em>any</em> ring,
-              so this is a very general construction that uses one ring to form another.
-              See an example below.
+              o anel de todos os polinômios na variável <c>x</c>,
+              com coeficientes no anel <c>R</c>.
+              Observe que <c>R</c> pode ser <em>qualquer</em> anel,
+              portanto esta é uma construção muito geral que usa um anel para formar outro.
+              Veja um exemplo abaixo.
             </p>
           </li>
 
           <li>
             <p>
             <c>Q.&lt;r,s,t&gt; = QuaternionAlgebra(n, m)</c>:
-              the rationals combined with indeterminates <c>r</c>,
-            <c>s</c> and <c>t</c> such that <m>r^2=n</m>,
-              <m>s^2=m</m> and <m>t = rs = -sr</m>.
-              This is a generalization of the quaternions described in this chapter,
-              though over the rationals rather than the reals, so it is an exact ring.
-              Notice that this is one of the few noncommutative rings in Sage.
-              The <q>usual</q> quaternions would be constructed with <c>Q.&lt;I,J,K&gt; = QuaternionAlgebra(-1, -1)</c>.
-              (Notice that using <c>I</c> here is not a good choice,
-              because it will then clobber the symbol <c>I</c> used for complex numbers.)
+              os racionais combinados com as indeterminadas <c>r</c>,
+            <c>s</c> e <c>t</c> tais que <m>r^2=n</m>,
+              <m>s^2=m</m> e <m>t = rs = -sr</m>.
+              Esta é uma generalização dos quatérnios descritos neste capítulo,
+              embora sobre os racionais em vez dos reais; portanto, é um anel exato.
+              Observe que este é um dos poucos anéis não comutativos do Sage.
+              Os quatérnios <q>usuais</q> seriam construídos com <c>Q.&lt;I,J,K&gt; = QuaternionAlgebra(-1, -1)</c>.
+              (Observe que usar <c>I</c> aqui não é uma boa escolha,
+              pois isso substituirá o símbolo <c>I</c> usado para números complexos.)
             </p>
           </li>
         </ol>
       </p>
 
       <p>
-        Syntax specifying names for generators can be used for many of the above rings as well,
-        such as demonstrated above for quadratic fields and below for cyclotomic fields.
+        A sintaxe que especifica nomes para geradores também pode ser usada em muitos dos anéis acima,
+        como demonstrado acima para corpos quadráticos e abaixo para corpos ciclotômicos.
       </p>
 
             <sage doctest="random">
@@ -2762,11 +2763,11 @@
     </subsection>
 
     <subsection>
-      <title>Properties of Rings</title>
+      <title>Propriedades dos anéis</title>
       <p>
-        The examples below demonstrate how to query certain properties of rings.
-        If you are playing along,
-        be sure to execute the first compute cell to define the various rings involved in the examples.
+        Os exemplos abaixo demonstram como consultar certas propriedades dos anéis.
+        Se você quiser acompanhar os exemplos,
+        certifique-se de executar primeiro a célula de cálculo para definir os vários anéis envolvidos.
       </p>
 
             <sage>
@@ -2783,7 +2784,7 @@
             </sage>
 
       <p>
-        Exact versus inexact.
+        Exatos versus inexatos.
       </p>
 
             <sage>
@@ -2804,7 +2805,7 @@
             </sage>
 
       <p>
-        Finite versus infinite.
+        Finitos versus infinitos.
       </p>
 
             <sage>
@@ -2825,7 +2826,7 @@
             </sage>
 
       <p>
-        Integral domain?
+        Domínio de integridade?
       </p>
 
             <sage>
@@ -2846,7 +2847,7 @@
             </sage>
 
       <p>
-        Field?
+        Corpo?
       </p>
 
             <sage>
@@ -2875,7 +2876,7 @@
             </sage>
 
       <p>
-        Commutative?
+        Comutativo?
       </p>
 
             <sage>
@@ -2896,7 +2897,7 @@
             </sage>
 
       <p>
-        Characteristic.
+        Característica.
       </p>
 
             <sage>
@@ -2949,11 +2950,11 @@
             </sage>
 
       <p>
-        Additive and multiplicative identities
-        <em>print</em> like you would expect,
-        but notice that while they may <em>print</em> identically,
-        they could be <em>different</em>
-        because of the ring they live in.
+        As identidades aditiva e multiplicativa
+        são <em>exibidas</em> como seria esperado,
+        mas observe que, embora possam ser <em>exibidas</em> de modo idêntico,
+        elas podem ser <em>diferentes</em>
+        por causa do anel ao qual pertencem.
       </p>
 
             <sage>
@@ -3040,10 +3041,10 @@
             </sage>
 
       <p>
-        There is some support for subrings.
-        For example,
-        <c>Q</c> and <c>S</c> are extensions of the rationals,
-        while <c>F</c> is totally distinct from the rationals.
+        Há algum suporte para subanéis.
+        Por exemplo,
+        <c>Q</c> e <c>S</c> são extensões dos racionais,
+        enquanto <c>F</c> é totalmente distinto dos racionais.
       </p>
 
             <sage>
@@ -3072,11 +3073,11 @@
             </sage>
 
       <p>
-        Not every element of a ring may have a multiplicative inverse,
-        in other words,
-        not every element has to be a unit
-        (unless the ring is a field).
-        It would now be good practice to check if an element is a unit before you try computing its inverse.
+        Nem todo elemento de um anel pode ter um inverso multiplicativo;
+        em outras palavras,
+        nem todo elemento precisa ser uma unidade
+        (a menos que o anel seja um corpo).
+        É uma boa prática verificar se um elemento é uma unidade antes de tentar calcular seu inverso.
       </p>
 
             <sage>
@@ -3124,21 +3125,21 @@
     </subsection>
 
     <subsection>
-      <title>Quotient Structure</title>
+      <title>Estrutura quociente</title>
       <p>
-        Ideals are the normal subgroups of rings and allow us to build <q>quotients</q>
-        <mdash/> basically new rings defined on equivalence classes of elements of the original ring.
-        Sage support for ideals is variable.
-        When they can be created, there is not always a lot you can do with them.
-        But they work well in certain very important cases.
+        Ideais são os subgrupos normais dos anéis e nos permitem construir <q>quocientes</q>
+        <mdash/> basicamente, novos anéis definidos sobre classes de equivalência de elementos do anel original.
+        O suporte do Sage para ideais é variável.
+        Quando eles podem ser criados, nem sempre há muito que se possa fazer com eles.
+        Mas eles funcionam bem em alguns casos muito importantes.
       </p>
 
       <p>
-        The integers, <m>{\mathbb Z}</m>,
-        have ideals that are just multiples of a single integer.
-        We can create them with the <c>.ideal()</c> method or just by wrting a scalar multiple of <c>ZZ</c>.
-        And then the quotient is isomorphic to a well-understood ring.
-        (Notice that <c>I</c> is a bad name for an ideal if we want to work with complex numbers later.)
+        Os inteiros, <m>{\mathbb Z}</m>,
+        têm ideais que são simplesmente múltiplos de um único inteiro.
+        Podemos criá-los com o método <c>.ideal()</c> ou simplesmente escrevendo um múltiplo escalar de <c>ZZ</c>.
+        Então o quociente é isomorfo a um anel bem conhecido.
+        (Observe que <c>I</c> é um nome ruim para um ideal se quisermos trabalhar com números complexos mais adiante.)
       </p>
 
             <sage>
@@ -3178,11 +3179,11 @@
             </sage>
 
       <p>
-        We might normally be more careful about the last statement.
-        The quotient is a set of equivalence classes, each infinite,
-        and certainly not a single integer.
-        But the quotient is <em>isomorphic</em> to <m>{\mathbb Z}_4</m>,
-        so Sage just makes this identification.
+        Normalmente deveríamos ser mais cuidadosos com a última afirmação.
+        O quociente é um conjunto de classes de equivalência, cada uma infinita,
+        e certamente não um único inteiro.
+        Mas o quociente é <em>isomorfo</em> a <m>{\mathbb Z}_4</m>,
+        então o Sage simplesmente faz essa identificação.
       </p>
 
             <sage>
@@ -3224,10 +3225,10 @@
             </sage>
 
       <p>
-        Notice that the construction of the quotient ring has created a new generator,
-        converting <c>y</c>(<m>y</m>) to <c>ybar</c>
+        Observe que a construção do anel quociente criou um novo gerador,
+        convertendo <c>y</c>(<m>y</m>) em <c>ybar</c>
         (<m>\overline{y}</m>).
-        We can override this as before with the syntax demonstrated below.
+        Podemos substituir esse nome como antes, usando a sintaxe demonstrada abaixo.
       </p>
 
             <sage>
@@ -3249,11 +3250,11 @@
             </sage>
 
       <p>
-        So from a quotient of an infinite ring and an ideal
-        (which is also a ring),
-        we create a field, which is finite.
-        Understanding this construction will be an important theme in the next few chapters.
-        To see how remarkable it is, consider what happens with just one little change.
+        Assim, a partir de um quociente de um anel infinito e de um ideal
+        (que também é um anel),
+        criamos um corpo que é finito.
+        Compreender essa construção será um tema importante nos próximos capítulos.
+        Para ver como isso é notável, considere o que acontece com uma pequena mudança.
       </p>
 
             <sage>
@@ -3295,10 +3296,10 @@
             </sage>
 
       <p>
-        There are a few methods available which will give us properties of ideals.
-        In particular,
-        we can check for prime and maximal ideals in rings of polynomials.
-        Examine the results above and below in the context of <xref ref="rings-theorem-maximal-ideal-field"/>.
+        Há alguns métodos disponíveis que nos fornecem propriedades dos ideais.
+        Em particular,
+        podemos verificar se há ideais primos e maximais em anéis de polinômios.
+        Examine os resultados acima e abaixo no contexto de <xref ref="rings-theorem-maximal-ideal-field"/>.
       </p>
 
             <sage>
@@ -3323,7 +3324,7 @@
             </sage>
 
       <p>
-        The fact that <c>M</c> is a prime ideal is verification of <xref ref="rings-corollary-maximal-ideal"/>.
+        O fato de <c>M</c> ser um ideal primo é uma verificação de <xref ref="rings-corollary-maximal-ideal"/>.
       </p>
 
             <sage>
@@ -3345,26 +3346,26 @@
     </subsection>
 
     <subsection>
-      <title>Ring Homomorphisms</title>
+      <title>Homomorfismos de anéis</title>
       <p>
-        When Sage is presented with <c>3 + 4/3</c>,
-        how does it know that 3 is meant to be an integer?
-        And then to add it to a rational,
-        how does it know that we really want to view the computation as 3/1 + 4/3?
-        This is really easy for you and me,
-        but devilishly hard for a program,
-        and you can imagine it getting ever more complicated with the many possible rings in Sage,
-        subrings,
-        matrices, etc.
-        Part of the answer is that Sage uses ring homomorphisms to <q>translate</q>
-        objects (numbers) between rings.
+        Quando o Sage recebe <c>3 + 4/3</c>,
+        como ele sabe que 3 deve ser considerado um inteiro?
+        E, para somá-lo a um racional,
+        como sabe que realmente queremos interpretar o cálculo como 3/1 + 4/3?
+        Isso é muito fácil para você e para mim,
+        mas diabolicamente difícil para um programa,
+        e você pode imaginar que a situação se torna cada vez mais complicada com os muitos anéis possíveis no Sage,
+        subanéis,
+        matrizes etc.
+        Parte da resposta é que o Sage usa homomorfismos de anéis para <q>traduzir</q>
+        objetos (números) entre anéis.
       </p>
 
       <p>
-        We will give an example below,
-        but not pursue the topic much further.
-        For the curious,
-        reading the Sage documentation and experimenting would be a good exercise.
+        Daremos um exemplo abaixo,
+        mas não desenvolveremos muito mais o assunto.
+        Para os curiosos,
+        ler a documentação do Sage e fazer experimentos seria um bom exercício.
       </p>
 
             <sage>
@@ -3422,33 +3423,33 @@
             </sage>
 
       <p>
-        So <c>phi</c> is a homomorphism (<q>morphism</q>) that converts integers
-        (the domain is <c>ZZ</c>)
-        into rationals
-        (the codomain is <c>QQ</c>),
-        whose parent is a set of homomorphisms that Sage calls a <q>homset.</q>
-        Even though <c>a</c> and <c>b</c> both print as <c>3</c>,
-        which is indistinguishable to our eyes,
-        the parents of <c>a</c> and <c>b</c> are different.
-        Yet the numerical value of the two objects has not changed.
+        Assim, <c>phi</c> é um homomorfismo (<q>morfismo</q>) que converte inteiros
+        (o domínio é <c>ZZ</c>)
+        em racionais
+        (o contradomínio é <c>QQ</c>),
+        cujo pai é um conjunto de homomorfismos que o Sage chama de <q>homset.</q>
+        Embora <c>a</c> e <c>b</c> sejam ambos exibidos como <c>3</c>,
+        o que é indistinguível aos nossos olhos,
+        os pais de <c>a</c> e <c>b</c> são diferentes.
+        Ainda assim, o valor numérico dos dois objetos não mudou.
       </p>
     </subsection>
   </section>
 
   <exercises xml:id="rings-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios de Sage</title>
 
     <exercise number="1" xml:id="rings-sage-exercise-Z11-Z12">
       <statement>
         <p>
-          Define the two rings <m>{\mathbb Z}_{11}</m> and
-          <m>{\mathbb Z}_{12}</m> with the commands <c>R = Integers(11)</c> and <c>S = Integers(12)</c>.
-          For each ring, use the relevant command to determine:
-          if the ring is finite, if it is commutative,
-          if it is an integral domain and if it is a field.
-          Then use single Sage commands to find the order of the ring,
-          list the elements, and output the multiplicative identity
-          (<ie/> <m>1</m>, if it exists).
+          Defina os dois anéis <m>{\mathbb Z}_{11}</m> e
+          <m>{\mathbb Z}_{12}</m> com os comandos <c>R = Integers(11)</c> e <c>S = Integers(12)</c>.
+          Para cada anel, use o comando relevante para determinar:
+          se o anel é finito, se é comutativo,
+          se é um domínio de integridade e se é um corpo.
+          Em seguida, use comandos individuais do Sage para encontrar a ordem do anel,
+          listar os elementos e exibir a identidade multiplicativa
+          (<ie/> <m>1</m>, se existir).
         </p>
       </statement>
     </exercise>
@@ -3456,13 +3457,13 @@
     <exercise number="2" xml:id="rings-sage-exercise-ideals">
       <statement>
         <p>
-          Define <c>R</c> to be the ring of integers, <m>{\mathbb Z}</m>,
-          by executing <c>R = ZZ</c> or <c>R = Integers()</c>.
-          A command like <c>R.ideal(4)</c> will create the principal ideal <m>\langle 4\rangle</m>.
-          The same command can accept more than one generator, so for example,
-          <c>R.ideal(3, 5)</c> will create the ideal <m>\{a\cdot 3+ b\cdot 5\mid a,b\in{\mathbb Z}\}</m>.
-          Create several ideals of <m>{\mathbb Z}</m> with two generators and ask Sage to print each as you create it.
-          Explain what you observe and then create code that will test your observation for thousands of different examples.
+          Defina <c>R</c> como o anel dos inteiros, <m>{\mathbb Z}</m>,
+          executando <c>R = ZZ</c> ou <c>R = Integers()</c>.
+          Um comando como <c>R.ideal(4)</c> criará o ideal principal <m>\langle 4\rangle</m>.
+          O mesmo comando pode aceitar mais de um gerador; por exemplo,
+          <c>R.ideal(3, 5)</c> criará o ideal <m>\{a\cdot 3+ b\cdot 5\mid a,b\in{\mathbb Z}\}</m>.
+          Crie vários ideais de <m>{\mathbb Z}</m> com dois geradores e peça ao Sage para exibir cada um à medida que for criado.
+          Explique o que observa e então crie um código que teste sua observação em milhares de exemplos diferentes.
         </p>
       </statement>
     </exercise>
@@ -3470,39 +3471,39 @@
     <exercise number="3" xml:id="rings-sage-exercise-finite-field">
       <statement>
         <p>
-          Create a finite field <m>F</m> of order 81 with <c>F.&lt;t&gt;=FiniteField(3^4)</c>.
+          Crie um corpo finito <m>F</m> de ordem 81 com <c>F.&lt;t&gt;=FiniteField(3^4)</c>.
         </p>
 
         <ol>
           <li>
             <p>
-              List the elements of <m>F</m>.
+              Liste os elementos de <m>F</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Obtain the generators of <m>F</m> with <c>F.gens()</c>.
+              Obtenha os geradores de <m>F</m> com <c>F.gens()</c>.
             </p>
           </li>
 
           <li>
             <p>
-              Obtain the first generator of <m>F</m> and save it as <c>u</c> with <c>u = F.0</c>(alternatively,
+              Obtenha o primeiro gerador de <m>F</m> e salve-o como <c>u</c> com <c>u = F.0</c>(alternativamente,
             <c>u = F.gen(0)</c>).
             </p>
           </li>
 
           <li>
             <p>
-              Compute the first 80 powers of <c>u</c> and comment.
+              Calcule as primeiras 80 potências de <c>u</c> e comente.
             </p>
           </li>
 
           <li>
             <p>
-              The generator you have worked with above is a root of a polynomial over <m>{\mathbb Z}_3</m>.
-              Obtain this polynomial with <c>F.modulus()</c> and use this observation to explain the entry in your list of powers that is the fourth power of the generator.
+              O gerador com o qual você trabalhou acima é uma raiz de um polinômio sobre <m>{\mathbb Z}_3</m>.
+              Obtenha esse polinômio com <c>F.modulus()</c> e use essa observação para explicar o elemento da sua lista de potências que é a quarta potência do gerador.
             </p>
           </li>
         </ol>
@@ -3512,39 +3513,39 @@
     <exercise number="4" xml:id="rings-sage-exercise-quotient-ring">
       <statement>
         <p>
-          Build and analyze a quotient ring as follows:
+          Construa e analise um anel quociente da seguinte maneira:
         </p>
 
         <ol>
           <li>
             <p>
-              Use <c>P.&lt;z&gt;=Integers(7)[]</c> to construct a ring <m>P</m> of polynomials in <m>z</m> with coefficients from <m>{\mathbb Z}_7</m>.
+              Use <c>P.&lt;z&gt;=Integers(7)[]</c> para construir um anel <m>P</m> de polinômios em <m>z</m> com coeficientes em <m>{\mathbb Z}_7</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use <c>K = P.ideal(z^2+z+3)</c> to build a principal ideal <m>K</m> generated by the polynomial <m>z^2+z+3</m>.
+              Use <c>K = P.ideal(z^2+z+3)</c> para construir um ideal principal <m>K</m> gerado pelo polinômio <m>z^2+z+3</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use <c>H = P.quotient(K)</c> to build <m>H</m>,
-              the quotient ring of <m>P</m> by <m>K</m>.
+              Use <c>H = P.quotient(K)</c> para construir <m>H</m>,
+              o anel quociente de <m>P</m> por <m>K</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Use Sage to verify that <m>H</m> is a field.
+              Use o Sage para verificar que <m>H</m> é um corpo.
             </p>
           </li>
 
           <li>
             <p>
-              As in the previous exercise,
-              obtain a generator and examine the proper collection of powers of that generator.
+              Como no exercício anterior,
+              obtenha um gerador e examine a coleção apropriada de potências desse gerador.
             </p>
           </li>
         </ol>

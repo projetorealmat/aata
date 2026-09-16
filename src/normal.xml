@@ -40,7 +40,7 @@
         <p>
           Seja <m>H</m> o subgrupo de <m>S_3</m> constituído pelos elementos <m>(1)</m> e <m>(12)</m>. Como
           <md>
-            (123) H = \{ (1 \, 2 \, 3), (1 \, 3) \} \quad \text{and} \quad H (1 \, 2 \, 3) = \{ (1 \, 2 \, 3), (2 \, 3) \}
+            (123) H = \{ (1 \, 2 \, 3), (1 \, 3) \} \quad \text{e} \quad H (1 \, 2 \, 3) = \{ (1 \, 2 \, 3), (2 \, 3) \}
           </md>,
           <m>H</m> não pode ser um subgrupo normal de <m>S_3</m>. Entretanto, o subgrupo <m>N</m>, constituído pelas permutações <m>(1)</m>, <m>(1 \, 2 \, 3)</m>, e <m>(1 \, 3 \, 2)</m>, é normal, pois as classes laterais de <m>N</m> são
           <md>
@@ -703,7 +703,7 @@
           Lembre-se de que o <term>centro</term>
           de um grupo <m>G</m> é o conjunto
           <md>
-            Z(G) = \{ x \in G : xg = gx \text{ for all } g \in G \}
+            Z(G) = \{ x \in G : xg = gx \text{ para todo } g \in G \}
           </md>.
           <ol>
             <li>

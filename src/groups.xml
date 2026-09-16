@@ -599,7 +599,7 @@
             <!-- % Changed <m>AB \neq BA</m> to <m>AB = BA</m>. Suggested by Isaac Coombs. TWJ 8/24/2011 -->
       <example xml:id="groups-example-quaterions">
         <p>
-          Let
+          Sejam
           <md>
             <mrow>1 &amp; = 
             \begin{pmatrix}
@@ -816,11 +816,11 @@
         definimos <m>g^0 = e</m>.
         Para <m>n \in {\mathbb N}</m>, definimos
         <md>
-          g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}
+          g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{vezes}}
         </md>
         e
         <md>
-          g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}
+          g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{vezes}}
         </md>.
       </p>
 
@@ -954,7 +954,7 @@
           O elemento identidade desse grupo é <m>1</m> e o inverso de qualquer elemento <m>a \in {\mathbb R}^*</m> é simplesmente <m>1/a</m>.
           Mostraremos que
           <md>
-            {\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}
+            {\mathbb Q}^* = \{ p/q : p \, \text{e}\, q\, \text{são inteiros não nulos} \}
           </md>
           é um subgrupo de <m>{\mathbb R}^*</m>.
 
@@ -1617,7 +1617,7 @@
       </statement>
       <hint>
         <p>
-          Let
+          Seja
           <md>
             \sigma =
             \begin{pmatrix}
@@ -1637,7 +1637,7 @@
     <exercise number="19" xml:id="groups-exercise-additive-identity-Zn">
       <statement>
         <p>
-          Show that
+          Mostre que
           <md>
             0 + a  \equiv a + 0  \equiv a \pmod{ n }
           </md>
@@ -1770,8 +1770,8 @@
       </statement>
       <hint>
         <p>
-          Since <m>abab = (ab)^2 = e = a^2 b^2 = aabb</m>,
-          we know that <m>ba = ab</m>.
+          Como <m>abab = (ab)^2 = e = a^2 b^2 = aabb</m>,
+          sabemos que <m>ba = ab</m>.
         </p>
       </hint>
     </exercise>
@@ -1880,7 +1880,7 @@
         <p>
           Prove que
           <md>
-            G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
+            G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ e } a \text{ e } b \text{ não são ambos nulos} \}
           </md>
           é um subgrupo de <m>{\mathbb R}^{\ast}</m> sob a operação de grupo dada pela multiplicação.
         </p>
@@ -1959,7 +1959,7 @@
       <statement>
         <p>
           Prove ou refute: Se <m>H</m> e <m>K</m> são subgrupos de um grupo <m>G</m>,
-          então <m>H K = \{hk : h \in H \text{ and } k \in K \}</m> é um subgrupo de <m>G</m>.
+          então <m>H K = \{hk : h \in H \text{ e } k \in K \}</m> é um subgrupo de <m>G</m>.
           E se <m>G</m> for abeliano?
         </p>
       </statement>
@@ -1971,7 +1971,7 @@
           Seja <m>G</m> um grupo e <m>g \in G</m>.
           Mostre que
           <md>
-            Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
+            Z(G) = \{ x \in G : gx = xg \text{ para todo } g \in G \}
           </md>
           é um subgrupo de <m>G</m>.
           Esse subgrupo é chamado de <term>centro</term> de <m>G</m>.
@@ -2044,7 +2044,7 @@
         <p>
           Seja <m>H</m> um subgrupo de <m>G</m> e
           <md>
-            C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}
+            C(H) = \{ g \in G : gh = hg \text{ para todo } h \in H \}
           </md>.
           Prove que <m>C(H)</m> é um subgrupo de <m>G</m>.
           Esse subgrupo é chamado de <term>centralizador</term> de <m>H</m> em <m>G</m>.
@@ -2168,7 +2168,7 @@
           w_k ) \equiv 0 \pmod{ n}</m> um esquema de detecção de erros para o número de identificação de <m>k</m> dígitos <m>d_1 d_2 \cdots d_k</m>,
           onde <m>0 \leq d_i \lt n</m>.
           Prove que todos os erros de transposição de dois dígitos <m>d_i</m> e <m>d_j</m> são detectados se, e somente se,
-          <m>\gcd( w_i - w_j, n ) = 1</m> for <m>i</m> and <m>j</m> between <m>1</m> and <m>k</m>.
+          <m>\gcd( w_i - w_j, n ) = 1</m> para <m>i</m> e <m>j</m> entre <m>1</m> e <m>k</m>.
         </p>
       </statement>
     </exercise>

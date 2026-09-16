@@ -10,105 +10,105 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="actions">
-  <title>Group Actions</title>
+  <title>Ações de Grupos</title>
   <introduction>
     <p>
-      Group actions generalize group multiplication.
-      If <m>G</m> is a group and <m>X</m> is an arbitrary set,
-      a group action of an element <m>g \in G</m> and <m>x \in X</m> is a product,
-      <m>gx</m>, living in <m>X</m>.
-      Many problems in algebra are best be attacked via group actions.
-      For example,
-      the proofs of the Sylow theorems and of Burnside's Counting Theorem are most easily understood when they are formulated in terms of group actions.
+      As ações de grupos generalizam a multiplicação de grupos.
+      Se <m>G</m> é um grupo e <m>X</m> é um conjunto arbitrário,
+      a ação de grupo de um elemento <m>g \in G</m> sobre <m>x \in X</m> é um produto,
+      <m>gx</m>, que pertence a <m>X</m>.
+      Muitos problemas de álgebra são mais bem abordados por meio de ações de grupos.
+      Por exemplo,
+      as demonstrações dos teoremas de Sylow e do Teorema de Contagem de Burnside são mais facilmente compreendidas quando formuladas em termos de ações de grupos.
     </p>
   </introduction>
 
   <section xml:id="actions-section-groups-acting-on-sets">
-    <title>Groups Acting on Sets</title>
+    <title>Grupos Agindo em Conjuntos</title>
     <p>
-      Let <m>X</m> be a set and <m>G</m> be a group.
-      A <term>(left) action</term><idx><h>Group</h><h>action</h></idx>
-      of <m>G</m> on <m>X</m> is a map
-      <m>G \times X \rightarrow X</m> given by <m>(g,x) \mapsto gx</m>, where
+      Seja <m>X</m> um conjunto e <m>G</m> um grupo.
+      Uma <term>ação (à esquerda)</term><idx><h>Grupo</h><h>ação</h></idx>
+      de <m>G</m> em <m>X</m> é uma aplicação
+      <m>G \times X \rightarrow X</m> dada por <m>(g,x) \mapsto gx</m>, tal que
 
       <ol>
         <li>
           <p>
-            <m>ex = x</m> for all <m>x \in X</m>;
+            <m>ex = x</m> para todo <m>x \in X</m>;
           </p>
         </li>
 
         <li>
           <p>
-            <m>(g_1 g_2)x = g_1(g_2 x)</m> for all <m>x \in X</m> and all <m>g_1, g_2 \in G</m>.
+            <m>(g_1 g_2)x = g_1(g_2 x)</m> para todo <m>x \in X</m> e todos <m>g_1, g_2 \in G</m>.
           </p>
         </li>
       </ol>
 
-      Under these considerations <m>X</m> is called a
-      <idx><h><m>G</m>-set</h></idx><term><m>G</m>-set</term>.      
-      Notice that we are not requiring <m>X</m> to be related to <m>G</m> in any way.
-      It is true that every group <m>G</m> acts on every set <m>X</m> by the trivial action <m>(g,x) \mapsto x</m>;
-      however, group actions are more interesting if the set <m>X</m> is somehow related to the group <m>G</m>.
+      Nessas condições, <m>X</m> é chamado de
+      <idx><h><m>G</m>-conjunto</h></idx><term><m>G</m>-conjunto</term>.
+      Observe que não exigimos que <m>X</m> esteja relacionado a <m>G</m> de alguma maneira.
+      É verdade que todo grupo <m>G</m> age sobre todo conjunto <m>X</m> pela ação trivial <m>(g,x) \mapsto x</m>;
+      contudo, as ações de grupos são mais interessantes quando o conjunto <m>X</m> está de algum modo relacionado ao grupo <m>G</m>.
     </p>
 
     <example xml:id="actions-example-gl2">
       <p>
-        Let <m>G = GL_2( {\mathbb R} )</m> and <m>X = {\mathbb R}^2</m>.
-        Then <m>G</m> acts on <m>X</m> by left multiplication.
-        If <m>v \in {\mathbb R}^2</m> and <m>I</m> is the identity matrix,
-        then <m>Iv = v</m>.
-        If <m>A</m> and <m>B</m> are <m>2 \times 2</m> invertible matrices,
-        then <m>(AB)v = A(Bv)</m> since matrix multiplication is associative.
+        Seja <m>G = GL_2( {\mathbb R} )</m> e <m>X = {\mathbb R}^2</m>.
+        Então <m>G</m> age sobre <m>X</m> por multiplicação à esquerda.
+        Se <m>v \in {\mathbb R}^2</m> e <m>I</m> é a matriz identidade,
+        então <m>Iv = v</m>.
+        Se <m>A</m> e <m>B</m> são matrizes invertíveis <m>2 \times 2</m>,
+        então <m>(AB)v = A(Bv)</m>, pois a multiplicação de matrizes é associativa.
       </p>
     </example>
 
     <example xml:id="actions-example-d4">
       <p>
-        Let <m>G = D_4</m> be the symmetry group of a square.
-        If <m>X = \{ 1, 2, 3, 4 \}</m> is the set of vertices of the square,
-        then we can consider <m>D_4</m> to consist of the following permutations:
+        Seja <m>G = D_4</m> o grupo de simetrias de um quadrado.
+        Se <m>X = \{ 1, 2, 3, 4 \}</m> é o conjunto de vértices do quadrado,
+        então podemos considerar <m>D_4</m> como constituído pelas seguintes permutações:
         <md>
           \{ (1), (1 \, 3), (2 \, 4), (1 \, 4 \, 3 \, 2), (1 \, 2 \, 3 \, 4), (1 \, 2)(3 \, 4), (1 \, 4)(2 \, 3), (1 \, 3)(2 \, 4) \}
         </md>.
-        The elements of <m>D_4</m> act on <m>X</m> as functions.
-        The permutation <m>(1 \, 3)(2 \, 4)</m> acts on vertex <m>1</m> by sending it to vertex <m>3</m>,
-        on vertex <m>2</m> by sending it to vertex <m>4</m>, and so on.
-        It is easy to see that the  axioms of a group action are satisfied.
+        Os elementos de <m>D_4</m> agem sobre <m>X</m> como funções.
+        A permutação <m>(1 \, 3)(2 \, 4)</m> age sobre o vértice <m>1</m> enviando-o ao vértice <m>3</m>,
+        sobre o vértice <m>2</m> enviando-o ao vértice <m>4</m>, e assim por diante.
+        É fácil ver que os axiomas de uma ação de grupo são satisfeitos.
       </p>
     </example>
 
     <p>
-      In general, if <m>X</m> is any set and <m>G</m> is a subgroup of <m>S_X</m>,
-      the group of all permutations acting on <m>X</m>,
-      then <m>X</m> is a <m>G</m>-set under the group action
+      Em geral, se <m>X</m> é um conjunto qualquer e <m>G</m> é um subgrupo de <m>S_X</m>,
+      o grupo de todas as permutações que agem sobre <m>X</m>,
+      então <m>X</m> é um <m>G</m>-conjunto sob a ação de grupo
       <md>
         (\sigma, x) \mapsto \sigma(x)
       </md>
-      for <m>\sigma \in G</m> and <m>x \in X</m>.
+      para <m>\sigma \in G</m> e <m>x \in X</m>.
     </p>
 
     <example xml:id="actions-example-left-mult">
       <p>
-        If we let <m>X = G</m>,
-        then every group <m>G</m> acts on itself by the left regular representation;
-        that is, <m>(g,x) \mapsto \lambda_g(x) = gx</m>,
-        where  <m>\lambda_g</m> is left multiplication:
+        Se tomarmos <m>X = G</m>,
+        então todo grupo <m>G</m> age sobre si mesmo pela representação regular à esquerda;
+        isto é, <m>(g,x) \mapsto \lambda_g(x) = gx</m>,
+        onde <m>\lambda_g</m> é a multiplicação à esquerda:
         <md>
           <mrow>e \cdot x = \lambda_e x = ex = x</mrow>
           <mrow>(gh) \cdot x = \lambda_{gh}x = \lambda_g \lambda_h x = \lambda_g(hx) = g \cdot ( h \cdot x)</mrow>
         </md>.
-        If <m>H</m> is a subgroup of <m>G</m>,
-        then <m>G</m> is an <m>H</m>-set under left multiplication by elements of <m>H</m>.
+        Se <m>H</m> é um subgrupo de <m>G</m>,
+        então <m>G</m> é um <m>H</m>-conjunto sob a multiplicação à esquerda por elementos de <m>H</m>.
       </p>
     </example>
 
     <example xml:id="actions-example-conjugation">
       <p>
-        Let <m>G</m> be a group and suppose that <m>X=G</m>.
-        If <m>H</m> is a subgroup of <m>G</m>,
-        then <m>G</m> is an <m>H</m>-set under <idx><h>Conjugation</h></idx><term>conjugation</term>;
-        that is, we can define an action of <m>H</m> on <m>G</m>,
+        Seja <m>G</m> um grupo e suponha que <m>X=G</m>.
+        Se <m>H</m> é um subgrupo de <m>G</m>,
+        então <m>G</m> é um <m>H</m>-conjunto sob a <idx><h>Conjugação</h></idx><term>conjugação</term>;
+        isto é, podemos definir uma ação de <m>H</m> sobre <m>G</m>,
         <md>
           H \times G \rightarrow G
         </md>,
@@ -116,328 +116,328 @@
         <md>
           (h,g) \mapsto hgh^{-1}
         </md>
-        for <m>h \in H</m> and <m>g \in G</m>.
-        Clearly, the first axiom for a group action holds.
-        Observing that
+        para <m>h \in H</m> e <m>g \in G</m>.
+        Claramente, o primeiro axioma de uma ação de grupo vale.
+        Observando que
         <md>
           <mrow>(h_1 h_2, g) &amp; = h_1 h_2 g (h_1 h_2 )^{-1}</mrow>
           <mrow>&amp; = h_1( h_2 g h_2^{-1}) h_1^{-1}</mrow>
           <mrow>&amp; =  (h_1, (h_2, g) )</mrow>
         </md>,
-        we see that the second condition is also satisfied.
+        vemos que a segunda condição também é satisfeita.
       </p>
     </example>
 
     <example xml:id="actions-example-left-cosets">
       <p>
-        Let <m>H</m> be a subgroup of <m>G</m> and
-        <m>{\mathcal L}_H</m> the set of left cosets of <m>H</m>.
-        The set <m>{\mathcal L}_H</m> is a <m>G</m>-set under the action
+        Seja <m>H</m> um subgrupo de <m>G</m> e
+        <m>{\mathcal L}_H</m> o conjunto das classes laterais à esquerda de <m>H</m>.
+        O conjunto <m>{\mathcal L}_H</m> é um <m>G</m>-conjunto sob a ação
         <md>
           (g, xH) \mapsto gxH
         </md>.
-        Again, it is easy to see that the first axiom is true.
-        Since <m>(g g')xH = g( g'x H)</m>,
-        the second axiom is  also true.
+        Novamente, é fácil ver que o primeiro axioma é válido.
+        Como <m>(g g')xH = g( g'x H)</m>,
+        o segundo axioma também é válido.
       </p>
     </example>
 
     <p>
-      If <m>G</m> acts on a set <m>X</m> and <m>x, y \in X</m>,
-      then <m>x</m> is said to be <term><m>G</m>-equivalent</term><idx><h><m>G</m>-equivalent</h></idx>
-      to <m>y</m> if there exists a <m>g \in G</m> such that <m>gx =y</m>.
-      We write <m>x \sim_G y</m> or
-      <m>x \sim y</m> if two elements are <m>G</m>-equivalent.
+      Se <m>G</m> age sobre um conjunto <m>X</m> e <m>x, y \in X</m>,
+      dizemos que <m>x</m> é <term><m>G</m>-equivalente</term><idx><h><m>G</m>-equivalente</h></idx>
+      a <m>y</m> se existe um <m>g \in G</m> tal que <m>gx =y</m>.
+      Escrevemos <m>x \sim_G y</m> ou
+      <m>x \sim y</m> quando dois elementos são <m>G</m>-equivalentes.
     </p>
 
     <proposition>
       <statement>
         <p>
-          Let <m>X</m> be a <m>G</m>-set.
-          Then <m>G</m>-equivalence is an equivalence relation on <m>X</m>.
+          Seja <m>X</m> um <m>G</m>-conjunto.
+          Então a <m>G</m>-equivalência é uma relação de equivalência em <m>X</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          The relation <m>\sim</m> is reflexive since <m>ex = x</m>.
-          Suppose that <m>x \sim y</m> for <m>x, y \in X</m>.
-          Then there exists a <m>g</m> such that <m>gx = y</m>.
-          In this case <m>g^{-1}y=x</m>;
-          hence, <m>y \sim x</m>.
-          To show that the relation is transitive,
-          suppose that <m>x \sim y</m> and <m>y \sim z</m>.
-          Then there must exist group elements <m>g</m> and <m>h</m> such that <m>gx = y</m> and <m>hy= z</m>.
-          So <m>z = hy = (hg)x</m>, and <m>x</m> is equivalent to <m>z</m>.
+          A relação <m>\sim</m> é reflexiva, pois <m>ex = x</m>.
+          Suponha que <m>x \sim y</m> para <m>x, y \in X</m>.
+          Então existe um <m>g</m> tal que <m>gx = y</m>.
+          Nesse caso, <m>g^{-1}y=x</m>;
+          logo, <m>y \sim x</m>.
+          Para mostrar que a relação é transitiva,
+          suponha que <m>x \sim y</m> e <m>y \sim z</m>.
+          Então devem existir elementos do grupo <m>g</m> e <m>h</m> tais que <m>gx = y</m> e <m>hy= z</m>.
+          Assim, <m>z = hy = (hg)x</m>, e <m>x</m> é equivalente a <m>z</m>.
         </p>
       </proof>
     </proposition>
 
     <p>
-      If <m>X</m> is a <m>G</m>-set,
-      then each partition of <m>X</m> associated with <m>G</m>-equivalence is called an <term>orbit</term><idx><h>Orbit</h></idx>
-      of <m>X</m> under <m>G</m>.
-      We will denote the orbit that contains an element <m>x</m> of <m>X</m> by <m>{\mathcal O}_x</m>.
+      Se <m>X</m> é um <m>G</m>-conjunto,
+      cada partição de <m>X</m> associada à <m>G</m>-equivalência é chamada de <term>órbita</term><idx><h>Órbita</h></idx>
+      de <m>X</m> sob <m>G</m>.
+      Denotaremos a órbita que contém um elemento <m>x</m> de <m>X</m> por <m>{\mathcal O}_x</m>.
 
       <notation>
         <usage><m>{\mathcal O}_x</m></usage>
-        <description>orbit of <m>x</m></description>
+        <description>órbita de <m>x</m></description>
       </notation>
 
     </p>
 
     <example xml:id="actions-example-permute">
       <p>
-        Let <m>G</m> be the permutation group defined by
+        Seja <m>G</m> o grupo de permutações definido por
         <md>
           G =\{(1), (1 \,  2  \, 3), (1 \, 3  \, 2), (4 \,  5), (1 \,  2  \, 3)(4  \, 5), (1 \, 3  \, 2)(4  \, 5) \}
         </md>
-        and <m>X = \{ 1, 2, 3, 4, 5\}</m>.
-        Then <m>X</m> is a <m>G</m>-set.
-        The orbits are <m>{\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 =\{1, 2, 3\}</m> and <m>{\mathcal O}_4 = {\mathcal O}_5 = \{4, 5\}</m>.
+        e <m>X = \{ 1, 2, 3, 4, 5\}</m>.
+        Então <m>X</m> é um <m>G</m>-conjunto.
+        As órbitas são <m>{\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 =\{1, 2, 3\}</m> e <m>{\mathcal O}_4 = {\mathcal O}_5 = \{4, 5\}</m>.
       </p>
     </example>
 
     <p>
-      Now suppose that <m>G</m> is a group acting on a set <m>X</m> and let <m>g</m> be an element of <m>G</m>.
-      The <term>fixed point set</term><idx><h>Fixed point set</h></idx>
-      of <m>g</m> in <m>X</m>, denoted by <m>X_g</m>,
-      is the set of all <m>x \in X</m> such that <m>gx = x</m>.
+      Agora suponha que <m>G</m> seja um grupo agindo sobre um conjunto <m>X</m> e seja <m>g</m> um elemento de <m>G</m>.
+      O <term>conjunto de pontos fixos</term><idx><h>Conjunto de pontos fixos</h></idx>
+      de <m>g</m> em <m>X</m>, denotado por <m>X_g</m>,
+      é o conjunto de todos os <m>x \in X</m> tais que <m>gx = x</m>.
 
       <notation>
         <usage><m>X_g</m></usage>
-        <description>fixed point set of <m>g</m></description>
+        <description>conjunto de pontos fixos de <m>g</m></description>
       </notation>
 
-      We can also study the group elements <m>g</m> that fix a given <m>x \in X</m>.
-      This set is more than a subset of <m>G</m>, it is a subgroup.
-      This subgroup is called the <term>stabilizer subgroup</term><idx><h>Subgroup</h><h>stabilizer</h></idx> or
-      <term>isotropy subgroup</term><idx><h>Subgroup</h><h>isotropy</h></idx>
-      of <m>x</m>.
-      We will denote the stabilizer subgroup of <m>x</m> by <m>G_x</m>.
+      Também podemos estudar os elementos do grupo <m>g</m> que fixam um dado <m>x \in X</m>.
+      Esse conjunto é mais do que um subconjunto de <m>G</m>; é um subgrupo.
+      Esse subgrupo é chamado de <term>subgrupo estabilizador</term><idx><h>Subgrupo</h><h>estabilizador</h></idx> ou
+      <term>subgrupo de isotropia</term><idx><h>Subgrupo</h><h>isotropia</h></idx>
+      de <m>x</m>.
+      Denotaremos o subgrupo estabilizador de <m>x</m> por <m>G_x</m>.
 
       <notation>
         <usage><m>G_x</m></usage>
-        <description>isotropy subgroup of <m>x</m></description>
+        <description>subgrupo de isotropia de <m>x</m></description>
       </notation>
 
     </p>
 
     <remark>
       <p>
-        It is important to remember that
-        <m>X_g \subset X</m> and <m>G_x \subset G</m>.
+        É importante lembrar que
+        <m>X_g \subset X</m> e <m>G_x \subset G</m>.
       </p>
     </remark>
 
     <example xml:id="actions-example-stabilizer">
       <p>
-        Let <m>X = \{1, 2, 3, 4, 5, 6\}</m> and suppose that <m>G</m> is the permutation group given by the permutations
+        Seja <m>X = \{1, 2, 3, 4, 5, 6\}</m> e suponha que <m>G</m> seja o grupo de permutações dado pelas permutações
         <md>
           \{ (1), (1 \, 2)(3  \, 4  \, 5  \, 6), (3 \,  5)(4  \, 6), (1  \, 2)( 3  \, 6  \, 5  \, 4) \}
         </md>.
-        Then the fixed point sets  of <m>X</m> under the action of <m>G</m> are
+        Então os conjuntos de pontos fixos de <m>X</m> sob a ação de <m>G</m> são
         <md>
           <mrow>X_{(1)}  =  X,</mrow>
           <mrow>X_{(3 \,  5)(4  \, 6)}  =  \{1,2\},</mrow>
           <mrow>X_{(1 \, 2)(3  \, 4  \, 5  \, 6)}  = X_{(1  \, 2)(3  \, 6  \,5  \, 4)}  =  \emptyset</mrow>
         </md>,
-        and the stabilizer subgroups are
+        e os subgrupos estabilizadores são
         <md>
           <mrow>G_1 =  G_2  =  \{(1), (3  \, 5)(4  \, 6) \},</mrow>
           <mrow>G_3  = G_4  = G_5  = G_6 =  \{(1)\}</mrow>
         </md>.
-        It is easily seen that <m>G_x</m> is a subgroup of <m>G</m> for each <m>x \in X</m>.
+        É fácil ver que <m>G_x</m> é um subgrupo de <m>G</m> para cada <m>x \in X</m>.
       </p>
     </example>
 
     <proposition>
       <statement>
         <p>
-          Let <m>G</m> be a group acting on a set <m>X</m> and <m>x \in X</m>.
-          The stabilizer group of <m>x</m>,
-          <m>G_x</m>, is a subgroup of <m>G</m>.
+          Seja <m>G</m> um grupo agindo sobre um conjunto <m>X</m> e <m>x \in X</m>.
+          O grupo estabilizador de <m>x</m>,
+          <m>G_x</m>, é um subgrupo de <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Clearly, <m>e \in G_x</m> since the identity fixes every element in the set <m>X</m>.
-          Let <m>g, h \in G_x</m>.
-          Then <m>gx = x</m> and <m>hx = x</m>.
-          So <m>(gh)x = g(hx) = gx = x</m>;
-          hence, the product of two elements in <m>G_x</m> is also in <m>G_x</m>.
-          Finally, if <m>g \in G_x</m>,
-          then <m>x = ex = (g^{-1}g)x = (g^{-1})gx = g^{-1} x</m>.
-          So <m>g^{-1}</m> is in <m>G_x</m>.
+          Claramente, <m>e \in G_x</m>, pois a identidade fixa todo elemento do conjunto <m>X</m>.
+          Sejam <m>g, h \in G_x</m>.
+          Então <m>gx = x</m> e <m>hx = x</m>.
+          Logo, <m>(gh)x = g(hx) = gx = x</m>;
+          portanto, o produto de dois elementos de <m>G_x</m> também está em <m>G_x</m>.
+          Finalmente, se <m>g \in G_x</m>,
+          então <m>x = ex = (g^{-1}g)x = (g^{-1})gx = g^{-1} x</m>.
+          Assim, <m>g^{-1}</m> está em <m>G_x</m>.
         </p>
       </proof>
     </proposition>
 
     <p>
-      We will denote the number of elements in the fixed point set of an element <m>g \in G</m> by <m>|X_g|</m> and denote the number of elements in the orbit of <m>x \in X</m> by <m>|{\mathcal O}_x|</m>.
-      The next theorem demonstrates the relationship between orbits of an element <m>x \in X</m> and the left cosets of <m>G_x</m> in <m>G</m>.
+      Denotaremos o número de elementos no conjunto de pontos fixos de um elemento <m>g \in G</m> por <m>|X_g|</m> e o número de elementos na órbita de <m>x \in X</m> por <m>|{\mathcal O}_x|</m>.
+      O teorema a seguir demonstra a relação entre as órbitas de um elemento <m>x \in X</m> e as classes laterais à esquerda de <m>G_x</m> em <m>G</m>.
     </p>
         <!-- typo corrected.  Suggested by L. Franklin. -->
         <!-- TWJ - 12/19/2011 -->
     <theorem xml:id="actions-theorem-orbit">
       <statement>
         <p>
-          Let <m>G</m> be a finite group and <m>X</m> a finite <m>G</m>-set.
-          If <m>x \in X</m>, then <m>|{\mathcal O}_x| = [G:G_x]</m>.
+          Seja <m>G</m> um grupo finito e <m>X</m> um <m>G</m>-conjunto finito.
+          Se <m>x \in X</m>, então <m>|{\mathcal O}_x| = [G:G_x]</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We know that <m>|G|/|G_x|</m> is the number of left cosets of <m>G_x</m> in <m>G</m> by Lagrange's Theorem (<xref ref="cosets-theorem-lagrange"/>).
-          We will define a bijective  map <m>\phi</m> between the orbit
-          <m>{\mathcal O}_x</m> of <m>X</m> and the set of left cosets
-          <m>{\mathcal L}_{G_x}</m> of <m>G_x</m> in <m>G</m>.
-          Let <m>y \in {\mathcal O}_x</m>.
-          Then there exists a <m>g</m> in <m>G</m> such that <m>g x = y</m>.
-          Define <m>\phi</m> by <m>\phi( y ) = g G_x</m>.
-          To show that <m>\phi</m> is one-to-one,
-          assume that <m>\phi(y_1) = \phi(y_2)</m>.
-          Then
+          Sabemos que <m>|G|/|G_x|</m> é o número de classes laterais à esquerda de <m>G_x</m> em <m>G</m>, pelo Teorema de Lagrange (<xref ref="cosets-theorem-lagrange"/>).
+          Definiremos uma aplicação bijetiva <m>\phi</m> entre a órbita
+          <m>{\mathcal O}_x</m> de <m>X</m> e o conjunto das classes laterais à esquerda
+          <m>{\mathcal L}_{G_x}</m> de <m>G_x</m> em <m>G</m>.
+          Seja <m>y \in {\mathcal O}_x</m>.
+          Então existe um <m>g</m> em <m>G</m> tal que <m>g x = y</m>.
+          Defina <m>\phi</m> por <m>\phi( y ) = g G_x</m>.
+          Para mostrar que <m>\phi</m> é injetiva,
+          suponha que <m>\phi(y_1) = \phi(y_2)</m>.
+          Então
           <md>
             \phi(y_1) = g_1 G_x = g_2 G_x = \phi(y_2)
           </md>,
-          where <m>g_1 x = y_1</m> and <m>g_2 x = y_2</m>.
-          Since <m>g_1 G_x = g_2 G_x</m>,
-          there exists a <m>g \in G_x</m> such that <m>g_2 = g_1 g</m>,
+          onde <m>g_1 x = y_1</m> e <m>g_2 x = y_2</m>.
+          Como <m>g_1 G_x = g_2 G_x</m>,
+          existe um <m>g \in G_x</m> tal que <m>g_2 = g_1 g</m>,
           <md>
             y_2 = g_2 x = g_1 g x = g_1 x = y_1;
           </md>
-          consequently, the map <m>\phi</m> is  one-to-one.
-          Finally, we must show that the map <m>\phi</m> is onto.
-          Let <m>g G_x</m> be a left coset.
-          If <m>g x = y</m>, then <m>\phi(y) = g G_x</m>.
+          consequentemente, a aplicação <m>\phi</m> é injetiva.
+          Finalmente, devemos mostrar que a aplicação <m>\phi</m> é sobrejetiva.
+          Seja <m>g G_x</m> uma classe lateral à esquerda.
+          Se <m>g x = y</m>, então <m>\phi(y) = g G_x</m>.
         </p>
       </proof>
     </theorem>
   </section>
 
   <section xml:id="actions-section-class-equation">
-    <title>The Class Equation</title>
+    <title>A Equação das Classes</title>
     <!--NOTATION TABLE\label{noteXG}-->
     <p>
-      Let <m>X</m> be a finite <m>G</m>-set and <m>X_G</m> be the set of fixed points in <m>X</m>; that is,
+      Seja <m>X</m> um <m>G</m>-conjunto finito e <m>X_G</m> o conjunto de pontos fixos em <m>X</m>; isto é,
       <md>
-        X_G = \{ x \in X : gx = x \text{ for all } g \in G \}
+        X_G = \{ x \in X : gx = x \text{ para todo } g \in G \}
       </md>.
-      Since the orbits of the action partition <m>X</m>,
+      Como as órbitas da ação particionam <m>X</m>,
       <md>
         |X| = |X_G| + \sum_{i = k}^n |{\mathcal O}_{x_i}|
       </md>,
-      where <m>x_k, \ldots,
-      x_n</m> are representatives from the distinct nontrivial orbits of <m>X</m>.
+      onde <m>x_k, \ldots,
+      x_n</m> são representantes das órbitas não triviais distintas de <m>X</m>.
     </p>
 
     <p>
-      Now consider the special case in which <m>G</m> acts on itself by conjugation,
+      Considere agora o caso especial em que <m>G</m> age sobre si mesmo por conjugação,
       <m>(g,x) \mapsto gxg^{-1}</m>.
-      The <term>center</term><idx><h>Group</h><h>center of</h></idx>
-      of <m>G</m>,
+      O <term>centro</term><idx><h>Grupo</h><h>centro de</h></idx>
+      de <m>G</m>,
       <md>
-        Z(G) = \{x : xg = gx \text{ for all } g \in G \}
+        Z(G) = \{x : xg = gx \text{ para todo } g \in G \}
       </md>,
-      is the set of points that are fixed by conjugation.
-      The nontrivial orbits of the action are called the
-      <term>conjugacy classes</term><idx><h>Conjugacy classes</h></idx>
-      of <m>G</m>.
-      If <m>x_1, \ldots,
-      x_k</m> are representatives from each of the nontrivial conjugacy classes of <m>G</m> and <m>|{\mathcal O}_{x_1}| = n_1, \ldots, |{\mathcal O}_{x_k}| = n_k</m>, then
+      é o conjunto de pontos fixados pela conjugação.
+      As órbitas não triviais da ação são chamadas de
+      <term>classes de conjugação</term><idx><h>Classes de conjugação</h></idx>
+      de <m>G</m>.
+      Se <m>x_1, \ldots,
+      x_k</m> são representantes de cada uma das classes de conjugação não triviais de <m>G</m> e <m>|{\mathcal O}_{x_1}| = n_1, \ldots, |{\mathcal O}_{x_k}| = n_k</m>, então
       <md>
         |G| = |Z(G)| + n_1 + \cdots + n_k
       </md>.
-      The stabilizer subgroups of each of the <m>x_i</m>'s, <m>C(x_i) = \{ g \in G: g x_i = x_i g \}</m>,
-      are called the <term>centralizer subgroups</term><idx><h>Subgroup</h><h>centralizer</h></idx><idx><h>Centralizer</h><h>of a subgroup</h></idx> of the <m>x_i</m>'s.
-      From <xref ref="actions-theorem-orbit"/>, we obtain the
-      <idx><h>Class equation</h></idx><term>class equation</term>:
+      Os subgrupos estabilizadores de cada um dos <m>x_i</m>, <m>C(x_i) = \{ g \in G: g x_i = x_i g \}</m>,
+      são chamados de <term>subgrupos centralizadores</term><idx><h>Subgrupo</h><h>centralizador</h></idx><idx><h>Centralizador</h><h>de um subgrupo</h></idx> dos <m>x_i</m>.
+      Pelo <xref ref="actions-theorem-orbit"/>, obtemos a
+      <idx><h>Equação das classes</h></idx><term>equação das classes</term>:
       <md>
         |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]
       </md>.
-      One of the consequences of the class equation is that the order of each conjugacy class must divide the order of <m>G</m>.
+      Uma das consequências da equação das classes é que a ordem de cada classe de conjugação deve dividir a ordem de <m>G</m>.
     </p>
         <!-- Reference repaired. TWJ 12/19/2011 -->
         <!-- Typo corrected. Suggested by A. Vance. TWJ 11/13/2011 -->
     <example xml:id="actions-example-conjugacy-class-s3">
       <p>
-        It is easy to check that  the conjugacy classes in <m>S_3</m> are the following:
+        É fácil verificar que as classes de conjugação em <m>S_3</m> são as seguintes:
         <md>
           \{ (1) \},  \quad \{ (1 \, 2 \, 3), (1 \, 3 \, 2) \}, \quad \{(1 \, 2), (1 \, 3), (2 \, 3) \}
         </md>.
-        The class equation is <m>6 = 1+2+3</m>.
+        A equação das classes é <m>6 = 1+2+3</m>.
       </p>
     </example>
 
     <example xml:id="actions-example-conjugacy-class-d4">
       <p>
-        The center of <m>D_4</m> is <m>\{ (1), (1 \, 3)(2 \, 4) \}</m>,
-        and the conjugacy classes are
+        O centro de <m>D_4</m> é <m>\{ (1), (1 \, 3)(2 \, 4) \}</m>,
+        e as classes de conjugação são
         <md>
           \{ (1 \, 3), (2 \, 4) \}, \quad \{ (1 \, 4 \, 3 \, 2), (1 \, 2 \, 3 \, 4) \}, \quad \{ (1 \, 2)(3 \, 4), (1 \, 4)(2 \, 3) \}
         </md>.
-        Thus, the class equation for <m>D_4</m> is <m>8 = 2 + 2 + 2 + 2</m>.
+        Assim, a equação das classes para <m>D_4</m> é <m>8 = 2 + 2 + 2 + 2</m>.
       </p>
     </example>
         <!-- %Example corrected.  There are 5 classes. TWJ 9/7/2010 -->
         <!-- %Example clarified.  Suggested by B. Whetter.  TWJ 11/17/2012 -->
     <example xml:id="actions-example-conjugacy-class-sn">
       <p>
-        For <m>S_n</m> it takes a bit of work to find the conjugacy classes.
-        We begin with cycles.
-        Suppose that <m>\sigma = ( a_1, \ldots,
-        a_k)</m> is a cycle and let <m>\tau \in S_n</m>.
-        By <xref ref="cosets-theorem-cycle-length-theorem"/>,
+        Para <m>S_n</m>, é necessário algum trabalho para encontrar as classes de conjugação.
+        Começamos com os ciclos.
+        Suponha que <m>\sigma = ( a_1, \ldots,
+        a_k)</m> seja um ciclo e seja <m>\tau \in S_n</m>.
+        Pelo <xref ref="cosets-theorem-cycle-length-theorem"/>,
         <md>
           \tau \sigma \tau^{-1} = ( \tau( a_1), \ldots, \tau(a_k))
         </md>.
-        Consequently, any two cycles of the same length are conjugate.
-        Now let <m>\sigma = \sigma_1 \sigma_2 \cdots \sigma_r</m> be a cycle decomposition,
-        where the length of each cycle <m>\sigma_i</m> is <m>r_i</m>.
-        Then <m>\sigma</m> is conjugate to every other
-        <m>\tau \in S_n</m> whose cycle decomposition has the same lengths.
+        Consequentemente, dois ciclos de mesmo comprimento são conjugados.
+        Agora seja <m>\sigma = \sigma_1 \sigma_2 \cdots \sigma_r</m> uma decomposição em ciclos,
+        onde o comprimento de cada ciclo <m>\sigma_i</m> é <m>r_i</m>.
+        Então <m>\sigma</m> é conjugado a qualquer outro
+        <m>\tau \in S_n</m> cuja decomposição em ciclos tenha os mesmos comprimentos.
       </p>
 
       <p>
-        The number of conjugate classes in <m>S_n</m> is the number of ways in which <m>n</m> can be partitioned into sums of positive integers.
-        In the case of <m>S_3</m> for example,
-        we can partition the integer <m>3</m> into the following three sums:
+        O número de classes de conjugação em <m>S_n</m> é o número de maneiras de particionar <m>n</m> em somas de inteiros positivos.
+        No caso de <m>S_3</m>, por exemplo,
+        podemos particionar o inteiro <m>3</m> nas três somas seguintes:
         <md>
           <mrow>3 &amp; =  1 + 1 + 1</mrow>
           <mrow>3 &amp; =  1 + 2</mrow>
           <mrow>3 &amp; =  3;</mrow>
         </md>
-        therefore, there are three conjugacy classes.
-        There are variations to problem of finding the number of such partitions for any positive integer <m>n</m> that are what computer scientists call <term>NP-complete</term>.
-        This effectively means that the problem cannot be solved for a large <m>n</m> because the computations would be too time-consuming for even the largest computer.
+        portanto, há três classes de conjugação.
+        Há variações do problema de encontrar o número dessas partições para qualquer inteiro positivo <m>n</m> que os cientistas da computação chamam de <term>NP-completas</term>.
+        Isso significa, na prática, que o problema não pode ser resolvido para um <m>n</m> grande, pois os cálculos consumiriam tempo demais até mesmo no maior computador.
       </p>
     </example>
 
     <theorem xml:id="actions-theorem-pn">
       <statement>
         <p>
-          Let <m>G</m> be a group of order <m>p^n</m> where <m>p</m> is prime.
-          Then <m>G</m> has a nontrivial center.
+          Seja <m>G</m> um grupo de ordem <m>p^n</m>, onde <m>p</m> é primo.
+          Então <m>G</m> tem um centro não trivial.
         </p>
       </statement>
 
       <proof>
         <p>
-          We apply the class equation
+          Aplicamos a equação das classes
           <md>
             |G| = |Z(G)| + n_1 + \cdots + n_k
           </md>.
-          Since each <m>n_i \gt 1</m> and <m>n_i \mid |G|</m>,
-          it follows that <m>p</m>  must divide each <m>n_i</m>.
-          Also, <m>p \mid |G|</m>; hence,
-          <m>p</m> must divide <m>|Z(G)|</m>.
-          Since the identity is always in the center of <m>G</m>,
+          Como cada <m>n_i \gt 1</m> e <m>n_i \mid |G|</m>,
+          segue que <m>p</m> deve dividir cada <m>n_i</m>.
+          Além disso, <m>p \mid |G|</m>; logo,
+          <m>p</m> deve dividir <m>|Z(G)|</m>.
+          Como a identidade está sempre no centro de <m>G</m>,
           <m>|Z(G)| \geq 1</m>.
-          Therefore, <m>|Z(G)|  \geq p</m>,
-          and there exists some <m>g \in Z(G)</m> such that <m>g \neq 1</m>.
+          Portanto, <m>|Z(G)|  \geq p</m>,
+          e existe algum <m>g \in Z(G)</m> tal que <m>g \neq 1</m>.
         </p>
       </proof>
     </theorem>
@@ -445,52 +445,52 @@
     <corollary xml:id="actions-corollary-p2abelian">
       <statement>
         <p>
-          Let <m>G</m> be a group of order <m>p^2</m> where <m>p</m> is prime.
-          Then <m>G</m> is abelian.
+          Seja <m>G</m> um grupo de ordem <m>p^2</m>, onde <m>p</m> é primo.
+          Então <m>G</m> é abeliano.
         </p>
       </statement>
 
       <proof>
         <p>
-          By <xref ref="actions-theorem-pn"/>, <m>|Z(G)| = p</m> or <m>p^2</m>.
-          Suppose that <m>|Z(G)| = p</m>.
-          Then <m>Z(G)</m> and <m>G / Z(G)</m> both have order <m>p</m> and must both be cyclic groups.
-          Choosing a generator <m>aZ(G)</m> for <m>G / Z(G)</m>,
-          we can write any element <m>gZ(G)</m> in the quotient group as
-          <m>a^m Z(G)</m> for some integer <m>m</m>;
-          hence, <m>g = a^m x</m> for some <m>x</m> in the center of <m>G</m>.
-          Similarly, if <m>hZ(G) \in G / Z(G)</m>,
-          there exists a <m>y</m> in <m>Z(G)</m> such that
-          <m>h = a^n y</m> for some integer <m>n</m>.
-          Since <m>x</m> and <m>y</m> are in the center of <m>G</m>,
-          they commute with all other elements of <m>G</m>; therefore,
+          Pelo <xref ref="actions-theorem-pn"/>, <m>|Z(G)| = p</m> ou <m>p^2</m>.
+          Suponha que <m>|Z(G)| = p</m>.
+          Então <m>Z(G)</m> e <m>G / Z(G)</m> têm ambos ordem <m>p</m> e devem ser grupos cíclicos.
+          Escolhendo um gerador <m>aZ(G)</m> para <m>G / Z(G)</m>,
+          podemos escrever qualquer elemento <m>gZ(G)</m> do grupo quociente como
+          <m>a^m Z(G)</m> para algum inteiro <m>m</m>;
+          portanto, <m>g = a^m x</m> para algum <m>x</m> no centro de <m>G</m>.
+          De modo semelhante, se <m>hZ(G) \in G / Z(G)</m>,
+          existe um <m>y</m> em <m>Z(G)</m> tal que
+          <m>h = a^n y</m> para algum inteiro <m>n</m>.
+          Como <m>x</m> e <m>y</m> estão no centro de <m>G</m>,
+          eles comutam com todos os outros elementos de <m>G</m>; portanto,
           <md>
             gh = a^m x a^n y =  a^{m+n} x y = a^n y a^m x = hg
           </md>,
-          and <m>G</m> must be abelian. Hence, <m>|Z(G)| = p^2</m>.
+          e <m>G</m> deve ser abeliano. Logo, <m>|Z(G)| = p^2</m>.
         </p>
       </proof>
     </corollary>
   </section>
 
   <section xml:id="actions-section-burnsides-counting-theorem">
-    <title>Burnside's Counting Theorem</title>
+    <title>Teorema de Contagem de Burnside</title>
     <introduction>
       <p>
-        Suppose that we wish to color the vertices of a square with two different colors,
-        say black and white.
-        We might suspect that there would be <m>2^4=16</m> different colorings.
-        However, some of these colorings are equivalent.
-        If we color the first vertex black and the remaining vertices white,
-        it is the same as coloring the second vertex black and the remaining ones white since we could obtain the second coloring simply by rotating the square
-        <m>90^\circ</m> (<xref ref="actions-figure-coloring"/>).
+        Suponha que desejemos colorir os vértices de um quadrado com duas cores diferentes,
+        por exemplo, preto e branco.
+        Poderíamos supor que haveria <m>2^4=16</m> colorações diferentes.
+        Contudo, algumas dessas colorações são equivalentes.
+        Se colorirmos o primeiro vértice de preto e os demais de branco,
+        isso será igual a colorir o segundo vértice de preto e os demais de branco, pois poderíamos obter a segunda coloração simplesmente girando o quadrado
+        em <m>90^\circ</m> (<xref ref="actions-figure-coloring"/>).
       </p>
 
       <figure xml:id="actions-figure-coloring">
-        <caption>Equivalent colorings of square</caption>
+        <caption>Colorações equivalentes de um quadrado</caption>
             <!-- Replaced figure with tikz figure - TWJ 6/28/2010 -->
         <image width="60%" xml:id="actions-colorings-square">
-        	<description> Four squares with vertices labeled clockwise BWWW, WBWW, WWWB, and WWBW beginning in the upper left corner.</description>
+            <description>Quatro quadrados com vértices rotulados no sentido horário como BWWW, WBWW, WWWB e WWBW, começando no canto superior esquerdo.</description>
             <latex-image>
                 <xi:include href="tikz/actions-colorings-square.tex" parse="text"/>
             </latex-image>
@@ -499,46 +499,46 @@
       </figure>
 
       <p>
-        Burnside's Counting Theorem offers a method of computing the number of distinguishable ways in which something can be done.
-        In addition to its geometric applications,
-        the theorem has interesting applications to areas in switching theory and chemistry.
-        The proof of Burnside's Counting Theorem depends on the following lemma.
+        O Teorema de Contagem de Burnside oferece um método para calcular o número de maneiras distinguíveis de realizar algo.
+        Além de suas aplicações geométricas,
+        o teorema tem aplicações interessantes em áreas da teoria de interruptores e da química.
+        A demonstração do Teorema de Contagem de Burnside depende do lema a seguir.
       </p>
 
       <lemma xml:id="actions-lemma-gset">
         <statement>
           <p>
-            Let <m>X</m> be a <m>G</m>-set and suppose that <m>x \sim y</m>.
-            Then <m>G_x</m> is isomorphic to <m>G_y</m>.
-            In particular, <m>|G_x| = |G_y|</m>.
+          Seja <m>X</m> um <m>G</m>-conjunto e suponha que <m>x \sim y</m>.
+          Então <m>G_x</m> é isomorfo a <m>G_y</m>.
+          Em particular, <m>|G_x| = |G_y|</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>G</m> act on <m>X</m> by <m>(g,x) \mapsto g \cdot x</m>.
-            Since <m>x \sim y</m>,
-            there exists a <m>g \in G</m> such that <m>g \cdot x=y</m>.
-            Let <m>a \in G_x</m>.
-            Since
+            Seja <m>G</m> agindo sobre <m>X</m> por <m>(g,x) \mapsto g \cdot x</m>.
+            Como <m>x \sim y</m>,
+            existe um <m>g \in G</m> tal que <m>g \cdot x=y</m>.
+            Seja <m>a \in G_x</m>.
+            Como
             <md>
               gag^{-1} \cdot y = ga \cdot g^{-1}y = ga \cdot x = g \cdot x = y
             </md>,
-            we can define a map <m>\phi: G_x \rightarrow G_y</m> by <m>\phi(a) = gag^{-1}</m>.
-            The map <m>\phi</m> is a homomorphism since
+            podemos definir uma aplicação <m>\phi: G_x \rightarrow G_y</m> por <m>\phi(a) = gag^{-1}</m>.
+            A aplicação <m>\phi</m> é um homomorfismo, pois
             <md>
               \phi(ab) = gabg^{-1} = gag^{-1} gbg^{-1} = \phi(a) \phi(b)
             </md>.
-            Suppose that <m>\phi(a) = \phi(b)</m>.
-            Then <m>gag^{-1}= gbg^{-1}</m> or <m>a=b</m>;
-            hence, the map is injective.
-            To show that <m>\phi</m> is onto,
-            let <m>b</m> be in <m>G_y</m>;
-            then <m>g^{-1}bg</m> is in <m>G_x</m> since
+            Suponha que <m>\phi(a) = \phi(b)</m>.
+            Então <m>gag^{-1}= gbg^{-1}</m> ou <m>a=b</m>;
+            logo, a aplicação é injetiva.
+            Para mostrar que <m>\phi</m> é sobrejetiva,
+            seja <m>b</m> um elemento de <m>G_y</m>;
+            então <m>g^{-1}bg</m> está em <m>G_x</m>, pois
             <md>
               g^{-1}bg \cdot x = g^{-1}b \cdot gx = g^{-1}b \cdot y = g^{-1} \cdot y = x;
             </md>
-            and <m>\phi(g^{-1}bg ) = b</m>.
+            e <m>\phi(g^{-1}bg ) = b</m>.
           </p>
         </proof>
       </lemma>
@@ -547,12 +547,12 @@
       <theorem>
         <title>Burnside</title>
         <idx>
-        <h>Burnside's Counting Theorem</h>
+        <h>Teorema de Contagem de Burnside</h>
         </idx>
         <statement>
           <p>
-            Let <m>G</m> be a  finite group acting on a set <m>X</m> and let <m>k</m> denote the number of orbits of <m>X</m>.
-            Then
+            Seja <m>G</m> um grupo finito agindo sobre um conjunto <m>X</m> e seja <m>k</m> o número de órbitas de <m>X</m>.
+            Então
             <md>
               k = \frac{1}{|G|} \sum_{g \in G} |X_g|
             </md>.
@@ -561,26 +561,26 @@
 
         <proof>
           <p>
-            We look at all the fixed points <m>x</m> of all the elements in <m>g \in G</m>;
-            that is, we look at all <m>g</m>'s and all <m>x</m>'s such that <m>gx =x</m>.
-            If viewed in terms of fixed point sets,
-            the number of all <m>g</m>'s fixing <m>x</m>'s is
+            Consideramos todos os pontos fixos <m>x</m> de todos os elementos <m>g \in G</m>;
+            isto é, consideramos todos os <m>g</m> e todos os <m>x</m> tais que <m>gx =x</m>.
+            Visto em termos de conjuntos de pontos fixos,
+            o número de todos os <m>g</m> que fixam pontos <m>x</m> é
             <md>
               \sum_{g \in G} |X_g|
             </md>.
-            However, if viewed in terms of the stabilizer subgroups,
-            this number is
+            Contudo, se visto em termos dos subgrupos estabilizadores,
+            esse número é
             <md>
               \sum_{x \in X} |G_x|;
             </md>
-            hence, <m>\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x|</m>.
-            By <xref ref="actions-lemma-gset"/>,
+            portanto, <m>\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x|</m>.
+            Pelo <xref ref="actions-lemma-gset"/>,
             <md>
               \sum_{y \in {\mathcal O}_x} |G_y|  =  | {\mathcal O}_x| \cdot |G_x|
             </md>.
-            By <xref ref="actions-theorem-orbit"/> and Lagrange's Theorem,
-            this expression is equal  to <m>|G|</m>.
-            Summing over all of the <m>k</m> distinct orbits, we conclude that
+            Pelo <xref ref="actions-theorem-orbit"/> e pelo Teorema de Lagrange,
+            essa expressão é igual a <m>|G|</m>.
+            Somando sobre todas as <m>k</m> órbitas distintas, concluímos que
             <md>
               \sum_{g \in G} |X_g| = \sum_{x \in X} |G_x| = k \cdot |G|
             </md>.
@@ -590,17 +590,17 @@
 
       <example xml:id="actions-example-burnside">
         <p>
-          Let <m>X = \{1, 2, 3, 4, 5 \}</m> and suppose that <m>G</m> is the permutation group <m>G= \{(1), (1  \, 3), (1  \, 3)(2  \, 5), (2  \, 5) \}</m>.
-          The orbits of <m>X</m> are <m>\{1, 3\}</m>,
-          <m>\{2, 5\}</m>, and <m>\{4\}</m>.
-          The fixed point sets are
+          Seja <m>X = \{1, 2, 3, 4, 5 \}</m> e suponha que <m>G</m> seja o grupo de permutações <m>G= \{(1), (1  \, 3), (1  \, 3)(2  \, 5), (2  \, 5) \}</m>.
+          As órbitas de <m>X</m> são <m>\{1, 3\}</m>,
+          <m>\{2, 5\}</m> e <m>\{4\}</m>.
+          Os conjuntos de pontos fixos são
           <md>
             <mrow>X_{(1)} &amp; =  X</mrow>
             <mrow>X_{(1 \, 3)} &amp; =  \{2, 4, 5 \}</mrow>
             <mrow>X_{(1  \, 3)(2  \, 5)} &amp; =  \{4\}</mrow>
             <mrow>X_{(2 \,  5)} &amp; =  \{1, 3, 4 \}</mrow>
           </md>.
-          Burnside's Theorem says that
+          O Teorema de Burnside afirma que
           <md>
             k = \frac{1}{|G|} \sum_{g \in G} |X_g| = \frac{1}{4}(5 + 3 + 1 + 3) = 3
           </md>.
@@ -609,61 +609,61 @@
     </introduction>
 
     <subsection xml:id="actions-subsection-geometric-example">
-      <title>A Geometric Example</title>
+      <title>Um Exemplo Geométrico</title>
       <p>
-        Before we apply Burnside's Theorem to switching-theory problems,
-        let us examine the number of ways in which the vertices of a square can be colored black or white.
-        Notice that we can sometimes obtain equivalent colorings by simply applying a rigid motion to the square.
-        For instance, as we have pointed out,
-        if we color one of the vertices black and the remaining three white,
-        it does not matter which vertex was colored black since a rotation will give an equivalent coloring.
+        Antes de aplicarmos o Teorema de Burnside a problemas de teoria de interruptores,
+        vamos examinar o número de maneiras de colorir os vértices de um quadrado de preto ou branco.
+        Observe que às vezes podemos obter colorações equivalentes simplesmente aplicando um movimento rígido ao quadrado.
+        Por exemplo, como já observamos,
+        se colorirmos um dos vértices de preto e os três restantes de branco,
+        não importa qual vértice foi colorido de preto, pois uma rotação produzirá uma coloração equivalente.
       </p>
 
       <p>
-        The  symmetry group of a square,
-        <m>D_4</m>, is given by the following permutations:
+        O grupo de simetrias de um quadrado,
+        <m>D_4</m>, é dado pelas seguintes permutações:
         <md>
           <mrow>&amp;(1)    &amp; &amp;(1 \, 3)     &amp; &amp; (2 \, 4)     &amp; &amp; (1 \, 4 \, 3 \, 2)</mrow>
           <mrow>&amp;(1 \, 2 \, 3 \, 4) &amp; &amp;(1 \, 2)(3 \, 4) &amp; &amp; (1 \, 4)(2 \, 3) &amp; &amp; (1 \, 3)(2 \, 4)</mrow>
         </md>
-        The group <m>G</m> acts on the set of vertices <m>\{ 1, 2, 3, 4\}</m> in the usual manner.
-        We can describe the different colorings by mappings from <m>X</m> into
-        <m>Y = \{ B, W \}</m> where <m>B</m> and <m>W</m> represent the colors black and white,
-        respectively.
-        Each map <m>f : X \rightarrow Y</m> describes a way to color the corners of the square.
-        Every <m>\sigma \in D_4</m> induces a permutation
-        <m>\widetilde{ \sigma }</m> of the possible colorings given by
-        <m>\widetilde{\sigma}(f) = f \circ \sigma</m> for <m>f : X \rightarrow Y</m>.
-        For example, suppose that <m>f</m> is defined by
+        O grupo <m>G</m> age sobre o conjunto de vértices <m>\{ 1, 2, 3, 4\}</m> da maneira usual.
+        Podemos descrever as diferentes colorações por aplicações de <m>X</m> em
+        <m>Y = \{ B, W \}</m>, onde <m>B</m> e <m>W</m> representam as cores preta e branca,
+        respectivamente.
+        Cada aplicação <m>f : X \rightarrow Y</m> descreve uma maneira de colorir os cantos do quadrado.
+        Cada <m>\sigma \in D_4</m> induz uma permutação
+        <m>\widetilde{ \sigma }</m> das colorações possíveis dada por
+        <m>\widetilde{\sigma}(f) = f \circ \sigma</m> para <m>f : X \rightarrow Y</m>.
+        Por exemplo, suponha que <m>f</m> seja definida por
         <md>
           <mrow>f(1) &amp; =  B</mrow>
           <mrow>f(2) &amp; =  W</mrow>
           <mrow>f(3) &amp; =  W</mrow>
           <mrow>f(4) &amp; =  W</mrow>
         </md>
-        and <m>\sigma = (1 2)(3 4)</m>.
-        Then <m>\widetilde{\sigma}(f) = f \circ \sigma</m> sends vertex <m>2</m> to <m>B</m> and the remaining vertices to <m>W</m>.
-        The set of all such <m>\widetilde{\sigma}</m> is a permutation group
-        <m>\widetilde{G}</m> on the set of possible colorings.
-        Let <m>\widetilde{X}</m> denote the set of all possible colorings;
-        that is, <m>\widetilde{X}</m> is the set of all possible maps from <m>X</m> to <m>Y</m>.
-        Now we must compute the number of <m>\widetilde{G}</m>-equivalence classes.
+        e <m>\sigma = (1 2)(3 4)</m>.
+        Então <m>\widetilde{\sigma}(f) = f \circ \sigma</m> envia o vértice <m>2</m> para <m>B</m> e os vértices restantes para <m>W</m>.
+        O conjunto de todas essas <m>\widetilde{\sigma}</m> é um grupo de permutações
+        <m>\widetilde{G}</m> no conjunto das colorações possíveis.
+        Seja <m>\widetilde{X}</m> o conjunto de todas as colorações possíveis;
+        isto é, <m>\widetilde{X}</m> é o conjunto de todas as aplicações possíveis de <m>X</m> em <m>Y</m>.
+        Agora devemos calcular o número de classes de <m>\widetilde{G}</m>-equivalência.
 
         <ol>
           <li>
             <p>
-              <m>\widetilde{X}_{(1)} = \widetilde{X}</m> since the identity fixes every possible coloring. <m>|\widetilde{X}| = 2^4 =~16</m>.
+              <m>\widetilde{X}_{(1)} = \widetilde{X}</m>, pois a identidade fixa toda coloração possível. <m>|\widetilde{X}| = 2^4 =~16</m>.
             </p>
           </li>
 
           <li>
             <p>
-              <m>\widetilde{X}_{(1 \,  2  \, 3  \, 4)}</m> consists of all
-              <m>f \in \widetilde{X}</m> such that <m>f</m> is unchanged by the permutation <m>(1 \, 2 \, 3  \, 4)</m>.
-              In this case <m>f(1) = f(2) = f(3) = f(4)</m>,
-              so that all values of <m>f</m> must be the same;
-              that is, either <m>f(x)= B</m> or <m>f(x)= W</m> for every vertex <m>x</m> of the square.
-              So <m>|\widetilde{X}_{(1  \, 2 \,  3 \, 4)}| = 2</m>.
+              <m>\widetilde{X}_{(1 \,  2  \, 3  \, 4)}</m> consiste em todas as
+              <m>f \in \widetilde{X}</m> tais que <m>f</m> não se altera pela permutação <m>(1 \, 2 \, 3  \, 4)</m>.
+              Nesse caso, <m>f(1) = f(2) = f(3) = f(4)</m>,
+              de modo que todos os valores de <m>f</m> devem ser iguais;
+              isto é, ou <m>f(x)= B</m> ou <m>f(x)= W</m> para todo vértice <m>x</m> do quadrado.
+              Logo, <m>|\widetilde{X}_{(1  \, 2 \,  3 \, 4)}| = 2</m>.
             </p>
           </li>
 
@@ -675,9 +675,9 @@
 
           <li>
             <p>
-              For <m>\widetilde{X}_{(1 \, 3)(2  \, 4)}</m>,
-              <m>f(1) = f(3)</m> and <m>f(2) = f(4)</m>.
-              Thus, <m>|\widetilde{X}_{(1 \, 3)(2 \, 4)}| = 2^2 = 4</m>.
+              Para <m>\widetilde{X}_{(1 \, 3)(2  \, 4)}</m>,
+              <m>f(1) = f(3)</m> e <m>f(2) = f(4)</m>.
+              Portanto, <m>|\widetilde{X}_{(1 \, 3)(2 \, 4)}| = 2^2 = 4</m>.
             </p>
           </li>
 
@@ -695,9 +695,9 @@
 
           <li>
             <p>
-              For <m>\widetilde{X}_{(1  \, 3 )}</m>,
-              <m>f(1) = f(3)</m> and the other corners can be of any color;
-              hence, <m>|\widetilde{X}_{(1  \, 3)}| = 2^3 = 8</m>.
+              Para <m>\widetilde{X}_{(1  \, 3 )}</m>,
+              <m>f(1) = f(3)</m> e os outros vértices podem ter qualquer cor;
+              portanto, <m>|\widetilde{X}_{(1  \, 3)}| = 2^3 = 8</m>.
             </p>
           </li>
 
@@ -708,49 +708,49 @@
           </li>
         </ol>
 
-        By Burnside's Theorem, we can conclude that there are exactly
+        Pelo Teorema de Burnside, podemos concluir que há exatamente
         <md>
           \frac{1}{8} ( 2^4 + 2^1 + 2^2 + 2^1  + 2^2 + 2^2 +2^3 + 2^3) = 6
         </md>
-        ways to color the vertices of the square.
+        maneiras de colorir os vértices do quadrado.
       </p>
 
       <proposition xml:id="actions-proposition-action-function">
         <statement>
           <p>
-            Let <m>G</m> be a permutation group of <m>X</m> and
-            <m>\widetilde{X}</m> the set of functions from <m>X</m> to <m>Y</m>.
-            Then <m>G</m> induces a group
-            <m>\widetilde{G}</m> that permutes the elements of <m>\widetilde{X}</m>,
-            where <m>\widetilde{\sigma} \in \widetilde{G}</m> is defined by <m>\widetilde{\sigma}(f) = f \circ \sigma</m> for
-            <m>\sigma \in G</m> and <m>f \in \widetilde{X}</m>.
-            Furthermore,
-            if <m>n</m> is the number of cycles in the cycle decomposition of <m>\sigma</m>,
-            then <m>|\widetilde{X}_{\sigma}| = |Y|^n</m>.
+            Seja <m>G</m> um grupo de permutações de <m>X</m> e
+            <m>\widetilde{X}</m> o conjunto de aplicações de <m>X</m> em <m>Y</m>.
+            Então <m>G</m> induz um grupo
+            <m>\widetilde{G}</m> que permuta os elementos de <m>\widetilde{X}</m>,
+            em que <m>\widetilde{\sigma} \in \widetilde{G}</m> é definido por <m>\widetilde{\sigma}(f) = f \circ \sigma</m> para
+            <m>\sigma \in G</m> e <m>f \in \widetilde{X}</m>.
+            Além disso,
+            se <m>n</m> é o número de ciclos na decomposição em ciclos de <m>\sigma</m>,
+            então <m>|\widetilde{X}_{\sigma}| = |Y|^n</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\sigma \in G</m> and <m>f \in  \widetilde{X}</m>.
-            Since <m>\sigma</m> permutes the elements of <m>X</m>, <m>f \circ \sigma</m> must also be in <m>\widetilde{X}</m>.
-            Suppose that <m>g</m> is another function from <m>X</m> to <m>Y</m> such that <m>\widetilde{\sigma}(f) = \widetilde{\sigma}(g)</m>.
-            Then for each <m>x \in X</m>,
+            Sejam <m>\sigma \in G</m> e <m>f \in  \widetilde{X}</m>.
+            Como <m>\sigma</m> permuta os elementos de <m>X</m>, <m>f \circ \sigma</m> também deve estar em <m>\widetilde{X}</m>.
+            Suponha que <m>g</m> seja outra aplicação de <m>X</m> em <m>Y</m> tal que <m>\widetilde{\sigma}(f) = \widetilde{\sigma}(g)</m>.
+            Então, para cada <m>x \in X</m>,
             <md>
               f( \sigma(x )) = \widetilde{\sigma}(f)(x) = \widetilde{\sigma}(g)(x) = g( \sigma(x ))
             </md>.
-            Since <m>\sigma</m> is a permutation of <m>X</m>,
-            every element <m>x'</m> in <m>X</m> is the image of some <m>x</m> in <m>X</m> under <m>\sigma</m>;
-            hence, <m>f</m> and <m>g</m> agree on all elements of <m>X</m>.
-            Therefore, <m>f=g</m> and <m>\widetilde{\sigma}</m> is injective.
-            The map <m>\sigma \mapsto \widetilde{\sigma}</m> is onto,
-            since the two sets are the same size.
+            Como <m>\sigma</m> é uma permutação de <m>X</m>,
+            todo elemento <m>x'</m> de <m>X</m> é a imagem, por <m>\sigma</m>, de algum <m>x</m> em <m>X</m>;
+            portanto, <m>f</m> e <m>g</m> coincidem em todos os elementos de <m>X</m>.
+            Logo, <m>f=g</m> e <m>\widetilde{\sigma}</m> é injetiva.
+            A aplicação <m>\sigma \mapsto \widetilde{\sigma}</m> é sobrejetiva,
+            pois os dois conjuntos têm o mesmo tamanho.
           </p>
 
           <p>
-            Suppose that <m>\sigma</m> is a permutation of <m>X</m> with cycle decomposition <m>\sigma = \sigma_1 \sigma_2 \cdots \sigma_n</m>.
-            Any <m>f</m> in <m>{\widetilde{X}}_{\sigma}</m> must have the same value on each cycle of <m>\sigma</m>.
-            Since there are <m>n</m> cycles and <m>|Y|</m> possible values for each cycle,
+            Suponha que <m>\sigma</m> seja uma permutação de <m>X</m> com decomposição em ciclos <m>\sigma = \sigma_1 \sigma_2 \cdots \sigma_n</m>.
+            Qualquer <m>f</m> em <m>{\widetilde{X}}_{\sigma}</m> deve ter o mesmo valor em cada ciclo de <m>\sigma</m>.
+            Como há <m>n</m> ciclos e <m>|Y|</m> valores possíveis para cada ciclo,
             <m>|{\widetilde{X}}_{\sigma}| = |Y|^n</m>.
           </p>
         </proof>
@@ -758,44 +758,44 @@
 
       <example xml:id="actions-example-burnside-x7">
         <p>
-          Let <m>X = \{1, 2, \ldots, 7\}</m> and suppose that <m>Y = \{ A, B, C \}</m>.
-          If <m>g</m> is the permutation of <m>X</m> given by <m>(1 \,  3)(2  \, 4  \, 5) = (1 \,  3)(2 \,  4  \, 5)(6)(7)</m>,
-          then <m>n = 4</m>.
-          Any <m>f \in \widetilde{X}_g</m> must have the same value on each cycle in <m>g</m>.
-          There are <m>|Y|=3</m> such choices for any value,
-          so <m>|\widetilde{X}_g| = 3^4 = 81</m>.
+          Sejam <m>X = \{1, 2, \ldots, 7\}</m> e <m>Y = \{ A, B, C \}</m>.
+          Se <m>g</m> é a permutação de <m>X</m> dada por <m>(1 \,  3)(2  \, 4  \, 5) = (1 \,  3)(2 \,  4  \, 5)(6)(7)</m>,
+          então <m>n = 4</m>.
+          Qualquer <m>f \in \widetilde{X}_g</m> deve ter o mesmo valor em cada ciclo de <m>g</m>.
+          Há <m>|Y|=3</m> escolhas desse tipo para cada valor,
+          logo <m>|\widetilde{X}_g| = 3^4 = 81</m>.
         </p>
       </example>
             <!-- Label problem fixed.  Suggested by L. Franklin.  TWJ 12/8/2011 -->
       <example xml:id="actions-example-color-square">
         <p>
-          Suppose that we wish to color the vertices of a square using four different colors.
-          By <xref ref="actions-proposition-action-function"/>, we can immediately decide that there are
+          Suponha que desejemos colorir os vértices de um quadrado usando quatro cores diferentes.
+          Pelo <xref ref="actions-proposition-action-function"/>, podemos concluir imediatamente que há
           <md>
             \frac{1}{8} (4^4 + 4^1 + 4^2 + 4^1 + 4^2 + 4^ 2 + 4^3 + 4^3) = 55
           </md>
-          possible ways.
+          maneiras possíveis.
         </p>
       </example>
     </subsection>
 
     <subsection xml:id="actions-subsection-switching-functions">
-      <title>Switching Functions</title>
+      <title>Funções de comutação</title>
       <p>
-        In switching theory we are concerned with the design of electronic circuits with binary inputs and outputs.
-        The simplest of these circuits is a switching function that has <m>n</m> inputs and a single output (<xref ref="actions-figure-switching-n-variables"/>).
-        Large electronic circuits can often be constructed by combining smaller modules of this kind.
-        The inherent problem here is that even for a simple circuit a large number of different switching functions can be constructed.
-        With only four inputs and a single output,
-        we can construct <m>65{,}536</m> different switching functions.
-        However, we can often replace one switching function with another merely by permuting the input leads to the circuit (<xref ref="actions-figure-switching-two-variables"/>).
+        Na teoria de comutação, estudamos o projeto de circuitos eletrônicos com entradas e saídas binárias.
+        O mais simples desses circuitos é uma função de comutação que tem <m>n</m> entradas e uma única saída (<xref ref="actions-figure-switching-n-variables"/>).
+        Circuitos eletrônicos grandes podem frequentemente ser construídos combinando módulos menores desse tipo.
+        O problema inerente é que, mesmo para um circuito simples, pode-se construir um grande número de funções de comutação diferentes.
+        Com apenas quatro entradas e uma única saída,
+        podemos construir <m>65{,}536</m> funções de comutação diferentes.
+        Entretanto, muitas vezes podemos substituir uma função de comutação por outra apenas permutando os fios de entrada do circuito (<xref ref="actions-figure-switching-two-variables"/>).
       </p>
 
       <figure xml:id="actions-figure-switching-n-variables">
-        <caption>A switching function of <m>n</m> variables</caption>
+        <caption>Uma função de comutação de <m>n</m> variáveis</caption>
             <!-- Replaced figure with tikz figure - TWJ 6/28/2010 -->
         <image width="80%" xml:id="actions-switching-function">
-        	<description>A function, f, represented by a box with inputs, x1, x2, ..., xn, on the left, and an output f(x1, x2, ..., xn) on the right.</description>
+            <description>Uma função, f, representada por uma caixa com as entradas x1, x2, ..., xn à esquerda e a saída f(x1, x2, ..., xn) à direita.</description>
             <latex-image>
                 <xi:include href="tikz/actions-switching-function.tex" parse="text"/>
             </latex-image>
@@ -804,20 +804,20 @@
       </figure>
 
       <p>
-        We define a <term>switching</term><idx><h>Function</h><h>switching</h></idx><idx><h>Switching function</h></idx>
-        or <term>Boolean function</term><idx><h>Boolean function</h></idx><idx><h>Function</h><h>Boolean</h></idx>
-        of <m>n</m> variables to be a function from
-        <m>{\mathbb Z}_2^n</m> to <m>{\mathbb Z}_2</m>.
-        Since any switching function can have two possible values for each binary <m>n</m>-tuple and there are <m>2^n</m> binary <m>n</m>-tuples,
-        <m>2^{2^n}</m> switching functions are possible for <m>n</m> variables.
-        In general, allowing permutations of the inputs greatly reduces the number of different kinds of modules that are needed to build a large circuit.
+        Definimos uma <term>função de comutação</term><idx><h>Função</h><h>comutação</h></idx><idx><h>Função de comutação</h></idx>
+        ou <term>função booleana</term><idx><h>Função booleana</h></idx><idx><h>Função</h><h>booleana</h></idx>
+        de <m>n</m> variáveis como uma função de
+        <m>{\mathbb Z}_2^n</m> em <m>{\mathbb Z}_2</m>.
+        Como cada função de comutação pode ter dois valores possíveis para cada <m>n</m>-upla binária e há <m>2^n</m> <m>n</m>-uplas binárias,
+        há <m>2^{2^n}</m> funções de comutação possíveis para <m>n</m> variáveis.
+        Em geral, permitir permutações das entradas reduz bastante o número de tipos diferentes de módulos necessários para construir um circuito grande.
       </p>
 
 <!--
       <figure xml:id="actions-figure-switching-two-variables">
         <caption>Switching functions of two variables</caption>
         <image xml:id="actions-switching-two-variables">
-        	<description>Two functions, f, represented by rectangle. The function on the left is represented by a rectangle that has inputs a and b on the left and output f(a, b).  The function on the right is represented by a rectangle that has inputs a and b with leads switched on the left and an output f(b, a) on the right.</description>
+            <description>Two functions, f, represented by rectangle. The function on the left is represented by a rectangle that has inputs a and b on the left and output f(a, b).  The function on the right is represented by a rectangle that has inputs a and b with leads switched on the left and an output f(b, a) on the right.</description>
             <latex-image>
                 <xi:include href="tikz/actions-switching-two-variables.tex" parse="text"/>
             </latex-image>
@@ -829,10 +829,10 @@
 
 
      <figure xml:id="actions-figure-switching-two-variables">
-        <caption>Switching functions in two variables</caption>
+        <caption>Funções de comutação em duas variáveis</caption>
         <sidebyside widths="35% 50%" margins="auto" valign="middle">
           <image xml:id="actions-switching-two-variables-a">
-            <description>The function on the left is represented by a rectangle that has inputs a and b on the left and output f(a, b).</description>
+            <description>A função à esquerda é representada por um retângulo que tem as entradas a e b à esquerda e a saída f(a, b).</description>
               <latex-image>
                   <xi:include href="tikz/actions-switching-two-variables-a.tex" parse="text"/>
               </latex-image>
@@ -840,7 +840,7 @@
 
 
           <image xml:id="actions-switching-two-variables-b">
-            <description>The function on the right is represented by a rectangle that has inputs a and b with leads switched on the left and an output f(b, a) on the right.</description>
+            <description>A função à direita é representada por um retângulo que tem as entradas a e b, com os fios trocados à esquerda, e a saída f(b, a) à direita.</description>
               <latex-image>
                   <xi:include href="tikz/actions-switching-two-variables-b.tex" parse="text"/>
               </latex-image>
@@ -850,12 +850,12 @@
 
 
       <p>
-        The possible switching functions  with two input variables <m>a</m> and <m>b</m> are listed in <xref ref="actions-table-switching-2-variables"/>.
-        Two switching functions <m>f</m> and <m>g</m> are equivalent if <m>g</m> can be obtained from <m>f</m> by a permutation of the input variables.
-        For example, <m>g(a, b, c) = f(b, c, a)</m>.
-        In this  case <m>g \sim f</m> via the permutation <m>(a,c,b)</m>.
-        In the case of switching functions of two variables,
-        the permutation <m>(a,b)</m> reduces 16 possible switching functions to 12 equivalent functions since
+        As funções de comutação com duas variáveis de entrada <m>a</m> e <m>b</m> estão listadas em <xref ref="actions-table-switching-2-variables"/>.
+        Duas funções de comutação <m>f</m> e <m>g</m> são equivalentes se <m>g</m> pode ser obtida de <m>f</m> por uma permutação das variáveis de entrada.
+        Por exemplo, <m>g(a, b, c) = f(b, c, a)</m>.
+        Nesse caso, <m>g \sim f</m> por meio da permutação <m>(a,c,b)</m>.
+        No caso de funções de comutação de duas variáveis,
+        a permutação <m>(a,b)</m> reduz as 16 funções de comutação possíveis a 12 funções equivalentes, pois
         <md>
           <mrow>f_2 &amp; \sim  f_4</mrow>
           <mrow>f_3 &amp; \sim  f_5</mrow>
@@ -865,7 +865,7 @@
       </p>
 
       <table xml:id="actions-table-switching-2-variables">
-        <title>Switching functions in two variables</title>
+        <title>Funções de comutação em duas variáveis</title>
         <tabular halign="center" top="medium" left="medium">
           <col/>
           <col right="medium"/>
@@ -878,8 +878,8 @@
           <col/>
           <col right="medium"/>
           <row>
-            <cell colspan="2">Inputs</cell>
-            <cell colspan="8">Outputs</cell>
+            <cell colspan="2">Entradas</cell>
+            <cell colspan="8">Saídas</cell>
           </row>
           <row bottom="medium">
             <cell/>
@@ -942,8 +942,8 @@
             <cell><m>1</m></cell>
           </row>
           <row>
-            <cell colspan="2">Inputs</cell>
-            <cell colspan="8">Outputs</cell>
+            <cell colspan="2">Entradas</cell>
+            <cell colspan="8">Saídas</cell>
           </row>
           <row bottom="medium">
             <cell/>
@@ -1010,28 +1010,28 @@
       </table>
 
       <p>
-        For three input variables there are
-        <m>2^{2^3} = 256</m> possible switching functions;
-        in the case of four variables there are <m>2^{2^4} =65{,}536</m>.
-        The number of equivalence classes is too large to reasonably calculate directly.
-        It is necessary to employ Burnside's Theorem.
+        Para três variáveis de entrada, há
+        <m>2^{2^3} = 256</m> funções de comutação possíveis;
+        no caso de quatro variáveis, há <m>2^{2^4} =65{,}536</m>.
+        O número de classes de equivalência é grande demais para ser calculado diretamente de maneira razoável.
+        É necessário aplicar o Teorema de Burnside.
       </p>
 
       <p>
-        Consider a switching function with three possible inputs,
-        <m>a</m>, <m>b</m>, and <m>c</m>.
-        As we have mentioned,
-        two switching functions <m>f</m> and <m>g</m> are equivalent if a permutation of the input variables of <m>f</m> gives <m>g</m>.
-        It is important to notice that a permutation of the switching functions is not simply a permutation of the input values <m>\{a, b, c\}</m>.
-        A switching function is a set of output values for the inputs <m>a</m>,
+        Considere uma função de comutação com três entradas possíveis,
+        <m>a</m>, <m>b</m> e <m>c</m>.
+        Como mencionamos,
+        duas funções de comutação <m>f</m> e <m>g</m> são equivalentes se uma permutação das variáveis de entrada de <m>f</m> produz <m>g</m>.
+        É importante observar que uma permutação das funções de comutação não é simplesmente uma permutação dos valores de entrada <m>\{a, b, c\}</m>.
+        Uma função de comutação é um conjunto de valores de saída para as entradas <m>a</m>,
         <m>b</m>,
-        and <m>c</m>,
-        so when we consider equivalent switching functions,
-        we are permuting <m>2^3</m> possible outputs,
-        not just three input values.
-        For example, each binary triple
-        <m>(a, b, c)</m> has a specific output associated with it.
-        The permutation <m>(acb)</m> changes outputs as follows:
+        e <m>c</m>,
+        de modo que, ao considerarmos funções de comutação equivalentes,
+        estamos permutando <m>2^3</m> saídas possíveis,
+        e não apenas três valores de entrada.
+        Por exemplo, cada terna binária
+        <m>(a, b, c)</m> tem uma saída específica associada a ela.
+        A permutação <m>(acb)</m> altera as saídas da seguinte maneira:
         <md>
           <mrow>(0, 0, 0) &amp; \mapsto  (0, 0, 0)</mrow>
           <mrow>(0, 0, 1) &amp; \mapsto  (0, 1, 0)</mrow>
@@ -1043,9 +1043,9 @@
       </p>
 
       <p>
-        Let <m>X</m> be the set of output values for a switching function in <m>n</m> variables.
-        Then <m>|X|=2^n</m>.
-        We can enumerate these values as follows:
+        Seja <m>X</m> o conjunto de valores de saída de uma função de comutação em <m>n</m> variáveis.
+        Então <m>|X|=2^n</m>.
+        Podemos enumerar esses valores da seguinte maneira:
         <md>
           <mrow>(0, \ldots, 0, 1) &amp; \mapsto  0</mrow>
           <mrow>(0, \ldots, 1, 0) &amp; \mapsto  1</mrow>
@@ -1053,36 +1053,36 @@
           <mrow>&amp; \aatavdots{\mapsto}</mrow>
           <mrow>(1, \ldots, 1, 1) &amp; \mapsto  2^n-1</mrow>
         </md>.
-        Now let us consider a circuit with four input variables and a single output.
-        Suppose that we can permute the leads of any circuit according to the following permutation group:
+        Consideremos agora um circuito com quatro variáveis de entrada e uma única saída.
+        Suponha que possamos permutar os fios de qualquer circuito de acordo com o seguinte grupo de permutações:
         <md>
           <mrow>(a), \quad (a,c), \quad (b,d), \quad (a,d,c,b),</mrow>
           <mrow>(a,b,c,d), \quad (a,b)(c,d), \quad (a,d)(b,c), \quad (a,c)(b,d)</mrow>
         </md>.
-        The permutations of the four possible input variables induce the permutations of the output values in <xref ref="actions-table-switching-permutation"/>.
+        As permutações das quatro variáveis de entrada possíveis induzem as permutações dos valores de saída na <xref ref="actions-table-switching-permutation"/>.
       </p>
 
       <p>
-        Hence, there are
+        Portanto, há
         <md>
           \frac{1}{8} (2^{16} + 2 \cdot 2^{12} + 2 \cdot 2^6 + 3 \cdot 2^{10}) = 9616
         </md>
-        possible switching functions of four variables under this group of permutations.
-        This number will be even smaller if we consider the full symmetric group on four letters.
+        funções de comutação possíveis de quatro variáveis sob esse grupo de permutações.
+        Esse número será ainda menor se considerarmos o grupo simétrico completo sobre quatro letras.
       </p>
 
       <table xml:id="actions-table-switching-permutation">
-        <title>Permutations of switching functions in four variables</title>
+        <title>Permutações de funções de comutação em quatro variáveis</title>
         <tabular halign="left" top="medium">
           <row>
-            <cell>Group</cell>
+            <cell>Grupo</cell>
             <cell/>
-            <cell>Number</cell>
+            <cell>Número</cell>
           </row>
           <row bottom="medium">
-            <cell>Permutation</cell>
-            <cell>Switching Function Permutation</cell>
-            <cell>of Cycles</cell>
+            <cell>Permutação</cell>
+            <cell>Permutação da função de comutação</cell>
+            <cell>de ciclos</cell>
           </row>
           <row>
             <cell><m>(a)</m></cell>
@@ -1130,41 +1130,41 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage has many commands related to conjugacy, which is a group action.
-          It also has commands for orbits and stabilizers of permutation groups.
-          In the supplement,
-          we illustrate the automorphism group of a (combinatorial) graph as another example of a group action on the vertex set of the graph.
+          O Sage tem muitos comandos relacionados à conjugação, que é uma ação de grupo.
+          Ele também tem comandos para órbitas e estabilizadores de grupos de permutações.
+          No suplemento,
+          ilustramos o grupo de automorfismos de um grafo (combinatório) como outro exemplo de uma ação de grupo sobre o conjunto de vértices do grafo.
         </p>
       </paragraphs>
 
     </subsection>
 
     <subsection xml:id="actions-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
         William Burnside<idx><h>Burnside, William</h></idx>
-        was born in London in 1852.
-        He attended Cambridge University from 1871 to 1875 and won the Smith's Prize in his last year.
-        After his graduation he lectured at Cambridge.
-        He was made a member of the Royal Society in 1893.
-        Burnside wrote approximately 150 papers on topics in applied mathematics,
-        differential geometry, and probability,
-        but his most famous contributions were in group theory.
-        Several of Burnside's conjectures have stimulated research to this day.
-        One such conjecture was that every group of odd order is solvable;
-        that is, for a group <m>G</m> of odd order,
-        there exists a sequence of subgroups
+        nasceu em Londres em 1852.
+        Frequentou a Universidade de Cambridge de 1871 a 1875 e ganhou o Prêmio Smith em seu último ano.
+        Depois de se formar, lecionou em Cambridge.
+        Tornou-se membro da Royal Society em 1893.
+        Burnside escreveu aproximadamente 150 artigos sobre temas de matemática aplicada,
+        geometria diferencial e probabilidade,
+        mas suas contribuições mais famosas foram para a teoria dos grupos.
+        Várias conjecturas de Burnside estimularam pesquisas até os dias atuais.
+        Uma dessas conjecturas afirmava que todo grupo de ordem ímpar é solúvel;
+        isto é, para um grupo <m>G</m> de ordem ímpar,
+        existe uma sequência de subgrupos
         <md>
           G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
         </md>
-        such that <m>H_i</m> is normal in <m>H_{i+1}</m> and <m>H_{i+1} / H_i</m> is abelian.
-        This conjecture was finally proven by W. Feit<idx><h>Feit, W.</h></idx>
-        and J. Thompson<idx><h>Thompson, J.</h></idx>
-        in 1963.
+        tal que <m>H_i</m> é normal em <m>H_{i+1}</m> e <m>H_{i+1} / H_i</m> é abeliano.
+        Essa conjectura foi finalmente provada por W. Feit<idx><h>Feit, W.</h></idx>
+        e J. Thompson<idx><h>Thompson, J.</h></idx>
+        em 1963.
         Burnside's <pubtitle>The Theory of Groups of Finite Order</pubtitle>,
-        published in 1897,
-        was one of the first books to treat groups in a modern context as opposed to permutation groups.
-        The second edition, published in 1911, is still a classic.
+        publicado em 1897,
+        foi um dos primeiros livros a tratar de grupos em um contexto moderno, em oposição aos grupos de permutações.
+        A segunda edição, publicada em 1911, ainda é um clássico.
       </p>
     </subsection>
 
@@ -1175,7 +1175,7 @@
     <exercise label="rq-actions-informal">
       <statement>
         <p>
-          Give an informal description of a group action.
+          Dê uma descrição informal de uma ação de grupo.
         </p>
       </statement>
       <response/>
@@ -1184,7 +1184,7 @@
     <exercise label="rq-actions-class-equation">
       <statement>
         <p>
-          Describe the class equation.
+          Descreva a equação das classes.
         </p>
       </statement>
       <response/>
@@ -1193,7 +1193,7 @@
     <exercise label="rq-actions-order-49">
       <statement>
         <p>
-          What are the groups of order <m>49</m>?
+          Quais são os grupos de ordem <m>49</m>?
         </p>
       </statement>
       <response/>
@@ -1202,7 +1202,7 @@
     <exercise label="rq-actions-switching">
       <statement>
         <p>
-          How many switching functions are there with five inputs? (Give both a simple expression and the total number as a single integer.)
+          Quantas funções de comutação existem com cinco entradas? (Dê tanto uma expressão simples quanto o número total como um único inteiro.)
         </p>
       </statement>
       <response/>
@@ -1211,8 +1211,8 @@
     <exercise label="rq-actions-burnside">
       <statement>
         <p>
-          The <q>Historical Note</q> mentions the proof of Burnside's Conjecture.
-          How long was the proof?
+          A <q>Nota histórica</q> menciona a demonstração da Conjectura de Burnside.
+          Quanto tempo durou a demonstração?
         </p>
       </statement>
       <response/>
@@ -1223,16 +1223,16 @@
     <!-- File: actions.xml  -->
     <!-- Title: Group Actions -->
   <exercises xml:id="actions-exercises" filenamebase="actions">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="actions-exercise-equivalence-relation">
       <statement>
         <p>
-          <xref first="actions-example-gl2" last="actions-example-left-cosets">Examples</xref> in the first section each describe an action of a group <m>G</m> on a set <m>X</m>,
-          which will give rise to the equivalence relation defined by <m>G</m>-equivalence.
-          For each example,
-          compute the equivalence classes of the equivalence relation,
-          the <m>G</m>-<term>equivalence classes</term>.
+          Os <xref first="actions-example-gl2" last="actions-example-left-cosets">exemplos</xref> da primeira seção descrevem, cada um, uma ação de um grupo <m>G</m> sobre um conjunto <m>X</m>,
+          que dará origem à relação de equivalência definida pela <m>G</m>-equivalência.
+          Para cada exemplo,
+          calcule as classes de equivalência da relação de equivalência,
+          as <m>G</m>-<term>classes de equivalência</term>.
         </p>
       </statement>
       <hint>
@@ -1250,7 +1250,7 @@
     <exercise number="2" xml:id="actions-exercise-permutation">
       <statement>
         <p>
-          Compute all <m>X_g</m> and all <m>G_x</m> for each of the following permutation groups.
+          Calcule todos os <m>X_g</m> e todos os <m>G_x</m> para cada um dos seguintes grupos de permutações.
 
           <ol>
             <li>
@@ -1282,8 +1282,8 @@
     <exercise number="3" xml:id="actions-exercise-equivalence-classes">
       <statement>
         <p>
-          Compute the <m>G</m>-equivalence classes of <m>X</m> for each of the <m>G</m>-sets in <xref ref="actions-exercise-permutation"/>.
-          For each <m>x \in X</m> verify that <m>|G|=|{\mathcal O}_x| \cdot |G_x|</m>.
+          Calcule as classes de <m>G</m>-equivalência de <m>X</m> para cada um dos <m>G</m>-conjuntos em <xref ref="actions-exercise-permutation"/>.
+          Para cada <m>x \in X</m>, verifique que <m>|G|=|{\mathcal O}_x| \cdot |G_x|</m>.
         </p>
       </statement>
       <hint>
@@ -1296,27 +1296,27 @@
     <exercise number="4" xml:id="actions-exercise-R-G-set">
       <statement>
         <p>
-          Let <m>G</m> be the additive group of real numbers.
-          Let the action of <m>\theta \in G</m> on the real plane
-          <m>{\mathbb R}^2</m> be given by rotating the plane counterclockwise about the origin through <m>\theta</m> radians.
-          Let <m>P</m> be a point on the plane other than the origin.
+          Seja <m>G</m> o grupo aditivo dos números reais.
+          Seja a ação de <m>\theta \in G</m> sobre o plano real
+          <m>{\mathbb R}^2</m> dada pela rotação anti-horária do plano em torno da origem por <m>\theta</m> radianos.
+          Seja <m>P</m> um ponto do plano diferente da origem.
 
           <ol>
             <li>
               <p>
-                Show that <m>{\mathbb R}^2</m> is a <m>G</m>-set.
+                Mostre que <m>{\mathbb R}^2</m> é um <m>G</m>-conjunto.
               </p>
             </li>
 
             <li>
               <p>
-                Describe geometrically the orbit containing <m>P</m>.
+                Descreva geometricamente a órbita que contém <m>P</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Find the group <m>G_P</m>.
+                Encontre o grupo <m>G_P</m>.
               </p>
             </li>
           </ol>
@@ -1327,19 +1327,19 @@
     <exercise number="5" xml:id="actions-exercise-A4">
       <statement>
         <p>
-          Let <m>G = A_4</m> and suppose that <m>G</m> acts on itself by conjugation;
-          that is, <m>(g,h)~\mapsto~ghg^{-1}</m>.
+          Seja <m>G = A_4</m> e suponha que <m>G</m> aja sobre si mesmo por conjugação;
+          isto é, <m>(g,h)~\mapsto~ghg^{-1}</m>.
 
           <ol>
             <li>
               <p>
-                Determine the conjugacy classes (orbits) of each element of <m>G</m>.
+                Determine as classes de conjugação (órbitas) de cada elemento de <m>G</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Determine all of the isotropy subgroups for each element of <m>G</m>.
+                Determine todos os subgrupos de isotropia de cada elemento de <m>G</m>.
               </p>
             </li>
           </ol>
@@ -1350,7 +1350,7 @@
     <exercise number="6" xml:id="actions-exercise-conjugacy-class">
       <statement>
         <p>
-          Find the conjugacy classes and the class equation for each of the following groups.
+          Encontre as classes de conjugação e a equação das classes para cada um dos seguintes grupos.
 
           <ol cols="4">
             <li>
@@ -1381,7 +1381,7 @@
       </statement>
       <hint>
         <p>
-          The conjugacy classes for <m>S_4</m> are
+          As classes de conjugação de <m>S_4</m> são
           <md>
             <mrow>{\mathcal O}_{(1)} = \{ (1) \},</mrow>
             <mrow>{\mathcal O}_{(12)} = \{ (1 \, 2), (1 \, 3), (1 \, 4), (2 \, 3), (2 \, 4), (3 \, 4) \},</mrow>
@@ -1389,7 +1389,7 @@
             <mrow>{\mathcal O}_{(123)} = \{ (1 \, 2 \, 3), (1 \, 3 \, 2), (1 \, 2 \, 4), (1 \, 4 \, 2), (1 \, 3 \, 4), (1 \, 4 \, 3), (2 \, 3 \, 4), (2 \, 4 \, 3) \},</mrow>
             <mrow>{\mathcal O}_{(1234)} = \{ (1 \, 2 \, 3 \, 4), (1 \, 2 \, 4 \, 3), (1 \, 3 \, 2 \, 4), (1 \, 3 \, 4 \, 2), (1 \, 4 \, 2 \, 3), (1 \, 4 \, 3 \, 2) \}</mrow>
           </md>.
-          The class equation is <m>1 + 3 + 6 + 6 + 8 = 24</m>.
+          A equação das classes é <m>1 + 3 + 6 + 6 + 8 = 24</m>.
         </p>
       </hint>
     </exercise>
@@ -1397,7 +1397,7 @@
     <exercise number="7" xml:id="actions-exercise-S5">
       <statement>
         <p>
-          Write the class equation for <m>S_5</m> and for <m>A_5</m>.
+          Escreva a equação das classes para <m>S_5</m> e para <m>A_5</m>.
         </p>
       </statement>
     </exercise>
@@ -1405,8 +1405,8 @@
     <exercise number="8" xml:id="actions-exercise-square">
       <statement>
         <p>
-          If a square remains fixed in the plane,
-          how many different ways can the corners of the square be colored if three colors are used?
+          Se um quadrado permanece fixo no plano,
+          de quantas maneiras diferentes os vértices do quadrado podem ser coloridos usando três cores?
         </p>
       </statement>
       <hint>
@@ -1419,7 +1419,7 @@
     <exercise number="9" xml:id="actions-exercise-triangle">
       <statement>
         <p>
-          How many ways can the vertices of an equilateral triangle be colored using three different colors?
+          De quantas maneiras os vértices de um triângulo equilátero podem ser coloridos usando três cores diferentes?
         </p>
       </statement>
     </exercise>
@@ -1427,7 +1427,7 @@
     <exercise number="10" xml:id="actions-exercise-6-sided-die">
       <statement>
         <p>
-          Find the number of ways a six-sided die can be constructed if each side is marked differently with <m>1, \ldots, 6</m> dots.
+          Encontre o número de maneiras de construir um dado de seis lados se cada lado for marcado de maneira diferente com <m>1, \ldots, 6</m> pontos.
         </p>
       </statement>
     </exercise>
@@ -1435,18 +1435,18 @@
     <exercise number="11" xml:id="actions-exercise-cube">
       <statement>
         <p>
-          Up to a rotation,
-          how many ways can the faces of a cube be colored with three different colors?
+          A menos de rotação,
+          de quantas maneiras as faces de um cubo podem ser coloridas com três cores diferentes?
         </p>
       </statement>
       <hint>
         <p>
-          The group of rigid motions of the cube can be described by the allowable permutations of the six faces and is isomorphic to <m>S_4</m>.
-          There are the identity cycle, <m>6</m> permutations with the structure <m>(abcd)</m> that correspond to the quarter turns, <m>3</m> permutations with the structure
-          <m>(ab)(cd)</m> that correspond to the half turns, <m>6</m> permutations with the structure
-          <m>(ab)(cd)(ef)</m> that correspond to rotating the cube about the centers of opposite edges,
-          and <m>8</m> permutations with the structure
-          <m>(abc)(def)</m> that correspond to rotating the cube about opposite vertices.
+          O grupo dos movimentos rígidos do cubo pode ser descrito pelas permutações permitidas das seis faces e é isomorfo a <m>S_4</m>.
+          Há o ciclo identidade, <m>6</m> permutações com a estrutura <m>(abcd)</m>, que correspondem a quartos de volta, <m>3</m> permutações com a estrutura
+          <m>(ab)(cd)</m>, que correspondem a meias-voltas, <m>6</m> permutações com a estrutura
+          <m>(ab)(cd)(ef)</m>, que correspondem à rotação do cubo em torno dos centros de arestas opostas,
+          e <m>8</m> permutações com a estrutura
+          <m>(abc)(def)</m>, que correspondem à rotação do cubo em torno de vértices opostos.
         </p>
       </hint>
     </exercise>
@@ -1454,9 +1454,9 @@
     <exercise number="12" xml:id="actions-exercise-edges-cube">
       <statement>
         <p>
-          Consider <m>12</m> straight wires of equal lengths with their ends soldered together to form the edges of a cube.
-          Either silver or copper wire can be used for each edge.
-          How many different ways can the cube be constructed?
+          Considere <m>12</m> fios retos de comprimentos iguais, com suas extremidades soldadas para formar as arestas de um cubo.
+          Pode-se usar fio de prata ou de cobre em cada aresta.
+          De quantas maneiras diferentes o cubo pode ser construído?
         </p>
       </statement>
     </exercise>
@@ -1464,9 +1464,9 @@
     <exercise number="13" xml:id="actions-exercise-corners-cube">
       <statement>
         <p>
-          Suppose that we color each of the eight corners of a cube.
-          Using three different colors,
-          how many ways can the corners be colored up to a rotation of the cube?
+          Suponha que colorimos cada um dos oito vértices de um cubo.
+          Usando três cores diferentes,
+          de quantas maneiras os vértices podem ser coloridos a menos de uma rotação do cubo?
         </p>
       </statement>
     </exercise>
@@ -1474,9 +1474,9 @@
     <exercise number="14" xml:id="actions-exercise-tetrahedron">
       <statement>
         <p>
-          Each of the faces of a regular tetrahedron can be painted either red or white.
-          Up to a rotation,
-          how many different ways can the tetrahedron be painted?
+          Cada uma das faces de um tetraedro regular pode ser pintada de vermelho ou branco.
+          A menos de rotação,
+          de quantas maneiras diferentes o tetraedro pode ser pintado?
         </p>
       </statement>
     </exercise>
@@ -1484,8 +1484,8 @@
     <exercise number="15" xml:id="actions-exercise-hexagon">
       <statement>
         <p>
-          Suppose that the vertices of a regular hexagon are to be colored either red or white.
-          How many ways can this be done up to a symmetry of the hexagon?
+          Suponha que os vértices de um hexágono regular devam ser coloridos de vermelho ou branco.
+          De quantas maneiras isso pode ser feito a menos de uma simetria do hexágono?
         </p>
       </statement>
       <hint>
@@ -1498,29 +1498,29 @@
     <exercise number="16" xml:id="actions-exercise-benzene">
       <statement>
         <p>
-          A molecule of benzene is made up of six carbon atoms and six hydrogen atoms,
-          linked together in a hexagonal shape as in <xref ref="actions-figure-exercise-benzene"/>.
+          Uma molécula de benzeno é composta por seis átomos de carbono e seis átomos de hidrogênio,
+          ligados em uma forma hexagonal como na <xref ref="actions-figure-exercise-benzene"/>.
 
           <ol>
             <li>
               <p>
-                How many different compounds can be formed by replacing one or more of the hydrogen atoms with a chlorine atom?
+                Quantos compostos diferentes podem ser formados substituindo um ou mais átomos de hidrogênio por um átomo de cloro?
               </p>
             </li>
 
             <li>
               <p>
-                Find the number of different chemical compounds that can be formed by replacing three of the six hydrogen atoms in a benzene ring with a <m>CH_3</m> radical.
+                Encontre o número de compostos químicos diferentes que podem ser formados substituindo três dos seis átomos de hidrogênio de um anel de benzeno por um radical <m>CH_3</m>.
               </p>
             </li>
           </ol>
         </p>
 
         <figure xml:id="actions-figure-exercise-benzene">
-          <caption>A benzene ring</caption>
+          <caption>Um anel de benzeno</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
           <image width="30%" xml:id="exercise-benzene">
-          	<description>A hexagon with hydrogen atoms, H, attached at each vertex.</description>
+              <description>Um hexágono com átomos de hidrogênio, H, ligados a cada vértice.</description>
             <latex-image>
                 <xi:include href="tikz/exercise-benzene.tex" parse="text"/>
             </latex-image>
@@ -1533,11 +1533,10 @@
     <exercise number="17" xml:id="actions-exercise-input-variables">
       <statement>
         <p>
-          How many equivalence classes of switching functions are there if the input variables <m>x_1</m>,
-          <m>x_2</m>,
-          and <m>x_3</m> can be permuted by any permutation in <m>S_3</m>?
-          What if the input variables <m>x_1</m>, <m>x_2</m>, <m>x_3</m>,
-          and <m>x_4</m> can be permuted by any permutation in <m>S_4</m>?
+          Quantas classes de equivalência de funções de comutação existem se as variáveis de entrada <m>x_1</m>,
+          <m>x_2</m> e <m>x_3</m> puderem ser permutadas por qualquer permutação de <m>S_3</m>?
+          E se as variáveis de entrada <m>x_1</m>, <m>x_2</m>, <m>x_3</m>
+          e <m>x_4</m> puderem ser permutadas por qualquer permutação de <m>S_4</m>?
         </p>
       </statement>
       <hint>
@@ -1550,10 +1549,9 @@
     <exercise number="18" xml:id="actions-exercise-switching-functions">
       <statement>
         <p>
-          How many equivalence classes of switching functions are there if the input variables <m>x_1</m>,
-          <m>x_2</m>,
-          <m>x_3</m>,
-          and <m>x_4</m> can be permuted by any permutation in the subgroup of <m>S_4</m> generated by the permutation <m>(x_1, x_2, x_3, x_4)</m>?
+          Quantas classes de equivalência de funções de comutação existem se as variáveis de entrada <m>x_1</m>,
+          <m>x_2</m>, <m>x_3</m>
+          e <m>x_4</m> puderem ser permutadas por qualquer permutação do subgrupo de <m>S_4</m> gerado pela permutação <m>(x_1, x_2, x_3, x_4)</m>?
         </p>
       </statement>
     </exercise>
@@ -1561,9 +1559,9 @@
     <exercise number="19" xml:id="actions-exercise-necktie">
       <statement>
         <p>
-          A striped necktie has <m>12</m> bands of color.
-          Each band can be colored by one of four possible colors.
-          How many possible different-colored neckties are there?
+          Uma gravata listrada tem <m>12</m> faixas coloridas.
+          Cada faixa pode ser colorida com uma de quatro cores possíveis.
+          Quantas gravatas com cores diferentes são possíveis?
         </p>
       </statement>
     </exercise>
@@ -1571,9 +1569,9 @@
     <exercise number="20" xml:id="actions-exercise-faithfully">
       <statement>
         <p>
-          A group acts <term>faithfully</term>
-          on a <m>G</m>-set <m>X</m> if the identity is the only element of <m>G</m> that leaves every element of <m>X</m> fixed.
-          Show that <m>G</m> acts faithfully on <m>X</m> if and only if no two distinct elements of <m>G</m> have the same action on each element of <m>X</m>.
+          Um grupo age <term>fielmente</term>
+          sobre um <m>G</m>-conjunto <m>X</m> se a identidade é o único elemento de <m>G</m> que deixa fixo todo elemento de <m>X</m>.
+          Mostre que <m>G</m> age fielmente sobre <m>X</m> se, e somente se, dois elementos distintos de <m>G</m> não têm a mesma ação sobre cada elemento de <m>X</m>.
         </p>
       </statement>
     </exercise>
@@ -1581,10 +1579,10 @@
     <exercise number="21" xml:id="actions-exercise-abelian-pn">
       <statement>
         <p>
-          Let <m>p</m> be prime.
-          Show that the number of different abelian groups of order <m>p^n</m>
-          (up to isomorphism)
-          is the same as the number of conjugacy classes in <m>S_n</m>.
+          Seja <m>p</m> primo.
+          Mostre que o número de grupos abelianos diferentes de ordem <m>p^n</m>
+          (a menos de isomorfismo)
+          é igual ao número de classes de conjugação em <m>S_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1594,14 +1592,14 @@
     <exercise number="22" xml:id="actions-exercise-centralizer">
       <statement>
         <p>
-          Let <m>a \in G</m>.
-          Show that for any <m>g \in G</m>,
+          Seja <m>a \in G</m>.
+          Mostre que, para qualquer <m>g \in G</m>,
           <m>gC(a) g^{-1} = C(gag^{-1})</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Use the fact that <m>x \in g C(a) g^{-1}</m> if and only if <m>g^{-1}x g \in C(a)</m>.
+          Use o fato de que <m>x \in g C(a) g^{-1}</m> se, e somente se, <m>g^{-1}x g \in C(a)</m>.
         </p>
       </hint>
     </exercise>
@@ -1609,8 +1607,8 @@
     <exercise number="23" xml:id="actions-exercise-ZG">
       <statement>
         <p>
-          Let <m>|G| = p^n</m> be a nonabelian group for <m>p</m> prime.
-          Prove that <m>|Z(G)| \lt p^{n - 1}</m>.
+          Seja <m>|G| = p^n</m> um grupo não abeliano, com <m>p</m> primo.
+          Prove que <m>|Z(G)| \lt p^{n - 1}</m>.
         </p>
       </statement>
     </exercise>
@@ -1620,9 +1618,9 @@
     <exercise number="24" xml:id="actions-exercise-finite-G-set">
       <statement>
         <p>
-          Let <m>G</m> be a group with order <m>p^n</m> where <m>p</m> is prime and <m>X</m> a finite <m>G</m>-set.
-          If <m>X_G = \{ x \in X : gx = x \text{ for all }g \in G \}</m> is the set of elements in <m>X</m> fixed by the group action,
-          then prove that <m>|X| \equiv |X_G| \pmod{ p}</m>.
+          Seja <m>G</m> um grupo de ordem <m>p^n</m>, em que <m>p</m> é primo, e seja <m>X</m> um <m>G</m>-conjunto finito.
+          Se <m>X_G = \{ x \in X : gx = x \text{ para todo }g \in G \}</m> é o conjunto dos elementos de <m>X</m> fixados pela ação do grupo,
+          prove que <m>|X| \equiv |X_G| \pmod{ p}</m>.
         </p>
       </statement>
     </exercise>
@@ -1632,11 +1630,11 @@
     <exercise number="25" xml:id="actions-exercise-subgroup-p2">
       <statement>
         <p>
-          If <m>G</m> is a group of order <m>p^n</m>,
-          where <m>p</m> is prime and <m>n \geq 2</m>,
-          show that <m>G</m> must have a proper subgroup of order <m>p</m>.
-          If <m>n \geq 3</m>,
-          is it true that <m>G</m> will have a proper subgroup of order <m>p^2</m>?
+          Se <m>G</m> é um grupo de ordem <m>p^n</m>,
+          em que <m>p</m> é primo e <m>n \geq 2</m>,
+          mostre que <m>G</m> deve ter um subgrupo próprio de ordem <m>p</m>.
+          Se <m>n \geq 3</m>,
+          é verdade que <m>G</m> terá um subgrupo próprio de ordem <m>p^2</m>?
         </p>
       </statement>
     </exercise>
@@ -1645,12 +1643,12 @@
   </exercises>
 
   <exercises xml:id="actions-exercises-programming">
-    <title>Programming Exercise</title>
+    <title>Exercício de programação</title>
     <exercise xml:id="actions-programming-exercise-conjugacy-classes-Sn">
       <statement>
         <p>
-          Write a program to compute the number of conjugacy classes in <m>S_n</m>.
-          What is the largest <m>n</m> for which your program will work?
+          Escreva um programa para calcular o número de classes de conjugação em <m>S_n</m>.
+          Qual é o maior <m>n</m> para o qual seu programa funcionará?
         </p>
       </statement>
     </exercise>
@@ -1658,7 +1656,7 @@
   </exercises>
 
   <references xml:id="actions-references">
-    <title>References and Suggested Reading</title>
+    <title>Referências e leituras sugeridas</title>
         <!-- %TWJ 6/28/2010 - References checked. -->
     <biblio type="raw">
 <!-- was [1] -->
@@ -1710,53 +1708,53 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Groups can be realized in many ways,
-        such as as sets of permutations, as sets of matrices,
-        or as sets of abstract symbols related by certain rules (<q>presentations</q>) and in myriad other ways.
-        We have concentrated on permutation groups because of their concrete feel,
-        with elements written as functions,
-        and because of their thorough implementation in Sage.
-        Group actions are of great interest when the set they act on is the group itself,
-        and group actions will figure prominently in the proofs of the main results of the next chapter.
-        However, any time we have a group action on a set,
-        we can view that group as a permutation group on the elements of the set.
-        So permutation groups are an area of group theory of independent interest,
-        with its own definitions and theorems.
+        Os grupos podem ser realizados de muitas maneiras,
+        por exemplo, como conjuntos de permutações, conjuntos de matrizes
+        ou conjuntos de símbolos abstratos relacionados por certas regras (<q>apresentações</q>), além de inúmeras outras formas.
+        Concentramos nossa atenção nos grupos de permutações por seu caráter concreto,
+        com elementos escritos como funções,
+        e por sua implementação detalhada no Sage.
+        As ações de grupos são especialmente interessantes quando o conjunto sobre o qual agem é o próprio grupo,
+        e terão papel de destaque nas demonstrações dos principais resultados do próximo capítulo.
+        Entretanto, sempre que temos uma ação de grupo sobre um conjunto,
+        podemos ver esse grupo como um grupo de permutações sobre os elementos do conjunto.
+        Assim, os grupos de permutações são uma área da teoria dos grupos de interesse independente,
+        com suas próprias definições e teoremas.
       </p>
 
       <p>
-        We will describe Sage's commands applicable when a group action arises naturally via conjugation,
-        and then move into the more general situation in a more general application.
+        Descreveremos os comandos do Sage aplicáveis quando uma ação de grupo surge naturalmente por meio da conjugação
+        e, em seguida, passaremos à situação mais geral em uma aplicação mais abrangente.
       </p>
 
       <!--Todo Construct a general n beads, m colors enumeration example (any of this in Sage already?)-->
     </introduction>
 
     <subsection>
-      <title>Conjugation as a Group Action</title>
+      <title>Conjugação como uma ação de grupo</title>
       <p>
-        We might think we need to be careful how Sage defines conjugation
+        Podemos pensar que precisamos ter cuidado com a maneira como o Sage define a conjugação
         (<m>gxg^{-1}</m> versus <m>g^{-1}xg</m>)
-        and the difference between Sage and the text on the order of products.
-        However, if you look at the definition of the center and centralizer subgroups you can see that any difference in ordering is irrelevant.
-        Here are the group action commands for the particular action that is conjugation of the elements of the group.
+        e com a diferença entre o Sage e o texto quanto à ordem dos produtos.
+        Entretanto, se você observar a definição dos subgrupos centro e centralizador, verá que qualquer diferença na ordem é irrelevante.
+        A seguir estão os comandos de ação de grupo para o caso particular em que a ação é a conjugação dos elementos do grupo.
       </p>
 
       <p>
-        Sage has a permutation group method <c>.center()</c> which returns the subgroup of fixed points.
-        The permutation group method, <c>.centralizer(g)</c>,
-        returns a subgroup that is the stabilizer of the group element <c>g</c>.
-        Finally, the orbits are given by conjugacy classes,
-        but Sage will not flood you with the full conjugacy classes and instead gives back a list of one element per conjugacy class,
-        the representatives,
-        via the permutation group method <c>.conjugacy_classes_representatives()</c>.
-        You can manually reconstruct a conjugacy class from a representative,
-        as we do in the example below.
+        O Sage possui o método de grupo de permutações <c>.center()</c>, que retorna o subgrupo dos pontos fixos.
+        O método de grupo de permutações <c>.centralizer(g)</c>
+        retorna um subgrupo que é o estabilizador do elemento <c>g</c> do grupo.
+        Por fim, as órbitas são dadas pelas classes de conjugação,
+        mas o Sage não inundará sua tela com as classes de conjugação completas; em vez disso, devolve uma lista com um elemento por classe de conjugação,
+        os representantes,
+        por meio do método de grupo de permutações <c>.conjugacy_classes_representatives()</c>.
+        Você pode reconstruir manualmente uma classe de conjugação a partir de um representante,
+        como fazemos no exemplo a seguir.
       </p>
 
       <p>
-        Here is an example of the above commands in action.
-        Notice that an abelian group would be a bad choice for this example.
+        Eis um exemplo dos comandos acima em ação.
+        Observe que um grupo abeliano seria uma escolha ruim para este exemplo.
       </p>
 
             <sage>
@@ -1827,17 +1825,17 @@
             </sage>
 
       <p>
-        Notice that in the one conjugacy class constructed all the elements have the same cycle structure,
-        which is no accident.
-        Notice too that <c>rep</c> and <c>a</c> are the same element,
-        and the product of the order of the centralizer (<m>4</m>) and the size of the conjugacy class (<m>4</m>) equals the order of the group (<m>16</m>),
-        which is a variant of the conclusion of <xref ref="actions-theorem-orbit"/>.
+        Observe que, na única classe de conjugação construída, todos os elementos têm a mesma estrutura de ciclos,
+        o que não é acidental.
+        Observe também que <c>rep</c> e <c>a</c> são o mesmo elemento,
+        e que o produto da ordem do centralizador (<m>4</m>) pelo tamanho da classe de conjugação (<m>4</m>) é igual à ordem do grupo (<m>16</m>),
+        o que é uma variante da conclusão do <xref ref="actions-theorem-orbit"/>.
       </p>
 
       <p>
-        Verify that the following is a demonstration of the class equation in the special case when the action is conjugation,
-        but would be valid for any group,
-        rather than just <c>D</c>.
+        Verifique que o trecho a seguir é uma demonstração da equação das classes no caso especial em que a ação é a conjugação,
+        mas seria válido para qualquer grupo,
+        e não apenas para <c>D</c>.
       </p>
 
             <sage>
@@ -1861,32 +1859,32 @@
     </subsection>
 
     <subsection>
-      <title>Graph Automorphisms</title>
+      <title>Automorfismos de grafos</title>
       <p>
-        As mentioned,
-        group actions can be even more interesting when the set they act on is different from the group itself.
-        One class of examples is the group of symmetries of a geometric solid,
-        where the objects in the set are the vertices of the object,
-        or perhaps some other aspect such as edges, faces or diagonals.
-        In this case,
-        the group is all those permutations that move the solid but leave it filling the same space before the motion
-        (<q>rigid motions</q>).
+        Como mencionamos,
+        as ações de grupos podem ser ainda mais interessantes quando o conjunto sobre o qual agem é diferente do próprio grupo.
+        Uma classe de exemplos é o grupo de simetrias de um sólido geométrico,
+        em que os objetos do conjunto são os vértices do objeto,
+        ou talvez algum outro aspecto, como arestas, faces ou diagonais.
+        Nesse caso,
+        o grupo consiste em todas as permutações que movem o sólido, mas o deixam ocupando o mesmo espaço de antes do movimento
+        (<q>movimentos rígidos</q>).
       </p>
 
       <p>
-        In this section we will examine something very similar.
-        A <term>graph</term> is a mathematical object,
-        consisting of vertices and edges,
-        but the only structure is whether or not any given pair of vertices are joined by an edge or not.
-        The group consists of permutations of vertices that preserve the structure, that is,
-        permutations of vertices that take edges to edges and non-edges to non-edges.
-        It is very similar to a symmetry group,
-        but there is no notion of any geometric relationships being preserved.
+        Nesta seção, examinaremos algo muito semelhante.
+        Um <term>grafo</term> é um objeto matemático
+        constituído por vértices e arestas,
+        mas a única estrutura é saber se cada par de vértices está ligado por uma aresta ou não.
+        O grupo consiste nas permutações dos vértices que preservam a estrutura, isto é,
+        nas permutações dos vértices que levam arestas a arestas e não-arestas a não-arestas.
+        Ele é muito semelhante a um grupo de simetrias,
+        mas não há uma noção de relações geométricas que devam ser preservadas.
       </p>
 
       <p>
-        Here is an example.
-        You will need to run the first compute cell to define the graph and get a nice graphic representation.
+        Eis um exemplo.
+        Você precisará executar a primeira célula de cálculo para definir o grafo e obter uma boa representação gráfica.
       </p>
 
             <sage doctest="not tested">
@@ -1906,27 +1904,27 @@
             </sage>
 
       <p>
-        Your plot should look like the vertices and edges of a cube,
-        but may not quite look regular, which is fine,
-        since the geometry is not relevant.
-        Vertices are labeled with strings of three binary digits,
-        <m>0</m> or <m>1</m>,
-        and any two vertices are connected by an edge if their strings differ in exactly one location.
-        We might expect the group of symmetries to have order <m>24</m>,
-        rather than order <m>48</m>, given its resemblance to a cube
-        (in appearance and in name).
-        However, when not restricted to rigid motions,
-        we have new permutations that preserve edges.
-        One in particular is to interchange two <q>opposite faces.</q>
-        Locate two <m>4</m>-cycles opposite of each other, listed in the same order:
-        <m>000, 010, 110, 100</m> and <m>001, 011, 111, 101</m>.
-        Notice that each cycle looks very similar,
-        but all the vertices of the first end in a zero and the second cycle has vertices ending in a one.
+        Seu gráfico deve se parecer com os vértices e as arestas de um cubo,
+        mas talvez não pareça exatamente regular, o que não é um problema,
+        pois a geometria não é relevante.
+        Os vértices são rotulados por sequências de três dígitos binários,
+        <m>0</m> ou <m>1</m>,
+        e dois vértices estão ligados por uma aresta se suas sequências diferem exatamente em uma posição.
+        Poderíamos esperar que o grupo de simetrias tivesse ordem <m>24</m>,
+        em vez de ordem <m>48</m>, dada sua semelhança com um cubo
+        (na aparência e no nome).
+        Entretanto, quando não nos restringimos aos movimentos rígidos,
+        obtemos novas permutações que preservam as arestas.
+        Uma delas é trocar duas <q>faces opostas.</q>
+        Localize dois ciclos de comprimento <m>4</m> opostos entre si, listados na mesma ordem:
+        <m>000, 010, 110, 100</m> e <m>001, 011, 111, 101</m>.
+        Observe que cada ciclo parece muito semelhante ao outro,
+        mas todos os vértices do primeiro terminam em zero, enquanto os do segundo terminam em um.
       </p>
 
       <p>
-        We can create explicitly the permutation that interchanges these two opposite faces,
-        using a text version of the permutation in cycle notation.
+        Podemos criar explicitamente a permutação que troca essas duas faces opostas,
+        usando uma versão textual da permutação na notação cíclica.
       </p>
 
             <sage>
@@ -1940,7 +1938,7 @@
             </sage>
 
       <p>
-        We can use this group to illustrate the relevant Sage commands for group actions.
+        Podemos usar este grupo para ilustrar os comandos relevantes do Sage para ações de grupos.
       </p>
             <!-- Order of inner list may be "random" when other packages are in use.   -->
             <!-- So we show this as an example, and test its cardinality, which will   -->
@@ -1960,10 +1958,10 @@
             </sage>
 
       <p>
-        So this action has only one (big) orbit.
-        This implies that every vertex is <q>like</q> any other.
-        When a permutation group behaves this way,
-        we say the group is <term>transitive</term>.
+        Portanto, esta ação tem apenas uma órbita (grande).
+        Isso implica que todo vértice é <q>semelhante</q> a qualquer outro.
+        Quando um grupo de permutações se comporta dessa maneira,
+        dizemos que o grupo é <term>transitivo</term>.
       </p>
 
             <sage>
@@ -1976,11 +1974,11 @@
             </sage>
 
       <p>
-        If every vertex is <q>the same</q>
-        we can compute the stabilizer of any vertex,
-        since they will all be isomorphic.
-        Because vertex <m>000</m> is the simplest in some sense,
-        we compute its stabilizer.
+        Se todo vértice é <q>igual</q> aos demais,
+        podemos calcular o estabilizador de qualquer vértice,
+        pois todos serão isomorfos.
+        Como o vértice <m>000</m> é, em certo sentido, o mais simples,
+        calculamos seu estabilizador.
       </p>
 
             <sage doctest="random">
@@ -1999,26 +1997,26 @@
             </sage>
 
       <p>
-        That <c>S</c> has <m>6</m> elements is no surprise,
-        since the group has order <m>48</m> and the size of the lone orbit is <m>8</m>.
-        But we can go one step further.
-        The three vertices of the graph attached directly to <m>000</m> are <m>100</m>,
+        Não é surpresa que <c>S</c> tenha <m>6</m> elementos,
+        pois o grupo tem ordem <m>48</m> e o tamanho da única órbita é <m>8</m>.
+        Mas podemos avançar um passo.
+        Os três vértices do grafo ligados diretamente a <m>000</m> são <m>100</m>,
         <m>010</m>,
         <m>001</m>.
-        Any automorphism of the graph that fixes <m>000</m> must then permute the three adjacent vertices.
-        There are <m>3!=6</m> possible ways to do this,
-        and you can check that each appears in one of the six elements of the stabilizer.
-        So we can understand a transitive group by considering the smaller stabilizer,
-        and in this case we can see that each element of the stabilizer is determined by how it permutes the neighbors of the stabilized vertex.
+        Qualquer automorfismo do grafo que fixa <m>000</m> deve então permutar os três vértices adjacentes.
+        Há <m>3!=6</m> maneiras possíveis de fazer isso,
+        e você pode verificar que cada uma aparece em um dos seis elementos do estabilizador.
+        Assim, podemos entender um grupo transitivo considerando o estabilizador menor,
+        e, neste caso, vemos que cada elemento do estabilizador é determinado pela maneira como permuta os vizinhos do vértice estabilizado.
       </p>
 
       <p>
-        Transitive groups are both unusual and important.
-        To contrast,
-        here is a graph automorphism group that is far from transitive
-        (without being trivial).
-        A path is a graph that has all of its vertices in a line.
-        Run the first compute cell to see a path on <m>11</m> vertices.
+        Grupos transitivos são incomuns e importantes.
+        Para fazer um contraste,
+        eis um grupo de automorfismos de grafos que está longe de ser transitivo
+        (sem ser trivial).
+        Um caminho é um grafo cujos vértices estão todos em uma linha.
+        Execute a primeira célula de cálculo para ver um caminho com <m>11</m> vértices.
       </p>
 
             <sage doctest="not tested">
@@ -2038,9 +2036,9 @@
             </sage>
 
       <p>
-        The automorphism group is the trivial identity automorphism (always) and an order <m>2</m> permutation that
-        <q>flips</q> the path end-to-end.
-        The group is far from transitive and there are many orbits.
+        O grupo de automorfismos é composto pela automorfismo identidade trivial (sempre) e por uma permutação de ordem <m>2</m> que
+        <q>inverte</q> o caminho de uma ponta à outra.
+        O grupo está longe de ser transitivo e há muitas órbitas.
       </p>
 
             <sage>
@@ -2061,9 +2059,9 @@
             </sage>
 
       <p>
-        Most of the stabilizers are trivial, with one exception.
-        As subgroups of a group of order <m>2</m>,
-        there really are not too many options.
+        A maioria dos estabilizadores é trivial, com uma exceção.
+        Como subgrupos de um grupo de ordem <m>2</m>,
+        realmente não há muitas opções.
       </p>
 
             <sage>
@@ -2084,16 +2082,16 @@
             </sage>
 
       <p>
-        How would this final example have been different if we had used a path on <m>10</m> vertices?
+        Como este exemplo final teria sido diferente se tivéssemos usado um caminho com <m>10</m> vértices?
       </p>
 
       <p>
-        <em>NOTE</em>: There was once a small bug with stabilizers being created as subgroups of symmetric groups on fewer symbols than the correct number.
-        This is fixed in Sage 4.8 and newer.
-        Note the correct output below,
-        and you can check your installation by running these commands.
-        If you do not see the singleton <c>[4]</c> in your output,
-        you should definitely update your copy of Sage.
+        <em>NOTA</em>: Houve certa vez um pequeno erro que fazia com que os estabilizadores fossem criados como subgrupos de grupos simétricos sobre menos símbolos que o número correto.
+        Isso foi corrigido no Sage 4.8 e versões mais recentes.
+        Observe a saída correta abaixo
+        e verifique sua instalação executando estes comandos.
+        Se você não vir o singleton <c>[4]</c> em sua saída,
+        deve atualizar sua cópia do Sage.
       </p>
 
             <sage>
@@ -2110,15 +2108,15 @@
 
   </section>
   <exercises xml:id="actions-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
 
     <exercise number="1" xml:id="actions-sage-exercise-Higman-Sims-graph">
       <statement>
         <p>
-          Construct the Higman-Sims graph with the command <c>graphs.HigmanSimsGraph()</c>.
-          Then construct the automorphism group and determine the order of the one interesting normal subgroup of this group.
-          You can try plotting the graph,
-          but the graphic is unlikely to be very informative.
+          Construa o grafo de Higman-Sims com o comando <c>graphs.HigmanSimsGraph()</c>.
+          Em seguida, construa o grupo de automorfismos e determine a ordem do único subgrupo normal interessante desse grupo.
+          Você pode tentar desenhar o grafo,
+          mas é pouco provável que a imagem seja muito informativa.
         </p>
       </statement>
     </exercise>
@@ -2126,16 +2124,16 @@
     <exercise number="2" xml:id="actions-sage-exercise-11-vertices">
       <statement>
         <p>
-          This exercise asks you to verify the class equation outside of the usual situation where the group action is conjugation.
-          Consider the example of the automorphism group of the path on <m>11</m> vertices.
-          First construct the list of orbits.
-          From each orbit,
-          grab the first element of the orbit as a representative.
-          Compute the size of the orbit as the index of the stabilizer of the representative in the group via <xref ref="actions-theorem-orbit"/>.
-          (Yes, you could just compute the size of the full orbit,
-          but the idea of the exercise is to use more group-theoretic results.)
-          Then sum these orbit-sizes,
-          which should equal the size of the whole vertex set since the orbits form a partition.
+          Este exercício pede que você verifique a equação das classes fora da situação usual em que a ação do grupo é a conjugação.
+          Considere o exemplo do grupo de automorfismos do caminho com <m>11</m> vértices.
+          Primeiro, construa a lista de órbitas.
+          De cada órbita,
+          extraia o primeiro elemento como representante.
+          Calcule o tamanho da órbita como o índice do estabilizador do representante no grupo, por meio do <xref ref="actions-theorem-orbit"/>.
+          (Sim, você poderia simplesmente calcular o tamanho da órbita completa,
+          mas a ideia do exercício é usar resultados mais próprios da teoria dos grupos.)
+          Em seguida, some esses tamanhos de órbitas,
+          o que deve ser igual ao tamanho de todo o conjunto de vértices, pois as órbitas formam uma partição.
         </p>
       </statement>
     </exercise>
@@ -2143,13 +2141,13 @@
     <exercise number="3" xml:id="actions-sage-exercise-simple-graph">
       <statement>
         <p>
-          Construct a simple graph
-          (no loops or multiple edges),
-          with at least two vertices and at least one edge,
-          whose automorphism group is trivial.
-          You might start experimenting by drawing pictures on paper before constructing the graph.
-          A command like the following will let you construct a graph from edges.
-          The graph below looks like a triangle or <m>3</m>-cycle.
+          Construa um grafo simples
+          (sem laços ou arestas múltiplas),
+          com pelo menos dois vértices e pelo menos uma aresta,
+          cujo grupo de automorfismos seja trivial.
+          Você pode começar experimentando desenhar figuras no papel antes de construir o grafo.
+          Um comando como o seguinte permitirá construir um grafo a partir de arestas.
+          O grafo abaixo se parece com um triângulo ou um ciclo de comprimento <m>3</m>.
         </p>
 
             <sage doctest="not tested">
@@ -2164,25 +2162,25 @@
     <exercise number="4" xml:id="actions-sage-exercise-group-pairs">
       <statement>
         <p>
-          For the following two pairs of groups,
-          compute the list of conjugacy class representatives for each group in the pair.
-          For each part,
-          compare and contrast the results for the two groups in the pair,
-          with thoughtful and insightful comments.
+          Para os dois pares de grupos a seguir,
+          calcule a lista de representantes das classes de conjugação de cada grupo do par.
+          Em cada item,
+          compare e contraste os resultados dos dois grupos do par,
+          com comentários ponderados e perspicazes.
         </p>
 
         <ol>
           <li>
             <p>
-              The full symmetric group on 5 symbols, <m>S_5</m>,
-              and the alternating group on 5 symbols, <m>A_5</m>.
+              O grupo simétrico completo sobre 5 símbolos, <m>S_5</m>,
+              e o grupo alternado sobre 5 símbolos, <m>A_5</m>.
             </p>
           </li>
 
           <li>
             <p>
-              The dihedral groups that are symmetries of a <m>7</m>-gon and an <m>8</m>-gon,
-              <m>D_{7}</m> and <m>D_{8}</m>.
+              Os grupos diedrais que são simetrias de um <m>7</m>-gono e de um <m>8</m>-gono,
+              <m>D_{7}</m> e <m>D_{8}</m>.
             </p>
           </li>
         </ol>
@@ -2192,31 +2190,31 @@
     <exercise number="5" xml:id="actions-sage-exercise-cube-graph">
       <statement>
         <p>
-          Use the command <c>graphs.CubeGraph(4)</c> to build the four-dimensional cube graph,
+          Use o comando <c>graphs.CubeGraph(4)</c> para construir o grafo do cubo quadridimensional,
           <m>Q_4</m>.
-          Using a plain <c>.plot()</c> command
-          (without a spring layout)
-          should create a nice plot.
-          Construct the automorphism group of the graph,
-          which will provide a group action on the vertex set.
+          Usar um comando <c>.plot()</c> simples
+          (sem um layout de mola)
+          deve criar uma boa representação gráfica.
+          Construa o grupo de automorfismos do grafo,
+          que fornecerá uma ação de grupo sobre o conjunto de vértices.
         </p>
 
         <ol>
           <li>
             <p>
-              Construct the orbits of this action, and comment.
+              Construa as órbitas desta ação e comente.
             </p>
           </li>
 
           <li>
             <p>
-              Construct a stabilizer of a single vertex
-              (which is a subgroup of the full automorphism group)
-              and then consider the action of
-              <em>this</em> group on the vertex set.
-              Construct the orbits of this new action,
-              and comment carefully and fully on your observations,
-              especially in terms of the vertices of the graph.
+              Construa o estabilizador de um único vértice
+              (que é um subgrupo do grupo de automorfismos completo)
+              e então considere a ação desse
+              <em>grupo</em> sobre o conjunto de vértices.
+              Construa as órbitas desta nova ação
+              e comente cuidadosa e completamente suas observações,
+              especialmente em termos dos vértices do grafo.
             </p>
           </li>
         </ol>
@@ -2226,8 +2224,8 @@
     <exercise number="6" xml:id="actions-sage-exercise-order-16">
       <statement>
         <p>
-          Build the graph given by the commands below.
-          The result should be a symmetric-looking graph with an automorphism group of order <m>16</m>.
+          Construa o grafo indicado pelos comandos abaixo.
+          O resultado deve ser um grafo de aparência simétrica com um grupo de automorfismos de ordem <m>16</m>.
         </p>
             <!-- Graph is number 3.8 in Cvetkovic, Doob, Sachs -->
             <!-- CycleGraph provides a good layout             -->
@@ -2240,10 +2238,10 @@
                 </sage>
 
         <p>
-          Repeat the two parts of the previous exercise,
-          but realize that in the second part there are now two different stabilizers to create,
-          so build both and compare the differences in the stabilizers and their orbits.
-          Creating a second plot with <c>G.plot(layout='planar')</c> might provide extra insight.
+          Repita as duas partes do exercício anterior,
+          mas observe que, na segunda parte, agora há dois estabilizadores diferentes a construir;
+          portanto, construa ambos e compare as diferenças entre seus estabilizadores e suas órbitas.
+          Criar uma segunda representação com <c>G.plot(layout='planar')</c> pode fornecer uma visão adicional.
         </p>
       </statement>
     </exercise>

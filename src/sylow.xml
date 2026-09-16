@@ -37,7 +37,7 @@
         <md>
           |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]
         </md>,
-        onde <m>Z(G) = \{g \in G : gx = xg \text{ for all } x \in G\}</m> é o centro de <m>G</m> e
+        onde <m>Z(G) = \{g \in G : gx = xg \text{ para todo } x \in G\}</m> é o centro de <m>G</m> e
         <m>C(x_i) = \{ g \in G : g x_i = x_i g \}</m> é o subgrupo centralizador de <m>x_i</m>.
       </p>
 
@@ -336,7 +336,7 @@
             só pode haver uma órbita nessa ação.
             Para <m>P \in {\mathcal S}</m>,
             <md>
-              |{\mathcal S}| = |\text{orbit of }P| = [G : N(P)]
+              |{\mathcal S}| = |\text{órbita de }P| = [G : N(P)]
             </md>
             pelo <xref ref="sylow-lemma-distinct-conjugates"/>.
             Mas <m>[G : N(P)]</m> é um divisor de <m>|G|</m>;

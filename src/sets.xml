@@ -78,7 +78,7 @@
 
           <li>
             <p>
-              If <m>ax^2 + bx + c = 0</m> and <m>a \neq 0</m>, then
+              Se <m>ax^2 + bx + c = 0</m> e <m>a \neq 0</m>, então
               <md>
                 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
               </md>.
@@ -271,13 +271,13 @@
         </md>
         para um conjunto que contém os elementos <m>x_1, x_2, \ldots, x_n</m> ou
         <md>
-          X = \{ x :x \text{ satisfies }{\mathcal P}\}
+          X = \{ x :x \text{ satisfaz }{\mathcal P}\}
         </md>
         se cada <m>x</m> em <m>X</m> satisfaz uma determinada propriedade <m>{\mathcal P}</m>.
         Por exemplo, se <m>E</m> é o conjunto dos inteiros positivos pares,
         podemos descrever <m>E</m> escrevendo
         <md>
-          E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even integer and } x \gt 0 \}
+          E = \{2, 4, 6, \ldots \} \quad \text{ou} \quad E = \{ x : x \text{ é um inteiro par e } x \gt 0 \}
         </md>.
         <m>2 \in E</m> quando queremos dizer que 2 está no conjunto <m>E</m>
         e <m>-3 \notin E</m> para dizer que <m>-3</m> não está no conjunto <m>E</m>.
@@ -286,11 +286,11 @@
       <p>
         Alguns dos conjuntos mais importantes que consideraremos são os seguintes:
         <md>
-          <mrow>{\mathbb N} = \{n: n \text{ is a natural number}\}  = \{1, 2, 3, \ldots \};</mrow>
-          <mrow>{\mathbb Z} = \{n : n \text{ is an integer} \} = \{\ldots, -1, 0, 1,  2, \ldots \};</mrow>
-          <mrow>{\mathbb Q} = \{r : r \text{ is a rational number}\} = \{p/q : p, q \in {\mathbb Z} \text{ where } q \neq 0\};</mrow>
-          <mrow>{\mathbb R} = \{ x : x \text{ is a real number} \};</mrow>
-          <mrow>{\mathbb C} = \{z : z \text{ is a complex number}\}</mrow>
+          <mrow>{\mathbb N} = \{n: n \text{ é um número natural}\}  = \{1, 2, 3, \ldots \};</mrow>
+          <mrow>{\mathbb Z} = \{n : n \text{ é um inteiro} \} = \{\ldots, -1, 0, 1,  2, \ldots \};</mrow>
+          <mrow>{\mathbb Q} = \{r : r \text{ é um número racional}\} = \{p/q : p, q \in {\mathbb Z} \text{ em que } q \neq 0\};</mrow>
+          <mrow>{\mathbb R} = \{ x : x \text{ é um número real} \};</mrow>
+          <mrow>{\mathbb C} = \{z : z \text{ é um número complexo}\}</mrow>
         </md>.
 
         <notation>
@@ -335,7 +335,7 @@
         <md>
           \{4,5,8\} \subset \{2, 3, 4, 5, 6, 7, 8, 9 \}
         </md>
-        and
+        e
         <md>
           {\mathbb N} \subset {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}
         </md>.
@@ -367,11 +367,11 @@
         podemos realizar certas operações:
         a <term>união</term> <m>A \cup B</m> de dois conjuntos <m>A</m> e <m>B</m> é definida como
         <md>
-          A \cup B = \{x : x \in A \text{ or } x \in B \};
+          A \cup B = \{x : x \in A \text{ ou } x \in B \};
         </md>
         a <term>interseção</term> de <m>A</m> e <m>B</m> é definida por
         <md>
-          A \cap B = \{x :  x \in A \text{ and } x \in B \}
+          A \cap B = \{x :  x \in A \text{ e } x \in B \}
         </md>.
 
         <notation>
@@ -386,14 +386,14 @@
 
         Se <m>A = \{1, 3, 5\}</m> e <m>B = \{ 1, 2, 3, 9 \}</m>, então
         <md>
-          A \cup B = \{1, 2, 3, 5, 9 \} \quad \text{and} \quad A \cap B = \{ 1, 3 \}
+          A \cup B = \{1, 2, 3, 5, 9 \} \quad \text{e} \quad A \cap B = \{ 1, 3 \}
         </md>.
         Podemos considerar a união e a interseção de mais de dois conjuntos.
         Nesse caso, escrevemos
         <md>
           \bigcup_{i = 1}^{n} A_{i} = A_{1} \cup \cdots \cup A_n
         </md>
-        and
+        e
         <md>
           \bigcap_{i = 1}^{n} A_{i} = A_{1} \cap \cdots \cap A_n
         </md>
@@ -423,7 +423,7 @@
         </notation>
 
         <md>
-          A' = \{ x : x \in U \text{ and } x \notin A \}
+          A' = \{ x : x \in U \text{ e } x \notin A \}
         </md>.
       </p>
 
@@ -437,7 +437,7 @@
         </notation>
 
         <md>
-          A \setminus B = A \cap B'  = \{ x : x \in A \text{ and } x \notin B \}
+          A \setminus B = A \cap B'  = \{ x : x \in A \text{ e } x \notin B \}
         </md>.
       </p>
 
@@ -445,14 +445,14 @@
         <p>
           Seja <m>{\mathbb R}</m> o conjunto universo e suponha que
           <md>
-            A = \{ x \in {\mathbb R} : 0 \lt x \leq 3 \} \quad \text{and} \quad B = \{ x \in {\mathbb R} : 2 \leq x \lt 4 \}
+            A = \{ x \in {\mathbb R} : 0 \lt x \leq 3 \} \quad \text{e} \quad B = \{ x \in {\mathbb R} : 2 \leq x \lt 4 \}
           </md>.
           Então
           <md>
             <mrow>A \cap B &amp; =  \{ x \in {\mathbb R} : 2 \leq x \leq 3 \}</mrow>
             <mrow>A \cup B &amp; =  \{ x \in {\mathbb R} : 0 \lt x \lt 4 \}</mrow>
             <mrow>A \setminus B &amp; =  \{ x \in {\mathbb R} : 0 \lt x \lt 2  \}</mrow>
-            <mrow>A' &amp; =  \{ x \in {\mathbb R} : x \leq 0 \text{ or } x \gt 3 \}</mrow>
+            <mrow>A' &amp; =  \{ x \in {\mathbb R} : x \leq 0 \text{ ou } x \gt 3 \}</mrow>
           </md>.
         </p>
       </example>
@@ -467,25 +467,25 @@
               <li>
                 <p>
                   <m>A \cup A = A</m>, <m>A \cap A = A</m>,
-                  and <m>A \setminus A = \emptyset</m>;
+                  e <m>A \setminus A = \emptyset</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>A \cup \emptyset = A</m> and <m>A \cap \emptyset = \emptyset</m>;
+                  <m>A \cup \emptyset = A</m> e <m>A \cap \emptyset = \emptyset</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>A \cup (B \cup C) = (A \cup B) \cup C</m> and <m>A \cap (B \cap C) = (A \cap B) \cap C</m>;
+                  <m>A \cup (B \cup C) = (A \cup B) \cup C</m> e <m>A \cap (B \cap C) = (A \cap B) \cap C</m>;
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>A \cup B = B \cup A</m> and <m>A \cap B = B \cap A</m>;
+                  <m>A \cup B = B \cup A</m> e <m>A \cap B = B \cap A</m>;
                 </p>
               </li>
 
@@ -512,13 +512,13 @@
           <p>
             (1) Observe que
             <md>
-              <mrow>A \cup A &amp; =  \{ x :  x \in A \text{ or } x \in A \}</mrow>
+              <mrow>A \cup A &amp; =  \{ x :  x \in A \text{ ou } x \in A \}</mrow>
               <mrow>&amp; =  \{ x : x \in A \}</mrow>
               <mrow>&amp; =  A</mrow>
             </md>
-            and
+            e
             <md>
-              <mrow>A \cap A &amp; =  \{ x : x \in A \text{ and } x \in A \}</mrow>
+              <mrow>A \cap A &amp; =  \{ x : x \in A \text{ e } x \in A \}</mrow>
               <mrow>&amp; =  \{ x : x \in A  \}</mrow>
               <mrow>&amp; =  A</mrow>
             </md>.
@@ -526,11 +526,11 @@
           </p>
 
           <p>
-            (3) For sets <m>A</m>, <m>B</m>, and <m>C</m>,
+            (3) Para conjuntos <m>A</m>, <m>B</m> e <m>C</m>,
             <md>
-              <mrow>A \cup (B \cup C) &amp; = A \cup \{ x : x \in B \text{ or } x \in C \}</mrow>
-              <mrow>&amp; = \{ x : x \in A \text{ or } x \in B, \text{ or } x \in C \}</mrow>
-              <mrow>&amp; = \{ x : x \in A \text{ or } x \in B \} \cup C</mrow>
+              <mrow>A \cup (B \cup C) &amp; = A \cup \{ x : x \in B \text{ ou } x \in C \}</mrow>
+              <mrow>&amp; = \{ x : x \in A \text{ ou } x \in B, \text{ ou } x \in C \}</mrow>
+              <mrow>&amp; = \{ x : x \in A \text{ ou } x \in B \} \cup C</mrow>
               <mrow>&amp; = (A \cup B) \cup C</mrow>
             </md>.
             Um argumento semelhante demonstra que <m>A \cap (B \cap C) = (A \cap B) \cap C</m>.
@@ -627,7 +627,7 @@
         </notation>
 
         <md>
-          A \times B = \{ (a,b) : a \in A \text{ and } b \in B \}
+          A \times B = \{ (a,b) : a \in A \text{ e } b \in B \}
         </md>.
       </p>
 
@@ -638,7 +638,7 @@
           <md>
             \{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}
           </md>
-          and
+          e
           <md>
             A \times C = \emptyset
           </md>.
@@ -648,7 +648,7 @@
       <p>
         Definimos o <term>produto cartesiano de <m>n</m> conjuntos</term> como
         <md>
-          A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}
+          A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ para } i = 1, \ldots, n \}
         </md>.
         Se <m>A = A_1 = A_2 = \cdots = A_n</m>,
         frequentemente escrevemos <m>A^n</m> para <m>A \times \cdots \times A</m>
@@ -1220,7 +1220,7 @@
             1 &amp; 2 \\
             -1 &amp; 1
             \end{pmatrix}
-            \quad \text{and} \quad
+            \quad \text{e} \quad
             B =
             \begin{pmatrix}
             -18 &amp; 33 \\
@@ -1484,9 +1484,9 @@
         <p>
           Suponha que
           <md>
-            <mrow>A &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is even} \},</mrow>
-            <mrow>B &amp; = \{x : x \in \mathbb N \text{ and } x \text{ is prime}\},</mrow>
-            <mrow>C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}</mrow>
+            <mrow>A &amp; = \{ x : x \in \mathbb N \text{ e } x \text{ é par} \},</mrow>
+            <mrow>B &amp; = \{x : x \in \mathbb N \text{ e } x \text{ é primo}\},</mrow>
+            <mrow>C &amp; = \{ x : x \in \mathbb N \text{ e } x \text{ é múltiplo de } 5\}</mrow>
           </md>.
           Descreva cada um dos conjuntos a seguir.
 

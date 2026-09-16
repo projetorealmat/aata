@@ -273,7 +273,7 @@
         <li>
           <p>
             A definição <em>indutiva</em> ou <em>recursiva</em>:
-            <m>1! = 1</m> and <m>n! = n(n - 1)!</m> for <m>n \gt 1</m>.
+            <m>1! = 1</m> e <m>n! = n(n - 1)!</m> para <m>n \gt 1</m>.
           </p>
         </li>
       </ul>
@@ -319,9 +319,9 @@
           <case>
             <title>Existência de <m>q</m> e <m>r</m></title>
             <p>
-              Let
+              Seja
               <md>
-                S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}
+                S = \{ a - bk : k \in {\mathbb Z} \text{ e } a - bk \geq 0 \}
               </md>.
               Se <m>0 \in S</m>, então <m>b</m> divide <m>a</m>
               e podemos tomar <m>q = a/b</m> e <m>r = 0</m>.
@@ -355,7 +355,7 @@
               Suponha que existam inteiros <m>r</m>, <m>r'</m>,
               <m>q</m> e <m>q'</m> tais que
               <md>
-                a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b
+                a = bq + r, 0 \leq r \lt b \quad \text{e}\quad a = bq' + r', 0 \leq r' \lt b
               </md>.
               Então <m> bq + r =  bq' + r'</m>.
               Suponha que <m>r' \geq r</m>.
@@ -410,9 +410,9 @@
 
         <proof>
           <p>
-            Let
+            Seja
             <md>
-              S = \{ am + bn : m, n \in {\mathbb Z} \text{ and } am + bn \gt 0 \}
+              S = \{ am + bn : m, n \in {\mathbb Z} \text{ e } am + bn \gt 0 \}
             </md>.
             Claramente, o conjunto <m>S</m> não é vazio;
             portanto, pelo princípio da boa ordenação, <m>S</m> deve ter um menor elemento,

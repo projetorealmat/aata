@@ -10,147 +10,147 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="finite">
-  <title>Finite Fields</title>
+  <title>Corpos Finitos</title>
   <introduction>
     <p>
-      Finite fields appear in many applications of algebra,
-      including coding theory and cryptography.
-      We already know one finite field,
-      <m>{\mathbb Z}_p</m>, where <m>p</m> is prime.
-      In this chapter we will show that a unique finite field of order <m>p^n</m> exists for every prime <m>p</m>,
-      where <m>n</m> is a positive integer.
-      Finite fields are also called Galois fields in honor of Évariste Galois,
-      who was one of the first mathematicians to investigate them.
+      Os corpos finitos aparecem em muitas aplicações da álgebra,
+      incluindo a teoria de códigos e a criptografia.
+      Já conhecemos um corpo finito,
+      <m>{\mathbb Z}_p</m>, onde <m>p</m> é primo.
+      Neste capítulo mostraremos que existe um único corpo finito de ordem <m>p^n</m> para todo primo <m>p</m>,
+      onde <m>n</m> é um inteiro positivo.
+      Os corpos finitos também são chamados corpos de Galois, em homenagem a Évariste Galois,
+      um dos primeiros matemáticos a investigá-los.
     </p>
   </introduction>
 
   <section xml:id="finite-section-field">
-    <title>Structure of a Finite Field</title>
+    <title>Estrutura de um Corpo Finito</title>
     <p>
-      Recall that a field <m>F</m> has
-      <term>characteristic</term>
-      <m>p</m> if <m>p</m> is the smallest positive integer such that for every nonzero element <m>\alpha</m> in <m>F</m>,
-      we have <m>p \alpha = 0</m>.
-      If no such integer exists, then <m>F</m> has characteristic <m>0</m>.
-      From <xref ref="rings-theorem-integral-domain-characteristic"/> we know that <m>p</m> must be prime.
-      Suppose that <m>F</m> is a finite field with <m>n</m> elements.
-      Then <m>n \alpha = 0</m> for all <m>\alpha</m> in <m>F</m>.
-      Consequently, the characteristic of <m>F</m> must be <m>p</m>,
-      where <m>p</m> is a prime dividing <m>n</m>.
-      This discussion is summarized in the following proposition.
+      Lembre-se de que um corpo <m>F</m> tem
+      <term>característica</term>
+      <m>p</m> se <m>p</m> é o menor inteiro positivo tal que, para todo elemento não nulo <m>\alpha</m> em <m>F</m>,
+      temos <m>p \alpha = 0</m>.
+      Se tal inteiro não existe, então <m>F</m> tem característica <m>0</m>.
+      Pela <xref ref="rings-theorem-integral-domain-characteristic"/>, sabemos que <m>p</m> deve ser primo.
+      Suponha que <m>F</m> seja um corpo finito com <m>n</m> elementos.
+      Então <m>n \alpha = 0</m> para todo <m>\alpha</m> em <m>F</m>.
+      Consequentemente, a característica de <m>F</m> deve ser <m>p</m>,
+      onde <m>p</m> é um primo que divide <m>n</m>.
+      Esta discussão é resumida na proposição a seguir.
     </p>
 
     <proposition>
       <statement>
         <p>
-          If <m>F</m> is a finite field,
-          then the characteristic of <m>F</m> is <m>p</m>, where <m>p</m> is prime.
+          Se <m>F</m> é um corpo finito,
+          então a característica de <m>F</m> é <m>p</m>, onde <m>p</m> é primo.
         </p>
       </statement>
     </proposition>
 
     <p>
-      Throughout this chapter we will assume that <m>p</m> is a prime number unless otherwise stated.
+      Ao longo deste capítulo, suporemos que <m>p</m> é um número primo, salvo indicação em contrário.
     </p>
 
     <proposition>
       <statement>
         <p>
-          If <m>F</m> is a finite field of characteristic <m>p</m>,
-          then the order of <m>F</m> is <m>p^n</m> for some <m>n \in {\mathbb N}</m>.
+          Se <m>F</m> é um corpo finito de característica <m>p</m>,
+          então a ordem de <m>F</m> é <m>p^n</m> para algum <m>n \in {\mathbb N}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>\phi : {\mathbb Z} \rightarrow F</m> be the ring homomorphism defined by <m>\phi(n) = n \cdot 1</m>.
-          Since the characteristic of <m>F</m> is <m>p</m>,
-          the kernel of <m>\phi</m> must be
-          <m>p {\mathbb Z}</m> and the image of <m>\phi</m> must be a subfield of <m>F</m> isomorphic to <m>{\mathbb Z}_p</m>.
-          We will denote this subfield by <m>K</m>.
-          Since <m>F</m> is a finite field,
-          it must be a finite extension of <m>K</m> and, therefore,
-          an algebraic extension of <m>K</m>.
-          Suppose that <m>[F : K] = n</m> is the dimension of <m>F</m>,
-          where <m>F</m> is a <m>K</m> vector space.
-          There must exist elements <m>\alpha_1, \ldots, \alpha_n \in F</m> such that any element <m>\alpha</m> in <m>F</m> can be written uniquely in the form
+          Seja <m>\phi : {\mathbb Z} \rightarrow F</m> o homomorfismo de anéis definido por <m>\phi(n) = n \cdot 1</m>.
+          Como a característica de <m>F</m> é <m>p</m>,
+          o núcleo de <m>\phi</m> deve ser
+          <m>p {\mathbb Z}</m>, e a imagem de <m>\phi</m> deve ser um subcorpo de <m>F</m> isomorfo a <m>{\mathbb Z}_p</m>.
+          Denotaremos esse subcorpo por <m>K</m>.
+          Como <m>F</m> é um corpo finito,
+          ele deve ser uma extensão finita de <m>K</m> e, portanto,
+          uma extensão algébrica de <m>K</m>.
+          Suponha que <m>[F : K] = n</m> seja a dimensão de <m>F</m>,
+          onde <m>F</m> é um espaço vetorial sobre <m>K</m>.
+          Devem existir elementos <m>\alpha_1, \ldots, \alpha_n \in F</m> tais que qualquer elemento <m>\alpha</m> de <m>F</m> possa ser escrito unicamente na forma
           <md>
             \alpha = a_1 \alpha_1 + \cdots + a_n \alpha_n
           </md>,
-          where the <m>a_i</m>'s are in <m>K</m>.
-          Since there are <m>p</m> elements in <m>K</m>,
-          there are <m>p^n</m> possible linear combinations of the <m>\alpha_i</m>'s.
-          Therefore, the order of <m>F</m> must be <m>p^n</m>.
+          onde os <m>a_i</m> pertencem a <m>K</m>.
+          Como há <m>p</m> elementos em <m>K</m>,
+          há <m>p^n</m> combinações lineares possíveis dos <m>\alpha_i</m>.
+          Portanto, a ordem de <m>F</m> deve ser <m>p^n</m>.
         </p>
       </proof>
     </proposition>
 
     <lemma xml:id="finite-lemma-freshmans-dream">
-      <title>Freshman's Dream</title>
+      <title>Sonho do calouro</title>
       <idx>
-      <h>Freshman's Dream</h>
+      <h>Sonho do calouro</h>
       </idx>
       <statement>
         <p>
-          Let <m>p</m> be prime and <m>D</m> be an integral domain of characteristic <m>p</m>.
-          Then
+          Sejam <m>p</m> primo e <m>D</m> um domínio de integridade de característica <m>p</m>.
+          Então
           <md>
             a^{p^n} + b^{p^n} = (a + b)^{p^n}
           </md>
-          for all positive integers <m>n</m>.
+          para todos os inteiros positivos <m>n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will prove this lemma using mathematical induction on <m>n</m>.
-          We can use the binomial formula
-          (see <xref ref="integers-example-binomial-theorem"/>)
-          to verify the case for <m>n = 1</m>; that is,
+          Provaremos este lema usando indução matemática em <m>n</m>.
+          Podemos usar a fórmula binomial
+          (veja o <xref ref="integers-example-binomial-theorem"/>)
+          para verificar o caso <m>n = 1</m>; isto é,
           <md>
             (a + b)^p = \sum_{k = 0}^{p} \binom{p}{k} a^k b^{p - k}
           </md>.
-          If <m>0 \lt k \lt p</m>, then
+          Se <m>0 \lt k \lt p</m>, então
           <md>
             \binom{p}{k} = \frac{p!}{k!(p - k)!}
           </md>
-          must be divisible by <m>p</m>,
-          since <m>p</m> cannot divide <m>k!(p - k)!</m>.
-          Note that <m>D</m> is an integral domain of characteristic <m>p</m>,
-          so all but the first and last terms in the sum must be zero.
-          Therefore, <m>(a + b)^p = a^p + b^p</m>.
+          deve ser divisível por <m>p</m>,
+          pois <m>p</m> não pode dividir <m>k!(p - k)!</m>.
+          Observe que <m>D</m> é um domínio de integridade de característica <m>p</m>;
+          portanto, todos os termos salvo o primeiro e o último na soma devem ser nulos.
+          Logo, <m>(a + b)^p = a^p + b^p</m>.
         </p>
 
         <p>
-          Now suppose that the result holds for all <m>k</m>,
-          where <m>1 \leq k \leq n</m>.
-          By the induction hypothesis,
+          Agora suponha que o resultado valha para todo <m>k</m>,
+          onde <m>1 \leq k \leq n</m>.
+          Pela hipótese de indução,
           <md>
             (a + b)^{p^{n + 1}} = ((a + b)^p)^{p^{n}} = (a^p + b^p)^{p^{n}} = (a^p)^{p^{n}} + (b^p)^{p^{n}} = a^{p^{n + 1}} + b^{p^{n + 1}}
           </md>.
-          Therefore, the lemma is true for <m>n + 1</m> and the proof is complete.
+          Portanto, o lema é verdadeiro para <m>n + 1</m>, e a demonstração está concluída.
         </p>
       </proof>
     </lemma>
 
     <p>
-      Let <m>F</m> be a field.
-      A polynomial <m>f(x) \in F[x]</m> of degree <m>n</m> is <term>separable</term><idx><h>Polynomial separable</h></idx>
-      if it has <m>n</m> distinct roots in the splitting field of <m>f(x)</m>;
-      that is, <m>f(x)</m> is separable when it factors into distinct linear factors over the splitting field of <m>f</m>.
-      An extension <m>E</m> of <m>F</m> is a
-      <term>separable extension</term><idx><h>Extension</h><h>separable</h></idx> of <m>F</m> if every element in <m>E</m> is the root of a separable polynomial in <m>F[x]</m>.
+      Seja <m>F</m> um corpo.
+      Um polinômio <m>f(x) \in F[x]</m> de grau <m>n</m> é <term>separável</term><idx><h>Polinômio separável</h></idx>
+      se possui <m>n</m> raízes distintas no corpo de decomposição de <m>f(x)</m>;
+      isto é, <m>f(x)</m> é separável quando se fatora em fatores lineares distintos sobre o corpo de decomposição de <m>f</m>.
+      Uma extensão <m>E</m> de <m>F</m> é uma
+      <term>extensão separável</term><idx><h>Extensão</h><h>separável</h></idx> de <m>F</m> se todo elemento de <m>E</m> é raiz de um polinômio separável em <m>F[x]</m>.
     </p>
         <!-- Corrected typo.  Suggested by C. Wall. - TWJ 5/15/2012 -->
     <example>
       <p>
-        The polynomial <m>x^2 - 2</m> is separable over
-        <m>{\mathbb Q}</m> since it factors as <m>(x - \sqrt{2}\, )(x + \sqrt{2}\, )</m>.
-        In fact, <m>{\mathbb Q}(\sqrt{2}\, )</m> is a separable extension of <m>{\mathbb Q}</m>.
-        Let <m>\alpha =  a + b \sqrt{2}</m> be any element in <m>{\mathbb Q}(\sqrt{2}\, )</m>.
-        If <m>b = 0</m>, then <m>\alpha</m> is a root of <m>x - a</m>.
-        If <m>b \neq 0</m>,
-        then <m>\alpha</m> is the root  of the separable polynomial
+        O polinômio <m>x^2 - 2</m> é separável sobre
+        <m>{\mathbb Q}</m>, pois se fatora como <m>(x - \sqrt{2}\, )(x + \sqrt{2}\, )</m>.
+        De fato, <m>{\mathbb Q}(\sqrt{2}\, )</m> é uma extensão separável de <m>{\mathbb Q}</m>.
+        Seja <m>\alpha =  a + b \sqrt{2}</m> um elemento qualquer de <m>{\mathbb Q}(\sqrt{2}\, )</m>.
+        Se <m>b = 0</m>, então <m>\alpha</m> é raiz de <m>x - a</m>.
+        Se <m>b \neq 0</m>,
+        então <m>\alpha</m> é raiz do polinômio separável
         <md>
           x^2 - 2 a x + a^2 - 2 b^2 = (x - (a + b \sqrt{2}\, ))(x - (a - b \sqrt{2}\, ))
         </md>.
@@ -158,15 +158,15 @@
     </example>
         <!-- Notation error corrected.  Suggested by C. Wall.  TWJ 5/15/2012 -->
     <p>
-      Fortunately,
-      we have an easy test to  determine the separability of any polynomial.
-      Let
+      Felizmente,
+      temos um teste simples para determinar a separabilidade de qualquer polinômio.
+      Seja
       <md>
         f(x) = a_0 + a_1 x + \cdots + a_n x^n
       </md>
-      be any polynomial in <m>F[x]</m>.
-      Define the <term>derivative</term><idx><h>Derivative</h></idx>
-      of <m>f(x)</m> to be
+      um polinômio qualquer em <m>F[x]</m>.
+      Definimos a <term>derivada</term><idx><h>Derivada</h></idx>
+      de <m>f(x)</m> por
       <md>
         f'(x) = a_1 + 2 a_2 x + \cdots + n a_n x^{n - 1}
       </md>.
@@ -175,34 +175,34 @@
     <lemma xml:id="finite-lemma-separable-derivative">
       <statement>
         <p>
-          Let <m>F</m> be a field and <m>f(x) \in F[x]</m>.
-          Then <m>f(x)</m> is separable if and only if <m>f(x)</m> and <m>f'(x)</m> are relatively prime.
+          Seja <m>F</m> um corpo e <m>f(x) \in F[x]</m>.
+          Então <m>f(x)</m> é separável se, e somente se, <m>f(x)</m> e <m>f'(x)</m> são primos entre si.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>f(x)</m> be separable.
-          Then <m>f(x)</m> factors over some extension field of <m>F</m> as <m>f(x) = (x - \alpha_1) (x - \alpha_2) \cdots (x - \alpha_n)</m>,
-          where <m>\alpha_i \neq \alpha_j</m> for <m>i \neq j</m>.
-          Taking the derivative of <m>f(x)</m>, we see that
+          Seja <m>f(x)</m> separável.
+          Então <m>f(x)</m> se fatora sobre algum corpo de extensão de <m>F</m> como <m>f(x) = (x - \alpha_1) (x - \alpha_2) \cdots (x - \alpha_n)</m>,
+          onde <m>\alpha_i \neq \alpha_j</m> para <m>i \neq j</m>.
+          Tomando a derivada de <m>f(x)</m>, vemos que
           <md>
             <mrow>f'(x) &amp; = (x - \alpha_2) \cdots (x - \alpha_n)</mrow>
             <mrow>&amp; + (x - \alpha_1) (x - \alpha_3) \cdots (x - \alpha_n)</mrow>
             <mrow>&amp; + \cdots + (x - \alpha_1) \cdots (x - \alpha_{n - 1})</mrow>
           </md>.
-          Hence, <m>f(x)</m> and <m>f'(x)</m> can have no common factors.
+          Portanto, <m>f(x)</m> e <m>f'(x)</m> não podem ter fatores comuns.
         </p>
 
         <p>
-          To prove the converse,
-          we will show that the contrapositive of the statement is true.
-          Suppose that <m>f(x) = (x - \alpha)^k g(x)</m>, where <m>k \gt 1</m>.
-          Differentiating, we have
+          Para provar a recíproca,
+          mostraremos que a contrapositiva da afirmação é verdadeira.
+          Suponha que <m>f(x) = (x - \alpha)^k g(x)</m>, onde <m>k \gt 1</m>.
+          Derivando, obtemos
           <md>
             f'(x) = k ( x - \alpha)^{k-1} g(x) + (x- \alpha)^k g'(x)
           </md>.
-          Therefore, <m>f(x)</m> and <m>f'(x)</m> have a common factor.
+          Portanto, <m>f(x)</m> e <m>f'(x)</m> têm um fator comum.
         </p>
       </proof>
     </lemma>
@@ -210,68 +210,68 @@
     <theorem xml:id="finite-theorem-splitting-field">
       <statement>
         <p>
-          For every prime <m>p</m> and every positive integer <m>n</m>,
-          there exists a finite field <m>F</m> with <m>p^n</m> elements.
-          Furthermore,
-          any field of order <m>p^n</m> is isomorphic to the splitting field of
-          <m>x^{p^n} -x</m> over <m>{\mathbb Z}_p</m>.
+          Para todo primo <m>p</m> e todo inteiro positivo <m>n</m>,
+          existe um corpo finito <m>F</m> com <m>p^n</m> elementos.
+          Além disso,
+          qualquer corpo de ordem <m>p^n</m> é isomorfo ao corpo de decomposição de
+          <m>x^{p^n} -x</m> sobre <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
             <!-- % TWJ 11/20/2011 -->
             <!-- % Reference to Lemma 22.4 corrected in proof.  Suggested by A. Johnston. -->
       <proof>
         <p>
-          Let <m>f(x) = x^{p^n} - x</m> and let <m>F</m> be the splitting field of <m>f(x)</m>.
-          Then by <xref ref="finite-lemma-separable-derivative"/>,
-          <m>f(x)</m> has <m>p^n</m> distinct zeros in <m>F</m>,
-          since <m>f'(x) = p^n x^{p^n - 1} - 1 = -1</m> is relatively prime to <m>f(x)</m>.
-          We claim that the roots of <m>f(x)</m> form a subfield of <m>F</m>.
-          Certainly 0 and 1 are zeros of <m>f(x)</m>.
-          If <m>\alpha</m> and <m>\beta</m> are zeros of <m>f(x)</m>,
-          then <m>\alpha + \beta</m> and
-          <m>\alpha \beta</m> are also zeros of <m>f(x)</m>,
-          since <m>\alpha^{p^n} + \beta^{p^n} =  (\alpha + \beta)^{p^n}</m> and <m>\alpha^{p^n} \beta^{p^n} = (\alpha \beta)^{p^n}</m>.
-          We also need to show that the additive inverse and the multiplicative inverse of each root of <m>f(x)</m> are roots of <m>f(x)</m>.
-          For any zero <m>\alpha</m> of <m>f(x)</m>,
-          we know that <m>-\alpha</m> is also a zero of <m>f(x)</m>, since
+          Seja <m>f(x) = x^{p^n} - x</m> e seja <m>F</m> o corpo de decomposição de <m>f(x)</m>.
+          Então, pelo <xref ref="finite-lemma-separable-derivative"/>,
+          <m>f(x)</m> tem <m>p^n</m> zeros distintos em <m>F</m>,
+          pois <m>f'(x) = p^n x^{p^n - 1} - 1 = -1</m> é primo entre si e <m>f(x)</m>.
+          Afirmamos que as raízes de <m>f(x)</m> formam um subcorpo de <m>F</m>.
+          Certamente, 0 e 1 são zeros de <m>f(x)</m>.
+          Se <m>\alpha</m> e <m>\beta</m> são zeros de <m>f(x)</m>,
+          então <m>\alpha + \beta</m> e
+          <m>\alpha \beta</m> também são zeros de <m>f(x)</m>,
+          pois <m>\alpha^{p^n} + \beta^{p^n} =  (\alpha + \beta)^{p^n}</m> e <m>\alpha^{p^n} \beta^{p^n} = (\alpha \beta)^{p^n}</m>.
+          Também precisamos mostrar que o inverso aditivo e o inverso multiplicativo de cada raiz de <m>f(x)</m> são raízes de <m>f(x)</m>.
+          Para qualquer zero <m>\alpha</m> de <m>f(x)</m>,
+          sabemos que <m>-\alpha</m> também é um zero de <m>f(x)</m>, pois
           <md>
             f(-\alpha) = (-\alpha)^{p^n} - (-\alpha) = -\alpha^{p^n} + \alpha = -(\alpha^{p^n} - \alpha) = 0
           </md>,
-          provided <m>p</m> is odd.
-          If <m>p = 2</m>, then
+          desde que <m>p</m> seja ímpar.
+          Se <m>p = 2</m>, então
           <md>
             f(-\alpha) =  (-\alpha)^{2^n} - (-\alpha) = \alpha + \alpha = 0
           </md>.
-          If <m>\alpha \neq 0</m>,
-          then <m>(\alpha^{-1})^{p^n} = (\alpha^{p^n})^{-1} = \alpha^{-1}</m>.
-          Since the zeros of <m>f(x)</m> form a subfield of <m>F</m> and <m>f(x)</m> splits in this subfield,
-          the subfield must be all of <m>F</m>.
+          Se <m>\alpha \neq 0</m>,
+          então <m>(\alpha^{-1})^{p^n} = (\alpha^{p^n})^{-1} = \alpha^{-1}</m>.
+          Como os zeros de <m>f(x)</m> formam um subcorpo de <m>F</m> e <m>f(x)</m> se decompõe nesse subcorpo,
+          o subcorpo deve ser todo <m>F</m>.
         </p>
 
         <p>
-          Let <m>E</m> be any other field of order <m>p^n</m>.
-          To show that <m>E</m> is isomorphic to <m>F</m>,
-          we must show that every element in <m>E</m> is a root of <m>f(x)</m>.
-          Certainly 0 is a root of <m>f(x)</m>.
-          Let <m>\alpha</m> be a nonzero element of <m>E</m>.
-          The order of the multiplicative group of nonzero elements of <m>E</m> is <m>p^n-1</m>;
-          hence, <m>\alpha^{p^n-1} =1</m> or <m>\alpha^{p^n} -\alpha = 0</m>.
-          Since <m>E</m> contains <m>p^n</m> elements,
-          <m>E</m> must be a splitting field of <m>f(x)</m>;
-          however, by <xref ref="fields-corollary-poly-splitting-field"/>,
-          the splitting field of any polynomial is unique up to isomorphism.
+          Seja <m>E</m> qualquer outro corpo de ordem <m>p^n</m>.
+          Para mostrar que <m>E</m> é isomorfo a <m>F</m>,
+          devemos mostrar que todo elemento de <m>E</m> é raiz de <m>f(x)</m>.
+          Certamente, 0 é raiz de <m>f(x)</m>.
+          Seja <m>\alpha</m> um elemento não nulo de <m>E</m>.
+          A ordem do grupo multiplicativo dos elementos não nulos de <m>E</m> é <m>p^n-1</m>;
+          portanto, <m>\alpha^{p^n-1} =1</m> ou <m>\alpha^{p^n} -\alpha = 0</m>.
+          Como <m>E</m> contém <m>p^n</m> elementos,
+          <m>E</m> deve ser um corpo de decomposição de <m>f(x)</m>;
+          contudo, pelo <xref ref="fields-corollary-poly-splitting-field"/>,
+          o corpo de decomposição de qualquer polinômio é único a menos de isomorfismo.
         </p>
       </proof>
     </theorem>
 
     <p>
-      The unique finite field with <m>p^n</m> elements is called the <term>Galois field</term><idx><h>Galois field</h></idx><idx><h>Field</h><h>Galois</h></idx>
-      of order <m>p^n</m>.
-      We will denote this field by <m>\gf(p^n)</m>.
+      O único corpo finito com <m>p^n</m> elementos é chamado de <term>corpo de Galois</term><idx><h>Corpo de Galois</h></idx><idx><h>Corpo</h><h>Galois</h></idx>
+      de ordem <m>p^n</m>.
+      Denotaremos esse corpo por <m>\gf(p^n)</m>.
 
       <notation>
         <usage><m>\gf(p^n)</m></usage>
-        <description>Galois field of order <m>p^n</m></description>
+        <description>corpo de Galois de ordem <m>p^n</m></description>
       </notation>
 
     </p>
@@ -279,50 +279,50 @@
     <theorem xml:id="finite-theorem-subfields">
       <statement>
         <p>
-          Every subfield of the Galois field
-          <m>\gf(p^n)</m> has <m>p^m</m> elements,
-          where <m>m</m> divides <m>n</m>.
-          Conversely, if <m>m \mid n</m> for <m>m \gt 0</m>,
-          then there exists a unique subfield of
-          <m>\gf(p^n)</m> isomorphic to <m>\gf(p^m)</m>.
+          Todo subcorpo do corpo de Galois
+          <m>\gf(p^n)</m> tem <m>p^m</m> elementos,
+          onde <m>m</m> divide <m>n</m>.
+          Reciprocamente, se <m>m \mid n</m> para <m>m \gt 0</m>,
+          então existe um único subcorpo de
+          <m>\gf(p^n)</m> isomorfo a <m>\gf(p^m)</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>F</m> be a subfield of <m>E = \gf(p^n)</m>.
-          Then <m>F</m> must be a field extension of <m>K</m> that contains <m>p^m</m> elements,
-          where <m>K</m> is isomorphic to <m>{\mathbb Z}_p</m>.
-          Then <m>m \mid n</m>, since <m>[E:K] = [E:F][F:K]</m>.
+          Seja <m>F</m> um subcorpo de <m>E = \gf(p^n)</m>.
+          Então <m>F</m> deve ser uma extensão de corpos de <m>K</m> que contém <m>p^m</m> elementos,
+          onde <m>K</m> é isomorfo a <m>{\mathbb Z}_p</m>.
+          Então <m>m \mid n</m>, pois <m>[E:K] = [E:F][F:K]</m>.
         </p>
 
         <p>
-          To prove the converse, suppose that
-          <m>m \mid n</m> for some <m>m \gt 0</m>.
-          Then <m>p^m -1</m> divides <m>p^n -1</m>.
-          Consequently,
-          <m>x^{p^m -1} - 1</m> divides <m>x^{p^n -1} -1</m>.
-          Therefore, <m>x^{p^m} - x</m> must divide <m>x^{p^n} - x</m>,
-          and every zero of <m>x^{p^m} - x</m> is also a zero of <m>x^{p^n} - x</m>.
-          Thus, <m>\gf(p^n)</m> contains, as a subfield,
-          a splitting field of <m>x^{p^m} - x</m>,
-          which must be isomorphic to <m>\gf(p^m)</m>.
+          Para provar a recíproca, suponha que
+          <m>m \mid n</m> para algum <m>m \gt 0</m>.
+          Então <m>p^m -1</m> divide <m>p^n -1</m>.
+          Consequentemente,
+          <m>x^{p^m -1} - 1</m> divide <m>x^{p^n -1} -1</m>.
+          Portanto, <m>x^{p^m} - x</m> deve dividir <m>x^{p^n} - x</m>,
+          e todo zero de <m>x^{p^m} - x</m> também é zero de <m>x^{p^n} - x</m>.
+          Assim, <m>\gf(p^n)</m> contém, como subcorpo,
+          um corpo de decomposição de <m>x^{p^m} - x</m>,
+          que deve ser isomorfo a <m>\gf(p^m)</m>.
         </p>
       </proof>
     </theorem>
         <!--  2010/05/18 R Beezer, added space before Figure citation -->
     <example xml:id="finite-example-gf-p24">
       <p>
-        The lattice of subfields of
-        <m>\gf(p^{24})</m> is given in <xref ref="finite-figure-field-lattice"/>.
+        O reticulado de subcorpos de
+        <m>\gf(p^{24})</m> é apresentado na <xref ref="finite-figure-field-lattice"/>.
       </p>
     </example>
 
     <figure xml:id="finite-figure-field-lattice">
-      <caption>Subfields of <m>\gf(p^{24})</m></caption>
+      <caption>Subcorpos de <m>\gf(p^{24})</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 8/20/2010 -->
       <image width="50%" xml:id="finite-subfield-lattice">
-      		<description>A lattice of field inclusions with the top level a Galois field of p^24 elements.  The second level has Galois fields of p^8 and p^12 elements which are included in the top level.  The third level has Galois fields of p^4 (included in the fields of p^8 and p^12 elements) and p^6 elements (included in the field of p^12 elements).  The fourth level has Galois fields of p^2 (included in the fields of p^4 and p^16 elements) and p^3 elements (included in the field of p^6 elements). The bottom level a Galois field of p elements (included in the fields of p^2 and p^3 elements).</description>
+            <description>Um reticulado de inclusões de corpos cujo nível superior é um corpo de Galois com p^24 elementos. O segundo nível possui corpos de Galois com p^8 e p^12 elementos, incluídos no nível superior. O terceiro nível possui corpos de Galois com p^4 (incluído nos corpos com p^8 e p^12 elementos) e p^6 elementos (incluído no corpo com p^12 elementos). O quarto nível possui corpos de Galois com p^2 (incluído nos corpos com p^4 e p^16 elementos) e p^3 elementos (incluído no corpo com p^6 elementos). O nível inferior é um corpo de Galois com p elementos (incluído nos corpos com p^2 e p^3 elementos).</description>
             <latex-image>
                 <xi:include href="tikz/finite-subfield-lattice.tex" parse="text"/>
             </latex-image>
@@ -331,47 +331,47 @@
     </figure>
 
     <p>
-      With each field <m>F</m> we have a multiplicative group of nonzero elements of <m>F</m> which we will denote by <m>F^*</m>.
+      A cada corpo <m>F</m> associamos um grupo multiplicativo de elementos não nulos de <m>F</m>, que denotaremos por <m>F^*</m>.
 
       <notation>
         <usage><m>F^*</m></usage>
-        <description>multiplicative group of a field <m>F</m></description>
+        <description>grupo multiplicativo de um corpo <m>F</m></description>
       </notation>
 
-      The multiplicative group of any finite field is cyclic.
-      This result follows from the more general result that we will prove in the next theorem.
+      O grupo multiplicativo de qualquer corpo finito é cíclico.
+      Esse resultado segue do resultado mais geral que provaremos no teorema a seguir.
     </p>
 
     <theorem xml:id="finite-theorem-mult-group-finite-field">
       <statement>
         <p>
-          If <m>G</m> is a finite subgroup of <m>F^\ast</m>,
-          the multiplicative group of nonzero elements of a field <m>F</m>,
-          then <m>G</m> is cyclic.
+          Se <m>G</m> é um subgrupo finito de <m>F^\ast</m>,
+          o grupo multiplicativo dos elementos não nulos de um corpo <m>F</m>,
+          então <m>G</m> é cíclico.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>G</m> be a finite subgroup of <m>F^\ast</m> of order <m>n</m>.
-          By the Fundamental Theorem of Finite Abelian Groups (<xref ref="struct-theorem-finite-abelian-groups"/>),
+          Seja <m>G</m> um subgrupo finito de <m>F^\ast</m> de ordem <m>n</m>.
+          Pelo Teorema Fundamental dos Grupos Abelianos Finitos (<xref ref="struct-theorem-finite-abelian-groups"/>),
           <md>
             G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}
           </md>,
-          where <m>n = p_1^{e_1} \cdots p_k^{e_k}</m> and the  <m>p_1, \ldots,
-          p_k</m> are
-          (not necessarily distinct)
-          primes.
-          Let <m>m</m> be the least common multiple of <m>p_1^{e_1}, \ldots,
+          onde <m>n = p_1^{e_1} \cdots p_k^{e_k}</m> e os <m>p_1, \ldots,
+          p_k</m> são
+          (não necessariamente distintos)
+          primos.
+          Seja <m>m</m> o mínimo múltiplo comum de <m>p_1^{e_1}, \ldots,
           p_k^{e_k}</m>.
-          Then <m>G</m> contains an element of order <m>m</m>.
-          Since every <m>\alpha</m> in <m>G</m> satisfies <m>x^r - 1</m> for some <m>r</m> dividing <m>m</m>,
-          <m>\alpha</m> must also be a root of <m>x^m - 1</m>.
-          Since <m>x^m -1</m> has at most <m>m</m> roots in <m>F</m>,
+          Então <m>G</m> contém um elemento de ordem <m>m</m>.
+          Como todo <m>\alpha</m> em <m>G</m> satisfaz <m>x^r - 1</m> para algum <m>r</m> que divide <m>m</m>,
+          <m>\alpha</m> também deve ser uma raiz de <m>x^m - 1</m>.
+          Como <m>x^m -1</m> tem no máximo <m>m</m> raízes em <m>F</m>,
           <m>n \leq m</m>.
-          On the other hand, we know that <m>m \leq |G|</m>;
-          therefore, <m>m = n</m>.
-          Thus, <m>G</m> contains an element of order <m>n</m> and must be cyclic.
+          Por outro lado, sabemos que <m>m \leq |G|</m>;
+          portanto, <m>m = n</m>.
+          Assim, <m>G</m> contém um elemento de ordem <m>n</m> e deve ser cíclico.
         </p>
       </proof>
     </theorem>
@@ -380,7 +380,7 @@
     <corollary xml:id="finite-corollary-cyclic-group-finite-field">
       <statement>
         <p>
-          The multiplicative group of all nonzero elements of a finite field is cyclic.
+          O grupo multiplicativo de todos os elementos não nulos de um corpo finito é cíclico.
         </p>
       </statement>
     </corollary>
@@ -388,31 +388,31 @@
     <corollary xml:id="finite-corollary-finite-extension-finite-field">
       <statement>
         <p>
-          Every finite extension <m>E</m> of a finite field <m>F</m> is a simple extension of <m>F</m>.
+          Toda extensão finita <m>E</m> de um corpo finito <m>F</m> é uma extensão simples de <m>F</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>\alpha</m> be a generator for the cyclic group
-          <m>E^{\ast}</m> of nonzero elements of <m>E</m>.
-          Then <m>E = F( \alpha )</m>.
+          Seja <m>\alpha</m> um gerador do grupo cíclico
+          <m>E^{\ast}</m> dos elementos não nulos de <m>E</m>.
+          Então <m>E = F( \alpha )</m>.
         </p>
       </proof>
     </corollary>
 
     <example xml:id="finite-example-gf-2-4">
       <p>
-        The finite field <m>\gf(2^4)</m> is isomorphic to the field <m>{\mathbb Z}_2[x]/ \langle 1 + x + x^4 \rangle</m>.
-        Therefore, the elements of  <m>\gf(2^4)</m> can be taken to be
+        O corpo finito <m>\gf(2^4)</m> é isomorfo ao corpo <m>{\mathbb Z}_2[x]/ \langle 1 + x + x^4 \rangle</m>.
+        Portanto, os elementos de <m>\gf(2^4)</m> podem ser tomados como
         <md>
-          \{ a_0 + a_1 \alpha + a_2 \alpha^2 + a_3 \alpha^3 : a_i \in {\mathbb Z}_2 \text{ and } 1 + \alpha + \alpha^4 = 0 \}
+          \{ a_0 + a_1 \alpha + a_2 \alpha^2 + a_3 \alpha^3 : a_i \in {\mathbb Z}_2 \text{ e } 1 + \alpha + \alpha^4 = 0 \}
         </md>.
-        Remembering that <m>1 + \alpha +\alpha^4 = 0</m>,
-        we add and multiply elements of
-        <m>\gf(2^4)</m> exactly as we add and multiply polynomials.
-        The multiplicative group of <m>\gf(2^4)</m> is isomorphic to
-        <m>{\mathbb  Z}_{15}</m> with generator <m>\alpha</m>:
+        Lembrando que <m>1 + \alpha +\alpha^4 = 0</m>,
+        somamos e multiplicamos elementos de
+        <m>\gf(2^4)</m> exatamente como somamos e multiplicamos polinômios.
+        O grupo multiplicativo de <m>\gf(2^4)</m> é isomorfo a
+        <m>{\mathbb  Z}_{15}</m>, com gerador <m>\alpha</m>:
         <md>
           <mrow>&amp; \alpha^1 = \alpha &amp; &amp; \alpha^6 = \alpha^2 + \alpha^3 &amp; &amp; \alpha^{11} = \alpha + \alpha^2 + \alpha^3 &amp;</mrow>
           <mrow>&amp; \alpha^2 = \alpha^2 &amp; &amp; \alpha^7 = 1 + \alpha + \alpha^3 &amp; &amp; \alpha^{12} = 1 + \alpha + \alpha^2 + \alpha^3 &amp;</mrow>
@@ -425,32 +425,32 @@
   </section>
 
   <section xml:id="finite-section-poly-codes">
-    <title>Polynomial Codes</title>
+    <title>Códigos Polinomiais</title>
         <!-- TWJ 2012/11/21 -->
         <!-- Chapter reference updated.  Suggested by J. Buller. -->
     <introduction>
       <p>
-        With knowledge of polynomial rings and finite fields,
-        it is now possible to derive more sophisticated codes than those of <xref ref="algcodes"/>.
-        First let us recall that an <m>(n, k)</m>-block code consists of a one-to-one encoding function
-        <m>E:{\mathbb Z}^{k}_{2} \rightarrow {\mathbb Z}^{n}_{2}</m> and a decoding function <m>D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{k}_{2}</m>.
-        The code is error-correcting if <m>D</m> is onto.
-        A code is a linear code if it is the null space of a matrix <m>H \in {\mathbb M}_{k \times n}({\mathbb Z}_2)</m>.
+        Com o conhecimento de anéis de polinômios e corpos finitos,
+        agora é possível obter códigos mais sofisticados que os de <xref ref="algcodes"/>.
+        Primeiro, lembremos que um código de blocos <m>(n, k)</m> consiste em uma função de codificação injetiva
+        <m>E:{\mathbb Z}^{k}_{2} \rightarrow {\mathbb Z}^{n}_{2}</m> e uma função de decodificação <m>D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{k}_{2}</m>.
+        O código é corretor de erros se <m>D</m> é sobrejetiva.
+        Um código é linear se é o núcleo de uma matriz <m>H \in {\mathbb M}_{k \times n}({\mathbb Z}_2)</m>.
       </p>
 
       <p>
-        We are interested in a class of codes known as <idx><h>Code</h><h>cyclic</h></idx><term>cyclic codes</term>.
-        Let <m>\phi : {\mathbb Z}_2^k \rightarrow {\mathbb Z}_2^n</m> be a binary <m>(n,k)</m>-block code.
-        Then <m>\phi</m> is a <term>cyclic code</term>
-        if for every codeword <m>(a_1, a_2, \ldots, a_n )</m>,
-        the cyclically shifted <m>n</m>-tuple <m>(a_n, a_1, a_2, \ldots,
-        a_{n - 1} )</m> is also a codeword.
-        Cyclic codes are particularly easy to implement on a computer using shift registers [2, 3].
+        Estamos interessados em uma classe de códigos conhecida como <idx><h>Código</h><h>cíclico</h></idx><term>códigos cíclicos</term>.
+        Seja <m>\phi : {\mathbb Z}_2^k \rightarrow {\mathbb Z}_2^n</m> um código de blocos binário <m>(n,k)</m>.
+        Então <m>\phi</m> é um <term>código cíclico</term>
+        se, para toda palavra-código <m>(a_1, a_2, \ldots, a_n )</m>,
+        a <m>n</m>-upla deslocada ciclicamente <m>(a_n, a_1, a_2, \ldots,
+        a_{n - 1} )</m> também é uma palavra-código.
+        Códigos cíclicos são particularmente fáceis de implementar em um computador usando registradores de deslocamento [2, 3].
       </p>
 
       <example xml:id="finite-example-6-3-linear-code">
         <p>
-          Consider the <m>(6,3)</m>-linear codes generated by the two matrices
+          Considere os códigos lineares <m>(6,3)</m> gerados pelas duas matrizes
           <md>
             G_1 
             = 
@@ -463,7 +463,7 @@
             0 &amp; 0 &amp; 1 
             \end{pmatrix}
             \quad
-            \text{and}
+            \text{e}
             \quad
             G_2 = 
             \begin{pmatrix}
@@ -475,7 +475,7 @@
             0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          Messages in the first code are encoded as follows:
+          As mensagens do primeiro código são codificadas da seguinte maneira:
           <md>
             \begin{array}{rclccrcl}
             (\codeword{000}) &amp; \mapsto &amp; (\codeword{000000}) &amp; &amp; &amp; (\codeword{100}) &amp; \mapsto &amp; (\codeword{100100}) \\
@@ -484,8 +484,8 @@
             (\codeword{011}) &amp; \mapsto &amp; (\codeword{011011}) &amp; &amp; &amp; (\codeword{111}) &amp; \mapsto &amp; (\codeword{111111}).
             \end{array}
           </md>
-          It is easy to see that the codewords form a cyclic code.
-          In the second code, 3-tuples are encoded in the following manner:
+          É fácil ver que as palavras-código formam um código cíclico.
+          No segundo código, as 3-uplas são codificadas da seguinte maneira:
           <md>
             \begin{array}{rclccrcl}
             (\codeword{000}) &amp; \mapsto &amp; (\codeword{000000}) &amp; &amp; &amp; (\codeword{100}) &amp; \mapsto &amp; (\codeword{111100}) \\
@@ -494,83 +494,83 @@
             (\codeword{011}) &amp; \mapsto &amp; (\codeword{010001}) &amp; &amp; &amp; (\codeword{111}) &amp; \mapsto &amp; (\codeword{101101}).
             \end{array}
           </md>
-          This code cannot be cyclic,
-          since <m>(\codeword{101101})</m> is a codeword but <m>(\codeword{011011})</m> is not a codeword.
+          Esse código não pode ser cíclico,
+          pois <m>(\codeword{101101})</m> é uma palavra-código, mas <m>(\codeword{011011})</m> não é uma palavra-código.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="finite-subsection-poly-codes">
-      <title>Polynomial Codes</title>
+      <title>Códigos Polinomiais</title>
       <p>
-        We would like to find an easy method of obtaining cyclic linear codes.
-        To accomplish this,
-        we can use our knowledge of finite fields and  polynomial rings over <m>{\mathbb Z}_2</m>.
-        Any binary <m>n</m>-tuple can be interpreted as a polynomial in <m>{\mathbb Z}_2[x]</m>.
-        Stated another way, the <m>n</m>-tuple
+        Gostaríamos de encontrar um método fácil para obter códigos lineares cíclicos.
+        Para isso,
+        podemos usar nosso conhecimento de corpos finitos e anéis de polinômios sobre <m>{\mathbb Z}_2</m>.
+        Qualquer <m>n</m>-upla binária pode ser interpretada como um polinômio em <m>{\mathbb Z}_2[x]</m>.
+        Dito de outra maneira, a <m>n</m>-upla
         <m>(a_0, a_1, \ldots,
-        a_{n - 1} )</m> corresponds to the polynomial
+        a_{n - 1} )</m> corresponde ao polinômio
         <md>
           f(x) = a_0 + a_1 x + \cdots + a_{n-1} x^{n - 1}
         </md>,
-        where the degree of <m>f(x)</m> is at most <m>n - 1</m>.
-        For example,
-        the polynomial corresponding to the <m>5</m>-tuple <m>(\codeword{10011})</m> is
+        onde o grau de <m>f(x)</m> é no máximo <m>n - 1</m>.
+        Por exemplo,
+        o polinômio correspondente à <m>5</m>-upla <m>(\codeword{10011})</m> é
         <md>
           1 + 0 x + 0 x^2 + 1 x^3 + 1 x^4 = 1 + x^3 + x^4
         </md>.
-        Conversely, with any polynomial <m>f(x) \in {\mathbb Z}_2[x]</m> with
-        <m>\deg f(x) \lt n</m> we can associate a binary <m>n</m>-tuple.
-        The polynomial <m>x + x^2 + x^4</m> corresponds to the <m>5</m>-tuple <m>(\codeword{01101})</m>.
+        Reciprocamente, a cada polinômio <m>f(x) \in {\mathbb Z}_2[x]</m> com
+        <m>\deg f(x) \lt n</m> podemos associar uma <m>n</m>-upla binária.
+        O polinômio <m>x + x^2 + x^4</m> corresponde à <m>5</m>-upla <m>(\codeword{01101})</m>.
       </p>
 
       <p>
-        Let us fix a nonconstant polynomial <m>g(x)</m> in
-        <m>{\mathbb Z}_2[x]</m> of degree <m>n - k</m>.
-        We can define an <m>(n,k)</m>-code <m>C</m> in the following manner.
-        If <m>(a_0, \ldots, a_{k - 1})</m> is a <m>k</m>-tuple to be encoded,
-        then <m>f(x) = a_0 + a_1 x + \cdots + a_{k - 1} x^{k - 1}</m> is the corresponding polynomial in <m>{\mathbb Z}_2[x]</m>.
-        To encode <m>f(x)</m>, we multiply by <m>g(x)</m>.
-        The codewords in <m>C</m> are all those polynomials in
-        <m>{\mathbb Z}_2[x]</m> of degree less than <m>n</m> that are divisible by <m>g(x)</m>.
-        Codes obtained in this manner are called
-        <idx><h>Polynomial</h><h>code</h></idx><idx><h>Code</h><h>polynomial</h></idx><term>polynomial codes</term>.
+        Fixemos um polinômio não constante <m>g(x)</m> em
+        <m>{\mathbb Z}_2[x]</m> de grau <m>n - k</m>.
+        Podemos definir um código <m>(n,k)</m> <m>C</m> da seguinte maneira.
+        Se <m>(a_0, \ldots, a_{k - 1})</m> é uma <m>k</m>-upla a ser codificada,
+        então <m>f(x) = a_0 + a_1 x + \cdots + a_{k - 1} x^{k - 1}</m> é o polinômio correspondente em <m>{\mathbb Z}_2[x]</m>.
+        Para codificar <m>f(x)</m>, multiplicamos por <m>g(x)</m>.
+        As palavras-código em <m>C</m> são todos os polinômios em
+        <m>{\mathbb Z}_2[x]</m> de grau menor que <m>n</m> que são divisíveis por <m>g(x)</m>.
+        Os códigos obtidos dessa maneira são chamados
+        <idx><h>Polinômio</h><h>código</h></idx><idx><h>Código</h><h>polinômio</h></idx><term>códigos polinomiais</term>.
       </p>
 
       <example xml:id="finite-example-generator-63-code">
             <!-- Changed minimal polynomial from  (1 + x^3)x^3 &amp; = x^2 + x^5 to (1 + x^3)x^2 &amp; = x^2 + x^5.  Discovered by Jon Buller - TWJ 3/25/2011 -->
         <p>
-          If we let <m>g(x)= 1 + x^3</m>,
-          we can define a <m>(6,3)</m>-code <m>C</m> as follows.
-          To encode a <m>3</m>-tuple <m>( a_0, a_1, a_2 )</m>,
-          we multiply the corresponding polynomial <m>f(x) = a_0 + a_1 x + a_2 x^2</m> by <m>1 + x^3</m>.
-          We are defining a map <m>\phi : {\mathbb Z}_2^3 \rightarrow {\mathbb Z}_2^6</m> by <m>\phi  : f(x) \mapsto g(x) f(x)</m>.
-          It is easy to check that this map is a group homomorphism.
-          In fact, if we regard <m>{\mathbb Z}_2^n</m> as a vector space over <m>{\mathbb Z}_2</m>,
-          <m>\phi</m> is a linear transformation of vector spaces
-          (see <xref ref="vect-exercise-linear-transformation"/>).
-          Let us compute the kernel of <m>\phi</m>.
-          Observe that <m>\phi ( a_0, a_1, a_2 ) = (\codeword{000000})</m> exactly when
+          Se tomarmos <m>g(x)= 1 + x^3</m>,
+          podemos definir um código <m>(6,3)</m> <m>C</m> como segue.
+          Para codificar uma <m>3</m>-upla <m>( a_0, a_1, a_2 )</m>,
+          multiplicamos o polinômio correspondente <m>f(x) = a_0 + a_1 x + a_2 x^2</m> por <m>1 + x^3</m>.
+          Estamos definindo uma aplicação <m>\phi : {\mathbb Z}_2^3 \rightarrow {\mathbb Z}_2^6</m> por <m>\phi  : f(x) \mapsto g(x) f(x)</m>.
+          É fácil verificar que essa aplicação é um homomorfismo de grupos.
+          De fato, se considerarmos <m>{\mathbb Z}_2^n</m> como um espaço vetorial sobre <m>{\mathbb Z}_2</m>,
+          <m>\phi</m> é uma transformação linear de espaços vetoriais
+          (veja o <xref ref="vect-exercise-linear-transformation"/>).
+          Calculemos o núcleo de <m>\phi</m>.
+          Observe que <m>\phi ( a_0, a_1, a_2 ) = (\codeword{000000})</m> exatamente quando
           <md>
             <mrow>0 + 0x + 0x^2 + 0x^3 + 0x^4 + 0 x^5 &amp; = (1 + x^3) ( a_0 + a_1 x + a_2 x^2 )</mrow>
             <mrow>&amp; = a_0 + a_1 x + a_2 x^2 + a_0 x^3 + a_1 x^4 + a_2 x^5</mrow>
           </md>.
-          Since the polynomials over a field form an integral domain,
-          <m>a_0 + a_1 x + a_2 x^2</m> must be the zero polynomial.
-          Therefore, <m>\ker \phi = \{ (\codeword{000}) \}</m> and <m>\phi</m> is one-to-one.
+          Como os polinômios sobre um corpo formam um domínio de integridade,
+          <m>a_0 + a_1 x + a_2 x^2</m> deve ser o polinômio nulo.
+          Portanto, <m>\ker \phi = \{ (\codeword{000}) \}</m> e <m>\phi</m> é injetiva.
         </p>
 
         <p>
-          To calculate a generator matrix for <m>C</m>,
-          we merely need to examine the way the polynomials <m>1</m>,
-          <m>x</m>, and <m>x^2</m> are encoded:
+          Para calcular uma matriz geradora de <m>C</m>,
+          basta examinar como os polinômios <m>1</m>,
+          <m>x</m> e <m>x^2</m> são codificados:
           <md>
             <mrow>(1 + x^3) \cdot 1 &amp; = 1 + x^3</mrow>
             <mrow>(1 + x^3)x &amp; = x + x^4</mrow>
             <mrow>(1 + x^3)x^2 &amp; = x^2 + x^5</mrow>
           </md>.
-          We obtain the code corresponding to the generator matrix <m>G_1</m> in <xref ref="finite-example-6-3-linear-code"/>.
-          The parity-check matrix for this code is
+          Obtemos o código correspondente à matriz geradora <m>G_1</m> em <xref ref="finite-example-6-3-linear-code"/>.
+          A matriz de verificação de paridade desse código é
           <md>
             H
             = 
@@ -580,109 +580,109 @@
             0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 
             \end{pmatrix}
           </md>.
-          Since the smallest weight of any nonzero codeword is <m>2</m>,
-          this code has the ability to detect all single errors.
+          Como o menor peso de qualquer palavra-código não nula é <m>2</m>,
+          esse código é capaz de detectar todos os erros simples.
         </p>
       </example>
 
       <p>
-        Rings of polynomials have a great deal of structure;
-        therefore, our immediate goal is to establish a link between polynomial codes and ring theory.
-        Recall that <m>x^n - 1 = (x - 1)( x^{n - 1} + \cdots + x + 1)</m>.
-        The factor ring
+        Os anéis de polinômios possuem uma estrutura muito rica;
+        portanto, nosso objetivo imediato é estabelecer uma ligação entre códigos polinomiais e a teoria de anéis.
+        Lembre-se de que <m>x^n - 1 = (x - 1)( x^{n - 1} + \cdots + x + 1)</m>.
+        O anel quociente
         <md>
           R_n = {\mathbb Z}_2[x]/ \langle x^n - 1 \rangle
         </md>
-        can be considered to be the ring of polynomials of the form
+        pode ser considerado o anel dos polinômios da forma
         <md>
           f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}
         </md>
-        that satisfy the condition <m>t^n = 1</m>.
-        It is an easy exercise to show that
-        <m>{\mathbb Z}_2^n</m> and <m>R_n</m> are isomorphic as vector spaces.
-        We will often identify elements in
-        <m>{\mathbb Z}_2^n</m> with elements in <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
-        In this manner we can interpret a linear code as a subset of <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+        que satisfazem a condição <m>t^n = 1</m>.
+        É um exercício simples mostrar que
+        <m>{\mathbb Z}_2^n</m> e <m>R_n</m> são isomorfos como espaços vetoriais.
+        Frequentemente identificaremos elementos de
+        <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+        Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
       </p>
 
       <p>
-        The additional ring structure on polynomial codes is very powerful in describing cyclic codes.
-        A cyclic shift of an <m>n</m>-tuple can be described by polynomial multiplication.
-        If <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> is a code polynomial in <m>R_n</m>, then
+        A estrutura de anel adicional dos códigos polinomiais é muito poderosa para descrever códigos cíclicos.
+        Um deslocamento cíclico de uma <m>n</m>-upla pode ser descrito por uma multiplicação de polinômios.
+        Se <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> é um polinômio-código em <m>R_n</m>, então
         <md>
           tf(t) = a_{n - 1} + a_0 t + \cdots + a_{n - 2} t^{n - 1}
         </md>
-        is the cyclically shifted word obtained from multiplying <m>f(t)</m> by <m>t</m>.
-        The following theorem gives a beautiful classification of cyclic codes in terms of the ideals of <m>R_n</m>.
+        é a palavra deslocada ciclicamente obtida ao multiplicar <m>f(t)</m> por <m>t</m>.
+        O teorema a seguir fornece uma bela classificação dos códigos cíclicos em termos dos ideais de <m>R_n</m>.
       </p>
 
       <theorem xml:id="finite-theorem-cyclic-code">
         <statement>
           <p>
-            A linear code <m>C</m> in <m>{\mathbb Z}_2^n</m> is cyclic if and only if it is an ideal in <m>R_n = {\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+            Um código linear <m>C</m> em <m>{\mathbb Z}_2^n</m> é cíclico se, e somente se, é um ideal em <m>R_n = {\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>C</m> be a linear cyclic code and suppose that <m>f(t)</m> is in <m>C</m>.
-            Then <m>t f(t)</m> must also be in <m>C</m>.
-            Consequently,
-            <m>t^k f(t)</m> is in <m>C</m> for all <m>k \in {\mathbb N}</m>.
-            Since <m>C</m> is a linear code,
-            any linear combination of the codewords <m>f(t), tf(t),
-            t^2f(t), \ldots, t^{n-1}f(t)</m> is also a codeword;
-            therefore, for every polynomial <m>p(t)</m>,
-            <m>p(t)f(t)</m> is in <m>C</m>.
-            Hence, <m>C</m> is an ideal.
+            Seja <m>C</m> um código linear cíclico e suponha que <m>f(t)</m> pertença a <m>C</m>.
+            Então <m>t f(t)</m> também deve pertencer a <m>C</m>.
+            Consequentemente,
+            <m>t^k f(t)</m> pertence a <m>C</m> para todo <m>k \in {\mathbb N}</m>.
+            Como <m>C</m> é um código linear,
+            qualquer combinação linear das palavras-código <m>f(t), tf(t),
+            t^2f(t), \ldots, t^{n-1}f(t)</m> também é uma palavra-código;
+            portanto, para todo polinômio <m>p(t)</m>,
+            <m>p(t)f(t)</m> pertence a <m>C</m>.
+            Logo, <m>C</m> é um ideal.
           </p>
 
           <p>
-            Conversely, let <m>C</m> be an ideal in <m>{\mathbb Z}_2[x]/\langle x^n + 1\rangle</m>.
-            Suppose that <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> is a codeword in <m>C</m>.
-            Then <m>t f(t)</m> is a codeword in <m>C</m>;
-            that is, <m>(a_1, \ldots, a_{n-1}, a_0)</m> is in <m>C</m>.
+            Reciprocamente, seja <m>C</m> um ideal em <m>{\mathbb Z}_2[x]/\langle x^n + 1\rangle</m>.
+            Suponha que <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> seja uma palavra-código em <m>C</m>.
+            Então <m>t f(t)</m> é uma palavra-código em <m>C</m>;
+            isto é, <m>(a_1, \ldots, a_{n-1}, a_0)</m> pertence a <m>C</m>.
           </p>
         </proof>
       </theorem>
 
       <p>
-        <xref ref="finite-theorem-cyclic-code"/> tells us that knowing the ideals of <m>R_n</m> is equivalent to knowing the linear cyclic codes in <m>{\mathbb Z}_2^n</m>.
-        Fortunately, the ideals in <m>R_n</m> are easy to describe.
-        The  natural ring homomorphism <m>\phi : {\mathbb Z}_2[x] \rightarrow R_n</m> defined by
-        <m>\phi[f(x)] = f(t)</m> is a surjective homomorphism.
-        The kernel of <m>\phi</m> is the ideal generated by <m>x^n - 1</m>.
-        By <xref ref="rings-theorem-correspondence"/>,
-        every ideal <m>C</m> in <m>R_n</m> is of the form <m>\phi(I)</m>,
-        where <m>I</m> is an ideal in
-        <m>{\mathbb Z}_2[x]</m> that contains <m>\langle x^n - 1 \rangle</m>.
-        By <xref ref="poly-theorem-principal-ideal"/>,
-        we know that every ideal <m>I</m> in
-        <m>{\mathbb Z}_2[x]</m> is a principal ideal,
-        since <m>{\mathbb Z}_2</m> is a field.
-        Therefore, <m>I = \langle g(x) \rangle</m> for some unique monic polynomial in <m>{\mathbb Z}_2[x]</m>.
-        Since <m>\langle x^n - 1 \rangle</m> is contained in <m>I</m>,
-        it must be the case that <m>g(x)</m> divides <m>x^n - 1</m>.
-        Consequently, every ideal <m>C</m> in <m>R_n</m> is of the form
+        O <xref ref="finite-theorem-cyclic-code"/> nos diz que conhecer os ideais de <m>R_n</m> é equivalente a conhecer os códigos lineares cíclicos em <m>{\mathbb Z}_2^n</m>.
+        Felizmente, os ideais em <m>R_n</m> são fáceis de descrever.
+        O homomorfismo natural de anéis <m>\phi : {\mathbb Z}_2[x] \rightarrow R_n</m> definido por
+        <m>\phi[f(x)] = f(t)</m> é um homomorfismo sobrejetivo.
+        O núcleo de <m>\phi</m> é o ideal gerado por <m>x^n - 1</m>.
+        Pelo <xref ref="rings-theorem-correspondence"/>,
+        todo ideal <m>C</m> em <m>R_n</m> é da forma <m>\phi(I)</m>,
+        onde <m>I</m> é um ideal em
+        <m>{\mathbb Z}_2[x]</m> que contém <m>\langle x^n - 1 \rangle</m>.
+        Pelo <xref ref="poly-theorem-principal-ideal"/>,
+        sabemos que todo ideal <m>I</m> em
+        <m>{\mathbb Z}_2[x]</m> é um ideal principal,
+        pois <m>{\mathbb Z}_2</m> é um corpo.
+        Portanto, <m>I = \langle g(x) \rangle</m> para algum polinômio mônico único em <m>{\mathbb Z}_2[x]</m>.
+        Como <m>\langle x^n - 1 \rangle</m> está contido em <m>I</m>,
+        necessariamente <m>g(x)</m> divide <m>x^n - 1</m>.
+        Consequentemente, todo ideal <m>C</m> em <m>R_n</m> é da forma
         <md>
-          C = \langle g(t) \rangle = \{ f(t)g(t) : f(t) \in R_n \text{ and } g(x) \mid (x^n - 1) \text{ in } {\mathbb Z}_2[x] \}
+          C = \langle g(t) \rangle = \{ f(t)g(t) : f(t) \in R_n \text{ e } g(x) \mid (x^n - 1) \text{ em } {\mathbb Z}_2[x] \}
         </md>.
-        The unique monic polynomial of the smallest degree that generates <m>C</m> is called the
-        <term>minimal generator polynomial</term><idx><h>Minimal generator polynomial</h></idx><idx><h>Polynomial</h><h>minimal generator</h></idx> of <m>C</m>.
+        O polinômio mônico único de menor grau que gera <m>C</m> é chamado de
+        <term>polinômio gerador mínimo</term><idx><h>Polinômio gerador mínimo</h></idx><idx><h>Polinômio</h><h>gerador mínimo</h></idx> de <m>C</m>.
       </p>
 
       <example xml:id="finite-example-factor-x7-1">
         <p>
-          If we factor <m>x^7 - 1</m> into irreducible components, we have
+          Se fatorarmos <m>x^7 - 1</m> em componentes irredutíveis, obteremos
           <md>
             x^7 - 1 = (1 + x)(1 + x + x^3)(1+ x^2 + x^3)
           </md>.
-          We see that <m>g(t) = (1 + t + t^3)</m> generates an ideal <m>C</m> in <m>R_7</m>.
-          This code is a <m>(7, 4)</m>-block code.
-          As in <xref ref="finite-example-generator-63-code"/>,
-          it is easy to calculate a generator matrix by examining what <m>g(t)</m> does to the polynomials <m>1</m>, <m>t</m>,
-          <m>t^2</m>, and <m>t^3</m>.
-          A generator matrix for <m>C</m> is
+          Vemos que <m>g(t) = (1 + t + t^3)</m> gera um ideal <m>C</m> em <m>R_7</m>.
+          Esse código é um código de blocos <m>(7, 4)</m>.
+          Como em <xref ref="finite-example-generator-63-code"/>,
+          é fácil calcular uma matriz geradora examinando o que <m>g(t)</m> faz com os polinômios <m>1</m>, <m>t</m>,
+          <m>t^2</m> e <m>t^3</m>.
+          Uma matriz geradora de <m>C</m> é
           <md>
             G =
             \begin{pmatrix}
@@ -699,10 +699,10 @@
       </example>
 
       <p>
-        In general, we can determine a generator matrix for an <m>(n, k)</m>-code <m>C</m> by the manner in which the elements <m>t^k</m> are encoded.
-        Let <m>x^n - 1 = g(x) h(x)</m> in <m>{\mathbb Z}_2[x]</m>.
-        If <m>g(x) = g_0 + g_1 x + \cdots + g_{n-k} x^{n-k}</m> and <m>h(x) = h_0 + h_1 x + \cdots + h_k x^k</m>,
-        then the <m>n \times k</m> matrix
+        Em geral, podemos determinar uma matriz geradora para um código <m>(n, k)</m> <m>C</m> pela maneira como os elementos <m>t^k</m> são codificados.
+        Seja <m>x^n - 1 = g(x) h(x)</m> em <m>{\mathbb Z}_2[x]</m>.
+        Se <m>g(x) = g_0 + g_1 x + \cdots + g_{n-k} x^{n-k}</m> e <m>h(x) = h_0 + h_1 x + \cdots + h_k x^k</m>,
+        então a matriz <m>n \times k</m>
         <md>
           G = 
           \begin{pmatrix}
@@ -715,8 +715,8 @@
           0   &amp; 0 &amp; \cdots &amp; g_{n-k}
           \end{pmatrix}
         </md>
-        is a generator matrix for the code <m>C</m> with generator polynomial <m>g(t)</m>.
-        The parity-check matrix for <m>C</m> is the <m>(n - k) \times n</m> matrix
+        é uma matriz geradora do código <m>C</m> com polinômio gerador <m>g(t)</m>.
+        A matriz de verificação de paridade de <m>C</m> é a matriz <m>(n - k) \times n</m>
         <md>
           H =
           \begin{pmatrix}
@@ -726,27 +726,26 @@
           h_k &amp; \cdots &amp; h_0 &amp; 0      &amp; 0      &amp; \cdots &amp; 0 
           \end{pmatrix}
         </md>.
-        We will leave the details of the proof of the following proposition as an exercise.
+        Deixaremos os detalhes da demonstração da proposição a seguir como exercício.
       </p>
 
       <proposition>
         <statement>
           <p>
-            Let <m>C = \langle g(t) \rangle</m> be a cyclic code in <m>R_n</m> and suppose that <m>x^n - 1 = g(x) h(x)</m>.
-            Then <m>G</m> and <m>H</m> are generator and parity-check matrices for <m>C</m>,
-            respectively.
-            Furthermore, <m>HG = 0</m>.
+            Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m> e suponha que <m>x^n - 1 = g(x) h(x)</m>.
+            Então <m>G</m> e <m>H</m> são, respectivamente, matrizes geradora e de verificação de paridade de <m>C</m>.
+            Além disso, <m>HG = 0</m>.
           </p>
         </statement>
       </proposition>
 
       <example xml:id="finite-example-parity-check-x7-1">
         <p>
-          In <xref ref="finite-example-factor-x7-1"/>,
+          Em <xref ref="finite-example-factor-x7-1"/>,
           <md>
             x^7 - 1 = g(x) h(x) = (1 + x + x^3)(1 + x + x^2 + x^4)
           </md>.
-          Therefore, a parity-check matrix for this code is
+          Portanto, uma matriz de verificação de paridade desse código é
           <md>
             H =
             \begin{pmatrix}
@@ -759,10 +758,10 @@
       </example>
 
       <p>
-        To determine the error-detecting and error-correcting capabilities of a cyclic code,
-        we need to know something about determinants.
-        If <m>\alpha_1, \ldots, \alpha_n</m> are elements in a field <m>F</m>,
-        then the <m>n \times n</m> matrix
+        Para determinar as capacidades de detecção e correção de erros de um código cíclico,
+        precisamos conhecer alguns fatos sobre determinantes.
+        Se <m>\alpha_1, \ldots, \alpha_n</m> são elementos de um corpo <m>F</m>,
+        então a matriz <m>n \times n</m>
         <md>
           \begin{pmatrix}
           1          &amp; 1          &amp; \cdots &amp; 1 \\
@@ -772,17 +771,17 @@
           \alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_n^{n-1} 
           \end{pmatrix}
         </md>
-        is called the <idx><h>Vandermonde matrix</h></idx><idx><h>Matrix, Vandermonde</h></idx><term>Vandermonde matrix</term>.
-        The determinant of this matrix is called the
-        <idx><h>Vandermonde determinant</h></idx><idx><h>Determinant, Vandermonde</h></idx><term>Vandermonde determinant</term>.
-        We will need the following lemma in our investigation of cyclic codes.
+        é chamada de <idx><h>Matriz de Vandermonde</h></idx><idx><h>Matriz, Vandermonde</h></idx><term>matriz de Vandermonde</term>.
+        O determinante dessa matriz é chamado de
+        <idx><h>Determinante de Vandermonde</h></idx><idx><h>Determinante, Vandermonde</h></idx><term>determinante de Vandermonde</term>.
+        Precisaremos do lema a seguir em nossa investigação dos códigos cíclicos.
       </p>
 
       <lemma xml:id="finite-lemma-vandermode-det">
         <statement>
           <p>
-            Let <m>\alpha_1, \ldots, \alpha_n</m> be elements in a field <m>F</m> with <m>n \geq 2</m>.
-            Then
+            Sejam <m>\alpha_1, \ldots, \alpha_n</m> elementos de um corpo <m>F</m> com <m>n \geq 2</m>.
+            Então
             <md>
               \det
               \begin{pmatrix}
@@ -794,17 +793,17 @@
               \end{pmatrix}
               = \prod_{1 \leq j \lt i \leq n} (\alpha_i - \alpha_j)
             </md>.
-            In particular, if the <m>\alpha_i</m>'s are distinct,
-            then the determinant is nonzero.
+            Em particular, se os <m>\alpha_i</m> são distintos,
+            então o determinante é não nulo.
           </p>
         </statement>
 
         <proof>
           <p>
-            We will induct on <m>n</m>.
-            If <m>n = 2</m>,
-            then the determinant is <m>\alpha_2 - \alpha_1</m>.
-            Let us assume the result for <m>n - 1</m> and consider the polynomial <m>p(x)</m> defined by
+            Usaremos indução em <m>n</m>.
+            Se <m>n = 2</m>,
+            então o determinante é <m>\alpha_2 - \alpha_1</m>.
+            Suponhamos o resultado para <m>n - 1</m> e consideremos o polinômio <m>p(x)</m> definido por
             <md>
               p(x) = \det
               \begin{pmatrix}
@@ -815,16 +814,16 @@
               \alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_{n-1}^{n-1} &amp; x^{n-1}
               \end{pmatrix}
             </md>.
-            Expanding this determinant by cofactors on the last column,
-            we see that <m>p(x)</m> is a polynomial of at most degree <m>n-1</m>.
-            Moreover, the roots of <m>p(x)</m> are <m>\alpha_1, \ldots, \alpha_{n-1}</m>,
-            since the substitution of any one of these elements in the last column will produce a column identical to the last column in the matrix.
-            Remember that the determinant of a matrix is zero if it has two identical columns.
-            Therefore,
+            Expandindo esse determinante por cofatores na última coluna,
+            vemos que <m>p(x)</m> é um polinômio de grau no máximo <m>n-1</m>.
+            Além disso, as raízes de <m>p(x)</m> são <m>\alpha_1, \ldots, \alpha_{n-1}</m>,
+            pois a substituição de qualquer um desses elementos na última coluna produzirá uma coluna idêntica à última coluna da matriz.
+            Lembre-se de que o determinante de uma matriz é zero se ela possui duas colunas idênticas.
+            Portanto,
             <md>
               p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta
             </md>,
-            where
+            onde
             <md>
               \beta = (-1)^{n + n} \det
               \begin{pmatrix}
@@ -835,67 +834,67 @@
               \alpha_1^{n-2} &amp; \alpha_2^{n-2} &amp; \cdots &amp; \alpha_{n-1}^{n-2} 
               \end{pmatrix}
             </md>.
-            By our induction hypothesis,
+            Pela hipótese de indução,
             <md>
               \beta = (-1)^{n+n} \prod_{1 \leq j \lt i \leq n - 1} (\alpha_i - \alpha_j)
             </md>.
-            If we let <m>x = \alpha_n</m>,
-            the result now follows immediately.
+            Se tomarmos <m>x = \alpha_n</m>,
+            o resultado segue imediatamente.
           </p>
         </proof>
       </lemma>
 
       <p>
-        The following theorem gives us an estimate on the error detection and correction capabilities for a particular generator polynomial.
+        O teorema a seguir fornece uma estimativa das capacidades de detecção e correção de erros para um polinômio gerador específico.
       </p>
 
       <theorem xml:id="finite-theorem-min-dist-cyclic-code">
         <statement>
           <p>
-            Let <m>C = \langle g(t) \rangle</m> be a cyclic code in <m>R_n</m> and suppose that <m>\omega</m> is a primitive <m>n</m>th root of unity over <m>{\mathbb Z}_2</m>.
-            If <m>s</m> consecutive powers of <m>\omega</m> are roots of <m>g(x)</m>,
-            then the minimum distance of <m>C</m> is at least <m>s + 1</m>.
+            Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m> e suponha que <m>\omega</m> seja uma <m>n</m>-ésima raiz primitiva da unidade sobre <m>{\mathbb Z}_2</m>.
+            Se <m>s</m> potências consecutivas de <m>\omega</m> são raízes de <m>g(x)</m>,
+            então a distância mínima de <m>C</m> é pelo menos <m>s + 1</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that
+            Suponha que
             <md>
               g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
             </md>.
-            Let <m>f(x)</m> be some polynomial in <m>C</m> with <m>s</m> or fewer nonzero coefficients.
-            We can assume that
+            Seja <m>f(x)</m> algum polinômio em <m>C</m> com <m>s</m> ou menos coeficientes não nulos.
+            Podemos supor que
             <md>
               f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
             </md>
-            be some polynomial in <m>C</m>.
-            It will suffice to show that all of the <m>a_i</m>'s must be 0.
-            Since
+            seja algum polinômio em <m>C</m>.
+            Será suficiente mostrar que todos os <m>a_i</m> devem ser 0.
+            Como
             <md>
               g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
             </md>
-            and <m>g(x)</m> divides <m>f(x)</m>,
+            e <m>g(x)</m> divide <m>f(x)</m>,
             <md>
               f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0
             </md>.
-            Equivalently, we have the following system of equations:
+            Equivalentemente, temos o seguinte sistema de equações:
             <md>
               <mrow>a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0</mrow>
               <mrow>a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0</mrow>
               <mrow>&amp; \aatavdots{=}</mrow>
               <mrow>a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0</mrow>
             </md>.
-            Therefore, <m>(a_{i_0}, a_{i_1}, \ldots,
-            a_{i_{s - 1}})</m> is a solution to the homogeneous system of linear equations
+            Portanto, <m>(a_{i_0}, a_{i_1}, \ldots,
+            a_{i_{s - 1}})</m> é uma solução do sistema homogêneo de equações lineares
             <md>
               <mrow>(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0</mrow>
               <mrow>(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0</mrow>
               <mrow>&amp; \aatavdots{=}</mrow>
               <mrow>(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0</mrow>
             </md>.
-            However, this system has a unique solution,
-            since the determinant of the matrix
+            Contudo, esse sistema tem uma única solução,
+            pois o determinante da matriz
             <md>
               \begin{pmatrix}
               (\omega^{i_0})^r &amp; (\omega^{i_1})^r &amp; \cdots &amp; (\omega^{i_{s-1}})^r \\
@@ -906,66 +905,66 @@
               (\omega^{i_{s-1}})^{r+s-1} 
               \end{pmatrix}
             </md>
-            can be shown to be nonzero using <xref ref="finite-lemma-vandermode-det"/> and the basic properties of determinants (Exercise).
-            Therefore, this solution must be <m>a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0</m>.
+            pode ser mostrado não nulo usando o <xref ref="finite-lemma-vandermode-det"/> e as propriedades básicas dos determinantes (exercício).
+            Portanto, essa solução deve satisfazer <m>a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0</m>.
           </p>
         </proof>
       </theorem>
     </subsection>
 
     <subsection xml:id="finite-subsection-bch-codes">
-      <title><acro>BCH</acro> Codes</title>
+      <title>Códigos <acro>BCH</acro></title>
       <p>
-        Some of the most important codes,
-        discovered independently by A. Hocquenghem in 1959 and by R. C. Bose and D. V. Ray-Chaudhuri in 1960, are <acro>BCH</acro> codes.
-        The European and transatlantic communication systems both use <acro>BCH</acro> codes.
-        Information words to be encoded are of length <m>231</m>,
-        and a polynomial of degree <m>24</m> is used to generate the code.
-        Since <m>231 + 24 = 255 = 2^8-1</m>,
-        we are dealing with a <m>(255, 231)</m>-block code.
-        This <acro>BCH</acro> code will detect six errors and has a failure rate of <m>1</m> in <m>16</m> million.
-        One advantage of <acro>BCH</acro> codes is that efficient error correction algorithms exist for them.
+        Alguns dos códigos mais importantes,
+        descobertos independentemente por A. Hocquenghem em 1959 e por R. C. Bose e D. V. Ray-Chaudhuri em 1960, são os códigos <acro>BCH</acro>.
+        Tanto os sistemas de comunicação europeus quanto os transatlânticos usam códigos <acro>BCH</acro>.
+        As palavras de informação a serem codificadas têm comprimento <m>231</m>,
+        e um polinômio de grau <m>24</m> é usado para gerar o código.
+        Como <m>231 + 24 = 255 = 2^8-1</m>,
+        estamos lidando com um código de blocos <m>(255, 231)</m>.
+        Esse código <acro>BCH</acro> detectará seis erros e tem uma taxa de falha de <m>1</m> em <m>16</m> milhões.
+        Uma vantagem dos códigos <acro>BCH</acro> é que existem algoritmos eficientes de correção de erros para eles.
       </p>
 
       <p>
-        The idea behind <acro>BCH</acro> codes is to choose a generator polynomial of smallest degree that has the largest error detection and error correction  capabilities.
-        Let <m>d = 2r + 1</m> for some <m>r \geq 0</m>.
-        Suppose that <m>\omega</m> is a primitive <m>n</m>th root of unity over <m>{\mathbb Z}_2</m>,
-        and let <m>m_i(x)</m> be the minimal polynomial over <m>{\mathbb Z}_2</m> of <m>\omega^i</m>.
-        If
+        A ideia por trás dos códigos <acro>BCH</acro> é escolher um polinômio gerador de menor grau que tenha as maiores capacidades de detecção e correção de erros.
+        Seja <m>d = 2r + 1</m> para algum <m>r \geq 0</m>.
+        Suponha que <m>\omega</m> seja uma <m>n</m>-ésima raiz primitiva da unidade sobre <m>{\mathbb Z}_2</m>,
+        e seja <m>m_i(x)</m> o polinômio mínimo sobre <m>{\mathbb Z}_2</m> de <m>\omega^i</m>.
+        Se
         <md>
           g(x) = \lcm[ m_1(x), m_{2}(x), \ldots, m_{2r}(x)]
         </md>,
-        then the cyclic code <m>\langle g(t) \rangle</m> in <m>R_n</m> is called the
-        <term><acro>BCH</acro> code of length</term><idx><h>Code</h><h><acro>BCH</acro></h></idx> <m>n</m>
-        <term>and distance</term> <m>d</m>.
-        By <xref ref="finite-theorem-min-dist-cyclic-code"/>,
-        the minimum distance of <m>C</m> is at least <m>d</m>.
+        então o código cíclico <m>\langle g(t) \rangle</m> em <m>R_n</m> é chamado de
+        <term>código <acro>BCH</acro> de comprimento</term><idx><h>Código</h><h><acro>BCH</acro></h></idx> <m>n</m>
+        <term>e distância</term> <m>d</m>.
+        Pelo <xref ref="finite-theorem-min-dist-cyclic-code"/>,
+        a distância mínima de <m>C</m> é pelo menos <m>d</m>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>C = \langle g(t) \rangle</m> be a cyclic code in <m>R_n</m>.
-            The following statements are equivalent.
+            Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m>.
+            As afirmações a seguir são equivalentes.
 
             <ol>
               <li>
                 <p>
-                  The code <m>C</m> is a <acro>BCH</acro> code whose minimum distance is at least <m>d</m>.
+                  O código <m>C</m> é um código <acro>BCH</acro> cuja distância mínima é pelo menos <m>d</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  A code polynomial <m>f(t)</m> is in <m>C</m> if and only if
-                  <m>f( \omega^i) = 0</m> for <m>1 \leq i \lt d</m>.
+                  Um polinômio-código <m>f(t)</m> pertence a <m>C</m> se, e somente se,
+                  <m>f( \omega^i) = 0</m> para <m>1 \leq i \lt d</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  The matrix
+                  A matriz
                   <md>
                     H =
                     \begin{pmatrix}
@@ -976,7 +975,7 @@
                     1      &amp; \omega^{2r} &amp; \omega^{4r} &amp; \cdots &amp; \omega^{(n-1)(2r)} 
                     \end{pmatrix}
                   </md>
-                  is a parity-check matrix for <m>C</m>.
+                  é uma matriz de verificação de paridade de <m>C</m>.
                 </p>
               </li>
             </ol>
@@ -986,23 +985,23 @@
         <proof>
           <p>
             (1) <m>\Rightarrow</m> (2).
-            If <m>f(t)</m> is in <m>C</m>,
-            then <m>g(x) \mid f(x)</m> in <m>{\mathbb Z}_2[x]</m>.
-            Hence, for <m>i = 1, \ldots, 2r</m>,
-            <m>f( \omega^i) = 0</m> since <m>g( \omega^i ) = 0</m>.
-            Conversely, suppose that <m>f( \omega^i) = 0</m> for <m>1 \leq i \leq d</m>.
-            Then <m>f(x)</m> is divisible by each <m>m_i(x)</m>,
-            since <m>m_i(x)</m> is the minimal polynomial of <m>\omega^i</m>.
-            Therefore, <m>g(x) \mid f(x)</m> by the definition of <m>g(x)</m>.
-            Consequently, <m>f(x)</m> is a codeword.
+            Se <m>f(t)</m> pertence a <m>C</m>,
+            então <m>g(x) \mid f(x)</m> em <m>{\mathbb Z}_2[x]</m>.
+            Logo, para <m>i = 1, \ldots, 2r</m>,
+            <m>f( \omega^i) = 0</m>, pois <m>g( \omega^i ) = 0</m>.
+            Reciprocamente, suponha que <m>f( \omega^i) = 0</m> para <m>1 \leq i \leq d</m>.
+            Então <m>f(x)</m> é divisível por cada <m>m_i(x)</m>,
+            pois <m>m_i(x)</m> é o polinômio mínimo de <m>\omega^i</m>.
+            Portanto, <m>g(x) \mid f(x)</m> pela definição de <m>g(x)</m>.
+            Consequentemente, <m>f(x)</m> é uma palavra-código.
           </p>
 
           <p>
             (2) <m>\Rightarrow</m> (3).
-            Let <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1}v t^{n - 1}</m> be in <m>R_n</m>.
-            The corresponding <m>n</m>-tuple in
-            <m>{\mathbb Z}_2^n</m> is <m>{\mathbf x} = (a_0 a_1 \cdots a_{n - 1})^\transpose</m>.
-            By (2),
+            Seja <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1}v t^{n - 1}</m> um elemento de <m>R_n</m>.
+            A <m>n</m>-upla correspondente em
+            <m>{\mathbb Z}_2^n</m> é <m>{\mathbf x} = (a_0 a_1 \cdots a_{n - 1})^\transpose</m>.
+            Por (2),
             <md>
               H {\mathbf x} =
               \begin{pmatrix}
@@ -1020,50 +1019,50 @@
               \end{pmatrix}
               = 0
             </md>
-            exactly when <m>f(t)</m> is in <m>C</m>.
-            Thus, <m>H</m> is a parity-check matrix for <m>C</m>.
+            exatamente quando <m>f(t)</m> pertence a <m>C</m>.
+            Assim, <m>H</m> é uma matriz de verificação de paridade de <m>C</m>.
           </p>
 
           <p>
             (3) <m>\Rightarrow</m> (1).
-            By (3), a code polynomial <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> is in <m>C</m> exactly when
-            <m>f(\omega^i) = 0</m> for <m>i = 1, \ldots, 2r</m>.
-            The smallest such polynomial is <m>g(t) = \lcm[ m_1(t),\ldots,
+            Por (3), um polinômio-código <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}</m> pertence a <m>C</m> exatamente quando
+            <m>f(\omega^i) = 0</m> para <m>i = 1, \ldots, 2r</m>.
+            O menor polinômio com essa propriedade é <m>g(t) = \lcm[ m_1(t),\ldots,
             m_{2r}(t)]</m>.
-            Therefore, <m>C = \langle g(t) \rangle</m>.
+            Portanto, <m>C = \langle g(t) \rangle</m>.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="finite-example-x15-1">
         <p>
-          It is easy to verify that <m>x^{15} - 1 \in {\mathbb Z}_2[x]</m> has a factorization
+          É fácil verificar que <m>x^{15} - 1 \in {\mathbb Z}_2[x]</m> possui uma fatoração
           <md>
             x^{15} - 1 = (x + 1)(x^2 + x + 1)(x^4 + x + 1)(x^4 + x^3 + 1)(x^4 + x^3 + x^2 + x + 1)
           </md>,
-          where each of the factors is an irreducible polynomial.
-          Let <m>\omega</m> be a root of <m>1 + x + x^4</m>.
-          The Galois field <m>\gf(2^4)</m> is
+          na qual cada fator é um polinômio irredutível.
+          Seja <m>\omega</m> uma raiz de <m>1 + x + x^4</m>.
+          O corpo de Galois <m>\gf(2^4)</m> é
           <md>
-            \{ a_0 + a_1 \omega + a_2 \omega^2 + a_3 \omega^3 : a_i \in {\mathbb Z}_2 \text{ and } 1 + \omega + \omega^4 = 0 \}
+            \{ a_0 + a_1 \omega + a_2 \omega^2 + a_3 \omega^3 : a_i \in {\mathbb Z}_2 \text{ e } 1 + \omega + \omega^4 = 0 \}
           </md>.
-          By <xref ref="finite-example-gf-p24"/>,
-          <m>\omega</m> is a primitive <m>15</m>th root of unity.
-          The minimal polynomial of <m>\omega</m> is <m>m_1(x) = 1 + x + x^4</m>.
-          It is easy to see that <m>\omega^2</m> and
-          <m>\omega^4</m> are also roots of <m>m_1(x)</m>.
-          The minimal polynomial of <m>\omega^3</m> is <m>m_2(x) = 1 + x + x^2 + x^3 + x^4</m>.
-          Therefore,
+          Pela <xref ref="finite-example-gf-p24"/>,
+          <m>\omega</m> é uma <m>15</m>-ésima raiz primitiva da unidade.
+          O polinômio mínimo de <m>\omega</m> é <m>m_1(x) = 1 + x + x^4</m>.
+          É fácil ver que <m>\omega^2</m> e
+          <m>\omega^4</m> também são raízes de <m>m_1(x)</m>.
+          O polinômio mínimo de <m>\omega^3</m> é <m>m_2(x) = 1 + x + x^2 + x^3 + x^4</m>.
+          Portanto,
           <md>
             g(x) = m_1(x) m_2(x) = 1 + x^4 + x^6 + x^7 + x^8
           </md>
-          has roots <m>\omega</m>, <m>\omega^2</m>,
+          tem como raízes <m>\omega</m>, <m>\omega^2</m>,
           <m>\omega^3</m>, <m>\omega^4</m>.
-          Since both <m>m_1(x)</m> and <m>m_2(x)</m> divide <m>x^{15} - 1</m>,
-          the <acro>BCH</acro> code is a <m>(15, 7)</m>-code.
-          If <m>x^{15} -1 = g(x)h(x)</m>,
-          then <m>h(x) = 1 + x^4 + x^6 + x^7</m>;
-          therefore, a parity-check matrix for this code is
+          Como tanto <m>m_1(x)</m> quanto <m>m_2(x)</m> dividem <m>x^{15} - 1</m>,
+          o código <acro>BCH</acro> é um código <m>(15, 7)</m>.
+          Se <m>x^{15} -1 = g(x)h(x)</m>,
+          então <m>h(x) = 1 + x^4 + x^6 + x^7</m>;
+          portanto, uma matriz de verificação de paridade para esse código é
           <md>
             \left(<!-- This matrix is too large for pmatrix - TWJ 8/19/2010 -->
             \begin{array}{ccccccccccccccc}
@@ -1084,10 +1083,10 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Finite fields are important in a variety of applied disciplines,
-          such as cryptography and coding theory
-          (see introductions to these topics in other chapters).
-          Sage has excellent support for finite fields allowing for a wide variety of computations.
+          Os corpos finitos são importantes em diversas áreas aplicadas,
+          como criptografia e teoria de códigos
+          (veja as introduções a esses tópicos em outros capítulos).
+          O Sage oferece excelente suporte a corpos finitos, permitindo uma grande variedade de cálculos.
         </p>
       </paragraphs>
 
@@ -1100,7 +1099,7 @@
     <exercise label="rq-finite-separable">
       <statement>
         <p>
-          When is a field extension separable?
+          Quando uma extensão de corpos é separável?
         </p>
       </statement>
       <response/>
@@ -1109,7 +1108,7 @@
     <exercise label="rq-finite-subfields">
       <statement>
         <p>
-          What are the possible orders for subfields of a finite field?
+          Quais são as possíveis ordens dos subcorpos de um corpo finito?
         </p>
       </statement>
       <response/>
@@ -1118,7 +1117,7 @@
     <exercise label="rq-finite-element-structure">
       <statement>
         <p>
-          What is the structure of the non-zero elements of a finite field?
+          Qual é a estrutura dos elementos não nulos de um corpo finito?
         </p>
       </statement>
       <response/>
@@ -1127,7 +1126,7 @@
     <exercise label="rq-finite-splitting-field">
       <statement>
         <p>
-          Provide a characterization of finite fields using the concept of a splitting field.
+          Dê uma caracterização dos corpos finitos usando o conceito de corpo de decomposição.
         </p>
       </statement>
       <response/>
@@ -1136,8 +1135,8 @@
     <exercise label="rq-finite-fresh-dream">
       <statement>
         <p>
-          Why is a theorem in this chapter titled
-          <q>The Freshman's Dream?</q>
+          Por que um teorema deste capítulo tem o título
+          <q>O sonho do calouro?</q>
         </p>
       </statement>
       <response/>
@@ -1148,12 +1147,12 @@
     <!-- File: finite.xml  -->
     <!-- Title: Finite Fields -->
   <exercises xml:id="finite-exercises" filenamebase="finite">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="finite-exercise-calculate-degree">
       <statement>
         <p>
-          Calculate each of the following.
+          Calcule cada um dos itens a seguir.
         </p>
 
         <ol cols="2">
@@ -1184,7 +1183,7 @@
       </statement>
       <hint>
         <p>
-          Make sure that you have a field extension.
+          Certifique-se de que você tem uma extensão de corpos.
         </p>
       </hint>
     </exercise>
@@ -1192,7 +1191,7 @@
     <exercise number="2" xml:id="finite-exercise-gf-pm-gf-pn">
       <statement>
         <p>
-          Calculate <m>[\gf(p^m): \gf(p^n)]</m>, where <m>n \mid m</m>.
+          Calcule <m>[\gf(p^m): \gf(p^n)]</m>, onde <m>n \mid m</m>.
         </p>
       </statement>
     </exercise>
@@ -1200,7 +1199,7 @@
     <exercise number="3" xml:id="finite-exercise-gf-p-30">
       <statement>
         <p>
-          What is the lattice of subfields for <m>\gf(p^{30})</m>?
+          Qual é o reticulado de subcorpos de <m>\gf(p^{30})</m>?
         </p>
       </statement>
     </exercise>
@@ -1208,16 +1207,16 @@
     <exercise number="4" xml:id="finite-exercise-Z-2-alpha">
       <statement>
         <p>
-          Let <m>\alpha</m> be a zero of
-          <m>x^3 + x^2 + 1</m> over <m>{\mathbb Z}_2</m>.
-          Construct a finite field of order <m>8</m>.
-          Show that <m>x^3 + x^2 + 1</m> splits in <m>{\mathbb Z}_2(\alpha)</m>.
+          Seja <m>\alpha</m> um zero de
+          <m>x^3 + x^2 + 1</m> sobre <m>{\mathbb Z}_2</m>.
+          Construa um corpo finito de ordem <m>8</m>.
+          Mostre que <m>x^3 + x^2 + 1</m> se decompõe em <m>{\mathbb Z}_2(\alpha)</m>.
         </p>
       </statement>
       <hint>
         <p>
-          There are eight elements in <m>{\mathbb Z}_2(\alpha)</m>.
-          Exhibit two more zeros of <m>x^3 + x^2 + 1</m> other than <m>\alpha</m> in these eight elements.
+          Há oito elementos em <m>{\mathbb Z}_2(\alpha)</m>.
+          Exiba, entre esses oito elementos, outros dois zeros de <m>x^3 + x^2 + 1</m> além de <m>\alpha</m>.
         </p>
       </hint>
     </exercise>
@@ -1227,14 +1226,14 @@
     <exercise number="5" xml:id="finite-exercise-gf-27">
       <statement>
         <p>
-          Construct a finite field of order <m>27</m>.
+          Construa um corpo finito de ordem <m>27</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Find an irreducible polynomial <m>p(x)</m> in
-          <m>{\mathbb Z}_3[x]</m> of degree <m>3</m> and show that
-          <m>{\mathbb Z}_3[x]/ \langle p(x) \rangle</m> has <m>27</m> elements.
+          Encontre um polinômio irredutível <m>p(x)</m> em
+          <m>{\mathbb Z}_3[x]</m> de grau <m>3</m> e mostre que
+          <m>{\mathbb Z}_3[x]/ \langle p(x) \rangle</m> tem <m>27</m> elementos.
         </p>
       </hint>
     </exercise>
@@ -1244,7 +1243,7 @@
     <exercise number="6" xml:id="finite-exercise-Q-star-cyclic">
       <statement>
         <p>
-          Prove or disprove: <m>{\mathbb Q}^\ast</m> is cyclic.
+          Prove ou refute: <m>{\mathbb Q}^\ast</m> é cíclico.
         </p>
       </statement>
     </exercise>
@@ -1252,7 +1251,7 @@
     <exercise number="7" xml:id="finite-exercise-factor-Z2-polys">
       <statement>
         <p>
-          Factor each of the following polynomials in <m>{\mathbb Z}_2[x]</m>.
+          Fatore cada um dos polinômios a seguir em <m>{\mathbb Z}_2[x]</m>.
 
           <ol cols="2">
             <li>
@@ -1291,13 +1290,13 @@
     <exercise number="8" xml:id="finite-exercise-Z-2-x-over-degrre-3">
       <statement>
         <p>
-          Prove or disprove:
+          Prove ou refute:
           <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle \cong {\mathbb Z}_2[x] / \langle x^3 + x^2 + 1 \rangle</m>.
         </p>
       </statement>
       <hint>
         <p>
-          True.
+          Verdadeiro.
         </p>
       </hint>
     </exercise>
@@ -1307,7 +1306,7 @@
     <exercise number="9" xml:id="finite-exercise-cyclic-codes">
       <statement>
         <p>
-          Determine the number of cyclic codes of length <m>n</m> for <m>n = 6, 7, 8, 10</m>.
+          Determine o número de códigos cíclicos de comprimento <m>n</m> para <m>n = 6, 7, 8, 10</m>.
         </p>
       </statement>
     </exercise>
@@ -1317,8 +1316,8 @@
     <exercise number="10" xml:id="finite-exercise-even-parity">
       <statement>
         <p>
-          Prove that the ideal <m>\langle t + 1 \rangle</m> in <m>R_n</m> is the code in
-          <m>{\mathbb Z}_2^n</m> consisting of all words of even parity.
+          Prove que o ideal <m>\langle t + 1 \rangle</m> em <m>R_n</m> é o código em
+          <m>{\mathbb Z}_2^n</m> formado por todas as palavras de paridade par.
         </p>
       </statement>
     </exercise>
@@ -1328,18 +1327,18 @@
     <exercise number="11" xml:id="finite-exercise-BCH">
       <statement>
         <p>
-          Construct all <acro>BCH</acro> codes of
+          Construa todos os códigos <acro>BCH</acro> de
 
           <ol cols="2">
             <li>
               <p>
-                length <m>7</m>.
+                comprimento <m>7</m>.
               </p>
             </li>
 
             <li>
               <p>
-                length <m>15</m>.
+                comprimento <m>15</m>.
               </p>
             </li>
           </ol>
@@ -1347,7 +1346,7 @@
       </statement>
       <hint>
         <p>
-          (a) Use the fact that <m>x^7 - 1 = (x + 1)( x^3 + x + 1)(x^3 + x^2 + 1)</m>.
+          (a) Use o fato de que <m>x^7 - 1 = (x + 1)( x^3 + x + 1)(x^3 + x^2 + 1)</m>.
         </p>
       </hint>
     </exercise>
@@ -1357,12 +1356,12 @@
     <exercise number="12" xml:id="finite-exercise-algebraically-closed">
       <statement>
         <p>
-          Prove or disprove: There exists a finite field that is algebraically closed.
+          Prove ou refute: existe um corpo finito que é algebricamente fechado.
         </p>
       </statement>
       <hint>
         <p>
-          False.
+          Falso.
         </p>
       </hint>
     </exercise>
@@ -1370,9 +1369,9 @@
     <exercise number="13" xml:id="finite-exercise-Zp-x">
       <statement>
         <p>
-          Let <m>p</m> be prime.
-          Prove that the field of rational functions
-          <m>{\mathbb Z}_p(x)</m> is an infinite field of characteristic <m>p</m>.
+          Seja <m>p</m> primo.
+          Prove que o corpo de funções racionais
+          <m>{\mathbb Z}_p(x)</m> é um corpo infinito de característica <m>p</m>.
         </p>
       </statement>
     </exercise>
@@ -1382,8 +1381,8 @@
     <exercise number="14" xml:id="finite-exercise-integral-domian-p">
       <statement>
         <p>
-          Let <m>D</m> be an integral domain of characteristic <m>p</m>.
-          Prove that <m>(a - b)^{p^n} = a^{p^n} - b^{p^n}</m> for all <m>a,
+          Seja <m>D</m> um domínio de integridade de característica <m>p</m>.
+          Prove que <m>(a - b)^{p^n} = a^{p^n} - b^{p^n}</m> para todos <m>a,
           b \in D</m>.
         </p>
       </statement>
@@ -1394,7 +1393,7 @@
     <exercise number="15" xml:id="finite-exercise-sum-of-squares">
       <statement>
         <p>
-          Show that every element in a finite field can be written as the sum of two squares.
+          Mostre que todo elemento de um corpo finito pode ser escrito como a soma de dois quadrados.
         </p>
       </statement>
     </exercise>
@@ -1404,8 +1403,8 @@
     <exercise number="16" xml:id="finite-exercise-subfields">
       <statement>
         <p>
-          Let <m>E</m> and <m>F</m> be subfields of a finite field <m>K</m>.
-          If <m>E</m> is isomorphic to <m>F</m>, show that <m>E = F</m>.
+          Sejam <m>E</m> e <m>F</m> subcorpos de um corpo finito <m>K</m>.
+          Se <m>E</m> é isomorfo a <m>F</m>, mostre que <m>E = F</m>.
         </p>
       </statement>
     </exercise>
@@ -1415,14 +1414,14 @@
     <exercise number="17" xml:id="finite-exercise-separable-extension">
       <statement>
         <p>
-          Let <m>F \subset E \subset K</m> be fields.
-          If <m>K</m> is a separable extension of <m>F</m>,
-          show that <m>K</m> is also separable extension of <m>E</m>.
+          Sejam <m>F \subset E \subset K</m> corpos.
+          Se <m>K</m> é uma extensão separável de <m>F</m>,
+          mostre que <m>K</m> também é uma extensão separável de <m>E</m>.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>p(x) \in F[x]</m>, then <m>p(x) \in E[x]</m>.
+          Se <m>p(x) \in F[x]</m>, então <m>p(x) \in E[x]</m>.
         </p>
       </hint>
     </exercise>
@@ -1430,18 +1429,18 @@
     <exercise number="18" xml:id="finite-exercise-F-alpha">
       <statement>
         <p>
-          Let <m>E</m> be an extension of a finite field <m>F</m>,
-          where <m>F</m> has <m>q</m> elements.
-          Let <m>\alpha \in E</m> be algebraic over <m>F</m> of degree <m>n</m>.
-          Prove that <m>F( \alpha )</m> has <m>q^n</m> elements.
+          Seja <m>E</m> uma extensão de um corpo finito <m>F</m>,
+          onde <m>F</m> tem <m>q</m> elementos.
+          Seja <m>\alpha \in E</m> algébrico sobre <m>F</m> de grau <m>n</m>.
+          Prove que <m>F( \alpha )</m> tem <m>q^n</m> elementos.
         </p>
       </statement>
       <hint>
         <p>
-          Since <m>\alpha</m> is algebraic over <m>F</m> of degree <m>n</m>,
-          we can write any element <m>\beta \in F(\alpha)</m> uniquely as
-          <m>\beta = a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}</m> with <m>a_i \in F</m>.
-          There are <m>q^n</m> possible <m>n</m>-tuples <m>(a_0, a_1, \ldots,
+          Como <m>\alpha</m> é algébrico sobre <m>F</m> de grau <m>n</m>,
+          podemos escrever unicamente qualquer elemento <m>\beta \in F(\alpha)</m> como
+          <m>\beta = a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}</m>, com <m>a_i \in F</m>.
+          Há <m>q^n</m> <m>n</m>-uplas possíveis <m>(a_0, a_1, \ldots,
           a_{n - 1})</m>.
         </p>
       </hint>
@@ -1450,10 +1449,10 @@
     <exercise number="19" xml:id="finite-exercise-simple-extension">
       <statement>
         <p>
-          Show that every finite extension of a finite field <m>F</m> is simple;
-          that is, if <m>E</m> is a finite extension of a finite field <m>F</m>,
-          prove that there exists an
-          <m>\alpha \in E</m> such that <m>E = F( \alpha )</m>.
+          Mostre que toda extensão finita de um corpo finito <m>F</m> é simples;
+          isto é, se <m>E</m> é uma extensão finita de um corpo finito <m>F</m>,
+          prove que existe um
+          <m>\alpha \in E</m> tal que <m>E = F( \alpha )</m>.
         </p>
       </statement>
     </exercise>
@@ -1463,7 +1462,7 @@
     <exercise number="20" xml:id="finite-exercise-irreducible-poly">
       <statement>
         <p>
-          Show that for every <m>n</m> there exists an irreducible polynomial of degree <m>n</m> in <m>{\mathbb Z}_p[x]</m>.
+          Mostre que para todo <m>n</m> existe um polinômio irredutível de grau <m>n</m> em <m>{\mathbb Z}_p[x]</m>.
         </p>
       </statement>
     </exercise>
@@ -1473,9 +1472,9 @@
     <exercise number="21" xml:id="finite-exercise-frobenius-map">
       <statement>
         <p>
-          Prove that the <term>Frobenius map</term>
-          <m>\Phi : \gf(p^n) \rightarrow \gf(p^n)</m> given by
-          <m>\Phi : \alpha \mapsto \alpha^p</m> is an automorphism of order <m>n</m>.
+          Prove que a <term>aplicação de Frobenius</term>
+          <m>\Phi : \gf(p^n) \rightarrow \gf(p^n)</m> dada por
+          <m>\Phi : \alpha \mapsto \alpha^p</m> é um automorfismo de ordem <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1483,8 +1482,8 @@
     <exercise number="22" xml:id="finite-exercise-GF-pn-a-p">
       <statement>
         <p>
-          Show that every element in
-          <m>\gf(p^n)</m> can be written in the form <m>a^p</m> for some unique <m>a \in \gf(p^n)</m>.
+          Mostre que todo elemento de
+          <m>\gf(p^n)</m> pode ser escrito na forma <m>a^p</m> para algum único <m>a \in \gf(p^n)</m>.
         </p>
       </statement>
     </exercise>
@@ -1494,24 +1493,24 @@
     <exercise number="23" xml:id="finite-exercise-E-cap-F">
       <statement>
         <p>
-          Let <m>E</m> and <m>F</m> be subfields of <m>\gf(p^n)</m>.
-          If <m>|E| = p^r</m> and <m>|F| = p^s</m>,
-          what is the order of <m>E \cap F</m>?
+          Sejam <m>E</m> e <m>F</m> subcorpos de <m>\gf(p^n)</m>.
+          Se <m>|E| = p^r</m> e <m>|F| = p^s</m>,
+          qual é a ordem de <m>E \cap F</m>?
         </p>
       </statement>
     </exercise>
 
     <exercise number="24" xml:id="finite-exercise-wilsons-ther">
-      <title>Wilson's Theorem</title>
+      <title>Teorema de Wilson</title>
       <statement>
         <p>
-          Let <m>p</m> be prime.
-          Prove that <m>(p-1)! \equiv -1 \pmod{p}</m>.
+          Seja <m>p</m> primo.
+          Prove que <m>(p-1)! \equiv -1 \pmod{p}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Factor <m>x^{p-1} - 1</m> over <m>{\mathbb Z}_p</m>.
+          Fatore <m>x^{p-1} - 1</m> sobre <m>{\mathbb Z}_p</m>.
         </p>
       </hint>
     </exercise>
@@ -1521,8 +1520,8 @@
     <exercise number="25" xml:id="finite-exercise-minimal-gen-poly">
       <statement>
         <p>
-          If <m>g(t)</m> is the minimal generator polynomial for a cyclic code <m>C</m> in <m>R_n</m>,
-          prove that the constant term of <m>g(x)</m> is <m>1</m>.
+          Se <m>g(t)</m> é o polinômio gerador mínimo de um código cíclico <m>C</m> em <m>R_n</m>,
+          prove que o termo constante de <m>g(x)</m> é <m>1</m>.
         </p>
       </statement>
     </exercise>
@@ -1532,12 +1531,12 @@
     <exercise number="26" xml:id="finite-exercise-burst">
       <statement>
         <p>
-          Often it is conceivable that a burst of errors might occur during transmission,
-          as in the case of a power surge.
-          Such a momentary burst of interference might alter several consecutive bits in a codeword.
-          Cyclic codes permit the detection of such error bursts.
-          Let <m>C</m> be an <m>(n,k)</m>-cyclic code.
-          Prove that any error burst up to <m>n-k</m> digits can be detected.
+          Muitas vezes é plausível que ocorra uma rajada de erros durante a transmissão,
+          como no caso de um surto de energia.
+          Uma rajada momentânea de interferência pode alterar vários bits consecutivos de uma palavra-código.
+          Os códigos cíclicos permitem detectar essas rajadas de erros.
+          Seja <m>C</m> um código cíclico <m>(n,k)</m>.
+          Prove que toda rajada de erros de até <m>n-k</m> dígitos pode ser detectada.
         </p>
       </statement>
     </exercise>
@@ -1547,8 +1546,8 @@
     <exercise number="27" xml:id="finite-exercise-R-n">
       <statement>
         <p>
-          Prove that the rings <m>R_n</m> and
-          <m>{\mathbb Z}_2^n</m> are isomorphic as vector spaces.
+          Prove que os anéis <m>R_n</m> e
+          <m>{\mathbb Z}_2^n</m> são isomorfos como espaços vetoriais.
         </p>
       </statement>
     </exercise>
@@ -1558,9 +1557,9 @@
     <exercise number="28" xml:id="finite-exercise-code-gen-gt">
       <statement>
         <p>
-          Let <m>C</m> be a code in <m>R_n</m> that is generated by <m>g(t)</m>.
-          If <m>\langle f(t) \rangle</m> is another code in <m>R_n</m>,
-          show that <m>\langle g(t) \rangle \subset \langle f(t) \rangle</m> if and only if <m>f(x)</m> divides <m>g(x)</m> in <m>{\mathbb Z}_2[x]</m>.
+          Seja <m>C</m> um código em <m>R_n</m> gerado por <m>g(t)</m>.
+          Se <m>\langle f(t) \rangle</m> é outro código em <m>R_n</m>,
+          mostre que <m>\langle g(t) \rangle \subset \langle f(t) \rangle</m> se, e somente se, <m>f(x)</m> divide <m>g(x)</m> em <m>{\mathbb Z}_2[x]</m>.
         </p>
       </statement>
     </exercise>
@@ -1570,9 +1569,9 @@
     <exercise number="29" xml:id="finite-exercise-generator-matrix">
       <statement>
         <p>
-          Let <m>C = \langle g(t) \rangle</m> be a cyclic code in <m>R_n</m> and suppose that <m>x^n - 1 = g(x) h(x)</m>,
-          where <m>g(x) = g_0 + g_1 x + \cdots + g_{n - k} x^{n - k}</m> and <m>h(x) = h_0 + h_1 x +  \cdots + h_k x^k</m>.
-          Define <m>G</m> to be the <m>n \times k</m> matrix
+          Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m> e suponha que <m>x^n - 1 = g(x) h(x)</m>,
+          onde <m>g(x) = g_0 + g_1 x + \cdots + g_{n - k} x^{n - k}</m> e <m>h(x) = h_0 + h_1 x +  \cdots + h_k x^k</m>.
+          Defina <m>G</m> como a matriz <m>n \times k</m>
           <md>
             G = 
             \begin{pmatrix}
@@ -1585,7 +1584,7 @@
             0   &amp; 0 &amp; \cdots &amp; g_{n-k}
             \end{pmatrix}
           </md>
-          and <m>H</m> to be the <m>(n-k) \times n</m> matrix
+          e <m>H</m> como a matriz <m>(n-k) \times n</m>
           <md>
             H =
             \begin{pmatrix}
@@ -1598,19 +1597,19 @@
           <ol>
             <li>
               <p>
-                Prove that <m>G</m> is a generator matrix for <m>C</m>.
+                Prove que <m>G</m> é uma matriz geradora de <m>C</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>H</m> is a parity-check matrix for <m>C</m>.
+                Prove que <m>H</m> é uma matriz de verificação de paridade de <m>C</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>HG = 0</m>.
+                Mostre que <m>HG = 0</m>.
               </p>
             </li>
           </ol>
@@ -1620,30 +1619,30 @@
 
   </exercises>
   <exercises xml:id="finite-exercises-bch-codes">
-    <title>Additional Exercises: Error Correction for <acro>BCH</acro> Codes</title>
+    <title>Exercícios Adicionais: Correção de Erros para Códigos <acro>BCH</acro></title>
     <introduction>
       <p>
-        <acro>BCH</acro> codes have very attractive error correction algorithms.
-        Let <m>C</m> be a <acro>BCH</acro> code in <m>R_n</m>,
-        and suppose that a code polynomial <m>c(t) = c_0 + c_1 t + \cdots + c_{n-1} t^{n-1}</m> is transmitted.
-        Let <m>w(t) = w_0 + w_1 t + \cdots w_{n-1} t^{n-1}</m> be the polynomial in <m>R_n</m> that is received.
-        If errors have occurred in bits <m>a_1, \ldots, a_k</m>,
-        then <m>w(t) = c(t) + e(t)</m>,
-        where <m>e(t) = t^{a_1} + t^{a_2} + \cdots + t^{a_k}</m> is the
-        <term>error polynomial</term>.<idx><h>Polynomial</h><h>error</h></idx>
-        The decoder must determine the integers <m>a_i</m> and then recover <m>c(t)</m> from <m>w(t)</m> by flipping the <m>a_i</m>th bit.
-        From <m>w(t)</m> we can compute
-        <m>w( \omega^i ) = s_i</m> for <m>i = 1, \ldots, 2r</m>,
-        where <m>\omega</m> is a primitive <m>n</m>th root of unity over <m>{\mathbb Z}_2</m>.
-        We say the <term>syndrome</term><idx><h>Syndrome of a code</h></idx>
-        of <m>w(t)</m> is <m>s_1, \ldots, s_{2r}</m>.
+        Os códigos <acro>BCH</acro> possuem algoritmos de correção de erros muito atraentes.
+        Seja <m>C</m> um código <acro>BCH</acro> em <m>R_n</m>,
+        e suponha que um polinômio-código <m>c(t) = c_0 + c_1 t + \cdots + c_{n-1} t^{n-1}</m> seja transmitido.
+        Seja <m>w(t) = w_0 + w_1 t + \cdots w_{n-1} t^{n-1}</m> o polinômio em <m>R_n</m> que é recebido.
+        Se ocorreram erros nos bits <m>a_1, \ldots, a_k</m>,
+        então <m>w(t) = c(t) + e(t)</m>,
+        onde <m>e(t) = t^{a_1} + t^{a_2} + \cdots + t^{a_k}</m> é o
+        <term>polinômio de erro</term>.<idx><h>Polinômio</h><h>erro</h></idx>
+        O decodificador deve determinar os inteiros <m>a_i</m> e então recuperar <m>c(t)</m> de <m>w(t)</m> invertendo o <m>a_i</m>-ésimo bit.
+        A partir de <m>w(t)</m>, podemos calcular
+        <m>w( \omega^i ) = s_i</m> para <m>i = 1, \ldots, 2r</m>,
+        onde <m>\omega</m> é uma <m>n</m>-ésima raiz primitiva da unidade sobre <m>{\mathbb Z}_2</m>.
+        Dizemos que o <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
+        de <m>w(t)</m> é <m>s_1, \ldots, s_{2r}</m>.
       </p>
     </introduction>
 
     <exercise xml:id="finite-exercise-code-poly">
       <statement>
         <p>
-          Show that <m>w(t)</m> is a code polynomial if and only if <m>s_i = 0</m> for all <m>i</m>.
+          Mostre que <m>w(t)</m> é um polinômio-código se, e somente se, <m>s_i = 0</m> para todo <m>i</m>.
         </p>
       </statement>
     </exercise>
@@ -1651,12 +1650,12 @@
     <exercise xml:id="finite-exercise-error-locator">
       <statement>
         <p>
-          Show that
+          Mostre que
           <md>
             s_i = w( \omega^i) = e( \omega^i) = \omega^{i a_1} + \omega^{i a_2} + \cdots + \omega^{i a_k}
           </md>
-          for <m>i = 1, \ldots, 2r</m>.
-          The <term>error-locator polynomial</term><idx><h>Polynomial</h><h>error-locator</h></idx> is defined to be
+          para <m>i = 1, \ldots, 2r</m>.
+          O <term>polinômio localizador de erros</term><idx><h>Polinômio</h><h>localizador de erros</h></idx> é definido por
           <md>
             s(x) = (x + \omega^{a_1})(x + \omega^{a_2}) \cdots  (x + \omega^{a_k})
           </md>.
@@ -1667,11 +1666,11 @@
     <exercise xml:id="finite-exercise-15-7-block-code">
       <statement>
         <p>
-          Recall the <m>(15,7)</m>-block <acro>BCH</acro> code in <xref ref="finite-example-parity-check-x7-1"/>.
-          By <xref ref="algcodes-theorem-min-distance"/>, this code is capable of correcting two errors.
-          Suppose that these errors occur in bits <m>a_1</m> and <m>a_2</m>.
-          The error-locator polynomial is <m>s(x) = (x + \omega^{a_1})(x + \omega^{a_2})</m>.
-          Show that
+          Lembre-se do código de blocos <m>(15,7)</m> <acro>BCH</acro> em <xref ref="finite-example-parity-check-x7-1"/>.
+          Pelo <xref ref="algcodes-theorem-min-distance"/>, esse código é capaz de corrigir dois erros.
+          Suponha que esses erros ocorram nos bits <m>a_1</m> e <m>a_2</m>.
+          O polinômio localizador de erros é <m>s(x) = (x + \omega^{a_1})(x + \omega^{a_2})</m>.
+          Mostre que
           <md>
             s(x) = x^2 + s_1 x + \left( s_1^2 + \frac{s_3}{s_1} \right)
           </md>.
@@ -1682,8 +1681,8 @@
     <exercise xml:id="finite-exercise-original-code-poly">
       <statement>
         <p>
-          Let <m>w(t) = 1 + t^2 +t^4 + t^5 + t^7 + t^{12} + t^{13}</m>.
-          Determine what the originally transmitted code polynomial was.
+          Seja <m>w(t) = 1 + t^2 +t^4 + t^5 + t^7 + t^{12} + t^{13}</m>.
+          Determine qual era o polinômio-código transmitido originalmente.
         </p>
       </statement>
     </exercise>
@@ -1691,7 +1690,7 @@
   </exercises>
 
   <references xml:id="finite-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e Leituras Sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated 5/4/2010 - TWJ -->
       Childs, L.
@@ -1707,7 +1706,7 @@
     <biblio type="raw">
 <!-- was [3] --><!-- Reference updated 8/20/2010 - TWJ -->
       Lidl, R. and Pilz, G.
-      <title>Applied Abstract Algebra</title>. 2nd ed. Springer, New York, 1998. An excellent presentation of finite fields and their applications.
+      <title>Applied Abstract Algebra</title>. 2nd ed. Springer, New York, 1998. Uma excelente apresentação de corpos finitos e suas aplicações.
     </biblio>
 
     <biblio type="raw">
@@ -1735,29 +1734,29 @@
     <title>Sage</title>
     <introduction>
       <p>
-        You have noticed in this chapter that finite fields have a great deal of structure.
-        We have also seen finite fields in Sage regularly as examples of rings and fields.
-        Now we can combine the two,
-        mostly using commands we already know, plus a few new ones.
+        Você observou neste capítulo que os corpos finitos têm uma estrutura muito rica.
+        Também vimos corpos finitos no Sage regularmente como exemplos de anéis e corpos.
+        Agora podemos combinar os dois,
+        usando principalmente comandos que já conhecemos, além de alguns novos.
       </p>
     </introduction>
 
     <subsection>
-      <title>Creating Finite Fields</title>
+      <title>Criando Corpos Finitos</title>
       <p>
-        By <xref ref="finite-theorem-splitting-field"/> we know that all finite fields of a given order are isomorphic and that possible orders are limited to powers of primes.
-        We can use the <c>FiniteField()</c> command, as before,
-        or a shorter equivalent is <c>GF()</c>.
-        Optionally, we can specify an irreducible polynomial for the contruction of the field.
-        We can view this polynomial as the generator of the principal ideal of a polynomial ring,
-        or we can view it as a <q>re-writing</q>
-        rule for powers of the field's generator that allow us to multiply elements and reformulate them as linear combinations of lesser powers.
+        Pelo <xref ref="finite-theorem-splitting-field"/> sabemos que todos os corpos finitos de uma dada ordem são isomorfos e que as ordens possíveis estão limitadas a potências de primos.
+        Podemos usar o comando <c>FiniteField()</c>, como antes,
+        ou seu equivalente mais curto, <c>GF()</c>.
+        Opcionalmente, podemos especificar um polinômio irredutível para a construção do corpo.
+        Podemos ver esse polinômio como o gerador do ideal principal de um anel de polinômios,
+        ou como uma regra de <q>reescrita</q>
+        para as potências do gerador do corpo, que permite multiplicar elementos e reescrevê-los como combinações lineares de potências menores.
       </p>
 
       <p>
-        Absent providing an irreducible polynomial, Sage will use a Conway polynomial.
-        You can determine these with the <c>conway_polynomial()</c> command,
-        or just build a finite field and request the defining polynomial with the <c>.polynomial()</c> method.
+        Se não fornecermos um polinômio irredutível, o Sage usará um polinômio de Conway.
+        Você pode determiná-los com o comando <c>conway_polynomial()</c>,
+        ou simplesmente construir um corpo finito e solicitar o polinômio definidor com o método <c>.polynomial()</c>.
       </p>
 
             <sage>
@@ -1794,8 +1793,8 @@
             </sage>
 
       <p>
-        Just to be more readable,
-        we coerce a list of coefficients into the set of polynomials (obtained with the <c>.parent()</c> method on a simple polynomial) to define a polynomial.
+        Apenas para tornar a leitura mais fácil,
+        convertemos uma lista de coeficientes em um elemento do conjunto dos polinômios (obtido com o método <c>.parent()</c> aplicado a um polinômio simples) a fim de definir um polinômio.
       </p>
 
             <sage>
@@ -1828,20 +1827,20 @@
     </subsection>
 
     <subsection>
-      <title>Logarithms in Finite Fields</title>
+      <title>Logaritmos em Corpos Finitos</title>
       <p>
-        One useful command we have not described is the <c>.log()</c> method for elements of a finite field.
-        Since we now know that the multiplicative group of nonzero elements is cyclic,
-        we can express every element as a power of the generator.
-        The <c>log</c> method will return that power.
+        Um comando útil que ainda não descrevemos é o método <c>.log()</c> para elementos de um corpo finito.
+        Como agora sabemos que o grupo multiplicativo dos elementos não nulos é cíclico,
+        podemos expressar cada elemento como uma potência do gerador.
+        O método <c>log</c> retornará essa potência.
       </p>
 
       <p>
-        Usually we will want to use the generator as the base of a lograithm computation in a finite field.
-        However, other bases may be used,
-        wih the understanding that if the base is not a generator,
-        then the logarithm may not exist
-        (<ie/> there may not be a solution to the relevant equation).
+        Em geral, queremos usar o gerador como base de um cálculo de logaritmo em um corpo finito.
+        Contudo, outras bases podem ser usadas,
+        desde que se tenha em mente que, se a base não for um gerador,
+        o logaritmo pode não existir
+        (<ie/> isto é, pode não haver solução para a equação relevante).
       </p>
 
             <sage>
@@ -1890,22 +1889,22 @@
             </sage>
 
       <p>
-        Since we already know many Sage commands,
-        there is not much else worth introducing before we can work profitably with finite fields.
-        The exercises explore the ways we can examine and exploit the structure of finite fields in Sage.
+        Como já conhecemos muitos comandos do Sage,
+        não há muito mais que valha a pena introduzir antes de podermos trabalhar de modo proveitoso com corpos finitos.
+        Os exercícios exploram maneiras de examinar e aproveitar a estrutura dos corpos finitos no Sage.
       </p>
     </subsection>
 
   </section>
 
   <exercises xml:id="finite-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
 
     <exercise number="1" xml:id="finite-sage-exercise-field-order-25">
       <statement>
         <p>
-          Create a finite field of order <m>5^2</m> and then factor <m>p(x)=x^{25}-x</m> over this field.
-          Comment on what is interesting about this result and why it is not a surprise.
+          Crie um corpo finito de ordem <m>5^2</m> e depois fatore <m>p(x)=x^{25}-x</m> sobre esse corpo.
+          Comente o que é interessante nesse resultado e por que ele não é uma surpresa.
         </p>
       </statement>
     </exercise>
@@ -1913,20 +1912,20 @@
     <exercise number="2" xml:id="finite-sage-exercise-cyclic-group">
       <statement>
         <p>
-          <xref ref="finite-corollary-cyclic-group-finite-field"/> says that the nonzero elements of a finite field are a cyclic group under multiplication.
-          The generator used in Sage is also a generator of this multiplicative group.
-          To see this, create a finite field of order <m>2^7</m>.
-          Create two lists of the elements of the field:
-          first, use the <c>.list()</c> method,
-          then use a list comprehension to generate the proper powers of the generator you specified when you created the field.
+          O <xref ref="finite-corollary-cyclic-group-finite-field"/> afirma que os elementos não nulos de um corpo finito formam um grupo cíclico sob a multiplicação.
+          O gerador usado no Sage também é um gerador desse grupo multiplicativo.
+          Para ver isso, crie um corpo finito de ordem <m>2^7</m>.
+          Crie duas listas dos elementos do corpo:
+          primeiro, use o método <c>.list()</c>;
+          depois, use uma compreensão de lista para gerar as potências próprias do gerador que você especificou ao criar o corpo.
         </p>
 
         <p>
-          The second list should be the whole field, but will be missing zero.
-          Create the zero element of the field
-          (perhaps by coercing <m>0</m> into the field)
-          and <c>.append()</c> it to the list of powers.
-          Apply the <c>sorted()</c> command to each list and then test the lists for equality.
+          A segunda lista deve ser o corpo inteiro, mas estará sem o zero.
+          Crie o elemento zero do corpo
+          (talvez convertendo <m>0</m> em um elemento do corpo)
+          e use <c>.append()</c> para adicioná-lo à lista de potências.
+          Aplique o comando <c>sorted()</c> a cada lista e então teste se as listas são iguais.
         </p>
       </statement>
     </exercise>
@@ -1934,26 +1933,26 @@
     <exercise number="3" xml:id="finite-sage-exercise-subfields">
       <statement>
         <p>
-          Subfields of a finite field are completely classified by <xref ref="finite-theorem-subfields"/>.
-          It is possible to create two finite fields of the correct orders for the superfield/subfield relationship to hold,
-          and to translate between one and the other.
-          However, in this exercise we will create a subfield of a finite field from scratch.
-          Since the group of nonzero elements in a finite field is cyclic,
-          the nonzero elements of a subfield will form a subgroup of the cyclic group,
-          and necessarily will be cyclic.
+          Os subcorpos de um corpo finito são completamente classificados pelo <xref ref="finite-theorem-subfields"/>.
+          É possível criar dois corpos finitos com as ordens corretas para que a relação supercorpo/subcorpo exista,
+          e traduzir elementos de um para o outro.
+          Contudo, neste exercício criaremos um subcorpo de um corpo finito do zero.
+          Como o grupo dos elementos não nulos de um corpo finito é cíclico,
+          os elementos não nulos de um subcorpo formarão um subgrupo do grupo cíclico
+          e necessariamente serão cíclicos.
         </p>
 
         <p>
-          Create a finite field of order <m>3^6</m>.
-          Theory says there is a subfield of order <m>3^2</m>, since <m>2|6</m>.
-          Determine a generator of multiplicative order <m>8</m> for the nonzero elements of this subfield,
-          and construct these <m>8</m> elements.
-          Add in the field's zero element to this list.
-          It should be clear that this set of <m>9</m> elements is closed under multiplication.
-          Absent our theorems about finite fields and cyclic groups,
-          the closure under addition is not a given.
-          Write a single statement that checks if this set is also closed under addition,
-          by considering all possible sums of elements from the set.
+          Crie um corpo finito de ordem <m>3^6</m>.
+          A teoria afirma que existe um subcorpo de ordem <m>3^2</m>, pois <m>2|6</m>.
+          Determine um gerador de ordem multiplicativa <m>8</m> para os elementos não nulos desse subcorpo
+          e construa esses <m>8</m> elementos.
+          Acrescente a esse conjunto o elemento zero do corpo.
+          Deve ficar claro que esse conjunto de <m>9</m> elementos é fechado para a multiplicação.
+          Sem nossos teoremas sobre corpos finitos e grupos cíclicos,
+          o fechamento para a adição não é garantido.
+          Escreva uma única instrução que verifique se esse conjunto também é fechado para a adição,
+          considerando todas as somas possíveis de elementos do conjunto.
         </p>
       </statement>
     </exercise>
@@ -1961,37 +1960,37 @@
     <exercise number="4" xml:id="finite-sage-exercise-separableness">
       <statement>
         <p>
-          This problem investigates the <q>separableness</q>
-          of <m>{\mathbb Q}(\sqrt{3},\sqrt{7})</m>.
-          You can create this number field quickly with the <c>NumberFieldTower</c> constructor,
-          along with the polynomials <m>x^2-3</m> and <m>x^2-7</m>.
-          Flatten the tower with the <c>.absolute_field()</c> method and use the <c>.structure()</c> method to retrieve mappings between the tower and the flattened version.
-          Name the tower <c>N</c> and use <c>a</c> and <c>b</c> as generators.
-          Name the flattened version <c>L</c> with <c>c</c> as a generator.
+          Este problema investiga a <q>separabilidade</q>
+          de <m>{\mathbb Q}(\sqrt{3},\sqrt{7})</m>.
+          Você pode criar rapidamente esse corpo numérico com o construtor <c>NumberFieldTower</c>,
+          juntamente com os polinômios <m>x^2-3</m> e <m>x^2-7</m>.
+          Achate a torre com o método <c>.absolute_field()</c> e use o método <c>.structure()</c> para obter aplicações entre a torre e a versão achatada.
+          Chame a torre de <c>N</c> e use <c>a</c> e <c>b</c> como geradores.
+          Chame a versão achatada de <c>L</c>, com <c>c</c> como gerador.
         </p>
 
         <p>
-          Create a nontrivial (<q>random</q>) element of <c>L</c> using as many powers of <c>c</c> as possible
-          (check the degree of <c>L</c> to see how many linearly independent powers there are).
-          Request from Sage the minimum polynomial of your random element,
-          thus ensuring the element is a root.
-          Construct the minimum polynomial as a polynomial over <c>N</c>,
-          the field tower,
-          and find its factorization.
-          Your factorization should have only linear factors.
-          Each root should be an expression in <c>a</c> and <c>b</c>,
-          so convert each root into an expression with mathematical notation involving <m>\sqrt{3}</m> and <m>\sqrt{7}</m>.
-          Use one of the mappings to verify that one of the roots is indeed the original random element.
+          Crie um elemento não trivial (<q>aleatório</q>) de <c>L</c> usando tantas potências de <c>c</c> quanto possível
+          (verifique o grau de <c>L</c> para saber quantas potências linearmente independentes existem).
+          Solicite ao Sage o polinômio mínimo do seu elemento aleatório,
+          garantindo assim que o elemento seja uma raiz.
+          Construa o polinômio mínimo como um polinômio sobre <c>N</c>,
+          a torre de corpos,
+          e encontre sua fatoração.
+          Sua fatoração deve ter apenas fatores lineares.
+          Cada raiz deve ser uma expressão em <c>a</c> e <c>b</c>;
+          converta, portanto, cada raiz em uma expressão com notação matemática envolvendo <m>\sqrt{3}</m> e <m>\sqrt{7}</m>.
+          Use uma das aplicações para verificar que uma das raízes é de fato o elemento aleatório original.
         </p>
 
         <p>
-          Create a few more random elements, and find a factorization
-          (in <c>N</c> or in <c>L</c>).
-          For a field to be separable,
-          every element of the field should be a root of
-          <em>some</em> separable polynomial.
-          The minimal polynomial is a good polynomial to test. (Why?) Based on the evidence,
-          does it appear that <m>{\mathbb Q}(\sqrt{3},\sqrt{7})</m> is a separable extension?
+          Crie mais alguns elementos aleatórios e encontre uma fatoração
+          (em <c>N</c> ou em <c>L</c>).
+          Para que um corpo seja separável,
+          todo elemento do corpo deve ser raiz de
+          <em>algum</em> polinômio separável.
+          O polinômio mínimo é um bom polinômio para testar. (Por quê?) Com base nas evidências,
+          parece que <m>{\mathbb Q}(\sqrt{3},\sqrt{7})</m> é uma extensão separável?
         </p>
       </statement>
     </exercise>
@@ -1999,66 +1998,66 @@
     <exercise number="5" xml:id="finite-sage-exercise-Frobenius">
       <statement>
         <p>
-          <xref ref="finite-exercise-frobenius-map"/> describes the Frobenius Map,
-          an automorphism of a finite field.
-          If <c>F</c> is a finite field in Sage,
-          then <c>End(F)</c> will create the automorphism group of F, the set of all bijective mappings between the field and itself.
+          O <xref ref="finite-exercise-frobenius-map"/> descreve a aplicação de Frobenius,
+          um automorfismo de um corpo finito.
+          Se <c>F</c> é um corpo finito no Sage,
+          então <c>End(F)</c> criará o grupo de automorfismos de F, o conjunto de todas as aplicações bijetivas entre o corpo e ele mesmo.
         </p>
 
         <ol>
           <li>
             <p>
-              Work <xref ref="finite-exercise-frobenius-map"/> to gain an understanding of how and why the Frobenius mapping is a field automorphism.
-              (Do not include any of this in your answer to this question,
-              but understand that the following will be much easier if you do this problem first.)
+              Resolva o <xref ref="finite-exercise-frobenius-map"/> para compreender como e por que a aplicação de Frobenius é um automorfismo de corpos.
+              (Não inclua nada disso na resposta a esta questão,
+              mas entenda que o que segue será muito mais fácil se você resolver primeiro este problema.)
             </p>
           </li>
 
           <li>
             <p>
-              For some small, but not trivial,
-              finite fields locate the Frobenius map in the automorphism group.
-              Small might mean <m>p=2,3,5,7</m> and <m>3\leq n\leq 10</m>,
-              with <m>n</m> prime versus composite.
+              Para alguns corpos finitos pequenos, mas não triviais,
+              localize a aplicação de Frobenius no grupo de automorfismos.
+              Pequeno pode significar <m>p=2,3,5,7</m> e <m>3\leq n\leq 10</m>,
+              comparando o caso em que <m>n</m> é primo com o caso composto.
             </p>
           </li>
 
           <li>
             <p>
-              Once you have located the Frobenius map,
-              describe the other automorphisms.
-              In other words, with a bit of investigation,
-              you should find a description of the automorphisms which will allow you to accurately predict the entire automorphism group for a finite field you have not already explored.
-              (Hint:
-              the automorphism group is a group.
-              What if you <q>do the operation</q>
-              between the Frobenius map and itself?
-              Just what is the operation?
-              Try using Sage's multiplicative notation with the elements of the automorphism group.)
+              Depois de localizar a aplicação de Frobenius,
+              descreva os outros automorfismos.
+              Em outras palavras, com um pouco de investigação,
+              você deve encontrar uma descrição dos automorfismos que lhe permita prever com precisão o grupo de automorfismos inteiro de um corpo finito que ainda não tenha explorado.
+              (Dica:
+              o grupo de automorfismos é um grupo.
+              E se você <q>fizer a operação</q>
+              entre a aplicação de Frobenius e ela mesma?
+              Que operação é essa?
+              Tente usar a notação multiplicativa do Sage com os elementos do grupo de automorfismos.)
             </p>
           </li>
 
           <li>
             <p>
-              What is the <q>structure</q> of the automorphism group?
-              What special status does the Frobenius map have in this group?
+              Qual é a <q>estrutura</q> do grupo de automorfismos?
+              Que status especial a aplicação de Frobenius tem nesse grupo?
             </p>
           </li>
 
           <li>
             <p>
-              For any field,
-              the subfield known as the fixed field is an important construction,
-              and will be especially important in the next chapter.
-              Given an automorphism <m>\tau</m> of a field <m>E</m>,
-              the subset,
+              Para qualquer corpo,
+              o subcorpo conhecido como corpo fixo é uma construção importante
+              e será especialmente importante no próximo capítulo.
+              Dado um automorfismo <m>\tau</m> de um corpo <m>E</m>,
+              o subconjunto
               <m>K=\{b\in E\mid\tau(b)=b\}</m>,
-              can be shown to be a subfield of <m>E</m>.
-              It is known as the <term>fixed field</term>
-              of <m>\tau</m> in <m>E</m>.
-              For each automorphism of <m>E=GF(3^6)</m> identify the fixed field of the automorphism.
-              Since we understand the structure of subfields of a finite field,
-              it is enough to just determine the order of the fixed field to be able to identify the subfield precisely.
+              pode ser mostrado ser um subcorpo de <m>E</m>.
+              Ele é conhecido como o <term>corpo fixo</term>
+              de <m>\tau</m> em <m>E</m>.
+              Para cada automorfismo de <m>E=GF(3^6)</m>, identifique o corpo fixo do automorfismo.
+              Como entendemos a estrutura dos subcorpos de um corpo finito,
+              basta determinar a ordem do corpo fixo para identificar precisamente o subcorpo.
             </p>
           </li>
         </ol>
@@ -2068,49 +2067,49 @@
     <exercise number="6" xml:id="finite-sage-exercise-sum-of-squares">
       <statement>
         <p>
-          <xref ref="finite-exercise-sum-of-squares"/> suggests that every element of a finite field may be written (expressed) as a sum of squares.
-          This exercise suggests computational experiments which might help you formulate a proof for the exercise.
+          O <xref ref="finite-exercise-sum-of-squares"/> sugere que todo elemento de um corpo finito pode ser escrito (expresso) como uma soma de quadrados.
+          Este exercício propõe experimentos computacionais que podem ajudá-lo a formular uma demonstração para o exercício.
         </p>
 
         <ol>
           <li>
             <p>
-              Construct two small, but not too small, finite fields,
-              one with <m>p=2</m> and the other with an odd prime.
-              Repeat the following for each field, <m>F</m>.
+              Construa dois corpos finitos pequenos, mas não pequenos demais,
+              um com <m>p=2</m> e outro com um primo ímpar.
+              Repita o procedimento a seguir para cada corpo, <m>F</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Choose a <q>random</q> element of the field, say <m>a\in F</m>.
-              Construct the sets
+              Escolha um elemento <q>aleatório</q> do corpo, digamos <m>a\in F</m>.
+              Construa os conjuntos
               <md>
                 <mrow>&amp;\{x^2|x\in F\}&amp;&amp;\{a-x^2|x\in F\}</mrow>
               </md>
-              using Sage sets with the <m>Set()</m> constructor.  (Be careful:
-            <c>set()</c> is a Python command which behaves differently in fundamental ways.)
+              usando conjuntos do Sage com o construtor <m>Set()</m>. (Tenha cuidado:
+            <c>set()</c> é um comando do Python que se comporta de maneira fundamentalmente diferente.)
             </p>
           </li>
 
           <li>
             <p>
-              Examine the size of the two sets and the size of their intersection (<c>.intersection()</c>).
-              Try different elements for <m>a</m>,
-              perhaps writing a loop to try <em>all</em> possible values.
-              Note that <m>p=2</m> will behave quite differently.
+              Examine o tamanho dos dois conjuntos e o tamanho de sua interseção (<c>.intersection()</c>).
+              Tente elementos diferentes para <m>a</m>,
+              talvez escrevendo um laço para testar <em>todos</em> os valores possíveis.
+              Observe que <m>p=2</m> se comportará de maneira bastante diferente.
             </p>
           </li>
 
           <li>
             <p>
-              Suppose you have an element of the intersection. (You can get one with <c>.an_element()</c>.) How does this lead to the sum of squares proposed in the exercise?
+              Suponha que você tenha um elemento da interseção. (Você pode obter um com <c>.an_element()</c>.) Como isso conduz à soma de quadrados proposta no exercício?
             </p>
           </li>
 
           <li>
             <p>
-              Can you write a Python function that accepts a finite field whose order is a power of an odd prime and then lists each element as a sum of squares?
+              Você consegue escrever uma função Python que aceite um corpo finito cuja ordem seja uma potência de um primo ímpar e então liste cada elemento como uma soma de quadrados?
             </p>
           </li>
         </ol>

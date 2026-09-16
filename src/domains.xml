@@ -10,143 +10,143 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="domains">
-  <title>Integral Domains</title>
+  <title>Domínios de Integridade</title>
   <introduction>
     <p>
-      One of the most important rings we study is the ring of integers.
-      It was our first example of an algebraic structure:
-      the first polynomial ring that we examined was <m>{\mathbb Z}[x]</m>.
-      We also know that the integers sit naturally inside the field of rational numbers,
+      Um dos anéis mais importantes que estudamos é o anel dos inteiros.
+      Ele foi nosso primeiro exemplo de uma estrutura algébrica:
+      o primeiro anel de polinômios que examinamos foi <m>{\mathbb Z}[x]</m>.
+      Também sabemos que os inteiros estão naturalmente contidos no corpo dos números racionais,
       <m>{\mathbb Q}</m>.
-      The ring of integers is the model for all integral domains.
-      In this chapter we will examine integral domains in general,
-      answering questions about the ideal structure of integral domains,
-      polynomial rings over integral domains,
-      and whether or not an integral domain can be embedded in a field.
+      O anel dos inteiros é o modelo para todos os domínios de integridade.
+      Neste capítulo examinaremos os domínios de integridade em geral,
+      respondendo a perguntas sobre a estrutura de ideais dos domínios de integridade,
+      anéis de polinômios sobre domínios de integridade
+      e sobre a possibilidade de um domínio de integridade ser mergulhado em um corpo.
     </p>
   </introduction>
 
   <section xml:id="domains-section-field-of-fractions">
-    <title>Fields of Fractions</title>
+    <title>Corpos de Frações</title>
     <p>
-      Every field is also an integral domain;
-      however, there are many integral domains that are not fields.
-      For example,
-      the integers <m>{\mathbb Z}</m> form an integral domain but not a field.
-      A question that naturally arises is how we might associate an integral domain with a field.
-      There is a natural way to construct the rationals <m>{\mathbb Q}</m> from the integers:
-      the rationals can be represented as formal quotients of two integers.
-      The rational numbers are certainly a field.
-      In fact, it can be shown that the rationals are the smallest field that contains the integers.
-      Given an integral domain <m>D</m>,
-      our question now becomes how to construct a smallest field <m>F</m> containing <m>D</m>.
-      We will do this in the same way as we constructed the rationals from the integers.
+      Todo corpo também é um domínio de integridade;
+      no entanto, há muitos domínios de integridade que não são corpos.
+      Por exemplo,
+      os inteiros <m>{\mathbb Z}</m> formam um domínio de integridade, mas não um corpo.
+      Uma pergunta que surge naturalmente é como associar um domínio de integridade a um corpo.
+      Há uma maneira natural de construir os racionais <m>{\mathbb Q}</m> a partir dos inteiros:
+      os racionais podem ser representados como quocientes formais de dois inteiros.
+      Os números racionais certamente formam um corpo.
+      De fato, pode-se mostrar que os racionais são o menor corpo que contém os inteiros.
+      Dado um domínio de integridade <m>D</m>,
+      nossa pergunta agora passa a ser como construir o menor corpo <m>F</m> que contém <m>D</m>.
+      Faremos isso da mesma maneira que construímos os racionais a partir dos inteiros.
     </p>
 
     <p>
-      An element <m>p/q \in {\mathbb Q}</m> is the quotient of two integers <m>p</m> and <m>q</m>;
-      however, different pairs of integers can represent the same rational number.
-      For instance, <m>1/2 = 2/4 = 3/6</m>.
-      We know that
+      Um elemento <m>p/q \in {\mathbb Q}</m> é o quociente de dois inteiros <m>p</m> e <m>q</m>;
+      no entanto, pares diferentes de inteiros podem representar o mesmo número racional.
+      Por exemplo, <m>1/2 = 2/4 = 3/6</m>.
+      Sabemos que
       <md>
         \frac{a}{b} = \frac{c}{d}
       </md>
-      if and only if <m>ad = bc</m>.
-      A more formal way of considering this problem is to examine fractions in terms of equivalence relations.
-      We can think of elements in
-      <m>{\mathbb Q}</m> as ordered pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>.
-      A quotient <m>p/q</m> can be written as <m>(p, q)</m>.
-      For instance,
-      <m>(3, 7)</m> would represent the fraction <m>3/7</m>.
-      However, there are problems if we consider all possible pairs in <m>{\mathbb Z} \times {\mathbb Z}</m>.
-      There is no fraction <m>5/0</m> corresponding to the pair <m>(5,0)</m>.
-      Also, the pairs <m>(3,6)</m> and <m>(2,4)</m> both represent the fraction <m>1/2</m>.
-      The first problem is easily solved if we require the second coordinate to be nonzero.
-      The second problem is solved by considering two pairs <m>(a, b)</m> and <m>(c, d)</m> to be equivalent if <m>ad = bc</m>.
+      se, e somente se, <m>ad = bc</m>.
+      Uma maneira mais formal de considerar esse problema é examinar as frações em termos de relações de equivalência.
+      Podemos pensar nos elementos de
+      <m>{\mathbb Q}</m> como pares ordenados em <m>{\mathbb Z} \times {\mathbb Z}</m>.
+      Um quociente <m>p/q</m> pode ser escrito como <m>(p, q)</m>.
+      Por exemplo,
+      <m>(3, 7)</m> representaria a fração <m>3/7</m>.
+      No entanto, surgem problemas se considerarmos todos os pares possíveis em <m>{\mathbb Z} \times {\mathbb Z}</m>.
+      Não há uma fração <m>5/0</m> correspondente ao par <m>(5,0)</m>.
+      Além disso, os pares <m>(3,6)</m> e <m>(2,4)</m> representam ambos a fração <m>1/2</m>.
+      O primeiro problema é facilmente resolvido exigindo que a segunda coordenada seja não nula.
+      O segundo problema é resolvido considerando dois pares <m>(a, b)</m> e <m>(c, d)</m> equivalentes se <m>ad = bc</m>.
     </p>
 
     <p>
-      If we use the approach of ordered pairs instead of fractions,
-      then we can study integral domains in general.
-      Let <m>D</m> be any integral domain and let
+      Se usarmos a abordagem dos pares ordenados em vez das frações,
+      poderemos estudar os domínios de integridade em geral.
+      Seja <m>D</m> um domínio de integridade qualquer e seja
       <md>
-        S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}
+        S = \{ (a, b) : a, b \in D \text{ e } b \neq 0 \}
       </md>.
-      Define a relation on <m>S</m> by <m>(a, b) \sim (c, d)</m> if <m>ad = bc</m>.
+      Defina uma relação em <m>S</m> por <m>(a, b) \sim (c, d)</m> se <m>ad = bc</m>.
     </p>
 
     <lemma>
       <statement>
         <p>
-          The relation <m>\sim</m> between elements of <m>S</m> is an equivalence relation.
+          A relação <m>\sim</m> entre elementos de <m>S</m> é uma relação de equivalência.
         </p>
       </statement>
 
       <proof>
         <p>
-          Since <m>D</m> is commutative, <m>ab = ba</m>;
-          hence, <m>\sim</m> is reflexive on <m>D</m>.
-          Now suppose that <m>(a,b) \sim (c,d)</m>.
-          Then <m>ad=bc</m> or <m>cb = da</m>.
-          Therefore, <m>(c,d) \sim (a, b)</m> and the relation is symmetric.
-          Finally, to show that the relation is transitive,
-          let <m>(a, b) \sim (c, d)</m> and <m>(c, d) \sim (e,f)</m>.
-          In this case <m>ad = bc</m> and <m>cf = de</m>.
-          Multiplying both sides of <m>ad = bc</m> by <m>f</m> yields
+          Como <m>D</m> é comutativo, <m>ab = ba</m>;
+          portanto, <m>\sim</m> é reflexiva em <m>D</m>.
+          Suponha agora que <m>(a,b) \sim (c,d)</m>.
+          Então <m>ad=bc</m> ou <m>cb = da</m>.
+          Portanto, <m>(c,d) \sim (a, b)</m> e a relação é simétrica.
+          Finalmente, para mostrar que a relação é transitiva,
+          sejam <m>(a, b) \sim (c, d)</m> e <m>(c, d) \sim (e,f)</m>.
+          Neste caso, <m>ad = bc</m> e <m>cf = de</m>.
+          Multiplicando ambos os lados de <m>ad = bc</m> por <m>f</m>, obtemos
           <md>
             a f d = a d f = b c f = b d e = bed
           </md>.
-          Since <m>D</m> is an integral domain,
-          we can deduce that <m>af = be</m> or <m>(a,b ) \sim (e, f)</m>.
+          Como <m>D</m> é um domínio de integridade,
+          podemos deduzir que <m>af = be</m> ou <m>(a,b ) \sim (e, f)</m>.
         </p>
       </proof>
     </lemma>
 
     <p>
-      We will denote the set of equivalence classes on <m>S</m> by <m>F_D</m>.
-      We now need to define the operations of addition and multiplication on <m>F_D</m>.
-      Recall how fractions are added and multiplied in <m>{\mathbb Q}</m>:
+      Denotaremos o conjunto das classes de equivalência em <m>S</m> por <m>F_D</m>.
+      Agora precisamos definir as operações de adição e multiplicação em <m>F_D</m>.
+      Recorde como as frações são somadas e multiplicadas em <m>{\mathbb Q}</m>:
       <md>
         <mrow>\frac{a}{b} + \frac{c}{d} &amp; = \frac{ad + b c}{b d};</mrow>
         <mrow>\frac{a}{b} \cdot \frac{c}{d} &amp; = \frac{ac}{b d}</mrow>
       </md>.
-      It seems reasonable to define the operations of addition and multiplication on <m>F_D</m> in a similar manner.
-      If we denote the equivalence class of <m>(a, b) \in S</m> by <m>[a, b]</m>,
-      then we are led to define the operations of addition and multiplication on <m>F_D</m> by
+      Parece razoável definir as operações de adição e multiplicação em <m>F_D</m> de maneira semelhante.
+      Se denotarmos a classe de equivalência de <m>(a, b) \in S</m> por <m>[a, b]</m>,
+      seremos levados a definir as operações de adição e multiplicação em <m>F_D</m> por
       <md>
         [a, b] + [c, d] = [ad + b c,b d]
       </md>
-      and
+      e
       <md>
         [a, b] \cdot [c, d] = [ac, b d]
       </md>,
-      respectively.
-      The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.
+      respectivamente.
+      O lema seguinte demonstra que essas operações são independentes da escolha dos representantes de cada classe de equivalência.
     </p>
 
     <lemma>
       <statement>
         <p>
-          The operations of addition and multiplication on <m>F_D</m> are well-defined.
+          As operações de adição e multiplicação em <m>F_D</m> estão bem definidas.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will prove that the operation of addition is well-defined.
-          The proof that multiplication is well-defined is left as an exercise.
-          Let <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>.
-          We must show that
+          Provaremos que a operação de adição está bem definida.
+          A prova de que a multiplicação está bem definida é deixada como exercício.
+          Sejam <m>[a_1, b_1] = [a_2, b_2]</m> e <m>[c_1, d_1] =[ c_2, d_2]</m>.
+          Devemos mostrar que
           <md>
             [a_1 d_1 + b_1 c_1,b_1 d_1] = [a_2 d_2 + b_2 c_2,b_2 d_2]
           </md>
-          or, equivalently, that
+          ou, equivalentemente, que
           <md>
             (a_1 d_1 + b_1 c_1)( b_2 d_2) = (b_1 d_1) (a_2 d_2 + b_2 c_2)
           </md>.
-          Since  <m>[a_1, b_1] = [a_2, b_2]</m> and <m>[c_1, d_1] =[ c_2, d_2]</m>,
-          we know that <m>a_1 b_2 = b_1 a_2</m> and <m>c_1 d_2 = d_1 c_2</m>.
-          Therefore,
+          Como <m>[a_1, b_1] = [a_2, b_2]</m> e <m>[c_1, d_1] =[ c_2, d_2]</m>,
+          sabemos que <m>a_1 b_2 = b_1 a_2</m> e <m>c_1 d_2 = d_1 c_2</m>.
+          Portanto,
           <md>
             <mrow>(a_1 d_1 + b_1 c_1)( b_2 d_2)  &amp; =  a_1 d_1 b_2 d_2 + b_1 c_1 b_2 d_2</mrow>
             <mrow>&amp; = a_1 b_2 d_1 d_2 + b_1 b_2 c_1 d_2</mrow>
@@ -160,36 +160,36 @@
     <lemma xml:id="domains-lemma-field-of-fractions">
       <statement>
         <p>
-          The set of equivalence classes of <m>S</m>,
-          <m>F_D</m>, under the equivalence relation <m>\sim</m>,
-          together with the operations of addition and  multiplication defined by
+          O conjunto das classes de equivalência de <m>S</m>,
+          <m>F_D</m>, sob a relação de equivalência <m>\sim</m>,
+          juntamente com as operações de adição e multiplicação definidas por
           <md>
             <mrow>[a, b] + [c, d] &amp; = [ad + b c, b d]</mrow>
             <mrow>[ a, b] \cdot [c, d] &amp; = [ac, b d]</mrow>
           </md>,
-          is a field.
+          é um corpo.
         </p>
       </statement>
 
       <proof>
         <p>
-          The additive and multiplicative identities are <m>[0,1]</m> and <m>[1,1]</m>,
-          respectively.
-          To show that <m>[0,1]</m> is the additive identity, observe that
+          Os elementos neutros aditivo e multiplicativo são <m>[0,1]</m> e <m>[1,1]</m>,
+          respectivamente.
+          Para mostrar que <m>[0,1]</m> é o elemento neutro aditivo, observe que
           <md>
             [a, b] + [0, 1] =  [ a 1 + b 0, b 1] = [a,b]
           </md>.
-          It is easy to show that <m>[1, 1]</m> is the multiplicative identity.
-          Let <m>[a, b] \in F_D</m> such that <m>a \neq 0</m>.
-          Then <m>[b, a]</m> is also in <m>F_D</m> and <m>[a,b] \cdot [b, a] = [1,1]</m>;
-          hence, <m>[b, a]</m> is the multiplicative inverse for <m>[a, b]</m>.
-          Similarly, <m>[-a,b]</m> is the additive inverse of <m>[a, b]</m>.
-          We leave as exercises the verification of the associative and  commutative properties of multiplication in <m>F_D</m>.
-          We also leave it to the reader to show that <m>F_D</m> is an abelian group under addition.
+          É fácil mostrar que <m>[1, 1]</m> é o elemento neutro multiplicativo.
+          Seja <m>[a, b] \in F_D</m> tal que <m>a \neq 0</m>.
+          Então <m>[b, a]</m> também está em <m>F_D</m> e <m>[a,b] \cdot [b, a] = [1,1]</m>;
+          portanto, <m>[b, a]</m> é o inverso multiplicativo de <m>[a, b]</m>.
+          Analogamente, <m>[-a,b]</m> é o inverso aditivo de <m>[a, b]</m>.
+          Deixamos como exercícios a verificação das propriedades associativa e comutativa da multiplicação em <m>F_D</m>.
+          Também deixamos ao leitor a demonstração de que <m>F_D</m> é um grupo abeliano sob a adição.
         </p>
 
         <p>
-          It remains to show that the distributive property holds in <m>F_D</m>; however,
+          Resta mostrar que a propriedade distributiva vale em <m>F_D</m>; no entanto,
           <md>
             <mrow>[a, b] [e, f] + [c, d][ e, f ] &amp; = [a e, b f ] + [c e, d f]</mrow>
             <mrow>&amp; = [a e d f + b f c e, b d f^2 ]</mrow>
@@ -197,48 +197,48 @@
             <mrow>&amp; = [a d e + b c e, b d f ]</mrow>
             <mrow>&amp; = ( [a, b]  + [c, d] ) [ e, f ]</mrow>
           </md>
-          and the lemma is proved.
+          e o lema está provado.
         </p>
       </proof>
     </lemma>
 
     <p>
-      The field <m>F_D</m> in <xref ref="domains-lemma-field-of-fractions"/> is called the
-      <term>field of fractions</term><idx><h>Field</h><h>of fractions</h></idx> or
-      <term>field of quotients</term><idx><h>Field</h><h>of quotients</h></idx> of the integral domain <m>D</m>.
+      O corpo <m>F_D</m> em <xref ref="domains-lemma-field-of-fractions"/> é chamado de
+      <term>corpo de frações</term><idx><h>Corpo</h><h>de frações</h></idx> ou
+      <term>corpo de quocientes</term><idx><h>Corpo</h><h>de quocientes</h></idx> do domínio de integridade <m>D</m>.
     </p>
 
     <theorem xml:id="domains-theorem-field-of-quotients">
       <statement>
         <p>
-          Let <m>D</m> be an integral domain.
-          Then <m>D</m> can be embedded in a field of fractions <m>F_D</m>,
-          where any element in <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>.
-          Furthermore,
-          the field of fractions <m>F_D</m> is unique in the sense that if <m>E</m> is any field containing <m>D</m>,
-          then there exists a map <m>\psi : F_D \rightarrow E</m> giving an isomorphism with a subfield of <m>E</m> such that
-          <m>\psi(a) = a</m> for all elements <m>a \in D</m>,
-          where we identify <m>a</m> with its image in <m>F_D</m>.
+          Seja <m>D</m> um domínio de integridade.
+          Então <m>D</m> pode ser mergulhado em um corpo de frações <m>F_D</m>,
+          no qual todo elemento de <m>F_D</m> pode ser expresso como o quociente de dois elementos de <m>D</m>.
+          Além disso,
+          o corpo de frações <m>F_D</m> é único no sentido de que, se <m>E</m> é qualquer corpo que contém <m>D</m>,
+          então existe uma aplicação <m>\psi : F_D \rightarrow E</m> que fornece um isomorfismo com um subcorpo de <m>E</m> tal que
+          <m>\psi(a) = a</m> para todos os elementos <m>a \in D</m>,
+          onde identificamos <m>a</m> com sua imagem em <m>F_D</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will first demonstrate that <m>D</m> can be embedded in the field  <m>F_D</m>.
-          Define a map <m>\phi : D \rightarrow F_D</m> by <m>\phi(a)  = [a, 1]</m>.
-          Then for <m>a</m> and <m>b</m> in <m>D</m>,
+          Primeiro demonstraremos que <m>D</m> pode ser mergulhado no corpo <m>F_D</m>.
+          Defina uma aplicação <m>\phi : D \rightarrow F_D</m> por <m>\phi(a)  = [a, 1]</m>.
+          Então, para <m>a</m> e <m>b</m> em <m>D</m>,
           <md>
             \phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)
           </md>
-          and
+          e
           <md>
             \phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);
           </md>
-          hence, <m>\phi</m> is a homomorphism.
-          To show that <m>\phi</m> is one-to-one,
-          suppose that <m>\phi(a) = \phi( b)</m>.
-          Then <m>[a, 1] = [b, 1]</m>, or <m>a = a1 = 1b = b</m>.
-          Finally, any element of <m>F_D</m> can be expressed as the quotient of two elements in <m>D</m>, since
+          portanto, <m>\phi</m> é um homomorfismo.
+          Para mostrar que <m>\phi</m> é injetiva,
+          suponha que <m>\phi(a) = \phi( b)</m>.
+          Então <m>[a, 1] = [b, 1]</m>, ou <m>a = a1 = 1b = b</m>.
+          Finalmente, todo elemento de <m>F_D</m> pode ser expresso como o quociente de dois elementos de <m>D</m>, pois
           <md>
             \phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b]
           </md>.
@@ -246,68 +246,68 @@
             <!-- Typo corrected.  Suggested by Nathan Lander. -->
             <!-- TWJ 2/13/2012 -->
         <p>
-          Now let <m>E</m> be a field containing <m>D</m> and define a map
-          <m>\psi :F_D \rightarrow E</m> by <m>\psi([a, b]) = a b^{-1}</m>.
-          To show that <m>\psi</m> is well-defined,
-          let <m>[a_1, b_1] = [a_2, b_2]</m>.
-          Then <m>a_1 b_2 = b_1 a_2</m>.
-          Therefore, <m>a_1 b_1^{-1} = a_2 b_2^{-1}</m> and <m>\psi( [a_1, b_1]) = \psi( [a_2, b_2])</m>.
+          Agora seja <m>E</m> um corpo que contém <m>D</m> e defina uma aplicação
+          <m>\psi :F_D \rightarrow E</m> por <m>\psi([a, b]) = a b^{-1}</m>.
+          Para mostrar que <m>\psi</m> está bem definida,
+          sejam <m>[a_1, b_1] = [a_2, b_2]</m>.
+          Então <m>a_1 b_2 = b_1 a_2</m>.
+          Portanto, <m>a_1 b_1^{-1} = a_2 b_2^{-1}</m> e <m>\psi( [a_1, b_1]) = \psi( [a_2, b_2])</m>.
         </p>
 
         <p>
-          If <m>[a, b ]</m> and <m>[c, d]</m> are in <m>F_D</m>, then
+          Se <m>[a, b ]</m> e <m>[c, d]</m> estão em <m>F_D</m>, então
           <md>
             <mrow>\psi( [a, b] + [c, d] )  &amp; = \psi( [ad + b c, b d ] )</mrow>
             <mrow>&amp; =  (ad + b c)(b d)^{-1}</mrow>
             <mrow>&amp; = a b^{-1} + c d^{-1}</mrow>
             <mrow>&amp; = \psi( [a, b] ) + \psi( [c, d] )</mrow>
           </md>
-          and
+          e
           <md>
             <mrow>\psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )</mrow>
             <mrow>&amp; =  (ac)(b d)^{-1}</mrow>
             <mrow>&amp; = a b^{-1}  c d^{-1}</mrow>
             <mrow>&amp; = \psi( [a, b] )  \psi( [c, d] )</mrow>
           </md>.
-          Therefore, <m>\psi</m> is a homomorphism.
+          Portanto, <m>\psi</m> é um homomorfismo.
         </p>
 
         <p>
-          To complete the proof of the theorem,
-          we need to show that <m>\psi</m> is one-to-one.
-          Suppose that <m>\psi( [a, b] ) = ab^{-1} = 0</m>.
-          Then <m>a = 0b = 0</m> and <m>[a, b] = [0, b]</m>.
-          Therefore, the kernel of <m>\psi</m> is the zero element <m>[ 0, b]</m> in <m>F_D</m>,
-          and <m>\psi</m> is injective.
+          Para completar a prova do teorema,
+          precisamos mostrar que <m>\psi</m> é injetiva.
+          Suponha que <m>\psi( [a, b] ) = ab^{-1} = 0</m>.
+          Então <m>a = 0b = 0</m> e <m>[a, b] = [0, b]</m>.
+          Portanto, o núcleo de <m>\psi</m> é o elemento zero <m>[ 0, b]</m> em <m>F_D</m>,
+          e <m>\psi</m> é injetiva.
         </p>
       </proof>
     </theorem>
 
     <example xml:id="domains-example-rational-polys">
       <p>
-        Since <m>{\mathbb Q}</m> is a field,
-        <m>{\mathbb Q}[x]</m> is an integral domain.
-        The field of fractions of <m>{\mathbb Q}[x]</m> is the set of all rational expressions <m>p(x)/q(x)</m>,
-        where <m>p(x)</m> and <m>q(x)</m> are polynomials over the rationals and <m>q(x)</m> is not the zero polynomial.
-        We will denote this field by <m>{\mathbb Q}(x)</m>.
+        Como <m>{\mathbb Q}</m> é um corpo,
+        <m>{\mathbb Q}[x]</m> é um domínio de integridade.
+        O corpo de frações de <m>{\mathbb Q}[x]</m> é o conjunto de todas as expressões racionais <m>p(x)/q(x)</m>,
+        em que <m>p(x)</m> e <m>q(x)</m> são polinômios sobre os racionais e <m>q(x)</m> não é o polinômio zero.
+        Denotaremos esse corpo por <m>{\mathbb Q}(x)</m>.
 
         <notation>
           <usage><m>\mathbb Q(x)</m></usage>
-          <description>field of rational functions over <m>\mathbb Q</m></description>
+          <description>corpo das funções racionais sobre <m>\mathbb Q</m></description>
         </notation>
 
       </p>
     </example>
 
     <p>
-      We will leave the proofs of the following corollaries of <xref ref="domains-theorem-field-of-quotients"/> as exercises.
+      Deixaremos as provas dos corolários seguintes de <xref ref="domains-theorem-field-of-quotients"/> como exercícios.
     </p>
 
     <corollary xml:id="domains-corollary-char-zero-rationals">
       <statement>
         <p>
-          Let <m>F</m> be a field of characteristic zero.
-          Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
+          Seja <m>F</m> um corpo de característica zero.
+          Então <m>F</m> contém um subcorpo isomorfo a <m>{\mathbb Q}</m>.
         </p>
       </statement>
     </corollary>
@@ -315,87 +315,87 @@
     <corollary xml:id="domains-corollary-char-p-zp">
       <statement>
         <p>
-          Let <m>F</m> be a field of characteristic <m>p</m>.
-          Then <m>F</m> contains a subfield isomorphic to <m>{\mathbb Z}_p</m>.
+          Seja <m>F</m> um corpo de característica <m>p</m>.
+          Então <m>F</m> contém um subcorpo isomorfo a <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </corollary>
   </section>
 
   <section xml:id="domains-section-factorization-domains">
-    <title>Factorization in Integral Domains</title>
+    <title>Fatoração em Domínios de Integridade</title>
     <introduction>
       <p>
-        The building blocks of the integers are the prime numbers.
-        If <m>F</m> is a field,
-        then irreducible polynomials in <m>F[x]</m> play a role that is very similar to that of the prime numbers in the ring of integers.
-        Given an arbitrary integral domain,
-        we are led to the following series of definitions.
+        Os blocos de construção dos inteiros são os números primos.
+        Se <m>F</m> é um corpo,
+        então os polinômios irredutíveis em <m>F[x]</m> desempenham um papel muito semelhante ao dos números primos no anel dos inteiros.
+        Dado um domínio de integridade arbitrário,
+        somos levados à seguinte série de definições.
       </p>
 
       <p>
-        Let <m>R</m> be a commutative ring with identity,
-        and let <m>a</m> and <m>b</m> be elements in <m>R</m>.
-        We say that <m>a</m> <term>divides</term> <m>b</m>,
-        and write <m>a \mid b</m>,
-        if there exists an element <m>c \in R</m> such that <m>b = ac</m>.
-        A <term>unit</term><idx><h>Unit</h></idx>
-        in <m>R</m> is an element that has a multiplicative inverse.
-        Two elements <m>a</m> and <m>b</m> in <m>R</m> are said to be <term>associates</term><idx><h>Element</h><h>associate</h></idx><idx><h>Associate elements</h></idx>
-        if there exists a unit <m>u</m> in <m>R</m> such that <m>a = ub</m>.
+        Seja <m>R</m> um anel comutativo com identidade,
+        e sejam <m>a</m> e <m>b</m> elementos de <m>R</m>.
+        Dizemos que <m>a</m> <term>divide</term> <m>b</m>,
+        e escrevemos <m>a \mid b</m>,
+        se existe um elemento <m>c \in R</m> tal que <m>b = ac</m>.
+        Uma <term>unidade</term><idx><h>Unidade</h></idx>
+        em <m>R</m> é um elemento que possui um inverso multiplicativo.
+        Dois elementos <m>a</m> e <m>b</m> em <m>R</m> são chamados de <term>associados</term><idx><h>Elemento</h><h>associado</h></idx><idx><h>Elementos associados</h></idx>
+        se existe uma unidade <m>u</m> em <m>R</m> tal que <m>a = ub</m>.
       </p>
 
       <p>
-        Let <m>D</m> be an integral domain.
-        A nonzero element <m>p \in D</m> that is not a unit is said to be
-        <term>irreducible</term><idx><h>Element</h><h>irreducible</h></idx><idx><h>Irreducible element</h></idx>
-        provided that whenever <m>p = ab</m>,
-        either <m>a</m> or <m>b</m> is a unit.
-        Furthermore, <m>p</m> is <term>prime</term><idx><h>Prime element</h></idx><idx><h>Element</h><h>prime</h></idx>
-        if whenever <m>p \mid ab</m> either <m>p \mid a</m> or <m>p \mid b</m>.
+        Seja <m>D</m> um domínio de integridade.
+        Um elemento não nulo <m>p \in D</m> que não é uma unidade é dito
+        <term>irredutível</term><idx><h>Elemento</h><h>irredutível</h></idx><idx><h>Elemento irredutível</h></idx>
+        se, sempre que <m>p = ab</m>,
+        <m>a</m> ou <m>b</m> é uma unidade.
+        Além disso, <m>p</m> é <term>primo</term><idx><h>Elemento primo</h></idx><idx><h>Elemento</h><h>primo</h></idx>
+        se, sempre que <m>p \mid ab</m>, <m>p \mid a</m> ou <m>p \mid b</m>.
       </p>
 
       <example xml:id="domains-example-q-xy">
         <p>
-          It is important to notice that prime and irreducible elements do not always coincide.
-          Let <m>R</m> be the subring
-          (with identity)
-          of <m>{\mathbb Q}[x, y]</m> generated by <m>x^2</m>,
-          <m>y^2</m>, and <m>xy</m>.
-          Each of these elements is irreducible in <m>R</m>;
-          however, <m>xy</m> is not prime,
-          since <m>xy</m> divides <m>x^2 y^2</m> but does not divide either <m>x^2</m> or <m>y^2</m>.
+          É importante observar que elementos primos e irredutíveis nem sempre coincidem.
+          Seja <m>R</m> o subanel
+          (com identidade)
+          de <m>{\mathbb Q}[x, y]</m> gerado por <m>x^2</m>,
+          <m>y^2</m> e <m>xy</m>.
+          Cada um desses elementos é irredutível em <m>R</m>;
+          no entanto, <m>xy</m> não é primo,
+          pois <m>xy</m> divide <m>x^2 y^2</m>, mas não divide nem <m>x^2</m> nem <m>y^2</m>.
         </p>
       </example>
             <!-- We are assuming that R is an integral domain and contains 1.  TWJ 8/9/2012 -->
       <p>
-        The Fundamental Theorem of Arithmetic states that every positive integer <m>n \gt 1</m> can be factored into a product of prime numbers <m>p_1 \cdots p_k</m>,
-        where the <m>p_i</m>'s are not necessarily distinct.
-        We also know that such factorizations are unique up to the order of the <m>p_i</m>'s.
-        We can easily extend this result to the integers.
-        The question arises of whether or not such factorizations are possible in other rings.
-        Generalizing this definition,
-        we say an integral domain <m>D</m> is a
-        <term>unique factorization domain</term>,<idx><h>Unique factorization domain (<acro>UFD</acro>)</h></idx><idx><h>Domain</h><h>unique factorization</h></idx> or
+        O Teorema Fundamental da Aritmética afirma que todo inteiro positivo <m>n \gt 1</m> pode ser fatorado como um produto de números primos <m>p_1 \cdots p_k</m>,
+        em que os <m>p_i</m> não são necessariamente distintos.
+        Também sabemos que essas fatorações são únicas a menos da ordem dos <m>p_i</m>.
+        Podemos estender facilmente esse resultado aos inteiros.
+        Surge a pergunta sobre a possibilidade de tais fatorações em outros anéis.
+        Generalizando essa definição,
+        dizemos que um domínio de integridade <m>D</m> é um
+        <term>domínio de fatoração única</term>,<idx><h>Domínio de fatoração única (<acro>UFD</acro>)</h></idx><idx><h>Domínio</h><h>de fatoração única</h></idx> ou
         <term><acro>UFD</acro></term>,
-        if <m>D</m> satisfies the following criteria.
+        se <m>D</m> satisfaz os critérios seguintes.
 
         <ol>
           <li>
             <p>
-              Let <m>a \in D</m> such that
-              <m>a \neq 0</m> and <m>a</m> is not a unit.
-              Then <m>a</m> can be written as the product of irreducible elements in <m>D</m>.
+              Seja <m>a \in D</m> tal que
+              <m>a \neq 0</m> e <m>a</m> não seja uma unidade.
+              Então <m>a</m> pode ser escrito como o produto de elementos irredutíveis em <m>D</m>.
             </p>
           </li>
 <!-- Definition corrected thanks to Pascal Honore - TWJ 9/10/2010 -->
           <li>
             <p>
-              Let <m>a = p_1 \cdots p_r = q_1 \cdots q_s</m>,
-              where the <m>p_i</m>'s and the <m>q_i</m>'s are irreducible.
-              Then <m>r=s</m> and there is a
-              <m>\pi \in S_r</m> such that <m>p_i</m> and
-              <m>q_{\pi(j)}</m> are associates for <m>j = 1, \ldots, r</m>.
+              Seja <m>a = p_1 \cdots p_r = q_1 \cdots q_s</m>,
+              em que os <m>p_i</m> e os <m>q_i</m> são irredutíveis.
+              Então <m>r=s</m> e existe uma
+              <m>\pi \in S_r</m> tal que <m>p_i</m> e
+              <m>q_{\pi(j)}</m> são associados para <m>j = 1, \ldots, r</m>.
             </p>
           </li>
         </ol>
@@ -403,79 +403,79 @@
 
       <example xml:id="domains-example-z-ufd">
         <p>
-          The integers are a unique factorization domain by the Fundamental Theorem of Arithmetic.
+          Os inteiros formam um domínio de fatoração única pelo Teorema Fundamental da Aritmética.
         </p>
       </example>
 
       <example xml:id="domains-example-not-a-ufd">
         <p>
-          Not every integral domain is a unique factorization domain.
-          The subring <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i\}</m> of the complex numbers is an integral domain (<xref ref="rings-exercise-gaussian"/>, <xref ref="rings"/>).
-          Let <m>z = a + b \sqrt{3}\, i</m> and define
-          <m>\nu : {\mathbb Z}[ \sqrt{3}\, i ] \rightarrow {\mathbb N} \cup \{ 0 \}</m> by <m>\nu( z) = |z|^2 = a^2 + 3 b^2</m>.
-          It is clear that <m>\nu(z) \geq 0</m> with equality when <m>z = 0</m>.
-          Also, from our knowledge of complex numbers we know that <m>\nu(z w) = \nu(z) \nu(w)</m>.
-          It is easy to show that if
-          <m>\nu(z) = 1</m>, then <m>z</m> is a unit,
-          and that the only units of
-          <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> are <m>1</m> and <m>-1</m>.
+          Nem todo domínio de integridade é um domínio de fatoração única.
+          O subanel <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i\}</m> dos números complexos é um domínio de integridade (<xref ref="rings-exercise-gaussian"/>, <xref ref="rings"/>).
+          Seja <m>z = a + b \sqrt{3}\, i</m> e defina
+          <m>\nu : {\mathbb Z}[ \sqrt{3}\, i ] \rightarrow {\mathbb N} \cup \{ 0 \}</m> por <m>\nu( z) = |z|^2 = a^2 + 3 b^2</m>.
+          É claro que <m>\nu(z) \geq 0</m>, com igualdade quando <m>z = 0</m>.
+          Além disso, pelo nosso conhecimento dos números complexos, sabemos que <m>\nu(z w) = \nu(z) \nu(w)</m>.
+          É fácil mostrar que, se
+          <m>\nu(z) = 1</m>, então <m>z</m> é uma unidade,
+          e que as únicas unidades de
+          <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> são <m>1</m> e <m>-1</m>.
         </p>
 
         <p>
-          We claim that <m>4</m> has two distinct factorizations into irreducible elements:
+          Afirmamos que <m>4</m> possui duas fatorações distintas em elementos irredutíveis:
           <md>
             4 = 2 \cdot 2 = (1 - \sqrt{3}\, i) (1 + \sqrt{3}\, i)
           </md>.
-          We must show that each of these factors is an irreducible element in <m>{\mathbb Z}[ \sqrt{3}\, i ]</m>.
-          If <m>2</m> is not irreducible,
-          then <m>2 = z w</m> for elements
+          Devemos mostrar que cada um desses fatores é um elemento irredutível em <m>{\mathbb Z}[ \sqrt{3}\, i ]</m>.
+          Se <m>2</m> não fosse irredutível,
+          então <m>2 = z w</m> para elementos
           <m>z,
-          w</m> in <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> where <m>\nu( z) = \nu(w) = 2</m>.
-          However, there does not exist an element in <m>z</m> in
-          <m>{\mathbb Z}[\sqrt{3}\, i ]</m> such that <m>\nu(z) = 2</m> because the equation
-          <m>a^2 + 3 b^2 = 2</m> has no integer solutions.
-          Therefore, <m>2</m> must be irreducible.
-          A similar argument shows that both
-          <m>1 - \sqrt{3}\, i</m> and <m>1 + \sqrt{3}\, i</m> are irreducible.
-          Since <m>2</m> is not a unit multiple of either
-          <m>1 - \sqrt{3}\, i</m> or <m>1 + \sqrt{3}\, i</m>,
-          <m>4</m> has at least two distinct factorizations into irreducible elements.
+          w</m> em <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> tais que <m>\nu( z) = \nu(w) = 2</m>.
+          No entanto, não existe um elemento <m>z</m> em
+          <m>{\mathbb Z}[\sqrt{3}\, i ]</m> tal que <m>\nu(z) = 2</m>, pois a equação
+          <m>a^2 + 3 b^2 = 2</m> não possui soluções inteiras.
+          Portanto, <m>2</m> deve ser irredutível.
+          Um argumento semelhante mostra que tanto
+          <m>1 - \sqrt{3}\, i</m> quanto <m>1 + \sqrt{3}\, i</m> são irredutíveis.
+          Como <m>2</m> não é um múltiplo unitário de
+          <m>1 - \sqrt{3}\, i</m> nem de <m>1 + \sqrt{3}\, i</m>,
+          <m>4</m> tem pelo menos duas fatorações distintas em elementos irredutíveis.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="domains-subsection-pids">
-      <title>Principal Ideal Domains</title>
+      <title>Domínios de Ideais Principais</title>
       <p>
-        Let <m>R</m> be a commutative ring with identity.
-        Recall that a principal ideal generated by <m>a \in R</m> is an ideal of the form <m>\langle a \rangle = \{ ra : r \in R \}</m>.
-        An integral domain in which every ideal is principal is called a
-        <term>principal ideal domain</term>,<idx><h>Principal ideal domain (<acro>PID</acro>)</h></idx><idx><h>Domain</h><h>principal ideal</h></idx> or
+        Seja <m>R</m> um anel comutativo com identidade.
+        Recorde que um ideal principal gerado por <m>a \in R</m> é um ideal da forma <m>\langle a \rangle = \{ ra : r \in R \}</m>.
+        Um domínio de integridade no qual todo ideal é principal é chamado de
+        <term>domínio de ideais principais</term>,<idx><h>Domínio de ideais principais (<acro>PID</acro>)</h></idx><idx><h>Domínio</h><h>de ideais principais</h></idx> ou
         <term><acro>PID</acro></term>.
       </p>
 
       <lemma xml:id="domains-lemma-principal-ideal">
         <statement>
           <p>
-            Let <m>D</m> be an integral domain and let <m>a, b \in D</m>.
-            Then
+            Seja <m>D</m> um domínio de integridade e sejam <m>a, b \in D</m>.
+            Então
 
             <ol>
               <li>
                 <p>
-                  <m>a \mid b</m> if and only if <m>\langle b \rangle \subset \langle a \rangle</m>.
+                  <m>a \mid b</m> se, e somente se, <m>\langle b \rangle \subset \langle a \rangle</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>a</m> and <m>b</m> are associates if and only if <m>\langle b \rangle = \langle a \rangle</m>.
+                  <m>a</m> e <m>b</m> são associados se, e somente se, <m>\langle b \rangle = \langle a \rangle</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  <m>a</m> is a unit in <m>D</m> if and only if <m>\langle a \rangle = D</m>.
+                  <m>a</m> é uma unidade em <m>D</m> se, e somente se, <m>\langle a \rangle = D</m>.
                 </p>
               </li>
             </ol>
@@ -484,33 +484,33 @@
 
         <proof>
           <p>
-            (1) Suppose that <m>a \mid b</m>.
-            Then <m>b = ax</m> for some <m>x \in D</m>.
-            Hence, for every <m>r</m> in <m>D</m>,
-            <m>br =(ax)r = a(xr)</m> and <m>\langle b \rangle \subset \langle a \rangle</m>.
-            Conversely, suppose that <m>\langle b \rangle \subset \langle a \rangle</m>.
-            Then <m>b \in \langle a \rangle</m>.
-            Consequently, <m>b =a x</m> for some <m>x \in D</m>.
-            Thus, <m>a \mid b</m>.
+            (1) Suponha que <m>a \mid b</m>.
+            Então <m>b = ax</m> para algum <m>x \in D</m>.
+            Logo, para todo <m>r</m> em <m>D</m>,
+            <m>br =(ax)r = a(xr)</m> e <m>\langle b \rangle \subset \langle a \rangle</m>.
+            Reciprocamente, suponha que <m>\langle b \rangle \subset \langle a \rangle</m>.
+            Então <m>b \in \langle a \rangle</m>.
+            Consequentemente, <m>b =a x</m> para algum <m>x \in D</m>.
+            Assim, <m>a \mid b</m>.
           </p>
 
           <p>
-            (2) Since <m>a</m> and <m>b</m> are associates,
-            there exists a unit <m>u</m> such that <m>a = u b</m>.
-            Therefore, <m>b \mid a</m> and <m>\langle a \rangle \subset \langle b \rangle</m>.
-            Similarly, <m>\langle b \rangle \subset \langle a \rangle</m>.
-            It follows that <m>\langle a \rangle = \langle b \rangle</m>.
-            Conversely, suppose that <m>\langle a \rangle = \langle b \rangle</m>.
-            By part (1), <m>a \mid b</m> and <m>b \mid a</m>.
-            Then <m>a = bx</m> and <m>b = ay</m> for some <m>x, y \in D</m>.
-            Therefore, <m>a = bx = ayx</m>.
-            Since <m>D</m> is an integral domain, <m>x y = 1</m>;
-            that is, <m>x</m> and <m>y</m> are units and <m>a</m> and <m>b</m> are associates.
+            (2) Como <m>a</m> e <m>b</m> são associados,
+            existe uma unidade <m>u</m> tal que <m>a = u b</m>.
+            Portanto, <m>b \mid a</m> e <m>\langle a \rangle \subset \langle b \rangle</m>.
+            Analogamente, <m>\langle b \rangle \subset \langle a \rangle</m>.
+            Segue que <m>\langle a \rangle = \langle b \rangle</m>.
+            Reciprocamente, suponha que <m>\langle a \rangle = \langle b \rangle</m>.
+            Pela parte (1), <m>a \mid b</m> e <m>b \mid a</m>.
+            Então <m>a = bx</m> e <m>b = ay</m> para alguns <m>x, y \in D</m>.
+            Portanto, <m>a = bx = ayx</m>.
+            Como <m>D</m> é um domínio de integridade, <m>x y = 1</m>;
+            isto é, <m>x</m> e <m>y</m> são unidades e <m>a</m> e <m>b</m> são associados.
           </p>
 
           <p>
-            (3) An element <m>a \in D</m> is a unit if and only if <m>a</m> is an associate of <m>1</m>.
-            However, <m>a</m> is an associate of <m>1</m> if and only if <m>\langle a \rangle = \langle 1 \rangle = D</m>.
+            (3) Um elemento <m>a \in D</m> é uma unidade se, e somente se, <m>a</m> é associado a <m>1</m>.
+            No entanto, <m>a</m> é associado a <m>1</m> se, e somente se, <m>\langle a \rangle = \langle 1 \rangle = D</m>.
           </p>
         </proof>
       </lemma>
@@ -518,33 +518,33 @@
       <theorem>
         <statement>
           <p>
-            Let <m>D</m> be a <acro>PID</acro> and
-            <m>\langle p \rangle</m> be a nonzero ideal in <m>D</m>.
-            Then <m>\langle p \rangle</m> is a maximal ideal if and only if <m>p</m> is irreducible.
+            Seja <m>D</m> um <acro>PID</acro> e seja
+            <m>\langle p \rangle</m> um ideal não nulo em <m>D</m>.
+            Então <m>\langle p \rangle</m> é um ideal maximal se, e somente se, <m>p</m> é irredutível.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>\langle p \rangle</m> is a maximal ideal.
-            If some element <m>a</m> in <m>D</m> divides <m>p</m>,
-            then <m>\langle p \rangle \subset \langle a \rangle</m>.
-            Since <m>\langle p \rangle</m> is maximal,
-            either <m>D = \langle a \rangle</m> or <m>\langle p \rangle = \langle a \rangle</m>.
-            Consequently,
-            either <m>a</m> and <m>p</m> are associates or <m>a</m> is a unit.
-            Therefore, <m>p</m> is irreducible.
+            Suponha que <m>\langle p \rangle</m> seja um ideal maximal.
+            Se algum elemento <m>a</m> em <m>D</m> divide <m>p</m>,
+            então <m>\langle p \rangle \subset \langle a \rangle</m>.
+            Como <m>\langle p \rangle</m> é maximal,
+            ou <m>D = \langle a \rangle</m> ou <m>\langle p \rangle = \langle a \rangle</m>.
+            Consequentemente,
+            ou <m>a</m> e <m>p</m> são associados ou <m>a</m> é uma unidade.
+            Portanto, <m>p</m> é irredutível.
           </p>
 
           <p>
-            Conversely, let <m>p</m> be irreducible.
-            If <m>\langle a \rangle</m> is an ideal in <m>D</m> such that
+            Reciprocamente, seja <m>p</m> irredutível.
+            Se <m>\langle a \rangle</m> é um ideal em <m>D</m> tal que
             <m>\langle p \rangle \subset \langle a \rangle \subset D</m>,
-            then <m>a \mid p</m>.
-            Since <m>p</m> is irreducible,
-            either <m>a</m> must be a unit or <m>a</m> and <m>p</m> are associates.
-            Therefore, either <m>D = \langle a \rangle</m> or <m>\langle p \rangle = \langle a \rangle</m>.
-            Thus, <m>\langle p \rangle</m> is a maximal ideal.
+            então <m>a \mid p</m>.
+            Como <m>p</m> é irredutível,
+            <m>a</m> deve ser uma unidade ou <m>a</m> e <m>p</m> são associados.
+            Portanto, ou <m>D = \langle a \rangle</m> ou <m>\langle p \rangle = \langle a \rangle</m>.
+            Assim, <m>\langle p \rangle</m> é um ideal maximal.
           </p>
         </proof>
       </theorem>
@@ -552,19 +552,19 @@
       <corollary xml:id="domains-corollary-irreducible-pid">
         <statement>
           <p>
-            Let <m>D</m> be a <acro>PID</acro>.
-            If <m>p</m> is irreducible, then <m>p</m> is prime.
+            Seja <m>D</m> um <acro>PID</acro>.
+            Se <m>p</m> é irredutível, então <m>p</m> é primo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>p</m> be irreducible and suppose that <m>p \mid ab</m>.
-            Then <m>\langle ab \rangle \subset \langle p \rangle</m>.
-            By <xref ref="rings-corollary-maximal-ideal"/>, since <m>\langle p \rangle</m> is a maximal ideal,
-            <m>\langle p \rangle</m> must also be a prime ideal.
-            Thus, either <m>a \in \langle p \rangle</m> or <m>b \in \langle p \rangle</m>.
-            Hence, either <m>p \mid a </m> or <m>p \mid b</m>.
+            Seja <m>p</m> irredutível e suponha que <m>p \mid ab</m>.
+            Então <m>\langle ab \rangle \subset \langle p \rangle</m>.
+            Por <xref ref="rings-corollary-maximal-ideal"/>, como <m>\langle p \rangle</m> é um ideal maximal,
+            <m>\langle p \rangle</m> também deve ser um ideal primo.
+            Assim, ou <m>a \in \langle p \rangle</m> ou <m>b \in \langle p \rangle</m>.
+            Logo, ou <m>p \mid a </m> ou <m>p \mid b</m>.
           </p>
         </proof>
       </corollary>
@@ -572,134 +572,134 @@
       <lemma xml:id="domains-lemma-acc">
         <statement>
           <p>
-            Let <m>D</m> be a <acro>PID</acro>.
-            Let <m>I_1, I_2, \ldots</m> be a set of ideals such that <m>I_1 \subset I_2 \subset \cdots</m>.
-            Then there exists an integer <m>N</m> such that
-            <m>I_n = I_N</m> for all <m>n \geq N</m>.
+            Seja <m>D</m> um <acro>PID</acro>.
+            Sejam <m>I_1, I_2, \ldots</m> ideais tais que <m>I_1 \subset I_2 \subset \cdots</m>.
+            Então existe um inteiro <m>N</m> tal que
+            <m>I_n = I_N</m> para todo <m>n \geq N</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We claim that <m>I= \bigcup_{i = 1}^\infty I_i</m> is an ideal of <m>D</m>.
-            Certainly <m>I</m> is not empty,
-            since <m>I_1 \subset I</m> and <m>0 \in I</m>.
-            If <m>a, b \in I</m>, then <m>a \in I_i</m> and
-            <m>b \in I_j</m> for some <m>i</m> and <m>j</m> in <m>{\mathbb N}</m>.
-            Without loss of generality we can assume that <m>i \leq j</m>.
-            Hence, <m>a</m> and <m>b</m> are both in <m>I_j</m> and so <m>a - b</m> is also in <m>I_j</m>.
-            Now let <m>r \in D</m> and <m>a \in I</m>.
-            Again, we note that <m>a \in I_i</m> for some positive integer <m>i</m>.
-            Since <m>I_i</m> is an ideal,
-            <m>ra \in I_i</m> and hence must be in <m>I</m>.
-            Therefore, we have shown that <m>I</m> is an ideal in <m>D</m>.
+            Afirmamos que <m>I= \bigcup_{i = 1}^\infty I_i</m> é um ideal de <m>D</m>.
+            Certamente <m>I</m> não é vazio,
+            pois <m>I_1 \subset I</m> e <m>0 \in I</m>.
+            Se <m>a, b \in I</m>, então <m>a \in I_i</m> e
+            <m>b \in I_j</m> para alguns <m>i</m> e <m>j</m> em <m>{\mathbb N}</m>.
+            Sem perda de generalidade, podemos supor que <m>i \leq j</m>.
+            Assim, <m>a</m> e <m>b</m> estão ambos em <m>I_j</m> e, portanto, <m>a - b</m> também está em <m>I_j</m>.
+            Agora seja <m>r \in D</m> e <m>a \in I</m>.
+            Novamente, observamos que <m>a \in I_i</m> para algum inteiro positivo <m>i</m>.
+            Como <m>I_i</m> é um ideal,
+            <m>ra \in I_i</m> e, portanto, deve estar em <m>I</m>.
+            Consequentemente, mostramos que <m>I</m> é um ideal em <m>D</m>.
           </p>
             <!-- Typo corrected.  Suggested by C. Wall.  TWJ 2/16/2012 -->
           <p>
-            Since <m>D</m> is a principal ideal domain,
-            there exists an element <m>\overline{a} \in D</m> that generates <m>I</m>.
-            Since <m>\overline{a}</m> is in <m>I_N</m> for some <m>N \in {\mathbb N}</m>,
-            we know that <m>I_N = I = \langle \overline{a} \rangle</m>.
-            Consequently, <m>I_n = I_N</m> for <m>n \geq N</m>.
+            Como <m>D</m> é um domínio de ideais principais,
+            existe um elemento <m>\overline{a} \in D</m> que gera <m>I</m>.
+            Como <m>\overline{a}</m> está em <m>I_N</m> para algum <m>N \in {\mathbb N}</m>,
+            sabemos que <m>I_N = I = \langle \overline{a} \rangle</m>.
+            Consequentemente, <m>I_n = I_N</m> para <m>n \geq N</m>.
           </p>
         </proof>
       </lemma>
 
       <p>
-        Any commutative ring satisfying the condition in <xref ref="domains-lemma-acc"/> is said to satisfy the
-        <term>ascending chain condition</term>,<idx><h>Ascending chain condition</h></idx> or <term>ACC</term>.
-        Such rings are called <term>Noetherian rings</term>,<idx><h>Ring</h><h>Noetherian</h></idx>
-        after Emmy Noether.
+        Todo anel comutativo que satisfaz a condição em <xref ref="domains-lemma-acc"/> é dito satisfazer a
+        <term>condição de cadeia ascendente</term>,<idx><h>Condição de cadeia ascendente</h></idx> ou <term>ACC</term>.
+        Esses anéis são chamados de <term>anéis noetherianos</term>,<idx><h>Anel</h><h>noetheriano</h></idx>
+        em homenagem a Emmy Noether.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Every <acro>PID</acro> is a <acro>UFD</acro>.
+            Todo <acro>PID</acro> é um <acro>UFD</acro>.
           </p>
         </statement>
 
         <proof>
           <case>
-            <title>Existence of a factorization</title>
+            <title>Existência de uma fatoração</title>
             <p>
-              Let <m>D</m> be a <acro>PID</acro> and <m>a</m> be a nonzero element in <m>D</m> that is not a unit.
-              If <m>a</m> is irreducible, then we are done.
-              If not, then there exists a factorization <m>a = a_1 b_1</m>,
-              where neither <m>a_1</m> nor <m>b_1</m> is a unit.
-              Hence, <m>\langle a \rangle \subset \langle a_1 \rangle</m>.
-              By <xref ref="domains-lemma-principal-ideal"/>,
-              we know that <m>\langle a \rangle \neq \langle a_1 \rangle</m>;
-              otherwise, <m>a</m> and <m>a_1</m> would be associates and <m>b_1</m> would be a unit,
-              which would contradict our assumption.
-              Now suppose that <m>a_1 =  a_2 b_2</m>,
-              where neither <m>a_2</m> nor <m>b_2</m> is a unit.
-              By the same argument as before,
+              Seja <m>D</m> um <acro>PID</acro> e seja <m>a</m> um elemento não nulo de <m>D</m> que não é uma unidade.
+              Se <m>a</m> é irredutível, terminamos.
+              Caso contrário, existe uma fatoração <m>a = a_1 b_1</m>,
+              em que nem <m>a_1</m> nem <m>b_1</m> é uma unidade.
+              Logo, <m>\langle a \rangle \subset \langle a_1 \rangle</m>.
+              Por <xref ref="domains-lemma-principal-ideal"/>,
+              sabemos que <m>\langle a \rangle \neq \langle a_1 \rangle</m>;
+              caso contrário, <m>a</m> e <m>a_1</m> seriam associados e <m>b_1</m> seria uma unidade,
+              o que contradiz nossa hipótese.
+              Suponha agora que <m>a_1 =  a_2 b_2</m>,
+              em que nem <m>a_2</m> nem <m>b_2</m> é uma unidade.
+              Pelo mesmo argumento de antes,
               <m>\langle a_1 \rangle \subset \langle a_2 \rangle</m>.
-              We can continue with this construction to obtain an ascending chain of ideals
+              Podemos continuar essa construção para obter uma cadeia ascendente de ideais
               <md>
                 \langle a \rangle \subset \langle a_1 \rangle \subset \langle a_2 \rangle \subset \cdots
               </md>.
-              By <xref ref="domains-lemma-acc"/>,
-              there exists a positive integer <m>N</m> such that
-              <m>\langle a_n \rangle = \langle a_N \rangle</m> for all <m>n \geq N</m>.
-              Consequently, <m>a_N</m> must be irreducible.
-              We have now shown that <m>a</m> is the product of two elements,
-              one of which must be irreducible.
+              Por <xref ref="domains-lemma-acc"/>,
+              existe um inteiro positivo <m>N</m> tal que
+              <m>\langle a_n \rangle = \langle a_N \rangle</m> para todo <m>n \geq N</m>.
+              Consequentemente, <m>a_N</m> deve ser irredutível.
+              Mostramos agora que <m>a</m> é o produto de dois elementos,
+              um dos quais deve ser irredutível.
             </p>
               <!-- Label repaired.  Suggested by R. Beezer. -->
               <!-- TWJ 12/19/2011 -->
             <p>
-              Now suppose that <m>a = c_1 p_1</m>,
-              where <m>p_1</m> is irreducible.
-              If <m>c_1</m> is not a unit,
-              we can repeat the preceding argument to conclude that <m>\langle a \rangle \subset \langle c_1 \rangle</m>.
-              Either <m>c_1</m> is irreducible or <m>c_1 = c_2 p_2</m>,
-              where <m>p_2</m> is irreducible and <m>c_2</m> is not a unit.
-              Continuing in this manner, we obtain another chain of ideals
+              Suponha agora que <m>a = c_1 p_1</m>,
+              onde <m>p_1</m> é irredutível.
+              Se <m>c_1</m> não é uma unidade,
+              podemos repetir o argumento anterior para concluir que <m>\langle a \rangle \subset \langle c_1 \rangle</m>.
+              Ou <m>c_1</m> é irredutível ou <m>c_1 = c_2 p_2</m>,
+              onde <m>p_2</m> é irredutível e <m>c_2</m> não é uma unidade.
+              Continuando dessa maneira, obtemos outra cadeia de ideais
               <md>
                 \langle a \rangle \subset \langle c_1 \rangle \subset \langle c_2 \rangle \subset \cdots
               </md>.
-              This chain must satisfy the ascending chain condition;
-              therefore,
+              Essa cadeia deve satisfazer a condição de cadeia ascendente;
+              portanto,
               <md>
                 a = p_1 p_2 \cdots p_r
               </md>
-              for irreducible elements <m>p_1, \ldots, p_r</m>.
+              para elementos irredutíveis <m>p_1, \ldots, p_r</m>.
             </p>
           </case>
 
           <case>
-            <title>Uniqueness of the factorization</title>
+            <title>Unicidade da fatoração</title>
             <p>
-              To show uniqueness, let
+              Para mostrar a unicidade, sejam
               <md>
                 a = p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s
               </md>,
-              where each <m>p_i</m> and each <m>q_i</m> is irreducible.
-              Without loss of generality, we can assume that <m>r \lt s</m>.
-              Since <m>p_1</m> divides <m>q_1 q_2 \cdots q_s</m>,
-              by <xref ref="domains-corollary-irreducible-pid"/> it must divide some <m>q_i</m>.
-              By rearranging the <m>q_i</m>'s, we can assume that <m>p_1 \mid q_1</m>;
-              hence, <m>q_1 = u_1 p_1</m> for some unit <m>u_1</m> in <m>D</m>.
-              Therefore,
+              em que cada <m>p_i</m> e cada <m>q_i</m> é irredutível.
+              Sem perda de generalidade, podemos supor que <m>r \lt s</m>.
+              Como <m>p_1</m> divide <m>q_1 q_2 \cdots q_s</m>,
+              por <xref ref="domains-corollary-irreducible-pid"/> ele deve dividir algum <m>q_i</m>.
+              Reordenando os <m>q_i</m>, podemos supor que <m>p_1 \mid q_1</m>;
+              portanto, <m>q_1 = u_1 p_1</m> para alguma unidade <m>u_1</m> em <m>D</m>.
+              Assim,
               <md>
                 a = p_1 p_2 \cdots p_r = u_1 p_1 q_2 \cdots q_s
               </md>
-              or
+              ou
               <md>
                 p_2 \cdots p_r = u_1 q_2 \cdots q_s
               </md>.
-              Continuing in this manner,
-              we can arrange the <m>q_i</m>'s such that <m>p_2 = q_2, p_3 = q_3, \ldots,
+              Continuando dessa maneira,
+              podemos ordenar os <m>q_i</m> de modo que <m>p_2 = q_2, p_3 = q_3, \ldots,
               p_r = q_r</m>,
-              to obtain
+              obtendo
               <md>
                 u_1 u_2 \cdots u_r q_{r + 1} \cdots q_s = 1
               </md>.
-              In this case <m>q_{r + 1} \cdots q_s</m> is a unit,
-              which contradicts the fact that <m>q_{r + 1}, \ldots, q_s</m> are irreducibles.
-              Therefore, <m>r = s</m> and the factorization of <m>a</m> is unique.
+              Nesse caso, <m>q_{r + 1} \cdots q_s</m> é uma unidade,
+              o que contradiz o fato de <m>q_{r + 1}, \ldots, q_s</m> serem irredutíveis.
+              Portanto, <m>r = s</m> e a fatoração de <m>a</m> é única.
             </p>
           </case>
         </proof>
@@ -709,116 +709,116 @@
       <corollary>
         <statement>
           <p>
-            Let <m>F</m> be a field.
-            Then <m>F[x]</m> is a <acro>UFD</acro>.
+            Seja <m>F</m> um corpo.
+            Então <m>F[x]</m> é um <acro>UFD</acro>.
           </p>
         </statement>
       </corollary>
 
       <example xml:id="domains-example-zx-ufd">
         <p>
-          Every <acro>PID</acro> is a <acro>UFD</acro>,
-          but it is not the case that every <acro>UFD</acro> is a <acro>PID</acro>.
-          In <xref ref="domains-corollary-integer-poly-ufd"/>,
-          we will prove that <m>{\mathbb Z}[x]</m> is a <acro>UFD</acro>.
-          However, <m>{\mathbb Z}[x]</m> is not a <acro>PID</acro>.
-          Let <m>I = \{ 5 f(x) + x g(x) : f(x),
+          Todo <acro>PID</acro> é um <acro>UFD</acro>,
+          mas não é verdade que todo <acro>UFD</acro> seja um <acro>PID</acro>.
+          Em <xref ref="domains-corollary-integer-poly-ufd"/>,
+          provaremos que <m>{\mathbb Z}[x]</m> é um <acro>UFD</acro>.
+          No entanto, <m>{\mathbb Z}[x]</m> não é um <acro>PID</acro>.
+          Seja <m>I = \{ 5 f(x) + x g(x) : f(x),
           g(x) \in {\mathbb Z}[x] \}</m>.
-          We can easily show that <m>I</m> is an ideal of <m>{\mathbb Z}[x]</m>.
-          Suppose that <m>I = \langle p(x) \rangle</m>.
-          Since <m>5 \in I</m>, <m>5 = f(x) p(x)</m>.
-          In this case <m>p(x) = p</m> must be a constant.
-          Since <m>x \in I</m>, <m>x = p g(x)</m>;
-          consequently, <m>p = \pm 1</m>.
-          However, it follows from this fact that <m>\langle p(x) \rangle = {\mathbb Z}[x]</m>.
-          But this would mean that <m>3</m> is in <m>I</m>.
-          Therefore, we can write <m>3 = 5 f(x) + x g(x)</m> for some <m>f(x)</m> and <m>g(x)</m> in <m>{\mathbb Z}[x]</m>.
-          Examining the constant term of this polynomial,
-          we see that <m>3 = 5 f(x)</m>, which is impossible.
+          É fácil mostrar que <m>I</m> é um ideal de <m>{\mathbb Z}[x]</m>.
+          Suponha que <m>I = \langle p(x) \rangle</m>.
+          Como <m>5 \in I</m>, <m>5 = f(x) p(x)</m>.
+          Nesse caso, <m>p(x) = p</m> deve ser constante.
+          Como <m>x \in I</m>, <m>x = p g(x)</m>;
+          consequentemente, <m>p = \pm 1</m>.
+          No entanto, segue desse fato que <m>\langle p(x) \rangle = {\mathbb Z}[x]</m>.
+          Mas isso significaria que <m>3</m> está em <m>I</m>.
+          Portanto, podemos escrever <m>3 = 5 f(x) + x g(x)</m> para alguns <m>f(x)</m> e <m>g(x)</m> em <m>{\mathbb Z}[x]</m>.
+          Examinando o termo constante desse polinômio,
+          vemos que <m>3 = 5 f(x)</m>, o que é impossível.
         </p>
       </example>
     </subsection>
 
     <subsection xml:id="domains-subsection-euclidean-domains">
-      <title>Euclidean Domains</title>
+      <title>Domínios Euclidianos</title>
       <p>
-        We have repeatedly used the division algorithm when proving results about either <m>{\mathbb Z}</m> or <m>F[x]</m>,
-        where <m>F</m> is a field.
-        We should now ask when a division algorithm is available for an integral domain.
+        Usamos repetidamente o algoritmo da divisão ao provar resultados sobre <m>{\mathbb Z}</m> ou <m>F[x]</m>,
+        onde <m>F</m> é um corpo.
+        Agora devemos perguntar quando um algoritmo da divisão está disponível para um domínio de integridade.
       </p>
 
       <p>
-        Let <m>D</m> be an integral domain such that there is a function <m>\nu : D \setminus \{0\} \to \mathbb N_0 = \mathbb N \cup \{0\}</m> satisfying the following conditions.
+        Seja <m>D</m> um domínio de integridade tal que exista uma função <m>\nu : D \setminus \{0\} \to \mathbb N_0 = \mathbb N \cup \{0\}</m> que satisfaz as condições seguintes.
 
         <notation>
           <usage><m>\nu(a)</m></usage>
-          <description>Euclidean valuation of <m>a</m></description>
+          <description>valoração euclidiana de <m>a</m></description>
         </notation>
 
         <ol>
           <li>
             <p>
-              If <m>a</m> and <m>b</m> are nonzero elements in <m>D</m>,
-              then <m>\nu(a) \leq \nu(ab)</m>.
+              Se <m>a</m> e <m>b</m> são elementos não nulos de <m>D</m>,
+              então <m>\nu(a) \leq \nu(ab)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Let <m>a, b \in D</m> and suppose that <m>b \neq 0</m>.
-              Then there exist elements <m>q,
-              r \in D</m> such that <m>a = bq + r</m> and either <m>r = 0</m> or <m>\nu(r) \lt \nu(b)</m>.
+              Sejam <m>a, b \in D</m> e suponha que <m>b \neq 0</m>.
+              Então existem elementos <m>q,
+              r \in D</m> tais que <m>a = bq + r</m> e ou <m>r = 0</m> ou <m>\nu(r) \lt \nu(b)</m>.
             </p>
           </li>
         </ol>
 
-        Then <m>D</m> is called a <term>Euclidean domain</term><idx><h>Euclidean domain</h></idx><idx><h>Domain</h><h>Euclidean</h></idx>
-        and <m>\nu</m> is called a <idx><h>Euclidean valuation</h></idx><term>Euclidean valuation</term>.
+        Então <m>D</m> é chamado de <term>domínio euclidiano</term><idx><h>Domínio euclidiano</h></idx><idx><h>Domínio</h><h>euclidiano</h></idx>
+        e <m>\nu</m> é chamada de <idx><h>Valoração euclidiana</h></idx><term>valoração euclidiana</term>.
       </p>
 
       <example xml:id="domains-example-abs-value">
         <p>
-          Absolute value on <m>{\mathbb Z}</m> is a Euclidean valuation.
+          O valor absoluto em <m>{\mathbb Z}</m> é uma valoração euclidiana.
         </p>
       </example>
 
       <example xml:id="domains-example-deg-poly-field-valuation">
         <p>
-          Let <m>F</m> be a field.
-          Then the degree of a polynomial in <m>F[x]</m> is a Euclidean valuation.
+          Seja <m>F</m> um corpo.
+          Então o grau de um polinômio em <m>F[x]</m> é uma valoração euclidiana.
         </p>
       </example>
 
       <example xml:id="domains-example-gaussian-valuation">
         <p>
-          Recall that the Gaussian integers in <xref ref="rings-example-gaussian-integers"/> of <xref ref="rings"/> are defined by
+          Recorde que os inteiros gaussianos em <xref ref="rings-example-gaussian-integers"/> de <xref ref="rings"/> são definidos por
           <md>
             {\mathbb Z}[i] = \{  a + b i : a, b \in {\mathbb Z} \}
           </md>.
-          We usually measure the size of a complex number <m>a + bi</m> by its absolute value,.
+          Costumamos medir o tamanho de um número complexo <m>a + bi</m> por seu valor absoluto,
           <m>|a + bi| = \sqrt{ a^2 + b^2}</m>;
-          however, <m>\sqrt{a^2 + b^2}</m> may not be an integer.
-          For our valuation we will let
-          <m>\nu(a + bi) = a^2 + b^2</m> to ensure that we have an integer.
+          no entanto, <m>\sqrt{a^2 + b^2}</m> pode não ser um inteiro.
+          Para nossa valoração, tomaremos
+          <m>\nu(a + bi) = a^2 + b^2</m> para garantir que tenhamos um inteiro.
         </p>
 
         <p>
-          We claim that <m>\nu( a+ bi) = a^2 + b^2</m> is a Euclidean valuation on <m>{\mathbb Z}[i]</m>.
-          Let <m>z, w \in {\mathbb Z}[i]</m>.
-          Then <m>\nu( zw) = |zw|^2 = |z|^2 |w|^2 = \nu(z) \nu(w)</m>.
-          Since <m>\nu(z) \geq 1</m> for every nonzero <m>z \in {\mathbb Z}[i]</m>,
+          Afirmamos que <m>\nu( a+ bi) = a^2 + b^2</m> é uma valoração euclidiana em <m>{\mathbb Z}[i]</m>.
+          Sejam <m>z, w \in {\mathbb Z}[i]</m>.
+          Então <m>\nu( zw) = |zw|^2 = |z|^2 |w|^2 = \nu(z) \nu(w)</m>.
+          Como <m>\nu(z) \geq 1</m> para todo <m>z \in {\mathbb Z}[i]</m> não nulo,
           <m>\nu( z) \leq \nu(z) \nu(w)</m>.
         </p>
             <!-- correction to last sentence.  Suggested by R. Beezer. -->
             <!-- TWJ 2/6/2013 -->
         <p>
-          Next, we must show that for any <m>z= a+bi</m> and <m>w = c+di</m> in
-          <m>{\mathbb Z}[i]</m> with <m>w \neq 0</m>,
-          there exist elements <m>q</m> and <m>r</m> in  <m>{\mathbb Z}[i]</m> such that
-          <m>z = qw + r</m> with either <m>r=0</m> or  <m>\nu(r) \lt \nu(w)</m>.
-          We can view <m>z</m> and <m>w</m> as elements in <m>{\mathbb Q}(i) = \{ p + qi : p, q \in {\mathbb Q} \}</m>,
-          the field of fractions of <m>{\mathbb Z}[i]</m>.
-          Observe that
+          Em seguida, devemos mostrar que, para quaisquer <m>z= a+bi</m> e <m>w = c+di</m> em
+          <m>{\mathbb Z}[i]</m> com <m>w \neq 0</m>,
+          existem elementos <m>q</m> e <m>r</m> em <m>{\mathbb Z}[i]</m> tais que
+          <m>z = qw + r</m> com ou <m>r=0</m> ou <m>\nu(r) \lt \nu(w)</m>.
+          Podemos ver <m>z</m> e <m>w</m> como elementos de <m>{\mathbb Q}(i) = \{ p + qi : p, q \in {\mathbb Q} \}</m>,
+          o corpo de frações de <m>{\mathbb Z}[i]</m>.
+          Observe que
           <md>
             <mrow>z w^{-1} &amp; = (a +b i) \frac{c -d i}{c^2 + d^2}</mrow>
             <mrow>&amp; = \frac{ac + b d}{c^2 + d^2} + \frac{b c -ad}{c^2 + d^2}i</mrow>
@@ -826,27 +826,27 @@
             <mrow>&amp; = (m_1 + m_2 i) + \left( \frac{n_1}{c^2 + d^2} + \frac{n_2}{c^2 + d^2}i \right)</mrow>
             <mrow>&amp; = (m_1 + m_2 i) + (s + ti)</mrow>
           </md>
-          in <m>{\mathbb Q}(i)</m>.
-          In the last steps we are writing the real and imaginary parts as an integer plus a proper fraction.
-          That is, we take the closest integer <m>m_i</m> such that the fractional part satisfies <m>|n_i / (a^2 + b^2)| \leq 1/2</m>.
-          For example, we write
+          em <m>{\mathbb Q}(i)</m>.
+          Nos últimos passos, estamos escrevendo as partes real e imaginária como um inteiro mais uma fração própria.
+          Isto é, tomamos o inteiro mais próximo <m>m_i</m> tal que a parte fracionária satisfaz <m>|n_i / (a^2 + b^2)| \leq 1/2</m>.
+          Por exemplo, escrevemos
           <md>
             <mrow>\frac{9}{8} &amp; = 1 + \frac{1}{8}</mrow>
             <mrow>\frac{15}{8} &amp; = 2 - \frac{1}{8}</mrow>
           </md>.
-          Thus, <m>s</m> and <m>t</m> are the
-          <q>fractional parts</q>
-          of <m>z w^{-1} = (m_1 + m_2 i) + (s + ti)</m>.
-          We also know that <m>s^2 + t^2 \leq 1/4 + 1/4 = 1/2</m>.
-          Multiplying by <m>w</m>, we have
+          Assim, <m>s</m> e <m>t</m> são as
+          <q>partes fracionárias</q>
+          de <m>z w^{-1} = (m_1 + m_2 i) + (s + ti)</m>.
+          Também sabemos que <m>s^2 + t^2 \leq 1/4 + 1/4 = 1/2</m>.
+          Multiplicando por <m>w</m>, temos
           <md>
             z = z w^{-1} w = w (m_1 + m_2 i) + w (s + ti)  = q w + r
           </md>,
-          where <m>q = m_1 + m_2 i</m> and <m>r =  w (s + ti)</m>.
-          Since <m>z</m> and <m>qw</m> are in <m>{\mathbb Z}[i]</m>,
-          <m>r</m> must be in <m>{\mathbb Z}[i]</m>.
-          Finally, we need to show that either <m>r = 0</m> or <m>\nu(r) \lt \nu(w)</m>.
-          However,
+          onde <m>q = m_1 + m_2 i</m> e <m>r =  w (s + ti)</m>.
+          Como <m>z</m> e <m>qw</m> estão em <m>{\mathbb Z}[i]</m>,
+          <m>r</m> deve estar em <m>{\mathbb Z}[i]</m>.
+          Finalmente, precisamos mostrar que ou <m>r = 0</m> ou <m>\nu(r) \lt \nu(w)</m>.
+          No entanto,
           <md>
             \nu(r) = \nu(w) \nu(s + ti) \leq \frac{1}{2} \nu(w) \lt \nu(w)
           </md>.
@@ -856,20 +856,20 @@
       <theorem>
         <statement>
           <p>
-            Every Euclidean domain is a principal ideal domain.
+            Todo domínio euclidiano é um domínio de ideais principais.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>D</m> be a Euclidean domain and let <m>\nu</m> be a Euclidean valuation on <m>D</m>.
-            Suppose <m>I</m> is a nontrivial ideal in <m>D</m> and choose a nonzero element <m>b \in I</m> such that <m>\nu(b)</m> is minimal for all <m>a \in I</m>.
-            Since <m>D</m> is a Euclidean domain,
-            there exist elements <m>q</m> and <m>r</m> in <m>D</m> such that
-            <m>a = bq + r</m> and either <m>r = 0</m> or <m>\nu(r) \lt \nu(b)</m>.
-            But <m>r = a - bq</m> is in <m>I</m> since <m>I</m> is an ideal;
-            therefore, <m>r = 0</m> by the minimality of <m>b</m>.
-            It follows that <m>a = bq</m> and <m>I = \langle b \rangle</m>.
+            Seja <m>D</m> um domínio euclidiano e seja <m>\nu</m> uma valoração euclidiana em <m>D</m>.
+            Suponha que <m>I</m> seja um ideal não trivial em <m>D</m> e escolha um elemento não nulo <m>b \in I</m> tal que <m>\nu(b)</m> seja mínima entre todos os <m>a \in I</m>.
+            Como <m>D</m> é um domínio euclidiano,
+            existem elementos <m>q</m> e <m>r</m> em <m>D</m> tais que
+            <m>a = bq + r</m> e ou <m>r = 0</m> ou <m>\nu(r) \lt \nu(b)</m>.
+            Mas <m>r = a - bq</m> está em <m>I</m>, pois <m>I</m> é um ideal;
+            portanto, <m>r = 0</m> pela minimalidade de <m>b</m>.
+            Segue que <m>a = bq</m> e <m>I = \langle b \rangle</m>.
           </p>
         </proof>
       </theorem>
@@ -877,70 +877,70 @@
       <corollary>
         <statement>
           <p>
-            Every Euclidean domain is a unique factorization domain.
+            Todo domínio euclidiano é um domínio de fatoração única.
           </p>
         </statement>
       </corollary>
     </subsection>
 
     <subsection xml:id="domains-subsection-factorization">
-      <title>Factorization in <m>D\lbrack x \rbrack</m></title>
+      <title>Fatoração em <m>D\lbrack x \rbrack</m></title>
       <p>
-        One of the most important polynomial rings is <m>{\mathbb Z}[x]</m>.
-        One of the first questions that come to mind about
-        <m>{\mathbb Z}[x]</m> is whether or not it is a <acro>UFD</acro>.
-        We will prove a more general statement here.
-        Our first task is to obtain a more general version of Gauss's Lemma (<xref ref="poly-theorem-gauss-lemma"/>).
+        Um dos anéis de polinômios mais importantes é <m>{\mathbb Z}[x]</m>.
+        Uma das primeiras perguntas que nos ocorre sobre
+        <m>{\mathbb Z}[x]</m> é se ele é ou não um <acro>UFD</acro>.
+        Provaremos aqui uma afirmação mais geral.
+        Nossa primeira tarefa é obter uma versão mais geral do Lema de Gauss (<xref ref="poly-theorem-gauss-lemma"/>).
       </p>
 
       <p>
-        Let <m>D</m> be a unique factorization domain and suppose that
+        Seja <m>D</m> um domínio de fatoração única e suponha que
         <md>
           p(x) = a_n x^n + \cdots + a_1 x + a_0
         </md>
-        in <m>D[x]</m>.
-        Then the <term>content</term><idx><h>Polynomial</h><h>content of</h></idx> of <m>p(x)</m> is the greatest common divisor of <m>a_0, \ldots, a_n</m>.
-        We say that <m>p(x)</m> is <term>primitive</term><idx><h>Primitive polynomial</h></idx><idx><h>Polynomial</h><h>primitive</h></idx>
-        if <m>\gcd(a_0, \ldots, a_n ) = 1</m>.
+        em <m>D[x]</m>.
+        Então o <term>conteúdo</term><idx><h>Polinômio</h><h>conteúdo de</h></idx> de <m>p(x)</m> é o máximo divisor comum de <m>a_0, \ldots, a_n</m>.
+        Dizemos que <m>p(x)</m> é <term>primitivo</term><idx><h>Polinômio primitivo</h></idx><idx><h>Polinômio</h><h>primitivo</h></idx>
+        se <m>\gcd(a_0, \ldots, a_n ) = 1</m>.
       </p>
             <!-- Typo corrected.  Suggested by Nathan Lander. -->
             <!-- TWJ 2/13/2012 -->
       <example xml:id="domains-example-poly-gcd">
         <p>
-          In <m>{\mathbb Z}[x]</m> the polynomial
-          <m>p(x)= 5 x^4 - 3 x^3 + x -4</m> is a primitive polynomial since the greatest common divisor of the coefficients is <m>1</m>;
-          however, the polynomial <m>q(x) = 4 x^2 - 6 x + 8</m> is not primitive since the content of <m>q(x)</m> is <m>2</m>.
+          Em <m>{\mathbb Z}[x]</m>, o polinômio
+          <m>p(x)= 5 x^4 - 3 x^3 + x -4</m> é um polinômio primitivo, pois o máximo divisor comum dos coeficientes é <m>1</m>;
+          no entanto, o polinômio <m>q(x) = 4 x^2 - 6 x + 8</m> não é primitivo, pois o conteúdo de <m>q(x)</m> é <m>2</m>.
         </p>
       </example>
 
       <theorem xml:id="domains-theorem-gauss-lemma">
-        <title>Gauss's Lemma</title>
+        <title>Lema de Gauss</title>
         <idx>
-        <h>Gauss's Lemma</h>
+        <h>Lema de Gauss</h>
         </idx>
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro> and let <m>f(x)</m> and <m>g(x)</m> be primitive polynomials in <m>D[x]</m>.
-            Then <m>f(x) g(x)</m> is primitive.
+            Seja <m>D</m> um <acro>UFD</acro> e sejam <m>f(x)</m> e <m>g(x)</m> polinômios primitivos em <m>D[x]</m>.
+            Então <m>f(x) g(x)</m> é primitivo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>f(x) = \sum_{i=0}^{m} a_i x^i</m> and <m>g(x) = \sum_{i=0}^{n} b_i x^i</m>.
-            Suppose that <m>p</m> is a prime dividing the coefficients of <m>f(x) g(x)</m>.
-            Let <m>r</m> be the smallest integer such that
-            <m>p \notdivide a_r</m> and <m>s</m> be the smallest integer such that <m>p \notdivide b_s</m>.
-            The coefficient of <m>x^{r+s}</m> in <m>f(x) g(x)</m> is
+            Sejam <m>f(x) = \sum_{i=0}^{m} a_i x^i</m> e <m>g(x) = \sum_{i=0}^{n} b_i x^i</m>.
+            Suponha que <m>p</m> seja um primo que divide os coeficientes de <m>f(x) g(x)</m>.
+            Seja <m>r</m> o menor inteiro tal que
+            <m>p \notdivide a_r</m> e seja <m>s</m> o menor inteiro tal que <m>p \notdivide b_s</m>.
+            O coeficiente de <m>x^{r+s}</m> em <m>f(x) g(x)</m> é
             <md>
               c_{r + s} = a_0 b_{r + s} + a_1 b_{r + s - 1} + \cdots + a_{r + s - 1} b_1 + a_{r + s} b_0
             </md>.
-            Since <m>p</m> divides <m>a_0, \ldots,
-            a_{r-1}</m> and <m>b_0, \ldots, b_{s-1}</m>,
-            <m>p</m> divides every term of <m>c_{r+s}</m> except for the term <m>a_r b_s</m>.
-            However, since <m>p \mid c_{r+s}</m>,
-            either <m>p</m> divides <m>a_r</m> or <m>p</m> divides <m>b_s</m>.
-            But this is impossible.
+            Como <m>p</m> divide <m>a_0, \ldots,
+            a_{r-1}</m> e <m>b_0, \ldots, b_{s-1}</m>,
+            <m>p</m> divide cada termo de <m>c_{r+s}</m>, exceto o termo <m>a_r b_s</m>.
+            No entanto, como <m>p \mid c_{r+s}</m>,
+            ou <m>p</m> divide <m>a_r</m> ou <m>p</m> divide <m>b_s</m>.
+            Mas isso é impossível.
           </p>
         </proof>
       </theorem>
@@ -948,21 +948,21 @@
       <lemma>
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro>,
-            and let <m>p(x)</m> and <m>q(x)</m> be in <m>D[x]</m>.
-            Then the content of <m>p(x) q(x)</m> is equal to the product of the contents of <m>p(x)</m> and <m>q(x)</m>.
+            Seja <m>D</m> um <acro>UFD</acro>,
+            e sejam <m>p(x)</m> e <m>q(x)</m> elementos de <m>D[x]</m>.
+            Então o conteúdo de <m>p(x) q(x)</m> é igual ao produto dos conteúdos de <m>p(x)</m> e <m>q(x)</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>p(x) = c p_1(x)</m> and <m>q(x) = d q_1(x)</m>,
-            where <m>c</m> and <m>d</m> are the contents of <m>p(x)</m> and <m>q(x)</m>,
-            respectively.
-            Then <m>p_1(x)</m> and <m>q_1(x)</m> are primitive.
-            We can now write <m>p(x) q(x) = c d p_1(x) q_1(x)</m>.
-            Since <m>p_1(x) q_1(x)</m> is primitive,
-            the content of <m>p(x) q(x)</m> must be <m>cd</m>.
+            Sejam <m>p(x) = c p_1(x)</m> e <m>q(x) = d q_1(x)</m>,
+            onde <m>c</m> e <m>d</m> são os conteúdos de <m>p(x)</m> e <m>q(x)</m>,
+            respectivamente.
+            Então <m>p_1(x)</m> e <m>q_1(x)</m> são primitivos.
+            Podemos agora escrever <m>p(x) q(x) = c d p_1(x) q_1(x)</m>.
+            Como <m>p_1(x) q_1(x)</m> é primitivo,
+            o conteúdo de <m>p(x) q(x)</m> deve ser <m>cd</m>.
           </p>
         </proof>
       </lemma>
@@ -970,41 +970,41 @@
       <lemma xml:id="domains-lemma-ufd-factorization">
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro> and <m>F</m> its field of fractions.
-            Suppose that <m>p(x) \in D[x]</m> and <m>p(x) = f(x) g(x)</m>,
-            where <m>f(x)</m> and <m>g(x)</m> are in <m>F[x]</m>.
-            Then <m>p(x) = f_1(x) g_1(x)</m>,
-            where <m>f_1(x)</m> and <m>g_1(x)</m> are in <m>D[x]</m>.
-            Furthermore,
-            <m>\deg f(x) = \deg f_1(x)</m> and <m>\deg g(x) = \deg g_1(x)</m>.
+            Seja <m>D</m> um <acro>UFD</acro> e <m>F</m> seu corpo de frações.
+            Suponha que <m>p(x) \in D[x]</m> e <m>p(x) = f(x) g(x)</m>,
+            onde <m>f(x)</m> e <m>g(x)</m> estão em <m>F[x]</m>.
+            Então <m>p(x) = f_1(x) g_1(x)</m>,
+            onde <m>f_1(x)</m> e <m>g_1(x)</m> estão em <m>D[x]</m>.
+            Além disso,
+            <m>\deg f(x) = \deg f_1(x)</m> e <m>\deg g(x) = \deg g_1(x)</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>a</m> and <m>b</m> be nonzero elements of <m>D</m> such that <m>a f(x),
-            b g(x)</m> are in <m>D[x]</m>.
-            We can find <m>a_1, b_1 \in D</m> such that
-            <m>a f(x) = a_1 f_1(x)</m> and <m>b g(x) = b_1 g_1(x)</m>,
-            where <m>f_1(x)</m> and <m>g_1(x)</m> are primitive polynomials in <m>D[x]</m>.
-            Therefore, <m>a b p(x) = (a_1 f_1(x))( b_1 g_1(x))</m>.
-            Since <m>f_1(x)</m> and <m>g_1(x)</m> are primitive polynomials,
-            it must be the case that <m>ab \mid a_1 b_1</m> by Gauss's Lemma.
-            Thus there exists a <m>c \in D</m> such that <m>p(x) = c f_1(x) g_1(x)</m>.
-            Clearly, <m>\deg f(x) = \deg f_1(x)</m> and <m>\deg g(x) = \deg g_1(x)</m>.
+            Sejam <m>a</m> e <m>b</m> elementos não nulos de <m>D</m> tais que <m>a f(x),
+            b g(x)</m> estejam em <m>D[x]</m>.
+            Podemos encontrar <m>a_1, b_1 \in D</m> tais que
+            <m>a f(x) = a_1 f_1(x)</m> e <m>b g(x) = b_1 g_1(x)</m>,
+            onde <m>f_1(x)</m> e <m>g_1(x)</m> são polinômios primitivos em <m>D[x]</m>.
+            Portanto, <m>a b p(x) = (a_1 f_1(x))( b_1 g_1(x))</m>.
+            Como <m>f_1(x)</m> e <m>g_1(x)</m> são polinômios primitivos,
+            deve ocorrer que <m>ab \mid a_1 b_1</m>, pelo Lema de Gauss.
+            Assim, existe um <m>c \in D</m> tal que <m>p(x) = c f_1(x) g_1(x)</m>.
+            Claramente, <m>\deg f(x) = \deg f_1(x)</m> e <m>\deg g(x) = \deg g_1(x)</m>.
           </p>
         </proof>
       </lemma>
 
       <p>
-        The following corollaries are direct consequences of <xref ref="domains-lemma-ufd-factorization"/>.
+        Os corolários seguintes são consequências diretas de <xref ref="domains-lemma-ufd-factorization"/>.
       </p>
 
       <corollary xml:id="domains-corollary-irreducible-poly">
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro> and <m>F</m> its field of fractions.
-            A primitive polynomial <m>p(x)</m> in <m>D[x]</m> is irreducible in <m>F[x]</m> if and only if it is irreducible in <m>D[x]</m>.
+            Seja <m>D</m> um <acro>UFD</acro> e <m>F</m> seu corpo de frações.
+            Um polinômio primitivo <m>p(x)</m> em <m>D[x]</m> é irredutível em <m>F[x]</m> se, e somente se, é irredutível em <m>D[x]</m>.
           </p>
         </statement>
       </corollary>
@@ -1012,12 +1012,12 @@
       <corollary>
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro> and <m>F</m> its field of fractions.
-            If <m>p(x)</m> is a monic polynomial in <m>D[x]</m> with <m>p(x) = f(x) g(x)</m> in <m>F[x]</m>,
-            then <m>p(x) = f_1(x) g_1(x)</m>,
-            where <m>f_1(x)</m> and <m>g_1(x)</m> are in <m>D[x]</m>.
-            Furthermore,
-            <m>\deg f(x) = \deg f_1(x)</m> and <m>\deg g(x) = \deg g_1(x)</m>.
+            Seja <m>D</m> um <acro>UFD</acro> e <m>F</m> seu corpo de frações.
+            Se <m>p(x)</m> é um polinômio mônico em <m>D[x]</m> com <m>p(x) = f(x) g(x)</m> em <m>F[x]</m>,
+            então <m>p(x) = f_1(x) g_1(x)</m>,
+            onde <m>f_1(x)</m> e <m>g_1(x)</m> estão em <m>D[x]</m>.
+            Além disso,
+            <m>\deg f(x) = \deg f_1(x)</m> e <m>\deg g(x) = \deg g_1(x)</m>.
           </p>
         </statement>
       </corollary>
@@ -1025,76 +1025,76 @@
       <theorem>
         <statement>
           <p>
-            If <m>D</m> is a <acro>UFD</acro>,
-            then <m>D[x]</m> is a <acro>UFD</acro>.
+            Se <m>D</m> é um <acro>UFD</acro>,
+            então <m>D[x]</m> é um <acro>UFD</acro>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>p(x)</m> be a nonzero polynomial in <m>D[x]</m>.
-            If <m>p(x)</m> is a constant polynomial,
-            then it must have a unique factorization since <m>D</m> is a <acro>UFD</acro>.
-            Now suppose that <m>p(x)</m> is a polynomial of positive degree in <m>D[x]</m>.
-            Let <m>F</m> be the field of fractions of <m>D</m>,
-            and let <m>p(x) = f_1(x) f_2(x) \cdots f_n(x)</m> by a factorization of <m>p(x)</m>,
-            where each <m>f_i(x)</m> is irreducible.
-            Choose <m>a_i \in D</m> such that <m>a_i f_i(x)</m> is in <m>D[x]</m>.
-            There exist <m>b_1, \ldots,
-            b_n \in D</m> such that <m>a_i f_i(x) = b_i g_i(x)</m>,
-            where <m>g_i(x)</m> is a primitive polynomial in <m>D[x]</m>.
-            By <xref ref="domains-corollary-irreducible-poly"/>, each <m>g_i(x)</m> is irreducible in <m>D[x]</m>.
-            Consequently, we can write
+            Seja <m>p(x)</m> um polinômio não nulo em <m>D[x]</m>.
+            Se <m>p(x)</m> é um polinômio constante,
+            então deve ter uma fatoração única, pois <m>D</m> é um <acro>UFD</acro>.
+            Suponha agora que <m>p(x)</m> seja um polinômio de grau positivo em <m>D[x]</m>.
+            Seja <m>F</m> o corpo de frações de <m>D</m>,
+            e seja <m>p(x) = f_1(x) f_2(x) \cdots f_n(x)</m> uma fatoração de <m>p(x)</m>,
+            em que cada <m>f_i(x)</m> é irredutível.
+            Escolha <m>a_i \in D</m> tal que <m>a_i f_i(x)</m> esteja em <m>D[x]</m>.
+            Existem <m>b_1, \ldots,
+            b_n \in D</m> tais que <m>a_i f_i(x) = b_i g_i(x)</m>,
+            onde <m>g_i(x)</m> é um polinômio primitivo em <m>D[x]</m>.
+            Por <xref ref="domains-corollary-irreducible-poly"/>, cada <m>g_i(x)</m> é irredutível em <m>D[x]</m>.
+            Consequentemente, podemos escrever
             <md>
               a_1 \cdots a_n p(x) = b_1 \cdots b_n g_1(x) \cdots g_n(x)
             </md>.
-            Let <m>b = b_1 \cdots b_n</m>.
-            Since <m>g_1(x) \cdots g_n(x)</m> is primitive,
-            <m>a_1 \cdots a_n</m> divides <m>b</m>.
-            Therefore, <m>p(x) = a g_1(x) \cdots g_n(x)</m>, where <m>a \in D</m>.
-            Since <m>D</m> is a <acro>UFD</acro>,
-            we can factor <m>a</m> as <m>u c_1 \cdots c_k</m>,
-            where <m>u</m> is a unit and each of the <m>c_i</m>'s is irreducible in <m>D</m>.
+            Seja <m>b = b_1 \cdots b_n</m>.
+            Como <m>g_1(x) \cdots g_n(x)</m> é primitivo,
+            <m>a_1 \cdots a_n</m> divide <m>b</m>.
+            Portanto, <m>p(x) = a g_1(x) \cdots g_n(x)</m>, onde <m>a \in D</m>.
+            Como <m>D</m> é um <acro>UFD</acro>,
+            podemos fatorar <m>a</m> como <m>u c_1 \cdots c_k</m>,
+            onde <m>u</m> é uma unidade e cada <m>c_i</m> é irredutível em <m>D</m>.
           </p>
 
           <p>
-            We will now show the uniqueness of this factorization.
-            Let
+            Mostraremos agora a unicidade dessa fatoração.
+            Sejam
             <md>
               p(x) = a_1 \cdots a_m f_1(x) \cdots f_n(x) = b_1 \cdots b_r g_1(x) \cdots g_s(x)
             </md>
-            be two factorizations of <m>p(x)</m>,
-            where all of the factors are irreducible in <m>D[x]</m>.
-            By <xref ref="domains-corollary-irreducible-poly"/>,
-            each of the <m>f_i</m>'s and <m>g_i</m>'s is irreducible in <m>F[x]</m>.
-            The <m>a_i</m>'s and the <m>b_i</m>'s are units in <m>F</m>.
-            Since <m>F[x]</m> is a <acro>PID</acro>, it is a <acro>UFD</acro>;
-            therefore, <m>n=s</m>.
-            Now rearrange the <m>g_i(x)</m>'s so that <m>f_i(x)</m> and <m>g_i(x)</m> are associates for <m>i = 1, \ldots, n</m>.
-            Then there exist <m>c_1, \ldots,
-            c_n</m> and <m>d_1, \ldots,
-            d_n</m> in <m>D</m> such that
-            <m>(c_i / d_i) f_i(x) = g_i(x)</m> or <m>c_i f_i(x) = d_i g_i(x)</m>.
-            The polynomials <m>f_i(x)</m> and <m>g_i(x)</m> are primitive;
-            hence, <m>c_i</m> and <m>d_i</m> are associates in <m>D</m>.
-            Thus, <m>a_1 \cdots a_m = u b_1 \cdots b_r</m> in <m>D</m>,
-            where <m>u</m> is a unit in <m>D</m>.
-            Since <m>D</m> is a unique factorization domain, <m>m = s</m>.
-            Finally, we can reorder the <m>b_i</m>'s so that <m>a_i</m> and <m>b_i</m> are associates for each <m>i</m>.
-            This completes the uniqueness part of the proof.
+            duas fatorações de <m>p(x)</m>,
+            em que todos os fatores são irredutíveis em <m>D[x]</m>.
+            Por <xref ref="domains-corollary-irreducible-poly"/>,
+            cada um dos <m>f_i</m> e <m>g_i</m> é irredutível em <m>F[x]</m>.
+            Os <m>a_i</m> e os <m>b_i</m> são unidades em <m>F</m>.
+            Como <m>F[x]</m> é um <acro>PID</acro>, ele é um <acro>UFD</acro>;
+            portanto, <m>n=s</m>.
+            Agora reordene os <m>g_i(x)</m> de modo que <m>f_i(x)</m> e <m>g_i(x)</m> sejam associados para <m>i = 1, \ldots, n</m>.
+            Então existem <m>c_1, \ldots,
+            c_n</m> e <m>d_1, \ldots,
+            d_n</m> em <m>D</m> tais que
+            <m>(c_i / d_i) f_i(x) = g_i(x)</m> ou <m>c_i f_i(x) = d_i g_i(x)</m>.
+            Os polinômios <m>f_i(x)</m> e <m>g_i(x)</m> são primitivos;
+            logo, <m>c_i</m> e <m>d_i</m> são associados em <m>D</m>.
+            Assim, <m>a_1 \cdots a_m = u b_1 \cdots b_r</m> em <m>D</m>,
+            onde <m>u</m> é uma unidade em <m>D</m>.
+            Como <m>D</m> é um domínio de fatoração única, <m>m = s</m>.
+            Finalmente, podemos reordenar os <m>b_i</m> de modo que <m>a_i</m> e <m>b_i</m> sejam associados para cada <m>i</m>.
+            Isso completa a parte da prova relativa à unicidade.
           </p>
         </proof>
       </theorem>
 
       <p>
-        The theorem that we have just proven has several obvious but important corollaries.
+        O teorema que acabamos de provar tem vários corolários óbvios, mas importantes.
       </p>
 
       <corollary>
         <statement>
           <p>
-            Let <m>F</m> be a field.
-            Then <m>F[x]</m> is a <acro>UFD</acro>.
+            Seja <m>F</m> um corpo.
+            Então <m>F[x]</m> é um <acro>UFD</acro>.
           </p>
         </statement>
       </corollary>
@@ -1102,8 +1102,8 @@
       <corollary xml:id="domains-corollary-integer-poly-ufd">
         <statement>
           <p>
-            The ring of polynomials over the integers,
-            <m>{\mathbb Z}[x]</m>, is a <acro>UFD</acro>.
+            O anel de polinômios sobre os inteiros,
+            <m>{\mathbb Z}[x]</m>, é um <acro>UFD</acro>.
           </p>
         </statement>
       </corollary>
@@ -1111,18 +1111,18 @@
       <corollary>
         <statement>
           <p>
-            Let <m>D</m> be a <acro>UFD</acro>.
-            Then <m>D[x_1, \ldots, x_n]</m> is a <acro>UFD</acro>.
+            Seja <m>D</m> um <acro>UFD</acro>.
+            Então <m>D[x_1, \ldots, x_n]</m> é um <acro>UFD</acro>.
           </p>
         </statement>
       </corollary>
 
       <remark>
         <p>
-          It is important to notice that every Euclidean domain is a <acro>PID</acro> and every <acro>PID</acro> is a <acro>UFD</acro>.
-          However, the converse of each of these statements fails.
-          There are principal ideal domains that are not Euclidean domains,
-          and there are unique factorization domains that are not principal ideal domains
+          É importante observar que todo domínio euclidiano é um <acro>PID</acro> e todo <acro>PID</acro> é um <acro>UFD</acro>.
+          No entanto, a recíproca de cada uma dessas afirmações falha.
+          Há domínios de ideais principais que não são domínios euclidianos,
+          e há domínios de fatoração única que não são domínios de ideais principais
           (<m>{\mathbb Z}[x]</m>).
         </p>
       </remark>
@@ -1130,70 +1130,70 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage supports distinctions between
-          <q>plain</q> rings, domains,
-          principal ideal domains and fields.
-          Support is often very good for constructions and computations with PID's, but sometimes problems get significantly harder (computationally) when a ring has less structure that that of a PID. So be aware when using Sage that some questions may go unanswered for rings with less structure.
+          O Sage distingue entre
+          anéis <q>comuns</q>, domínios,
+          domínios de ideais principais e corpos.
+          O suporte costuma ser muito bom para construções e cálculos com PIDs, mas às vezes os problemas ficam significativamente mais difíceis (computacionalmente) quando um anel tem menos estrutura que um PID. Portanto, ao usar o Sage, esteja ciente de que algumas perguntas podem ficar sem resposta para anéis com menos estrutura.
         </p>
       </paragraphs>
 
     </subsection>
 
     <subsection xml:id="domains-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota Histórica</title>
       <p>
         Karl Friedrich Gauss,<idx><h>Gauss, Karl Friedrich</h></idx>
-        born in Brunswick, Germany on April 30, 1777,
-        is considered to be one of the greatest mathematicians who ever lived.
-        Gauss was truly a child prodigy.
-        At the age of three he was able to detect errors in the books of his father's business.
-        Gauss entered college at the age of 15.
-        Before the age of 20, Gauss was able to construct a regular <m>17</m>-sided polygon with a ruler and compass.
-        This was the first new construction of a regular <m>n</m>-sided polygon since the time of the ancient Greeks.
-        Gauss succeeded in showing that if <m>N= 2^{2^n} + 1</m> was prime,
-        then it was possible to construct a regular <m>N</m>-sided polygon.
+        nascido em Brunswick, Alemanha, em 30 de abril de 1777,
+        é considerado um dos maiores matemáticos que já viveram.
+        Gauss foi verdadeiramente uma criança prodígio.
+        Aos três anos, era capaz de detectar erros nos livros do negócio de seu pai.
+        Gauss ingressou na universidade aos 15 anos.
+        Antes dos 20 anos, Gauss foi capaz de construir um polígono regular de <m>17</m> lados com régua e compasso.
+        Essa foi a primeira construção nova de um polígono regular de <m>n</m> lados desde a época dos antigos gregos.
+        Gauss conseguiu mostrar que, se <m>N= 2^{2^n} + 1</m> fosse primo,
+        seria possível construir um polígono regular de <m>N</m> lados.
       </p>
 
       <p>
-        Gauss obtained his Ph.D. in 1799 under the direction of Pfaff at the University of Helmstedt.
-        In his dissertation he gave the first complete proof of the Fundamental Theorem of Algebra,
-        which states that every polynomial with real coefficients can be factored into linear factors over the complex numbers.
-        The acceptance of complex numbers was brought about by Gauss,
-        who was the first person to use the notation of <m>i</m> for <m>\sqrt{-1}</m>.
+        Gauss obteve seu doutorado em 1799 sob a orientação de Pfaff, na Universidade de Helmstedt.
+        Em sua tese, apresentou a primeira prova completa do Teorema Fundamental da Álgebra,
+        que afirma que todo polinômio com coeficientes reais pode ser fatorado em fatores lineares sobre os números complexos.
+        A aceitação dos números complexos foi promovida por Gauss,
+        que foi a primeira pessoa a usar a notação <m>i</m> para <m>\sqrt{-1}</m>.
       </p>
 
       <p>
-        Gauss then turned his attention toward number theory;
-        in 1801, he published his famous book on number theory,
+        Gauss então voltou sua atenção para a teoria dos números;
+        em 1801, publicou seu famoso livro sobre teoria dos números,
         <em>Disquisitiones Arithmeticae</em>.
-        Throughout his life Gauss was intrigued with this branch of mathematics.
-        He once wrote, <q>Mathematics is the queen of the sciences,
-        and the theory of numbers is the queen of mathematics.</q>
+        Ao longo de sua vida, Gauss se interessou por esse ramo da matemática.
+        Certa vez escreveu: <q>A matemática é a rainha das ciências,
+        e a teoria dos números é a rainha da matemática.</q>
       </p>
 
       <p>
-        In 1807, Gauss was appointed director of the Observatory at the University of Göttingen,
-        a position he held until his death.
-        This position required him to study applications of mathematics to the sciences.
-        He succeeded in making contributions to fields such as astronomy,
-        mechanics,
-        optics, geodesy, and magnetism.
-        Along with Wilhelm Weber,
-        he coinvented the first practical electric telegraph some years before a better version was invented by Samuel F. B. Morse.
+        Em 1807, Gauss foi nomeado diretor do Observatório da Universidade de Göttingen,
+        cargo que ocupou até sua morte.
+        Essa posição exigia que estudasse aplicações da matemática às ciências.
+        Ele conseguiu contribuir para áreas como astronomia,
+        mecânica,
+        óptica, geodésia e magnetismo.
+        Junto com Wilhelm Weber,
+        foi coinventor do primeiro telégrafo elétrico prático, alguns anos antes de uma versão melhor ser inventada por Samuel F. B. Morse.
       </p>
 
       <p>
-        Gauss was clearly the most prominent mathematician in the world in the early nineteenth century.
-        His status naturally made his discoveries subject to intense scrutiny.
-        Gauss's cold and distant personality many times led him to ignore the work of his contemporaries,
-        making him many enemies.
-        He did not enjoy teaching very much,
-        and young mathematicians who sought him out for encouragement were often rebuffed.
-        Nevertheless, he had many outstanding students,
-        including Eisenstein, Riemann, Kummer, Dirichlet, and Dedekind.
-        Gauss also offered a great deal of encouragement to Sophie Germain (1776<ndash/>1831),
-        who overcame the many obstacles facing women in her day to become a very prominent mathematician.
-        Gauss died at the age of 78 in Göttingen on February 23, 1855.
+        Gauss era claramente o matemático mais proeminente do mundo no início do século XIX.
+        Seu status naturalmente fez com que suas descobertas fossem submetidas a intenso escrutínio.
+        A personalidade fria e distante de Gauss muitas vezes o levou a ignorar o trabalho de seus contemporâneos,
+        fazendo com que conquistasse muitos inimigos.
+        Ele não gostava muito de ensinar,
+        e jovens matemáticos que o procuravam em busca de incentivo eram frequentemente repelidos.
+        Ainda assim, teve muitos alunos notáveis,
+        entre eles Eisenstein, Riemann, Kummer, Dirichlet e Dedekind.
+        Gauss também ofereceu grande incentivo a Sophie Germain (1776<ndash/>1831),
+        que superou os muitos obstáculos enfrentados pelas mulheres de sua época para se tornar uma matemática muito proeminente.
+        Gauss morreu aos 78 anos, em Göttingen, em 23 de fevereiro de 1855.
       </p>
     </subsection>
 
@@ -1204,7 +1204,7 @@
     <exercise label="rq-domains-abstract">
       <statement>
         <p>
-          Integral domains are an abstraction of which two fundamental rings that we have already studied?
+          Os domínios de integridade são uma abstração de quais dois anéis fundamentais que já estudamos?
         </p>
       </statement>
       <response/>
@@ -1213,7 +1213,7 @@
     <exercise label="rq-domains-domina-types">
       <statement>
         <p>
-          What are the various types of integral domains defined in this section?
+          Quais são os vários tipos de domínios de integridade definidos nesta seção?
         </p>
       </statement>
       <response/>
@@ -1222,7 +1222,7 @@
     <exercise label="rq-domains-ring-of-fractions">
       <statement>
         <p>
-          The field of fractions of a ring abstracts what idea from basic mathematics?
+          O corpo de frações de um anel abstrai qual ideia da matemática básica?
         </p>
       </statement>
       <response/>
@@ -1231,8 +1231,8 @@
     <exercise label="rq-domains-max-ideals">
       <statement>
         <p>
-          In the previous chapter we had a theorem about irreducible polynomials generating maximal ideals.
-          Which theorem in this chapter generalizes this previous result?
+          No capítulo anterior, tivemos um teorema sobre polinômios irredutíveis gerando ideais maximais.
+          Qual teorema deste capítulo generaliza esse resultado anterior?
         </p>
       </statement>
       <response/>
@@ -1241,8 +1241,8 @@
     <exercise label="rq-domains-UFDs">
       <statement>
         <p>
-          Describe an example which is a <init>UFD</init>,
-          but not a <init>PID</init>.
+          Descreva um exemplo que seja um <init>UFD</init>,
+          mas não um <init>PID</init>.
         </p>
       </statement>
       <response/>
@@ -1254,22 +1254,22 @@
     <!-- File: domains.xml  -->
     <!-- Title: Integral Domains -->
   <exercises xml:id="domains-exercises" filenamebase="domains">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="domains-exercise-Z-root-3">
       <statement>
         <p>
-          Let <m>z = a + b \sqrt{3}\, i</m> be in <m>{\mathbb Z}[ \sqrt{3}\, i]</m>.
-          If <m>a^2 + 3 b^2 = 1</m>, show that <m>z</m> must be a unit.
-          Show that the only units of
-          <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> are <m>1</m> and <m>-1</m>.
+          Seja <m>z = a + b \sqrt{3}\, i</m> um elemento de <m>{\mathbb Z}[ \sqrt{3}\, i]</m>.
+          Se <m>a^2 + 3 b^2 = 1</m>, mostre que <m>z</m> deve ser uma unidade.
+          Mostre que as únicas unidades de
+          <m>{\mathbb Z}[ \sqrt{3}\, i ]</m> são <m>1</m> e <m>-1</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Note that <m>z^{-1} = 1/(a + b\sqrt{3}\, i) = (a -b \sqrt{3}\, i)/(a^2 + 3b^2)</m> is in
-          <m>{\mathbb Z}[\sqrt{3}\, i]</m> if and only if <m>a^2 + 3 b^2 = 1</m>.
-          The only integer solutions to the equation are <m>a = \pm 1, b = 0</m>.
+          Observe que <m>z^{-1} = 1/(a + b\sqrt{3}\, i) = (a -b \sqrt{3}\, i)/(a^2 + 3b^2)</m> está em
+          <m>{\mathbb Z}[\sqrt{3}\, i]</m> se, e somente se, <m>a^2 + 3 b^2 = 1</m>.
+          As únicas soluções inteiras da equação são <m>a = \pm 1, b = 0</m>.
         </p>
       </hint>
     </exercise>
@@ -1277,9 +1277,9 @@
     <exercise number="2" xml:id="domains-exercise-Z-i">
       <statement>
         <p>
-          The Gaussian integers, <m>{\mathbb Z}[i]</m>, are a <acro>UFD</acro>.
-          Factor each of the following elements in
-          <m>{\mathbb Z}[i]</m> into a product of irreducibles.
+          Os inteiros gaussianos, <m>{\mathbb Z}[i]</m>, formam um <acro>UFD</acro>.
+          Fatore cada um dos elementos seguintes em
+          <m>{\mathbb Z}[i]</m> como um produto de irredutíveis.
 
           <ol cols="2">
             <li>
@@ -1318,25 +1318,25 @@
     <exercise number="3" xml:id="domains-exercise-field-of-fractions">
       <statement>
         <p>
-          Let <m>D</m> be an integral domain.
+          Seja <m>D</m> um domínio de integridade.
 
           <ol>
             <li>
               <p>
-                Prove that <m>F_D</m> is an abelian group under the operation of addition.
+                Prove que <m>F_D</m> é um grupo abeliano sob a operação de adição.
               </p>
             </li>
 
             <li>
               <p>
-                Show that the operation of multiplication is well-defined in the field of fractions,
+                Mostre que a operação de multiplicação está bem definida no corpo de frações,
                 <m>F_D</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Verify the associative and commutative properties for multiplication in <m>F_D</m>.
+                Verifique as propriedades associativa e comutativa da multiplicação em <m>F_D</m>.
               </p>
             </li>
           </ol>
@@ -1347,12 +1347,12 @@
     <exercise number="4" xml:id="domains-exercise-subring-field">
       <statement>
         <p>
-          Prove or disprove: Any subring of a field <m>F</m> containing <m>1</m> is an integral domain.
+          Prove ou refute: todo subanel de um corpo <m>F</m> que contém <m>1</m> é um domínio de integridade.
         </p>
       </statement>
       <hint>
         <p>
-          True.
+          Verdadeiro.
         </p>
       </hint>
     </exercise>
@@ -1360,8 +1360,8 @@
     <exercise number="5" xml:id="domains-exercise-prime-irreducible">
       <statement>
         <p>
-          Prove or disprove: If <m>D</m> is an integral domain,
-          then every prime element in <m>D</m> is also irreducible in <m>D</m>.
+          Prove ou refute: se <m>D</m> é um domínio de integridade,
+          então todo elemento primo em <m>D</m> também é irredutível em <m>D</m>.
         </p>
       </statement>
     </exercise>
@@ -1371,8 +1371,8 @@
     <exercise number="6" xml:id="domains-exercise-subfield-iso-Q">
       <statement>
         <p>
-          Let <m>F</m> be a field of characteristic zero.
-          Prove that <m>F</m> contains a subfield isomorphic to <m>{\mathbb Q}</m>.
+          Seja <m>F</m> um corpo de característica zero.
+          Prove que <m>F</m> contém um subcorpo isomorfo a <m>{\mathbb Q}</m>.
         </p>
       </statement>
     </exercise>
@@ -1382,18 +1382,18 @@
     <exercise number="7" xml:id="domains-exercise-F-x">
       <statement>
         <p>
-          Let <m>F</m> be a field.
+          Seja <m>F</m> um corpo.
 
           <ol>
             <li>
               <p>
-                Prove that the field of fractions of <m>F[x]</m>, denoted by <m>F(x)</m>,
-                is isomorphic to the set all rational expressions <m>p(x) / q(x)</m>,
-                where <m>q(x)</m> is not the zero polynomial.
+                Prove que o corpo de frações de <m>F[x]</m>, denotado por <m>F(x)</m>,
+                é isomorfo ao conjunto de todas as expressões racionais <m>p(x) / q(x)</m>,
+                em que <m>q(x)</m> não é o polinômio zero.
 
                 <notation>
                   <usage><m>F(x)</m></usage>
-                  <description>field of rational functions in <m>x</m></description>
+                  <description>corpo das funções racionais em <m>x</m></description>
                 </notation>
 
               </p>
@@ -1401,20 +1401,20 @@
 
             <li>
               <p>
-                Let <m>p(x_1, \ldots, x_n)</m> and
+                Sejam <m>p(x_1, \ldots, x_n)</m> e
                 <m>q(x_1, \ldots,
-                x_n)</m> be polynomials in <m>F[x_1, \ldots, x_n]</m>.
-                Show that the set of all rational expressions
+                x_n)</m> polinômios em <m>F[x_1, \ldots, x_n]</m>.
+                Mostre que o conjunto de todas as expressões racionais
                 <m>p(x_1, \ldots, x_n) / q(x_1, \ldots,
-                x_n)</m> is isomorphic to the field of fractions of <m>F[x_1, \ldots,
+                x_n)</m> é isomorfo ao corpo de frações de <m>F[x_1, \ldots,
                 x_n]</m>.
-                We denote the field of fractions of
+                Denotamos o corpo de frações de
                 <m>F[x_1, \ldots,
                 x_n]</m> by <m>F(x_1, \ldots, x_n)</m>.
 
                 <notation>
                   <usage><m>F(x_1, \dots, x_n)</m></usage>
-                  <description>field of rational functions in <m>x_1, \ldots, x_n</m></description>
+                  <description>corpo das funções racionais em <m>x_1, \ldots, x_n</m></description>
                 </notation>
 
               </p>
@@ -1429,9 +1429,9 @@
     <exercise number="8" xml:id="domains-exercise-Z-p-x">
       <statement>
         <p>
-          Let <m>p</m> be prime and denote the field of fractions of
-          <m>{\mathbb Z}_p[x]</m> by <m>{\mathbb Z}_p(x)</m>.
-          Prove that <m>{\mathbb Z}_p(x)</m> is an infinite field of characteristic <m>p</m>.
+          Seja <m>p</m> primo e denote o corpo de frações de
+          <m>{\mathbb Z}_p[x]</m> por <m>{\mathbb Z}_p(x)</m>.
+          Prove que <m>{\mathbb Z}_p(x)</m> é um corpo infinito de característica <m>p</m>.
         </p>
       </statement>
     </exercise>
@@ -1441,8 +1441,8 @@
     <exercise number="9" xml:id="domains-exercise-Q-i">
       <statement>
         <p>
-          Prove that the field of fractions of the Gaussian integers,
-          <m>{\mathbb Z}[i]</m>, is
+          Prove que o corpo de frações dos inteiros gaussianos,
+          <m>{\mathbb Z}[i]</m>, é
           <md>
             {\mathbb Q}(i) = \{ p + q i : p, q \in {\mathbb Q}  \}
           </md>.
@@ -1450,8 +1450,8 @@
       </statement>
       <hint>
         <p>
-          Let <m>z = a + bi</m> and <m>w = c + di \neq 0</m> be in <m>{\mathbb Z}[i]</m>.
-          Prove that <m>z/w \in {\mathbb Q}(i)</m>.
+          Sejam <m>z = a + bi</m> e <m>w = c + di \neq 0</m> elementos de <m>{\mathbb Z}[i]</m>.
+          Prove que <m>z/w \in {\mathbb Q}(i)</m>.
         </p>
       </hint>
     </exercise>
@@ -1461,29 +1461,29 @@
     <exercise number="10" xml:id="domains-exercise-prime-field">
       <statement>
         <p>
-          A field <m>F</m> is called a <term>prime field</term>
-          if it has no proper subfields.
-          If <m>E</m> is a subfield of <m>F</m> and <m>E</m> is a prime field,
-          then <m>E</m> is a <term>prime subfield</term> of <m>F</m>.
+          Um corpo <m>F</m> é chamado de <term>corpo primo</term>
+          se não possui subcorpos próprios.
+          Se <m>E</m> é um subcorpo de <m>F</m> e <m>E</m> é um corpo primo,
+          então <m>E</m> é um <term>subcorpo primo</term> de <m>F</m>.
 
           <ol>
             <li>
               <p>
-                Prove that every field contains a unique prime subfield.
+                Prove que todo corpo contém um único subcorpo primo.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>F</m> is a field of characteristic zero, prove that the prime subfield of <m>F</m> is isomorphic to the field of rational numbers,
+                Se <m>F</m> é um corpo de característica zero, prove que o subcorpo primo de <m>F</m> é isomorfo ao corpo dos números racionais,
                 <m>{\mathbb Q}</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>F</m> is a field of characteristic <m>p</m>,
-                prove that the prime subfield of <m>F</m> is isomorphic to <m>{\mathbb Z}_p</m>.
+                Se <m>F</m> é um corpo de característica <m>p</m>,
+                prove que o subcorpo primo de <m>F</m> é isomorfo a <m>{\mathbb Z}_p</m>.
               </p>
             </li>
           </ol>
@@ -1496,30 +1496,30 @@
     <exercise number="11" xml:id="domains-exercise-Z-root-2">
       <statement>
         <p>
-          Let <m>{\mathbb Z}[ \sqrt{2}\, ] = \{ a + b \sqrt{2} : a, b \in {\mathbb Z} \}</m>.
+          Seja <m>{\mathbb Z}[ \sqrt{2}\, ] = \{ a + b \sqrt{2} : a, b \in {\mathbb Z} \}</m>.
 
           <ol>
             <li>
               <p>
-                Prove that <m>{\mathbb Z}[ \sqrt{2}\, ]</m> is an integral domain.
+                Prove que <m>{\mathbb Z}[ \sqrt{2}\, ]</m> é um domínio de integridade.
               </p>
             </li>
 
             <li>
               <p>
-                Find all of the units in <m>{\mathbb Z}[\sqrt{2}\, ]</m>.
+                Encontre todas as unidades em <m>{\mathbb Z}[\sqrt{2}\, ]</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Determine the field of fractions of <m>{\mathbb Z}[ \sqrt{2}\, ]</m>.
+                Determine o corpo de frações de <m>{\mathbb Z}[ \sqrt{2}\, ]</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>{\mathbb Z}[ \sqrt{2} i ]</m> is a Euclidean domain under the Euclidean valuation <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
+                Prove que <m>{\mathbb Z}[ \sqrt{2} i ]</m> é um domínio euclidiano sob a valoração euclidiana <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
               </p>
             </li>
           </ol>
@@ -1532,25 +1532,25 @@
     <exercise number="12" xml:id="domains-exercise-UFD">
       <statement>
         <p>
-          Let <m>D</m> be a <acro>UFD</acro>.
-          An element <m>d \in D</m> is a <term>greatest common divisor of <m>a</m> and <m>b</m> in <m>D</m></term>
-          if <m>d \mid a</m> and <m>d \mid b</m> and <m>d</m> is divisible by any other element dividing both <m>a</m> and <m>b</m>.
+          Seja <m>D</m> um <acro>UFD</acro>.
+          Um elemento <m>d \in D</m> é um <term>máximo divisor comum de <m>a</m> e <m>b</m> em <m>D</m></term>
+          se <m>d \mid a</m> e <m>d \mid b</m> e <m>d</m> é divisível por qualquer outro elemento que divida simultaneamente <m>a</m> e <m>b</m>.
 
           <ol>
             <li>
               <p>
-                If <m>D</m> is a <acro>PID</acro> and <m>a</m> and <m>b</m> are both nonzero elements of <m>D</m>,
-                prove there exists a unique greatest common divisor of <m>a</m> and <m>b</m> up to associates.
-                That is, if <m>d</m> and <m>d'</m> are both greatest common divisors of <m>a</m> and <m>b</m>,
-                then <m>d</m> and <m>d'</m> are associates.
-                We write <m>\gcd( a, b)</m> for the greatest common divisor of <m>a</m> and <m>b</m>.
+                Se <m>D</m> é um <acro>PID</acro> e <m>a</m> e <m>b</m> são elementos não nulos de <m>D</m>,
+                prove que existe um máximo divisor comum único de <m>a</m> e <m>b</m>, a menos de associados.
+                Isto é, se <m>d</m> e <m>d'</m> são máximos divisores comuns de <m>a</m> e <m>b</m>,
+                então <m>d</m> e <m>d'</m> são associados.
+                Escrevemos <m>\gcd( a, b)</m> para o máximo divisor comum de <m>a</m> e <m>b</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>D</m> be a <acro>PID</acro> and <m>a</m> and <m>b</m> be nonzero elements of <m>D</m>.
-                Prove that there exist elements <m>s</m> and <m>t</m> in <m>D</m> such that <m>\gcd(a, b) = as + bt</m>.
+                Seja <m>D</m> um <acro>PID</acro> e sejam <m>a</m> e <m>b</m> elementos não nulos de <m>D</m>.
+                Prove que existem elementos <m>s</m> e <m>t</m> em <m>D</m> tais que <m>\gcd(a, b) = as + bt</m>.
               </p>
             </li>
           </ol>
@@ -1563,10 +1563,10 @@
     <exercise number="13" xml:id="domains-exercise-associates">
       <statement>
         <p>
-          Let <m>D</m> be an integral domain.
-          Define a relation on <m>D</m> by
-          <m>a \sim b</m> if <m>a</m> and <m>b</m> are associates in <m>D</m>.
-          Prove that <m>\sim</m> is an equivalence relation on <m>D</m>.
+          Seja <m>D</m> um domínio de integridade.
+          Defina uma relação em <m>D</m> por
+          <m>a \sim b</m> se <m>a</m> e <m>b</m> são associados em <m>D</m>.
+          Prove que <m>\sim</m> é uma relação de equivalência em <m>D</m>.
         </p>
       </statement>
     </exercise>
@@ -1574,9 +1574,9 @@
     <exercise number="14" xml:id="domains-exercise-euclidean-valuation-unit">
       <statement>
         <p>
-          Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
-          If <m>u</m> is a unit in <m>D</m>,
-          show that <m>\nu(u) = \nu(1)</m>.
+          Seja <m>D</m> um domínio euclidiano com valoração euclidiana <m>\nu</m>.
+          Se <m>u</m> é uma unidade em <m>D</m>,
+          mostre que <m>\nu(u) = \nu(1)</m>.
         </p>
       </statement>
     </exercise>
@@ -1584,16 +1584,16 @@
     <exercise number="15" xml:id="domains-exercise-euclidean-valuation-associates">
       <statement>
         <p>
-          Let <m>D</m> be a Euclidean domain with Euclidean valuation <m>\nu</m>.
-          If <m>a</m> and <m>b</m> are associates in <m>D</m>,
-          prove that <m>\nu(a) = \nu(b)</m>.
+          Seja <m>D</m> um domínio euclidiano com valoração euclidiana <m>\nu</m>.
+          Se <m>a</m> e <m>b</m> são associados em <m>D</m>,
+          prove que <m>\nu(a) = \nu(b)</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a = ub</m> with <m>u</m> a unit.
-          Then <m>\nu(b) \leq \nu(ub) \leq \nu(a)</m>.
-          Similarly, <m>\nu(a) \leq \nu(b)</m>.
+          Seja <m>a = ub</m>, com <m>u</m> uma unidade.
+          Então <m>\nu(b) \leq \nu(ub) \leq \nu(a)</m>.
+          Analogamente, <m>\nu(a) \leq \nu(b)</m>.
         </p>
       </hint>
     </exercise>
@@ -1601,12 +1601,12 @@
     <exercise number="16" xml:id="domains-exercise-Z-root-5-i">
       <statement>
         <p>
-          Show that <m>{\mathbb Z}[\sqrt{5}\, i]</m> is not a unique factorization domain.
+          Mostre que <m>{\mathbb Z}[\sqrt{5}\, i]</m> não é um domínio de fatoração única.
         </p>
       </statement>
       <hint>
         <p>
-          Show that <m>21</m> can be factored in two different ways.
+          Mostre que <m>21</m> pode ser fatorado de duas maneiras diferentes.
         </p>
       </hint>
     </exercise>
@@ -1616,7 +1616,7 @@
     <exercise number="17" xml:id="domains-exercise-subdomain-UFD">
       <statement>
         <p>
-          Prove or disprove: Every subdomain of a <acro>UFD</acro> is also a <acro>UFD</acro>.
+          Prove ou refute: todo subdomínio de um <acro>UFD</acro> também é um <acro>UFD</acro>.
         </p>
       </statement>
     </exercise>
@@ -1624,13 +1624,13 @@
     <exercise number="18" xml:id="domains-exercise-finitely-generated">
       <statement>
         <p>
-          An ideal of a commutative ring <m>R</m> is said to be
-          <term>finitely generated</term>
-          if there exist elements <m>a_1, \ldots,
-          a_n</m> in <m>R</m> such that every element <m>r</m> in the ideal can be written as
-          <m>a_1 r_1 + \cdots + a_n r_n</m> for some <m>r_1, \ldots,
-          r_n</m> in <m>R</m>.
-          Prove that <m>R</m> satisfies the ascending chain condition if and only if every ideal of <m>R</m> is finitely generated.
+          Diz-se que um ideal de um anel comutativo <m>R</m> é
+          <term>finitamente gerado</term>
+          se existem elementos <m>a_1, \ldots,
+          a_n</m> em <m>R</m> tais que todo elemento <m>r</m> do ideal pode ser escrito como
+          <m>a_1 r_1 + \cdots + a_n r_n</m> para alguns <m>r_1, \ldots,
+          r_n</m> em <m>R</m>.
+          Prove que <m>R</m> satisfaz a condição de cadeia ascendente se, e somente se, todo ideal de <m>R</m> é finitamente gerado.
         </p>
       </statement>
     </exercise>
@@ -1638,15 +1638,15 @@
     <exercise number="19" xml:id="domains-exercise-artinian">
       <statement>
         <p>
-          Let <m>D</m> be an integral domain with a descending chain of ideals <m>I_1 \supset I_2 \supset I_3 \supset \cdots</m>.
-          Suppose that there exists an <m>N</m> such that
-          <m>I_k = I_N</m> for all <m>k \geq N</m>.
-          A ring satisfying this condition is said to satisfy the
-          <term>descending chain condition</term>, or <term>DCC</term>.
-          Rings satisfying the DCC are called
-          <term>Artinian rings</term>, after Emil Artin.
-          Show that if <m>D</m> satisfies the descending chain condition,
-          it must satisfy the ascending chain condition.
+          Seja <m>D</m> um domínio de integridade com uma cadeia descendente de ideais <m>I_1 \supset I_2 \supset I_3 \supset \cdots</m>.
+          Suponha que exista um <m>N</m> tal que
+          <m>I_k = I_N</m> para todo <m>k \geq N</m>.
+          Diz-se que um anel que satisfaz essa condição satisfaz a
+          <term>condição de cadeia descendente</term>, ou <term>DCC</term>.
+          Os anéis que satisfazem a DCC são chamados de
+          <term>anéis artinianos</term>, em homenagem a Emil Artin.
+          Mostre que, se <m>D</m> satisfaz a condição de cadeia descendente,
+          então deve satisfazer a condição de cadeia ascendente.
         </p>
       </statement>
     </exercise>
@@ -1654,64 +1654,64 @@
     <exercise number="20" xml:id="domains-exercise-local-ring">
       <statement>
         <p>
-          Let <m>R</m> be a commutative ring with identity.
-          We define a <term>multiplicative subset</term>
-          of <m>R</m> to be a subset <m>S</m> such that <m>1 \in S</m> and
-          <m>ab \in S</m> if <m>a, b \in S</m>.
+          Seja <m>R</m> um anel comutativo com identidade.
+          Definimos um <term>subconjunto multiplicativo</term>
+          de <m>R</m> como um subconjunto <m>S</m> tal que <m>1 \in S</m> e
+          <m>ab \in S</m> se <m>a, b \in S</m>.
 
           <ol>
             <li>
               <p>
-                Define a relation <m>\sim</m> on
-                <m>R \times S</m> by <m>(a, s) \sim (a', s')</m> if there exists an
-                <m>s^\ast \in S</m> such that <m>s^\ast(s' a -s a') = 0</m>.
-                Show that <m>\sim</m> is an equivalence relation on <m>R \times S</m>.
+                Defina uma relação <m>\sim</m> em
+                <m>R \times S</m> por <m>(a, s) \sim (a', s')</m> se existe um
+                <m>s^\ast \in S</m> tal que <m>s^\ast(s' a -s a') = 0</m>.
+                Mostre que <m>\sim</m> é uma relação de equivalência em <m>R \times S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>a/s</m> denote the equivalence class of <m>(a,s) \in R \times S</m> and let
-                <m> S^{-1}R</m> be the set of all equivalence classes with respect to <m>\sim</m>.
-                Define the operations of addition and multiplication on <m>S^{-1} R</m> by
+                Denote por <m>a/s</m> a classe de equivalência de <m>(a,s) \in R \times S</m> e seja
+                <m> S^{-1}R</m> o conjunto de todas as classes de equivalência relativamente a <m>\sim</m>.
+                Defina as operações de adição e multiplicação em <m>S^{-1} R</m> por
                 <md>
                   <mrow>\frac{a}{s} + \frac{b}{t} &amp; = \frac{at + b s}{s t}</mrow>
                   <mrow>\frac{a}{s}  \frac{b}{t} &amp; = \frac{a b}{s t}</mrow>
                 </md>,
-                respectively.
-                Prove that these operations are well-defined on <m>S^{-1}R</m> and that <m>S^{-1}R</m> is a ring with identity under these operations.
-                The ring <m>S^{-1}R</m> is called the
-                <term>ring of quotients</term>
-                of <m>R</m> with respect to <m>S</m>.
+                respectivamente.
+                Prove que essas operações estão bem definidas em <m>S^{-1}R</m> e que <m>S^{-1}R</m> é um anel com identidade sob essas operações.
+                O anel <m>S^{-1}R</m> é chamado de
+                <term>anel de quocientes</term>
+                de <m>R</m> relativamente a <m>S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that the map <m>\psi : R \rightarrow S^{-1}R</m> defined by
-                <m>\psi(a) = a/1</m> is a ring homomorphism.
+                Mostre que a aplicação <m>\psi : R \rightarrow S^{-1}R</m> definida por
+                <m>\psi(a) = a/1</m> é um homomorfismo de anéis.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>R</m> has no zero divisors and <m>0 \notin S</m>,
-                show that <m>\psi</m> is one-to-one.
+                Se <m>R</m> não possui divisores de zero e <m>0 \notin S</m>,
+                mostre que <m>\psi</m> é injetiva.
               </p>
             </li>
 
             <li>
               <p>
-                Prove that <m>P</m> is a prime ideal of <m>R</m> if and only if
-                <m>S = R \setminus P</m> is a multiplicative subset of <m>R</m>.
+                Prove que <m>P</m> é um ideal primo de <m>R</m> se, e somente se,
+                <m>S = R \setminus P</m> é um subconjunto multiplicativo de <m>R</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>P</m> is a prime ideal of <m>R</m> and <m>S = R \setminus P</m>,
-                show that the ring of quotients <m>S^{-1}R</m> has a unique maximal ideal.
-                Any ring that has a unique maximal ideal is called a <term>local ring</term>.
+                Se <m>P</m> é um ideal primo de <m>R</m> e <m>S = R \setminus P</m>,
+                mostre que o anel de quocientes <m>S^{-1}R</m> possui um único ideal maximal.
+                Todo anel que possui um único ideal maximal é chamado de <term>anel local</term>.
               </p>
             </li>
           </ol>
@@ -1722,7 +1722,7 @@
   </exercises>
 
   <references xml:id="domains-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e Leituras Sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
       Atiyah, M. F.  and MacDonald, I. G.
@@ -1741,24 +1741,24 @@
     <title>Sage</title>
     <introduction>
       <p>
-        We have already seen some integral domains and unique factorizations in the previous two chapters.
-        In addition to what we have already seen, Sage has support for some of the topics from this section,
-        but the coverage is limited.
-        Some functions will work for some rings and not others,
-        while some functions are not yet part of Sage.
-        So we will give some examples,
-        but this is far from comprehensive.
+        Já vimos alguns domínios de integridade e fatorações únicas nos dois capítulos anteriores.
+        Além do que já vimos, o Sage oferece suporte a alguns dos tópicos desta seção,
+        mas a cobertura é limitada.
+        Algumas funções funcionam para certos anéis, mas não para outros,
+        enquanto algumas funções ainda não fazem parte do Sage.
+        Portanto, daremos alguns exemplos,
+        mas eles estão longe de ser abrangentes.
       </p>
     </introduction>
 
     <subsection>
-      <title>Field of Fractions</title>
+      <title>Corpo de Frações</title>
       <p>
-        Sage is frequently able to construct a field of fractions,
-        or identify a certain field as the field of fractions.
-        For example,
-        the ring of integers and the field of rational numbers are both implemented in Sage,
-        and the integers <q>know</q> that the rationals is it's field of fractions.
+        O Sage frequentemente consegue construir um corpo de frações
+        ou identificar um certo corpo como o corpo de frações.
+        Por exemplo,
+        o anel dos inteiros e o corpo dos números racionais estão ambos implementados no Sage,
+        e os inteiros <q>sabem</q> que os racionais são seu corpo de frações.
       </p>
 
             <sage>
@@ -1779,9 +1779,9 @@
             </sage>
 
       <p>
-        In other cases Sage will construct a fraction field,
-        in the spirit of <xref ref="domains-lemma-field-of-fractions"/>.
-        So it is then possible to do basic calculations in the constructed field.
+        Em outros casos, o Sage construirá um corpo de frações,
+        no espírito de <xref ref="domains-lemma-field-of-fractions"/>.
+        Assim, será possível fazer cálculos básicos no corpo construído.
       </p>
 
             <sage>
@@ -1815,12 +1815,12 @@
     </subsection>
 
     <subsection>
-      <title>Prime Subfields</title>
+      <title>Subcorpos Primos</title>
       <p>
-        <xref ref="domains-corollary-char-p-zp"/> says every field of characteristic <m>p</m> has a subfield isomorphic to <m>{\mathbb Z}_p</m>.
-        For a finite field,
-        the exact nature of this subfield is not a surprise,
-        but Sage will allow us to extract it easily.
+        <xref ref="domains-corollary-char-p-zp"/> afirma que todo corpo de característica <m>p</m> possui um subcorpo isomorfo a <m>{\mathbb Z}_p</m>.
+        Para um corpo finito,
+        a natureza exata desse subcorpo não é surpreendente,
+        mas o Sage nos permite extraí-lo facilmente.
       </p>
 
             <sage>
@@ -1850,10 +1850,10 @@
             </sage>
 
       <p>
-        More generally,
-        the fields mentioned in the conclusions of <xref ref="domains-corollary-char-zero-rationals"/> and <xref ref="domains-corollary-char-p-zp"/> are known as the <q>prime subfield</q>
-        of the ring containing them.
-        Here is an example of the characteristic zero case.
+        Mais geralmente,
+        os corpos mencionados nas conclusões de <xref ref="domains-corollary-char-zero-rationals"/> e <xref ref="domains-corollary-char-p-zp"/> são conhecidos como o <q>subcorpo primo</q>
+        do anel que os contém.
+        Eis um exemplo do caso de característica zero.
       </p>
 
             <sage>
@@ -1875,23 +1875,23 @@
             </sage>
 
       <p>
-        In a rough sense,
-        every characteristic zero field contains a copy of the rational numbers
-        (the fraction field of the integers),
-        which can explain Sage's extensive support for rings and fields that extend the integers and the rationals.
+        Em sentido informal,
+        todo corpo de característica zero contém uma cópia dos números racionais
+        (o corpo de frações dos inteiros),
+        o que pode explicar o amplo suporte do Sage para anéis e corpos que estendem os inteiros e os racionais.
       </p>
     </subsection>
 
     <subsection>
-      <title>Integral Domains</title>
+      <title>Domínios de Integridade</title>
       <p>
-        Sage can determine if some rings are integral domains and we can test products in them.
-        However, notions of units,
-        irreducibles or prime elements are not generally supported
-        (outside of what we have seen for polynomials in the previous chapter).
-        Worse, the construction below creates a ring within a larger field and so some functions (such as <c>.is_unit()</c>) pass through and give misleading results.
-        This is because the construction below creates a ring known as an
-        <q>order in a number field.</q>
+        O Sage consegue determinar se alguns anéis são domínios de integridade e podemos testar produtos neles.
+        No entanto, noções de unidades,
+        irredutíveis ou elementos primos geralmente não são suportadas
+        (exceto pelo que vimos para polinômios no capítulo anterior).
+        Pior ainda, a construção abaixo cria um anel dentro de um corpo maior e, por isso, algumas funções (como <c>.is_unit()</c>) são encaminhadas e fornecem resultados enganosos.
+        Isso ocorre porque a construção abaixo cria um anel conhecido como uma
+        <q>ordem em um corpo numérico.</q>
       </p>
 
             <sage>
@@ -1934,9 +1934,9 @@
             </sage>
 
       <p>
-        The following is a bit misleading, since <m>4</m>,
-        as an element of <m>{\mathbb Z}[\sqrt{3}i]</m> does not have a multiplicative inverse,
-        though seemingly we can compute one.
+        O exemplo seguinte é um pouco enganoso, pois <m>4</m>,
+        como elemento de <m>{\mathbb Z}[\sqrt{3}i]</m>, não possui inverso multiplicativo,
+        embora aparentemente possamos calcular um.
       </p>
 
             <sage>
@@ -1959,11 +1959,11 @@
     </subsection>
 
     <subsection>
-      <title>Principal Ideals</title>
+      <title>Ideais Principais</title>
       <p>
-        When a ring is a principal ideal domain,
-        such as the integers, or polynomials over a field, Sage works well.
-        Beyond that, support begins to weaken.
+        Quando um anel é um domínio de ideais principais,
+        como os inteiros ou os polinômios sobre um corpo, o Sage funciona bem.
+        Além disso, o suporte começa a ficar mais fraco.
       </p>
 
             <sage>
@@ -2017,10 +2017,10 @@
   </section>
 
   <exercises xml:id="domains-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        There are no Sage exercises for this section.
+        Não há exercícios do Sage para esta seção.
       </p>
     </introduction>
 

@@ -10,7 +10,7 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
-  <title>Reference</title>
+  <title>Referências</title>
 
     <xi:include href="./gfdl.xml" />
     <xi:include href="./hints.xml" />
@@ -18,4 +18,3 @@
     <xi:include href="./index.xml" />
     <xi:include href="./colophon.xml" />
 </backmatter>
-
