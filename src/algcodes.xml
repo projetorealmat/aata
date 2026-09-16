@@ -1636,7 +1636,7 @@
 
       <example xml:id="algcodes-example-detecting-errors">
         <p>
-          Consider the matrix
+          Considere a matriz
           <md>
             H =
             \begin{pmatrix}
@@ -1645,10 +1645,10 @@
             1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>
-          and suppose that the  <m>6</m>-tuples <m>{\mathbf x} = (\codeword{111110})^\transpose</m>,
+          e suponha que as <m>6</m>-uplas <m>{\mathbf x} = (\codeword{111110})^\transpose</m>,
           <m>{\mathbf y} = (\codeword{111111})^\transpose</m>,
-          and <m>{\mathbf z} = (\codeword{010111})^\transpose</m> have been received.
-          Then
+          e <m>{\mathbf z} = (\codeword{010111})^\transpose</m> tenham sido recebidas.
+          Então
           <md>
             H{\mathbf x} =
             \begin{pmatrix}
@@ -1663,35 +1663,35 @@
             1 \\ 0 \\ 0
             \end{pmatrix}
           </md>.
-          Hence, <m>{\mathbf x}</m> has an error in the third bit and
-          <m>{\mathbf z}</m> has an error in the fourth bit.
-          The transmitted codewords for
-          <m>{\mathbf x}</m> and <m>{\mathbf z}</m> must have been
-          <m>(\codeword{110110})</m> and <m>(\codeword{010011})</m>, respectively.
-          The syndrome of <m>{\mathbf y}</m> does not occur in any of the columns of the matrix <m>H</m>,
-          so multiple errors must have occurred to produce <m>{\mathbf y}</m>.
+          Portanto, <m>{\mathbf x}</m> tem um erro no terceiro bit e
+          <m>{\mathbf z}</m> tem um erro no quarto bit.
+          As palavras-código transmitidas para
+          <m>{\mathbf x}</m> e <m>{\mathbf z}</m> devem ter sido
+          <m>(\codeword{110110})</m> e <m>(\codeword{010011})</m>, respectivamente.
+          O síndrome de <m>{\mathbf y}</m> não ocorre em nenhuma das colunas da matriz <m>H</m>,
+          portanto vários erros devem ter ocorrido para produzir <m>{\mathbf y}</m>.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="algcodes-subsection-coset-decoding">
-      <title>Coset Decoding</title>
+      <title>Decodificação por classes laterais</title>
       <p>
-        We can use group theory to obtain another way of decoding messages.
-        A linear code <m>C</m> is a subgroup of <m>{\mathbb Z}_2^n</m>. <term>Coset</term><idx><h>Coset decoding</h></idx>
-        or <term>standard decoding</term><idx><h>Standard decoding</h></idx>
-        uses the cosets of <m>C</m> in
-        <m>{\mathbb Z}_2^n</m> to implement maximum-likelihood decoding.
-        Suppose that <m>C</m> is an <m>(n,m)</m>-linear code.
-        A coset of <m>C</m> in <m>{\mathbb Z}_2^n</m> is written in the form <m>{\mathbf x} + C</m>,
-        where <m>{\mathbf x} \in {\mathbb Z}_2^n</m>.
-        By Lagrange's Theorem (<xref ref="cosets-theorem-lagrange"/>),
-        there are <m>2^{n - (n - m)} = 2^m</m> distinct cosets of <m>C</m> in <m>{\mathbb Z}_2^n</m>.
+        Podemos usar a teoria de grupos para obter outra maneira de decodificar mensagens.
+        Um código linear <m>C</m> é um subgrupo de <m>{\mathbb Z}_2^n</m>. <term>Classe lateral</term><idx><h>Decodificação por classes laterais</h></idx>
+        ou <term>decodificação padrão</term><idx><h>Decodificação padrão</h></idx>
+        usa as classes laterais de <m>C</m> em
+        <m>{\mathbb Z}_2^n</m> para implementar a decodificação por máxima verossimilhança.
+        Suponha que <m>C</m> seja um código linear <m>(n,m)</m>.
+        Uma classe lateral de <m>C</m> em <m>{\mathbb Z}_2^n</m> é escrita na forma <m>{\mathbf x} + C</m>,
+        onde <m>{\mathbf x} \in {\mathbb Z}_2^n</m>.
+        Pelo teorema de Lagrange (<xref ref="cosets-theorem-lagrange"/>),
+        há <m>2^{n - (n - m)} = 2^m</m> classes laterais distintas de <m>C</m> em <m>{\mathbb Z}_2^n</m>.
       </p>
 
       <example xml:id="algcodes-example-coset-decoding">
         <p>
-          Let <m>C</m> be the <m>(5,3)</m>-linear code given by the parity-check matrix
+          Seja <m>C</m> o código linear <m>(5,3)</m> dado pela matriz de verificação de paridade
           <md>
             H =
             \begin{pmatrix}
@@ -1700,25 +1700,25 @@
             1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          The code consists of the codewords
+          O código consiste nas palavras-código
           <md>
             (\codeword{00000}) \quad (\codeword{01101}) \quad (\codeword{10011}) \quad (\codeword{11110})
           </md>.
-          There are <m>2^{5-2} = 2^3</m> cosets of <m>C</m> in <m>{\mathbb Z}_2^5</m>,
-          each with order <m>2^2 =4</m>.
-          These cosets are listed in <xref ref="algcodes-table-cosets-of-c"/>.
+          Há <m>2^{5-2} = 2^3</m> classes laterais de <m>C</m> em <m>{\mathbb Z}_2^5</m>,
+          cada uma com ordem <m>2^2 =4</m>.
+          Essas classes laterais estão listadas em <xref ref="algcodes-table-cosets-of-c"/>.
         </p>
       </example>
 
       <table xml:id="algcodes-table-cosets-of-c">
-        <title>Cosets of <m>C</m></title>
+        <title>Classes laterais de <m>C</m></title>
         <tabular halign="center" top="medium">
           <row>
-            <cell>Coset</cell>
-            <cell>Coset</cell>
+            <cell>Classe lateral</cell>
+            <cell>Classe lateral</cell>
           </row>
           <row bottom="medium">
-            <cell>Representative</cell>
+            <cell>Representante</cell>
             <cell/>
           </row>
           <row>
@@ -1758,50 +1758,50 @@
       </table>
 
       <p>
-        Our task is to find out how knowing the cosets might help us to decode a message.
-        Suppose that <m>{\mathbf x}</m> was the original codeword sent and that
-        <m>{\mathbf r}</m> is the <m>n</m>-tuple received.
-        If <m>{\mathbf e}</m> is the transmission error,
-        then <m>{\mathbf r} = {\mathbf e} + {\mathbf x}</m> or,
-        equivalently, <m>{\mathbf x} = {\mathbf e} + {\mathbf r}</m>.
-        However, this is exactly the statement that
-        <m>{\mathbf r}</m> is an element in the coset <m>{\mathbf e} + C</m>.
-        In maximum-likelihood decoding we expect the error
-        <m>{\mathbf e}</m> to be as small as possible;
-        that is, <m>{\mathbf e}</m> will have the least weight.
-        An <m>n</m>-tuple of least weight in a coset is called a
-        <idx><h>Coset</h><h>leader</h></idx><term>coset leader</term>.  
-        Once we have determined a coset leader for each coset,
-        the decoding process becomes a task of calculating
-        <m>{\mathbf r} + {\mathbf e}</m> to obtain <m>{\mathbf x}</m>.
+        Nossa tarefa é descobrir como o conhecimento das classes laterais pode nos ajudar a decodificar uma mensagem.
+        Suponha que <m>{\mathbf x}</m> seja a palavra-código original enviada e que
+        <m>{\mathbf r}</m> seja a <m>n</m>-upla recebida.
+        Se <m>{\mathbf e}</m> for o erro de transmissão,
+        então <m>{\mathbf r} = {\mathbf e} + {\mathbf x}</m> ou,
+        equivalentemente, <m>{\mathbf x} = {\mathbf e} + {\mathbf r}</m>.
+        No entanto, isso é exatamente a afirmação de que
+        <m>{\mathbf r}</m> é um elemento da classe lateral <m>{\mathbf e} + C</m>.
+        Na decodificação por máxima verossimilhança esperamos que o erro
+        <m>{\mathbf e}</m> seja tão pequeno quanto possível;
+        isto é, <m>{\mathbf e}</m> terá o menor peso.
+        Uma <m>n</m>-upla de menor peso em uma classe lateral é chamada de
+        <idx><h>Classe lateral</h><h>líder</h></idx><term>líder da classe lateral</term>.
+        Depois de determinar um líder de classe lateral para cada classe lateral,
+        o processo de decodificação passa a consistir em calcular
+        <m>{\mathbf r} + {\mathbf e}</m> para obter <m>{\mathbf x}</m>.
       </p>
 
       <example xml:id="algcodes-example-representative">
         <p>
-          In <xref ref="algcodes-table-cosets-of-c"/>,
-          notice that we have chosen a representative of the least possible weight for each coset.
-          These representatives are coset leaders.
-          Now suppose that <m>{\mathbf r} = (\codeword{01111})</m> is the received word.
-          To decode <m>{\mathbf r}</m>,
-          we find that it is in the coset <m>(\codeword{00010}) + C</m>;
-          hence, the originally transmitted codeword must have been <m>(\codeword{01101}) = (\codeword{01111}) + (\codeword{00010})</m>.
+          Em <xref ref="algcodes-table-cosets-of-c"/>,
+          observe que escolhemos um representante de menor peso possível para cada classe lateral.
+          Esses representantes são líderes de classes laterais.
+          Suponha agora que <m>{\mathbf r} = (\codeword{01111})</m> seja a palavra recebida.
+          Para decodificar <m>{\mathbf r}</m>,
+          descobrimos que ela está na classe lateral <m>(\codeword{00010}) + C</m>;
+          portanto, a palavra-código originalmente transmitida deve ter sido <m>(\codeword{01101}) = (\codeword{01111}) + (\codeword{00010})</m>.
         </p>
       </example>
 
       <p>
-        A potential problem with this method of decoding is that we might have to examine every coset for the received codeword.
-        The following proposition gives a method of implementing coset decoding.
-        It states that we can associate a syndrome with each coset;
-        hence, we can make a table that designates a coset leader corresponding to each syndrome.
-        Such a list is called a  <idx><h>Decoding table</h></idx><term>decoding table</term>.
+        Um possível problema desse método de decodificação é que talvez tenhamos de examinar cada classe lateral para encontrar a palavra-código recebida.
+        A proposição a seguir fornece um método para implementar a decodificação por classes laterais.
+        Ela afirma que podemos associar um síndrome a cada classe lateral;
+        assim, podemos construir uma tabela que indique um líder de classe lateral correspondente a cada síndrome.
+        Essa lista é chamada de <idx><h>Tabela de decodificação</h></idx><term>tabela de decodificação</term>.
       </p>
 
       <table xml:id="algcodes-table-syndrome">
-        <title>Syndromes for each coset</title>
+        <title>Síndromes de cada classe lateral</title>
         <tabular halign="center" top="medium">
           <row bottom="medium">
-            <cell>Syndrome</cell>
-            <cell>Coset Leader</cell>
+            <cell>Síndrome</cell>
+            <cell>Líder da classe lateral</cell>
           </row>
           <row>
             <cell><m>(\codeword{000})</m></cell>
@@ -1842,55 +1842,55 @@
       <proposition>
         <statement>
           <p>
-            Let <m>C</m> be an <m>(n,k)</m>-linear code given by the matrix <m>H</m> and suppose that <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> are in <m>{\mathbb Z}_2^n</m>.
-            Then <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> are in the same coset of <m>C</m> if and only if <m>H{\mathbf x} = H{\mathbf y}</m>.
-            That is, two <m>n</m>-tuples are in the same coset if and only if their syndromes are the same.
+            Seja <m>C</m> um código linear <m>(n,k)</m> dado pela matriz <m>H</m> e suponha que <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> pertençam a <m>{\mathbb Z}_2^n</m>.
+            Então <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> estão na mesma classe lateral de <m>C</m> se, e somente se, <m>H{\mathbf x} = H{\mathbf y}</m>.
+            Isto é, duas <m>n</m>-uplas estão na mesma classe lateral se, e somente se, seus síndromes são iguais.
           </p>
         </statement>
 
         <proof>
           <p>
-            Two <m>n</m>-tuples <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> are in the same coset of <m>C</m> exactly when <m>{\mathbf x} - {\mathbf y} \in C</m>;
-            however, this is equivalent to
-            <m>H({\mathbf x} - {\mathbf y}) = 0</m> or <m>H {\mathbf x} = H{\mathbf y}</m>.
+            Duas <m>n</m>-uplas <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> estão na mesma classe lateral de <m>C</m> exatamente quando <m>{\mathbf x} - {\mathbf y} \in C</m>;
+            no entanto, isso é equivalente a
+            <m>H({\mathbf x} - {\mathbf y}) = 0</m> ou <m>H {\mathbf x} = H{\mathbf y}</m>.
           </p>
         </proof>
       </proposition>
 
       <example xml:id="algcodes-example-decoding-table">
         <p>
-          <xref ref="algcodes-table-syndrome"/> is a decoding table for the code <m>C</m> given in <xref ref="algcodes-example-coset-decoding"/>.
-          If <m>{\mathbf x} = (\codeword{01111})</m> is received,
-          then its syndrome can be computed to be
+          A <xref ref="algcodes-table-syndrome"/> é uma tabela de decodificação para o código <m>C</m> dado em <xref ref="algcodes-example-coset-decoding"/>.
+          Se <m>{\mathbf x} = (\codeword{01111})</m> for recebido,
+          então seu síndrome pode ser calculado como
           <md>
             H {\mathbf x} =
             \begin{pmatrix}
             0 \\ 1 \\ 0
             \end{pmatrix}
           </md>.
-          Examining the decoding table,
-          we determine that the coset leader is <m>(\codeword{00010})</m>.
-          It is now easy to decode the received codeword.
+          Examinando a tabela de decodificação,
+          determinamos que o líder da classe lateral é <m>(\codeword{00010})</m>.
+          Agora é fácil decodificar a palavra-código recebida.
         </p>
       </example>
 
       <p>
-        Given an <m>(n,k)</m>-block code,
-        the question arises of whether or not coset decoding is a manageable scheme.
-        A decoding table requires a list of cosets and syndromes,
-        one for each of the <m>2^{n - k}</m> cosets of <m>C</m>.
-        Suppose that we have a <m>(32, 24)</m>-block code.
-        We have a huge number of codewords, <m>2^{24}</m>,
-        yet there are only <m>2^{32 - 24} = 2^{8} = 256</m> cosets.
+        Dado um código de blocos <m>(n,k)</m>,
+        surge a questão de saber se a decodificação por classes laterais é um esquema viável.
+        Uma tabela de decodificação exige uma lista de classes laterais e síndromes,
+        uma para cada uma das <m>2^{n - k}</m> classes laterais de <m>C</m>.
+        Suponha que tenhamos um código de blocos <m>(32, 24)</m>.
+        Temos um número enorme de palavras-código, <m>2^{24}</m>,
+        mas há apenas <m>2^{32 - 24} = 2^{8} = 256</m> classes laterais.
       </p>
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage has a substantial repertoire of commands for coding theory,
-          including the ability to build many different families of codes.
+          O Sage dispõe de um repertório substancial de comandos para a teoria dos códigos,
+          incluindo a capacidade de construir várias famílias diferentes de códigos.
         </p>
       </paragraphs>
     </subsection>
