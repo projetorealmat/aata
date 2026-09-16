@@ -139,7 +139,7 @@
           <md>
             ab = \phi(m ) \phi(n) = \phi(m + n) = \phi(n + m) = \phi(n ) \phi(m) = ba
           </md>,
-          which contradicts the fact that <m>a</m> and <m>b</m> do not commute.
+          o que contradiz o fato de que <m>a</m> e <m>b</m> não comutam.
         </p>
       </example>
 
@@ -152,7 +152,7 @@
             <ol>
               <li>
                 <p>
-                  <m>\phi^{-1} : H \rightarrow G</m> is an isomorphism.
+                  <m>\phi^{-1} : H \rightarrow G</m> é um isomorfismo.
                 </p>
               </li>
 
@@ -194,8 +194,8 @@
             (3) Suponha que <m>h_1</m> e <m>h_2</m> sejam elementos de <m>H</m>.
             Como <m>\phi</m> é sobrejetiva,
             existem elementos <m>g_1, g_2 \in G</m> tais que
-            <m>\phi(g_1) = h_1</m> and <m>\phi(g_2) = h_2</m>.
-            Therefore,
+            <m>\phi(g_1) = h_1</m> e <m>\phi(g_2) = h_2</m>.
+            Portanto,
             <md>
               h_1 h_2 = \phi(g_1) \phi(g_2) =  \phi(g_1 g_2) = \phi(g_2 g_1) = \phi(g_2) \phi(g_1) = h_2 h_1
             </md>.
@@ -391,7 +391,7 @@
             <md>
               \lambda_e (a) = ea = a
             </md>
-            and
+            e
             <md>
               (\lambda_{g^{-1}} \circ \lambda_g) (a) = \lambda_{g^{-1}} (ga) = g^{-1} g a = a = \lambda_e (a)
             </md>.
@@ -658,7 +658,7 @@
             <md>
               \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
             </md>
-            if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.
+            se, e somente se, <m>\gcd( n_i, n_j) =1</m> para <m>i \neq j</m>.
           </p>
         </statement>
       </corollary>
@@ -723,7 +723,7 @@
 
           <li>
             <p>
-              <m>hk = kh</m> for all <m>k \in K</m> and <m>h \in H</m>.
+            <m>hk = kh</m> para todo <m>k \in K</m> e <m>h \in H</m>.
             </p>
           </li>
         </ul>
@@ -830,8 +830,8 @@
 
           <li>
             <p>
-              <m>h_i h_j = h_j h_i</m> for all
-              <m>h_i \in H_i</m> and <m>h_j \in H_j</m>.
+              <m>h_i h_j = h_j h_i</m> para todo
+              <m>h_i \in H_i</m> e <m>h_j \in H_j</m>.
             </p>
           </li>
         </ul>
@@ -865,7 +865,7 @@
     <exercise label="rq-isomorph-order">
       <statement>
         <p>
-          Determine the order of <m>(1,2)</m> in <m>{\mathbb Z_4}\times{\mathbb Z_8}</m>.
+          Determine a ordem de <m>(1,2)</m> em <m>{\mathbb Z_4}\times{\mathbb Z_8}</m>.
         </p>
       </statement>
       <response/>
@@ -874,7 +874,7 @@
     <exercise label="rq-isomorph-properties">
       <statement>
         <p>
-          List three properties of a group that are preserved by an isomorphism.
+          Liste três propriedades de um grupo que são preservadas por um isomorfismo.
         </p>
       </statement>
       <response/>
@@ -883,8 +883,8 @@
     <exercise label="rq-isomorph-external-direct-product">
       <statement>
         <p>
-          Find a group isomorphic to
-          <m>\mathbb Z_{15}</m> that is an external direct product of two non-trivial groups.
+          Encontre um grupo isomorfo a
+          <m>\mathbb Z_{15}</m> que seja um produto direto externo de dois grupos não triviais.
         </p>
       </statement>
       <response/>
@@ -893,8 +893,8 @@
     <exercise label="rq-isomorph-infinite-cyclic">
       <statement>
         <p>
-          Explain why we can now say <q><em>the</em>
-          infinite cyclic group</q>?
+          Explique por que agora podemos dizer <q><em>o</em>
+          grupo cíclico infinito</q>.
         </p>
       </statement>
       <response/>
@@ -903,7 +903,7 @@
     <exercise label="rq-isomorph-external-internal">
       <statement>
         <p>
-          Compare and contrast external direct products and internal direct products.
+          Compare e diferencie produtos diretos externos e produtos diretos internos.
         </p>
       </statement>
       <response/>
@@ -914,17 +914,17 @@
     <!-- File: isomorph.xml  -->
     <!-- Title: Isomorphisms -->
   <exercises xml:id="isomorph-exercises" filenamebase="isomorph">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="isomorph-exercise-Z-isomorphic-nZ">
       <statement>
         <p>
-          Prove that <m>\mathbb Z \cong n \mathbb Z</m> for <m>n \neq 0</m>.
+          Prove que <m>\mathbb Z \cong n \mathbb Z</m> para <m>n \neq 0</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Every infinite cyclic group is isomorphic to
+          Todo grupo cíclico infinito é isomorfo a
           <m>{\mathbb Z}</m> by <xref ref="isomorph-theorem-2"/>.
         </p>
       </hint>
@@ -933,8 +933,8 @@
     <exercise number="2" xml:id="isomorph-exercise-C-star-gl2-subgroup">
       <statement>
         <p>
-          Prove that <m>{\mathbb C}^\ast</m> is isomorphic to the subgroup of
-          <m>GL_2( {\mathbb R} )</m> consisting of matrices of the form
+          Prove que <m>{\mathbb C}^\ast</m> é isomorfo ao subgrupo de
+          <m>GL_2( {\mathbb R} )</m> constituído pelas matrizes da forma
           <md>
             \begin{pmatrix}
             a &amp; b \\
@@ -945,7 +945,7 @@
       </statement>
       <hint>
         <p>
-          Define <m>\phi: {\mathbb C}^* \rightarrow GL_2( {\mathbb R})</m> by
+          Defina <m>\phi: {\mathbb C}^* \rightarrow GL_2( {\mathbb R})</m> por
           <md>
             \phi(a + bi) = 
             \begin{pmatrix}
@@ -960,12 +960,12 @@
     <exercise number="3" xml:id="isomorph-exercise-U8-Z4">
       <statement>
         <p>
-          Prove or disprove: <m>U(8) \cong {\mathbb Z}_4</m>.
+          Prove ou refute: <m>U(8) \cong {\mathbb Z}_4</m>.
         </p>
       </statement>
       <hint>
         <p>
-          False.
+          Falso.
         </p>
       </hint>
     </exercise>
@@ -973,7 +973,7 @@
     <exercise number="4" xml:id="isomorph-exercise-U8-matrices">
       <statement>
         <p>
-          Prove that <m>U(8)</m> is isomorphic to the group of matrices
+          Prove que <m>U(8)</m> é isomorfo ao grupo das matrizes
           <md>
             \begin{pmatrix}
             1 &amp; 0 \\
@@ -999,7 +999,7 @@
     <exercise number="5" xml:id="isomorph-exercise-U5-U10">
       <statement>
         <p>
-          Show that <m>U(5)</m> is isomorphic to <m>U(10)</m>, but <m>U(12)</m> is not.
+          Mostre que <m>U(5)</m> é isomorfo a <m>U(10)</m>, mas <m>U(12)</m> não é.
         </p>
       </statement>
     </exercise>
@@ -1007,12 +1007,12 @@
     <exercise number="6" xml:id="isomorph-exercise-Zn-nth-roots-of-unity">
       <statement>
         <p>
-          Show that the <m>n</m>th roots of unity are isomorphic to <m>{\mathbb Z}_n</m>.
+          Mostre que as raízes <m>n</m>-ésimas da unidade são isomorfas a <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Define a map from <m>{\mathbb Z}_n</m> into the <m>n</m>th roots of unity by <m>k \mapsto \cis(2k\pi / n)</m>.
+          Defina uma aplicação de <m>{\mathbb Z}_n</m> nas raízes <m>n</m>-ésimas da unidade por <m>k \mapsto \cis(2k\pi / n)</m>.
         </p>
       </hint>
     </exercise>
@@ -1020,7 +1020,7 @@
     <exercise number="7" xml:id="isomorph-exercise-cyclic-group-order-n">
       <statement>
         <p>
-          Show that any cyclic group of order <m>n</m> is isomorphic to <m>{\mathbb Z}_n</m>.
+          Mostre que todo grupo cíclico de ordem <m>n</m> é isomorfo a <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1028,12 +1028,12 @@
     <exercise number="8" xml:id="isomorph-exercise-Q-not-isomorphic-Z">
       <statement>
         <p>
-          Prove that <m>{\mathbb Q}</m> is not isomorphic to <m>{\mathbb Z}</m>.
+          Prove que <m>{\mathbb Q}</m> não é isomorfo a <m>{\mathbb Z}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Assume that <m>{\mathbb Q}</m> is cyclic and try to find a generator.
+          Suponha que <m>{\mathbb Q}</m> seja cíclico e tente encontrar um gerador.
         </p>
       </hint>
     </exercise>
@@ -1041,12 +1041,12 @@
     <exercise number="9" xml:id="isomorph-exercise-R-minus-neg-1">
       <statement>
         <p>
-          Let <m>G = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>G</m> by
+          Seja <m>G = {\mathbb R} \setminus \{ -1 \}</m> e defina uma operação binária em <m>G</m> por
           <md>
             a \ast b = a + b + ab
           </md>.
-          Prove that <m>G</m> is a group under this operation.
-          Show that <m>(G, *)</m> is isomorphic to the multiplicative group of nonzero real numbers.
+          Prove que <m>G</m> é um grupo sob essa operação.
+          Mostre que <m>(G, *)</m> é isomorfo ao grupo multiplicativo dos números reais não nulos.
         </p>
       </statement>
     </exercise>
@@ -1054,7 +1054,7 @@
     <exercise number="10" xml:id="isomorph-exercise-3x3-matrices">
       <statement>
         <p>
-          Show that the matrices
+          Mostre que as matrizes
           <md>
             <mrow>\begin{pmatrix}
             1 &amp; 0 &amp; 0 \\
@@ -1091,8 +1091,8 @@
             1 &amp; 0 &amp; 0
             \end{pmatrix}</mrow>
           </md>
-          form a group.
-          Find an isomorphism of <m>G</m> with a more familiar group of order <m>6</m>.
+          formam um grupo.
+          Encontre um isomorfismo de <m>G</m> com um grupo de ordem <m>6</m> mais familiar.
         </p>
       </statement>
     </exercise>
@@ -1100,12 +1100,12 @@
     <exercise number="11" xml:id="isomorph-exercise-groups-order-8">
       <statement>
         <p>
-          Find five non-isomorphic groups of order <m>8</m>.
+          Encontre cinco grupos não isomorfos de ordem <m>8</m>.
         </p>
       </statement>
       <hint>
         <p>
-          There are two nonabelian and three abelian groups that are not isomorphic.
+          Há dois grupos não abelianos e três grupos abelianos que não são isomorfos.
         </p>
       </hint>
     </exercise>
@@ -1113,7 +1113,7 @@
     <exercise number="12" xml:id="isomorph-exercise-S4-not-iso-D12">
       <statement>
         <p>
-          Prove <m>S_4</m> is not isomorphic to <m>D_{12}</m>.
+          Prove que <m>S_4</m> não é isomorfo a <m>D_{12}</m>.
         </p>
       </statement>
     </exercise>
@@ -1121,8 +1121,8 @@
     <exercise number="13" xml:id="isomorph-exercise-matrix-Dn">
       <statement>
         <p>
-          Let <m>\omega = \cis(2 \pi /n)</m> be a primitive <m>n</m>th root of unity.
-          Prove that the matrices
+          Seja <m>\omega = \cis(2 \pi /n)</m> uma raiz <m>n</m>-ésima primitiva da unidade.
+          Prove que as matrizes
           <md>
             A =
             \begin{pmatrix}
@@ -1136,7 +1136,7 @@
             1 &amp; 0
             \end{pmatrix}
           </md>
-          generate a multiplicative group isomorphic to <m>D_n</m>.
+          geram um grupo multiplicativo isomorfo a <m>D_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1144,15 +1144,15 @@
     <exercise number="14" xml:id="isomorph-exercise-2x2-matrix-group-Dn">
       <statement>
         <p>
-          Show that the set of all matrices of the form
+          Mostre que o conjunto de todas as matrizes da forma
           <md>
             \begin{pmatrix}
             \pm 1 &amp; k \\
             0 &amp; 1
             \end{pmatrix}
           </md>,
-          is a group isomorphic to <m>D_n</m>,
-          where all entries in the matrix are in <m>{\mathbb Z}_n</m>.
+          é um grupo isomorfo a <m>D_n</m>,
+          onde todas as entradas da matriz estão em <m>{\mathbb Z}_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1160,7 +1160,7 @@
     <exercise number="15" xml:id="isomorph-exercise-Z4xZ2">
       <statement>
         <p>
-          List all of the elements of <m>{\mathbb Z}_4 \times {\mathbb Z}_2</m>.
+          Liste todos os elementos de <m>{\mathbb Z}_4 \times {\mathbb Z}_2</m>.
         </p>
       </statement>
     </exercise>
@@ -1168,7 +1168,7 @@
     <exercise number="16" xml:id="isomorph-exercise-order-element-ZmxZn">
       <statement>
         <p>
-          Find the order of each of the following elements.
+          Encontre a ordem de cada um dos elementos seguintes.
 
           <ol>
             <li>
@@ -1207,7 +1207,7 @@
     <exercise number="17" xml:id="isomorph-exercise-D4-not-internal-direct-product">
       <statement>
         <p>
-          Prove that <m>D_4</m> cannot be the internal direct product of two of its proper subgroups.
+          Prove que <m>D_4</m> não pode ser o produto direto interno de dois de seus subgrupos próprios.
         </p>
       </statement>
     </exercise>
@@ -1215,9 +1215,9 @@
     <exercise number="18" xml:id="isomorph-exercise-subgroup-Qstar">
       <statement>
         <p>
-          Prove that the subgroup of
-          <m>{\mathbb Q}^\ast</m> consisting of elements of the form <m>2^m 3^n</m> for
-          <m>m,n \in {\mathbb Z}</m> is an internal direct product isomorphic to <m>{\mathbb Z} \times {\mathbb Z}</m>.
+          Prove que o subgrupo de
+          <m>{\mathbb Q}^\ast</m> constituído pelos elementos da forma <m>2^m 3^n</m>, para
+          <m>m,n \in {\mathbb Z}</m>, é um produto direto interno isomorfo a <m>{\mathbb Z} \times {\mathbb Z}</m>.
         </p>
       </statement>
     </exercise>
@@ -1225,14 +1225,14 @@
     <exercise number="19" xml:id="isomorph-exercise-S3xZ2">
       <statement>
         <p>
-          Prove that <m>S_3 \times {\mathbb Z}_2</m> is isomorphic to <m>D_6</m>.
-          Can you make a conjecture about <m>D_{2n}</m>?
-          Prove your conjecture.
+          Prove que <m>S_3 \times {\mathbb Z}_2</m> é isomorfo a <m>D_6</m>.
+          Você consegue formular uma conjectura sobre <m>D_{2n}</m>?
+          Prove sua conjectura.
         </p>
       </statement>
       <hint>
         <p>
-          Draw the picture.
+          Desenhe a figura.
         </p>
       </hint>
     </exercise>
@@ -1240,12 +1240,12 @@
     <exercise number="20" xml:id="isomorph-exercise-subgroup-order-3">
       <statement>
         <p>
-          Prove or disprove: Every abelian group of order divisible by <m>3</m> contains a subgroup of order <m>3</m>.
+          Prove ou refute: todo grupo abeliano cuja ordem é divisível por <m>3</m> contém um subgrupo de ordem <m>3</m>.
         </p>
       </statement>
       <hint>
         <p>
-          True.
+          Verdadeiro.
         </p>
       </hint>
     </exercise>
@@ -1255,7 +1255,7 @@
     <exercise number="21" xml:id="isomorph-exercise-subgroup-order-6-counterexample">
       <statement>
         <p>
-          Prove or disprove: Every nonabelian group of order divisible by 6 contains a subgroup of order <m>6</m>.
+          Prove ou refute: todo grupo não abeliano cuja ordem é divisível por 6 contém um subgrupo de ordem <m>6</m>.
         </p>
       </statement>
     </exercise>
@@ -1263,9 +1263,9 @@
     <exercise number="22" xml:id="isomorph-exercise-order-20">
       <statement>
         <p>
-          Let <m>G</m> be a group of order <m>20</m>.
-          If <m>G</m> has subgroups <m>H</m> and <m>K</m> of orders <m>4</m> and <m>5</m> respectively such that <m>hk = kh</m> for all <m>h \in H</m> and <m>k \in K</m>,
-          prove that <m>G</m> is the internal direct product of <m>H</m> and <m>K</m>.
+          Seja <m>G</m> um grupo de ordem <m>20</m>.
+          Se <m>G</m> tem subgrupos <m>H</m> e <m>K</m> de ordens <m>4</m> e <m>5</m>, respectivamente, tais que <m>hk = kh</m> para todo <m>h \in H</m> e <m>k \in K</m>,
+          prove que <m>G</m> é o produto direto interno de <m>H</m> e <m>K</m>.
         </p>
       </statement>
     </exercise>
@@ -1273,9 +1273,9 @@
     <exercise number="23" xml:id="isomorph-exercise-GxK-congruent-GxH">
       <statement>
         <p>
-          Prove or disprove the following assertion.
-          Let <m>G</m>, <m>H</m>, and <m>K</m> be groups.
-          If <m>G \times K \cong H \times K</m>, then <m>G \cong H</m>.
+          Prove ou refute a seguinte afirmação.
+          Sejam <m>G</m>, <m>H</m> e <m>K</m> grupos.
+          Se <m>G \times K \cong H \times K</m>, então <m>G \cong H</m>.
         </p>
       </statement>
     </exercise>
@@ -1283,7 +1283,7 @@
     <exercise number="24" xml:id="isomorph-exercise-order-51">
       <statement>
         <p>
-          Prove or disprove: There is a noncyclic abelian group of order <m>51</m>.
+          Prove ou refute: existe um grupo abeliano não cíclico de ordem <m>51</m>.
         </p>
       </statement>
     </exercise>
@@ -1291,12 +1291,12 @@
     <exercise number="25" xml:id="isomorph-exercise-order-52">
       <statement>
         <p>
-          Prove or disprove: There is a noncyclic abelian group of order <m>52</m>.
+          Prove ou refute: existe um grupo abeliano não cíclico de ordem <m>52</m>.
         </p>
       </statement>
       <hint>
         <p>
-          True.
+          Verdadeiro.
         </p>
       </hint>
     </exercise>
@@ -1304,10 +1304,10 @@
     <exercise number="26" xml:id="isomorph-exercise-identity-isomorph">
       <statement>
         <p>
-          Let <m>\phi : G \rightarrow H</m> be a group isomorphism.
-          Show that <m>\phi( x) = e_H</m> if and only if <m>x=e_G</m>,
-          where <m>e_G</m> and <m>e_H</m> are the identities of <m>G</m> and <m>H</m>,
-          respectively.
+          Seja <m>\phi : G \rightarrow H</m> um isomorfismo de grupos.
+          Mostre que <m>\phi( x) = e_H</m> se, e somente se, <m>x=e_G</m>,
+          onde <m>e_G</m> e <m>e_H</m> são as identidades de <m>G</m> e <m>H</m>,
+          respectivamente.
         </p>
       </statement>
     </exercise>
@@ -1315,15 +1315,15 @@
     <exercise number="27" xml:id="isomorph-exercise-cyclic-isomorph">
       <statement>
         <p>
-          Let <m>G \cong H</m>.
-          Show that if <m>G</m> is cyclic, then so is <m>H</m>.
+          Seja <m>G \cong H</m>.
+          Mostre que, se <m>G</m> é cíclico, então <m>H</m> também é.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a</m> be a generator for <m>G</m>.
-          If <m>\phi :G \rightarrow H</m> is an isomorphism,
-          show that <m>\phi(a)</m> is a generator for <m>H</m>.
+          Seja <m>a</m> um gerador de <m>G</m>.
+          Se <m>\phi :G \rightarrow H</m> é um isomorfismo,
+          mostre que <m>\phi(a)</m> é um gerador de <m>H</m>.
         </p>
       </hint>
     </exercise>
@@ -1331,8 +1331,8 @@
     <exercise number="28" xml:id="isomorph-exercise-order-p-Zp">
       <statement>
         <p>
-          Prove that any group <m>G</m> of order <m>p</m>,
-          <m>p</m> prime, must be isomorphic to <m>{\mathbb Z}_p</m>.
+          Prove que todo grupo <m>G</m> de ordem <m>p</m>,
+          com <m>p</m> primo, deve ser isomorfo a <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </exercise>
@@ -1340,7 +1340,7 @@
     <exercise number="29" xml:id="isomorph-exercise-Sn-A-n-plus-2">
       <statement>
         <p>
-          Show that <m>S_n</m> is isomorphic to a subgroup of <m>A_{n+2}</m>.
+          Mostre que <m>S_n</m> é isomorfo a um subgrupo de <m>A_{n+2}</m>.
         </p>
       </statement>
     </exercise>
@@ -1348,7 +1348,7 @@
     <exercise number="30" xml:id="isomorph-exercise-Dn-Sn">
       <statement>
         <p>
-          Prove that <m>D_n</m> is isomorphic to a subgroup of <m>S_n</m>.
+          Prove que <m>D_n</m> é isomorfo a um subgrupo de <m>S_n</m>.
         </p>
       </statement>
     </exercise>
@@ -1356,11 +1356,11 @@
     <exercise number="31" xml:id="isomorph-exercise-comp-inv">
       <statement>
         <p>
-          Let <m>\phi : G_1 \rightarrow G_2</m> and <m>\psi : G_2 \rightarrow G_3</m> be isomorphisms.
-          Show that <m>\phi^{-1}</m> and
-          <m>\psi \circ \phi</m> are both isomorphisms.
-          Using these results,
-          show that the isomorphism of groups determines an equivalence relation on the class of all groups.
+          Sejam <m>\phi : G_1 \rightarrow G_2</m> e <m>\psi : G_2 \rightarrow G_3</m> isomorfismos.
+          Mostre que <m>\phi^{-1}</m> e
+          <m>\psi \circ \phi</m> são ambos isomorfismos.
+          Usando esses resultados,
+          mostre que o isomorfismo de grupos determina uma relação de equivalência na classe de todos os grupos.
         </p>
       </statement>
     </exercise>
@@ -1368,8 +1368,8 @@
     <exercise number="32" xml:id="isomorph-exercise-U5-Z4">
       <statement>
         <p>
-          Prove <m>U(5) \cong {\mathbb Z}_4</m>.
-          Can you generalize this result for <m>U(p)</m>, where <m>p</m> is prime?
+          Prove que <m>U(5) \cong {\mathbb Z}_4</m>.
+          Você consegue generalizar esse resultado para <m>U(p)</m>, onde <m>p</m> é primo?
         </p>
       </statement>
     </exercise>
@@ -1377,7 +1377,7 @@
     <exercise number="33" xml:id="isomorph-exercise-S3-cayleys-theorem">
       <statement>
         <p>
-          Write out the permutations associated with each element of <m>S_3</m> in the proof of Cayley's Theorem.
+          Escreva as permutações associadas a cada elemento de <m>S_3</m> na demonstração do teorema de Cayley.
         </p>
       </statement>
     </exercise>
@@ -1385,11 +1385,11 @@
     <exercise number="34" xml:id="isomorph-exercise-automorphism">
       <statement>
         <p>
-          An <term>automorphism</term> of a group <m>G</m> is an isomorphism with itself.
-          Prove that complex conjugation is an automorphism of the additive group of complex numbers;
-          that is, show that the map
-          <m>\phi( a + bi ) = a - bi</m> is an isomorphism from
-          <m>{\mathbb C}</m> to <m>{\mathbb C}</m>.
+          Um <term>automorfismo</term> de um grupo <m>G</m> é um isomorfismo desse grupo nele mesmo.
+          Prove que a conjugação complexa é um automorfismo do grupo aditivo dos números complexos;
+          isto é, mostre que a aplicação
+          <m>\phi( a + bi ) = a - bi</m> é um isomorfismo de
+          <m>{\mathbb C}</m> em <m>{\mathbb C}</m>.
         </p>
       </statement>
     </exercise>
@@ -1397,7 +1397,7 @@
     <exercise number="35" xml:id="isomorph-exercise-complex-conjugation">
       <statement>
         <p>
-          Prove that <m>a + ib \mapsto a - ib</m> is an automorphism of <m>{\mathbb C}^*</m>.
+          Prove que <m>a + ib \mapsto a - ib</m> é um automorfismo de <m>{\mathbb C}^*</m>.
         </p>
       </statement>
     </exercise>
@@ -1405,8 +1405,8 @@
     <exercise number="36" xml:id="isomorph-exercise-conjugation-matrix">
       <statement>
         <p>
-          Prove that <m>A \mapsto B^{-1}AB</m> is an automorphism of
-          <m>SL_2({\mathbb R})</m> for all <m>B</m> in <m>GL_2({\mathbb R})</m>.
+          Prove que <m>A \mapsto B^{-1}AB</m> é um automorfismo de
+          <m>SL_2({\mathbb R})</m> para todo <m>B</m> em <m>GL_2({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1414,15 +1414,15 @@
     <exercise number="37" xml:id="isomorph-exercise-autG">
       <statement>
         <p>
-          We will denote the set of all automorphisms of <m>G</m> by <m>\aut(G)</m>.
+          Denotaremos o conjunto de todos os automorfismos de <m>G</m> por <m>\aut(G)</m>.
 
           <notation>
             <usage><m>\aut(G)</m></usage>
-            <description>automorphism group of a group <m>G</m></description>
+            <description>grupo de automorfismos de um grupo <m>G</m></description>
           </notation>
 
-          Prove that <m>\aut(G)</m> is a subgroup of <m>S_G</m>,
-          the group of permutations of <m>G</m>.
+          Prove que <m>\aut(G)</m> é um subgrupo de <m>S_G</m>,
+          o grupo das permutações de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -1430,12 +1430,12 @@
     <exercise number="38" xml:id="isomorph-exercise-aut-Z6">
       <statement>
         <p>
-          Find <m>\aut( {\mathbb Z}_6)</m>.
+          Encontre <m>\aut( {\mathbb Z}_6)</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Any automorphism of <m>{\mathbb Z}_6</m> must send <m>1</m> to another generator of <m>{\mathbb Z}_6</m>.
+          Todo automorfismo de <m>{\mathbb Z}_6</m> deve enviar <m>1</m> para outro gerador de <m>{\mathbb Z}_6</m>.
         </p>
       </hint>
     </exercise>
@@ -1443,7 +1443,7 @@
     <exercise number="39" xml:id="isomorph-exercise-aut-Z">
       <statement>
         <p>
-          Find <m>\aut( {\mathbb Z})</m>.
+          Encontre <m>\aut( {\mathbb Z})</m>.
         </p>
       </statement>
     </exercise>
@@ -1451,7 +1451,7 @@
     <exercise number="40" xml:id="isomorph-exercise-congruent-automorphism-groups">
       <statement>
         <p>
-          Find two nonisomorphic groups <m>G</m> and <m>H</m> such that <m>\aut(G) \cong \aut(H)</m>.
+          Encontre dois grupos não isomorfos <m>G</m> e <m>H</m> tais que <m>\aut(G) \cong \aut(H)</m>.
         </p>
       </statement>
     </exercise>
@@ -1459,12 +1459,12 @@
     <exercise number="41" xml:id="isomorph-exercise-inner-aut">
       <statement>
         <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Define a map <m>i_g : G \rightarrow G</m> by <m>i_g(x) = g x g^{-1}</m>.
-          Prove that <m>i_g</m> defines an automorphism of <m>G</m>.
-          Such an automorphism is called an
-          <term>inner automorphism</term>.
-          The set of all inner automorphisms is denoted by <m>\inn(G)</m>.
+          Seja <m>G</m> um grupo e <m>g \in G</m>.
+          Defina uma aplicação <m>i_g : G \rightarrow G</m> por <m>i_g(x) = g x g^{-1}</m>.
+          Prove que <m>i_g</m> define um automorfismo de <m>G</m>.
+          Tal automorfismo é chamado de
+          <term>automorfismo interno</term>.
+          O conjunto de todos os automorfismos internos é denotado por <m>\inn(G)</m>.
 
           <notation>
             <usage><m>i_g</m></usage>
@@ -1473,7 +1473,7 @@
 
           <notation>
             <usage><m>\inn(G)</m></usage>
-            <description>inner automorphism group of a group <m>G</m></description>
+            <description>grupo de automorfismos internos de um grupo <m>G</m></description>
           </notation>
 
         </p>
@@ -1483,7 +1483,7 @@
     <exercise number="42" xml:id="isomorph-exercise-inn-G">
       <statement>
         <p>
-          Prove that <m>\inn(G)</m> is a subgroup of <m>\aut(G)</m>.
+          Prove que <m>\inn(G)</m> é um subgrupo de <m>\aut(G)</m>.
         </p>
       </statement>
     </exercise>
@@ -1491,8 +1491,8 @@
     <exercise number="43" xml:id="isomorph-exercise-aut-Q8">
       <statement>
         <p>
-          What are the inner automorphisms of the quaternion group <m>Q_8</m>?
-          Is <m>\inn(G) = \aut(G)</m> in this case?
+          Quais são os automorfismos internos do grupo dos quatérnios <m>Q_8</m>?
+          Neste caso, <m>\inn(G) = \aut(G)</m>?
         </p>
       </statement>
     </exercise>
@@ -1500,16 +1500,16 @@
     <exercise number="44" xml:id="isomorph-exercise-right-regular-rep">
       <statement>
         <p>
-          Let <m>G</m> be a group and <m>g \in G</m>.
-          Define maps <m>\lambda_g :G \rightarrow G</m> and <m>\rho_g :G \rightarrow G</m> by
-          <m>\lambda_g(x) = gx</m> and <m>\rho_g(x) = xg^{-1}</m>.
-          Show that <m>i_g = \rho_g \circ \lambda_g</m> is an automorphism of <m>G</m>.
-          The isomorphism <m>g \mapsto \rho_g</m> is called the
-          <term>right regular representation</term> of <m>G</m>.
+          Seja <m>G</m> um grupo e <m>g \in G</m>.
+          Defina as aplicações <m>\lambda_g :G \rightarrow G</m> e <m>\rho_g :G \rightarrow G</m> por
+          <m>\lambda_g(x) = gx</m> e <m>\rho_g(x) = xg^{-1}</m>.
+          Mostre que <m>i_g = \rho_g \circ \lambda_g</m> é um automorfismo de <m>G</m>.
+          O isomorfismo <m>g \mapsto \rho_g</m> é chamado de
+          <term>representação regular à direita</term> de <m>G</m>.
 
           <notation>
             <usage><m>\rho_g</m></usage>
-            <description>right regular representation</description>
+            <description>representação regular à direita</description>
           </notation>
 
         </p>
@@ -1519,16 +1519,16 @@
     <exercise number="45" xml:id="isomorph-exercise-isomorphism-internal-direct-product">
       <statement>
         <p>
-          Let <m>G</m> be the internal direct product of subgroups <m>H</m> and <m>K</m>.
-          Show that the map <m>\phi : G \rightarrow H \times K</m> defined by <m>\phi(g) = (h,k)</m> for <m>g =hk</m>,
-          where <m>h \in H</m> and <m>k \in K</m>, is one-to-one and onto.
+          Seja <m>G</m> o produto direto interno dos subgrupos <m>H</m> e <m>K</m>.
+          Mostre que a aplicação <m>\phi : G \rightarrow H \times K</m> definida por <m>\phi(g) = (h,k)</m> para <m>g =hk</m>,
+          onde <m>h \in H</m> e <m>k \in K</m>, é bijetiva.
         </p>
       </statement>
       <hint>
         <p>
-          To show that <m>\phi</m> is one-to-one,
-          let <m>g_1 = h_1 k_1</m> and
-          <m>g_2 = h_2 k_2</m> and consider <m>\phi(g_1) = \phi(g_2)</m>.
+          Para mostrar que <m>\phi</m> é injetiva,
+          sejam <m>g_1 = h_1 k_1</m> e
+          <m>g_2 = h_2 k_2</m> e considere <m>\phi(g_1) = \phi(g_2)</m>.
         </p>
       </hint>
     </exercise>
@@ -1536,9 +1536,9 @@
     <exercise number="46" xml:id="isomorph-exercise-subgroups-isomorphic-groups">
       <statement>
         <p>
-          Let <m>G</m> and <m>H</m> be isomorphic groups.
-          If <m>G</m> has a subgroup of order <m>n</m>,
-          prove that <m>H</m> must also have a subgroup of order <m>n</m>.
+          Sejam <m>G</m> e <m>H</m> grupos isomorfos.
+          Se <m>G</m> tem um subgrupo de ordem <m>n</m>,
+          prove que <m>H</m> também deve ter um subgrupo de ordem <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -1546,8 +1546,8 @@
     <exercise number="47" xml:id="isomorph-exercise-direct-product-isomorphic-groups">
       <statement>
         <p>
-          If <m>G \cong \overline{G}</m> and <m>H \cong \overline{H}</m>,
-          show that <m>G \times H \cong \overline{G} \times \overline{H}</m>.
+          Se <m>G \cong \overline{G}</m> e <m>H \cong \overline{H}</m>,
+          mostre que <m>G \times H \cong \overline{G} \times \overline{H}</m>.
         </p>
       </statement>
     </exercise>
@@ -1555,7 +1555,7 @@
     <exercise number="48" xml:id="isomorph-exercise-GxH-iso-HxG">
       <statement>
         <p>
-          Prove that <m>G \times H</m> is isomorphic to <m>H \times G</m>.
+          Prove que <m>G \times H</m> é isomorfo a <m>H \times G</m>.
         </p>
       </statement>
     </exercise>
@@ -1563,12 +1563,12 @@
     <exercise number="49" xml:id="isomorph-exercise-product-gcd-1">
       <statement>
         <p>
-          Let <m>n_1, \ldots, n_k</m> be positive integers.
-          Show that
+          Sejam <m>n_1, \ldots, n_k</m> inteiros positivos.
+          Mostre que
           <md>
             \prod_{i=1}^k {\mathbb Z}_{n_i} \cong {\mathbb Z}_{n_1 \cdots n_k}
           </md>
-          if and only if <m>\gcd( n_i, n_j) =1</m> for <m>i \neq j</m>.
+          se, e somente se, <m>\gcd( n_i, n_j) =1</m> para <m>i \neq j</m>.
         </p>
       </statement>
     </exercise>
@@ -1576,7 +1576,7 @@
     <exercise number="50" xml:id="isomorph-exercise-AxB-abelian">
       <statement>
         <p>
-          Prove that <m>A \times B</m> is abelian if and only if <m>A</m> and <m>B</m> are abelian.
+          Prove que <m>A \times B</m> é abeliano se, e somente se, <m>A</m> e <m>B</m> são abelianos.
         </p>
       </statement>
     </exercise>
@@ -1584,8 +1584,8 @@
     <exercise number="51" xml:id="isomorph-exercise-internal-direct-product-of-n-subgroups">
       <statement>
         <p>
-          If <m>G</m> is the internal direct product of <m>H_1, H_2, \ldots, H_n</m>,
-          prove that <m>G</m> is isomorphic to <m>\prod_i H_i</m>.
+          Se <m>G</m> é o produto direto interno de <m>H_1, H_2, \ldots, H_n</m>,
+          prove que <m>G</m> é isomorfo a <m>\prod_i H_i</m>.
         </p>
       </statement>
     </exercise>
@@ -1593,9 +1593,9 @@
     <exercise number="52" xml:id="isomorph-exercise-H1xH2-subgroup">
       <statement>
         <p>
-          Let <m>H_1</m> and <m>H_2</m> be subgroups of <m>G_1</m> and <m>G_2</m>,
-          respectively.
-          Prove that <m>H_1 \times H_2</m> is a subgroup of <m>G_1 \times G_2</m>.
+          Sejam <m>H_1</m> e <m>H_2</m> subgrupos de <m>G_1</m> e <m>G_2</m>,
+          respectivamente.
+          Prove que <m>H_1 \times H_2</m> é um subgrupo de <m>G_1 \times G_2</m>.
         </p>
       </statement>
     </exercise>
@@ -1603,8 +1603,8 @@
     <exercise number="53" xml:id="isomorph-exercise-d-gcd-iff">
       <statement>
         <p>
-          Let <m>m, n \in {\mathbb Z}</m>.
-          Prove that <m>\langle m,n \rangle = \langle d \rangle</m> if and only if <m>d = \gcd(m,n)</m>.
+          Sejam <m>m, n \in {\mathbb Z}</m>.
+          Prove que <m>\langle m,n \rangle = \langle d \rangle</m> se, e somente se, <m>d = \gcd(m,n)</m>.
         </p>
       </statement>
     </exercise>
@@ -1612,90 +1612,90 @@
     <exercise number="54" xml:id="isomorph-exercise-lcm">
       <statement>
         <p>
-          Let <m>m, n \in {\mathbb Z}</m>.
-          Prove that <m>\langle m \rangle \cap \langle n \rangle = \langle l \rangle</m> if and only if <m>l = \lcm(m,n)</m>.
+          Sejam <m>m, n \in {\mathbb Z}</m>.
+          Prove que <m>\langle m \rangle \cap \langle n \rangle = \langle l \rangle</m> se, e somente se, <m>l = \lcm(m,n)</m>.
         </p>
       </statement>
     </exercise>
 
     <exercise number="55" xml:id="isomorph-exercise-classify-2p">
-      <title>Groups of order <m>2p</m></title>
+      <title>Grupos de ordem <m>2p</m></title>
       <statement>
         <p>
-          In this series of exercises we will classify all groups of order <m>2p</m>,
-          where <m>p</m> is an odd prime.
+          Nesta série de exercícios classificaremos todos os grupos de ordem <m>2p</m>,
+          onde <m>p</m> é um primo ímpar.
 
           <ol>
             <li>
               <p>
-                Assume <m>G</m> is a group of order <m>2p</m>,
-                where <m>p</m> is an odd prime.
-                If <m>a \in G</m>, show that <m>a</m> must have order <m>1</m>,
-                <m>2</m>, <m>p</m>, or <m>2p</m>.
+                Suponha que <m>G</m> seja um grupo de ordem <m>2p</m>,
+                onde <m>p</m> é um primo ímpar.
+                Se <m>a \in G</m>, mostre que <m>a</m> deve ter ordem <m>1</m>,
+                <m>2</m>, <m>p</m> ou <m>2p</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> has an element of order <m>2p</m>.
-                Prove that <m>G</m> is isomorphic to <m>{\mathbb Z}_{2p}</m>.
-                Hence, <m>G</m> is cyclic.
+                Suponha que <m>G</m> tenha um elemento de ordem <m>2p</m>.
+                Prove que <m>G</m> é isomorfo a <m>{\mathbb Z}_{2p}</m>.
+                Portanto, <m>G</m> é cíclico.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Show that <m>G</m> must contain an element of order <m>p</m>.
-                <em>Hint</em>: Assume that <m>G</m> does not contain an element of order <m>p</m>.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m>.
+                Mostre que <m>G</m> deve conter um elemento de ordem <m>p</m>.
+                <em>Dica</em>: suponha que <m>G</m> não contenha um elemento de ordem <m>p</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Show that <m>G</m> must contain an element of order <m>2</m>.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m>.
+                Mostre que <m>G</m> deve conter um elemento de ordem <m>2</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>P</m> be a subgroup of <m>G</m> with order <m>p</m> and <m>y \in G</m> have order <m>2</m>.
-                Show that <m>yP = Py</m>.
+                Seja <m>P</m> um subgrupo de <m>G</m> de ordem <m>p</m> e seja <m>y \in G</m> de ordem <m>2</m>.
+                Mostre que <m>yP = Py</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m>.
-                If <m>y</m> is an element of order <m>2</m>,
-                then <m>yz = z^ky</m> for some <m>2 \leq k \lt p</m>.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m> e que
+                <m>P = \langle z \rangle</m> seja um subgrupo de ordem <m>p</m> gerado por <m>z</m>.
+                Se <m>y</m> é um elemento de ordem <m>2</m>,
+                então <m>yz = z^ky</m> para algum <m>2 \leq k \lt p</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m>.
-                Prove that <m>G</m> is not abelian.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m>.
+                Prove que <m>G</m> não é abeliano.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
-                Show that we can list the elements of <m>G</m> as <m>\{z^iy^j\mid 0\leq i \lt p, 0\leq j \lt 2\}</m>.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m> e que
+                <m>P = \langle z \rangle</m> seja um subgrupo de ordem <m>p</m> gerado por <m>z</m>, e que <m>y</m> seja um elemento de ordem <m>2</m>.
+                Mostre que podemos listar os elementos de <m>G</m> como <m>\{z^iy^j\mid 0\leq i \lt p, 0\leq j \lt 2\}</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Suppose that <m>G</m> does not contain an element of order <m>2p</m> and
-                <m>P = \langle z \rangle</m> is a subgroup of order <m>p</m> generated by <m>z</m> and <m>y</m> is an element of order <m>2</m>.
-                Prove that the product <m>(z^iy^j)(z^ry^s)</m> can be expressed as a uniquely as <m>z^m y^n</m> for some non negative integers <m>m, n</m>.
-                Thus, conclude that there is only one possibility for a non-abelian group of order <m>2p</m>,
-                it must therefore be the one we have seen already, the dihedral group.
+                Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m> e que
+                <m>P = \langle z \rangle</m> seja um subgrupo de ordem <m>p</m> gerado por <m>z</m>, e que <m>y</m> seja um elemento de ordem <m>2</m>.
+                Prove que o produto <m>(z^iy^j)(z^ry^s)</m> pode ser expresso univocamente como <m>z^m y^n</m> para alguns inteiros não negativos <m>m, n</m>.
+                Assim, conclua que há apenas uma possibilidade para um grupo não abeliano de ordem <m>2p</m>;
+                ele deve ser, portanto, o grupo diedral que já vimos.
               </p>
             </li>
           </ol>
@@ -1711,43 +1711,43 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage has limited support for actually creating isomorphisms,
-        though it is possible.
-        However, there is excellent support for determining if two permutation groups are isomorphic.
-        This will allow us to begin a little project to locate <em>all</em>
-        of the groups of order less than <m>16</m> in Sage's permutation groups.
+        O Sage oferece suporte limitado para criar efetivamente isomorfismos,
+        embora isso seja possível.
+        No entanto, há excelente suporte para determinar se dois grupos de permutações são isomorfos.
+        Isso nos permitirá iniciar um pequeno projeto para localizar <em>todos</em>
+        os grupos de ordem menor que <m>16</m> entre os grupos de permutações do Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Isomorphism Testing</title>
+      <title>Testando isomorfismos</title>
       <p>
-        If <c>G</c> and <c>H</c> are two permutation groups,
-        then the command <c>G.is_isomorphic(H)</c> will return <c>True</c> or <c>False</c> as the two groups are,
-        or are not,
-        isomorphic.
-        Since <q>isomorpic to</q> is an equivalence relation by <xref ref="isomorph-theorem-5"/>,
-        it does not matter which group plays the role of <c>G</c> and which plays the role of <c>H</c>.
+        Se <c>G</c> e <c>H</c> são dois grupos de permutações,
+        então o comando <c>G.is_isomorphic(H)</c> retornará <c>True</c> ou <c>False</c>, conforme os dois grupos sejam
+        ou não
+        isomorfos.
+        Como <q>ser isomorfo a</q> é uma relação de equivalência pelo <xref ref="isomorph-theorem-5"/>,
+        não importa qual grupo desempenha o papel de <c>G</c> e qual desempenha o papel de <c>H</c>.
       </p>
 
       <p>
-        So we have a few more examples to work with,
-        let us introduce the Sage command that creates an external direct product.
-        If <c>G</c> and <c>H</c> are two permutation groups,
-        then the command <c>direct_product_permgroups([G,H])</c> will return the external direct product as a new permutation group.
-        Notice that this is a function
-        (not a method)
-        and the input is a list.
-        Rather than just combining two groups in the list,
-        any number of groups can be supplied.
-        We illustrate isomorphism testing and direct products in the context of <xref ref="isomorph-theorem-z-pq" />, which is an equivalence,
-        so tells us <em>exactly</em> when we have isomorphic groups.
-        We use cyclic permutation groups as stand-ins for
-        <m>{\mathbb Z}_n</m> by <xref ref="isomorph-theorem-3"/>.
+        Como temos mais alguns exemplos para trabalhar,
+        apresentemos o comando do Sage que cria um produto direto externo.
+        Se <c>G</c> e <c>H</c> são dois grupos de permutações,
+        então o comando <c>direct_product_permgroups([G,H])</c> retornará o produto direto externo como um novo grupo de permutações.
+        Observe que esta é uma função
+        (não um método)
+        e que a entrada é uma lista.
+        Em vez de combinar apenas dois grupos na lista,
+        pode-se fornecer qualquer número de grupos.
+        Ilustramos o teste de isomorfismos e os produtos diretos no contexto de <xref ref="isomorph-theorem-z-pq"/>, que é uma equivalência
+        e, portanto, nos diz <em>exatamente</em> quando temos grupos isomorfos.
+        Usamos grupos cíclicos de permutações como representantes de
+        <m>{\mathbb Z}_n</m> pelo <xref ref="isomorph-theorem-3"/>.
       </p>
 
       <p>
-        First, two isomorphic groups.
+        Primeiro, dois grupos isomorfos.
       </p>
 
             <sage>
@@ -1774,7 +1774,7 @@
             </sage>
 
       <p>
-        Now, two non-isomorphic groups.
+        Agora, dois grupos não isomorfos.
       </p>
 
             <sage>
@@ -1801,19 +1801,19 @@
             </sage>
 
       <p>
-        Notice how the simple computation of a greatest common divisor predicts the incredibly complicated computation of determining if two groups are isomorphic.
-        This is a nice illustration of the power of mathematics,
-        replacing a difficult problem
-        (group isomorphism)
-        by a simple one
-        (factoring and divisibility of integers).
-        Let us build one more direct product of cyclic groups,
-        but with three groups,
-        each with orders that are pairwise relatively prime.
+        Observe como o cálculo simples de um máximo divisor comum prevê o cálculo incrivelmente complicado de determinar se dois grupos são isomorfos.
+        Esta é uma boa ilustração do poder da matemática,
+        substituindo um problema difícil
+        (isomorfismo de grupos)
+        por um simples
+        (fatoração e divisibilidade de inteiros).
+        Vamos construir mais um produto direto de grupos cíclicos,
+        mas com três grupos,
+        cujas ordens são relativamente primas duas a duas.
       </p>
 
       <p>
-        If you try the following with larger parameters you may get an error
+        Se você tentar o seguinte com parâmetros maiores, poderá obter um erro
         (<c>database_gap</c>).
       </p>
 
@@ -1836,22 +1836,21 @@
     </subsection>
 
     <subsection>
-      <title>Classifying Finite Groups</title>
+      <title>Classificando grupos finitos</title>
       <p>
-        Once we understand isomorphic groups as being the <q>same</q>,
-        or <q>fundamentally no different,</q>
-        or <q>structurally identical,</q>
-        then it is natural to ask how many
-        <q>really different</q> finite groups there are.
-        <xref ref="isomorph-theorem-4"/> gives a partial answer:
-        for each prime there is just one finite group,
-        with <m>{\mathbb Z}_p</m> as a concrete manifestation.
+        Uma vez que entendemos grupos isomorfos como sendo <q>iguais</q>,
+        ou <q>fundamentalmente sem diferença</q>,
+        ou <q>estruturalmente idênticos</q>,
+        é natural perguntar quantos grupos finitos <q>realmente diferentes</q> existem.
+        <xref ref="isomorph-theorem-4"/> fornece uma resposta parcial:
+        para cada primo há apenas um grupo finito,
+        com <m>{\mathbb Z}_p</m> como manifestação concreta.
       </p>
 
       <p>
-        Let us embark on a quest to find all the groups of order less than <m>16</m> in Sage as permutation groups.
-        For prime orders <m>1,2,3,5,7,11</m> and <m>13</m> we know there is really just one group each,
-        and we can realize them all:
+        Vamos iniciar uma busca para encontrar todos os grupos de ordem menor que <m>16</m> no Sage como grupos de permutações.
+        Para as ordens primas <m>1,2,3,5,7,11</m> e <m>13</m>, sabemos que há realmente apenas um grupo para cada ordem,
+        e podemos realizar todos eles:
       </p>
 
             <sage>
@@ -1870,13 +1869,13 @@
             </sage>
 
       <p>
-        So now our smallest unknown case is order <m>4</m>.
-        Sage knows at least three such groups,
-        and we can use Sage to check if any pair is isomorphic.
-        Notice that since <q>isomorphic to</q>
-        is an equivalence relation,
-        and hence a transitive relation,
-        the two tests below are sufficient.
+        Portanto, nosso menor caso desconhecido agora é a ordem <m>4</m>.
+        O Sage conhece pelo menos três grupos desse tipo,
+        e podemos usá-lo para verificar se algum par é isomorfo.
+        Observe que, como <q>ser isomorfo a</q>
+        é uma relação de equivalência,
+        e portanto uma relação transitiva,
+        os dois testes abaixo são suficientes.
       </p>
 
             <sage>
@@ -1902,26 +1901,26 @@
             </sage>
 
       <p>
-        So we have at least two different groups:
-        <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2\times{\mathbb Z}_2</m>,
-        with the latter also known as the Klein 4-group.
-        Sage will not be able to tell us if we have a <em>complete</em>
-        list <mdash/> this will always require theoretical results like <xref ref="isomorph-theorem-5"/>.
-        We will shortly have a more general result that handles the case of order <m>4</m>,
-        but right now, a careful analysis
-        (by hand)
-        of the possibilities for the Cayley table of a group of order <m>4</m> should lead you to the two possibilities above as the only possibilities.
-        Try to deduce what the Cayley table of an order <m>4</m> group should look like,
-        since you know about identity elements,
-        inverses and cancellation.
+        Portanto, temos pelo menos dois grupos diferentes:
+        <m>{\mathbb Z}_4</m> e <m>{\mathbb Z}_2\times{\mathbb Z}_2</m>,
+        este último também conhecido como grupo de Klein de ordem 4.
+        O Sage não será capaz de nos dizer se temos uma lista <em>completa</em>
+        <mdash/> isso sempre exigirá resultados teóricos como <xref ref="isomorph-theorem-5"/>.
+        Em breve teremos um resultado mais geral que trata do caso de ordem <m>4</m>,
+        mas, neste momento, uma análise cuidadosa
+        (feita à mão)
+        das possibilidades para a tabela de Cayley de um grupo de ordem <m>4</m> deve levá-lo às duas possibilidades acima como as únicas.
+        Tente deduzir como deve ser a tabela de Cayley de um grupo de ordem <m>4</m>,
+        pois você conhece os elementos identidade,
+        os inversos e o cancelamento.
       </p>
 
       <p>
-        We have seen at least two groups of order <m>6</m>
-        (next on our list of non-prime orders).
-        One is abelian and one is not,
-        so we do not need Sage to tell us they are structurally different.
-        But let us do it anyway.
+        Já vimos pelo menos dois grupos de ordem <m>6</m>
+        (o próximo em nossa lista de ordens não primas).
+        Um é abeliano e o outro não,
+        portanto não precisamos do Sage para dizer que são estruturalmente diferentes.
+        Mas vamos fazê-lo assim mesmo.
       </p>
 
             <sage>
@@ -1936,12 +1935,12 @@
             </sage>
 
       <p>
-        Is that all?
-        There is <m>{\mathbb Z}_3\times{\mathbb Z}_2</m>,
-        but that is just <m>{\mathbb Z}_6</m> since <m>2</m> and <m>3</m> are relatively prime.
-        The dihedral group, <m>D_3</m>,
-        all symmetries of a triangle,
-        is just <m>S_3</m>, the symmetric group on <m>3</m> symbols.
+        É só isso?
+        Há <m>{\mathbb Z}_3\times{\mathbb Z}_2</m>,
+        mas ele é simplesmente <m>{\mathbb Z}_6</m>, pois <m>2</m> e <m>3</m> são relativamente primos.
+        O grupo diedral <m>D_3</m>,
+        formado por todas as simetrias de um triângulo,
+        é simplesmente <m>S_3</m>, o grupo simétrico em <m>3</m> símbolos.
       </p>
 
             <sage>
@@ -1956,41 +1955,41 @@
             </sage>
 
       <p>
-        <xref ref="isomorph-exercise-classify-2p"/> from this section classifies all groups of order <m>2p</m>,
-        where <m>p</m> is a prime.
-        Such a group is either cyclic or a dihedral group.
-        So the two groups above,
-        <m>{\mathbb Z}_6</m> and <m>D_3</m>,
-        are the complete list of groups of order <m>6</m>.
+        O <xref ref="isomorph-exercise-classify-2p"/> desta seção classifica todos os grupos de ordem <m>2p</m>,
+        onde <m>p</m> é primo.
+        Tal grupo é cíclico ou diedral.
+        Portanto, os dois grupos acima,
+        <m>{\mathbb Z}_6</m> e <m>D_3</m>,
+        formam a lista completa de grupos de ordem <m>6</m>.
       </p>
 
       <p>
-        By this general result, in addition to order <m>6</m>,
-        we also know the complete lists of groups of orders <m>10</m> and <m>14</m>.
-        To Be Continued.
+        Por esse resultado geral, além da ordem <m>6</m>,
+        também conhecemos as listas completas de grupos de ordens <m>10</m> e <m>14</m>.
+        Continua.
       </p>
     </subsection>
 
     <subsection>
-      <title>Internal Direct Products</title>
+      <title>Produtos diretos internos</title>
       <p>
-        An internal direct product is a statement about subgroups of a single group,
-        together with a theorem that links them to an external direct product.
-        We will work an example here that will illustrate the nature of an internal direct product.
+        Um produto direto interno é uma afirmação sobre subgrupos de um único grupo,
+        juntamente com um teorema que os relaciona a um produto direto externo.
+        Trabalharemos aqui um exemplo que ilustrará a natureza de um produto direto interno.
       </p>
 
       <p>
-        Given an integer <m>n</m>, the set of positive integers less than <m>n</m>,
-        and relatively prime to <m>n</m> forms a group under multiplication mod <m>n</m>.
-        We will work in the set <c>Integers(n)</c> where we can add <em>and</em> multiply,
-        but we want to stay strictly with multiplication only.
+        Dado um inteiro <m>n</m>, o conjunto dos inteiros positivos menores que <m>n</m>
+        e relativamente primos a <m>n</m> forma um grupo sob a multiplicação módulo <m>n</m>.
+        Trabalharemos no conjunto <c>Integers(n)</c>, onde podemos somar <em>e</em> multiplicar,
+        mas queremos permanecer estritamente apenas com a multiplicação.
       </p>
 
       <p>
-        First we build the subgroup itself.
-        Notice how we must convert <c>x</c> into an integer
-        (an element of <c>ZZ</c>)
-        so that the greatest common divisor computation performs correctly.
+        Primeiro construímos o próprio subgrupo.
+        Observe que devemos converter <c>x</c> em um inteiro
+        (um elemento de <c>ZZ</c>)
+        para que o cálculo do máximo divisor comum funcione corretamente.
       </p>
 
             <sage>
@@ -2005,11 +2004,11 @@
             </sage>
 
       <p>
-        So we have a group of order <m>12</m>.
-        We are going to try to find a subgroup of order <m>6</m> and a subgroup of order <m>2</m> to form the internal direct product,
-        and we will restrict our search initially to cyclic subgroups of order <m>6</m>.
-        Sage has a method that will give the order of each of these elements,
-        relative to multiplication, so let us examine those next.
+        Portanto, temos um grupo de ordem <m>12</m>.
+        Tentaremos encontrar um subgrupo de ordem <m>6</m> e um subgrupo de ordem <m>2</m> para formar o produto direto interno,
+        e inicialmente restringiremos nossa busca a subgrupos cíclicos de ordem <m>6</m>.
+        O Sage tem um método que fornece a ordem de cada um desses elementos
+        em relação à multiplicação; examinemo-los agora.
       </p>
 
             <sage>
@@ -2022,15 +2021,15 @@
             </sage>
 
       <p>
-        We have many choices for generators of a cyclic subgroup of order <m>6</m> and for a cyclic subgroup of order <m>2</m>.
-        Of course, some of the choices for a generator of the subgroup of order <m>6</m> will generate the same subgroup.
-        Can you tell, just by counting,
-        how many subgroups of order <m>6</m> there are?
-        We are going to pick the first element of order <m>6</m>,
-        and the last element of order <m>2</m>, for no particular reason.
-        After your work through this once,
-        we encourage you to try other choices to understand why some choices lead to an internal direct product and some do not.
-        Notice that we choose the elements from the list <c>U</c> so that they are sure to be elements of <c>Z36</c> and behave properly when multiplied.
+        Temos muitas escolhas de geradores para um subgrupo cíclico de ordem <m>6</m> e para um subgrupo cíclico de ordem <m>2</m>.
+        Evidentemente, algumas escolhas de gerador do subgrupo de ordem <m>6</m> gerarão o mesmo subgrupo.
+        Você consegue dizer, apenas contando,
+        quantos subgrupos de ordem <m>6</m> existem?
+        Escolheremos o primeiro elemento de ordem <m>6</m>
+        e o último elemento de ordem <m>2</m>, sem nenhuma razão especial.
+        Depois de fazer isso uma vez,
+        recomendamos que tente outras escolhas para entender por que algumas levam a um produto direto interno e outras não.
+        Observe que escolhemos os elementos da lista <c>U</c> para garantir que sejam elementos de <c>Z36</c> e se comportem corretamente quando multiplicados.
       </p>
 
             <sage>
@@ -2055,10 +2054,10 @@
             </sage>
 
       <p>
-        So <c>A</c> and <c>B</c> are two cyclic subgroups.
-        Notice that their intersection is the identity element,
-        one of our requirements for an internal direct product.
-        So this is a good start.
+        Portanto, <c>A</c> e <c>B</c> são dois subgrupos cíclicos.
+        Observe que sua interseção é o elemento identidade,
+        um dos requisitos para um produto direto interno.
+        Assim, este é um bom começo.
       </p>
 
             <sage>
@@ -2067,9 +2066,9 @@
             </sage>
 
       <p>
-        <c>Z36</c> is an abelian group,
-        thus the condition on all products commuting will hold,
-        but we illustrate the Sage commands that will check this in a non-abelian situation.
+        <c>Z36</c> é um grupo abeliano,
+        portanto a condição de que todos os produtos comutem será satisfeita,
+        mas ilustramos os comandos do Sage que verificariam isso em uma situação não abeliana.
       </p>
 
             <sage>
@@ -2082,9 +2081,9 @@
             </sage>
 
       <p>
-        Finally, we need to check that by forming products with elements from <c>A</c> and <c>B</c> we create the entire group.
-        Sorting the resulting list will make a check easier for us visually,
-        and is required if we want Sage to do the check.
+        Finalmente, precisamos verificar que, formando produtos com elementos de <c>A</c> e <c>B</c>, criamos o grupo inteiro.
+        Ordenar a lista resultante tornará a verificação visual mais fácil
+        e é necessário se quisermos que o Sage faça a verificação.
       </p>
 
             <sage>
@@ -2106,100 +2105,100 @@
             </sage>
 
       <p>
-        That's it.
-        We now condense all this information into the statement that
-        <q><c>U</c> is the internal direct product of <c>A</c> and <c>B</c>.</q>
-        By <xref ref="isomorph-theorem-directproducts"/>,
-        we see that <c>U</c> is isomorphic to a product of a cyclic group of order <m>6</m> and a cyclic group of order <m>2</m>.
-        So in a very real sense,
-        <c>U</c> is no more or less complicated than <m>{\mathbb Z}_6\times{\mathbb Z}_2</m>,
-        which is in turn isomorphic to <m>{\mathbb Z}_3\times{\mathbb Z}_2\times{\mathbb Z}_2</m>.
-        So we totally understand the <q>structure</q> of <c>U</c>.
-        For example, we can see that <c>U</c> is not cyclic,
-        since when written as a product of cyclic groups,
-        the two orders are not relatively prime.
-        The final expression of <c>U</c> suggests you could find three cyclic subgroups of <c>U</c>,
-        with orders <m>3</m>, <m>2</m> and <m>2</m>,
-        so that <c>U</c> is an internal direct product of the three subgroups.
+        É isso.
+        Agora condensamos todas essas informações na afirmação de que
+        <q><c>U</c> é o produto direto interno de <c>A</c> e <c>B</c>.</q>
+        Pelo <xref ref="isomorph-theorem-directproducts"/>,
+        vemos que <c>U</c> é isomorfo ao produto de um grupo cíclico de ordem <m>6</m> por um grupo cíclico de ordem <m>2</m>.
+        Assim, em um sentido muito real,
+        <c>U</c> não é mais nem menos complicado que <m>{\mathbb Z}_6\times{\mathbb Z}_2</m>,
+        que por sua vez é isomorfo a <m>{\mathbb Z}_3\times{\mathbb Z}_2\times{\mathbb Z}_2</m>.
+        Portanto, entendemos completamente a <q>estrutura</q> de <c>U</c>.
+        Por exemplo, podemos ver que <c>U</c> não é cíclico,
+        pois, quando escrito como produto de grupos cíclicos,
+        as duas ordens não são relativamente primas.
+        A expressão final de <c>U</c> sugere que você poderia encontrar três subgrupos cíclicos de <c>U</c>,
+        com ordens <m>3</m>, <m>2</m> e <m>2</m>,
+        de modo que <c>U</c> seja um produto direto interno dos três subgrupos.
       </p>
     </subsection>
   </section>
 
   <exercises xml:id="isomorph-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <exercise number="1" xml:id="isomorph-sage-exercise-cayley">
       <statement>
         <p>
-          This exercise is about putting Cayley's Theorem into practice.
-          First, read and study the theorem.
-          Realize that this result by itself is primarily of theoretical interest,
-          but with some more theory we could get into some subtler aspects of this (a subject known as
-          <q>representation theory</q>).
+          Este exercício trata de colocar o teorema de Cayley em prática.
+          Primeiro, leia e estude o teorema.
+          Perceba que esse resultado, por si só, é principalmente de interesse teórico,
+          mas, com um pouco mais de teoria, poderíamos abordar aspectos mais sutis disso (um assunto conhecido como
+          <q>teoria das representações</q>).
         </p>
 
         <p>
-          You should create these representations mostly with pencil-and-paper work,
-          using Sage as a fancy calculator and assistant.
-          You do not need to include all these computations in your worksheet.
-          Build the requested group representations and then include enough verifications in Sage to prove that that your representation correctly represents the group.
+          Você deve criar essas representações principalmente com trabalho de lápis e papel,
+          usando o Sage como uma calculadora sofisticada e um assistente.
+          Não é necessário incluir todos esses cálculos em sua folha de exercícios.
+          Construa as representações de grupo solicitadas e inclua verificações suficientes no Sage para provar que sua representação representa corretamente o grupo.
         </p>
 
         <p>
-          Begin by building a permutation representation of the quaternions,
+          Comece construindo uma representação por permutações dos quatérnios,
           <m>Q</m>.
-          There are eight elements in <m>Q</m> (<m>\pm 1, \pm I, \pm J, \pm K</m>),
-          so you will be constructing a subgroup of <m>S_8</m>.
-          For each <m>g\in Q</m> form the function <m>T_g</m>,
-          defined as <m>T_g(x)=xg</m>.
-          Notice that this definition is the <q>reverse</q>
-          of that given in the text.
-          This is because Sage composes permutations left-to-right,
-          while your text composes right-to-left.
-          To create the permutations <m>T_g</m>,
-          the two-line version of writing permutations could be very useful as an intermediate step.
-          You will probably want to <q>code</q>
-          each element of <m>Q</m> with an integer in <m>\{1,2,\dots,8\}</m>.
+          Há oito elementos em <m>Q</m> (<m>\pm 1, \pm I, \pm J, \pm K</m>),
+          portanto você construirá um subgrupo de <m>S_8</m>.
+          Para cada <m>g\in Q</m>, forme a função <m>T_g</m>,
+          definida como <m>T_g(x)=xg</m>.
+          Observe que essa definição é o <q>inverso</q>
+          daquela dada no texto.
+          Isso ocorre porque o Sage compõe permutações da esquerda para a direita,
+          enquanto o texto as compõe da direita para a esquerda.
+          Para criar as permutações <m>T_g</m>,
+          a forma em duas linhas de escrever permutações pode ser muito útil como etapa intermediária.
+          Você provavelmente desejará <q>codificar</q>
+          cada elemento de <m>Q</m> com um inteiro em <m>\{1,2,\dots,8\}</m>.
         </p>
 
         <p>
-          One such representation is included in Sage as <c>QuaternionGroup()</c> <mdash/> your answer should look very similar,
-          but perhaps not identical.
-          Do not submit your answer for a representation of the quaternions,
-          but I strongly suggest working this particular group representation until you are sure you have it right <mdash/> the problems below might be very difficult otherwise.
-          You can use Sage's <c>.is_isomorphic()</c> method to check if your representations are correct.
-          However, do not use this as a substitute for the part of each question that asks you to investigate properties of your representation towards this end.
+          Uma dessas representações está incluída no Sage como <c>QuaternionGroup()</c> <mdash/> sua resposta deve ser muito semelhante,
+          mas talvez não idêntica.
+          Não entregue sua resposta para uma representação dos quatérnios,
+          mas recomendo fortemente trabalhar com essa representação de grupo específica até ter certeza de que a acertou <mdash/> caso contrário, os problemas abaixo podem ser muito difíceis.
+          Você pode usar o método <c>.is_isomorphic()</c> do Sage para verificar se suas representações estão corretas.
+          No entanto, não use isso como substituto da parte de cada questão que pede que você investigue propriedades de sua representação para esse fim.
         </p>
 
         <ol>
           <li>
             <p>
-              Build the permutation representation of
-              <m>{\mathbb Z}_2\times{\mathbb Z}_4</m> described in Cayley's Theorem.
-              (Remember that this group is additive,
-              while the theorem uses multiplicative notation.)
-              Include the representation of <em>each</em>
-              of the <m>8</m> elements in your submitted work.
-              Then construct the permutation group as a subgroup of a full symmetric group that is generated by exactly two of the eight elements you have already constructed.
-              Hint: which two elements of
-              <m>{\mathbb Z}_2\times{\mathbb Z}_4</m> might you use to generate all of <m>{\mathbb Z}_2\times{\mathbb Z}_4</m>?
-              Use commands in Sage to investigate various properties of your permutation group,
-              other than just <c>.list()</c>,
-              to provide evidence that your subgroup is correct <mdash/> include these in your submitted worksheet.
+              Construa a representação por permutações de
+              <m>{\mathbb Z}_2\times{\mathbb Z}_4</m> descrita no teorema de Cayley.
+              (Lembre-se de que esse grupo é aditivo,
+              enquanto o teorema usa notação multiplicativa.)
+              Inclua em seu trabalho a representação de <em>cada</em>
+              um dos <m>8</m> elementos.
+              Em seguida, construa o grupo de permutações como um subgrupo de um grupo simétrico completo gerado por exatamente dois dos oito elementos que você já construiu.
+              Dica: quais dois elementos de
+              <m>{\mathbb Z}_2\times{\mathbb Z}_4</m> você poderia usar para gerar todo <m>{\mathbb Z}_2\times{\mathbb Z}_4</m>?
+              Use comandos do Sage para investigar várias propriedades de seu grupo de permutações,
+              além de apenas <c>.list()</c>,
+              a fim de fornecer evidências de que seu subgrupo está correto <mdash/> inclua-as em sua folha de exercícios.
             </p>
           </li>
 
           <li>
             <p>
-              Build a permutation representation of <m>U(24)</m>,
-              the group of units mod 24.
-              Again, list a representation of <em>each</em>
-              element in your submitted work.
-              Then construct the group as a subgroup of a full symmetric group created with three generators.
-              To determine these three generators,
-              you will likely need to understand <m>U(24)</m> as an internal direct product.
-              Use commands in Sage to investigate various properties of your group,
-              other than just <c>.list()</c>,
-              to provide evidence that your subgroup is correct <mdash/> include these in your submitted worksheet.
+              Construa uma representação por permutações de <m>U(24)</m>,
+              o grupo das unidades módulo 24.
+              Novamente, liste em seu trabalho a representação de <em>cada</em>
+              elemento.
+              Em seguida, construa o grupo como um subgrupo de um grupo simétrico completo criado com três geradores.
+              Para determinar esses três geradores,
+              provavelmente será necessário entender <m>U(24)</m> como um produto direto interno.
+              Use comandos do Sage para investigar várias propriedades de seu grupo,
+              além de apenas <c>.list()</c>,
+              a fim de fornecer evidências de que seu subgrupo está correto <mdash/> inclua-as em sua folha de exercícios.
             </p>
           </li>
         </ol>
@@ -2209,23 +2208,23 @@
     <exercise number="2" xml:id="isomorph-sage-exercise-D10">
       <statement>
         <p>
-          Consider the symmetries of a 10-gon,
-          <m>D_{10}</m> in your text, <c>DihedralGroup(10)</c> in Sage.
-          Presume that the vertices of the 10-gon have been labeled <m>1</m> through <m>10</m> in order.
-          Identify the permutation that is a <m>180</m> degree rotation and use it to generate a subgroup <m>R</m> of order <m>2</m>.
-          Then identify the permutation that is a <m>72</m> degree rotation,
-          and any one of the ten permutations that are a reflection of the <m>10</m>-gon about a line.
-          Use these latter two permutations to generate a subgroup <m>S</m> of order <m>10</m>.
-          Use Sage to verify that the full dihedral group is the internal direct product of the subgroups <m>R</m> and <m>S</m> by checking the conditions in the definition of an internal direct product.
+          Considere as simetrias de um decágono,
+          <m>D_{10}</m> no texto, <c>DihedralGroup(10)</c> no Sage.
+          Suponha que os vértices do decágono tenham sido rotulados de <m>1</m> a <m>10</m> em ordem.
+          Identifique a permutação que é uma rotação de <m>180</m> graus e use-a para gerar um subgrupo <m>R</m> de ordem <m>2</m>.
+          Em seguida, identifique a permutação que é uma rotação de <m>72</m> graus
+          e qualquer uma das dez permutações que são reflexões do decágono <m>10</m> em torno de uma reta.
+          Use essas duas últimas permutações para gerar um subgrupo <m>S</m> de ordem <m>10</m>.
+          Use o Sage para verificar que o grupo diedral completo é o produto direto interno dos subgrupos <m>R</m> e <m>S</m>, verificando as condições na definição de produto direto interno.
         </p>
 
         <p>
-          We have a theorem which says that if a group is an internal direct product,
-          then it is isomorphic to some external direct product.
-          Understand that this does not mean that you can use the converse in this problem.
-          In other words,
-          establishing an isomorphism of <m>G</m> with an external direct product <em>does not prove</em>
-          that <m>G</m> is an internal direct product.
+          Temos um teorema que diz que, se um grupo é um produto direto interno,
+          então ele é isomorfo a algum produto direto externo.
+          Entenda que isso não significa que você possa usar a recíproca neste problema.
+          Em outras palavras,
+          estabelecer um isomorfismo de <m>G</m> com um produto direto externo <em>não prova</em>
+          que <m>G</m> é um produto direto interno.
         </p>
       </statement>
     </exercise>
