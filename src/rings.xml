@@ -1045,56 +1045,56 @@
   </section>
 
   <section xml:id="rings-section-maximal-prime-ideals">
-    <title>Maximal and Prime Ideals</title>
+    <title>Ideais maximais e primos</title>
     <introduction>
       <p>
-        In this particular section we are especially interested in certain ideals of commutative rings.
-        These ideals give us special types of factor rings.
-        More specifically,
-        we would like to characterize those ideals <m>I</m> of a commutative ring <m>R</m> such that <m>R/I</m> is an integral domain or a field.
+        Nesta seção, estamos especialmente interessados em certos ideais de anéis comutativos.
+        Esses ideais nos fornecem tipos especiais de anéis quocientes.
+        Mais especificamente,
+        gostaríamos de caracterizar os ideais <m>I</m> de um anel comutativo <m>R</m> tais que <m>R/I</m> seja um domínio de integridade ou um corpo.
       </p>
 
       <p>
-        A proper ideal <m>M</m> of a ring <m>R</m> is a
-        <term>maximal ideal</term><idx><h>Ideal</h><h>maximal</h></idx><idx><h>Maximal ideal</h></idx>
-        of <m>R</m> if the ideal <m>M</m> is not a proper subset of any ideal of <m>R</m> except <m>R</m> itself.
-        That is, <m>M</m> is a maximal ideal if for any ideal <m>I</m> properly containing <m>M</m>,
+      Um ideal próprio <m>M</m> de um anel <m>R</m> é um
+        <term>ideal maximal</term><idx><h>Ideal</h><h>maximal</h></idx><idx><h>Ideal maximal</h></idx>
+        de <m>R</m> se o ideal <m>M</m> não é um subconjunto próprio de nenhum ideal de <m>R</m>, exceto do próprio <m>R</m>.
+        Isto é, <m>M</m> é um ideal maximal se, para qualquer ideal <m>I</m> que contenha propriamente <m>M</m>,
         <m>I = R</m>.
-        The following theorem completely characterizes maximal ideals for commutative rings with identity in terms of their corresponding factor rings.
+        O teorema a seguir caracteriza completamente os ideais maximais de anéis comutativos com identidade em termos de seus anéis quocientes correspondentes.
       </p>
 
       <theorem xml:id="rings-theorem-maximal-ideal-field">
         <statement>
           <p>
-            Let <m>R</m> be a commutative ring with identity and <m>M</m> an ideal in <m>R</m>.
-            Then <m>M</m> is a maximal ideal of <m>R</m> if and only if <m>R/M</m> is a field.
+            Seja <m>R</m> um anel comutativo com identidade e <m>M</m> um ideal em <m>R</m>.
+            Então <m>M</m> é um ideal maximal de <m>R</m> se, e somente se, <m>R/M</m> é um corpo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>M</m> be a maximal ideal in <m>R</m>.
-            If <m>R</m> is a commutative ring,
-            then <m>R/M</m> must also be a commutative ring.
-            Clearly, <m>1 + M</m> acts as an identity for <m>R/M</m>.
-            We must also show that every nonzero element in <m>R/M</m> has an inverse.
-            If <m>a + M</m> is a nonzero element in <m>R/M</m>, then <m>a \notin M</m>.
-            Define <m>I</m> to be the set <m>\{ ra + m : r \in R \text{ and } m \in M \}</m>.
-            We will show that <m>I</m> is an ideal in <m>R</m>.
-            The set <m>I</m> is nonempty since <m>0a+0=0</m> is in <m>I</m>.
-            If <m>r_1 a + m_1</m> and <m>r_2 a + m_2</m> are two elements in <m>I</m>, then
+            Seja <m>M</m> um ideal maximal em <m>R</m>.
+            Se <m>R</m> é um anel comutativo,
+            então <m>R/M</m> também deve ser um anel comutativo.
+            Claramente, <m>1 + M</m> funciona como identidade para <m>R/M</m>.
+            Devemos também mostrar que todo elemento não nulo de <m>R/M</m> possui um inverso.
+            Se <m>a + M</m> é um elemento não nulo de <m>R/M</m>, então <m>a \notin M</m>.
+            Defina <m>I</m> como o conjunto <m>\{ ra + m : r \in R \text{ e } m \in M \}</m>.
+            Mostraremos que <m>I</m> é um ideal em <m>R</m>.
+            O conjunto <m>I</m> não é vazio, pois <m>0a+0=0</m> pertence a <m>I</m>.
+            Se <m>r_1 a + m_1</m> e <m>r_2 a + m_2</m> são dois elementos de <m>I</m>, então
             <md>
               (r_1 a + m_1) - ( r_2 a + m_2) = (r_1 - r_2)a + (m_1 - m_2)
             </md>
-            is in <m>I</m>.
-            Also, for any <m>r \in R</m> it is true that <m>rI \subset I</m>;
-            hence, <m>I</m> is closed under multiplication and satisfies the necessary conditions to be an ideal.
-            Therefore, by <xref ref="rings-prop-subring"/> and the definition of an ideal,
-            <m>I</m> is an ideal properly containing <m>M</m>.
-            Since <m>M</m> is a maximal ideal, <m>I=R</m>;
-            consequently,
-            by the definition of <m>I</m> there must be an <m>m</m> in <m>M</m> and an element <m>b</m> in <m>R</m> such that <m>1=ab+m</m>.
-            Therefore,
+            pertence a <m>I</m>.
+            Além disso, para todo <m>r \in R</m>, vale <m>rI \subset I</m>;
+            logo, <m>I</m> é fechado sob a multiplicação e satisfaz as condições necessárias para ser um ideal.
+            Portanto, por <xref ref="rings-prop-subring"/> e pela definição de ideal,
+            <m>I</m> é um ideal que contém propriamente <m>M</m>.
+            Como <m>M</m> é um ideal maximal, <m>I=R</m>;
+            consequentemente,
+            pela definição de <m>I</m>, deve existir um <m>m</m> em <m>M</m> e um elemento <m>b</m> em <m>R</m> tais que <m>1=ab+m</m>.
+            Portanto,
             <md>
               1 + M = ab + M = ba + M = (a+M)(b+M)
             </md>.
@@ -1102,36 +1102,36 @@
             <!-- Label repaired.  Suggested by R. Beezer. -->
             <!-- TWJ - 12/19/2011 -->
           <p>
-            Conversely, suppose that <m>M</m> is an ideal and <m>R/M</m> is a field.
-            Since <m>R/M</m> is a field, it must contain at least two elements:
-            <m>0 + M = M</m> and <m>1 + M</m>.
-            Hence, <m>M</m> is a proper ideal of <m>R</m>.
-            Let <m>I</m> be any ideal properly containing <m>M</m>.
-            We need to show that <m>I = R</m>.
-            Choose <m>a</m> in <m>I</m> but not in <m>M</m>.
-            Since <m>a+ M</m> is a nonzero element in a field,
-            there exists an element <m>b +M</m> in <m>R/M</m> such that <m>(a+M)(b+M) = ab + M = 1+M</m>.
-            Consequently, there exists an element <m>m \in M</m> such that
-            <m>ab + m = 1</m> and <m>1</m> is in <m>I</m>.
-            Therefore, <m>r1 =r \in I</m> for all <m>r \in R</m>.
-            Consequently, <m>I = R</m>.
+            Reciprocamente, suponha que <m>M</m> seja um ideal e <m>R/M</m> seja um corpo.
+            Como <m>R/M</m> é um corpo, ele deve conter pelo menos dois elementos:
+            <m>0 + M = M</m> e <m>1 + M</m>.
+            Portanto, <m>M</m> é um ideal próprio de <m>R</m>.
+            Seja <m>I</m> qualquer ideal que contenha propriamente <m>M</m>.
+            Devemos mostrar que <m>I = R</m>.
+            Escolha <m>a</m> em <m>I</m>, mas não em <m>M</m>.
+            Como <m>a+ M</m> é um elemento não nulo de um corpo,
+            existe um elemento <m>b +M</m> em <m>R/M</m> tal que <m>(a+M)(b+M) = ab + M = 1+M</m>.
+            Consequentemente, existe um elemento <m>m \in M</m> tal que
+            <m>ab + m = 1</m> e <m>1</m> pertence a <m>I</m>.
+            Portanto, <m>r1 =r \in I</m> para todo <m>r \in R</m>.
+            Consequentemente, <m>I = R</m>.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="rings-example-prime-ideal">
         <p>
-          Let <m>p{\mathbb Z}</m> be an ideal in
-          <m>{\mathbb Z}</m>, where <m>p</m> is prime.
-          Then <m>p{\mathbb Z}</m> is a maximal ideal since <m>{\mathbb Z}/ p {\mathbb Z} \cong {\mathbb Z}_p</m> is a field.
+          Seja <m>p{\mathbb Z}</m> um ideal em
+          <m>{\mathbb Z}</m>, onde <m>p</m> é primo.
+          Então <m>p{\mathbb Z}</m> é um ideal maximal, pois <m>{\mathbb Z}/ p {\mathbb Z} \cong {\mathbb Z}_p</m> é um corpo.
         </p>
       </example>
 
       <p>
-        A proper ideal <m>P</m> in a commutative ring <m>R</m> is called a <term>prime ideal</term><idx><h>Ideal</h><h>prime</h></idx><idx><h>Prime ideal</h></idx>
-        if whenever <m>ab \in P</m>, then either <m>a \in P</m> or <m>b \in P</m>.<fn>
-        It is possible to define prime ideals in a noncommutative ring.
-        See [1] or [3].
+        Um ideal próprio <m>P</m> em um anel comutativo <m>R</m> é chamado de <term>ideal primo</term><idx><h>Ideal</h><h>primo</h></idx><idx><h>Ideal primo</h></idx>
+        se, sempre que <m>ab \in P</m>, então <m>a \in P</m> ou <m>b \in P</m>.<fn>
+        É possível definir ideais primos em um anel não comutativo.
+        Veja [1] ou [3].
         </fn></p>
             <!-- Required P to be a proper ideal.  Suggested by D. Keeler. -->
             <!--  TWJ 19/3/2013 -->
@@ -1139,41 +1139,41 @@
             <!-- TWJ 1/10/2014 -->
       <example xml:id="rings-example-z12-ideal">
         <p>
-          It is easy to check that the set
-          <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> is an ideal in <m>{\mathbb Z}_{12}</m>.
-          This ideal is prime.
-          In fact, it is a maximal ideal.
+          É fácil verificar que o conjunto
+          <m>P = \{ 0, 2, 4, 6, 8, 10 \}</m> é um ideal em <m>{\mathbb Z}_{12}</m>.
+          Esse ideal é primo.
+          De fato, é um ideal maximal.
         </p>
       </example>
 
       <proposition>
         <statement>
           <p>
-            Let <m>R</m> be a commutative ring with identity <m>1</m>,
-            where <m>1 \neq 0</m>.
-            Then <m>P</m> is a prime ideal in <m>R</m> if and only if <m>R/P</m> is an integral domain.
+            Seja <m>R</m> um anel comutativo com identidade <m>1</m>,
+            onde <m>1 \neq 0</m>.
+            Então <m>P</m> é um ideal primo em <m>R</m> se, e somente se, <m>R/P</m> é um domínio de integridade.
           </p>
         </statement>
 
         <proof>
           <p>
-            First let us assume that <m>P</m> is an ideal in <m>R</m> and <m>R/P</m> is an integral domain.
-            Suppose that <m>ab \in P</m>.
-            If <m>a + P</m> and <m>b + P</m> are two elements of <m>R/P</m> such that <m>(a + P)(b + P) = 0 + P = P</m>,
-            then either <m>a + P = P</m> or <m>b + P = P</m>.
-            This means that either <m>a</m> is in <m>P</m> or <m>b</m> is in <m>P</m>,
-            which shows that <m>P</m> must be prime.
+            Primeiro, suponhamos que <m>P</m> seja um ideal em <m>R</m> e que <m>R/P</m> seja um domínio de integridade.
+            Suponha que <m>ab \in P</m>.
+            Se <m>a + P</m> e <m>b + P</m> são dois elementos de <m>R/P</m> tais que <m>(a + P)(b + P) = 0 + P = P</m>,
+            então <m>a + P = P</m> ou <m>b + P = P</m>.
+            Isso significa que <m>a</m> pertence a <m>P</m> ou <m>b</m> pertence a <m>P</m>,
+            o que mostra que <m>P</m> deve ser primo.
           </p>
 
           <p>
-            Conversely, suppose that <m>P</m> is prime and
+            Reciprocamente, suponha que <m>P</m> seja primo e
             <md>
               (a + P)(b + P) = ab + P = 0 + P = P
             </md>.
-            Then <m>ab \in P</m>.
-            If <m>a \notin P</m>,
-            then <m>b</m> must be in <m>P</m> by the definition of a prime ideal;
-            hence, <m>b + P = 0 + P</m> and <m>R/P</m> is an integral domain.
+            Então <m>ab \in P</m>.
+            Se <m>a \notin P</m>,
+            então <m>b</m> deve pertencer a <m>P</m> pela definição de ideal primo;
+            portanto, <m>b + P = 0 + P</m> e <m>R/P</m> é um domínio de integridade.
           </p>
         </proof>
       </proposition>
@@ -1181,25 +1181,25 @@
             <!--  TWJ 19/3/2013 -->
       <example xml:id="rings-example-nz-ideal">
         <p>
-          Every ideal in <m>{\mathbb Z}</m> is of the form <m>n {\mathbb Z}</m>.
-          The factor ring <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> is an integral domain only when <m>n</m> is prime.
-          It is actually a field.
-          Hence, the nonzero prime ideals in <m>{\mathbb Z}</m> are the ideals
-          <m>p{\mathbb Z}</m>, where <m>p</m> is prime.
-          This example really justifies the use of the word <q>prime</q>
-          in our definition of prime ideals.
+          Todo ideal em <m>{\mathbb Z}</m> é da forma <m>n {\mathbb Z}</m>.
+          O anel fator <m>{\mathbb Z} / n{\mathbb Z} \cong {\mathbb Z}_n</m> é um domínio de integridade somente quando <m>n</m> é primo.
+          Na verdade, ele é um corpo.
+          Portanto, os ideais primos não nulos em <m>{\mathbb Z}</m> são os ideais
+          <m>p{\mathbb Z}</m>, onde <m>p</m> é primo.
+          Este exemplo justifica plenamente o uso da palavra <q>primo</q>
+          em nossa definição de ideais primos.
         </p>
       </example>
 
       <p>
-        Since every field is an integral domain,
-        we have the following corollary.
+        Como todo corpo é um domínio de integridade,
+        temos o seguinte corolário.
       </p>
 
       <corollary xml:id="rings-corollary-maximal-ideal">
         <statement>
           <p>
-            Every maximal ideal in a commutative ring with identity is also a prime ideal.
+            Todo ideal maximal em um anel comutativo com identidade também é um ideal primo.
           </p>
         </statement>
       </corollary>
@@ -1208,61 +1208,61 @@
         <!-- Suggested by K. Halasz. -->
         <!-- TWJ 2/5/2013 -->
     <subsection xml:id="rings-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
         Amalie Emmy Noether,<idx><h>Noether, A. Emmy</h></idx>
-        one of the outstanding mathematicians of the twentieth century,
-        was born in Erlangen, Germany in 1882.
-        She was the daughter of Max Noether<idx><h>Noether, Max</h></idx>
-        (1844<ndash/>1921), a distinguished mathematician at the University of Erlangen.
-        Together with Paul Gordon (1837<ndash/>1912), Emmy Noether's father strongly influenced her early education.
-        She entered the University of Erlangen at the age of 18.
-        Although women had been admitted to universities in England, France,
-        and Italy for decades,
-        there was great resistance to their presence at universities in Germany.
-        Noether was one of only two women among the university's 986 students.
-        After completing her doctorate under Gordon in 1907,
-        she continued to do research at Erlangen,
-        occasionally lecturing when her father was ill.
+        uma das matemáticas mais importantes do século XX,
+        nasceu em Erlangen, Alemanha, em 1882.
+        Era filha de Max Noether<idx><h>Noether, Max</h></idx>
+        (1844<ndash/>1921), um matemático notável da Universidade de Erlangen.
+        Juntamente com Paul Gordon (1837<ndash/>1912), o pai de Emmy Noether exerceu forte influência sobre sua educação inicial.
+        Ela ingressou na Universidade de Erlangen aos 18 anos.
+        Embora as mulheres fossem admitidas havia décadas nas universidades da Inglaterra, França
+        e Itália,
+        havia grande resistência à sua presença nas universidades da Alemanha.
+        Noether era uma das apenas duas mulheres entre os 986 estudantes da universidade.
+        Depois de concluir seu doutorado sob a orientação de Gordon, em 1907,
+        continuou a fazer pesquisa em Erlangen,
+        lecionando ocasionalmente quando seu pai estava doente.
       </p>
 
       <p>
-        Noether went to Göttingen to study in 1916.
+        Noether foi estudar em Göttingen em 1916.
         David Hilbert<idx><h>Hilbert, David</h></idx>
-        and Felix Klein<idx><h>Klein, Felix</h></idx>
-        tried unsuccessfully to secure her an appointment at Göttingen.
-        Some of the faculty objected to women lecturers, saying,
-        <q>What will our soldiers think when they return to the university and are expected to learn at the feet of a woman?</q> Hilbert,
-        annoyed at the question, responded,
-        <q>Meine Herren, I do not see that the sex of a candidate is an argument against her admission as a Privatdozent.
-        After all, the Senate is not a bathhouse.</q>
-        At the end of World War I, attitudes changed and conditions greatly improved for women.
-        After Noether passed her habilitation examination in 1919,
-        she was given a title and was paid a small sum for her lectures.
+        e Felix Klein<idx><h>Klein, Felix</h></idx>
+        tentaram, sem sucesso, conseguir para ela uma nomeação em Göttingen.
+        Alguns membros do corpo docente se opunham a mulheres lecionando e diziam:
+        <q>O que nossos soldados pensarão quando retornarem à universidade e se esperar que aprendam aos pés de uma mulher?</q> Hilbert,
+        incomodado com a pergunta, respondeu:
+        <q>Meus senhores, não vejo que o sexo de uma candidata seja um argumento contra sua admissão como Privatdozent.
+        Afinal, o Senado não é uma casa de banhos.</q>
+        Ao final da Primeira Guerra Mundial, as atitudes mudaram e as condições para as mulheres melhoraram bastante.
+        Depois que Noether foi aprovada em seu exame de habilitação, em 1919,
+        recebeu um título e uma pequena remuneração por suas aulas.
       </p>
 
       <p>
-        In 1922, Noether became a Privatdozent at Göttingen.
-        Over the next 11 years she used axiomatic methods to develop an abstract theory of rings and ideals.
-        Though she was not good at lecturing, Noether was an inspiring teacher.
-        One of her many students was B. L. van der Waerden,
-        author of the first text treating abstract algebra from a modern point of view.
-        Some of the other mathematicians Noether influenced or closely worked with were Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin,
-        von Neumann,
-        and Weyl.
-        One of the high points of her career was an invitation to address the International Congress of Mathematicians in Zurich in 1932.
-        In spite of all the recognition she received from her colleagues, Noether's abilities were never recognized as they should have been during her lifetime.
-        She was never promoted to full professor by the Prussian academic bureaucracy.
+        Em 1922, Noether tornou-se Privatdozent em Göttingen.
+        Nos 11 anos seguintes, utilizou métodos axiomáticos para desenvolver uma teoria abstrata dos anéis e ideais.
+        Embora não fosse boa em lecionar, Noether era uma professora inspiradora.
+        Um de seus muitos alunos foi B. L. van der Waerden,
+        autor do primeiro texto que tratou a álgebra abstrata de um ponto de vista moderno.
+        Alguns dos outros matemáticos que Noether influenciou ou com quem trabalhou de perto foram Alexandroff, Artin, Brauer, Courant, Hasse, Hopf, Pontryagin,
+        von Neumann
+        e Weyl.
+        Um dos pontos altos de sua carreira foi o convite para falar no Congresso Internacional de Matemáticos, em Zurique, em 1932.
+        Apesar de todo o reconhecimento que recebeu de seus colegas, as capacidades de Noether nunca foram reconhecidas como deveriam durante sua vida.
+        Ela nunca foi promovida a professora titular pela burocracia acadêmica prussiana.
       </p>
 
       <p>
-        In 1933, Noether, who was Jewish,
-        was banned from participation in all academic activities in Germany.
-        She emigrated to the United States,
-        took a position at Bryn Mawr College,
-        and became a member of the Institute for Advanced Study at Princeton.
-        Noether died suddenly on April 14, 1935.
-        After her death she was eulogized by such notable scientists as Albert Einstein.
+        Em 1933, Noether, que era judia,
+        foi proibida de participar de todas as atividades acadêmicas na Alemanha.
+        Ela emigrou para os Estados Unidos,
+        assumiu um cargo no Bryn Mawr College
+        e tornou-se membro do Institute for Advanced Study, em Princeton.
+        Noether morreu subitamente em 14 de abril de 1935.
+        Depois de sua morte, foi homenageada em discursos fúnebres por cientistas notáveis como Albert Einstein.
       </p>
     </subsection>
   </section>
