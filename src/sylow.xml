@@ -706,7 +706,7 @@
     <exercise label="rq-sylow-first-theorem">
       <statement>
         <p>
-          State Sylow's First Theorem.
+           Enuncie o Primeiro Teorema de Sylow.
         </p>
       </statement>
       <response/>
@@ -715,8 +715,8 @@
     <exercise label="rq-sylow-order69">
       <statement>
         <p>
-          How many groups are there of order <m>69</m>?
-          Why?
+           Quantos grupos existem de ordem <m>69</m>?
+           Por quê?
         </p>
       </statement>
       <response/>
@@ -725,8 +725,8 @@
     <exercise label="rq-sylow-normalizer">
       <statement>
         <p>
-          Give two descriptions, fundamentally different in character,
-          of the normalizer of a subgroup.
+           Dê duas descrições, fundamentalmente diferentes em seu caráter,
+           do normalizador de um subgrupo.
         </p>
       </statement>
       <response/>
@@ -735,7 +735,7 @@
     <exercise label="rq-sylow-commutator">
       <statement>
         <p>
-          Suppose that <m>G</m> is an abelian group.  What is the commutator subgroup of <m>G</m>, and how do you know?
+           Suponha que <m>G</m> seja um grupo abeliano. Qual é o subgrupo comutador de <m>G</m> e como você sabe disso?
         </p>
       </statement>
       <response/>
@@ -744,7 +744,7 @@
     <exercise label="rq-sylow-fuss">
       <statement>
         <p>
-          What's all the fuss about Sylow's Theorems?
+           Por que há tanto alarde em torno dos Teoremas de Sylow?
         </p>
       </statement>
       <response/>
@@ -755,21 +755,21 @@
     <!-- File: sylow.xml  -->
     <!-- Title: The Sylow Theorems -->
   <exercises xml:id="sylow-exercises" filenamebase="sylow">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="sylow-exercise-order-18">
       <statement>
         <p>
-          What are the orders of all Sylow <m>p</m>-subgroups where <m>G</m> has order <m>18</m>,
+          Quais são as ordens de todos os subgrupos de Sylow <m>p</m> quando <m>G</m> tem ordem <m>18</m>,
           <m>24</m>,
-          <m>54</m>, <m>72</m>, and <m>80</m>?
+          <m>54</m>, <m>72</m> e <m>80</m>?
         </p>
       </statement>
       <hint>
         <p>
-          If <m>|G| = 18 = 2 \cdot 3^2</m>,
-          then the order of a Sylow <m>2</m>-subgroup is <m>2</m>,
-          and the order of a Sylow <m>3</m>-subgroup is <m>9</m>.
+           Se <m>|G| = 18 = 2 \cdot 3^2</m>,
+           então a ordem de um subgrupo de Sylow <m>2</m> é <m>2</m>,
+           e a ordem de um subgrupo de Sylow <m>3</m> é <m>9</m>.
         </p>
       </hint>
     </exercise>
@@ -777,7 +777,7 @@
     <exercise number="2" xml:id="sylow-exercise-S4">
       <statement>
         <p>
-          Find all the Sylow <m>3</m>-subgroups of <m>S_4</m> and show that they are all conjugate.
+          Encontre todos os subgrupos de Sylow <m>3</m> de <m>S_4</m> e mostre que todos são conjugados.
         </p>
       </statement>
       <hint>
@@ -795,7 +795,7 @@
     <exercise number="3" xml:id="sylow-exercise-order-45">
       <statement>
         <p>
-          Show that every group of order <m>45</m> has a normal subgroup of order <m>9</m>.
+          Mostre que todo grupo de ordem <m>45</m> possui um subgrupo normal de ordem <m>9</m>.
         </p>
       </statement>
     </exercise>
@@ -803,8 +803,8 @@
     <exercise number="4" xml:id="sylow-exercise-normalizer">
       <statement>
         <p>
-          Let <m>H</m> be a Sylow <m>p</m>-subgroup of <m>G</m>.
-          Prove that <m>H</m> is the only Sylow <m>p</m>-subgroup of <m>G</m> contained in <m>N(H)</m>.
+          Seja <m>H</m> um subgrupo de Sylow <m>p</m> de <m>G</m>.
+          Prove que <m>H</m> é o único subgrupo de Sylow <m>p</m> de <m>G</m> contido em <m>N(H)</m>.
         </p>
       </statement>
     </exercise>
@@ -812,20 +812,20 @@
     <exercise number="5" xml:id="sylow-exercise-order-96">
       <statement>
         <p>
-          Prove that no group of order <m>96</m> is simple.
+          Prove que nenhum grupo de ordem <m>96</m> é simples.
         </p>
       </statement>
       <hint>
         <p>
-          Since <m>|G| = 96 = 2^5 \cdot 3</m>,
-          <m>G</m> has either one or three Sylow <m>2</m>-subgroups by the Third Sylow Theorem.
-          If there is only one subgroup, we are done.
-          If there are three Sylow <m>2</m>-subgroups,
-          let <m>H</m> and <m>K</m> be two of them.
-          Therefore, <m>|H \cap K| \geq 16</m>;
-          otherwise, <m>HK</m> would have
-          <m>(32 \cdot 32)/8 = 128</m> elements, which is impossible.
-          Thus, <m>H \cap K</m> is normal in both <m>H</m> and <m>K</m> since it has index <m>2</m> in both groups.
+           Como <m>|G| = 96 = 2^5 \cdot 3</m>,
+           <m>G</m> possui um ou três subgrupos de Sylow <m>2</m> pelo Terceiro Teorema de Sylow.
+           Se houver apenas um subgrupo, terminamos.
+           Se houver três subgrupos de Sylow <m>2</m>,
+           sejam <m>H</m> e <m>K</m> dois deles.
+           Portanto, <m>|H \cap K| \geq 16</m>;
+           caso contrário, <m>HK</m> teria
+           <m>(32 \cdot 32)/8 = 128</m> elementos, o que é impossível.
+           Assim, <m>H \cap K</m> é normal tanto em <m>H</m> quanto em <m>K</m>, pois tem índice <m>2</m> em ambos os grupos.
         </p>
       </hint>
     </exercise>
@@ -833,7 +833,7 @@
     <exercise number="6" xml:id="sylow-exercise-order-160">
       <statement>
         <p>
-          Prove that no group of order <m>160</m> is simple.
+          Prove que nenhum grupo de ordem <m>160</m> é simples.
         </p>
       </statement>
     </exercise>
@@ -841,9 +841,9 @@
     <exercise number="7" xml:id="sylow-exercise-order-pk">
       <statement>
         <p>
-          If <m>H</m> is a normal subgroup of a finite group <m>G</m> and
+          Se <m>H</m> é um subgrupo normal de um grupo finito <m>G</m> e
           <m>|H| = p^k</m> for some prime <m>p</m>,
-          show that <m>H</m> is contained in every Sylow <m>p</m>-subgroup of <m>G</m>.
+          mostre que <m>H</m> está contido em todo subgrupo de Sylow <m>p</m> de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -851,16 +851,16 @@
     <exercise number="8" xml:id="sylow-exercise-order-p2q2">
       <statement>
         <p>
-          Let <m>G</m> be a group of order <m>p^2 q^2</m>,
-          where <m>p</m> and <m>q</m> are distinct primes such that
+          Seja <m>G</m> um grupo de ordem <m>p^2 q^2</m>,
+          em que <m>p</m> e <m>q</m> são primos distintos tais que
           <m>q \nmid p^2 - 1</m> and <m>p \nmid q^2 - 1</m>.
-          Prove that <m>G</m> must be abelian.
-          Find a pair of primes for which this is true.
+          Prove que <m>G</m> deve ser abeliano.
+          Encontre um par de primos para o qual isso seja verdadeiro.
         </p>
       </statement>
       <hint>
         <p>
-          Show that <m>G</m> has a normal Sylow <m>p</m>-subgroup of order <m>p^2</m> and a normal Sylow <m>q</m>-subgroup of order <m>q^2</m>.
+           Mostre que <m>G</m> possui um subgrupo de Sylow <m>p</m> normal de ordem <m>p^2</m> e um subgrupo de Sylow <m>q</m> normal de ordem <m>q^2</m>.
         </p>
       </hint>
     </exercise>
@@ -868,7 +868,7 @@
     <exercise number="9" xml:id="sylow-exercise-order-33">
       <statement>
         <p>
-          Show that a group of order <m>33</m> has only one Sylow <m>3</m>-subgroup.
+          Mostre que um grupo de ordem <m>33</m> possui apenas um subgrupo de Sylow <m>3</m>.
         </p>
       </statement>
     </exercise>
@@ -876,13 +876,13 @@
     <exercise number="10" xml:id="sylow-exercise-normalizer-normal">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a group <m>G</m>.
-          Prove or disprove that the normalizer of <m>H</m> is normal in <m>G</m>.
+          Seja <m>H</m> um subgrupo de um grupo <m>G</m>.
+          Prove ou refute que o normalizador de <m>H</m> é normal em <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          False.
+           Falso.
         </p>
       </hint>
     </exercise>
@@ -890,9 +890,9 @@
     <exercise number="11" xml:id="sylow-exercise-divisible-by-p">
       <statement>
         <p>
-          Let <m>G</m> be a finite group whose order is divisible by a prime <m>p</m>.
-          Prove that if there is only one Sylow <m>p</m>-subgroup in <m>G</m>,
-          it must be a normal subgroup of <m>G</m>.
+          Seja <m>G</m> um grupo finito cuja ordem é divisível por um primo <m>p</m>.
+          Prove que, se há apenas um subgrupo de Sylow <m>p</m> em <m>G</m>,
+          ele deve ser um subgrupo normal de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -900,8 +900,8 @@
     <exercise number="12" xml:id="sylow-exercise-p-to-r-1">
       <statement>
         <p>
-          Let <m>G</m> be a group of order <m>p^r</m>, <m>p</m> prime.
-          Prove that <m>G</m> contains a normal subgroup of order <m>p^{r-1}</m>.
+          Seja <m>G</m> um grupo de ordem <m>p^r</m>, com <m>p</m> primo.
+          Prove que <m>G</m> contém um subgrupo normal de ordem <m>p^{r-1}</m>.
         </p>
       </statement>
     </exercise>
@@ -909,9 +909,9 @@
     <exercise number="13" xml:id="sylow-exercise-order-pnk">
       <statement>
         <p>
-          Suppose that <m>G</m> is a finite group of order <m>p^n k</m>,
-          where <m>k \lt p</m>.
-          Show that <m>G</m> must contain a proper nontrivial normal subgroup.
+          Suponha que <m>G</m> seja um grupo finito de ordem <m>p^n k</m>,
+          em que <m>k \lt p</m>.
+          Mostre que <m>G</m> deve conter um subgrupo normal próprio não trivial.
         </p>
       </statement>
     </exercise>
@@ -921,8 +921,8 @@
     <exercise number="14" xml:id="sylow-exercise-normalizer-conjugate">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a finite group <m>G</m>.
-          Prove that <m>g N(H) g^{-1} = N(gHg^{-1})</m> for any <m>g \in G</m>.
+          Seja <m>H</m> um subgrupo de um grupo finito <m>G</m>.
+          Prove que <m>g N(H) g^{-1} = N(gHg^{-1})</m> para todo <m>g \in G</m>.
         </p>
       </statement>
     </exercise>
@@ -932,7 +932,7 @@
     <exercise number="15" xml:id="sylow-exercise-order-108">
       <statement>
         <p>
-          Prove that a group of order <m>108</m> must have a proper nontrivial normal subgroup.
+          Prove que um grupo de ordem <m>108</m> deve possuir um subgrupo normal próprio não trivial.
         </p>
       </statement>
     </exercise>
@@ -942,7 +942,7 @@
     <exercise number="16" xml:id="sylow-exercise-order-175">
       <statement>
         <p>
-          Classify all the groups of order <m>175</m> up to isomorphism.
+          Classifique todos os grupos de ordem <m>175</m> a menos de isomorfismo.
         </p>
       </statement>
     </exercise>
@@ -950,14 +950,14 @@
     <exercise number="17" xml:id="sylow-exercise-order-255">
       <statement>
         <p>
-          Show that every group of order <m>255</m> is cyclic.
+          Mostre que todo grupo de ordem <m>255</m> é cíclico.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>G</m> is abelian, then <m>G</m> is cyclic,
-          since <m>|G| = 3 \cdot 5 \cdot 17</m>.
-          Now look at <xref ref="sylow-example-sylow-group-1645-subgroups"/>.
+           Se <m>G</m> é abeliano, então <m>G</m> é cíclico,
+           pois <m>|G| = 3 \cdot 5 \cdot 17</m>.
+           Agora consulte <xref ref="sylow-example-sylow-group-1645-subgroups"/>.
         </p>
       </hint>
     </exercise>
@@ -967,9 +967,9 @@
     <exercise number="18" xml:id="sylow-exercise-G-isomorphic-P1-Pn">
       <statement>
         <p>
-          Let <m>G</m> have order <m>p_1^{e_1} \cdots p_n^{e_n}</m> and suppose that <m>G</m> has <m>n</m> Sylow <m>p</m>-subgroups
-          <m>P_1, \ldots, P_n</m> where <m>|P_i| = p_i^{e_i}</m>.
-          Prove that <m>G</m> is isomorphic to <m>P_1 \times \cdots \times P_n</m>.
+          Seja <m>G</m> de ordem <m>p_1^{e_1} \cdots p_n^{e_n}</m> e suponha que <m>G</m> tenha <m>n</m> subgrupos de Sylow <m>p</m>,
+          <m>P_1, \ldots, P_n</m>, em que <m>|P_i| = p_i^{e_i}</m>.
+          Prove que <m>G</m> é isomorfo a <m>P_1 \times \cdots \times P_n</m>.
         </p>
       </statement>
     </exercise>
@@ -979,8 +979,8 @@
     <exercise number="19" xml:id="sylow-exercise-inner-automorphism">
       <statement>
         <p>
-          Let <m>P</m> be a normal Sylow <m>p</m>-subgroup of <m>G</m>.
-          Prove that every inner automorphism of <m>G</m> fixes <m>P</m>.
+          Seja <m>P</m> um subgrupo de Sylow <m>p</m> normal de <m>G</m>.
+          Prove que toda automorfia interna de <m>G</m> fixa <m>P</m>.
         </p>
       </statement>
     </exercise>
@@ -988,8 +988,8 @@
     <exercise number="20" xml:id="sylow-exercise-odd-order-nonabelain">
       <statement>
         <p>
-          What is the smallest possible order of a group <m>G</m> such that <m>G</m> is nonabelian and <m>|G|</m> is odd?
-          Can you find such a group?
+          Qual é a menor ordem possível de um grupo <m>G</m> tal que <m>G</m> seja não abeliano e <m>|G|</m> seja ímpar?
+          Você consegue encontrar um grupo assim?
         </p>
       </statement>
     </exercise>
@@ -997,13 +997,13 @@
     <!--Todo Complete the solution.-->
 
     <exercise number="21" xml:id="sylow-exercise-frattini-lemma">
-      <title>The Frattini Lemma</title>
+      <title>Lema de Frattini</title>
       <statement>
         <p>
-          If <m>H</m> is a normal subgroup of a finite group <m>G</m> and <m>P</m> is a Sylow <m>p</m>-subgroup of <m>H</m>,
-          for each <m>g \in G</m> show that there is an <m>h</m> in <m>H</m> such that <m>gPg^{-1} = hPh^{-1}</m>.
-          Also, show that if <m>N</m> is the normalizer of <m>P</m>,
-          then <m>G= HN</m>.
+          Se <m>H</m> é um subgrupo normal de um grupo finito <m>G</m> e <m>P</m> é um subgrupo de Sylow <m>p</m> de <m>H</m>,
+          para cada <m>g \in G</m>, mostre que existe um <m>h</m> em <m>H</m> tal que <m>gPg^{-1} = hPh^{-1}</m>.
+          Mostre também que, se <m>N</m> é o normalizador de <m>P</m>,
+          então <m>G= HN</m>.
         </p>
       </statement>
     </exercise>
@@ -1011,9 +1011,9 @@
     <exercise number="22" xml:id="sylow-exercise-order-pnq">
       <statement>
         <p>
-          Show that if the order of <m>G</m> is <m>p^nq</m>,
-          where <m>p</m> and <m>q</m> are primes and <m>p&gt;q</m>,
-          then <m>G</m> contains a proper nontrivial normal subgroup.
+          Mostre que, se a ordem de <m>G</m> é <m>p^nq</m>,
+          em que <m>p</m> e <m>q</m> são primos e <m>p&gt;q</m>,
+          então <m>G</m> contém um subgrupo normal próprio não trivial.
         </p>
       </statement>
     </exercise>
@@ -1023,13 +1023,13 @@
     <exercise number="23" xml:id="sylow-exercise-distinct-conjugates">
       <statement>
         <p>
-          Prove that the number of distinct conjugates of a subgroup <m>H</m> of a finite group <m>G</m> is <m>[G : N(H) ]</m>.
+          Prove que o número de conjugados distintos de um subgrupo <m>H</m> de um grupo finito <m>G</m> é <m>[G : N(H) ]</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Define a mapping between the right cosets of <m>N(H)</m> in <m>G</m> and the conjugates of <m>H</m> in <m>G</m> by <m>N(H) g \mapsto g^{-1} H g</m>.
-          Prove that this map is a bijection.
+          Defina uma aplicação entre as classes laterais direitas de <m>N(H)</m> em <m>G</m> e os conjugados de <m>H</m> em <m>G</m> por <m>N(H) g \mapsto g^{-1} H g</m>.
+          Prove que essa aplicação é uma bijeção.
         </p>
       </hint>
     </exercise>
@@ -1039,20 +1039,20 @@
     <exercise number="24" xml:id="sylow-exercise-S5-D4">
       <statement>
         <p>
-          Prove that a Sylow <m>2</m>-subgroup of <m>S_5</m> is isomorphic to <m>D_4</m>.
+          Prove que um subgrupo de Sylow <m>2</m> de <m>S_5</m> é isomorfo a <m>D_4</m>.
         </p>
       </statement>
     </exercise>
 
     <exercise number="25" xml:id="sylow-exercise-another-proof">
-      <title>Another Proof of the Sylow Theorems</title>
+       <title>Outra Demonstração dos Teoremas de Sylow</title>
       <statement>
         <p>
           <ol>
             <li>
               <p>
-                Suppose <m>p</m> is prime and <m>p</m> does not divide <m>m</m>.
-                Show that
+                Suponha que <m>p</m> seja primo e que <m>p</m> não divida <m>m</m>.
+                Mostre que
                 <md>
                   p \nmid \binom{p^k m}{p^k}
                 </md>.
@@ -1061,44 +1061,44 @@
 
             <li>
               <p>
-                Let <m>{\mathcal S}</m> denote the set of all <m>p^k</m> element subsets of <m>G</m>.
-                Show that <m>p</m> does not divide <m>|{\mathcal S}|</m>.
+                Seja <m>{\mathcal S}</m> o conjunto de todos os subconjuntos de <m>p^k</m> elementos de <m>G</m>.
+                Mostre que <m>p</m> não divide <m>|{\mathcal S}|</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Define an action of <m>G</m> on
-                <m>{\mathcal S}</m> by left multiplication,
-                <m>aT = \{ at : t \in T \}</m> for <m>a \in G</m> and <m>T \in {\mathcal S}</m>.
-                Prove that this is a group action.
+                Defina uma ação de <m>G</m> sobre
+                <m>{\mathcal S}</m> por multiplicação à esquerda,
+                <m>aT = \{ at : t \in T \}</m> para <m>a \in G</m> e <m>T \in {\mathcal S}</m>.
+                Prove que essa é uma ação de grupo.
               </p>
             </li>
 
             <li>
               <p>
-                Prove <m>p \nmid | {\mathcal O}_T|</m> for some <m>T \in {\mathcal S}</m>.
+                Prove que <m>p \nmid | {\mathcal O}_T|</m> para algum <m>T \in {\mathcal S}</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>\{ T_1, \ldots, T_u \}</m> be an orbit such that
-                <m>p \nmid u</m> and <m>H = \{ g \in G : gT_1 = T_1 \}</m>.
-                Prove that <m>H</m> is a subgroup of <m>G</m> and show that <m>|G| = u |H|</m>.
+                Seja <m>\{ T_1, \ldots, T_u \}</m> uma órbita tal que
+                <m>p \nmid u</m> e <m>H = \{ g \in G : gT_1 = T_1 \}</m>.
+                Prove que <m>H</m> é um subgrupo de <m>G</m> e mostre que <m>|G| = u |H|</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>p^k</m> divides <m>|H|</m> and <m>p^k \leq |H|</m>.
+                Mostre que <m>p^k</m> divide <m>|H|</m> e <m>p^k \leq |H|</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>|H| = |{\mathcal O}_T| \leq p^k</m>;
-                conclude that therefore <m>p^k = |H|</m>.
+                Mostre que <m>|H| = |{\mathcal O}_T| \leq p^k</m>;
+                conclua, portanto, que <m>p^k = |H|</m>.
               </p>
             </li>
           </ol>
@@ -1109,15 +1109,15 @@
     <exercise number="26" xml:id="sylow-exercise-G-prime">
       <statement>
         <p>
-          Let <m>G</m> be a group.
-          Prove that <m>G' = \langle a b a^{-1} b^{-1} : a, b \in G \rangle</m> is a normal subgroup of <m>G</m> and <m>G/G'</m> is abelian.
-          Find an example to show that
-          <m>\{ a b a^{-1} b^{-1} : a, b \in G \}</m> is not necessarily a group.
+           Seja <m>G</m> um grupo.
+           Prove que <m>G' = \langle a b a^{-1} b^{-1} : a, b \in G \rangle</m> é um subgrupo normal de <m>G</m> e <m>G/G'</m> é abeliano.
+           Encontre um exemplo que mostre que
+           <m>\{ a b a^{-1} b^{-1} : a, b \in G \}</m> não é necessariamente um grupo.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a G', b G' \in G/G'</m>.
+           Sejam <m>a G', b G' \in G/G'</m>.
           Then <m>(a G')( b G') = ab G' = ab(b^{-1}a^{-1}ba) G' = (abb^{-1}a^{-1})ba G' = ba G'</m>.
         </p>
       </hint>
