@@ -10,63 +10,63 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="rings">
-  <title>Rings</title>
+  <title>Anéis</title>
   <introduction>
     <p>
-      Up to this point we have studied sets with a single binary operation satisfying certain axioms,
-      but we are often more interested in working with sets that have two binary operations.
-      For example,
-      one of the most natural algebraic structures to study is the integers with the operations of addition and multiplication.
-      These operations are related to one another by the distributive property.
-      If we consider a set with two such related binary operations satisfying certain axioms,
-      we have an algebraic structure called a ring.
-      In a ring we add and multiply elements such as real numbers,
-      complex numbers, matrices, and functions.
+      Até este ponto estudamos conjuntos com uma única operação binária que satisfaz certos axiomas,
+      mas frequentemente estamos mais interessados em trabalhar com conjuntos que possuem duas operações binárias.
+      Por exemplo,
+      uma das estruturas algébricas mais naturais a estudar é a dos inteiros com as operações de adição e multiplicação.
+      Essas operações estão relacionadas entre si pela propriedade distributiva.
+      Se considerarmos um conjunto com duas operações binárias relacionadas desse modo, que satisfazem certos axiomas,
+      obteremos uma estrutura algébrica chamada anel.
+      Em um anel, adicionamos e multiplicamos elementos como números reais,
+      números complexos, matrizes e funções.
     </p>
   </introduction>
 
   <section xml:id="rings-section-definitions">
-    <title>Rings</title>
+    <title>Anéis</title>
     <p>
-      A nonempty set <m>R</m> is a <term>ring</term><idx><h>Ring</h><h>definition of</h></idx> if it has two closed binary operations,
-      addition and multiplication, satisfying the following conditions.
+      Um conjunto não vazio <m>R</m> é um <term>anel</term><idx><h>Anel</h><h>definição de</h></idx> se possui duas operações binárias fechadas,
+      adição e multiplicação, que satisfazem as condições a seguir.
 
       <ol>
         <li>
           <p>
-            <m>a + b = b + a</m> for <m>a, b \in R</m>.
+            <m>a + b = b + a</m> para <m>a, b \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <m>(a + b) + c = a + ( b + c)</m> for <m>a, b, c \in R</m>.
+            <m>(a + b) + c = a + ( b + c)</m> para <m>a, b, c \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            There is an element <m>0</m> in <m>R</m> such that
-            <m>a + 0 = a</m> for all <m>a \in R</m>.
+            Existe um elemento <m>0</m> em <m>R</m> tal que
+            <m>a + 0 = a</m> para todo <m>a \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            For every element <m>a \in R</m>,
-            there exists an element <m>-a</m> in <m>R</m> such that <m>a + (-a) = 0</m>.
+            Para todo elemento <m>a \in R</m>,
+            existe um elemento <m>-a</m> em <m>R</m> tal que <m>a + (-a) = 0</m>.
           </p>
         </li>
 
         <li>
           <p>
-            <m>(ab) c = a ( b c)</m> for <m>a, b, c \in R</m>.
+            <m>(ab) c = a ( b c)</m> para <m>a, b, c \in R</m>.
           </p>
         </li>
 
         <li>
           <p>
-            For <m>a, b, c \in R</m>,
+            Para <m>a, b, c \in R</m>,
             <md>
               <mrow>a( b + c)&amp;= ab +ac</mrow>
               <mrow>(a + b)c &amp; = ac + bc</mrow>
@@ -75,40 +75,40 @@
         </li>
       </ol>
 
-      This last condition, the distributive axiom,
-      relates the binary operations of addition and multiplication.
-      Notice that the first four axioms simply require that a ring be an abelian group under addition,
-      so we could also have defined a ring to be an abelian group <m>(R, +)</m> together with a second binary operation satisfying the fifth and sixth conditions given above.
+      Esta última condição, o axioma distributivo,
+      relaciona as operações binárias de adição e multiplicação.
+      Observe que os quatro primeiros axiomas simplesmente exigem que um anel seja um grupo abeliano sob a adição;
+      portanto, também poderíamos ter definido um anel como um grupo abeliano <m>(R, +)</m> juntamente com uma segunda operação binária que satisfaz as quinta e sexta condições dadas acima.
     </p>
 
     <p>
-      If there is an element <m>1 \in R</m> such that <m>1 \neq 0</m> and
-      <m>1a = a1 = a</m> for each element <m>a \in R</m>,
-      we say that <m>R</m> is a ring with <term>unity</term><idx><h>Ring</h><h>with unity</h></idx>
-      or <idx><h>Ring</h><h>with identity</h></idx><term>identity</term>.
-      A ring <m>R</m> for which <m>ab = ba</m> for all
+      Se existe um elemento <m>1 \in R</m> tal que <m>1 \neq 0</m> e
+      <m>1a = a1 = a</m> para cada elemento <m>a \in R</m>,
+      dizemos que <m>R</m> é um anel com <term>unidade</term><idx><h>Anel</h><h>com unidade</h></idx>
+      ou <idx><h>Anel</h><h>com identidade</h></idx><term>identidade</term>.
+      Um anel <m>R</m> para o qual <m>ab = ba</m> para todos
       <m>a,
-      b</m> in <m>R</m> is called a <idx><h>Ring</h><h>commutative</h></idx><idx><h>Commutative rings</h></idx><term>commutative ring</term>.
-      A commutative ring <m>R</m> with identity is called an
-      <term>integral domain</term><idx><h>Integral domain</h></idx>
-      if, for every <m>a, b \in R</m> such that <m>ab = 0</m>,
-      either <m>a = 0</m> or <m>b = 0</m>.
-      A <term>division ring</term><idx><h>Division ring</h></idx><idx><h>Ring</h><h>division</h></idx>
-      is a ring <m>R</m>, with an identity,
-      in which every nonzero element in <m>R</m> is a <term>unit</term>;<idx><h>Unit</h></idx>
-      that is, for each <m>a \in R</m> with <m>a \neq 0</m>,
-      there exists a unique element <m>a^{-1}</m> such that <m>a^{-1} a = a a^{-1} = 1</m>.
-      A commutative division ring is called a <idx><h>Field</h></idx><term>field</term>.
-      The relationship among rings,
-      integral domains, division rings,
-      and fields is shown in <xref ref="rings-figure-types"/>.
+      b</m> em <m>R</m> é chamado de <idx><h>Anel</h><h>comutativo</h></idx><idx><h>Anéis comutativos</h></idx><term>anel comutativo</term>.
+      Um anel comutativo <m>R</m> com identidade é chamado de
+      <term>domínio de integridade</term><idx><h>Domínio de integridade</h></idx>
+      se, para quaisquer <m>a, b \in R</m> tais que <m>ab = 0</m>,
+      tivermos <m>a = 0</m> ou <m>b = 0</m>.
+      Um <term>anel de divisão</term><idx><h>Anel de divisão</h></idx><idx><h>Anel</h><h>de divisão</h></idx>
+      é um anel <m>R</m>, com identidade,
+      no qual todo elemento não nulo de <m>R</m> é uma <term>unidade</term>;<idx><h>Unidade</h></idx>
+      isto é, para cada <m>a \in R</m> com <m>a \neq 0</m>,
+      existe um único elemento <m>a^{-1}</m> tal que <m>a^{-1} a = a a^{-1} = 1</m>.
+      Um anel de divisão comutativo é chamado de <idx><h>Corpo</h></idx><term>corpo</term>.
+      A relação entre anéis,
+      domínios de integridade, anéis de divisão
+      e corpos é apresentada em <xref ref="rings-figure-types"/>.
     </p>
 
     <figure xml:id="rings-figure-types">
-      <caption>Types of rings</caption>
+      <caption>Tipos de anéis</caption>
             <!-- Replaced figure with tikz figure - TWJ 8/13/2010 -->
       <image width="50%" xml:id="rings-types">
-      		<description>A graph with rings at the top level connected to commutative rings and rings with identity at the second level. Commutative rings is connected to integral domains on the third level while rings with identity is connected to both integral domains and division rings on the third level.  Integral domains and division rings are connected to fields on the bottom level.</description>
+        <description>Um grafo com anéis no nível superior ligados a anéis comutativos e anéis com identidade no segundo nível. Os anéis comutativos estão ligados aos domínios de integridade no terceiro nível, enquanto os anéis com identidade estão ligados tanto aos domínios de integridade quanto aos anéis de divisão no terceiro nível. Os domínios de integridade e os anéis de divisão estão ligados aos corpos no nível inferior.</description>
             <latex-image>
                 <xi:include href="tikz/rings-types.tex" parse="text"/>
             </latex-image>
@@ -118,71 +118,71 @@
 
     <example xml:id="rings-example-integers">
       <p>
-        As we have mentioned previously, the integers form a ring.
-        In fact, <m>{\mathbb Z}</m> is an integral domain.
-        Certainly if <m>a b = 0</m> for two integers <m>a</m> and <m>b</m>,
-        either <m>a=0</m> or <m>b=0</m>.
-        However, <m>{\mathbb Z}</m> is not a field.
-        There is no integer that is the multiplicative inverse of <m>2</m>,
-        since <m>1/2</m> is not an integer.
-        The only integers with multiplicative inverses are <m>1</m> and <m>-1</m>.
+        Como mencionamos anteriormente, os inteiros formam um anel.
+        De fato, <m>{\mathbb Z}</m> é um domínio de integridade.
+        Certamente, se <m>a b = 0</m> para dois inteiros <m>a</m> e <m>b</m>,
+        então <m>a=0</m> ou <m>b=0</m>.
+        No entanto, <m>{\mathbb Z}</m> não é um corpo.
+        Não existe inteiro que seja o inverso multiplicativo de <m>2</m>,
+        pois <m>1/2</m> não é um inteiro.
+        Os únicos inteiros que possuem inversos multiplicativos são <m>1</m> e <m>-1</m>.
       </p>
     </example>
 
     <example xml:id="rings-example-field">
       <p>
-        Under the ordinary operations of addition and multiplication,
-        all of the familiar number systems are rings:
-        the rationals, <m>{\mathbb Q}</m>;
-        the real numbers, <m>{\mathbb R}</m>;
-        and the complex numbers, <m>{\mathbb C}</m>.
-        Each of these rings is a field.
+        Sob as operações usuais de adição e multiplicação,
+        todos os sistemas numéricos familiares são anéis:
+        os racionais, <m>{\mathbb Q}</m>;
+        os números reais, <m>{\mathbb R}</m>;
+        e os números complexos, <m>{\mathbb C}</m>.
+        Cada um desses anéis é um corpo.
       </p>
     </example>
 
     <example xml:id="rings-example-zn">
       <p>
-        We can define the product of two elements <m>a</m> and <m>b</m> in
-        <m>{\mathbb Z}_n</m> by <m>ab \pmod{n}</m>.
-        For instance, in <m>{\mathbb Z}_{12}</m>,
+        Podemos definir o produto de dois elementos <m>a</m> e <m>b</m> em
+        <m>{\mathbb Z}_n</m> por <m>ab \pmod{n}</m>.
+        Por exemplo, em <m>{\mathbb Z}_{12}</m>,
         <m>5 \cdot 7 \equiv 11 \pmod{12}</m>.
-        This product makes the abelian group <m>{\mathbb Z}_n</m> into a ring.
-        Certainly <m>{\mathbb Z}_n</m> is a commutative ring;
-        however, it may fail to be an integral domain.
-        If we consider <m>3 \cdot 4 \equiv 0 \pmod{12}</m> in <m>{\mathbb Z}_{12}</m>,
-        it is easy to see that a product of two nonzero elements in the ring can be equal to zero.
+        Esse produto transforma o grupo abeliano <m>{\mathbb Z}_n</m> em um anel.
+        Certamente, <m>{\mathbb Z}_n</m> é um anel comutativo;
+        contudo, pode não ser um domínio de integridade.
+        Se considerarmos <m>3 \cdot 4 \equiv 0 \pmod{12}</m> em <m>{\mathbb Z}_{12}</m>,
+        será fácil ver que o produto de dois elementos não nulos do anel pode ser igual a zero.
       </p>
     </example>
 
     <p>
-      A nonzero element <m>a</m> in a commutative ring <m>R</m> is called a <term>zero divisor</term><idx><h>Zero divisor</h></idx>
-      if there is a nonzero element <m>b</m> in <m>R</m> such that <m>ab = 0</m>.
-      In the previous example,
-      <m>3</m> and <m>4</m> are zero divisors in <m>{\mathbb Z}_{12}</m>.
+      Um elemento não nulo <m>a</m> de um anel comutativo <m>R</m> é chamado de <term>divisor de zero</term><idx><h>Divisor de zero</h></idx>
+      se existe um elemento não nulo <m>b</m> em <m>R</m> tal que <m>ab = 0</m>.
+      No exemplo anterior,
+      <m>3</m> e <m>4</m> são divisores de zero em <m>{\mathbb Z}_{12}</m>.
     </p>
 
     <example xml:id="rings-example-functions">
       <p>
-        In calculus the continuous real-valued functions on an interval <m>[a,b]</m> form a commutative ring.
-        We add or multiply two functions by adding or multiplying the values of the functions.
-        If <m>f(x) = x^2</m> and <m>g(x) = \cos x</m>,
-        then <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> and <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.
+        Em cálculo, as funções contínuas de valores reais definidas em um intervalo <m>[a,b]</m> formam um anel comutativo.
+        Adicionamos ou multiplicamos duas funções adicionando ou multiplicando seus valores.
+        Se <m>f(x) = x^2</m> e <m>g(x) = \cos x</m>,
+        então <m>(f+g)(x) = f(x) + g(x) = x^2 + \cos x</m> e <m>(fg)(x) = f(x) g(x) = x^2 \cos x</m>.
       </p>
     </example>
 
     <example xml:id="rings-example-matrix">
       <p>
-        The <m>2 \times 2</m> matrices with entries in
-        <m>{\mathbb R}</m> form a ring under the usual operations of matrix addition and multiplication.
-        This ring is noncommutative,
-        since it is usually the case that <m>AB \neq BA</m>.
-        Also, notice that we can have <m>AB = 0</m> when neither <m>A</m> nor <m>B</m> is zero.
+        As matrizes <m>2 \times 2</m> com entradas em
+        <m>{\mathbb R}</m> formam um anel sob as operações usuais de adição e multiplicação de matrizes.
+        Esse anel não é comutativo,
+        pois geralmente ocorre que <m>AB \neq BA</m>.
+        Observe também que podemos ter <m>AB = 0</m> quando nem <m>A</m> nem <m>B</m> é zero.
       </p>
     </example>
 
     <example xml:id="rings-example-noncommutative">
       <p>
-        For an example of a noncommutative division ring, let
+        Como exemplo de um anel de divisão não comutativo, considere
         <md>
           1 = 
           \begin{pmatrix}
@@ -209,8 +209,8 @@
           0 &amp; -i
           \end{pmatrix}
         </md>,
-        where <m>i^2 = -1</m>.
-        These elements satisfy the following relations:
+        onde <m>i^2 = -1</m>.
+        Esses elementos satisfazem as relações a seguir:
         <md>
           <mrow>{\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1</mrow>
           <mrow>{\mathbf i}  {\mathbf j} &amp; =  {\mathbf k}</mrow>
@@ -220,14 +220,14 @@
           <mrow>{\mathbf k}  {\mathbf j} &amp; =  - {\mathbf i}</mrow>
           <mrow>{\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}</mrow>
         </md>.
-        Let <m>{\mathbb H}</m> consist of elements of the form <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>,
-        where <m>a, b , c, d</m> are real numbers.
-        Equivalently,
-        <m>{\mathbb H}</m> can be considered to be the set of all <m>2 \times 2</m> matrices of the form
+        Seja <m>{\mathbb H}</m> o conjunto dos elementos da forma <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}</m>,
+        onde <m>a, b , c, d</m> são números reais.
+        Equivalentemente,
+        <m>{\mathbb H}</m> pode ser considerado o conjunto de todas as matrizes <m>2 \times 2</m> da forma
 
         <notation>
           <usage><m>\mathbb H</m></usage>
-          <description>the ring of quaternions</description>
+          <description>o anel dos quatérnios</description>
         </notation>
 
         <md>
@@ -236,10 +236,10 @@
           -\overline{\beta} &amp; \overline{\alpha }
           \end{pmatrix}
         </md>,
-        where <m>\alpha = a + di</m> and <m>\beta = b + ci</m> are complex numbers.
-        We can define addition and multiplication on
-        <m>{\mathbb H}</m> either by the usual matrix operations or in terms of the generators <m>1</m>,
-        <m>{\mathbf i}</m>, <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>:
+        onde <m>\alpha = a + di</m> e <m>\beta = b + ci</m> são números complexos.
+        Podemos definir a adição e a multiplicação em
+        <m>{\mathbb H}</m> tanto pelas operações usuais de matrizes quanto em termos dos geradores <m>1</m>,
+        <m>{\mathbf i}</m>, <m>{\mathbf j}</m> e <m>{\mathbf k}</m>:
         <md>
           <mrow>(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )</mrow>
           <mrow>= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k</mrow>
@@ -248,31 +248,31 @@
         <md>
           (a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}
         </md>,
-        where
+        em que
         <md>
           <mrow>\alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2</mrow>
           <mrow>\beta &amp; =  a_1 b_2 + a_2 b_1 + c_1 d_2 - d_1 c_2</mrow>
           <mrow>\gamma &amp; =  a_1 c_2 - b_1 d_2 + c_1 a_2 + d_1 b_2</mrow>
           <mrow>\delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2</mrow>
         </md>.
-        Though multiplication looks complicated,
-        it is actually a straightforward computation if we remember that we just add and multiply elements in
-        <m>{\mathbb H}</m> like polynomials and keep in mind the relationships between the generators <m>{\mathbf i}</m>,
-        <m>{\mathbf j}</m>, and <m>{\mathbf k}</m>.
-        The ring <m>{\mathbb H}</m> is called the ring of <idx><h>Quaternions</h></idx><term>quaternions</term>.
+        Embora a multiplicação pareça complicada,
+        na verdade ela é um cálculo direto se lembrarmos que simplesmente adicionamos e multiplicamos os elementos de
+        <m>{\mathbb H}</m> como polinômios, tendo em mente as relações entre os geradores <m>{\mathbf i}</m>,
+        <m>{\mathbf j}</m> e <m>{\mathbf k}</m>.
+        O anel <m>{\mathbb H}</m> é chamado de anel dos <idx><h>Quatérnios</h></idx><term>quatérnios</term>.
       </p>
             <!-- Subscript error corrected.  Suggested by K. Halasz. -->
             <!-- TWJ 2/6/2013  -->
       <p>
-        To show that the quaternions are a division ring,
-        we must be able to find an inverse for each nonzero element.
-        Notice that
+        Para mostrar que os quatérnios formam um anel de divisão,
+        devemos ser capazes de encontrar um inverso para cada elemento não nulo.
+        Observe que
         <md>
           ( a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k} )( a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} ) = a^2 + b^2 + c^2 + d^2
         </md>.
-        This element can be zero only if <m>a</m>, <m>b</m>,
-        <m>c</m>, and <m>d</m> are all zero.
-        So if <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
+        Esse elemento só pode ser zero se <m>a</m>, <m>b</m>,
+        <m>c</m> e <m>d</m> forem todos zero.
+        Assim, se <m>a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0</m>,
         <md>
           (a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left( \frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1
         </md>.
@@ -282,8 +282,8 @@
     <proposition>
       <statement>
         <p>
-          Let <m>R</m> be a ring with <m>a, b \in R</m>.
-          Then
+          Seja <m>R</m> um anel com <m>a, b \in R</m>.
+          Então
 
           <ol>
             <li>
@@ -309,33 +309,33 @@
 
       <proof>
         <p>
-          To prove (1), observe that
+          Para provar (1), observe que
           <md>
             a0 = a(0+0)= a0+ a0;
           </md>
-          hence, <m>a0=0</m>.
-          Similarly, <m>0a = 0</m>.
-          For (2), we have <m>ab + a(-b) = a(b-b) = a0 = 0</m>;
-          consequently, <m>-ab = a(-b)</m>.
-          Similarly, <m>-ab = (-a)b</m>.
-          Part (3) follows directly from (2) since <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.
+          portanto, <m>a0=0</m>.
+          Analogamente, <m>0a = 0</m>.
+          Para (2), temos <m>ab + a(-b) = a(b-b) = a0 = 0</m>;
+          consequentemente, <m>-ab = a(-b)</m>.
+          Analogamente, <m>-ab = (-a)b</m>.
+          A parte (3) segue diretamente de (2), pois <m>(-a)(-b) = -(a(- b)) = -(-ab) = ab</m>.
         </p>
       </proof>
     </proposition>
 
     <p>
-      Just as we have subgroups of groups,
-      we have an analogous class of substructures for rings.
-      A <term>subring</term><idx><h>Subring</h></idx>
-      <m>S</m> of a ring <m>R</m> is a subset <m>S</m> of <m>R</m> such that <m>S</m> is also a ring under the inherited operations from <m>R</m>.
+      Assim como temos subgrupos de grupos,
+      temos uma classe análoga de subestruturas para anéis.
+      Um <term>subanel</term><idx><h>Subanel</h></idx>
+      <m>S</m> de um anel <m>R</m> é um subconjunto <m>S</m> de <m>R</m> tal que <m>S</m> também é um anel sob as operações herdadas de <m>R</m>.
     </p>
 
     <example xml:id="rings-example-subring-chain">
       <p>
-        The ring <m>n {\mathbb Z}</m> is a subring of <m>{\mathbb Z}</m>.
-        Notice that even though the original ring may have an identity,
-        we do not require that its subring have an identity.
-        We have the following chain of subrings:
+        O anel <m>n {\mathbb Z}</m> é um subanel de <m>{\mathbb Z}</m>.
+        Observe que, embora o anel original possa ter uma identidade,
+        não exigimos que seu subanel tenha uma identidade.
+        Temos a seguinte cadeia de subanéis:
         <md>
           {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}
         </md>.
@@ -343,15 +343,15 @@
     </example>
 
     <p>
-      The following proposition gives us some easy criteria for determining whether or not a subset of a ring is indeed a subring.
-      (We will leave the proof of this proposition as an exercise.)
+      A proposição a seguir fornece alguns critérios simples para determinar se um subconjunto de um anel é de fato um subanel.
+      (Deixaremos a demonstração desta proposição como exercício.)
     </p>
 
     <proposition xml:id="rings-prop-subring">
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
-          Then <m>S</m> is a subring of <m>R</m> if and only if the following conditions are satisfied.
+          Seja <m>R</m> um anel e <m>S</m> um subconjunto de <m>R</m>.
+          Então <m>S</m> é um subanel de <m>R</m> se, e somente se, as condições a seguir forem satisfeitas.
 
           <ol>
             <li>
@@ -362,13 +362,13 @@
 
             <li>
               <p>
-                <m>rs \in S</m> for all <m>r, s \in S</m>.
+                <m>rs \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>r-s \in S</m> for all <m>r, s \in S</m>.
+                <m>r-s \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
           </ol>
@@ -378,9 +378,9 @@
 
     <example xml:id="rings-example-m2">
       <p>
-        Let  <m>R ={\mathbb M}_2( {\mathbb R} )</m> be the ring of
-        <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>.
-        If <m>T</m> is the set of upper triangular matrices in <m>R</m>; i.e.,
+        Seja <m>R ={\mathbb M}_2( {\mathbb R} )</m> o anel das
+        matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb R}</m>.
+        Se <m>T</m> é o conjunto das matrizes triangulares superiores em <m>R</m>, isto é,
         <md>
           T =
           \left\{
@@ -391,8 +391,8 @@
           : a, b, c \in {\mathbb R}
           \right\}
         </md>,
-        then <m>T</m> is a subring of <m>R</m>.
-        If
+        então <m>T</m> é um subanel de <m>R</m>.
+        Se
         <md>
           A =
           \begin{pmatrix}
@@ -406,8 +406,8 @@
           0 &amp; c'
           \end{pmatrix}
         </md>
-        are in <m>T</m>, then clearly <m>A-B</m> is also in <m>T</m>.
-        Also,
+        pertencem a <m>T</m>, então claramente <m>A-B</m> também pertence a <m>T</m>.
+        Além disso,
         <md>
           AB =
           \begin{pmatrix}
@@ -415,7 +415,7 @@
           0 &amp; cc'
           \end{pmatrix}
         </md>
-        is in <m>T</m>.
+        pertence a <m>T</m>.
       </p>
     </example>
   </section>
