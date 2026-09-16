@@ -1904,7 +1904,7 @@
   </exercises>
 
   <references xml:id="matrix-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
         <!-- %References checked <ndash /> TWJ 6/14/2010 -->
     <biblio type="raw">
 <!-- was [1] -->
@@ -1993,15 +1993,15 @@
   <section xml:id="matrix-sage" component="sage-info">
     <title>Sage</title>
     <p>
-      There is no Sage material for this chapter.
+      Não há material do Sage para este capítulo.
     </p>
   </section>
 
   <exercises xml:id="matrix-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        There are no Sage exercises for this chapter.
+        Não há exercícios do Sage para este capítulo.
       </p>
     </introduction>
 
