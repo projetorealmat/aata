@@ -421,49 +421,49 @@
   </section>
 
   <section xml:id="rings-section-domains-and-fields">
-    <title>Integral Domains and Fields</title>
+    <title>Domínios de integridade e corpos</title>
     <p>
-      Let us briefly recall some definitions.
-      If <m>R</m> is a commutative ring and <m>r</m> is a nonzero element in <m>R</m>,
-      then <m>r</m> is said to be a <term>zero divisor</term>
-      if there is some nonzero element <m>s \in R</m> such that <m>rs = 0</m>.
-      A commutative ring with identity is said to be an
-      <term>integral domain</term> if it has no zero divisors.
-      If an element <m>a</m> in a ring <m>R</m> with identity has a multiplicative inverse,
-      we say that <m>a</m> is a <term>unit</term>.
-      If every nonzero element in a ring <m>R</m> is a unit,
-      then <m>R</m> is called a <term>division ring</term>.
-      A commutative division ring is called a <term>field</term>.
+      Recordemos brevemente algumas definições.
+      Se <m>R</m> é um anel comutativo e <m>r</m> é um elemento não nulo de <m>R</m>,
+      então <m>r</m> é chamado de <term>divisor de zero</term>
+      se existe algum elemento não nulo <m>s \in R</m> tal que <m>rs = 0</m>.
+      Um anel comutativo com identidade é chamado de
+      <term>domínio de integridade</term> se não possui divisores de zero.
+      Se um elemento <m>a</m> de um anel <m>R</m> com identidade possui inverso multiplicativo,
+      dizemos que <m>a</m> é uma <term>unidade</term>.
+      Se todo elemento não nulo de um anel <m>R</m> é uma unidade,
+      então <m>R</m> é chamado de <term>anel de divisão</term>.
+      Um anel de divisão comutativo é chamado de <term>corpo</term>.
     </p>
 
     <example xml:id="rings-example-gaussian-integers">
       <p>
-        If <m>i^2 = -1</m>, then the set
-        <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forms a ring known as the
-        <idx><h>Gaussian integers</h></idx><term>Gaussian integers</term>.
+        Se <m>i^2 = -1</m>, então o conjunto
+        <m>{\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}</m> forma um anel conhecido como
+        <idx><h>Inteiros gaussianos</h></idx><term>inteiros gaussianos</term>.
         <notation>
           <usage><m>\mathbb Z[i]</m></usage>
-          <description>the Gaussian integers</description>
+          <description>os inteiros gaussianos</description>
         </notation>
-        It is easily seen that the Gaussian integers are a subring of the complex numbers since they are closed under addition and multiplication.
-        Let <m>\alpha = a + bi</m> be a unit in <m>{\mathbb Z}[ i ]</m>.
-        Then <m>\overline{\alpha} = a - bi</m> is also a unit since if <m>\alpha \beta = 1</m>,
-        then <m>\overline{\alpha} \overline{\beta} = 1</m>.
-        If <m>\beta = c + di</m>, then
+        É fácil ver que os inteiros gaussianos são um subanel dos números complexos, pois são fechados sob a adição e a multiplicação.
+        Seja <m>\alpha = a + bi</m> uma unidade em <m>{\mathbb Z}[ i ]</m>.
+        Então <m>\overline{\alpha} = a - bi</m> também é uma unidade, pois, se <m>\alpha \beta = 1</m>,
+        então <m>\overline{\alpha} \overline{\beta} = 1</m>.
+        Se <m>\beta = c + di</m>, então
         <md>
           1 = \alpha \beta \overline{\alpha} \overline{\beta} = (a^2 + b^2 )(c^2 + d^2)
         </md>.
-        Therefore, <m>a^2 + b^2</m> must either be <m>1</m> or <m>-1</m>;
-        or, equivalently, <m>a + bi = \pm 1</m> or <m>a + bi = \pm i</m>.
-        Therefore, units of this ring are <m>\pm 1</m> and <m>\pm i</m>;
-        hence, the Gaussian integers are not a field.
-        We will leave it as an exercise to prove that the Gaussian integers are an integral domain.
+        Portanto, <m>a^2 + b^2</m> deve ser <m>1</m> ou <m>-1</m>;
+        ou, equivalentemente, <m>a + bi = \pm 1</m> ou <m>a + bi = \pm i</m>.
+        Portanto, as unidades desse anel são <m>\pm 1</m> e <m>\pm i</m>;
+        consequentemente, os inteiros gaussianos não são um corpo.
+        Deixaremos como exercício a demonstração de que os inteiros gaussianos são um domínio de integridade.
       </p>
     </example>
 
     <example xml:id="rings-example-matrix-z2">
       <p>
-        The set of matrices
+        O conjunto de matrizes
         <md>
           F =
           \left\{
@@ -485,14 +485,14 @@
           \end{pmatrix}
           \right\}
         </md>
-        with entries in <m>{\mathbb Z}_2</m> forms a field.
+        com entradas em <m>{\mathbb Z}_2</m> forma um corpo.
       </p>
     </example>
 
     <example xml:id="rings-example-q-sqrt2">
       <p>
-        The set <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is a field.
-        The inverse of an element <m>a + b \sqrt{2}</m> in <m>{\mathbb Q}( \sqrt{2}\, )</m> is
+        O conjunto <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> é um corpo.
+        O inverso de um elemento <m>a + b \sqrt{2}</m> em <m>{\mathbb Q}( \sqrt{2}\, )</m> é
         <md>
           \frac{a}{a^2 - 2 b^2} +\frac{- b}{ a^2 - 2 b^2} \sqrt{2}
         </md>.
@@ -500,126 +500,126 @@
     </example>
 
     <p>
-      We have the following alternative characterization of integral domains.
+      Temos a seguinte caracterização alternativa dos domínios de integridade.
     </p>
 
     <proposition>
-      <title>Cancellation Law</title>
+      <title>Lei do cancelamento</title>
       <idx>
-      <h>Cancellation law</h>
-      <h>for integral domains</h>
+      <h>Lei do cancelamento</h>
+      <h>para domínios de integridade</h>
       </idx>
       <statement>
         <p>
-          Let <m>D</m> be a commutative ring with identity.
-          Then <m>D</m> is an integral domain if and only if for all nonzero elements <m>a \in D</m> with <m>ab = ac</m>,
-          we have <m>b=c</m>.
+          Seja <m>D</m> um anel comutativo com identidade.
+          Então <m>D</m> é um domínio de integridade se, e somente se, para todo elemento não nulo <m>a \in D</m> tal que <m>ab = ac</m>,
+          tivermos <m>b=c</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be an integral domain.
-          Then <m>D</m> has no zero divisors.
-          Let <m>ab = ac</m> with <m>a \neq 0</m>.
-          Then <m>a(b - c) =0</m>.
-          Hence, <m>b - c = 0</m> and <m>b = c</m>.
+          Seja <m>D</m> um domínio de integridade.
+          Então <m>D</m> não possui divisores de zero.
+          Seja <m>ab = ac</m> com <m>a \neq 0</m>.
+          Então <m>a(b - c) =0</m>.
+          Logo, <m>b - c = 0</m> e <m>b = c</m>.
         </p>
 
         <p>
-          Conversely, let us suppose that cancellation is possible in <m>D</m>.
-          That is, suppose that <m>ab = ac</m> implies <m>b=c</m>.
-          Let <m>ab = 0</m>.
-          If <m>a \neq 0</m>, then <m>ab = a 0</m> or <m>b=0</m>.
-          Therefore, <m>a</m> cannot be a zero divisor.
+          Reciprocamente, suponhamos que o cancelamento seja possível em <m>D</m>.
+          Isto é, suponhamos que <m>ab = ac</m> implique <m>b=c</m>.
+          Seja <m>ab = 0</m>.
+          Se <m>a \neq 0</m>, então <m>ab = a 0</m>, ou <m>b=0</m>.
+          Portanto, <m>a</m> não pode ser um divisor de zero.
         </p>
       </proof>
     </proposition>
 
     <p>
-      The following surprising theorem is due to Wedderburn.
+      O surpreendente teorema a seguir é devido a Wedderburn.
     </p>
 
     <theorem>
       <statement>
         <p>
-          Every finite integral domain is a field.
+          Todo domínio de integridade finito é um corpo.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be a finite integral domain and <m>D^\ast</m> be the set of nonzero elements of <m>D</m>.
-          We must show that every element in <m>D^*</m> has an inverse.
-          For each <m>a \in D^\ast</m> we can define a map
-          <m>\lambda_a : D^\ast \rightarrow D^\ast</m> by <m>\lambda_a(d) = ad</m>.
-          This map makes sense, because if  <m>a \neq 0</m> and
-          <m>d \neq 0</m>, then <m>ad \neq 0</m>.
-          The map <m>\lambda_a</m> is one-to-one,
-          since for <m>d_1, d_2 \in D^*</m>,
+          Seja <m>D</m> um domínio de integridade finito e <m>D^\ast</m> o conjunto dos elementos não nulos de <m>D</m>.
+          Devemos mostrar que todo elemento de <m>D^*</m> possui um inverso.
+          Para cada <m>a \in D^\ast</m>, podemos definir uma aplicação
+          <m>\lambda_a : D^\ast \rightarrow D^\ast</m> por <m>\lambda_a(d) = ad</m>.
+          Essa aplicação faz sentido, pois, se <m>a \neq 0</m> e
+          <m>d \neq 0</m>, então <m>ad \neq 0</m>.
+          A aplicação <m>\lambda_a</m> é injetiva,
+          pois, para <m>d_1, d_2 \in D^*</m>,
           <md>
             ad_1 = \lambda_a(d_1) = \lambda_a(d_2) = ad_2
           </md>
-          implies <m>d_1 = d_2</m> by left cancellation.
-          Since <m>D^\ast</m> is a finite set,
-          the map <m>\lambda_a</m> must also be onto;
-          hence, for some <m>d \in D^\ast</m>,
+          implica <m>d_1 = d_2</m> pelo cancelamento à esquerda.
+          Como <m>D^\ast</m> é um conjunto finito,
+          a aplicação <m>\lambda_a</m> também deve ser sobrejetiva;
+          portanto, para algum <m>d \in D^\ast</m>,
           <m>\lambda_a(d) = ad = 1</m>.
-          Therefore, <m>a</m> has a left inverse.
-          Since <m>D</m> is commutative,
-          <m>d</m> must also be a right inverse for <m>a</m>.
-          Consequently, <m>D</m> is a field.
+          Logo, <m>a</m> possui um inverso à esquerda.
+          Como <m>D</m> é comutativo,
+          <m>d</m> também deve ser um inverso à direita de <m>a</m>.
+          Consequentemente, <m>D</m> é um corpo.
         </p>
       </proof>
     </theorem>
 
     <p>
-      For any nonnegative integer <m>n</m> and any element <m>r</m> in a ring <m>R</m> we write
-      <m>r + \cdots + r</m> (<m>n</m> times) as <m>nr</m>.
-      We define the <term>characteristic</term><idx><h>Characteristic of a ring</h></idx><idx><h>Ring</h><h>characteristic of</h></idx> of a ring <m>R</m> to be the least positive integer <m>n</m> such that <m>nr = 0</m> for all <m>r \in R</m>.
-      If no such integer exists,
-      then the characteristic of <m>R</m> is defined to be <m>0</m>.
-      We will denote the characteristic of <m>R</m> by <m>\chr R</m>.
+      Para qualquer inteiro não negativo <m>n</m> e qualquer elemento <m>r</m> de um anel <m>R</m>, escrevemos
+      <m>r + \cdots + r</m> (<m>n</m> vezes) como <m>nr</m>.
+      Definimos a <term>característica</term><idx><h>Característica de um anel</h></idx><idx><h>Anel</h><h>característica de</h></idx> de um anel <m>R</m> como o menor inteiro positivo <m>n</m> tal que <m>nr = 0</m> para todo <m>r \in R</m>.
+      Se tal inteiro não existir,
+      então a característica de <m>R</m> será definida como <m>0</m>.
+      Denotaremos a característica de <m>R</m> por <m>\chr R</m>.
 
       <notation>
         <usage><m>\chr R</m></usage>
-        <description>characteristic of a ring <m>R</m></description>
+        <description>característica de um anel <m>R</m></description>
       </notation>
 
     </p>
 
     <example xml:id="rings-example-zp-field">
       <p>
-        For every prime <m>p</m>,
-        <m>{\mathbb Z}_p</m> is a field of characteristic <m>p</m>.
+        Para todo primo <m>p</m>,
+        <m>{\mathbb Z}_p</m> é um corpo de característica <m>p</m>.
         By <xref ref="groups-proposition-zn-equiv-classes"/>,
-        every nonzero element in <m>{\mathbb Z}_p</m> has an inverse;
-        hence, <m>{\mathbb Z}_p</m> is a field.
-        If <m>a</m> is any nonzero element in the field, then <m>pa =0</m>,
-        since the order of any nonzero element in the abelian group <m>{\mathbb Z}_p</m> is <m>p</m>.
+        todo elemento não nulo de <m>{\mathbb Z}_p</m> possui um inverso;
+        portanto, <m>{\mathbb Z}_p</m> é um corpo.
+        Se <m>a</m> é qualquer elemento não nulo do corpo, então <m>pa =0</m>,
+        pois a ordem de qualquer elemento não nulo do grupo abeliano <m>{\mathbb Z}_p</m> é <m>p</m>.
       </p>
     </example>
 
     <lemma xml:id="rings-lemma-ring-characteristic">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity.
-          If <m>1</m> has order <m>n</m>,
-          then the characteristic of <m>R</m> is <m>n</m>.
+          Seja <m>R</m> um anel com identidade.
+          Se <m>1</m> tem ordem <m>n</m>,
+          então a característica de <m>R</m> é <m>n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          If <m>1</m> has order <m>n</m>,
-          then <m>n</m> is the least positive integer such that <m>n 1 = 0</m>.
-          Thus, for all <m>r \in R</m>,
+          Se <m>1</m> tem ordem <m>n</m>,
+          então <m>n</m> é o menor inteiro positivo tal que <m>n 1 = 0</m>.
+          Assim, para todo <m>r \in R</m>,
           <md>
             nr = n(1r) = (n 1) r = 0r = 0
           </md>.
-          On the other hand,
-          if no positive <m>n</m> exists such that <m>n1 = 0</m>,
-          then the characteristic of <m>R</m> is zero.
+          Por outro lado,
+          se não existe inteiro positivo <m>n</m> tal que <m>n1 = 0</m>,
+          então a característica de <m>R</m> é zero.
         </p>
       </proof>
     </lemma>
@@ -627,21 +627,21 @@
     <theorem xml:id="rings-theorem-integral-domain-characteristic">
       <statement>
         <p>
-          The characteristic of an integral domain is either prime or zero.
+          A característica de um domínio de integridade é prima ou zero.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>D</m> be an integral domain and suppose that the characteristic of <m>D</m> is <m>n</m> with <m>n \neq 0</m>.
-          If <m>n</m> is not prime, then <m>n = ab</m>,
-          where <m>1 \lt a \lt n</m> and <m>1 \lt b \lt n</m>.
-          By <xref ref="rings-lemma-ring-characteristic"/>, we need only consider the case <m>n 1 = 0</m>.
-          Since <m>0 = n 1 = (ab)1 = (a1)(b1)</m> and there are no zero divisors in <m>D</m>,
-          either <m>a1 =0</m> or <m>b1=0</m>.
-          Hence, the characteristic of <m>D</m> must be less than <m>n</m>,
-          which is a contradiction.
-          Therefore, <m>n</m> must be prime.
+          Seja <m>D</m> um domínio de integridade e suponha que a característica de <m>D</m> seja <m>n</m>, com <m>n \neq 0</m>.
+          Se <m>n</m> não é primo, então <m>n = ab</m>,
+          onde <m>1 \lt a \lt n</m> e <m>1 \lt b \lt n</m>.
+          Pelo <xref ref="rings-lemma-ring-characteristic"/>, basta considerar o caso <m>n 1 = 0</m>.
+          Como <m>0 = n 1 = (ab)1 = (a1)(b1)</m> e não há divisores de zero em <m>D</m>,
+          temos <m>a1 =0</m> ou <m>b1=0</m>.
+          Portanto, a característica de <m>D</m> deve ser menor que <m>n</m>,
+          o que é uma contradição.
+          Consequentemente, <m>n</m> deve ser primo.
         </p>
       </proof>
     </theorem>
