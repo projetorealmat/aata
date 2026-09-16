@@ -317,7 +317,7 @@
           <md>
             n = pq = 667
           </md>
-          and
+          e
           <md>
             \phi(n) = m = (p - 1)(q - 1) = 616
           </md>.
@@ -489,7 +489,7 @@
     <exercise label="rq-crypt-euler-phi">
       <statement>
         <p>
-          Use the <c>euler_phi()</c>function in Sage to compute <m>\phi(893\,456\,123)</m>.
+          Use a função <c>euler_phi()</c> do Sage para calcular <m>\phi(893\,456\,123)</m>.
         </p>
       </statement>
       <response/>
@@ -498,7 +498,7 @@
     <exercise label="rq-crypt-power-mod">
       <statement>
         <p>
-          Use the <c>power_mod()</c>function in Sage to compute <m>7^{324}\pmod{895}</m>.
+          Use a função <c>power_mod()</c> do Sage para calcular <m>7^{324}\pmod{895}</m>.
         </p>
       </statement>
       <response/>
@@ -507,9 +507,9 @@
     <exercise label="rq-crypt-RSA">
       <statement>
         <p>
-          Explain the mathematical basis for saying:
-          encrypting a message using an <init>RSA</init> public key is very simple computationally,
-          while decrypting a communication without the private key is very hard computationally.
+          Explique a base matemática para afirmar que:
+          cifrar uma mensagem usando uma chave pública <init>RSA</init> é computacionalmente muito simples,
+          enquanto decifrar uma comunicação sem a chave privada é computacionalmente muito difícil.
         </p>
       </statement>
       <response/>
@@ -518,7 +518,7 @@
     <exercise label="rq-crypt-verification">
       <statement>
         <p>
-          Explain how in <init>RSA</init> message encoding differs from message verification.
+          Explique como, no <init>RSA</init>, a cifração de mensagens difere da verificação de mensagens.
         </p>
       </statement>
       <response/>
@@ -527,7 +527,7 @@
     <exercise>
       <statement>
         <p>
-          Explain how one could be justified in saying that Diffie and Hellman's proposal in 1976 was <q>revolutionary.</q>
+          Explique por que se poderia justificar a afirmação de que a proposta de Diffie e Hellman, em 1976, foi <q>revolucionária.</q>
         </p>
       </statement>
       <response/>
@@ -538,12 +538,12 @@
     <!-- File: crypt.xml  -->
     <!-- Title: Introduction to Cryptography -->
   <exercises xml:id="crypt-exercises" filenamebase="crypt">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="crypt-exercise-i-love-math">
       <statement>
         <p>
-          Encode <c>IXLOVEXMATH</c> using the cryptosystem in <xref ref="crypt-example-caesar"/>.
+          Cifre <c>IXLOVEXMATH</c> usando o criptossistema de <xref ref="crypt-example-caesar"/>.
         </p>
       </statement>
       <hint>
@@ -556,8 +556,8 @@
     <exercise number="2" xml:id="crypt-exercise-ZLOOA-WKLVA-EHARQ-WKHA-ILQDO">
       <statement>
         <p>
-          Decode <c>ZLOOA WKLVA EHARQ WKHA ILQDO</c>,
-          which was encoded using the cryptosystem in <xref ref="crypt-example-caesar"/>.
+          Decifre <c>ZLOOA WKLVA EHARQ WKHA ILQDO</c>,
+          que foi cifrada usando o criptossistema de <xref ref="crypt-example-caesar"/>.
         </p>
       </statement>
     </exercise>
@@ -565,8 +565,8 @@
     <exercise number="3" xml:id="crypt-exercise-monoalphabetic-decode">
       <statement>
         <p>
-          Assuming that monoalphabetic code was used to encode the following secret message,
-          what was the original message?
+          Supondo que tenha sido usada uma cifra monoalfabética para cifrar a seguinte mensagem secreta,
+          qual era a mensagem original?
         </p>
 
             <pre>
@@ -576,13 +576,13 @@
             PVEHP PEXOV ERYKP GERYT GVKEG XDRTE RGAGA</pre>
 
         <p>
-          What is the significance of this message in the history of cryptography?
+          Qual é a importância dessa mensagem na história da criptografia?
         </p>
       </statement>
       <hint>
         <p>
-          Hint: <c>V = E</c>, <c>E = X</c>
-          (also used for spaces and punctuation),
+          Dica: <c>V = E</c>, <c>E = X</c>
+          (também usados para espaços e pontuação),
           <c>K = R</c>.
         </p>
       </hint>
@@ -591,8 +591,8 @@
     <exercise number="4" xml:id="crypt-exercise-total-possible-monoalphabetic">
       <statement>
         <p>
-          What is the total number of possible monoalphabetic cryptosystems?
-          How secure are such cryptosystems?
+          Qual é o número total de criptossistemas monoalfabéticos possíveis?
+          Quão seguros são esses criptossistemas?
         </p>
       </statement>
       <hint>
@@ -605,8 +605,8 @@
     <exercise number="5" xml:id="crypt-exercise-2-by-2-matrix-Z26">
       <statement>
         <p>
-          Prove that a <m>2 \times 2</m> matrix <m>A</m> with entries in
-          <m>{\mathbb Z}_{26}</m> is invertible if and only if <m>\gcd( \det(A), 26 ) = 1</m>.
+          Prove que uma matriz <m>2 \times 2</m> <m>A</m> com entradas em
+          <m>{\mathbb Z}_{26}</m> é inversível se, e somente se, <m>\gcd( \det(A), 26 ) = 1</m>.
         </p>
       </statement>
     </exercise>
@@ -614,7 +614,7 @@
     <exercise number="6" xml:id="crypt-exercise-matrix-encrypt">
       <statement>
         <p>
-          Given the matrix
+          Dada a matriz
           <md>
             A =
             \begin{pmatrix}
@@ -622,10 +622,10 @@
             2 &amp; 3
             \end{pmatrix}
           </md>,
-          use the encryption function
-          <m>f({\mathbf p}) = A {\mathbf p} + {\mathbf b}</m> to encode the message <c>CRYPTOLOGY</c>,
-          where <m>{\mathbf b} = ( 2, 5)^\transpose</m>.
-          What is the decoding function?
+          use a função de cifração
+          <m>f({\mathbf p}) = A {\mathbf p} + {\mathbf b}</m> para cifrar a mensagem <c>CRYPTOLOGY</c>,
+          onde <m>{\mathbf b} = ( 2, 5)^\transpose</m>.
+          Qual é a função de decifração?
         </p>
       </statement>
     </exercise>
@@ -633,9 +633,9 @@
     <exercise number="7" xml:id="crypt-exercise-RSA-encrypt">
       <statement>
         <p>
-          Encrypt each of the following <acro>RSA</acro> messages <m>x</m> so that <m>x</m> is divided into blocks of integers of length <m>2</m>;
-          that is, if <m>x = 142528</m>,
-          encode <m>14</m>, <m>25</m>, and <m>28</m> separately.
+          Cifre cada uma das seguintes mensagens <acro>RSA</acro> <m>x</m> de modo que <m>x</m> seja dividido em blocos de inteiros de comprimento <m>2</m>;
+          isto é, se <m>x = 142528</m>,
+          cifre <m>14</m>, <m>25</m> e <m>28</m> separadamente.
 
           <ol>
             <li>
@@ -674,7 +674,7 @@
     <exercise number="8" xml:id="crypt-exercise-RSA-decode-key">
       <statement>
         <p>
-          Compute the decoding key <m>D</m> for each of the encoding keys in <xref ref="crypt-exercise-RSA-encrypt"/>.
+          Calcule a chave de decifração <m>D</m> para cada uma das chaves de cifração em <xref ref="crypt-exercise-RSA-encrypt"/>.
         </p>
       </statement>
     </exercise>
@@ -682,7 +682,7 @@
     <exercise number="9" xml:id="crypt-exercise-RSA-decrypt-examples">
       <statement>
         <p>
-          Decrypt each of the following <acro>RSA</acro> messages <m>y</m>.
+          Decifre cada uma das seguintes mensagens <acro>RSA</acro> <m>y</m>.
 
           <ol>
             <li>
@@ -721,8 +721,8 @@
     <exercise number="10" xml:id="crypt-exercise-compute-D">
       <statement>
         <p>
-          For each of the following encryption keys <m>(n, E)</m> in the <acro>RSA</acro> cryptosystem,
-          compute <m>D</m>.
+          Para cada uma das seguintes chaves de cifração <m>(n, E)</m> no criptossistema <acro>RSA</acro>,
+          calcule <m>D</m>.
 
           <ol>
             <li>
@@ -761,9 +761,9 @@
     <exercise number="11" xml:id="crypt-exercise-message-padding">
       <statement>
         <p>
-          Encrypted messages are often divided into blocks of <m>n</m> letters.
-          A message such as <c>THE WORLD WONDERS WHY</c> might be encrypted as <c>JIW OCFRJ LPOEVYQ IOC</c> but sent as <c>JIW OCF RJL POE VYQ IOC</c>.
-          What are the advantages of using blocks of <m>n</m> letters?
+          Mensagens cifradas são frequentemente divididas em blocos de <m>n</m> letras.
+          Uma mensagem como <c>THE WORLD WONDERS WHY</c> poderia ser cifrada como <c>JIW OCFRJ LPOEVYQ IOC</c>, mas enviada como <c>JIW OCF RJL POE VYQ IOC</c>.
+          Quais são as vantagens de usar blocos de <m>n</m> letras?
         </p>
       </statement>
     </exercise>
@@ -771,11 +771,11 @@
     <exercise number="12" xml:id="crypt-exercise-X-hat-E-modn">
       <statement>
         <p>
-          Find integers <m>n</m>, <m>E</m>, and <m>X</m> such that
+          Encontre inteiros <m>n</m>, <m>E</m> e <m>X</m> tais que
           <md>
             X^E \equiv X \pmod{n}
           </md>.
-          Is this a potential problem in the <acro>RSA</acro> cryptosystem?
+          Isso é um problema potencial no criptossistema <acro>RSA</acro>?
         </p>
       </statement>
     </exercise>
@@ -783,10 +783,10 @@
     <exercise number="13" xml:id="crypt-exercise-classroom-exercise">
       <statement>
         <p>
-          Every person in the class should construct an <acro>RSA</acro> cryptosystem using primes that are <m>10</m> to <m>15</m> digits long.
-          Hand in <m>(n, E)</m> and an encoded message.
-          Keep <m>D</m> secret.
-          See if you can break one another's codes.
+          Cada pessoa da turma deve construir um criptossistema <acro>RSA</acro> usando primos com <m>10</m> a <m>15</m> algarismos.
+          Entregue <m>(n, E)</m> e uma mensagem cifrada.
+          Mantenha <m>D</m> em segredo.
+          Verifique se conseguem quebrar os códigos uns dos outros.
         </p>
       </statement>
     </exercise>
