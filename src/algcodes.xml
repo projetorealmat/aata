@@ -1368,7 +1368,7 @@
 
     <example xml:id="algcodes-example-ith-column">
       <p>
-        Observe that
+        Observe que
         <md>
           \begin{pmatrix}
           1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\

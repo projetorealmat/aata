@@ -300,7 +300,7 @@
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-sl2r-a">
-          	<description>Um quadrado sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (0,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
+            <description>Um quadrado sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (0,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-sl2r-a.tex" parse="text"/>
               </latex-image>
@@ -622,7 +622,7 @@
             <!-- Fixed tikz figure - TWJ 12/8/2011 -->
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-o2-a">
-          	<description>Dois desenhos lado a lado. O desenho à esquerda é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (a,b), e uma segunda seta apontando para baixo e para a direita, da origem até um ponto (a, -b). O desenho à direita é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (cosseno de teta, seno de teta), e uma seta apontando para cima e para a esquerda, formando um ângulo reto com o primeiro vetor, da origem até (seno de teta, menos cosseno de teta).</description>
+            <description>Dois desenhos lado a lado. O desenho à esquerda é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (a,b), e uma segunda seta apontando para baixo e para a direita, da origem até um ponto (a, -b). O desenho à direita é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (cosseno de teta, seno de teta), e uma seta apontando para cima e para a esquerda, formando um ângulo reto com o primeiro vetor, da origem até (seno de teta, menos cosseno de teta).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-o2-a.tex" parse="text"/>
               </latex-image>
@@ -926,7 +926,7 @@
 
         <proof>
           <p>
-          	Precisamos simplesmente encontrar todos os subgrupos finitos <m>G</m> de <m>E(2)</m>.
+            Precisamos simplesmente encontrar todos os subgrupos finitos <m>G</m> de <m>E(2)</m>.
             Qualquer grupo de simetria finito <m>G</m> em
             <m>{\mathbb R}^2</m> deve fixar a origem e ser um subgrupo finito de <m>O(2)</m>,
             pois translações e reflexões deslizantes têm ordem infinita.
@@ -1022,7 +1022,7 @@
         <caption>Um padrão de papel de parede em <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image xml:id="matrix-wallpaper-r2">
-        	<description>Um padrão de papel de parede com desenhos em zigue-zague, cuja primeira linha aponta para baixo, a segunda linha aponta para cima e assim por diante.</description>
+            <description>Um padrão de papel de parede com desenhos em zigue-zague, cuja primeira linha aponta para baixo, a segunda linha aponta para cima e assim por diante.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-wallpaper-r2.tex" parse="text"/>
             </latex-image>
@@ -1034,7 +1034,7 @@
         <caption>Uma estrutura cristalina em <m>\mathbb R^3</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image width="50%" xml:id="matrix-crystal-r3">
-        	<description>Um reticulado tridimensional de cubos inclinados para a direita. Os vértices são destacados com pequenos círculos preenchidos.</description>
+            <description>Um reticulado tridimensional de cubos inclinados para a direita. Os vértices são destacados com pequenos círculos preenchidos.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-crystal-r3.tex" parse="text"/>
             </latex-image>
@@ -1116,8 +1116,8 @@
         <caption>Um reticulado em <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image xml:id="matrix-lattice-r2">
-        	<description>Um reticulado de paralelogramos inclinados para a direita. Há quatro setas, cada uma começando no centro, na origem, e apontando para a direita até (2,0), para cima e para a direita até (1,1), e para cima e para a esquerda até
-        		menos um, um), e para baixo e para a esquerda até (menos um, menos um).</description>
+            <description>Um reticulado de paralelogramos inclinados para a direita. Há quatro setas, cada uma começando no centro, na origem, e apontando para a direita até (2,0), para cima e para a direita até (1,1), e para cima e para a esquerda até
+            menos um, um), e para baixo e para a esquerda até (menos um, menos um).</description>
             <latex-image>
                 <xi:include href="tikz/matrix-lattice-r2.tex" parse="text"/>
             </latex-image>
@@ -1134,7 +1134,6 @@
         <m>{\mathbb R}^3</m> é realizada associando um grupo de simetria,
         chamado de <term>grupo espacial</term>,<idx><h>Grupo</h><h>espacial</h></idx> a cada tipo de cristal.
         Dois reticulados são considerados diferentes se seus grupos espaciais não forem iguais.
-        A pergunta natural que surge agora é quantos grupos espaciais existem.
         A pergunta natural que surge agora é quantos grupos espaciais existem.
       </p>
 
@@ -1205,7 +1204,7 @@
       <figure xml:id="matrix-figure-lattice-types">
         <caption>Tipos de reticulados em <m>\mathbb R^2</m></caption>
         <image xml:id="matrix-lattices-r2">
-        	<description>Há duas fileiras de figuras. A figura superior esquerda é um reticulado de quadrados, a figura superior central é um reticulado de retângulos que não são quadrados, e a figura superior direita é um reticulado de losangos inclinados para a esquerda. A figura inferior esquerda é um reticulado de paralelogramos que não são losangos, inclinados para a esquerda. A figura inferior direita é um reticulado de triângulos equiláteros, seis dos quais formam um hexágono regular.</description>
+            <description>Há duas fileiras de figuras. A figura superior esquerda é um reticulado de quadrados, a figura superior central é um reticulado de retângulos que não são quadrados, e a figura superior direita é um reticulado de losangos inclinados para a esquerda. A figura inferior esquerda é um reticulado de paralelogramos que não são losangos, inclinados para a esquerda. A figura inferior direita é um reticulado de triângulos equiláteros, seis dos quais formam um hexágono regular.</description>
             <latex-image>
                 <xi:include href="tikz/matrix-lattices-r2.tex" parse="text"/>
             </latex-image>
