@@ -244,7 +244,7 @@
           <mrow>(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )</mrow>
           <mrow>= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k</mrow>
         </md>
-        and
+        e
         <md>
           (a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}
         </md>,
@@ -861,7 +861,7 @@
           <md>
             \phi(ar) = \phi(a) \phi(r) = 0 \phi(r) = 0
           </md>
-          and
+          e
           <md>
             \phi(ra) = \phi(r) \phi(a) =  \phi(r)0 = 0
           </md>.
@@ -944,7 +944,7 @@
           <md>
             \phi(r) \phi(s) = (r + I)(s+I) = rs + I = \phi(rs)
           </md>,
-          which completes the proof of the theorem.
+          o que conclui a demonstração do teorema.
         </p>
       </proof>
     </theorem>
@@ -1391,7 +1391,7 @@
           existe uma solução que é única módulo <m>n_1 \cdots n_k</m>,
           digamos, <m>a</m>.
           Como <m>n_1 \cdots n_k</m> e <m>n_{k+1}</m> são relativamente primos,
-          the system
+          o sistema
           <md>
             <mrow>x &amp; \equiv  a \pmod{n_1 \cdots n_k }</mrow>
             <mrow>x &amp; \equiv  a_{k+1} \pmod{n_{k+1}}</mrow>
@@ -1524,7 +1524,7 @@
     <exercise label="rq-rings-groups-rings">
       <statement>
         <p>
-          What is the fundamental difference between groups and rings?
+          Qual é a diferença fundamental entre grupos e anéis?
         </p>
       </statement>
       <response/>
@@ -1533,7 +1533,7 @@
     <exercise label="rq-rings-integral-domain">
       <statement>
         <p>
-          Give two characterizations of an integral domain.
+          Dê duas caracterizações de um domínio de integridade.
         </p>
       </statement>
       <response/>
@@ -1542,7 +1542,7 @@
     <exercise label="rq-rings-fields">
       <statement>
         <p>
-          Provide two examples of fields, one infinite, one finite.
+          Forneça dois exemplos de corpos, um infinito e um finito.
         </p>
       </statement>
       <response/>
@@ -1551,7 +1551,7 @@
     <exercise label="rq-rings-noether">
       <statement>
         <p>
-          Who was Emmy Noether?
+          Quem foi Emmy Noether?
         </p>
       </statement>
       <response/>
@@ -1560,7 +1560,7 @@
     <exercise label="rq-rings-chinese-remainder">
       <statement>
         <p>
-          Speculate on a computer program that might use the Chinese Remainder Theorem to speed up computations with large integers.
+          Especule sobre um programa de computador que poderia usar o Teorema Chinês do Resto para acelerar cálculos com inteiros grandes.
         </p>
       </statement>
       <response/>
@@ -1569,15 +1569,15 @@
   </reading-questions>
     <!-- Exercises with Solutions  -->
     <!-- File: rings.xml  -->
-    <!-- Title: Rings -->
+    <!-- Title: Anéis -->
   <exercises xml:id="rings-exercises" filenamebase="rings">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="rings-exercise-which-are-rings">
       <statement>
         <p>
-          Which of the following sets are rings with respect to the usual operations of addition and multiplication?
-          If the set is a ring, is it also a field?
+          Quais dos conjuntos a seguir são anéis em relação às operações usuais de adição e multiplicação?
+          Se o conjunto for um anel, ele também é um corpo?
 
           <ol>
             <li>
@@ -1632,8 +1632,8 @@
       </statement>
       <hint>
         <p>
-          (a) <m>7 {\mathbb Z}</m> is a ring but not a field; (c)
-          <m>{\mathbb Q}(\sqrt{2}\, )</m> is a field; (f) <m>R</m> is not a ring.
+          (a) <m>7 {\mathbb Z}</m> é um anel, mas não um corpo; (c)
+          <m>{\mathbb Q}(\sqrt{2}\, )</m> é um corpo; (f) <m>R</m> não é um anel.
         </p>
       </hint>
     </exercise>
@@ -1641,16 +1641,16 @@
     <exercise number="2" xml:id="rings-exercise-2x2-matrix-ring">
       <statement>
         <p>
-          Let <m>R</m> be the ring of <m>2 \times 2</m> matrices of the form
+          Seja <m>R</m> o anel das matrizes <m>2 \times 2</m> da forma
           <md>
             \begin{pmatrix}
             a &amp; b \\
             0 &amp; 0
             \end{pmatrix}
           </md>,
-          where <m>a, b \in {\mathbb R}</m>.
-          Show that although <m>R</m> is a ring that has no identity,
-          we can find a subring <m>S</m> of <m>R</m> with an identity.
+          onde <m>a, b \in {\mathbb R}</m>.
+          Mostre que, embora <m>R</m> seja um anel que não possui identidade,
+          podemos encontrar um subanel <m>S</m> de <m>R</m> com identidade.
         </p>
       </statement>
     </exercise>
@@ -1658,7 +1658,7 @@
     <exercise number="3" xml:id="rings-exercise-units">
       <statement>
         <p>
-          List or characterize all of the units in each of the following rings.
+          Liste ou caracterize todas as unidades em cada um dos anéis a seguir.
 
           <ol>
             <li>
@@ -1682,14 +1682,14 @@
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}</m>
               </p>
             </li>
 
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z}_2 )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}_2</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}_2</m>
               </p>
             </li>
           </ol>
@@ -1733,8 +1733,8 @@
     <exercise number="4" xml:id="rings-exercise-ideals">
       <statement>
         <p>
-          Find all of the ideals in each of the following rings.
-          Which of these ideals are maximal and which are prime?
+          Encontre todos os ideais em cada um dos anéis a seguir.
+          Quais desses ideais são maximais e quais são primos?
 
           <ol>
             <li>
@@ -1752,14 +1752,14 @@
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb R} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb R}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb R}</m>
               </p>
             </li>
 
             <li>
               <p>
                 <m>{\mathbb M}_2( {\mathbb Z} )</m>,
-                the <m>2 \times 2</m> matrices with entries in <m>{\mathbb Z}</m>
+                as matrizes <m>2 \times 2</m> com entradas em <m>{\mathbb Z}</m>
               </p>
             </li>
 
@@ -1775,7 +1775,7 @@
         <p>
           (a) <m>\{0 \}</m>, <m>\{0, 9 \}</m>,
           <m>\{0, 6, 12 \}</m>, <m>\{0, 3, 6, 9, 12, 15 \}</m>,
-          <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) there are no nontrivial ideals.
+          <m>\{0, 2, 4, 6, 8, 10, 12, 14, 16 \}</m>; (c) não há ideais não triviais.
         </p>
       </hint>
     </exercise>
@@ -1783,19 +1783,19 @@
     <exercise number="5" xml:id="rings-exercise-RmodI-multiplication-table">
       <statement>
         <p>
-          For each of the following rings <m>R</m> with ideal <m>I</m>,
-          give an addition table and a multiplication table for <m>R/I</m>.
+          Para cada um dos anéis <m>R</m> com ideal <m>I</m> a seguir,
+          forneça uma tabela de adição e uma tabela de multiplicação para <m>R/I</m>.
 
           <ol>
             <li>
               <p>
-                <m>R = {\mathbb Z}</m> and <m>I = 6 {\mathbb Z}</m>
+                <m>R = {\mathbb Z}</m> e <m>I = 6 {\mathbb Z}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>R = {\mathbb Z}_{12}</m> and <m>I = \{ 0, 3, 6, 9 \}</m>
+                <m>R = {\mathbb Z}_{12}</m> e <m>I = \{ 0, 3, 6, 9 \}</m>
               </p>
             </li>
           </ol>
@@ -1806,7 +1806,7 @@
     <exercise number="6" xml:id="rings-exercise-homo-Z6-Z15">
       <statement>
         <p>
-          Find all homomorphisms <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
+          Encontre todos os homomorfismos <m>\phi : {\mathbb Z} / 6 {\mathbb Z} \rightarrow {\mathbb Z} / 15 {\mathbb Z}</m>.
         </p>
       </statement>
     </exercise>
@@ -1816,13 +1816,13 @@
     <exercise number="7" xml:id="rings-exercise-R-not-iso-C">
       <statement>
         <p>
-          Prove that <m>{\mathbb R}</m> is not isomorphic to <m>{\mathbb C}</m>.
+          Prove que <m>{\mathbb R}</m> não é isomorfo a <m>{\mathbb C}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> with <m>\phi(i) = a</m>.
+          Suponha que exista um isomorfismo
+          <m>\phi: {\mathbb C} \rightarrow {\mathbb R}</m> com <m>\phi(i) = a</m>.
         </p>
       </hint>
     </exercise>
@@ -1830,15 +1830,15 @@
     <exercise number="8" xml:id="rings-exercise-Q-root-2-Q-root-3">
       <statement>
         <p>
-          Prove or disprove: The ring
-          <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> is isomorphic to the ring <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
+          Prove ou refute: o anel
+          <m>{\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}</m> é isomorfo ao anel <m>{\mathbb Q}( \sqrt{3}\, ) = \{a + b \sqrt{3} : a, b \in {\mathbb Q} \}</m>.
         </p>
       </statement>
       <hint>
         <p>
-          False.
-          Assume there is an isomorphism
-          <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> such that <m>\phi(\sqrt{2}\, ) = a</m>.
+          Falso.
+          Suponha que exista um isomorfismo
+          <m>\phi: {\mathbb Q}(\sqrt{2}\, ) \rightarrow {\mathbb Q}(\sqrt{3}\, )</m> tal que <m>\phi(\sqrt{2}\, ) = a</m>.
         </p>
       </hint>
     </exercise>
@@ -1846,7 +1846,7 @@
     <exercise number="9" xml:id="rings-exercise-characteristic">
       <statement>
         <p>
-          What is the characteristic of the field formed by the set of matrices
+          Qual é a característica do corpo formado pelo conjunto de matrizes
           <md>
             F =
             \left\{
@@ -1868,7 +1868,7 @@
             \end{pmatrix}
             \right\}
           </md>
-          with entries in <m>{\mathbb Z}_2</m>?
+          com entradas em <m>{\mathbb Z}_2</m>?
         </p>
       </statement>
     </exercise>
@@ -1876,7 +1876,7 @@
     <exercise number="10" xml:id="rings-exercise-C-iso-2x2-matrices">
       <statement>
         <p>
-          Define a map <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> by
+          Defina uma aplicação <m>\phi : {\mathbb C} \rightarrow {\mathbb M}_2 ({\mathbb R})</m> por
           <md>
             \phi( a + bi) =
             \begin{pmatrix}
@@ -1884,8 +1884,8 @@
             -b &amp; a
             \end{pmatrix}
           </md>.
-          Show that <m>\phi</m> is an isomorphism of
-          <m>{\mathbb C}</m> with its image in <m>{\mathbb M}_2 ({\mathbb R})</m>.
+          Mostre que <m>\phi</m> é um isomorfismo de
+          <m>{\mathbb C}</m> sobre sua imagem em <m>{\mathbb M}_2 ({\mathbb R})</m>.
         </p>
       </statement>
     </exercise>
@@ -1895,8 +1895,8 @@
     <exercise number="11" xml:id="rings-exercise-gaussian-integers">
       <statement>
         <p>
-          Prove that the Gaussian integers,
-          <m>{\mathbb Z}[i ]</m>, are an integral domain.
+          Prove que os inteiros gaussianos,
+          <m>{\mathbb Z}[i ]</m>, formam um domínio de integridade.
         </p>
       </statement>
     </exercise>
@@ -1904,7 +1904,7 @@
     <exercise number="12" xml:id="rings-exercise-gaussian">
       <statement>
         <p>
-          Prove that <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> is an integral domain.
+          Prove que <m>{\mathbb Z}[ \sqrt{3}\, i ] = \{ a + b \sqrt{3}\, i : a, b \in {\mathbb Z} \}</m> é um domínio de integridade.
         </p>
       </statement>
     </exercise>
@@ -1912,7 +1912,7 @@
     <exercise number="13" xml:id="rings-exercise-systems-congruences">
       <statement>
         <p>
-          Solve each of the following systems of congruences.
+          Resolva cada um dos sistemas de congruências a seguir.
 
           <ol cols="2">
             <li>
@@ -1968,9 +1968,9 @@
     <exercise number="14" xml:id="rings-exercise-parallel-computation">
       <statement>
         <p>
-          Use the method of parallel computation outlined in the text to calculate
-          <m>2234 + 4121</m> by dividing the calculation into four separate additions modulo <m>95</m>,
-          <m>97</m>, <m>98</m>, and <m>99</m>.
+          Use o método de computação paralela apresentado no texto para calcular
+          <m>2234 + 4121</m>, dividindo o cálculo em quatro adições separadas módulo <m>95</m>,
+          <m>97</m>, <m>98</m> e <m>99</m>.
         </p>
       </statement>
     </exercise>
@@ -1980,8 +1980,8 @@
     <exercise number="15" xml:id="rings-exercise-parallelcomputation-fails">
       <statement>
         <p>
-          Explain why the method of parallel computation outlined in the text fails for
-          <m>2134 \cdot 1531</m> if we attempt to break the calculation down into two smaller calculations modulo <m>98</m> and <m>99</m>.
+          Explique por que o método de computação paralela apresentado no texto falha para
+          <m>2134 \cdot 1531</m> se tentarmos decompor o cálculo em dois cálculos menores módulo <m>98</m> e <m>99</m>.
         </p>
       </statement>
     </exercise>
@@ -1989,13 +1989,13 @@
     <exercise number="16" xml:id="rings-exercise-field-ideals">
       <statement>
         <p>
-          If <m>R</m> is a field,
-          show that the only two ideals of <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself.
+          Se <m>R</m> é um corpo,
+          mostre que os únicos dois ideais de <m>R</m> são <m>\{ 0 \}</m> e o próprio <m>R</m>.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>I \neq \{ 0 \}</m>, show that <m>1 \in I</m>.
+          Se <m>I \neq \{ 0 \}</m>, mostre que <m>1 \in I</m>.
         </p>
       </hint>
     </exercise>
@@ -2003,8 +2003,8 @@
     <exercise number="17" xml:id="rings-exercise-minus-a">
       <statement>
         <p>
-          Let <m>a</m> be any element in a ring <m>R</m> with identity.
-          Show that <m>(-1)a = -a</m>.
+          Seja <m>a</m> qualquer elemento de um anel <m>R</m> com identidade.
+          Mostre que <m>(-1)a = -a</m>.
         </p>
       </statement>
     </exercise>
@@ -2012,14 +2012,14 @@
     <exercise number="18" xml:id="rings-exercise-ring-homomorphisms">
       <statement>
         <p>
-          Let <m>\phi : R \rightarrow S</m> be a ring homomorphism.
-          Prove each of the following statements.
+          Seja <m>\phi : R \rightarrow S</m> um homomorfismo de anéis.
+          Prove cada uma das afirmações a seguir.
 
           <ol>
             <li>
               <p>
-                If <m>R</m> is a commutative ring,
-                then <m>\phi(R)</m> is a commutative ring.
+                Se <m>R</m> é um anel comutativo,
+                então <m>\phi(R)</m> é um anel comutativo.
               </p>
             </li>
 
@@ -2031,16 +2031,16 @@
 
             <li>
               <p>
-                Let <m>1_R</m> and <m>1_S</m> be the identities for <m>R</m> and <m>S</m>,
-                respectively.
-                If <m>\phi</m> is onto, then <m>\phi(1_R) = 1_S</m>.
+                Sejam <m>1_R</m> e <m>1_S</m> as identidades de <m>R</m> e <m>S</m>,
+                respectivamente.
+                Se <m>\phi</m> é sobrejetivo, então <m>\phi(1_R) = 1_S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                If <m>R</m> is a field and <m>\phi(R) \neq 0</m>,
-                then <m>\phi(R)</m> is a field.
+                Se <m>R</m> é um corpo e <m>\phi(R) \neq 0</m>,
+                então <m>\phi(R)</m> é um corpo.
               </p>
             </li>
           </ol>
@@ -2056,7 +2056,7 @@
     <exercise number="19" xml:id="rings-exercise-associative-distributive">
       <statement>
         <p>
-          Prove that the associative law for multiplication and the distributive laws hold in <m>R/I</m>.
+          Prove que a lei associativa da multiplicação e as leis distributivas valem em <m>R/I</m>.
         </p>
       </statement>
     </exercise>
@@ -2064,8 +2064,8 @@
     <exercise number="20" xml:id="rings-exercise-second-iso">
       <statement>
         <p>
-          Prove the Second Isomorphism Theorem for rings: Let <m>I</m> be a subring of a ring <m>R</m>  and  <m>J</m> an ideal in <m>R</m>.
-          Then <m>I \cap J</m> is an ideal in <m>I</m> and
+          Prove o Segundo Teorema de Isomorfismo para anéis: seja <m>I</m> um subanel de um anel <m>R</m> e <m>J</m> um ideal em <m>R</m>.
+          Então <m>I \cap J</m> é um ideal em <m>I</m> e
           <md>
             I / I \cap J \cong I + J /J
           </md>.
@@ -2078,9 +2078,9 @@
     <exercise number="21" xml:id="rings-exercise-third-iso">
       <statement>
         <p>
-          Prove the Third Isomorphism Theorem for rings: Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals of <m>R</m>,
-          where <m>J \subset I</m>.
-          Then
+          Prove o Terceiro Teorema de Isomorfismo para anéis: seja <m>R</m> um anel e sejam <m>I</m> e <m>J</m> ideais de <m>R</m>,
+          onde <m>J \subset I</m>.
+          Então
           <md>
             R/I \cong \frac{R/J}{I/J}
           </md>.
@@ -2093,10 +2093,10 @@
     <exercise number="22" xml:id="rings-exercise-correspondence">
       <statement>
         <p>
-          Prove the Correspondence Theorem: Let <m>I</m> be an ideal of a ring <m>R</m>.
-          Then <m>S \rightarrow S/I</m> is a one-to-one correspondence between the set of subrings <m>S</m> containing <m>I</m> and the set of subrings of <m>R/I</m>.
-          Furthermore,
-          the ideals of <m>R</m> correspond to ideals of <m>R/I</m>.
+          Prove o Teorema da Correspondência: seja <m>I</m> um ideal de um anel <m>R</m>.
+          Então <m>S \rightarrow S/I</m> é uma correspondência biunívoca entre o conjunto dos subanéis <m>S</m> que contêm <m>I</m> e o conjunto dos subanéis de <m>R/I</m>.
+          Além disso,
+          os ideais de <m>R</m> correspondem aos ideais de <m>R/I</m>.
         </p>
       </statement>
     </exercise>
@@ -2106,8 +2106,8 @@
     <exercise number="23" xml:id="rings-exercise-subring-conditions">
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>S</m> a subset of <m>R</m>.
-          Show that <m>S</m> is a subring of <m>R</m> if and only if each of the following conditions is satisfied.
+          Seja <m>R</m> um anel e <m>S</m> um subconjunto de <m>R</m>.
+          Mostre que <m>S</m> é um subanel de <m>R</m> se, e somente se, cada uma das condições a seguir é satisfeita.
 
           <ol>
             <li>
@@ -2118,13 +2118,13 @@
 
             <li>
               <p>
-                <m>rs \in S</m> for all <m>r, s \in S</m>.
+                <m>rs \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>r - s \in S</m> for all <m>r, s \in S</m>.
+                <m>r - s \in S</m> para todos <m>r, s \in S</m>.
               </p>
             </li>
           </ol>
@@ -2135,9 +2135,9 @@
     <exercise number="24" xml:id="rings-exercise-subring-intersection">
       <statement>
         <p>
-          Let <m>R</m> be a ring with a collection of subrings <m>\{ R_{\alpha} \}</m>.
-          Prove that <m>\bigcap R_{\alpha}</m> is a subring of <m>R</m>.
-          Give an example to show that the union of two subrings is not necessarily a subring.
+          Seja <m>R</m> um anel com uma coleção de subanéis <m>\{ R_{\alpha} \}</m>.
+          Prove que <m>\bigcap R_{\alpha}</m> é um subanel de <m>R</m>.
+          Dê um exemplo que mostre que a união de dois subanéis não é necessariamente um subanel.
         </p>
       </statement>
     </exercise>
@@ -2145,10 +2145,10 @@
     <exercise number="25" xml:id="rings-exercise-collection-deals">
       <statement>
         <p>
-          Let <m>\{ I_{\alpha} \}_{\alpha \in A}</m> be a collection of ideals in a ring <m>R</m>.
-          Prove that <m>\bigcap_{\alpha \in A} I_{\alpha}</m> is also an ideal in <m>R</m>.
-          Give an example to show that if <m>I_1</m> and <m>I_2</m> are ideals in <m>R</m>,
-          then <m>I_1 \cup I_2</m> may not be an ideal.
+          Seja <m>\{ I_{\alpha} \}_{\alpha \in A}</m> uma coleção de ideais em um anel <m>R</m>.
+          Prove que <m>\bigcap_{\alpha \in A} I_{\alpha}</m> também é um ideal em <m>R</m>.
+          Dê um exemplo que mostre que, se <m>I_1</m> e <m>I_2</m> são ideais em <m>R</m>,
+          então <m>I_1 \cup I_2</m> pode não ser um ideal.
         </p>
       </statement>
     </exercise>
@@ -2156,16 +2156,16 @@
     <exercise number="26" xml:id="rings-exercise-integral-domain-ideals">
       <statement>
         <p>
-          Let <m>R</m> be an integral domain.
-          Show that if the only ideals in <m>R</m> are <m>\{ 0 \}</m> and <m>R</m> itself,
-          <m>R</m> must be a field.
+          Seja <m>R</m> um domínio de integridade.
+          Mostre que, se os únicos ideais em <m>R</m> são <m>\{ 0 \}</m> e o próprio <m>R</m>,
+          então <m>R</m> deve ser um corpo.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a \in R</m> with <m>a \neq 0</m>.
-          Then the principal ideal generated by <m>a</m> is <m>R</m>.
-          Thus, there exists a <m>b \in R</m> such that <m>ab =1</m>.
+          Seja <m>a \in R</m> com <m>a \neq 0</m>.
+          Então o ideal principal gerado por <m>a</m> é <m>R</m>.
+          Assim, existe um <m>b \in R</m> tal que <m>ab =1</m>.
         </p>
       </hint>
     </exercise>
@@ -2173,10 +2173,10 @@
     <exercise number="27" xml:id="rings-exercise-nilpotent">
       <statement>
         <p>
-          Let <m>R</m> be a commutative ring.
-          An element <m>a</m> in <m>R</m> is <term>nilpotent</term>
-          if <m>a^n = 0</m> for some positive integer <m>n</m>.
-          Show that the set of all nilpotent elements forms an ideal in <m>R</m>.
+          Seja <m>R</m> um anel comutativo.
+          Um elemento <m>a</m> em <m>R</m> é <term>nilpotente</term>
+          se <m>a^n = 0</m> para algum inteiro positivo <m>n</m>.
+          Mostre que o conjunto de todos os elementos nilpotentes forma um ideal em <m>R</m>.
         </p>
       </statement>
     </exercise>
@@ -2184,14 +2184,14 @@
     <exercise number="28" xml:id="rings-exercise-boolean">
       <statement>
         <p>
-          A ring <m>R</m> is a <term>Boolean ring</term>
-          if for every <m>a \in R</m>, <m>a^2 = a</m>.
-          Show that every Boolean ring is a commutative ring.
+          Um anel <m>R</m> é um <term>anel booleano</term>
+          se, para todo <m>a \in R</m>, <m>a^2 = a</m>.
+          Mostre que todo anel booleano é um anel comutativo.
         </p>
       </statement>
       <hint>
         <p>
-          Compute <m>(a+b)^2</m> and <m>(-ab)^2</m>.
+          Calcule <m>(a+b)^2</m> e <m>(-ab)^2</m>.
         </p>
       </hint>
     </exercise>
@@ -2201,8 +2201,8 @@
     <exercise number="29" xml:id="rings-exercise-a3-commutative">
       <statement>
         <p>
-          Let <m>R</m> be a ring, where <m>a^3 =a</m> for all <m>a \in R</m>.
-          Prove that <m>R</m> must be a commutative ring.
+          Seja <m>R</m> um anel tal que <m>a^3 =a</m> para todo <m>a \in R</m>.
+          Prove que <m>R</m> deve ser um anel comutativo.
         </p>
       </statement>
     </exercise>
@@ -2212,8 +2212,8 @@
     <exercise number="30" xml:id="rings-exercise-1R-1S">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity <m>1_R</m> and <m>S</m> a subring of <m>R</m> with identity <m>1_S</m>.
-          Prove or disprove that <m>1_R = 1_S</m>.
+          Seja <m>R</m> um anel com identidade <m>1_R</m> e <m>S</m> um subanel de <m>R</m> com identidade <m>1_S</m>.
+          Prove ou refute que <m>1_R = 1_S</m>.
         </p>
       </statement>
     </exercise>
@@ -2223,9 +2223,9 @@
     <exercise number="31" xml:id="rings-exercise-R-0">
       <statement>
         <p>
-          If we do not require the identity of a ring to be distinct from 0, we will not have a very interesting mathematical structure.
-          Let <m>R</m> be a ring such that <m>1 = 0</m>.
-          Prove that <m>R = \{ 0 \}</m>.
+          Se não exigirmos que a identidade de um anel seja distinta de 0, não teremos uma estrutura matemática muito interessante.
+          Seja <m>R</m> um anel tal que <m>1 = 0</m>.
+          Prove que <m>R = \{ 0 \}</m>.
         </p>
       </statement>
     </exercise>
@@ -2242,12 +2242,12 @@
     <exercise number="32" xml:id="rings-exercise-center">
       <statement>
         <p>
-          Let <m>R</m> be a ring.
-          Define the <term>center</term> of <m>R</m> to be
+          Seja <m>R</m> um anel.
+          Defina o <term>centro</term> de <m>R</m> como
           <md>
             Z(R) = \{ a \in R : ar = ra \text{ for all } r \in R \}
           </md>.
-          Prove that <m>Z(R)</m> is a commutative subring of <m>R</m>.
+          Prove que <m>Z(R)</m> é um subanel comutativo de <m>R</m>.
         </p>
       </statement>
     </exercise>
@@ -2255,28 +2255,28 @@
     <exercise number="33" xml:id="rings-exercise-localized-at-p">
       <statement>
         <p>
-          Let <m>p</m> be prime.
-          Prove that
+          Seja <m>p</m> primo.
+          Prove que
           <md>
-            {\mathbb Z}_{(p)} = \{ a / b :  a, b \in {\mathbb Z} \text{ and } \gcd( b,p) =  1 \}
+            {\mathbb Z}_{(p)} = \{ a / b :  a, b \in {\mathbb Z} \text{ e } \gcd( b,p) =  1 \}
           </md>
-          is a ring.
-          The ring <m>{\mathbb Z}_{(p)}</m> is called the
-          <term>ring of integers localized at</term> <m>p</m>.
+          é um anel.
+          O anel <m>{\mathbb Z}_{(p)}</m> é chamado de
+          <term>anel dos inteiros localizado em</term> <m>p</m>.
 
           <notation>
             <usage><m>\mathbb Z_{(p)}</m></usage>
-            <description>ring of integers localized at <m>p</m></description>
+            <description>anel dos inteiros localizado em <m>p</m></description>
           </notation>
 
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>a/b, c/d \in {\mathbb Z}_{(p)}</m>.
-          Then <m>a/b + c/d = (ad + bc)/bd</m> and
-          <m>(a/b) \cdot (c/d) = (ac)/(bd)</m> are both in <m>{\mathbb Z}_{(p)}</m>,
-          since <m>\gcd(bd,p) = 1</m>.
+          Sejam <m>a/b, c/d \in {\mathbb Z}_{(p)}</m>.
+          Então <m>a/b + c/d = (ad + bc)/bd</m> e
+          <m>(a/b) \cdot (c/d) = (ac)/(bd)</m> pertencem a <m>{\mathbb Z}_{(p)}</m>,
+          pois <m>\gcd(bd,p) = 1</m>.
         </p>
       </hint>
     </exercise>
@@ -2286,7 +2286,7 @@
     <exercise number="34" xml:id="rings-exercise-Zp">
       <statement>
         <p>
-          Prove or disprove: Every finite integral domain is isomorphic to <m>{\mathbb Z}_p</m>.
+          Prove ou refute: todo domínio de integridade finito é isomorfo a <m>{\mathbb Z}_p</m>.
         </p>
       </statement>
     </exercise>
@@ -2296,42 +2296,42 @@
     <exercise number="35" xml:id="rings-exercise-automorphisms">
       <statement>
         <p>
-          Let <m>R</m> be a ring with identity.
+          Seja <m>R</m> um anel com identidade.
 
           <ol>
             <li>
               <p>
-                Let <m>u</m> be a unit in <m>R</m>.
-                Define a map <m>i_u : R \rightarrow R</m> by <m>r \mapsto uru^{-1}</m>.
-                Prove that <m>i_u</m> is an automorphism of <m>R</m>.
-                Such an automorphism of <m>R</m> is called an inner automorphism of <m>R</m>.
-                Denote the set of all inner automorphisms of <m>R</m> by <m>\inn(R)</m>.
+                Seja <m>u</m> uma unidade em <m>R</m>.
+                Defina uma aplicação <m>i_u : R \rightarrow R</m> por <m>r \mapsto uru^{-1}</m>.
+                Prove que <m>i_u</m> é um automorfismo de <m>R</m>.
+                Tal automorfismo de <m>R</m> é chamado de automorfismo interno de <m>R</m>.
+                Denote o conjunto de todos os automorfismos internos de <m>R</m> por <m>\inn(R)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Denote the set of all automorphisms of <m>R</m> by <m>\aut(R)</m>.
-                Prove that <m>\inn(R)</m> is a normal subgroup of <m>\aut(R)</m>.
+                Denote o conjunto de todos os automorfismos de <m>R</m> por <m>\aut(R)</m>.
+                Prove que <m>\inn(R)</m> é um subgrupo normal de <m>\aut(R)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>U(R)</m> be the group of units in <m>R</m>.
-                Prove that the map
+                Seja <m>U(R)</m> o grupo das unidades de <m>R</m>.
+                Prove que a aplicação
                 <md>
                   \phi : U(R) \rightarrow \inn(R)
                 </md>
-                defined by <m>u \mapsto i_u</m> is a homomorphism.
-                Determine the kernel of <m>\phi</m>.
+                definida por <m>u \mapsto i_u</m> é um homomorfismo.
+                Determine o núcleo de <m>\phi</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Compute <m>\aut( {\mathbb Z})</m>,
-                <m>\inn( {\mathbb Z})</m>, and <m>U( {\mathbb Z})</m>.
+                Calcule <m>\aut( {\mathbb Z})</m>,
+                <m>\inn( {\mathbb Z})</m> e <m>U( {\mathbb Z})</m>.
               </p>
             </li>
           </ol>
@@ -2342,8 +2342,8 @@
     <exercise number="36" xml:id="rings-exercise-cartesian-product">
       <statement>
         <p>
-          Let <m>R</m> and <m>S</m> be arbitrary rings.
-          Show that their Cartesian product is a ring if we define addition and multiplication in <m>R \times S</m> by
+          Sejam <m>R</m> e <m>S</m> anéis arbitrários.
+          Mostre que seu produto cartesiano é um anel se definirmos a adição e a multiplicação em <m>R \times S</m> por
 
           <ol>
             <li>
@@ -2367,18 +2367,18 @@
     <exercise number="37" xml:id="rings-exercise-idempotent">
       <statement>
         <p>
-          An element <m>x</m> in a ring is called an
-          <term>idempotent</term> if <m>x^2 = x</m>.
-          Prove that the only idempotents in an integral domain are <m>0</m> and <m>1</m>.
-          Find a ring with a idempotent <m>x</m> not equal to <m>0</m> or <m>1</m>.
+          Um elemento <m>x</m> em um anel é chamado de
+          <term>idempotente</term> se <m>x^2 = x</m>.
+          Prove que os únicos idempotentes em um domínio de integridade são <m>0</m> e <m>1</m>.
+          Encontre um anel com um idempotente <m>x</m> diferente de <m>0</m> e <m>1</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Suppose that <m>x^2 = x</m> and <m>x \neq 0</m>.
-          Since <m>R</m> is an integral domain, <m>x = 1</m>.
-          To find a nontrivial idempotent,
-          look in <m>{\mathbb M}_2({\mathbb R})</m>.
+          Suponha que <m>x^2 = x</m> e <m>x \neq 0</m>.
+          Como <m>R</m> é um domínio de integridade, <m>x = 1</m>.
+          Para encontrar um idempotente não trivial,
+          procure em <m>{\mathbb M}_2({\mathbb R})</m>.
         </p>
       </hint>
     </exercise>
@@ -2388,8 +2388,8 @@
     <exercise number="38" xml:id="rings-exercise-solution-mod-n">
       <statement>
         <p>
-          Let <m>\gcd(a, n) = d</m> and <m>\gcd(b, d) \neq 1</m>.
-          Prove that <m>ax \equiv b \pmod{n}</m> does not have a solution.
+          Sejam <m>\gcd(a, n) = d</m> e <m>\gcd(b, d) \neq 1</m>.
+          Prove que <m>ax \equiv b \pmod{n}</m> não possui solução.
         </p>
       </statement>
     </exercise>
@@ -2397,34 +2397,34 @@
     <!--Todo Finish solution.-->
 
     <exercise number="39" xml:id="rings-exercise-chinese-remainder-theorem">
-      <title>The Chinese Remainder Theorem for Rings</title>
+      <title>O Teorema Chinês do Resto para anéis</title>
       <statement>
         <p>
-          Let <m>R</m> be a ring and <m>I</m> and <m>J</m> be ideals in <m>R</m> such that <m>I+J = R</m>.
+          Seja <m>R</m> um anel e sejam <m>I</m> e <m>J</m> ideais em <m>R</m> tais que <m>I+J = R</m>.
 
           <ol>
             <li>
               <p>
-                Show that for any <m>r</m> and <m>s</m> in <m>R</m>, the system of equations
+                Mostre que, para quaisquer <m>r</m> e <m>s</m> em <m>R</m>, o sistema de equações
                 <md>
                   <mrow>x &amp; \equiv r \pmod{I}</mrow>
                   <mrow>x &amp; \equiv s \pmod{J}</mrow>
                 </md>
-                has a solution.
+                possui uma solução.
               </p>
             </li>
 
             <li>
               <p>
-                In addition,
-                prove that any two solutions of the system are congruent modulo <m>I \cap J</m>.
+                Além disso,
+                prove que duas soluções quaisquer do sistema são congruentes módulo <m>I \cap J</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Let <m>I</m> and <m>J</m> be ideals in a ring <m>R</m> such that <m>I + J = R</m>.
-                Show that there exists a ring isomorphism
+                Sejam <m>I</m> e <m>J</m> ideais em um anel <m>R</m> tais que <m>I + J = R</m>.
+                Mostre que existe um isomorfismo de anéis
                 <md>
                   R/(I \cap J) \cong R/I \times R/J
                 </md>.
@@ -2439,11 +2439,11 @@
   </exercises>
 
   <exercises xml:id="rings-exercises-programming">
-    <title>Programming Exercise</title>
+    <title>Exercício de programação</title>
     <exercise xml:id="rings-exercise-program-chinese-remainder">
       <statement>
         <p>
-          Write a computer program implementing fast addition and multiplication using the Chinese Remainder Theorem and the method outlined in the text.
+          Escreva um programa de computador que implemente adição e multiplicação rápidas usando o Teorema Chinês do Resto e o método apresentado no texto.
         </p>
       </statement>
     </exercise>
@@ -2451,65 +2451,65 @@
   </exercises>
 
   <references xml:id="rings-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Anderson, F. W. and Fuller, K. R.
-      <title>Rings and Categories of  Modules</title>. 2nd ed.  Springer, New York, 1992.
+      Anderson, F. W. e Fuller, K. R.
+      <title>Anéis e categorias de módulos</title>. 2.ª ed. Springer, Nova York, 1992.
     </biblio>
 
     <biblio type="raw">
 <!-- was [2] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Atiyah, M. F.  and MacDonald, I. G.
-      <title>Introduction to Commutative Algebra</title>. Westview Press, Boulder, CO, 1994.
+      Atiyah, M. F. e MacDonald, I. G.
+      <title>Introdução à álgebra comutativa</title>. Westview Press, Boulder, Colorado, 1994.
     </biblio>
 
     <biblio type="raw">
 <!-- was [3] --><!-- Reference updated - TWJ 8/14/2010 -->
       Herstein, I. N.
-      <title>Noncommutative Rings</title>. Mathematical Association of America, Washington, DC, 1994.
+      <title>Anéis não comutativos</title>. Mathematical Association of America, Washington, D.C., 1994.
     </biblio>
 
     <biblio type="raw">
 <!-- was [4] --><!-- Out of print - TWJ 8/14/2010 -->
       Kaplansky, I.
-      <title>Commutative Rings</title>. Revised edition. University of Chicago Press, Chicago, 1974.
+      <title>Anéis comutativos</title>. Edição revisada. University of Chicago Press, Chicago, 1974.
     </biblio>
 
     <biblio type="raw">
 <!-- was [5] --><!-- Reference updated - TWJ 8/14/2010 -->
       Knuth, D. E.
-      <title>The Art of Computer Programming: Semi-Numerical Algorithms</title>, vol. 2. 3rd ed. Addison-Wesley Professional, Boston, 1997.
+      <title>A arte da programação de computadores: algoritmos seminuméricos</title>, v. 2. 3.ª ed. Addison-Wesley Professional, Boston, 1997.
     </biblio>
 
     <biblio type="raw">
 <!-- was [6] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Lidl, R. and Pilz, G.
-      <title>Applied Abstract Algebra</title>. 2nd ed. Springer, New York, 1998. A good source for applications.
+      Lidl, R. e Pilz, G.
+      <title>Álgebra abstrata aplicada</title>. 2.ª ed. Springer, Nova York, 1998. Uma boa fonte sobre aplicações.
     </biblio>
 
     <biblio type="raw">
 <!-- was [7] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       Mackiw, G.
-      <title>Applications of Abstract Algebra</title>. Wiley, New York, 1985.
+      <title>Aplicações da álgebra abstrata</title>. Wiley, Nova York, 1985.
     </biblio>
 
     <biblio type="raw">
 <!-- was [8] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       McCoy,  N. H.
-      <title>Rings and Ideals</title>. Carus Monograph Series, No. 8. Mathematical Association of America, Washington, DC, 1968.
+      <title>Anéis e ideais</title>. Carus Monograph Series, n.º 8. Mathematical Association of America, Washington, D.C., 1968.
     </biblio>
 
     <biblio type="raw">
 <!-- was [9] --><!-- Out of print ??? - TWJ 8/14/2010 -->
       McCoy,  N. H.
-      <title>The Theory of Rings</title>. Chelsea, New York, 1972.
+      <title>A teoria dos anéis</title>. Chelsea, Nova York, 1972.
     </biblio>
 
     <biblio type="raw">
 <!-- was [10] --><!-- Reference updated - TWJ 8/14/2010 -->
-      Zariski, O. and Samuel, P.
-      <title>Commutative Algebra</title>, vols. I and II. Springer, New York, 1975, 1960.
+      Zariski, O. e Samuel, P.
+      <title>Álgebra comutativa</title>, v. I e II. Springer, Nova York, 1975, 1960.
     </biblio>
   </references>
 
