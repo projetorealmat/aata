@@ -1044,13 +1044,13 @@
     </p>
 
     <p>
-      Suppose that <m>H</m> is an
-      <m>m \times n</m> matrix with entries in <m>{\mathbb Z}_2</m> and <m>n \gt m</m>.
-      If the last <m>m</m> columns of the matrix form the
-      <m>m \times m</m> identity matrix, <m>I_m</m>,
-      then the matrix is a <idx><h>Matrix</h><h>parity-check</h></idx><term>canonical parity-check matrix</term>.
-      More specifically, <m>H= (A \mid I_m)</m>,
-      where <m>A</m> is the <m>m \times (n-m)</m> matrix
+      Suponha que <m>H</m> seja uma
+      matriz <m>m \times n</m> com entradas em <m>{\mathbb Z}_2</m> e <m>n \gt m</m>.
+      Se as últimas <m>m</m> colunas da matriz formarem a
+      matriz identidade <m>m \times m</m>, <m>I_m</m>,
+      então a matriz é uma <idx><h>Matriz</h><h>verificação de paridade</h></idx><term>matriz canônica de verificação de paridade</term>.
+      Mais especificamente, <m>H= (A \mid I_m)</m>,
+      onde <m>A</m> é a matriz <m>m \times (n-m)</m>
       <md>
         \begin{pmatrix}
         a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1,n-m} \\
@@ -1059,7 +1059,7 @@
         a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{m,n-m}
         \end{pmatrix}
       </md>
-      and <m>I_m</m> is the <m>m \times m</m> identity matrix
+      e <m>I_m</m> é a matriz identidade <m>m \times m</m>
       <md>
         \begin{pmatrix}
         1 &amp; 0 &amp; \cdots &amp; 0 \\
@@ -1068,24 +1068,25 @@
         0 &amp; 0 &amp; \cdots &amp; 1
         \end{pmatrix}
       </md>.
-      With each canonical parity-check matrix we can associate an <m>n \times (n-m)</m>
-      <term>standard generator matrix</term><idx><h>Matrix</h><h>generator</h></idx>
+      A cada matriz canônica de verificação de paridade podemos associar uma
+      <m>n \times (n-m)</m>
+      <term>matriz geradora padrão</term><idx><h>Matriz</h><h>geradora</h></idx>
       <md>
         G = \left( \frac{I_{n-m}}{A} \right)
       </md>.
-      Our goal will be to show that an <m>\mathbf x</m> satisfying
-      <m>G {\mathbf x} = {\mathbf y}</m> exists if and only if <m>H{\mathbf y} = {\mathbf 0}</m>.
-      Given a message block <m>{\mathbf x}</m> to be encoded,
-      the matrix <m>G</m> will allow us to quickly encode it into a linear codeword <m>{\mathbf y}</m>.
+      Nosso objetivo será mostrar que existe um <m>\mathbf x</m> que satisfaz
+      <m>G {\mathbf x} = {\mathbf y}</m> se, e somente se, <m>H{\mathbf y} = {\mathbf 0}</m>.
+      Dado um bloco de mensagem <m>{\mathbf x}</m> a ser codificado,
+      a matriz <m>G</m> permitirá codificá-lo rapidamente em uma palavra-código linear <m>{\mathbf y}</m>.
     </p>
 
     <example xml:id="algcodes-example-parity-check">
       <p>
-        Suppose that we have the following eight words to be encoded:
+        Suponha que tenhamos as oito palavras seguintes a serem codificadas:
         <md>
           (\codeword{000}), (\codeword{001}), (\codeword{010}), \ldots, (\codeword{111})
         </md>.
-        For
+        Para
         <md>
           A =
           \begin{pmatrix}
@@ -1094,7 +1095,7 @@
           1 &amp; 0 &amp; 1
           \end{pmatrix}
         </md>,
-        the associated standard generator and canonical parity-check matrices are
+        as matrizes geradora padrão e canônica de verificação de paridade associadas são
         <md>
           G=
           \begin{pmatrix}
@@ -1119,9 +1120,9 @@
       </p>
 
       <p>
-        Observe that the rows in <m>H</m>  represent the parity checks on certain bit positions in a <m>6</m>-tuple.
-        The <m>1</m>s in the identity matrix serve as parity checks for the <m>1</m>s in the same row.
-        If <m>{\mathbf x} = (x_1, x_2, x_3, x_4, x_5, x_6)</m>, then
+        Observe que as linhas de <m>H</m> representam as verificações de paridade em determinadas posições de uma <m>6</m>-upla.
+        Os <m>1</m>s da matriz identidade servem como verificações de paridade para os <m>1</m>s na mesma linha.
+        Se <m>{\mathbf x} = (x_1, x_2, x_3, x_4, x_5, x_6)</m>, então
         <md>
           {\mathbf 0}
           =
@@ -1133,37 +1134,37 @@
           x_1 + x_3 + x_6
           \end{pmatrix}
         </md>,
-        which yields a system of equations:
+        o que produz um sistema de equações:
         <md>
           <mrow>x_2 + x_3 + x_4 &amp; = 0</mrow>
           <mrow>x_1 + x_2 + x_5 &amp; = 0</mrow>
           <mrow>x_1 + x_3 + x_6 &amp; = 0</mrow>
         </md>.
-        Here <m>x_4</m> serves as a check bit for <m>x_2</m> and <m>x_3</m>;
-        <m>x_5</m> is a check bit for <m>x_1</m> and <m>x_2</m>;
-        and <m>x_6</m> is a check bit for <m>x_1</m> and <m>x_3</m>.
-        The identity matrix keeps <m>x_4</m>,
-        <m>x_5</m>, and <m>x_6</m> from having to check on each other.
-        Hence, <m>x_1</m>, <m>x_2</m>,
-        and <m>x_3</m> can be arbitrary but <m>x_4</m>,
-        <m>x_5</m>, and <m>x_6</m> must be chosen to ensure parity.
-        The null space of <m>H</m> is easily computed to be
+        Aqui, <m>x_4</m> serve como bit de verificação para <m>x_2</m> e <m>x_3</m>;
+        <m>x_5</m> é um bit de verificação para <m>x_1</m> e <m>x_2</m>;
+        e <m>x_6</m> é um bit de verificação para <m>x_1</m> e <m>x_3</m>.
+        A matriz identidade impede que <m>x_4</m>,
+        <m>x_5</m> e <m>x_6</m> precisem verificar uns aos outros.
+        Portanto, <m>x_1</m>, <m>x_2</m>
+        e <m>x_3</m> podem ser arbitrários, mas <m>x_4</m>,
+        <m>x_5</m> e <m>x_6</m> devem ser escolhidos para garantir a paridade.
+        O espaço nulo de <m>H</m> é facilmente calculado como
         <md>
           \begin{array}{cccc}
           (\codeword{000000}) &amp; (\codeword{001101}) &amp; (\codeword{010110}) &amp; (\codeword{011011}) \\
           (\codeword{100011}) &amp; (\codeword{101110}) &amp; (\codeword{110101}) &amp; (\codeword{111000}).
           \end{array}
         </md>
-        An even easier way to compute the null space is with the generator matrix <m>G</m> (<xref ref="algcodes-table-matrix-gen-code"/>).
+        Uma maneira ainda mais fácil de calcular o espaço nulo é usar a matriz geradora <m>G</m> (<xref ref="algcodes-table-matrix-gen-code"/>).
       </p>
     </example>
 
     <table xml:id="algcodes-table-matrix-gen-code">
-      <title>A matrix-generated code</title>
+      <title>Um código gerado por uma matriz</title>
       <tabular halign="center" top="medium">
         <row bottom="medium">
-          <cell>Message Word <m>\mathbf x</m></cell>
-          <cell>Codeword <m>G \mathbf x</m></cell>
+          <cell>Palavra de mensagem <m>\mathbf x</m></cell>
+          <cell>Palavra-código <m>G \mathbf x</m></cell>
         </row>
         <row>
           <cell><m>\codeword{000}</m></cell>
@@ -1204,56 +1205,56 @@
     <theorem>
       <statement>
         <p>
-          If <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m> is a canonical parity-check matrix,
-          then <m>\Null(H)</m> consists of all
-          <m>{\mathbf x} \in {\mathbb Z}_2^n</m> whose first <m>n-m</m> bits are arbitrary but whose last <m>m</m> bits are determined by <m>H{\mathbf x} = {\mathbf 0}</m>.
-          Each of the last <m>m</m> bits serves as an even parity check bit for some of the first <m>n-m</m> bits.
-          Hence, <m>H</m> gives rise to an <m>(n, n-m)</m>-block code.
+          Se <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m> é uma matriz canônica de verificação de paridade,
+          então <m>\Null(H)</m> consiste em todas as
+          <m>{\mathbf x} \in {\mathbb Z}_2^n</m> cujos primeiros <m>n-m</m> bits são arbitrários, mas cujos últimos <m>m</m> bits são determinados por <m>H{\mathbf x} = {\mathbf 0}</m>.
+          Cada um dos últimos <m>m</m> bits serve como bit de verificação de paridade par para alguns dos primeiros <m>n-m</m> bits.
+          Portanto, <m>H</m> dá origem a um código de blocos <m>(n, n-m)</m>.
         </p>
       </statement>
     </theorem>
 
     <p>
-      We leave the proof of this theorem as an exercise.
-      In light of the theorem,
-      the first <m>n - m</m> bits in <m>{\mathbf x}</m> are called
-      <term>information bits</term>
-      and the last <m>m</m> bits are called <term>check bits</term>.
-      In <xref ref="algcodes-example-parity-check"/>,
-      the first three bits are the information bits and the last three are the check bits.
+      Deixamos a demonstração desse teorema como exercício.
+      À luz do teorema,
+      os primeiros <m>n - m</m> bits em <m>{\mathbf x}</m> são chamados de
+      <term>bits de informação</term>
+      e os últimos <m>m</m> bits são chamados de <term>bits de verificação</term>.
+      Em <xref ref="algcodes-example-parity-check"/>,
+      os três primeiros bits são os bits de informação e os três últimos são os bits de verificação.
     </p>
 
     <theorem>
       <statement>
         <p>
-          Suppose that <m>G</m> is an
-          <m>n \times k</m> standard generator matrix.
-          Then <m>C = \left\{{\mathbf y} : G{\mathbf x} ={\mathbf y}\text{ for }{\mathbf x}\in {\mathbb Z}_2^k\right\}</m> is an <m>(n,k)</m>-block code.
-          More specifically, <m>C</m> is a group code.
+          Suponha que <m>G</m> seja uma
+          matriz geradora padrão <m>n \times k</m>.
+          Então <m>C = \left\{{\mathbf y} : G{\mathbf x} ={\mathbf y}\text{ for }{\mathbf x}\in {\mathbb Z}_2^k\right\}</m> é um código de blocos <m>(n,k)</m>.
+          Mais especificamente, <m>C</m> é um código de grupo.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>G {\mathbf x}_1 = {\mathbf y}_1</m> and <m>G {\mathbf x}_2 ={\mathbf y}_2</m> be two codewords.
-          Then <m>{\mathbf y}_1 + {\mathbf y}_2</m> is in <m>C</m> since
+          Sejam <m>G {\mathbf x}_1 = {\mathbf y}_1</m> e <m>G {\mathbf x}_2 ={\mathbf y}_2</m> duas palavras-código.
+          Então <m>{\mathbf y}_1 + {\mathbf y}_2</m> pertence a <m>C</m>, pois
           <md>
             G( {\mathbf x}_1 + {\mathbf x}_2) = G {\mathbf x}_1 + G {\mathbf x}_2 = {\mathbf y}_1 + {\mathbf y}_2
           </md>.
-          We must also show that two message blocks cannot be encoded into the same codeword.
-          That is, we must show that if <m>G {\mathbf x} = G {\mathbf y}</m>,
-          then <m>{\mathbf x} = {\mathbf y}</m>.
-          Suppose that <m>G {\mathbf x} = G {\mathbf y}</m>.
-          Then
+          Também devemos mostrar que dois blocos de mensagem não podem ser codificados na mesma palavra-código.
+          Isto é, devemos mostrar que, se <m>G {\mathbf x} = G {\mathbf y}</m>,
+          então <m>{\mathbf x} = {\mathbf y}</m>.
+          Suponha que <m>G {\mathbf x} = G {\mathbf y}</m>.
+          Então
           <md>
             G {\mathbf x} - G {\mathbf y} = G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}
           </md>.
-          However, the first <m>k</m> coordinates in
-          <m>G( {\mathbf x} - {\mathbf y})</m> are exactly <m>x_1 -y_1, \ldots,
+          Contudo, as primeiras <m>k</m> coordenadas de
+          <m>G( {\mathbf x} - {\mathbf y})</m> são exatamente <m>x_1 -y_1, \ldots,
           x_k - y_k</m>,
-          since they are determined by the identity matrix,
-          <m>I_k</m>, part of <m>G</m>.
-          Hence, <m>G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}</m> exactly when <m>{\mathbf x} = {\mathbf y}</m>.
+          pois são determinadas pela matriz identidade,
+          <m>I_k</m>, que faz parte de <m>G</m>.
+          Portanto, <m>G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}</m> exatamente quando <m>{\mathbf x} = {\mathbf y}</m>.
         </p>
       </proof>
     </theorem>
