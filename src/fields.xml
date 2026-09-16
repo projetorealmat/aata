@@ -10,118 +10,118 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="fields">
-  <title>Fields</title>
+  <title>Corpos</title>
   <introduction>
     <p>
-      It is natural to ask whether or not some field <m>F</m> is contained in a larger field.
-      We think of the rational numbers,
-      which reside inside the real numbers,
-      while in turn, the real numbers live inside the complex numbers.
-      We can also study the fields between <m>{\mathbb Q}</m> and
-      <m>{\mathbb R}</m> and inquire as to the nature of these fields.
+      É natural perguntar se um corpo <m>F</m> está ou não contido em um corpo maior.
+      Pensamos nos números racionais,
+      que estão contidos nos números reais,
+      enquanto, por sua vez, os números reais estão contidos nos números complexos.
+      Também podemos estudar os corpos entre <m>{\mathbb Q}</m> e
+      <m>{\mathbb R}</m> e investigar a natureza desses corpos.
     </p>
 
     <p>
-      More specifically if we are given a field <m>F</m> and a polynomial <m>p(x) \in F[x]</m>,
-      we can ask whether or not we can find a field <m>E</m> containing <m>F</m> such that <m>p(x)</m> factors into linear factors over <m>E[x]</m>.
-      For example, if we consider the polynomial
+      Mais especificamente, se nos são dados um corpo <m>F</m> e um polinômio <m>p(x) \in F[x]</m>,
+      podemos perguntar se é possível encontrar um corpo <m>E</m> contendo <m>F</m> tal que <m>p(x)</m> se fatore em fatores lineares sobre <m>E[x]</m>.
+      Por exemplo, se considerarmos o polinômio
       <md>
         p(x) = x^4 -5 x^2 + 6
       </md>
       in <m>{\mathbb Q}[x]</m>,
-      then <m>p(x)</m> factors as <m>(x^2 - 2)(x^2 - 3)</m>.
-      However, both of these factors are irreducible in <m>{\mathbb Q}[x]</m>.
-      If we wish to find a zero of <m>p(x)</m>,
-      we must go to a larger field.
-      Certainly the field of real numbers will work, since
+      então <m>p(x)</m> se fatora como <m>(x^2 - 2)(x^2 - 3)</m>.
+      No entanto, ambos esses fatores são irredutíveis em <m>{\mathbb Q}[x]</m>.
+      Se desejarmos encontrar um zero de <m>p(x)</m>,
+      teremos de passar a um corpo maior.
+      Certamente o corpo dos números reais funcionará, pois
       <md>
         p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})
       </md>.
-      It is possible to find a smaller field in which <m>p(x)</m> has a zero, namely
+      É possível encontrar um corpo menor no qual <m>p(x)</m> possui um zero, a saber,
       <md>
         {\mathbb Q }( \sqrt{2} ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
       </md>.
-      We wish to be able to compute and study such fields for arbitrary polynomials over a field <m>F</m>.
+      Queremos ser capazes de calcular e estudar corpos desse tipo para polinômios arbitrários sobre um corpo <m>F</m>.
     </p>
   </introduction>
 
   <section xml:id="fields-section-extension-fields">
-    <title>Extension Fields</title>
+    <title>Corpos de Extensão</title>
     <introduction>
       <p>
-        A field <m>E</m> is an <term>extension field</term><idx><h>Extension</h><h>field</h></idx><idx><h>Field</h><h>extension</h></idx>
-        of a field <m>F</m> if <m>F</m> is a subfield of <m>E</m>.
-        The field <m>F</m> is called the <idx><h>Field</h><h>base</h></idx><term>base field</term>.
-        We write <m>F \subset E</m>.
+        Um corpo <m>E</m> é um <term>corpo de extensão</term><idx><h>Extensão</h><h>corpo</h></idx><idx><h>Corpo</h><h>extensão</h></idx>
+        de um corpo <m>F</m> se <m>F</m> é um subcorpo de <m>E</m>.
+        O corpo <m>F</m> é chamado de <idx><h>Corpo</h><h>base</h></idx><term>corpo base</term>.
+        Escrevemos <m>F \subset E</m>.
       </p>
 
       <example xml:id="fields-example-q-sqrt2">
         <p>
-          For example, let
+          Por exemplo, sejam
           <md>
             F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
           </md>
-          and let <m>E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)</m> be the smallest field containing both
-          <m>{\mathbb Q}</m> and <m>\sqrt{2} + \sqrt{3}</m>.
-          Both <m>E</m> and <m>F</m> are extension fields of the rational numbers.
-          We claim that <m>E</m> is an extension field of <m>F</m>.
-          To see this,
-          we need only show that <m>\sqrt{2}</m> is in <m>E</m>.
-          Since <m>\sqrt{2} + \sqrt{3}</m> is in <m>E</m>,
-          <m>1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}</m> must also be in <m>E</m>.
-          Taking linear combinations of
-          <m>\sqrt{2} + \sqrt{3}</m> and <m>\sqrt{3} - \sqrt{2}</m>,
-          we find that <m>\sqrt{2}</m> and
-          <m>\sqrt{3}</m> must both be in <m>E</m>.
+          e seja <m>E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)</m> o menor corpo que contém tanto
+          <m>{\mathbb Q}</m> quanto <m>\sqrt{2} + \sqrt{3}</m>.
+          Tanto <m>E</m> quanto <m>F</m> são corpos de extensão dos números racionais.
+          Afirmamos que <m>E</m> é um corpo de extensão de <m>F</m>.
+          Para ver isso,
+          basta mostrar que <m>\sqrt{2}</m> pertence a <m>E</m>.
+          Como <m>\sqrt{2} + \sqrt{3}</m> pertence a <m>E</m>,
+          <m>1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}</m> também deve pertencer a <m>E</m>.
+          Tomando combinações lineares de
+          <m>\sqrt{2} + \sqrt{3}</m> e <m>\sqrt{3} - \sqrt{2}</m>,
+          concluímos que <m>\sqrt{2}</m> e
+          <m>\sqrt{3}</m> devem pertencer ambos a <m>E</m>.
         </p>
       </example>
 
       <example xml:id="fields-example-finite-f4">
         <p>
-          Let <m>p(x) = x^2 + x + 1 \in {\mathbb Z}_2[x]</m>.
-          Since neither <m>0</m> nor <m>1</m> is a root of this polynomial,
-          we know that <m>p(x)</m> is irreducible over <m>{\mathbb Z}_2</m>.
-          We will construct a field extension of
-          <m>{\mathbb Z}_2</m> containing an element <m>\alpha</m> such that <m>p(\alpha) = 0</m>.
-          By <xref ref="poly-theorem-max-ideal"/>,
-          the ideal <m>\langle p(x) \rangle</m> generated by <m>p(x)</m> is maximal;
-          hence, <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m> is a field.
-          Let <m>f(x) + \langle p(x) \rangle</m> be an arbitrary element of <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m>.
-          By the division algorithm,
+          Seja <m>p(x) = x^2 + x + 1 \in {\mathbb Z}_2[x]</m>.
+          Como nem <m>0</m> nem <m>1</m> é uma raiz desse polinômio,
+          sabemos que <m>p(x)</m> é irredutível sobre <m>{\mathbb Z}_2</m>.
+          Construiremos um corpo de extensão de
+          <m>{\mathbb Z}_2</m> contendo um elemento <m>\alpha</m> tal que <m>p(\alpha) = 0</m>.
+          Pelo <xref ref="poly-theorem-max-ideal"/>,
+          o ideal <m>\langle p(x) \rangle</m> gerado por <m>p(x)</m> é maximal;
+          portanto, <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m> é um corpo.
+          Seja <m>f(x) + \langle p(x) \rangle</m> um elemento arbitrário de <m>{\mathbb Z}_2[x] / \langle p(x) \rangle</m>.
+          Pelo algoritmo da divisão,
           <md>
             f(x) = (x^2 + x + 1) q(x) + r(x)
           </md>,
-          where the degree of <m>r(x)</m> is less than the degree of <m>x^2 + x + 1</m>.
-          Therefore,
+          onde o grau de <m>r(x)</m> é menor que o grau de <m>x^2 + x + 1</m>.
+          Portanto,
           <md>
             f(x) + \langle x^2 + x + 1 \rangle = r(x) + \langle x^2 + x + 1 \rangle
           </md>.
-          The only possibilities for <m>r(x)</m> are then <m>0</m>,
-          <m>1</m>, <m>x</m>, and <m>1 + x</m>.
-          Consequently,
-          <m>E = {\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle</m> is a field with four elements and must be a field extension of <m>{\mathbb Z}_2</m>,
-          containing a zero <m>\alpha</m> of <m>p(x)</m>.
-          The field <m>{\mathbb Z}_2(  \alpha)</m> consists of elements
+          As únicas possibilidades para <m>r(x)</m> são então <m>0</m>,
+          <m>1</m>, <m>x</m> e <m>1 + x</m>.
+          Consequentemente,
+          <m>E = {\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle</m> é um corpo com quatro elementos e deve ser um corpo de extensão de <m>{\mathbb Z}_2</m>,
+          contendo um zero <m>\alpha</m> de <m>p(x)</m>.
+          O corpo <m>{\mathbb Z}_2(  \alpha)</m> consiste nos elementos
           <md>
             <mrow>0 + 0 \alpha &amp; = 0</mrow>
             <mrow>1 + 0 \alpha &amp; = 1</mrow>
             <mrow>0 + 1 \alpha &amp; = \alpha</mrow>
             <mrow>1 + 1 \alpha &amp; = 1 + \alpha</mrow>
           </md>.
-          Notice that <m>{\alpha}^2 + {\alpha} + 1 = 0</m>;
-          hence, if we compute <m>(1 + \alpha)^2</m>,
+          Observe que <m>{\alpha}^2 + {\alpha} + 1 = 0</m>;
+          portanto, se calcularmos <m>(1 + \alpha)^2</m>,
           <md>
             (1 + \alpha)(1 + \alpha)= 1 + \alpha + \alpha + (\alpha)^2 = \alpha
           </md>.
-          Other calculations are accomplished in a similar manner.
-          We summarize these computations in the following tables,
-          which tell us how to add and multiply elements in <m>E</m>.
+          Os demais cálculos são realizados de maneira semelhante.
+          Resumimos esses cálculos nas tabelas seguintes,
+          que mostram como somar e multiplicar elementos de <m>E</m>.
         </p>
       </example>
 
       <figure xml:id="fields-table-addition-z2-alpha">
             <!-- math table -->
-        <caption>Addition Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
+        <caption>Tabela de Adição para <m>{\mathbb Z}_2(\alpha)</m></caption>
         <p>
           <md>
             \begin{array}{c|cccc}
@@ -138,7 +138,7 @@
 
       <figure xml:id="fields-table-multiplication-z2-alpha">
             <!-- math table -->
-        <caption>Multiplication Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
+        <caption>Tabela de Multiplicação para <m>{\mathbb Z}_2(\alpha)</m></caption>
         <p>
           <md>
             \begin{array}{c|cccc}
@@ -154,259 +154,259 @@
       </figure>
 
       <p>
-        The following theorem, due to Kronecker,
-        is so important and so basic to our understanding of fields that it is often known as the Fundamental Theorem of Field Theory.
+        O teorema seguinte, devido a Kronecker,
+        é tão importante e fundamental para nossa compreensão dos corpos que costuma ser chamado de Teorema Fundamental da Teoria dos Corpos.
       </p>
 
       <theorem xml:id="fields-theorem-fundamental-of-field-theory">
         <statement>
           <p>
-            Let <m>F</m> be a field and let <m>p(x)</m> be a nonconstant polynomial in <m>F[x]</m>.
-            Then there exists an extension field <m>E</m> of <m>F</m> and an element
-            <m>\alpha \in E</m> such that <m>p(\alpha) = 0</m>.
+            Seja <m>F</m> um corpo e seja <m>p(x)</m> um polinômio não constante em <m>F[x]</m>.
+            Então existe um corpo de extensão <m>E</m> de <m>F</m> e um elemento
+            <m>\alpha \in E</m> tal que <m>p(\alpha) = 0</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            To prove this theorem,
-            we will employ the method that we used to construct <xref ref="fields-example-finite-f4"/>.
-            Clearly, we can assume that <m>p(x)</m> is an irreducible polynomial.
-            We wish to find an extension field <m>E</m> of <m>F</m> containing an element <m>\alpha</m> such that <m>p(\alpha) = 0</m>.
-            The ideal <m>\langle p(x) \rangle</m> generated by <m>p(x)</m> is a maximal ideal in <m>F[x]</m> by <xref ref="poly-theorem-max-ideal"/>;
-            hence, <m>F[x]/\langle p(x) \rangle</m> is a field.
-            We claim that <m>E = F[x]/\langle p(x) \rangle</m> is the desired field.
+            Para provar esse teorema,
+            empregaremos o método que usamos para construir <xref ref="fields-example-finite-f4"/>.
+            Claramente, podemos supor que <m>p(x)</m> é um polinômio irredutível.
+            Queremos encontrar um corpo de extensão <m>E</m> de <m>F</m> contendo um elemento <m>\alpha</m> tal que <m>p(\alpha) = 0</m>.
+            O ideal <m>\langle p(x) \rangle</m> gerado por <m>p(x)</m> é um ideal maximal em <m>F[x]</m> pelo <xref ref="poly-theorem-max-ideal"/>;
+            portanto, <m>F[x]/\langle p(x) \rangle</m> é um corpo.
+            Afirmamos que <m>E = F[x]/\langle p(x) \rangle</m> é o corpo desejado.
           </p>
 
           <p>
-            We first show that <m>E</m> is a field extension of <m>F</m>.
-            We can define a homomorphism of commutative rings by the map <m>\psi:F \rightarrow F[x]/\langle p(x) \rangle</m>,
-            where <m>\psi(a) = a + \langle p(x)\rangle</m> for <m>a \in F</m>.
-            It is easy to check that <m>\psi</m> is indeed a ring homomorphism.
-            Observe that
+            Primeiro mostramos que <m>E</m> é um corpo de extensão de <m>F</m>.
+            Podemos definir um homomorfismo de anéis comutativos pela aplicação <m>\psi:F \rightarrow F[x]/\langle p(x) \rangle</m>,
+            onde <m>\psi(a) = a + \langle p(x)\rangle</m> para <m>a \in F</m>.
+            É fácil verificar que <m>\psi</m> é de fato um homomorfismo de anéis.
+            Observe que
             <md>
               \psi( a ) + \psi( b ) = (a + \langle p(x) \rangle) + (b + \langle p(x) \rangle) = (a + b) + \langle p(x) \rangle = \psi( a + b )
             </md>
-            and
+            e
             <md>
               \psi( a ) \psi( b ) = (a + \langle p(x) \rangle)  (b + \langle p(x) \rangle) = ab + \langle p(x) \rangle = \psi( ab )
             </md>.
-            To prove that <m>\psi</m> is one-to-one, assume that
+            Para provar que <m>\psi</m> é injetiva, suponha que
             <md>
               a + \langle p(x) \rangle = \psi(a) = \psi(b) = b + \langle p(x) \rangle
             </md>.
-            Then <m>a - b</m> is a multiple of <m>p(x)</m>,
-            since it lives in the ideal <m>\langle p(x) \rangle</m>.
-            Since <m>p(x)</m> is a nonconstant polynomial,
-            the only possibility is that <m>a - b = 0</m>.
-            Consequently, <m>a = b</m> and <m>\psi</m> is injective.
-            Since <m>\psi</m> is one-to-one,
-            we can identify <m>F</m> with the subfield
-            <m>\{ a + \langle p(x) \rangle : a \in F \}</m> of <m>E</m> and view <m>E</m> as an extension field of <m>F</m>.
+            Então <m>a - b</m> é um múltiplo de <m>p(x)</m>,
+            pois pertence ao ideal <m>\langle p(x) \rangle</m>.
+            Como <m>p(x)</m> é um polinômio não constante,
+            a única possibilidade é <m>a - b = 0</m>.
+            Consequentemente, <m>a = b</m> e <m>\psi</m> é injetiva.
+            Como <m>\psi</m> é injetiva,
+            podemos identificar <m>F</m> com o subcorpo
+            <m>\{ a + \langle p(x) \rangle : a \in F \}</m> de <m>E</m> e ver <m>E</m> como um corpo de extensão de <m>F</m>.
           </p>
             <!-- \alpha is in E not F - TWJ 4/23/2011 -->
           <p>
-            It remains for us to prove that <m>p(x)</m> has a zero <m>\alpha \in E</m>.
-            Set <m>\alpha = x + \langle p(x) \rangle</m>.
-            Then <m>\alpha</m> is in <m>E</m>.
-            If <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n</m>, then
+            Resta provar que <m>p(x)</m> possui um zero <m>\alpha \in E</m>.
+            Defina <m>\alpha = x + \langle p(x) \rangle</m>.
+            Então <m>\alpha</m> pertence a <m>E</m>.
+            Se <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n</m>, então
             <md>
               <mrow>p( \alpha ) &amp; =  a_0 + a_1( x + \langle p(x) \rangle) + \cdots + a_n ( x + \langle p(x) \rangle)^n</mrow>
               <mrow>&amp; = a_0 + ( a_1 x + \langle p(x) \rangle) + \cdots + (a_n  x^n + \langle p(x) \rangle)</mrow>
               <mrow>&amp; = a_0 + a_1 x + \cdots + a_n x^n + \langle p(x) \rangle</mrow>
               <mrow>&amp; = 0 + \langle p(x) \rangle</mrow>
             </md>.
-            Therefore, we have found an element
-            <m>\alpha \in E = F[x]/\langle p(x) \rangle</m> such that <m>\alpha</m> is a zero of <m>p(x)</m>.
+            Portanto, encontramos um elemento
+            <m>\alpha \in E = F[x]/\langle p(x) \rangle</m> tal que <m>\alpha</m> é um zero de <m>p(x)</m>.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="fields-example-finite-f8">
         <p>
-          Let <m>p(x) = x^5 + x^4 + 1 \in {\mathbb Z}_2[x]</m>.
-          Then <m>p(x)</m> has irreducible factors
-          <m>x^2 + x + 1</m> and <m>x^3 + x + 1</m>.
-          For a field extension <m>E</m> of
-          <m>{\mathbb Z}_2</m> such that <m>p(x)</m> has a root in <m>E</m>,
-          we can let <m>E</m> be either
-          <m>{\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle</m> or <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m>.
-          We will leave it as an exercise to show that
-          <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> is a field with <m>2^3 = 8</m> elements.
+          Seja <m>p(x) = x^5 + x^4 + 1 \in {\mathbb Z}_2[x]</m>.
+          Então <m>p(x)</m> possui os fatores irredutíveis
+          <m>x^2 + x + 1</m> e <m>x^3 + x + 1</m>.
+          Para um corpo de extensão <m>E</m> de
+          <m>{\mathbb Z}_2</m> tal que <m>p(x)</m> tenha uma raiz em <m>E</m>,
+          podemos tomar <m>E</m> como sendo
+          <m>{\mathbb Z}_2[x] / \langle x^2 + x + 1 \rangle</m> ou <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m>.
+          Deixamos como exercício mostrar que
+          <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> é um corpo com <m>2^3 = 8</m> elementos.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="fields-subsection-algebraic-elements">
-      <title>Algebraic Elements</title>
+      <title>Elementos Algébricos</title>
       <p>
-        An element <m>\alpha</m> in an extension field <m>E</m> over <m>F</m> is <term>algebraic</term>
-        over <m>F</m> if <m>f(\alpha)=0</m> for some nonzero polynomial <m>f(x) \in F[x]</m>.
-        An element in <m>E</m> that is not algebraic over <m>F</m> is
-        <term>transcendental</term><idx><h>Element</h><h>transcendental</h></idx><idx><h>Transcendental element</h></idx>
-        over <m>F</m>.
-        An extension field <m>E</m> of a field <m>F</m> is an
-        <term>algebraic extension</term><idx><h>Algebraic extension</h></idx><idx><h>Extension</h><h>algebraic</h></idx>
-        of <m>F</m> if every element in <m>E</m> is algebraic over <m>F</m>.
-        If <m>E</m> is a field extension of <m>F</m> and
-        <m>\alpha_1, \ldots, \alpha_n</m> are contained in <m>E</m>,
-        we denote the smallest field containing <m>F</m> and
-        <m>\alpha_1, \ldots, \alpha_n</m> by <m>F( \alpha_1, \ldots, \alpha_n)</m>.
+        Um elemento <m>\alpha</m> em um corpo de extensão <m>E</m> sobre <m>F</m> é <term>algébrico</term>
+        sobre <m>F</m> se <m>f(\alpha)=0</m> para algum polinômio não nulo <m>f(x) \in F[x]</m>.
+        Um elemento de <m>E</m> que não é algébrico sobre <m>F</m> é
+        <term>transcendental</term><idx><h>Elemento</h><h>transcendental</h></idx><idx><h>Elemento transcendental</h></idx>
+        sobre <m>F</m>.
+        Um corpo de extensão <m>E</m> de um corpo <m>F</m> é uma
+        <term>extensão algébrica</term><idx><h>Extensão algébrica</h></idx><idx><h>Extensão</h><h>algébrica</h></idx>
+        de <m>F</m> se todo elemento de <m>E</m> é algébrico sobre <m>F</m>.
+        Se <m>E</m> é um corpo de extensão de <m>F</m> e
+        <m>\alpha_1, \ldots, \alpha_n</m> estão contidos em <m>E</m>,
+        denotamos o menor corpo que contém <m>F</m> e
+        <m>\alpha_1, \ldots, \alpha_n</m> por <m>F( \alpha_1, \ldots, \alpha_n)</m>.
 
         <notation>
           <usage><m>F( \alpha_1, \ldots, \alpha_n)</m></usage>
-          <description>smallest field containing <m>F</m> and <m>\alpha_1, \ldots, \alpha_n</m></description>
+          <description>menor corpo que contém <m>F</m> e <m>\alpha_1, \ldots, \alpha_n</m></description>
         </notation>
 
-        If <m>E = F( \alpha )</m> for some <m>\alpha \in E</m>,
-        then <m>E</m> is a <term>simple extension</term><idx><h>Simple extension</h></idx><idx><h>Extension</h><h>simple</h></idx>
-        of <m>F</m>.
+        Se <m>E = F( \alpha )</m> para algum <m>\alpha \in E</m>,
+        então <m>E</m> é uma <term>extensão simples</term><idx><h>Extensão simples</h></idx><idx><h>Extensão</h><h>simples</h></idx>
+        de <m>F</m>.
       </p>
 
       <example xml:id="fields-example-extension-pi">
         <p>
-          Both <m>\sqrt{2}</m> and <m>i</m> are algebraic over
-          <m>{\mathbb Q}</m> since they are zeros of the polynomials <m>x^2 -2</m> and <m>x^2 + 1</m>,
-          respectively.
-          Clearly <m>\pi</m> and <m>e</m> are algebraic over the real numbers;
-          however, it is a nontrivial fact that they are transcendental over <m>{\mathbb Q}</m>.
-          Numbers in <m>{\mathbb R}</m> that are algebraic over
-          <m>{\mathbb Q}</m> are in fact quite rare.
-          Almost all real numbers are transcendental over <m>{\mathbb Q}</m>.<fn>
-          The probability that a real number chosen at random from the interval <m>[0, 1]</m> will be transcendental over the rational numbers is one.
-          </fn>(In many cases we do not know whether or not a particular number is transcendental;
-          for example,
-          it is still not known whether <m>\pi + e</m> is transcendental or algebraic.)
+          Tanto <m>\sqrt{2}</m> quanto <m>i</m> são algébricos sobre
+          <m>{\mathbb Q}</m>, pois são zeros dos polinômios <m>x^2 -2</m> e <m>x^2 + 1</m>,
+          respectivamente.
+          Claramente, <m>\pi</m> e <m>e</m> são algébricos sobre os números reais;
+          no entanto, é um fato não trivial que são transcendentais sobre <m>{\mathbb Q}</m>.
+          Números em <m>{\mathbb R}</m> que são algébricos sobre
+          <m>{\mathbb Q}</m> são, na verdade, bastante raros.
+          Quase todos os números reais são transcendentais sobre <m>{\mathbb Q}</m>.<fn>
+          A probabilidade de que um número real escolhido aleatoriamente no intervalo <m>[0, 1]</m> seja transcendental sobre os números racionais é um.
+          </fn>(Em muitos casos não sabemos se um número específico é transcendental;
+          por exemplo,
+          ainda não se sabe se <m>\pi + e</m> é transcendental ou algébrico.)
         </p>
       </example>
 
       <p>
-        A complex number that is algebraic over <m>{\mathbb Q}</m> is an
-        <idx><h>Algebraic number</h></idx><term>algebraic number</term>.   
-        A <term>transcendental number</term><idx><h>Transcendental number</h></idx>
-        is an element of <m>{\mathbb C}</m> that is transcendental over <m>{\mathbb Q}</m>.
+        Um número complexo que é algébrico sobre <m>{\mathbb Q}</m> é um
+        <idx><h>Número algébrico</h></idx><term>número algébrico</term>.
+        Um <term>número transcendental</term><idx><h>Número transcendental</h></idx>
+        é um elemento de <m>{\mathbb C}</m> que é transcendental sobre <m>{\mathbb Q}</m>.
       </p>
 
       <example xml:id="fields-example-sqrt2-sqrt3">
         <p>
-          We will show that <m>\sqrt{2 + \sqrt{3} }</m> is algebraic over <m>{\mathbb Q}</m>.
-          If <m>\alpha = \sqrt{2 + \sqrt{3} }</m>,
-          then <m>\alpha^2 = 2 + \sqrt{3}</m>.
-          Hence, <m>\alpha^2 - 2 = \sqrt{3}</m> and <m>( \alpha^2 - 2)^2 = 3</m>.
-          Since <m>\alpha^4 - 4 \alpha^2 + 1 = 0</m>,
-          it must be true that <m>\alpha</m> is a zero of the polynomial <m>x^4 - 4 x^2 + 1 \in {\mathbb Q}[x]</m>.
+          Mostraremos que <m>\sqrt{2 + \sqrt{3} }</m> é algébrico sobre <m>{\mathbb Q}</m>.
+          Se <m>\alpha = \sqrt{2 + \sqrt{3} }</m>,
+          então <m>\alpha^2 = 2 + \sqrt{3}</m>.
+          Portanto, <m>\alpha^2 - 2 = \sqrt{3}</m> e <m>( \alpha^2 - 2)^2 = 3</m>.
+          Como <m>\alpha^4 - 4 \alpha^2 + 1 = 0</m>,
+          deve ser verdade que <m>\alpha</m> é um zero do polinômio <m>x^4 - 4 x^2 + 1 \in {\mathbb Q}[x]</m>.
         </p>
       </example>
 
       <p>
-        It is very easy to give an example of an extension field <m>E</m> over a field <m>F</m>,
-        where <m>E</m> contains an element transcendental over <m>F</m>.
-        The following theorem characterizes transcendental extensions.
+        É muito fácil dar um exemplo de um corpo de extensão <m>E</m> sobre um corpo <m>F</m>
+        em que <m>E</m> contém um elemento transcendental sobre <m>F</m>.
+        O teorema seguinte caracteriza as extensões transcendentais.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>E</m> be an extension field of <m>F</m> and <m>\alpha \in E</m>.
-            Then <m>\alpha</m> is transcendental over <m>F</m> if and only if
-            <m>F( \alpha )</m> is isomorphic to <m>F(x)</m>,
-            the field of fractions of <m>F[x]</m>.
+            Seja <m>E</m> um corpo de extensão de <m>F</m> e <m>\alpha \in E</m>.
+            Então <m>\alpha</m> é transcendental sobre <m>F</m> se, e somente se,
+            <m>F( \alpha )</m> é isomorfo a <m>F(x)</m>,
+            o corpo de frações de <m>F[x]</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism for <m>\alpha</m>.
-            Then <m>\alpha</m> is transcendental over <m>F</m> if and only if
-            <m>\phi_{\alpha} (p(x)) = p(\alpha) \neq 0</m> for all nonconstant polynomials <m>p(x) \in F[x]</m>.
-            This is true if and only if <m>\ker \phi_{\alpha} = \{ 0 \}</m>;
-            that is, it is true exactly when <m>\phi_{\alpha}</m> is one-to-one.
-            Hence, <m>E</m> must contain a copy of <m>F[x]</m>.
-            The smallest field containing <m>F[x]</m> is the field of fractions <m>F(x)</m>.
-            By <xref ref="domains-theorem-field-of-quotients"/>, <m>E</m> must contain a copy of this field.
+            Seja <m>\phi_{\alpha} : F[x] \rightarrow E</m> o homomorfismo de avaliação em <m>\alpha</m>.
+            Então <m>\alpha</m> é transcendental sobre <m>F</m> se, e somente se,
+            <m>\phi_{\alpha} (p(x)) = p(\alpha) \neq 0</m> para todo polinômio não constante <m>p(x) \in F[x]</m>.
+            Isso ocorre se, e somente se, <m>\ker \phi_{\alpha} = \{ 0 \}</m>;
+            isto é, ocorre exatamente quando <m>\phi_{\alpha}</m> é injetivo.
+            Portanto, <m>E</m> deve conter uma cópia de <m>F[x]</m>.
+            O menor corpo que contém <m>F[x]</m> é o corpo de frações <m>F(x)</m>.
+            Pelo <xref ref="domains-theorem-field-of-quotients"/>, <m>E</m> deve conter uma cópia desse corpo.
           </p>
         </proof>
       </theorem>
 
       <p>
-        We have a more interesting situation in the case of algebraic extensions.
+        Temos uma situação mais interessante no caso das extensões algébricas.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>E</m> be an extension field of a field <m>F</m> and
-            <m>\alpha \in E</m> with <m>\alpha</m> algebraic over <m>F</m>.
-            Then there is a unique irreducible monic polynomial
-            <m>p(x) \in F[x]</m> of smallest degree such that <m>p( \alpha ) = 0</m>.
-            If <m>f(x)</m> is another polynomial in <m>F[x]</m> such that <m>f(\alpha) = 0</m>,
-            then <m>p(x)</m> divides <m>f(x)</m>.
+            Seja <m>E</m> um corpo de extensão de um corpo <m>F</m> e
+            <m>\alpha \in E</m>, com <m>\alpha</m> algébrico sobre <m>F</m>.
+            Então existe um único polinômio mônico irredutível
+            <m>p(x) \in F[x]</m> de menor grau tal que <m>p( \alpha ) = 0</m>.
+            Se <m>f(x)</m> é outro polinômio em <m>F[x]</m> tal que <m>f(\alpha) = 0</m>,
+            então <m>p(x)</m> divide <m>f(x)</m>.
           </p>
         </statement>
             <!--  Removed the hypothesis that f(x) be monic.  Suggested by Davis Schubert. - TWJ 4/24/2013 -->
         <proof>
           <p>
-            Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism.
-            The kernel of <m>\phi_{\alpha}</m> is a principal ideal generated by some
-            <m>p(x) \in F[x]</m> with <m>\deg p(x) \geq 1</m>.
-            We know that such a polynomial exists,
-            since <m>F[x]</m> is a principal ideal domain and <m>\alpha</m> is algebraic.
-            The ideal <m>\langle p(x) \rangle</m> consists exactly of those elements of <m>F[x]</m> having <m>\alpha</m> as a zero.
-            If <m>f( \alpha ) = 0</m> and <m>f(x)</m> is not the zero polynomial,
-            then <m>f(x) \in \langle p(x) \rangle</m> and <m>p(x)</m> divides <m>f(x)</m>.
-            So <m>p(x)</m> is a polynomial of minimal degree having <m>\alpha</m> as a zero.
-            Any other polynomial of the same degree having <m>\alpha</m> as a zero must have the form
-            <m>\beta p( x)</m> for some <m>\beta \in F</m>.
+            Seja <m>\phi_{\alpha} : F[x] \rightarrow E</m> o homomorfismo de avaliação.
+            O núcleo de <m>\phi_{\alpha}</m> é um ideal principal gerado por algum
+            <m>p(x) \in F[x]</m> com <m>\deg p(x) \geq 1</m>.
+            Sabemos que tal polinômio existe,
+            pois <m>F[x]</m> é um domínio principal de ideais e <m>\alpha</m> é algébrico.
+            O ideal <m>\langle p(x) \rangle</m> consiste exatamente nos elementos de <m>F[x]</m> que têm <m>\alpha</m> como zero.
+            Se <m>f( \alpha ) = 0</m> e <m>f(x)</m> não é o polinômio zero,
+            então <m>f(x) \in \langle p(x) \rangle</m> e <m>p(x)</m> divide <m>f(x)</m>.
+            Assim, <m>p(x)</m> é um polinômio de grau mínimo que tem <m>\alpha</m> como zero.
+            Qualquer outro polinômio do mesmo grau que tenha <m>\alpha</m> como zero deve ter a forma
+            <m>\beta p( x)</m> para algum <m>\beta \in F</m>.
           </p>
 
           <p>
-            Suppose now that <m>p(x) = r(x) s(x)</m> is a factorization of <m>p(x)</m> into polynomials of lower degree.
-            Since <m>p( \alpha ) = 0</m>,
+            Suponha agora que <m>p(x) = r(x) s(x)</m> seja uma fatoração de <m>p(x)</m> em polinômios de grau menor.
+            Como <m>p( \alpha ) = 0</m>,
             <m>r( \alpha ) s( \alpha ) = 0</m>;
-            consequently,
-            either <m>r( \alpha )=0</m> or <m>s( \alpha ) = 0</m>,
-            which contradicts the fact that <m>p</m> is of minimal degree.
-            Therefore, <m>p(x)</m> must be irreducible.
+            consequentemente,
+            <m>r( \alpha )=0</m> ou <m>s( \alpha ) = 0</m>,
+            o que contradiz o fato de que <m>p</m> tem grau mínimo.
+            Portanto, <m>p(x)</m> deve ser irredutível.
           </p>
         </proof>
       </theorem>
 
       <p>
-        Let <m>E</m> be an extension field of <m>F</m> and
-        <m>\alpha \in E</m> be algebraic over <m>F</m>.
-        The unique monic polynomial <m>p(x)</m> of the last theorem is called the
-        <term>minimal polynomial</term><idx><h>Polynomial</h><h>minimal</h></idx><idx><h>Minimal polynomial</h></idx>
-        for <m>\alpha</m> over <m>F</m>.
-        The degree of <m>p(x)</m> is the
-        <term>degree of <m>\alpha</m> over <m>F</m></term>.
+        Seja <m>E</m> um corpo de extensão de <m>F</m> e
+        <m>\alpha \in E</m> algébrico sobre <m>F</m>.
+        O polinômio mônico único <m>p(x)</m> do teorema anterior é chamado de
+        <term>polinômio mínimo</term><idx><h>Polinômio</h><h>mínimo</h></idx><idx><h>Polinômio mínimo</h></idx>
+        de <m>\alpha</m> sobre <m>F</m>.
+        O grau de <m>p(x)</m> é o
+        <term>grau de <m>\alpha</m> sobre <m>F</m></term>.
       </p>
 
       <example xml:id="fields-example-minimal-poly">
         <p>
-          Let <m>f(x) = x^2 - 2</m> and <m>g(x) = x^4 - 4 x^2 + 1</m>.
-          These polynomials are the minimal polynomials of
-          <m>\sqrt{2}</m> and <m>\sqrt{2 + \sqrt{3} }</m>, respectively.
+          Sejam <m>f(x) = x^2 - 2</m> e <m>g(x) = x^4 - 4 x^2 + 1</m>.
+          Esses polinômios são os polinômios mínimos de
+          <m>\sqrt{2}</m> e <m>\sqrt{2 + \sqrt{3} }</m>, respectivamente.
         </p>
       </example>
 
       <proposition xml:id="fields-proposition-minimal-poly">
         <statement>
           <p>
-            Let <m>E</m> be a field extension of <m>F</m> and
-            <m>\alpha \in E</m> be algebraic over <m>F</m>.
-            Then <m>F( \alpha ) \cong F[x] / \langle p(x) \rangle</m>,
-            where <m>p(x)</m> is the minimal polynomial of <m>\alpha</m> over <m>F</m>.
+            Seja <m>E</m> um corpo de extensão de <m>F</m> e
+            <m>\alpha \in E</m> algébrico sobre <m>F</m>.
+            Então <m>F( \alpha ) \cong F[x] / \langle p(x) \rangle</m>,
+            onde <m>p(x)</m> é o polinômio mínimo de <m>\alpha</m> sobre <m>F</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\phi_{\alpha} : F[x] \rightarrow E</m> be the evaluation homomorphism.
-            The kernel of this map is <m>\langle p(x) \rangle</m>,
-            where <m>p(x)</m> is the minimal polynomial of <m>\alpha</m>.
-            By the First Isomorphism Theorem for rings,
-            the image of <m>\phi_{\alpha}</m> in <m>E</m> is isomorphic to
-            <m>F( \alpha )</m> since it contains both <m>F</m> and <m>\alpha</m>.
+            Seja <m>\phi_{\alpha} : F[x] \rightarrow E</m> o homomorfismo de avaliação.
+            O núcleo dessa aplicação é <m>\langle p(x) \rangle</m>,
+            onde <m>p(x)</m> é o polinômio mínimo de <m>\alpha</m>.
+            Pelo Primeiro Teorema do Isomorfismo para anéis,
+            a imagem de <m>\phi_{\alpha}</m> em <m>E</m> é isomorfa a
+            <m>F( \alpha )</m>, pois contém tanto <m>F</m> quanto <m>\alpha</m>.
           </p>
         </proof>
       </proposition>
@@ -414,119 +414,119 @@
       <theorem xml:id="fields-theorem-simple_extension">
         <statement>
           <p>
-            Let <m>E = F( \alpha )</m> be a simple extension of <m>F</m>,
-            where <m>\alpha \in E</m> is algebraic over <m>F</m>.
-            Suppose that the degree of <m>\alpha</m> over <m>F</m> is <m>n</m>.
-            Then every element <m>\beta \in E</m> can be expressed uniquely in the form
+            Seja <m>E = F( \alpha )</m> uma extensão simples de <m>F</m>,
+            onde <m>\alpha \in E</m> é algébrico sobre <m>F</m>.
+            Suponha que o grau de <m>\alpha</m> sobre <m>F</m> seja <m>n</m>.
+            Então todo elemento <m>\beta \in E</m> pode ser expresso unicamente na forma
             <md>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n - 1}
             </md>
-            for <m>b_i \in F</m>.
+            para <m>b_i \in F</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Since <m>\phi_{\alpha} ( F[x] ) \cong F( \alpha )</m>,
-            every element in <m>E = F( \alpha )</m> must be of the form <m>\phi_{\alpha} ( f(x) ) = f( \alpha )</m>,
-            where <m>f(\alpha)</m> is a polynomial in <m>\alpha</m> with coefficients in <m>F</m>.
-            Let
+            Como <m>\phi_{\alpha} ( F[x] ) \cong F( \alpha )</m>,
+            todo elemento de <m>E = F( \alpha )</m> deve ser da forma <m>\phi_{\alpha} ( f(x) ) = f( \alpha )</m>,
+            onde <m>f(\alpha)</m> é um polinômio em <m>\alpha</m> com coeficientes em <m>F</m>.
+            Seja
             <md>
               p(x) = x^n + a_{n - 1} x^{n - 1} + \cdots + a_0
             </md>
-            be the minimal polynomial of <m>\alpha</m>.
-            Then <m>p( \alpha ) = 0</m>; hence,
+            o polinômio mínimo de <m>\alpha</m>.
+            Então <m>p( \alpha ) = 0</m>; portanto,
             <md>
               {\alpha}^n = - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0
             </md>.
-            Similarly,
+            De modo semelhante,
             <md>
               <mrow>{\alpha}^{n + 1} &amp; = {\alpha} {\alpha}^n</mrow>
               <mrow>&amp; = - a_{n - 1} {\alpha}^n - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}</mrow>
               <mrow>&amp; = - a_{n - 1}( - a_{n - 1} {\alpha}^{n - 1} - \cdots - a_0) - a_{n - 2} {\alpha}^{n - 1} - \cdots - a_0 {\alpha}</mrow>
             </md>.
-            Continuing in this manner,
-            we can express every monomial <m>{\alpha}^m</m>, <m>m \geq n</m>,
-            as a linear combination of powers of
-            <m>{\alpha}</m> that are less than <m>n</m>.
-            Hence, any <m>\beta \in F( \alpha )</m> can be written as
+            Continuando dessa maneira,
+            podemos expressar todo monômio <m>{\alpha}^m</m>, <m>m \geq n</m>,
+            como combinação linear de potências de
+            <m>{\alpha}</m> menores que <m>n</m>.
+            Portanto, qualquer <m>\beta \in F( \alpha )</m> pode ser escrito como
             <md>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n - 1} \alpha^{n - 1}
             </md>.
           </p>
 
           <p>
-            To show uniqueness, suppose that
+            Para mostrar a unicidade, suponha que
             <md>
               \beta = b_0 + b_1 \alpha + \cdots + b_{n-1} \alpha^{n-1} = c_0 + c_1 \alpha + \cdots + c_{n - 1} \alpha^{n - 1}
             </md>
-            for <m>b_i</m> and <m>c_i</m> in <m>F</m>.
-            Then
+            para <m>b_i</m> e <m>c_i</m> em <m>F</m>.
+            Então
             <md>
               g(x) = (b_0 - c_0) + (b_1 - c_1) x + \cdots + (b_{n - 1} - c_{n - 1})x^{n - 1}
             </md>
-            is in <m>F[x]</m> and <m>g( \alpha ) = 0</m>.
-            Since the degree of <m>g(x)</m> is less than the degree of <m>p( x )</m>,
-            the irreducible polynomial of <m>\alpha</m>,
-            <m>g(x)</m> must be the zero polynomial.
-            Consequently,
+            pertence a <m>F[x]</m> e <m>g( \alpha ) = 0</m>.
+            Como o grau de <m>g(x)</m> é menor que o grau de <m>p( x )</m>,
+            o polinômio irredutível de <m>\alpha</m>,
+            <m>g(x)</m> deve ser o polinômio zero.
+            Consequentemente,
             <md>
               b_0 - c_0 = b_1 - c_1 = \cdots = b_{n - 1} - c_{n - 1} = 0
             </md>,
-            or <m>b_i = c_i</m> for <m>i = 0, 1, \ldots, n-1</m>.
-            Therefore, we have shown uniqueness.
+            ou <m>b_i = c_i</m> para <m>i = 0, 1, \ldots, n-1</m>.
+            Portanto, mostramos a unicidade.
           </p>
         </proof>
       </theorem>
             <!--  Changed = to \cong.  Suggested by Aleks Vlasev. - TWJ 8/10/2011 -->
       <example xml:id="fields-example-isomorph">
         <p>
-          Since <m>x^2 + 1</m> is irreducible over <m>{\mathbb R}</m>,
-          <m>\langle x^2 + 1 \rangle</m> is a maximal ideal in <m>{\mathbb R}[x]</m>.
-          So <m>E = {\mathbb R}[x]/\langle x^2 + 1 \rangle</m> is a field extension of
-          <m>{\mathbb R}</m> that contains a root of <m>x^2 + 1</m>.
-          Let <m>\alpha = x + \langle x^2 + 1 \rangle</m>.
-          We can identify <m>E</m> with the complex numbers.
-          By <xref ref="fields-proposition-minimal-poly"/>,
-          <m>E</m> is isomorphic to <m>{\mathbb R}( \alpha ) = \{ a + b \alpha : a, b \in {\mathbb R} \}</m>.
-          We know that <m>\alpha^2 = -1</m> in <m>E</m>, since
+          Como <m>x^2 + 1</m> é irredutível sobre <m>{\mathbb R}</m>,
+          <m>\langle x^2 + 1 \rangle</m> é um ideal maximal em <m>{\mathbb R}[x]</m>.
+          Assim, <m>E = {\mathbb R}[x]/\langle x^2 + 1 \rangle</m> é um corpo de extensão de
+          <m>{\mathbb R}</m> que contém uma raiz de <m>x^2 + 1</m>.
+          Seja <m>\alpha = x + \langle x^2 + 1 \rangle</m>.
+          Podemos identificar <m>E</m> com os números complexos.
+          Pelo <xref ref="fields-proposition-minimal-poly"/>,
+          <m>E</m> é isomorfo a <m>{\mathbb R}( \alpha ) = \{ a + b \alpha : a, b \in {\mathbb R} \}</m>.
+          Sabemos que <m>\alpha^2 = -1</m> em <m>E</m>, pois
           <md>
             <mrow>\alpha^2 + 1 &amp; = (x + \langle x^2 + 1  \rangle)^2 + (1 + \langle x^2 + 1 \rangle)</mrow>
             <mrow>&amp; = (x^2 + 1) + \langle x^2 + 1  \rangle</mrow>
             <mrow>&amp; = 0</mrow>
           </md>.
-          Hence, we have an isomorphism of <m>{\mathbb R}( \alpha )</m> with
-          <m>{\mathbb C}</m> defined by the map that takes <m>a + b \alpha</m> to <m>a + bi</m>.
+          Portanto, temos um isomorfismo de <m>{\mathbb R}( \alpha )</m> em
+          <m>{\mathbb C}</m> definido pela aplicação que leva <m>a + b \alpha</m> em <m>a + bi</m>.
         </p>
       </example>
 
       <p>
-        Let <m>E</m> be a field extension of a field <m>F</m>.
-        If we regard <m>E</m> as a vector space over <m>F</m>,
-        then we can bring the machinery of linear algebra to bear on the problems that we will encounter in our study of fields.
-        The elements in the field <m>E</m> are vectors;
-        the elements in the field <m>F</m> are scalars.
-        We can think of addition in <m>E</m> as adding vectors.
-        When we multiply an element in <m>E</m> by an element of <m>F</m>,
-        we are multiplying a vector by a scalar.
-        This view of field extensions is especially fruitful if a field extension <m>E</m> of <m>F</m> is a finite dimensional vector space over <m>F</m>,
-        and <xref ref="fields-theorem-simple_extension"/> states that
-        <m>E = F(\alpha )</m> is finite dimensional vector space over <m>F</m> with basis <m>\{ 1, \alpha, {\alpha}^2, \ldots, {\alpha}^{n - 1} \}</m>.
+        Seja <m>E</m> um corpo de extensão de um corpo <m>F</m>.
+        Se considerarmos <m>E</m> como um espaço vetorial sobre <m>F</m>,
+        poderemos aplicar as ferramentas da álgebra linear aos problemas que encontraremos em nosso estudo dos corpos.
+        Os elementos do corpo <m>E</m> são vetores;
+        os elementos do corpo <m>F</m> são escalares.
+        Podemos pensar na adição em <m>E</m> como adição de vetores.
+        Quando multiplicamos um elemento de <m>E</m> por um elemento de <m>F</m>,
+        estamos multiplicando um vetor por um escalar.
+        Essa visão das extensões de corpos é especialmente proveitosa quando um corpo de extensão <m>E</m> de <m>F</m> é um espaço vetorial de dimensão finita sobre <m>F</m>,
+        e o <xref ref="fields-theorem-simple_extension"/> afirma que
+        <m>E = F(\alpha )</m> é um espaço vetorial de dimensão finita sobre <m>F</m>, com base <m>\{ 1, \alpha, {\alpha}^2, \ldots, {\alpha}^{n - 1} \}</m>.
       </p>
 
       <p>
-        If an extension field <m>E</m> of a field <m>F</m> is a finite dimensional vector space over <m>F</m> of dimension <m>n</m>,
-        then we say that <m>E</m> is a 
-        <idx><h>Extension</h><h>finite</h></idx><term>finite extension of degree <m>n</m> over <m>F</m></term>. 
-        We write
+        Se um corpo de extensão <m>E</m> de um corpo <m>F</m> é um espaço vetorial de dimensão finita sobre <m>F</m>, de dimensão <m>n</m>,
+        então dizemos que <m>E</m> é uma
+        <idx><h>Extensão</h><h>finita</h></idx><term>extensão finita de grau <m>n</m> sobre <m>F</m></term>.
+        Escrevemos
         <md>
           [E:F]= n
         </md>.
-        to indicate the dimension of <m>E</m> over <m>F</m>.
+        para indicar a dimensão de <m>E</m> sobre <m>F</m>.
 
         <notation>
           <usage><m>[E:F]</m></usage>
-          <description>dimension of a field extension of <m>E</m> over <m>F</m></description>
+          <description>dimensão de uma extensão de corpos de <m>E</m> sobre <m>F</m></description>
         </notation>
 
       </p>
@@ -534,52 +534,52 @@
       <theorem xml:id="fields-theorem-finite-extension">
         <statement>
           <p>
-            Every finite extension field <m>E</m> of a field <m>F</m> is an algebraic extension.
+            Todo corpo de extensão finita <m>E</m> de um corpo <m>F</m> é uma extensão algébrica.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\alpha \in E</m>.
-            Since <m>[E:F] = n</m>, the elements
+            Seja <m>\alpha \in E</m>.
+            Como <m>[E:F] = n</m>, os elementos
             <md>
               1, \alpha, \ldots, {\alpha}^n
             </md>
-            cannot be linearly independent.
-            Hence, there exist <m>a_i \in F</m>, not all zero, such that
+            não podem ser linearmente independentes.
+            Portanto, existem <m>a_i \in F</m>, não todos zero, tais que
             <md>
               a_n {\alpha}^n + a_{n - 1} {\alpha}^{n - 1} + \cdots + a_1 \alpha + a_0 = 0
             </md>.
-            Therefore,
+            Consequentemente,
             <md>
               p(x) = a_n x^n + \cdots + a_0 \in F[x]
             </md>
-            is a nonzero polynomial with <m>p( \alpha ) = 0</m>.
+            é um polinômio não nulo tal que <m>p( \alpha ) = 0</m>.
           </p>
         </proof>
       </theorem>
 
       <remark>
         <p>
-          <xref ref="fields-theorem-finite-extension"/> says that every finite extension of a field <m>F</m> is an algebraic extension.
-          The converse is false, however.
-          We will leave it as an exercise to show that the set of all elements in
-          <m>{\mathbb R}</m> that are algebraic over
-          <m>{\mathbb Q}</m> forms an infinite field extension of <m>{\mathbb Q}</m>.
+          O <xref ref="fields-theorem-finite-extension"/> afirma que toda extensão finita de um corpo <m>F</m> é uma extensão algébrica.
+          A recíproca, no entanto, é falsa.
+          Deixamos como exercício mostrar que o conjunto de todos os elementos de
+          <m>{\mathbb R}</m> que são algébricos sobre
+          <m>{\mathbb Q}</m> forma uma extensão infinita de corpos de <m>{\mathbb Q}</m>.
         </p>
       </remark>
 
       <p>
-        The next theorem is a counting theorem,
-        similar to Lagrange's Theorem in group theory.
-        <xref ref="fields-theorem-tower-indices"/> will prove to be an extremely useful tool in our investigation of finite field extensions.
+        O teorema seguinte é um teorema de contagem,
+        semelhante ao Teorema de Lagrange da teoria dos grupos.
+        O <xref ref="fields-theorem-tower-indices"/> será uma ferramenta extremamente útil em nossa investigação das extensões finitas de corpos.
       </p>
             <!--Changed the refrerence in the preceding paragraph to the next theorem instead of the previous theorem.  TWJ 13/6/2014-->
       <theorem xml:id="fields-theorem-tower-indices">
         <statement>
           <p>
-            If <m>E</m> is a finite extension of <m>F</m> and <m>K</m> is a finite extension of <m>E</m>,
-            then <m>K</m> is a finite extension of <m>F</m> and
+            Se <m>E</m> é uma extensão finita de <m>F</m> e <m>K</m> é uma extensão finita de <m>E</m>,
+            então <m>K</m> é uma extensão finita de <m>F</m> e
             <md>
               [K:F]= [K:E] [E:F]
             </md>.
@@ -588,67 +588,67 @@
 
         <proof>
           <p>
-            Let <m>\{ \alpha_1, \ldots, \alpha_n \}</m> be a basis for <m>E</m> as a vector space over <m>F</m> and
-            <m>\{ \beta_1, \ldots, \beta_m \}</m> be a basis for <m>K</m> as a vector space over <m>E</m>.
-            We claim that <m>\{ \alpha_i \beta_j \}</m> is a basis for <m>K</m> over <m>F</m>.
-            We will first show that these vectors span <m>K</m>.
-            Let <m>u \in K</m>.
-            Then <m>u = \sum_{j = 1}^{m} b_j \beta_j</m> and <m>b_j = \sum_{i = 1}^{n} a_{ij} \alpha_i</m>,
-            where <m>b_j \in E</m> and <m>a_{ij} \in F</m>.
-            Then
+            Seja <m>\{ \alpha_1, \ldots, \alpha_n \}</m> uma base de <m>E</m> como espaço vetorial sobre <m>F</m> e
+            <m>\{ \beta_1, \ldots, \beta_m \}</m> uma base de <m>K</m> como espaço vetorial sobre <m>E</m>.
+            Afirmamos que <m>\{ \alpha_i \beta_j \}</m> é uma base de <m>K</m> sobre <m>F</m>.
+            Primeiro mostraremos que esses vetores geram <m>K</m>.
+            Seja <m>u \in K</m>.
+            Então <m>u = \sum_{j = 1}^{m} b_j \beta_j</m> e <m>b_j = \sum_{i = 1}^{n} a_{ij} \alpha_i</m>,
+            onde <m>b_j \in E</m> e <m>a_{ij} \in F</m>.
+            Então
             <md>
               u = \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} a_{ij} \alpha_i  \right) \beta_j = \sum_{i,j} a_{ij} ( \alpha_i \beta_j )
             </md>.
-            So the <m>mn</m> vectors <m>\alpha_i \beta_j</m> must span <m>K</m> over <m>F</m>.
+            Portanto, os <m>mn</m> vetores <m>\alpha_i \beta_j</m> devem gerar <m>K</m> sobre <m>F</m>.
           </p>
 
           <p>
-            We must show that <m>\{ \alpha_i \beta_j \}</m> are linearly independent.
-            Recall that a set of vectors
+            Devemos mostrar que <m>\{ \alpha_i \beta_j \}</m> são linearmente independentes.
+            Lembre-se de que um conjunto de vetores
             <m>v_1, v_2, \ldots,
-            v_n</m> in a vector space <m>V</m> are linearly independent if
+            v_n</m> em um espaço vetorial <m>V</m> são linearmente independentes se
             <md>
               c_1 v_1 + c_2 v_2 + \cdots + c_n v_n = 0
             </md>
-            implies that
+            implica que
             <md>
               c_1 = c_2 = \cdots = c_n = 0
             </md>.
-            Let
+            Seja
             <md>
               u = \sum_{i,j} c_{ij} ( \alpha_i \beta_j ) = 0
             </md>
-            for <m>c_{ij} \in F</m>.
-            We need to prove that all of the <m>c_{ij}</m>'s are zero.
-            We can rewrite <m>u</m> as
+            para <m>c_{ij} \in F</m>.
+            Precisamos provar que todos os <m>c_{ij}</m> são zero.
+            Podemos reescrever <m>u</m> como
             <md>
               \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} c_{ij} \alpha_i \right) \beta_j = 0
             </md>,
-            where <m>\sum_i c_{ij} \alpha_i \in E</m>.
-            Since the <m>\beta_j</m>'s are linearly independent over <m>E</m>,
-            it must be the case that
+            onde <m>\sum_i c_{ij} \alpha_i \in E</m>.
+            Como os <m>\beta_j</m> são linearmente independentes sobre <m>E</m>,
+            deve ocorrer que
             <md>
               \sum_{i = 1}^n c_{ij} \alpha_i = 0
             </md>
-            for all <m>j</m>.
-            However, the <m>\alpha_j</m> are also linearly independent  over <m>F</m>.
-            Therefore, <m>c_{ij} = 0</m> for all <m>i</m> and <m>j</m>,
-            which completes the proof.
+            para todo <m>j</m>.
+            No entanto, os <m>\alpha_j</m> também são linearmente independentes sobre <m>F</m>.
+            Portanto, <m>c_{ij} = 0</m> para todos <m>i</m> e <m>j</m>,
+            o que conclui a prova.
           </p>
         </proof>
       </theorem>
 
       <p>
-        The following corollary is easily proved using mathematical induction.
+        O corolário seguinte é facilmente provado por indução matemática.
       </p>
 
       <corollary>
         <statement>
           <p>
-            If <m>F_i</m> is a field for
+            Se <m>F_i</m> é um corpo para
             <m>i = 1, \dots,
-            k</m> and <m>F_{i+1}</m> is a finite extension of <m>F_i</m>,
-            then <m>F_k</m> is a finite extension of <m>F_1</m> and
+            k</m> e <m>F_{i+1}</m> é uma extensão finita de <m>F_i</m>,
+            então <m>F_k</m> é uma extensão finita de <m>F_1</m> e
             <md>
               [F_k : F_1] = [F_k : F_{k-1} ] \cdots [F_2 : F_1 ]
             </md>.
@@ -659,17 +659,17 @@
       <corollary>
         <statement>
           <p>
-            Let <m>E</m> be an extension field of <m>F</m>.
-            If <m>\alpha \in E</m> is algebraic over <m>F</m> with minimal polynomial <m>p(x)</m> and
-            <m>\beta \in F( \alpha )</m> with minimal polynomial <m>q(x)</m>,
-            then <m>\deg q(x)</m> divides <m>\deg p(x)</m>.
+            Seja <m>E</m> um corpo de extensão de <m>F</m>.
+            Se <m>\alpha \in E</m> é algébrico sobre <m>F</m>, com polinômio mínimo <m>p(x)</m>, e
+            <m>\beta \in F( \alpha )</m> tem polinômio mínimo <m>q(x)</m>,
+            então <m>\deg q(x)</m> divide <m>\deg p(x)</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            We know that <m>\deg p(x) = [F( \alpha ) : F ]</m> and <m>\deg q(x) = [F( \beta ) : F ]</m>.
-            Since <m>F \subset F( \beta ) \subset F( \alpha )</m>,
+            Sabemos que <m>\deg p(x) = [F( \alpha ) : F ]</m> e <m>\deg q(x) = [F( \beta ) : F ]</m>.
+            Como <m>F \subset F( \beta ) \subset F( \alpha )</m>,
             <md>
               [F( \alpha ) : F ]= [ F( \alpha ) : F( \beta ) ] [ F( \beta ) : F ]
             </md>.
@@ -679,83 +679,83 @@
 
       <example xml:id="fields-example-sqrt3-sqrt5">
         <p>
-          Let us determine an extension field of
-          <m>{\mathbb Q}</m> containing <m>\sqrt{3} + \sqrt{5}</m>.
-          It is easy to determine that the minimal  polynomial of
-          <m>\sqrt{3} + \sqrt{5}</m> is <m>x^4 - 16 x^2 + 4</m>.
-          It follows that
+          Vamos determinar um corpo de extensão de
+          <m>{\mathbb Q}</m> que contenha <m>\sqrt{3} + \sqrt{5}</m>.
+          É fácil determinar que o polinômio mínimo de
+          <m>\sqrt{3} + \sqrt{5}</m> é <m>x^4 - 16 x^2 + 4</m>.
+          Segue que
           <md>
             [{\mathbb Q}( \sqrt{3} + \sqrt{5}\, ) : {\mathbb Q} ] = 4
           </md>.
-          We know that <m>\{ 1, \sqrt{3}\, \}</m> is a basis for 
-          <m>{\mathbb Q}( \sqrt{3}\, )</m> over <m>{\mathbb Q}</m>.
-          Hence, <m>\sqrt{3} + \sqrt{5}</m> cannot be in <m>{\mathbb Q}( \sqrt{3}\, )</m>.
-          It follows that <m>\sqrt{5}</m> cannot be in <m>{\mathbb Q}( \sqrt{3}\, )</m> either.
-          Therefore, <m>\{ 1, \sqrt{5}\, \}</m> is a basis for <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )</m> over
-          <m>{\mathbb Q}( \sqrt{3}\, )</m> and <m>\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}</m> is a basis for
-          <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )</m> over <m>{\mathbb Q}</m>.
-          This example shows that it is possible that some extension
-          <m>F( \alpha_1, \ldots, \alpha_n )</m> is actually a simple extension of <m>F</m> even though <m>n \gt 1</m>.
+          Sabemos que <m>\{ 1, \sqrt{3}\, \}</m> é uma base de
+          <m>{\mathbb Q}( \sqrt{3}\, )</m> sobre <m>{\mathbb Q}</m>.
+          Portanto, <m>\sqrt{3} + \sqrt{5}</m> não pode pertencer a <m>{\mathbb Q}( \sqrt{3}\, )</m>.
+          Daí também segue que <m>\sqrt{5}</m> não pode pertencer a <m>{\mathbb Q}( \sqrt{3}\, )</m>.
+          Portanto, <m>\{ 1, \sqrt{5}\, \}</m> é uma base de <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )</m> sobre
+          <m>{\mathbb Q}( \sqrt{3}\, )</m> e <m>\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}</m> é uma base de
+          <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )</m> sobre <m>{\mathbb Q}</m>.
+          Este exemplo mostra que é possível que alguma extensão
+          <m>F( \alpha_1, \ldots, \alpha_n )</m> seja, na realidade, uma extensão simples de <m>F</m>, embora <m>n \gt 1</m>.
         </p>
       </example>
             <!-- Changed minimal polynomial from  <m>x^4 - 16 x + 4</m> to <m>x^4 - 16 x^2 + 4</m>.  Discovered by Bradley Noyes - TWJ 3/25/2011 -->
       <example xml:id="fields-example-cubert5-sqrt5-i">
         <p>
-          Let us compute a basis for <m>{\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )</m>,
-          where <m>\sqrt{5}</m> is the positive square root of <m>5</m> and
-          <m>\sqrt[3]{5}</m> is the real cube root of <m>5</m>.
-          We know that <m>\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )</m>, so
+          Vamos calcular uma base para <m>{\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )</m>,
+          onde <m>\sqrt{5}</m> é a raiz quadrada positiva de <m>5</m> e
+          <m>\sqrt[3]{5}</m> é a raiz cúbica real de <m>5</m>.
+          Sabemos que <m>\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )</m>, portanto
           <md>
             [ {\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i) : {\mathbb Q}(\sqrt[3]{5}\, )] = 2
           </md>.
-          It is easy to determine that <m>\{ 1, \sqrt{5}i\, \}</m> is a basis for
-          <m>{\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m> over <m>{\mathbb Q}( \sqrt[3]{5}\, )</m>.
-          We also know that <m>\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}</m> is a basis for
-          <m>{\mathbb Q}(\sqrt[3]{5}\, )</m> over <m>{\mathbb Q}</m>.
-          Hence, a basis for <m>{\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )</m> over <m>{\mathbb Q}</m> is
+          É fácil determinar que <m>\{ 1, \sqrt{5}i\, \}</m> é uma base de
+          <m>{\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m> sobre <m>{\mathbb Q}( \sqrt[3]{5}\, )</m>.
+          Também sabemos que <m>\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}</m> é uma base de
+          <m>{\mathbb Q}(\sqrt[3]{5}\, )</m> sobre <m>{\mathbb Q}</m>.
+          Portanto, uma base de <m>{\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )</m> sobre <m>{\mathbb Q}</m> é
           <md>
-            \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ or } \sqrt[6]{5}\, i \}
+            \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ ou } \sqrt[6]{5}\, i \}
           </md>.
-          Notice that <m>\sqrt[6]{5}\, i</m> is a zero of <m>x^6 + 5</m>.
-          We can show that this polynomial is irreducible over
-          <m>{\mathbb Q}</m> using Eisenstein's Criterion,
-          where we let <m>p = 5</m>.
-          Consequently,
+          Observe que <m>\sqrt[6]{5}\, i</m> é um zero de <m>x^6 + 5</m>.
+          Podemos mostrar que esse polinômio é irredutível sobre
+          <m>{\mathbb Q}</m> usando o Critério de Eisenstein,
+          tomando <m>p = 5</m>.
+          Consequentemente,
           <md>
             {\mathbb Q} \subset {\mathbb Q}( \sqrt[6]{5}\, i) \subset {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )
           </md>.
-          But it must be the case that <m>{\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m>,
-          since the degree of both of these extensions is <m>6</m>.
+          Mas necessariamente <m>{\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m>,
+          pois o grau de ambas as extensões é <m>6</m>.
         </p>
       </example>
             <!-- Corrected typo in the last set inclusion.  Suggest2/9/2013 -->
       <theorem>
         <statement>
           <p>
-            Let <m>E</m> be a field extension of <m>F</m>.
-            Then  the following statements are equivalent.
+            Seja <m>E</m> um corpo de extensão de <m>F</m>.
+            Então as afirmações seguintes são equivalentes.
 
             <ol>
               <li>
                 <p>
-                  <m>E</m> is a finite extension of <m>F</m>.
+                  <m>E</m> é uma extensão finita de <m>F</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  There exists a finite number of algebraic elements
-                  <m>\alpha_1, \ldots, \alpha_n \in E</m> such that <m>E = F(\alpha_1, \ldots, \alpha_n)</m>.
+                  Existe um número finito de elementos algébricos
+                  <m>\alpha_1, \ldots, \alpha_n \in E</m> tal que <m>E = F(\alpha_1, \ldots, \alpha_n)</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  There exists a sequence of fields
+                  Existe uma sequência de corpos
                   <md>
                     E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n-1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
                   </md>,
-                  where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i-1})</m>.
+                  em que cada corpo <m>F(\alpha_1, \ldots, \alpha_i)</m> é algébrico sobre <m>F(\alpha_1, \ldots, \alpha_{i-1})</m>.
                 </p>
               </li>
             </ol>
@@ -765,59 +765,59 @@
         <proof>
           <p>
             (1) <m>\Rightarrow</m> (2).
-            Let <m>E</m> be a finite algebraic extension of <m>F</m>.
-            Then <m>E</m> is a finite dimensional vector space over <m>F</m> and there exists a basis consisting of elements
-            <m>\alpha_1, \ldots, \alpha_n</m> in <m>E</m> such that <m>E = F(\alpha_1, \ldots, \alpha_n)</m>.
-            Each <m>\alpha_i</m> is algebraic over <m>F</m> by <xref ref="fields-theorem-finite-extension"/>.
+            Seja <m>E</m> uma extensão algébrica finita de <m>F</m>.
+            Então <m>E</m> é um espaço vetorial de dimensão finita sobre <m>F</m> e existe uma base formada por elementos
+            <m>\alpha_1, \ldots, \alpha_n</m> de <m>E</m> tal que <m>E = F(\alpha_1, \ldots, \alpha_n)</m>.
+            Cada <m>\alpha_i</m> é algébrico sobre <m>F</m> pelo <xref ref="fields-theorem-finite-extension"/>.
           </p>
 
           <p>
             (2) <m>\Rightarrow</m> (3).
-            Suppose that <m>E = F(\alpha_1, \ldots, \alpha_n)</m>,
-            where every <m>\alpha_i</m> is algebraic over <m>F</m>.
-            Then
+            Suponha que <m>E = F(\alpha_1, \ldots, \alpha_n)</m>,
+            onde todo <m>\alpha_i</m> é algébrico sobre <m>F</m>.
+            Então
             <md>
               E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
             </md>,
-            where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
+            onde cada corpo <m>F(\alpha_1, \ldots, \alpha_i)</m> é algébrico sobre <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
           </p>
 
           <p>
             (3) <m>\Rightarrow</m> (1).
-            Let
+            Seja
             <md>
               E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F
             </md>,
-            where each field <m>F(\alpha_1, \ldots, \alpha_i)</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
-            Since
+            onde cada corpo <m>F(\alpha_1, \ldots, \alpha_i)</m> é algébrico sobre <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>.
+            Como
             <md>
               F(\alpha_1, \ldots, \alpha_i) =  F(\alpha_1, \ldots, \alpha_{i - 1} )(\alpha_i)
             </md>
-            is simple extension and <m>\alpha_i</m> is algebraic over <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>,
-            it follows that
+            é uma extensão simples e <m>\alpha_i</m> é algébrico sobre <m>F(\alpha_1, \ldots, \alpha_{i - 1})</m>,
+            segue que
             <md>
               [ F(\alpha_1, \ldots, \alpha_i) : F(\alpha_1, \ldots, \alpha_{i - 1} )]
             </md>
-            is finite for each <m>i</m>.
-            Therefore, <m>[E : F]</m> is finite.
+            é finito para cada <m>i</m>.
+            Portanto, <m>[E : F]</m> é finito.
           </p>
         </proof>
       </theorem>
     </subsection>
 
     <subsection xml:id="fields-subsection-algebraic-closure">
-      <title>Algebraic Closure</title>
+      <title>Fecho Algébrico</title>
       <p>
-        Given a field <m>F</m>,
-        the question arises as to whether or not we can find a field <m>E</m> such that every polynomial <m>p(x)</m> has a root in <m>E</m>.
-        This leads us to the following theorem.
+        Dado um corpo <m>F</m>,
+        surge a questão de saber se podemos encontrar um corpo <m>E</m> tal que todo polinômio <m>p(x)</m> tenha uma raiz em <m>E</m>.
+        Isso nos leva ao teorema seguinte.
       </p>
 
       <theorem>
         <statement>
           <p>
-            Let <m>E</m> be an extension field of <m>F</m>.
-            The set of elements in <m>E</m> that are algebraic over <m>F</m> form a field.
+            Seja <m>E</m> um corpo de extensão de <m>F</m>.
+            O conjunto dos elementos de <m>E</m> que são algébricos sobre <m>F</m> forma um corpo.
           </p>
         </statement>
             <!--  Changed <m>\alpha \pm \beta</m>, $\alpha / -->
@@ -825,13 +825,13 @@
             <!-- \beta<m>, and </m>\alpha / \beta$  Suggested by Aleks Vlasev. - TWJ 8/10/2011 -->
         <proof>
           <p>
-            Let <m>\alpha, \beta \in E</m> be algebraic over <m>F</m>.
-            Then <m>F( \alpha, \beta )</m> is a finite extension of <m>F</m>.
-            Since every element of <m>F( \alpha, \beta )</m> is algebraic over <m>F</m>,
-            <m>\alpha \pm \beta</m>, <m>\alpha \beta</m>,
-            and <m>\alpha / \beta</m> (<m>\beta \neq 0</m>) are all algebraic over <m>F</m>.
-            Consequently,
-            the set of elements in <m>E</m> that are algebraic over <m>F</m> form a field.
+            Sejam <m>\alpha, \beta \in E</m> algébricos sobre <m>F</m>.
+            Então <m>F( \alpha, \beta )</m> é uma extensão finita de <m>F</m>.
+            Como todo elemento de <m>F( \alpha, \beta )</m> é algébrico sobre <m>F</m>,
+            <m>\alpha \pm \beta</m>, <m>\alpha \beta</m>
+            e <m>\alpha / \beta</m> (<m>\beta \neq 0</m>) são todos algébricos sobre <m>F</m>.
+            Consequentemente,
+            o conjunto dos elementos de <m>E</m> que são algébricos sobre <m>F</m> forma um corpo.
           </p>
         </proof>
       </theorem>
@@ -839,46 +839,46 @@
       <corollary xml:id="fields-corollary-algebraic-numbers-field">
         <statement>
           <p>
-            The set of all algebraic numbers forms a field;
-            that is, the set of all complex numbers that are algebraic over <m>{\mathbb Q}</m> makes up a field.
+            O conjunto de todos os números algébricos forma um corpo;
+            isto é, o conjunto de todos os números complexos que são algébricos sobre <m>{\mathbb Q}</m> constitui um corpo.
           </p>
         </statement>
       </corollary>
 
       <p>
-        Let <m>E</m> be a field extension of a field <m>F</m>.
-        We define the <term>algebraic closure</term><idx><h>Algebraic closure</h></idx>
-        of a field <m>F</m> in <m>E</m> to be the field consisting of all elements in <m>E</m> that are algebraic over <m>F</m>.
-        A field <m>F</m> is <term>algebraically closed</term><idx><h>Field</h><h>algebraically closed</h></idx> if every nonconstant polynomial in <m>F[x]</m> has a root in <m>F</m>.
+        Seja <m>E</m> um corpo de extensão de um corpo <m>F</m>.
+        Definimos o <term>fecho algébrico</term><idx><h>Fecho algébrico</h></idx>
+        de um corpo <m>F</m> em <m>E</m> como o corpo formado por todos os elementos de <m>E</m> que são algébricos sobre <m>F</m>.
+        Um corpo <m>F</m> é <term>algebricamente fechado</term><idx><h>Corpo</h><h>algebricamente fechado</h></idx> se todo polinômio não constante em <m>F[x]</m> possui uma raiz em <m>F</m>.
       </p>
 
       <theorem>
         <statement>
           <p>
-            A field <m>F</m> is algebraically closed if and only if every nonconstant polynomial in <m>F[x]</m> factors into linear factors over <m>F[x]</m>.
+            Um corpo <m>F</m> é algebricamente fechado se, e somente se, todo polinômio não constante em <m>F[x]</m> se fatora em fatores lineares sobre <m>F[x]</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>F</m> be an algebraically closed field.
-            If <m>p(x) \in F[x]</m> is a nonconstant polynomial,
-            then <m>p(x)</m> has a zero in <m>F</m>, say <m>\alpha</m>.
-            Therefore, <m>x-\alpha</m> must be a factor of <m>p(x)</m> and so <m>p(x) = (x - \alpha) q_1(x)</m>,
-            where <m>\deg q_1(x) = \deg p(x) - 1</m>.
-            Continue this process with <m>q_1(x)</m> to find a factorization
+            Seja <m>F</m> um corpo algebricamente fechado.
+            Se <m>p(x) \in F[x]</m> é um polinômio não constante,
+            então <m>p(x)</m> possui um zero em <m>F</m>, digamos <m>\alpha</m>.
+            Portanto, <m>x-\alpha</m> deve ser um fator de <m>p(x)</m> e, assim, <m>p(x) = (x - \alpha) q_1(x)</m>,
+            onde <m>\deg q_1(x) = \deg p(x) - 1</m>.
+            Continue esse processo com <m>q_1(x)</m> para obter uma fatoração
             <md>
               p(x) = (x - \alpha)(x - \beta)q_2(x)
             </md>,
-            where <m>\deg q_2(x) = \deg p(x) -2</m>.
-            The process must eventually stop since the degree of <m>p(x)</m> is finite.
+            onde <m>\deg q_2(x) = \deg p(x) -2</m>.
+            O processo deve terminar, pois o grau de <m>p(x)</m> é finito.
           </p>
 
           <p>
-            Conversely, suppose that every nonconstant polynomial <m>p(x)</m> in <m>F[x]</m> factors into linear factors.
-            Let <m>ax - b</m> be such a factor.
-            Then <m>p( b/a ) = 0</m>.
-            Consequently, <m>F</m> is algebraically closed.
+            Reciprocamente, suponha que todo polinômio não constante <m>p(x)</m> em <m>F[x]</m> se fatore em fatores lineares.
+            Seja <m>ax - b</m> um desses fatores.
+            Então <m>p( b/a ) = 0</m>.
+            Consequentemente, <m>F</m> é algebricamente fechado.
           </p>
         </proof>
       </theorem>
@@ -886,17 +886,17 @@
       <corollary>
         <statement>
           <p>
-            An algebraically closed field <m>F</m> has no proper algebraic extension <m>E</m>.
+            Um corpo algebricamente fechado <m>F</m> não possui extensão algébrica própria <m>E</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>E</m> be an algebraic extension of <m>F</m>;
-            then <m>F \subset E</m>.
-            For <m>\alpha \in E</m>,
-            the minimal polynomial of <m>\alpha</m> is <m>x - \alpha</m>.
-            Therefore, <m>\alpha \in F</m> and <m>F = E</m>.
+            Seja <m>E</m> uma extensão algébrica de <m>F</m>;
+            então <m>F \subset E</m>.
+            Para <m>\alpha \in E</m>,
+            o polinômio mínimo de <m>\alpha</m> é <m>x - \alpha</m>.
+            Portanto, <m>\alpha \in F</m> e <m>F = E</m>.
           </p>
         </proof>
       </corollary>
@@ -904,34 +904,34 @@
       <theorem>
         <statement>
           <p>
-            Every field <m>F</m> has a unique algebraic closure.
+            Todo corpo <m>F</m> possui um único fecho algébrico.
           </p>
         </statement>
       </theorem>
 
       <p>
-        It is a nontrivial fact that every field has a unique algebraic closure.
-        The proof is not extremely difficult,
-        but requires some rather sophisticated set theory.
-        We refer the reader to [3], [4], or [8] for a proof of this result.
+        É um fato não trivial que todo corpo possui um único fecho algébrico.
+        A prova não é extremamente difícil,
+        mas requer uma teoria dos conjuntos bastante sofisticada.
+        Remetemos o leitor a [3], [4] ou [8] para uma prova desse resultado.
       </p>
             <!-- not sure how to number these references within the chapter - 19 August 2010 - TWJ -->
       <p>
-        We now state the Fundamental Theorem of Algebra,
-        first proven by Gauss at the age of 22 in his doctoral thesis.
-        This theorem states that every polynomial with coefficients in the complex numbers has a root in the complex numbers.
-        The proof of this theorem will be given in <xref ref="galois"/>.
+        Enunciamos agora o Teorema Fundamental da Álgebra,
+        provado pela primeira vez por Gauss aos 22 anos, em sua tese de doutorado.
+        Esse teorema afirma que todo polinômio com coeficientes nos números complexos possui uma raiz nos números complexos.
+        A prova desse teorema será apresentada em <xref ref="galois"/>.
       </p>
 
       <theorem>
         <title>Fundamental Theorem of Algebra</title>
         <idx>
-        <h>Fundamental Theorem</h>
-        <h>of Algebra</h>
+        <h>Teorema Fundamental</h>
+        <h>da Álgebra</h>
         </idx>
         <statement>
           <p>
-            The field of complex numbers is algebraically closed.
+            O corpo dos números complexos é algebricamente fechado.
           </p>
         </statement>
       </theorem>
@@ -939,147 +939,147 @@
   </section>
 
   <section xml:id="fields-section-splitting-fields">
-    <title>Splitting Fields</title>
+    <title>Corpos de Decomposição</title>
     <p>
-      Let <m>F</m> be a field and <m>p(x)</m> be a nonconstant polynomial in <m>F[x]</m>.
-      We already know that we can find a field extension of <m>F</m> that contains a root of <m>p(x)</m>.
-      However, we would like to know whether an extension <m>E</m> of <m>F</m> containing all of the roots of <m>p(x)</m> exists.
-      In other words,
-      can we find a field extension of <m>F</m> such that <m>p(x)</m> factors into a product of linear polynomials?
-      What is the <q>smallest</q> extension containing all the roots of <m>p(x)</m>?
+      Seja <m>F</m> um corpo e <m>p(x)</m> um polinômio não constante em <m>F[x]</m>.
+      Já sabemos que podemos encontrar um corpo de extensão de <m>F</m> que contenha uma raiz de <m>p(x)</m>.
+      No entanto, gostaríamos de saber se existe uma extensão <m>E</m> de <m>F</m> que contenha todas as raízes de <m>p(x)</m>.
+      Em outras palavras,
+      podemos encontrar um corpo de extensão de <m>F</m> tal que <m>p(x)</m> se fatore como produto de polinômios lineares?
+      Qual é a extensão <q>menor</q> que contém todas as raízes de <m>p(x)</m>?
     </p>
 
     <p>
-      Let <m>F</m> be a field and
-      <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n</m> be a nonconstant polynomial in <m>F[x]</m>.
-      An extension field <m>E</m> of <m>F</m> is a
-      <term>splitting field</term><idx><h>Splitting field</h></idx><idx><h>Field</h><h>splitting</h></idx>
-      of <m>p(x)</m> if there exist elements
-      <m>\alpha_1, \ldots, \alpha_n</m> in <m>E</m> such that <m>E = F( \alpha_1, \ldots, \alpha_n )</m> and
+      Seja <m>F</m> um corpo e
+      <m>p(x) = a_0 + a_1 x + \cdots + a_n x^n</m> um polinômio não constante em <m>F[x]</m>.
+      Um corpo de extensão <m>E</m> de <m>F</m> é um
+      <term>corpo de decomposição</term><idx><h>Corpo de decomposição</h></idx><idx><h>Corpo</h><h>decomposição</h></idx>
+      de <m>p(x)</m> se existem elementos
+      <m>\alpha_1, \ldots, \alpha_n</m> em <m>E</m> tais que <m>E = F( \alpha_1, \ldots, \alpha_n )</m> e
       <md>
         p(x) = ( x - \alpha_1 )(x - \alpha_2) \cdots (x - \alpha_n)
       </md>.
-      A polynomial <m>p(x) \in F[x]</m> <term>splits</term>
-      in <m>E</m> if it is the product of linear factors in <m>E[x]</m>.
+      Um polinômio <m>p(x) \in F[x]</m> <term>se decompõe</term>
+      em <m>E</m> se é o produto de fatores lineares em <m>E[x]</m>.
     </p>
 
     <example xml:id="fields-example-splitting">
       <p>
-        Let <m>p(x) = x^4 + 2x^2 - 8</m> be in <m>{\mathbb Q}[x]</m>.
-        Then <m>p(x)</m> has irreducible factors <m>x^2 -2</m> and <m>x^2 + 4</m>.
-        Therefore, the field <m>{\mathbb Q}( \sqrt{2}, i )</m> is a splitting field for <m>p(x)</m>.
+        Seja <m>p(x) = x^4 + 2x^2 - 8</m> um polinômio em <m>{\mathbb Q}[x]</m>.
+        Então <m>p(x)</m> possui os fatores irredutíveis <m>x^2 -2</m> e <m>x^2 + 4</m>.
+        Portanto, o corpo <m>{\mathbb Q}( \sqrt{2}, i )</m> é um corpo de decomposição de <m>p(x)</m>.
       </p>
     </example>
 
     <example xml:id="fields-example-cube-root-not-splitting">
       <p>
-        Let <m>p(x) = x^3 - 3</m> be in <m>{\mathbb Q}[x]</m>.
-        Then <m>p(x)</m> has a root in the field <m>{\mathbb Q}( \sqrt[3]{3}\, )</m>.
-        However, this field is not a splitting field for <m>p(x)</m> since the complex cube roots of <m>3</m>,
+        Seja <m>p(x) = x^3 - 3</m> um polinômio em <m>{\mathbb Q}[x]</m>.
+        Então <m>p(x)</m> possui uma raiz no corpo <m>{\mathbb Q}( \sqrt[3]{3}\, )</m>.
+        No entanto, esse corpo não é um corpo de decomposição de <m>p(x)</m>, pois as raízes cúbicas complexas de <m>3</m>,
         <md>
           \frac{ -\sqrt[3]{3} \pm (\sqrt[6]{3}\, )^5 i }{2}
         </md>,
-        are not in <m>{\mathbb Q}( \sqrt[3]{3}\, )</m>.
+        não pertencem a <m>{\mathbb Q}( \sqrt[3]{3}\, )</m>.
       </p>
     </example>
 
     <theorem>
       <statement>
         <p>
-          Let <m>p(x) \in F[x]</m> be a nonconstant polynomial.
-          Then there exists a splitting field <m>E</m> for <m>p(x)</m>.
+          Seja <m>p(x) \in F[x]</m> um polinômio não constante.
+          Então existe um corpo de decomposição <m>E</m> para <m>p(x)</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will use mathematical induction on the degree of <m>p(x)</m>.
-          If <m>\deg p(x) = 1</m>,
-          then <m>p(x)</m> is a linear polynomial and <m>E = F</m>.
-          Assume that the theorem is true for all polynomials of degree <m>k</m> with
-          <m>1 \leq k \lt n</m> and let <m>\deg p(x) = n</m>.
-          We can assume that <m>p(x)</m> is irreducible;
-          otherwise, by our induction hypothesis, we are done.
-          By <xref ref="fields-theorem-fundamental-of-field-theory"/>,
-          there exists a field <m>K</m> such that <m>p(x)</m> has a zero <m>\alpha_1</m> in <m>K</m>.
-          Hence, <m>p(x) = (x - \alpha_1)q(x)</m>,
-          where <m>q(x) \in K[x]</m>.
-          Since <m>\deg q(x) = n -1</m>,
-          there exists a splitting field
-          <m>E \supset K</m> of <m>q(x)</m> that contains the zeros
-          <m>\alpha_2, \ldots, \alpha_n</m> of <m>p(x)</m> by our induction hypothesis.
-          Consequently,
+          Usaremos indução matemática sobre o grau de <m>p(x)</m>.
+          Se <m>\deg p(x) = 1</m>,
+          então <m>p(x)</m> é um polinômio linear e <m>E = F</m>.
+          Suponha que o teorema seja verdadeiro para todos os polinômios de grau <m>k</m> com
+          <m>1 \leq k \lt n</m> e seja <m>\deg p(x) = n</m>.
+          Podemos supor que <m>p(x)</m> é irredutível;
+          caso contrário, pela hipótese de indução, já terminamos.
+          Pelo <xref ref="fields-theorem-fundamental-of-field-theory"/>,
+          existe um corpo <m>K</m> tal que <m>p(x)</m> possui um zero <m>\alpha_1</m> em <m>K</m>.
+          Logo, <m>p(x) = (x - \alpha_1)q(x)</m>,
+          onde <m>q(x) \in K[x]</m>.
+          Como <m>\deg q(x) = n -1</m>,
+          existe um corpo de decomposição
+          <m>E \supset K</m> de <m>q(x)</m> que contém os zeros
+          <m>\alpha_2, \ldots, \alpha_n</m> de <m>p(x)</m>, pela hipótese de indução.
+          Consequentemente,
           <md>
             E = K(\alpha_2, \ldots, \alpha_n) = F(\alpha_1, \ldots, \alpha_n)
           </md>
-          is a splitting field of <m>p(x)</m>.
+          é um corpo de decomposição de <m>p(x)</m>.
         </p>
       </proof>
     </theorem>
 
     <p>
-      The question of uniqueness now arises for splitting fields.
-      This question is answered in the affirmative.
-      Given two splitting fields <m>K</m> and <m>L</m> of a polynomial <m>p(x) \in F[x]</m>,
-      there exists a field isomorphism
-      <m>\phi : K \rightarrow L</m> that preserves <m>F</m>.
-      In order to prove this result,
-      we must first prove a lemma.
+      Surge agora a questão da unicidade dos corpos de decomposição.
+      Essa questão tem resposta afirmativa.
+      Dados dois corpos de decomposição <m>K</m> e <m>L</m> de um polinômio <m>p(x) \in F[x]</m>,
+      existe um isomorfismo de corpos
+      <m>\phi : K \rightarrow L</m> que fixa <m>F</m>.
+      Para provar esse resultado,
+      primeiro devemos provar um lema.
     </p>
 
     <lemma xml:id="fields-lemma-field-isomorphism">
       <statement>
         <p>
-          Let <m>\phi : E \rightarrow F</m> be an isomorphism of fields.
-          Let <m>K</m> be an extension field of <m>E</m> and
-          <m>\alpha \in K</m> be algebraic over <m>E</m> with minimal polynomial <m>p(x)</m>.
-          Suppose that <m>L</m> is an extension field of <m>F</m> such that <m>\beta</m> is root of the polynomial in <m>F[x]</m> obtained from <m>p(x)</m> under the image of <m>\phi</m>.
-          Then <m>\phi</m> extends to a unique isomorphism
-          <m>\overline{\phi} : E( \alpha ) \rightarrow F( \beta )</m> such that <m>\overline{\phi}( \alpha ) = \beta</m> and
-          <m>\overline{\phi}</m> agrees with <m>\phi</m> on <m>E</m>.
+          Seja <m>\phi : E \rightarrow F</m> um isomorfismo de corpos.
+          Seja <m>K</m> um corpo de extensão de <m>E</m> e
+          <m>\alpha \in K</m> algébrico sobre <m>E</m>, com polinômio mínimo <m>p(x)</m>.
+          Suponha que <m>L</m> seja um corpo de extensão de <m>F</m> tal que <m>\beta</m> seja uma raiz do polinômio em <m>F[x]</m> obtido de <m>p(x)</m> pela imagem de <m>\phi</m>.
+          Então <m>\phi</m> se estende a um único isomorfismo
+          <m>\overline{\phi} : E( \alpha ) \rightarrow F( \beta )</m> tal que <m>\overline{\phi}( \alpha ) = \beta</m> e
+          <m>\overline{\phi}</m> coincide com <m>\phi</m> em <m>E</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          If <m>p(x)</m> has degree <m>n</m>,
-          then by <xref ref="fields-theorem-simple_extension"/> we can write any element in
-          <m>E( \alpha )</m> as a linear combination of <m>1, \alpha, \ldots, \alpha^{n - 1}</m>.
-          Therefore, the isomorphism that we are seeking must be
+          Se <m>p(x)</m> tem grau <m>n</m>,
+          então, pelo <xref ref="fields-theorem-simple_extension"/>, podemos escrever qualquer elemento de
+          <m>E( \alpha )</m> como uma combinação linear de <m>1, \alpha, \ldots, \alpha^{n - 1}</m>.
+          Portanto, o isomorfismo que procuramos deve ser
           <md>
             \overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}
           </md>,
-          where
+          onde
           <md>
             a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
           </md>
-          is an element in <m>E(\alpha)</m>.
-          The fact that <m>\overline{\phi}</m> is an isomorphism could be checked by direct computation;
-          however, it is easier to observe that
-          <m>\overline{\phi}</m> is a composition of maps that we already know to be isomorphisms.
+          é um elemento de <m>E(\alpha)</m>.
+          O fato de que <m>\overline{\phi}</m> é um isomorfismo poderia ser verificado por um cálculo direto;
+          no entanto, é mais fácil observar que
+          <m>\overline{\phi}</m> é uma composição de aplicações que já sabemos serem isomorfismos.
         </p>
 
         <p>
-          We can extend <m>\phi</m> to be an isomorphism from <m>E[x]</m> to <m>F[x]</m>,
-          which we will also denote by <m>\phi</m>, by letting
+          Podemos estender <m>\phi</m> a um isomorfismo de <m>E[x]</m> em <m>F[x]</m>,
+          que também denotaremos por <m>\phi</m>, definindo
           <md>
             \phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n
           </md>.
-          This extension agrees with the original isomorphism <m>\phi : E \rightarrow F</m>,
-          since constant polynomials get mapped to constant polynomials.
-          By assumption, <m>\phi(p(x)) = q(x)</m>;
-          hence, <m>\phi</m> maps <m>\langle p(x) \rangle</m> onto <m>\langle q(x) \rangle</m>.
-          Consequently,
-          we have an isomorphism <m>\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle</m>.
-          By <xref ref="fields-proposition-minimal-poly"/>,
-          we have isomorphisms <m>\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)</m> and <m>\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )</m>,
-          defined by evaluation at <m>\alpha</m> and <m>\beta</m>,
-          respectively.
-          Therefore, <m>\overline{\phi} = \tau \psi \sigma^{-1}</m> is the required isomorphism (see <xref ref="fields-figure-splitting-fields-1"/>).
+          Essa extensão coincide com o isomorfismo original <m>\phi : E \rightarrow F</m>,
+          pois polinômios constantes são levados em polinômios constantes.
+          Por hipótese, <m>\phi(p(x)) = q(x)</m>;
+          portanto, <m>\phi</m> leva <m>\langle p(x) \rangle</m> sobre <m>\langle q(x) \rangle</m>.
+          Consequentemente,
+          temos um isomorfismo <m>\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle</m>.
+          Pelo <xref ref="fields-proposition-minimal-poly"/>,
+          temos isomorfismos <m>\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)</m> e <m>\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )</m>,
+          definidos pela avaliação em <m>\alpha</m> e <m>\beta</m>,
+          respectivamente.
+          Portanto, <m>\overline{\phi} = \tau \psi \sigma^{-1}</m> é o isomorfismo desejado (veja <xref ref="fields-figure-splitting-fields-1"/>).
         </p>
 
         <figure xml:id="fields-figure-splitting-fields-1">
-          <caption>Commutative diagram for <xref ref="fields-lemma-field-isomorphism"/></caption>
+          <caption>Diagrama comutativo para <xref ref="fields-lemma-field-isomorphism"/></caption>
           <p><md>\begin{CD}
           E[x]/\langle p(x) \rangle    @>\psi>>  F[x]/\langle q(x) \rangle  \\
           @VV{\sigma}V        @VV{\tau}V\\
@@ -1090,7 +1090,7 @@
         </figure>
 
         <p>
-          We leave the proof of uniqueness as a exercise.
+          Deixamos a prova da unicidade como exercício.
         </p>
       </proof>
     </lemma>
@@ -1098,36 +1098,36 @@
     <theorem xml:id="fields-theorem-isomorphism-extension">
       <statement>
         <p>
-          Let <m>\phi : E \rightarrow F</m> be an isomorphism of fields and let <m>p(x)</m> be a nonconstant polynomial in <m>E[x]</m> and <m>q(x)</m> the corresponding polynomial in <m>F[x]</m> under the isomorphism.
-          If <m>K</m> is a splitting field of <m>p(x)</m> and <m>L</m> is a splitting field of <m>q(x)</m>,
-          then <m>\phi</m> extends to an isomorphism <m>\psi : K \rightarrow L</m>.
+          Seja <m>\phi : E \rightarrow F</m> um isomorfismo de corpos, seja <m>p(x)</m> um polinômio não constante em <m>E[x]</m> e seja <m>q(x)</m> o polinômio correspondente em <m>F[x]</m> sob o isomorfismo.
+          Se <m>K</m> é um corpo de decomposição de <m>p(x)</m> e <m>L</m> é um corpo de decomposição de <m>q(x)</m>,
+          então <m>\phi</m> se estende a um isomorfismo <m>\psi : K \rightarrow L</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We will use mathematical induction on the degree of <m>p(x)</m>.
-          We can assume that <m>p(x)</m> is irreducible over <m>E</m>.
-          Therefore, <m>q(x)</m> is also irreducible over <m>F</m>.
-          If <m>\deg p(x) = 1</m>, then by the definition of a splitting field,
-          <m>K = E</m> and <m>L = F</m> and there is nothing to prove.
+          Usaremos indução matemática sobre o grau de <m>p(x)</m>.
+          Podemos supor que <m>p(x)</m> é irredutível sobre <m>E</m>.
+          Portanto, <m>q(x)</m> também é irredutível sobre <m>F</m>.
+          Se <m>\deg p(x) = 1</m>, então, pela definição de corpo de decomposição,
+          <m>K = E</m> e <m>L = F</m>, e não há nada a provar.
         </p>
 
         <p>
-          Assume that the theorem holds for all polynomials of degree less than <m>n</m>.
-          Since <m>K</m> is a splitting field of <m>p(x)</m>,
-          all of the roots of <m>p(x)</m> are in <m>K</m>.
-          Choose one of these roots,
-          say <m>\alpha</m>, such that <m>E \subset E( \alpha ) \subset K</m>.
-          Similarly, we can find a root <m>\beta</m> of <m>q(x)</m> in <m>L</m> such that <m>F \subset F( \beta) \subset L</m>.
-          By <xref ref="fields-lemma-field-isomorphism"/>,
-          there exists an isomorphism
-          <m>\overline{\phi} : E(\alpha ) \rightarrow F( \beta)</m> such that <m>\overline{\phi}( \alpha ) = \beta</m> and
-          <m>\overline{\phi}</m> agrees with <m>\phi</m> on <m>E</m>  (see <xref ref="fields-figure-splitting-fields-2"/>).
+          Suponha que o teorema valha para todos os polinômios de grau menor que <m>n</m>.
+          Como <m>K</m> é um corpo de decomposição de <m>p(x)</m>,
+          todas as raízes de <m>p(x)</m> estão em <m>K</m>.
+          Escolha uma dessas raízes,
+          digamos <m>\alpha</m>, tal que <m>E \subset E( \alpha ) \subset K</m>.
+          De modo semelhante, podemos encontrar uma raiz <m>\beta</m> de <m>q(x)</m> em <m>L</m> tal que <m>F \subset F( \beta) \subset L</m>.
+          Pelo <xref ref="fields-lemma-field-isomorphism"/>,
+          existe um isomorfismo
+          <m>\overline{\phi} : E(\alpha ) \rightarrow F( \beta)</m> tal que <m>\overline{\phi}( \alpha ) = \beta</m> e
+          <m>\overline{\phi}</m> coincide com <m>\phi</m> em <m>E</m> (veja <xref ref="fields-figure-splitting-fields-2"/>).
         </p>
 
         <figure xml:id="fields-figure-splitting-fields-2">
-          <caption>Commutative diagram for <xref ref="fields-theorem-isomorphism-extension"/></caption>
+          <caption>Diagrama comutativo para <xref ref="fields-theorem-isomorphism-extension"/></caption>
           <p><md>\begin{CD}
           K  @>\psi>>  L  \\
           @VV{\sigma}V        @VV{\tau}V\\
@@ -1138,16 +1138,16 @@
         </figure>
 
         <p>
-          Now write <m>p(x) = (x - \alpha ) f(x)</m> and <m>q(x) = ( x - \beta) g(x)</m>,
-          where the degrees of <m>f(x)</m> and <m>g(x)</m> are less than the degrees of <m>p(x)</m> and <m>q(x)</m>,
-          respectively.
-          The field extension <m>K</m> is a splitting field for <m>f(x)</m> over <m>E( \alpha)</m>,
-          and <m>L</m> is a splitting field for <m>g(x)</m> over <m>F( \beta )</m>.
-          By our induction hypothesis there exists an isomorphism
-          <m>\psi : K \rightarrow L</m> such that <m>\psi</m> agrees with
-          <m>\overline{\phi}</m> on <m>E( \alpha)</m>.
-          Hence, there exists an isomorphism
-          <m>\psi : K \rightarrow L</m> such that <m>\psi</m> agrees with <m>\phi</m> on <m>E</m>.
+          Escreva agora <m>p(x) = (x - \alpha ) f(x)</m> e <m>q(x) = ( x - \beta) g(x)</m>,
+          onde os graus de <m>f(x)</m> e <m>g(x)</m> são menores que os graus de <m>p(x)</m> e <m>q(x)</m>,
+          respectivamente.
+          O corpo de extensão <m>K</m> é um corpo de decomposição de <m>f(x)</m> sobre <m>E( \alpha)</m>,
+          e <m>L</m> é um corpo de decomposição de <m>g(x)</m> sobre <m>F( \beta )</m>.
+          Pela hipótese de indução, existe um isomorfismo
+          <m>\psi : K \rightarrow L</m> tal que <m>\psi</m> coincide com
+          <m>\overline{\phi}</m> em <m>E( \alpha)</m>.
+          Logo, existe um isomorfismo
+          <m>\psi : K \rightarrow L</m> tal que <m>\psi</m> coincide com <m>\phi</m> em <m>E</m>.
         </p>
       </proof>
     </theorem>
@@ -1155,108 +1155,108 @@
     <corollary xml:id="fields-corollary-poly-splitting-field">
       <statement>
         <p>
-          Let <m>p(x)</m> be a polynomial in <m>F[x]</m>.
-          Then there exists a splitting field <m>K</m> of <m>p(x)</m> that is unique up to isomorphism.
+          Seja <m>p(x)</m> um polinômio em <m>F[x]</m>.
+          Então existe um corpo de decomposição <m>K</m> de <m>p(x)</m> que é único a menos de isomorfismo.
         </p>
       </statement>
     </corollary>
   </section>
 
   <section xml:id="fields-section-constructions">
-    <title>Geometric Constructions</title>
+    <title>Construções Geométricas</title>
     <introduction>
       <p>
-        In ancient Greece, three classic problems were posed.
-        These problems are geometric in nature and involve straightedge-and-compass constructions from what is now high school geometry;
-        that is, we are allowed to use only a straightedge and compass to solve them.
-        The problems can be stated as follows.
+        Na Grécia antiga, foram propostos três problemas clássicos.
+        Esses problemas são de natureza geométrica e envolvem construções com régua e compasso daquilo que hoje faz parte da geometria do ensino médio;
+        isto é, temos permissão para usar apenas régua e compasso para resolvê-los.
+        Os problemas podem ser enunciados da seguinte maneira.
 
         <ol>
           <li>
             <p>
-              Given an arbitrary angle,
-              can one trisect the angle into three equal subangles using only a straightedge and compass?
+              Dado um ângulo arbitrário,
+              é possível dividi-lo em três ângulos iguais usando apenas régua e compasso?
             </p>
           </li>
 
           <li>
             <p>
-              Given an arbitrary circle,
-              can one construct a square with the same area using only a straightedge and compass?
+              Dado um círculo arbitrário,
+              é possível construir um quadrado com a mesma área usando apenas régua e compasso?
             </p>
           </li>
 
           <li>
             <p>
-              Given a cube,
-              can one construct the edge of another cube having twice the volume of the original?
-              Again, we are only allowed to use a straightedge and compass to do the construction.
+              Dado um cubo,
+              é possível construir a aresta de outro cubo com o dobro do volume do cubo original?
+              Novamente, só temos permissão para usar régua e compasso na construção.
             </p>
           </li>
         </ol>
 
-        After puzzling mathematicians for over two thousand years,
-        each of these constructions was finally shown to be impossible.
-        We will use the theory of fields to provide a proof that the solutions do not exist.
-        It is quite remarkable that the long-sought solution to each of these three geometric problems came from abstract algebra.
+        Depois de intrigar os matemáticos por mais de dois mil anos,
+        finalmente se demonstrou que cada uma dessas construções é impossível.
+        Usaremos a teoria dos corpos para provar que as soluções não existem.
+        É bastante notável que a solução tão procurada para cada um desses três problemas geométricos tenha vindo da álgebra abstrata.
       </p>
 
       <p>
-        First, let us determine more specifically what we mean by a straightedge and compass,
-        and also examine the nature of these problems in a bit more depth.
-        To begin with, <em>a straightedge is not a ruler</em>.
-        We cannot measure arbitrary lengths with a straightedge.
-        It is merely a tool for drawing a line through two points.
-        The statement that the trisection of an arbitrary angle is impossible means that there is at least one angle that is impossible to trisect with a straightedge-and-compass construction.
-        Certainly it is possible to trisect an angle in special cases.
-        We can construct a <m>30^\circ</m> angle;
-        hence, it is possible to trisect a <m>90^\circ</m> angle.
-        However, we will show that it is impossible to construct a <m>20^\circ</m> angle.
-        Therefore, we cannot trisect a <m>60^\circ</m> angle.
+        Primeiro, determinemos mais precisamente o que entendemos por régua e compasso,
+        e examinemos também a natureza desses problemas com um pouco mais de profundidade.
+        Para começar, <em>uma régua não é uma régua graduada</em>.
+        Não podemos medir comprimentos arbitrários com uma régua.
+        Ela é apenas uma ferramenta para traçar uma reta por dois pontos.
+        A afirmação de que a trissecção de um ângulo arbitrário é impossível significa que existe pelo menos um ângulo que é impossível trisectar com uma construção de régua e compasso.
+        Certamente é possível trisectar um ângulo em casos especiais.
+        Podemos construir um ângulo de <m>30^\circ</m>;
+        portanto, é possível trisectar um ângulo de <m>90^\circ</m>.
+        No entanto, mostraremos que é impossível construir um ângulo de <m>20^\circ</m>.
+        Portanto, não podemos trisectar um ângulo de <m>60^\circ</m>.
       </p>
     </introduction>
 
     <subsection xml:id="fields-subsection-constructible-numbers">
-      <title>Constructible Numbers</title>
+      <title>Números Construtíveis</title>
       <p>
-        A real number <m>\alpha</m> is <term>constructible</term><idx><h>Constructible number</h></idx>
-        if we can construct a line segment of length
-        <m>| \alpha |</m> in a finite number of steps from a segment of unit length by using a straightedge and compass.
+        Um número real <m>\alpha</m> é <term>construtível</term><idx><h>Número construtível</h></idx>
+        se podemos construir um segmento de comprimento
+        <m>| \alpha |</m> em um número finito de passos a partir de um segmento de comprimento unitário usando régua e compasso.
       </p>
 
       <theorem xml:id="fields-theorem-constructible-numbers">
         <statement>
           <p>
-            The set of all constructible real numbers forms a subfield <m>F</m> of the field of real numbers.
+            O conjunto de todos os números reais construtíveis forma um subcorpo <m>F</m> do corpo dos números reais.
           </p>
         </statement>
 
         <proof>
           <p>
-            Let <m>\alpha</m> and <m>\beta</m> be constructible numbers.
-            We must show that <m>\alpha + \beta</m>,
-            <m>\alpha - \beta</m>, <m>\alpha \beta</m>,
-            and <m>\alpha / \beta</m> (<m>\beta \neq 0</m>) are also constructible numbers.
-            We can assume that both <m>\alpha</m> and <m>\beta</m> are positive with <m>\alpha \gt \beta</m>.
-            It is quite obvious how to construct
-            <m>\alpha + \beta</m> and <m>\alpha - \beta</m>.
-            To find a line segment with length <m>\alpha \beta</m>,
-            we assume that <m>\beta \gt 1</m> and construct the triangle in <xref ref="fields-figure-multiplication-construction"/> such that triangles
-            <m>\triangle ABC</m> and <m>\triangle ADE</m> are similar.
-            Since <m>\alpha / 1 = x / \beta</m>,
-            the line segment <m>x</m> has length <m>\alpha \beta</m>.
-            A similar construction can be made if <m>\beta \lt 1</m>.
-            We will leave it as an exercise to show that the same triangle can be used to construct
-            <m>\alpha / \beta</m> for <m>\beta \neq 0</m>.
+            Sejam <m>\alpha</m> e <m>\beta</m> números construtíveis.
+            Devemos mostrar que <m>\alpha + \beta</m>,
+            <m>\alpha - \beta</m>, <m>\alpha \beta</m>
+            e <m>\alpha / \beta</m> (<m>\beta \neq 0</m>) também são números construtíveis.
+            Podemos supor que <m>\alpha</m> e <m>\beta</m> sejam positivos, com <m>\alpha \gt \beta</m>.
+            É bastante evidente como construir
+            <m>\alpha + \beta</m> e <m>\alpha - \beta</m>.
+            Para encontrar um segmento de comprimento <m>\alpha \beta</m>,
+            suponha <m>\beta \gt 1</m> e construa o triângulo de <xref ref="fields-figure-multiplication-construction"/> de modo que os triângulos
+            <m>\triangle ABC</m> e <m>\triangle ADE</m> sejam semelhantes.
+            Como <m>\alpha / 1 = x / \beta</m>,
+            o segmento <m>x</m> tem comprimento <m>\alpha \beta</m>.
+            Uma construção semelhante pode ser feita se <m>\beta \lt 1</m>.
+            Deixamos como exercício mostrar que o mesmo triângulo pode ser usado para construir
+            <m>\alpha / \beta</m> para <m>\beta \neq 0</m>.
           </p>
         </proof>
       </theorem>
 
       <figure xml:id="fields-figure-multiplication-construction">
-        <caption>Construction of products</caption>
+        <caption>Construção de produtos</caption>
             <!-- Replaced figure with tikz figure and corrected figure - TWJ 8/19/2010 -->
         <image width="80%" xml:id="fields-multiply">
-        	<description>A triangle ADE with B on the line segment AD and C on the line segment AE such that BC is parallel to DE.  The length of AB is 1, the length of AD is beta, the length of AC is alpha and the length of AE is x.</description>
+        <description>Um triângulo ADE com B no segmento AD e C no segmento AE, de modo que BC seja paralelo a DE. O comprimento de AB é 1, o comprimento de AD é beta, o comprimento de AC é alpha e o comprimento de AE é x.</description>
             <latex-image>
                 <xi:include href="tikz/fields-multiply.tex" parse="text"/>
             </latex-image>
@@ -1267,25 +1267,25 @@
       <lemma>
         <statement>
           <p>
-            If <m>\alpha</m> is a constructible number,
-            then <m>\sqrt{\alpha}</m> is a constructible number.
+            Se <m>\alpha</m> é um número construtível,
+            então <m>\sqrt{\alpha}</m> é um número construtível.
           </p>
         </statement>
 
         <proof>
           <p>
-            In <xref ref="fields-figure-root-construction"/> the triangles <m>\triangle ABD</m>,
-            <m>\triangle BCD</m>, and <m>\triangle ABC</m> are similar;
-            hence, <m>1 /x = x / \alpha</m>, or <m>x^2 = \alpha</m>.
+            Em <xref ref="fields-figure-root-construction"/>, os triângulos <m>\triangle ABD</m>,
+            <m>\triangle BCD</m> e <m>\triangle ABC</m> são semelhantes;
+            portanto, <m>1 /x = x / \alpha</m>, ou <m>x^2 = \alpha</m>.
           </p>
         </proof>
       </lemma>
 
       <figure xml:id="fields-figure-root-construction">
-        <caption>Construction of roots</caption>
+        <caption>Construção de raízes</caption>
             <!-- Replaced figure with tikz figure and corrected figure - TWJ 8/19/2010 -->
         <image width="80%" xml:id="fields-root">
-        	<description>A semi-circle with AC on the diameter and B on the arc of the circle.  D is on eht line segment AC such that BD is perpendicular to AC.  The length of AD is 1, the length of DC is alpha, and the length of BD is x. Triangles ABC, ADB, and BDC arre similar right triangle.</description>
+        <description>Um semicírculo com AC como diâmetro e B no arco do círculo. D está no segmento AC de modo que BD seja perpendicular a AC. O comprimento de AD é 1, o comprimento de DC é alpha e o comprimento de BD é x. Os triângulos ABC, ADB e BDC são triângulos retângulos semelhantes.</description>
             <latex-image>
                 <xi:include href="tikz/fields-root.tex" parse="text"/>
             </latex-image>
@@ -1294,31 +1294,31 @@
       </figure>
 
       <p>
-        By <xref ref="fields-theorem-constructible-numbers"/>,
-        we can locate in the plane any point
-        <m>P =( p, q)</m> that has rational coordinates <m>p</m> and <m>q</m>.
-        We need to know what other points can be constructed with a compass and straightedge from points with rational coordinates.
+        Pelo <xref ref="fields-theorem-constructible-numbers"/>,
+        podemos localizar no plano qualquer ponto
+        <m>P =( p, q)</m> que tenha coordenadas racionais <m>p</m> e <m>q</m>.
+        Precisamos saber quais outros pontos podem ser construídos com compasso e régua a partir de pontos com coordenadas racionais.
       </p>
 
       <lemma>
         <statement>
           <p>
-            Let <m>F</m> be a subfield of <m>{\mathbb R}</m>.
+            Seja <m>F</m> um subcorpo de <m>{\mathbb R}</m>.
 
             <ol>
               <li>
                 <p>
-                  If a line contains two points in <m>F</m>,
-                  then it has the equation <m>a x + by + c = 0</m>,
-                  where <m>a</m>, <m>b</m>, and <m>c</m> are in <m>F</m>.
+                  Se uma reta contém dois pontos em <m>F</m>,
+                  então ela tem a equação <m>a x + by + c = 0</m>,
+                  onde <m>a</m>, <m>b</m> e <m>c</m> pertencem a <m>F</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If a circle has a center at a point with coordinates in <m>F</m> and a radius that is also in <m>F</m>,
-                  then it has the equation <m>x^2 + y^2 + d x + e y + f = 0</m>,
-                  where <m>d</m>, <m>e</m>, and <m>f</m> are in <m>F</m>.
+                  Se um círculo tem centro em um ponto com coordenadas em <m>F</m> e raio também em <m>F</m>,
+                  então ele tem a equação <m>x^2 + y^2 + d x + e y + f = 0</m>,
+                  onde <m>d</m>, <m>e</m> e <m>f</m> pertencem a <m>F</m>.
                 </p>
               </li>
             </ol>
@@ -1327,108 +1327,108 @@
 
         <proof>
           <p>
-            Let <m>(x_1, y_1)</m> and <m>(x_2, y_2)</m> be points on a line whose coordinates are in <m>F</m>.
-            If <m>x_1 = x_2</m>,
-            then the equation of the line through the two points is <m>x - x_1 = 0</m>,
-            which has the form <m>a x + by + c = 0</m>.
-            If <m>x_1 \neq x_2</m>,
-            then the equation of the line through the two points is given by
+            Sejam <m>(x_1, y_1)</m> e <m>(x_2, y_2)</m> pontos de uma reta cujas coordenadas pertencem a <m>F</m>.
+            Se <m>x_1 = x_2</m>,
+            então a equação da reta que passa pelos dois pontos é <m>x - x_1 = 0</m>,
+            que tem a forma <m>a x + by + c = 0</m>.
+            Se <m>x_1 \neq x_2</m>,
+            então a equação da reta que passa pelos dois pontos é dada por
             <md>
               y - y_1 = \left( \frac{y_2 - y_1}{x_2 - x_1} \right) (x - x_1)
             </md>,
-            which can also be put into the proper form.
+            que também pode ser colocada na forma adequada.
           </p>
 
           <p>
-            To prove the second part of the lemma,
-            suppose that <m>(x_1, y_1)</m> is the center of a circle of radius <m>r</m>.
-            Then the circle has the equation
+            Para provar a segunda parte do lema,
+            suponha que <m>(x_1, y_1)</m> seja o centro de um círculo de raio <m>r</m>.
+            Então o círculo tem a equação
             <md>
               (x - x_1)^2 + (y - y_1)^2 - r^2 = 0
             </md>.
-            This equation can easily be put into the appropriate form.
+            Essa equação pode facilmente ser colocada na forma apropriada.
           </p>
         </proof>
       </lemma>
 
       <p>
-        Starting with a field of constructible numbers <m>F</m>,
-        we have three possible ways of constructing additional points in
-        <m>{\mathbb R}</m> with a compass and straightedge.
+        Partindo de um corpo de números construtíveis <m>F</m>,
+        temos três maneiras possíveis de construir pontos adicionais em
+        <m>{\mathbb R}</m> com compasso e régua.
 
         <ol>
           <li>
             <p>
-              To find possible new points in <m>{\mathbb R}</m>,
-              we can take the intersection of two lines,
-              each of which passes through two known points with coordinates in <m>F</m>.
+              Para encontrar possíveis pontos novos em <m>{\mathbb R}</m>,
+              podemos tomar a interseção de duas retas,
+              cada uma passando por dois pontos conhecidos com coordenadas em <m>F</m>.
             </p>
           </li>
 
           <li>
             <p>
-              The intersection of a line that passes through two points that have coordinates in <m>F</m> and a circle whose center has coordinates in <m>F</m> with radius of a length in <m>F</m> will give new points in <m>{\mathbb R}</m>.
+              A interseção de uma reta que passa por dois pontos com coordenadas em <m>F</m> e de um círculo cujo centro tem coordenadas em <m>F</m> e cujo raio tem comprimento em <m>F</m> fornecerá novos pontos em <m>{\mathbb R}</m>.
             </p>
           </li>
 
           <li>
             <p>
-              We can obtain new points in
-              <m>{\mathbb R}</m> by intersecting two circles whose centers have coordinates in <m>F</m> and whose radii are of lengths in <m>F</m>.
+              Podemos obter novos pontos em
+              <m>{\mathbb R}</m> intersectando dois círculos cujos centros têm coordenadas em <m>F</m> e cujos raios têm comprimentos em <m>F</m>.
             </p>
           </li>
         </ol>
 
-        The first case gives no new points in <m>{\mathbb R}</m>,
-        since the solution of two equations of the form
-        <m>a x + by + c = 0</m> having coefficients in <m>F</m> will always be in <m>F</m>.
-        The third case can be reduced to the second case.
-        Let
+        O primeiro caso não fornece pontos novos em <m>{\mathbb R}</m>,
+        pois a solução de duas equações da forma
+        <m>a x + by + c = 0</m> com coeficientes em <m>F</m> sempre estará em <m>F</m>.
+        O terceiro caso pode ser reduzido ao segundo.
+        Sejam
         <md>
           <mrow>x^2 + y^2 + d_1 x + e_1 y + f_1 = 0</mrow>
           <mrow>x^2 + y^2 + d_2 x + e_2 y + f_2 = 0</mrow>
         </md>
  <!-- corrected equation - 28 April 2012 - TWJ -->
-        be the equations of two circles,
-        where <m>d_i</m>, <m>e_i</m>,
-        and <m>f_i</m> are in <m>F</m> for <m>i = 1, 2</m>.
-        These circles have the same intersection as the circle
+        as equações de dois círculos,
+        onde <m>d_i</m>, <m>e_i</m>
+        e <m>f_i</m> pertencem a <m>F</m> para <m>i = 1, 2</m>.
+        Esses círculos têm a mesma interseção que o círculo
         <md>
           x^2 + y^2 + d_1 x +e_1 x + f_1 = 0
         </md>
-        and the line
+        e a reta
         <md>
           (d_1 - d_2) x + b(e_2 - e_1)y + (f_2 - f_1) = 0
         </md>.
-        The last equation is that of the chord passing through the intersection points of the two circles.
-        Hence, the intersection of two circles can be reduced to the case of an intersection of a line with a circle.
+        A última equação é a da corda que passa pelos pontos de interseção dos dois círculos.
+        Portanto, a interseção de dois círculos pode ser reduzida ao caso da interseção de uma reta com um círculo.
       </p>
 
       <p>
-        Considering the case of the intersection of a line and a circle,
-        we must determine the nature of the solutions of the equations
+        Considerando o caso da interseção de uma reta com um círculo,
+        devemos determinar a natureza das soluções das equações
         <md>
           <mrow>a x + by + c &amp; = 0</mrow>
           <mrow>x^2 + y^2 + d x + e y + f &amp; = 0</mrow>
         </md>.
-        If we eliminate <m>y</m> from these equations,
-        we obtain an equation of the form <m>Ax^2 + B x + C = 0</m>,
-        where <m>A</m>, <m>B</m>, and <m>C</m> are in <m>F</m>.
-        The <m>x</m> coordinate of the intersection points is given by
+        Se eliminarmos <m>y</m> dessas equações,
+        obteremos uma equação da forma <m>Ax^2 + B x + C = 0</m>,
+        onde <m>A</m>, <m>B</m> e <m>C</m> pertencem a <m>F</m>.
+        A coordenada <m>x</m> dos pontos de interseção é dada por
         <md>
           x = \frac{- B \pm \sqrt{B^2 - 4 A C} }{2 A}
         </md>
-        and is in <m>F( \sqrt{\alpha}\, )</m>,
-        where <m>\alpha = B^2 - 4 A C \gt 0</m>.
-        We have proven the following lemma.
+        e pertence a <m>F( \sqrt{\alpha}\, )</m>,
+        onde <m>\alpha = B^2 - 4 A C \gt 0</m>.
+        Provamos o lema seguinte.
       </p>
 
       <lemma xml:id="fields-lemma-lines-and-circles">
         <statement>
           <p>
-            Let <m>F</m> be a field of constructible numbers.
-            Then the points determined by the intersections of lines and circles in <m>F</m> lie in the field
-            <m>F( \sqrt{\alpha}\, )</m> for some <m>\alpha</m> in <m>F</m>.
+            Seja <m>F</m> um corpo de números construtíveis.
+            Então os pontos determinados pelas interseções de retas e círculos em <m>F</m> pertencem ao corpo
+            <m>F( \sqrt{\alpha}\, )</m> para algum <m>\alpha</m> em <m>F</m>.
           </p>
         </statement>
       </lemma>
@@ -1436,21 +1436,21 @@
       <theorem>
         <statement>
           <p>
-            A real number <m>\alpha</m> is a constructible number if and only if there exists a  sequence of fields
+            Um número real <m>\alpha</m> é construtível se, e somente se, existe uma sequência de corpos
             <md>
               {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
             </md>
-            such that <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m> with
-            <m>\alpha_i \in F_{i-1}</m> and <m>\alpha \in F_k</m>.
-            In particular,
-            there exists an integer <m>k \gt 0</m> such that <m>[{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k</m>.
+            tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com
+            <m>\alpha_i \in F_{i-1}</m> e <m>\alpha \in F_k</m>.
+            Em particular,
+            existe um inteiro <m>k \gt 0</m> tal que <m>[{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            The existence of the <m>F_i</m>'s and the
-            <m>\alpha_i</m>'s is a direct consequence of <xref ref="fields-lemma-lines-and-circles"/> and of the fact that
+            A existência dos <m>F_i</m> e dos
+            <m>\alpha_i</m> é consequência direta do <xref ref="fields-lemma-lines-and-circles"/> e do fato de que
             <md>
               [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] = 2^k
             </md>.
@@ -1461,74 +1461,74 @@
       <corollary>
         <statement>
           <p>
-            The field of all constructible numbers is an algebraic extension of <m>{\mathbb Q}</m>.
+            O corpo de todos os números construtíveis é uma extensão algébrica de <m>{\mathbb Q}</m>.
           </p>
         </statement>
       </corollary>
 
       <p>
-        As we can see by the field of constructible numbers,
-        not every algebraic extension of a field is a finite extension.
+        Como podemos ver pelo corpo dos números construtíveis,
+        nem toda extensão algébrica de um corpo é uma extensão finita.
       </p>
     </subsection>
 
     <subsection xml:id="fields-subsection-doubling-the-cube">
-      <title>Doubling the Cube and Squaring the Circle</title>
+      <title>Duplicação do Cubo e Quadratura do Círculo</title>
       <p>
-        We are now ready to investigate the classical problems of doubling the cube and squaring the circle.
-        We can use the field of constructible numbers to show exactly when a particular geometric construction can be accomplished.
+        Estamos agora prontos para investigar os problemas clássicos da duplicação do cubo e da quadratura do círculo.
+        Podemos usar o corpo dos números construtíveis para mostrar exatamente quando uma determinada construção geométrica pode ser realizada.
       </p>
 
       <paragraphs>
-        <title>Doubling the cube is impossible</title>
+        <title>A duplicação do cubo é impossível</title>
         <idx>
-        <h>Doubling the cube</h>
+        <h>Duplicação do cubo</h>
         </idx>
 
         <p>
-          Given the edge of the cube,
-          it is impossible to construct with a straightedge and compass the edge of the cube that has twice the volume of the original cube.
-          Let the original cube have an edge of length <m>1</m> and,
-          therefore, a volume of <m>1</m>.
-          If we could construct a cube having a volume of <m>2</m>,
-          then this new cube would have an edge of length <m>\sqrt[3]{2}</m>.
-          However, <m>\sqrt[3]{2}</m> is a zero of the irreducible polynomial <m>x^3 -2</m> over <m>{\mathbb Q}</m>; hence,
+          Dada a aresta de um cubo,
+          é impossível construir com régua e compasso a aresta de um cubo que tenha o dobro do volume do cubo original.
+          Seja a aresta do cubo original de comprimento <m>1</m> e,
+          portanto, de volume <m>1</m>.
+          Se pudéssemos construir um cubo de volume <m>2</m>,
+          então esse novo cubo teria uma aresta de comprimento <m>\sqrt[3]{2}</m>.
+          No entanto, <m>\sqrt[3]{2}</m> é um zero do polinômio irredutível <m>x^3 -2</m> sobre <m>{\mathbb Q}</m>; portanto,
           <md>
             [{\mathbb Q}(\sqrt[3]{2}\, ) : {\mathbb Q}] = 3
           </md>
-          This is impossible, since <m>3</m> is not a power of <m>2</m>.
+          Isso é impossível, pois <m>3</m> não é uma potência de <m>2</m>.
         </p>
       </paragraphs>
 
       <paragraphs>
-        <title>Squaring the circle</title>
+        <title>A quadratura do círculo</title>
         <idx>
-        <h>Squaring the circle is impossible</h>
+        <h>A quadratura do círculo é impossível</h>
         </idx>
 
         <p>
-          Suppose that we have a circle of radius <m>1</m>.
-          The area of the circle is <m>\pi</m>;
-          therefore, we must be able to construct a square with side <m>\sqrt{\pi}</m>.
-          This is impossible since <m>\pi</m> and consequently
-          <m>\sqrt{\pi}</m> are both transcendental.
-          Therefore, using a straightedge and compass,
-          it is not possible to construct a square with the same area as the circle.
+          Suponha que tenhamos um círculo de raio <m>1</m>.
+          A área do círculo é <m>\pi</m>;
+          portanto, devemos ser capazes de construir um quadrado de lado <m>\sqrt{\pi}</m>.
+          Isso é impossível, pois <m>\pi</m> e, consequentemente,
+          <m>\sqrt{\pi}</m> são ambos transcendentais.
+          Portanto, usando régua e compasso,
+          não é possível construir um quadrado com a mesma área do círculo.
         </p>
       </paragraphs>
     </subsection>
 
     <subsection xml:id="fields-subsection-trisect-angle">
-      <title>Trisecting an Angle</title>
+      <title>Trissecção de um Ângulo</title>
       <idx>
-      <h>Trisection of an angle</h>
+      <h>Trissecção de um ângulo</h>
       </idx>
 
       <p>
-        <em>Trisecting an arbitrary angle is impossible</em>.
-        We will show that it is impossible to construct a <m>20^\circ</m> angle.
-        Consequently, a <m>60^{\circ}</m> angle cannot be trisected.
-        We first need to calculate the triple-angle formula for the cosine:
+        <em>A trissecção de um ângulo arbitrário é impossível</em>.
+        Mostraremos que é impossível construir um ângulo de <m>20^\circ</m>.
+        Consequentemente, um ângulo de <m>60^{\circ}</m> não pode ser trissectado.
+        Primeiro precisamos calcular a fórmula do cosseno do ângulo triplo:
         <md>
           <mrow>\cos 3 \theta &amp; = \cos( 2 \theta + \theta )</mrow>
           <mrow>&amp; = \cos 2 \theta \cos \theta - \sin 2 \theta \sin \theta</mrow>
@@ -1536,81 +1536,82 @@
           <mrow>&amp; = ( 2 \cos^2 \theta - 1) \cos \theta - 2 (1- \cos^2 \theta) \cos \theta</mrow>
           <mrow>&amp; = 4 \cos^3 \theta - 3 \cos \theta</mrow>
         </md>.
-        The angle <m>\theta</m> can be constructed if and only if <m>\alpha = \cos \theta</m> is constructible.
-        Let <m>\theta = 20^{\circ}</m>.
-        Then <m>\cos 3 \theta = \cos 60^\circ = 1/2</m>.
-        By the triple-angle formula for the cosine,
+        O ângulo <m>\theta</m> pode ser construído se, e somente se, <m>\alpha = \cos \theta</m> é construtível.
+        Seja <m>\theta = 20^{\circ}</m>.
+        Então <m>\cos 3 \theta = \cos 60^\circ = 1/2</m>.
+        Pela fórmula do cosseno do ângulo triplo,
         <md>
           4 \alpha^3 - 3 \alpha = \frac{1}{2}
         </md>.
-        Therefore, <m>\alpha</m> is a zero of <m>8 x^3 - 6 x -1</m>.
-        This polynomial has no factors in <m>{\mathbb Z}[x]</m>,
-        and hence is irreducible over <m>{\mathbb Q}[x]</m>.
-        Thus, <m>[{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3</m>.
-        Consequently, <m>\alpha</m> cannot be a constructible number.
+        Portanto, <m>\alpha</m> é um zero de <m>8 x^3 - 6 x -1</m>.
+        Esse polinômio não possui fatores em <m>{\mathbb Z}[x]</m>
+        e, portanto, é irredutível sobre <m>{\mathbb Q}[x]</m>.
+        Assim, <m>[{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3</m>.
+        Consequentemente, <m>\alpha</m> não pode ser um número construtível.
       </p>
 
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Extensions of the field of rational numbers are a central object of study in number theory,
-          so with Sage's roots in this discipline,
-          it is no surprise that there is extensive support for fields and for extensions of the rationals.
-          Sage also contains an implementation of the entire field of algebraic numbers,
-          with exact representations.
+          Extensões do corpo dos números racionais são um objeto central de estudo na teoria dos números;
+          como as raízes do Sage estão nessa disciplina,
+          não é surpresa que ele ofereça amplo suporte a corpos e extensões dos racionais.
+          O Sage também contém uma implementação do corpo inteiro dos números algébricos,
+          com representações exatas.
         </p>
       </paragraphs>
     </subsection>
 
     <subsection xml:id="fields-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota Histórica</title>
       <p>
-        Algebraic number theory uses the tools of algebra to solve problems in number theory.
-        Modern algebraic number theory began with Pierre de Fermat<idx><h>Fermat, Pierre de</h></idx>
+        A teoria algébrica dos números usa as ferramentas da álgebra para resolver problemas da teoria dos números.
+        A teoria algébrica moderna dos números começou com Pierre de Fermat<idx><h>Fermat, Pierre de</h></idx>
         (1601<ndash/>1665).
-        Certainly we can find many positive integers that satisfy the equation
-        <m>x^2 + y^2 = z^2</m>; Fermat conjectured that the equation
-        <m>x^n + y^n = z^n</m> has no positive integer solutions for <m>n \geq 3</m>.
-        He stated in the margin of his copy of the Latin translation of Diophantus' <pubtitle>Arithmetica</pubtitle> that he had found a marvelous proof of this theorem,
-        but that the margin of the book was too narrow to contain it.
-        Building on work of other mathematicians,
-        it was Andrew Wiles who finally succeeded in proving Fermat's Last Theorem in the 1990s.
-        Wiles's achievement was reported on the front page of the <pubtitle>New York Times</pubtitle>.
+        Certamente podemos encontrar muitos inteiros positivos que satisfazem a equação
+        <m>x^2 + y^2 = z^2</m>; Fermat conjecturou que a equação
+        <m>x^n + y^n = z^n</m> não possui soluções inteiras positivas para <m>n \geq 3</m>.
+        Ele afirmou na margem de seu exemplar da tradução latina da <pubtitle>Arithmetica</pubtitle> de Diofanto que havia encontrado uma prova maravilhosa desse teorema,
+        mas que a margem do livro era estreita demais para contê-la.
+        Baseando-se no trabalho de outros matemáticos,
+        Andrew Wiles finalmente conseguiu provar o Último Teorema de Fermat na década de 1990.
+        A conquista de Wiles foi noticiada na primeira página do <pubtitle>New York Times</pubtitle>.
       </p>
 
       <p>
-        Attempts to prove Fermat's Last Theorem have led to important contributions to algebraic number theory by such notable mathematicians as Leonhard Euler<idx><h>Euler, Leonhard</h></idx>
+        As tentativas de provar o Último Teorema de Fermat levaram a contribuições importantes para a teoria algébrica dos números por matemáticos notáveis como Leonhard Euler<idx><h>Euler, Leonhard</h></idx>
         (1707<ndash/>1783).
-        Significant advances in the understanding of Fermat's Last Theorem were made by Ernst Kummer<idx><h>Kummer, Ernst</h></idx>
+        Avanços significativos na compreensão do Último Teorema de Fermat foram feitos por Ernst Kummer<idx><h>Kummer, Ernst</h></idx>
         (1810<ndash/>1893).
-        Kummer's student, Leopold Kronecker<idx><h>Kronecker, Leopold</h></idx>
-        (1823<ndash/>1891), became one of the leading algebraists of the nineteenth century.
-        Kronecker's theory of ideals and his study of algebraic number theory added much to the understanding of fields.
+        O aluno de Kummer, Leopold Kronecker<idx><h>Kronecker, Leopold</h></idx>
+        (1823<ndash/>1891), tornou-se um dos principais algebristas do século XIX.
+        A teoria dos ideais de Kronecker e seu estudo da teoria algébrica dos números contribuíram muito para a compreensão dos corpos.
       </p>
 
       <p>
         David Hilbert<idx><h>Hilbert, David</h></idx>
-        (1862<ndash/>1943) and Hermann Minkowski<idx><h>Minkowski, Hermann</h></idx>
-        (1864<ndash/>1909) were among the mathematicians who led the way in this subject at the beginning of the twentieth century.
-        Hilbert and Minkowski were both mathematicians at Göttingen University in Germany.
-        Göttingen was truly one the most important centers of mathematical research during the last two centuries.
-        The large number of exceptional mathematicians who studied there included Gauss, Dirichlet, Riemann, Dedekind, Noether,
-        and Weyl.
+        (1862<ndash/>1943) e Hermann Minkowski<idx><h>Minkowski, Hermann</h></idx>
+        (1864<ndash/>1909) estavam entre os matemáticos que abriram caminho nesse assunto no início do século XX.
+        Hilbert e Minkowski eram ambos matemáticos da Universidade de Göttingen, na Alemanha.
+        Göttingen foi verdadeiramente um dos centros mais importantes de pesquisa matemática durante os dois últimos séculos.
+        Entre os muitos matemáticos excepcionais que estudaram ali estavam Gauss, Dirichlet, Riemann, Dedekind, Noether
+        e Weyl.
       </p>
 
       <p>
         André Weil<idx><h>Weil, André</h></idx>
-        answered questions in number theory using algebraic geometry,
-        a field of mathematics that studies geometry by studying commutative rings.
-        From about 1955 to 1970, Alexander Grothendieck<idx><h>Grothendieck, Alexander</h></idx>
-        dominated the field of algebraic geometry.
+        respondeu a questões da teoria dos números usando geometria algébrica,
+        um ramo da matemática que estuda a geometria por meio do estudo de anéis comutativos.
+        De aproximadamente 1955 a 1970, Alexander Grothendieck<idx><h>Grothendieck, Alexander</h></idx>
+        dominou o campo da geometria algébrica.
         Pierre Deligne,<idx><h>Deligne, Pierre</h></idx>
-        a student of Grothendieck,
-        solved several of Weil's number-theoretic conjectures.
-        One of the most recent contributions to algebra and number theory is Gerd Faltings'<idx><h>Faltings, Gerd</h></idx>
-        proof of the Mordell conjecture.<idx><h>Mordell conjecture</h></idx>
-        This conjecture of Mordell, now known as Faltings' theorem, essentially says that certain polynomials <m>p(x, y)</m> in
-        <m>{\mathbb Z}[x,y]</m> have only a finite number of integral solutions.
+        aluno de Grothendieck,
+        resolveu várias conjecturas de Weil em teoria dos números.
+        Uma das contribuições mais recentes para a álgebra e a teoria dos números é a
+        prova de Gerd Faltings'<idx><h>Faltings, Gerd</h></idx>
+        da conjectura de Mordell.<idx><h>Conjectura de Mordell</h></idx>
+        Essa conjectura de Mordell, hoje conhecida como teorema de Faltings, afirma essencialmente que certos polinômios <m>p(x, y)</m> em
+        <m>{\mathbb Z}[x,y]</m> possuem apenas um número finito de soluções inteiras.
       </p>
     </subsection>
   </section>
@@ -1620,7 +1621,7 @@
     <exercise label="rq-fields-simple-extension">
       <statement>
         <p>
-          What does it mean for an extension field <m>E</m> of a field <m>F</m> to be a simple extension of <m>F</m>?
+          O que significa um corpo de extensão <m>E</m> de um corpo <m>F</m> ser uma extensão simples de <m>F</m>?
         </p>
       </statement>
       <response/>
@@ -1629,9 +1630,9 @@
     <exercise label="rq-fields-min-poly">
       <statement>
         <p>
-          What is the definition of a minimal polynomial of an element <m>\alpha\in E</m>,
-          where <m>E</m> is an extension of <m>F</m>,
-          and <m>\alpha</m> is algebraic over <m>F</m>?
+          Qual é a definição do polinômio mínimo de um elemento <m>\alpha\in E</m>,
+          onde <m>E</m> é uma extensão de <m>F</m>
+          e <m>\alpha</m> é algébrico sobre <m>F</m>?
         </p>
       </statement>
       <response/>
@@ -1640,8 +1641,8 @@
     <exercise label="rq-fields-linear-algebra">
       <statement>
         <p>
-          Describe how linear algebra enters into this chapter.
-          What critical result relies on a proof that is almost entirely linear algebra?
+          Descreva como a álgebra linear entra neste capítulo.
+          Qual resultado fundamental depende de uma prova que é quase inteiramente de álgebra linear?
         </p>
       </statement>
       <response/>
@@ -1650,7 +1651,7 @@
     <exercise label="rq-fields-algebraically-closed">
       <statement>
         <p>
-          What is the definition of an algebraically closed field?
+          Qual é a definição de um corpo algebricamente fechado?
         </p>
       </statement>
       <response/>
@@ -1659,7 +1660,7 @@
     <exercise label="rq-fields-splitting-field">
       <statement>
         <p>
-          What is a splitting field of a polynomial <m>p(x)\in F[x]</m>?
+          O que é um corpo de decomposição de um polinômio <m>p(x)\in F[x]</m>?
         </p>
       </statement>
       <response/>
@@ -1670,13 +1671,13 @@
     <!-- File: fields.xml  -->
     <!-- Title: Fields -->
   <exercises xml:id="fields-exercises" filenamebase="fields">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="fields-exercise-algebraic-numbers">
       <statement>
         <p>
-          Show that each of the following numbers is algebraic over
-          <m>{\mathbb Q}</m> by finding the minimal polynomial of the number over <m>{\mathbb Q}</m>.
+          Mostre que cada um dos números seguintes é algébrico sobre
+          <m>{\mathbb Q}</m>, encontrando o polinômio mínimo do número sobre <m>{\mathbb Q}</m>.
 
           <ol>
             <li>
@@ -1699,8 +1700,8 @@
 
             <li>
               <p>
-                <m>\cos \theta + i \sin \theta</m> for
-                <m>\theta = 2 \pi /n</m> with <m>n \in {\mathbb N}</m>
+                <m>\cos \theta + i \sin \theta</m> para
+                <m>\theta = 2 \pi /n</m> com <m>n \in {\mathbb N}</m>
               </p>
             </li>
 
@@ -1722,61 +1723,61 @@
     <exercise number="2" xml:id="fields-exercise-basis-field-extension">
       <statement>
         <p>
-          Find a basis for each of the following field extensions.
-          What is the degree of each extension?
+          Encontre uma base para cada uma das extensões de corpos seguintes.
+          Qual é o grau de cada extensão?
 
           <ol>
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{3}, \sqrt{6}\, )</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}( \sqrt{3}, \sqrt{6}\, )</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt[3]{2}, \sqrt[3]{3}\, )</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}( \sqrt[3]{2}, \sqrt[3]{3}\, )</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{2}, i)</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}( \sqrt{2}, i)</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}, \sqrt{7}\, )</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}( \sqrt{3}, \sqrt{5}, \sqrt{7}\, )</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{2}, \root 3 \of{2}\, )</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}( \sqrt{2}, \root 3 \of{2}\, )</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{8}\, )</m> over <m>{\mathbb Q}(\sqrt{2}\, )</m>
+                <m>{\mathbb Q}( \sqrt{8}\, )</m> sobre <m>{\mathbb Q}(\sqrt{2}\, )</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}(i, \sqrt{2} +i, \sqrt{3} + i )</m> over <m>{\mathbb Q}</m>
+                <m>{\mathbb Q}(i, \sqrt{2} +i, \sqrt{3} + i )</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{2} + \sqrt{5}\, )</m> over <m>{\mathbb Q} ( \sqrt{5}\, )</m>
+                <m>{\mathbb Q}( \sqrt{2} + \sqrt{5}\, )</m> sobre <m>{\mathbb Q} ( \sqrt{5}\, )</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb Q}( \sqrt{2}, \sqrt{6} + \sqrt{10}\, )</m> over <m>{\mathbb Q} ( \sqrt{3} + \sqrt{5}\, )</m>
+                <m>{\mathbb Q}( \sqrt{2}, \sqrt{6} + \sqrt{10}\, )</m> sobre <m>{\mathbb Q} ( \sqrt{3} + \sqrt{5}\, )</m>
               </p>
             </li>
           </ol>
@@ -1793,30 +1794,30 @@
     <exercise number="3" xml:id="fields-exercise-splitting-field">
       <statement>
         <p>
-          Find the splitting field for each of the following polynomials.
+          Encontre o corpo de decomposição de cada um dos polinômios seguintes.
 
           <ol cols="2">
             <li>
               <p>
-                <m>x^4 - 10 x^2 + 21</m> over <m>{\mathbb Q}</m>
+                <m>x^4 - 10 x^2 + 21</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>x^4 + 1</m> over <m>{\mathbb Q}</m>
+                <m>x^4 + 1</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>x^3 + 2x + 2</m> over <m>{\mathbb Z}_3</m>
+                <m>x^3 + 2x + 2</m> sobre <m>{\mathbb Z}_3</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>x^3 - 3</m> over <m>{\mathbb Q}</m>
+                <m>x^3 - 3</m> sobre <m>{\mathbb Q}</m>
               </p>
             </li>
           </ol>
@@ -1832,29 +1833,29 @@
     <exercise number="4" xml:id="fields-exercise-root-4-3">
       <statement>
         <p>
-          Consider the field extension
-          <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
+          Considere a extensão de corpos
+          <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> sobre <m>\mathbb Q</m>.
 
           <ol>
             <li>
               <p>
-                Find a basis for the field extension
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> over <m>\mathbb Q</m>.
-                Conclude that <m>[{\mathbb Q}( \sqrt[4]{3}, i ): \mathbb Q] = 8</m>.
+                Encontre uma base para a extensão de corpos
+                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> sobre <m>\mathbb Q</m>.
+                Conclua que <m>[{\mathbb Q}( \sqrt[4]{3}, i ): \mathbb Q] = 8</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Find all subfields <m>F</m> of
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 2</m>.
+                Encontre todos os subcorpos <m>F</m> de
+                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> tais que <m>[F:\mathbb Q] = 2</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Find all subfields <m>F</m> of
-                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> such that <m>[F:\mathbb Q] = 4</m>.
+                Encontre todos os subcorpos <m>F</m> de
+                <m>{\mathbb Q}( \sqrt[4]{3}, i )</m> tais que <m>[F:\mathbb Q] = 4</m>.
               </p>
             </li>
           </ol>
@@ -1865,17 +1866,17 @@
     <exercise number="5" xml:id="fields-exercise-gf-8">
       <statement>
         <p>
-          Show that <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> is a field with eight elements.
-          Construct a multiplication table for the multiplicative group of the field.
+          Mostre que <m>{\mathbb Z}_2[x] / \langle x^3 + x + 1 \rangle</m> é um corpo com oito elementos.
+          Construa uma tabela de multiplicação para o grupo multiplicativo do corpo.
         </p>
       </statement>
       <hint>
         <p>
-          Use the fact that the elements of
-          <m>{\mathbb Z}_2[x]/ \langle x^3 + x + 1 \rangle</m> are 0, 1, <m>\alpha</m>,
+          Use o fato de que os elementos de
+          <m>{\mathbb Z}_2[x]/ \langle x^3 + x + 1 \rangle</m> são 0, 1, <m>\alpha</m>,
           <m>1 + \alpha</m>,
           <m>\alpha^2</m>, <m>1 + \alpha^2</m>, <m>\alpha + \alpha^2</m>,
-          <m>1 + \alpha + \alpha^2</m> and the fact that <m>\alpha^3 + \alpha + 1 = 0</m>.
+          <m>1 + \alpha + \alpha^2</m> e o fato de que <m>\alpha^3 + \alpha + 1 = 0</m>.
         </p>
       </hint>
     </exercise>
@@ -1883,8 +1884,8 @@
     <exercise number="6" xml:id="fields-exercise-9-gon">
       <statement>
         <p>
-          Show that the regular <m>9</m>-gon is not constructible with a straightedge and compass,
-          but that the regular <m>20</m>-gon is constructible.
+          Mostre que o polígono regular de <m>9</m> lados não é construtível com régua e compasso,
+          mas que o polígono regular de <m>20</m> lados é construtível.
         </p>
       </statement>
     </exercise>
@@ -1892,8 +1893,8 @@
     <exercise number="7" xml:id="fields-exercise-one-degree">
       <statement>
         <p>
-          Prove that the cosine of one degree (<m>\cos 1^\circ</m>) is algebraic over
-          <m>{\mathbb Q}</m> but not constructible.
+          Prove que o cosseno de um grau (<m>\cos 1^\circ</m>) é algébrico sobre
+          <m>{\mathbb Q}</m>, mas não é construtível.
         </p>
       </statement>
     </exercise>
@@ -1901,12 +1902,12 @@
     <exercise number="8" xml:id="fields-exercise-3-times-cube">
       <statement>
         <p>
-          Can a cube be constructed with three times the volume of a given cube?
+          É possível construir um cubo com três vezes o volume de um cubo dado?
         </p>
       </statement>
       <hint>
         <p>
-          False.
+          Falso.
         </p>
       </hint>
     </exercise>
@@ -1914,8 +1915,8 @@
     <exercise number="9" xml:id="fields-exercise-algebraic-not-finite">
       <statement>
         <p>
-          Prove that <m>{\mathbb Q}(\sqrt{3}, \sqrt[4]{3}, \sqrt[8]{3}, \ldots )</m> is an algebraic extension of
-          <m>{\mathbb Q}</m> but not a finite extension.
+          Prove que <m>{\mathbb Q}(\sqrt{3}, \sqrt[4]{3}, \sqrt[8]{3}, \ldots )</m> é uma extensão algébrica de
+          <m>{\mathbb Q}</m>, mas não uma extensão finita.
         </p>
       </statement>
     </exercise>
@@ -1923,8 +1924,8 @@
     <exercise number="10" xml:id="fields-exercise-Q-pi-3">
       <statement>
         <p>
-          Prove or disprove:
-          <m>\pi</m> is algebraic over <m>{\mathbb Q}(\pi^3)</m>.
+          Prove ou refute:
+          <m>\pi</m> é algébrico sobre <m>{\mathbb Q}(\pi^3)</m>.
         </p>
       </statement>
     </exercise>
@@ -1932,8 +1933,8 @@
     <exercise number="11" xml:id="fields-exercise-splitting-field-p-x">
       <statement>
         <p>
-          Let <m>p(x)</m> be a nonconstant polynomial of degree <m>n</m> in <m>F[x]</m>.
-          Prove that there exists a splitting field <m>E</m> for <m>p(x)</m> such that <m>[E : F] \leq n!</m>.
+          Seja <m>p(x)</m> um polinômio não constante de grau <m>n</m> em <m>F[x]</m>.
+          Prove que existe um corpo de decomposição <m>E</m> para <m>p(x)</m> tal que <m>[E : F] \leq n!</m>.
         </p>
       </statement>
     </exercise>
@@ -1941,7 +1942,7 @@
     <exercise number="12" xml:id="fields-exercise-Q-root-2-Q-root-3">
       <statement>
         <p>
-          Prove or disprove:
+          Prove ou refute:
           <m>{\mathbb Q}( \sqrt{2}\, ) \cong {\mathbb Q}( \sqrt{3}\, )</m>.
         </p>
       </statement>
@@ -1950,8 +1951,8 @@
     <exercise number="13" xml:id="fields-exercise-isomorphic-fields">
       <statement>
         <p>
-          Prove that the fields <m>{\mathbb Q}(\sqrt[4]{3}\, )</m> and
-          <m>{\mathbb Q}(\sqrt[4]{3}\, i)</m> are isomorphic but not equal.
+          Prove que os corpos <m>{\mathbb Q}(\sqrt[4]{3}\, )</m> e
+          <m>{\mathbb Q}(\sqrt[4]{3}\, i)</m> são isomorfos, mas não iguais.
         </p>
       </statement>
     </exercise>
@@ -1961,19 +1962,19 @@
     <exercise number="14" xml:id="fields-exercise-K-E-F-algebraic">
       <statement>
         <p>
-          Let <m>K</m> be an algebraic extension of <m>E</m>,
-          and <m>E</m> an algebraic extension of <m>F</m>.
-          Prove that <m>K</m> is algebraic over <m>F</m>. [<em> Caution</em>: Do not assume that the extensions are finite.]
+          Seja <m>K</m> uma extensão algébrica de <m>E</m>
+          e <m>E</m> uma extensão algébrica de <m>F</m>.
+          Prove que <m>K</m> é algébrico sobre <m>F</m>. [<em> Cuidado</em>: Não suponha que as extensões sejam finitas.]
         </p>
       </statement>
       <hint>
         <p>
-          Suppose that <m>E</m> is algebraic over <m>F</m> and <m>K</m> is algebraic over <m>E</m>.
-          Let <m>\alpha \in K</m>.
-          It suffices to show that <m>\alpha</m> is algebraic over some finite extension of <m>F</m>.
-          Since <m>\alpha</m> is algebraic over <m>E</m>,
-          it must be the zero of some polynomial <m>p(x) = \beta_0 + \beta_1 x + \cdots + \beta_n x^n</m> in <m>E[x]</m>.
-          Hence <m>\alpha</m> is algebraic over <m>F(\beta_0, \ldots, \beta_n)</m>.
+          Suponha que <m>E</m> seja algébrico sobre <m>F</m> e <m>K</m> seja algébrico sobre <m>E</m>.
+          Seja <m>\alpha \in K</m>.
+          Basta mostrar que <m>\alpha</m> é algébrico sobre alguma extensão finita de <m>F</m>.
+          Como <m>\alpha</m> é algébrico sobre <m>E</m>,
+          ele deve ser zero de algum polinômio <m>p(x) = \beta_0 + \beta_1 x + \cdots + \beta_n x^n</m> em <m>E[x]</m>.
+          Portanto, <m>\alpha</m> é algébrico sobre <m>F(\beta_0, \ldots, \beta_n)</m>.
         </p>
       </hint>
     </exercise>
@@ -1981,8 +1982,8 @@
     <exercise number="15" xml:id="fields-exercise-Q-mod-poly-field">
       <statement>
         <p>
-          Prove or disprove:
-          <m>{\mathbb Z}[x] / \langle x^3 -2 \rangle</m> is a field.
+          Prove ou refute:
+          <m>{\mathbb Z}[x] / \langle x^3 -2 \rangle</m> é um corpo.
         </p>
       </statement>
     </exercise>
@@ -1992,8 +1993,8 @@
     <exercise number="16" xml:id="fields-exercise-char-p">
       <statement>
         <p>
-          Let <m>F</m> be a field of characteristic <m>p</m>.
-          Prove that <m>p(x) = x^p - a</m> either is irreducible over <m>F</m> or splits in <m>F</m>.
+          Seja <m>F</m> um corpo de característica <m>p</m>.
+          Prove que <m>p(x) = x^p - a</m> ou é irredutível sobre <m>F</m> ou se decompõe em <m>F</m>.
         </p>
       </statement>
     </exercise>
@@ -2003,8 +2004,8 @@
     <exercise number="17" xml:id="fields-exercise-p-x-splits-alg-closure">
       <statement>
         <p>
-          Let <m>E</m> be the algebraic closure of a field <m>F</m>.
-          Prove that every polynomial <m>p(x)</m> in <m>F[x]</m> splits in <m>E</m>.
+          Seja <m>E</m> o fecho algébrico de um corpo <m>F</m>.
+          Prove que todo polinômio <m>p(x)</m> em <m>F[x]</m> se decompõe em <m>E</m>.
         </p>
       </statement>
     </exercise>
@@ -2012,8 +2013,8 @@
     <exercise number="18" xml:id="fields-exercise-linear-poly-irred">
       <statement>
         <p>
-          If every irreducible polynomial <m>p(x)</m> in <m>F[x]</m> is linear,
-          show that <m>F</m> is an algebraically closed field.
+          Se todo polinômio irredutível <m>p(x)</m> em <m>F[x]</m> é linear,
+          mostre que <m>F</m> é um corpo algebricamente fechado.
         </p>
       </statement>
     </exercise>
@@ -2023,8 +2024,8 @@
     <exercise number="19" xml:id="fields-exercise-alpha-beta-construct">
       <statement>
         <p>
-          Prove that if <m>\alpha</m> and <m>\beta</m> are constructible numbers such that <m>\beta \neq 0</m>,
-          then so is <m>\alpha / \beta</m>.
+          Prove que, se <m>\alpha</m> e <m>\beta</m> são números construtíveis tais que <m>\beta \neq 0</m>,
+          então <m>\alpha / \beta</m> também é construtível.
         </p>
       </statement>
     </exercise>
@@ -2034,9 +2035,9 @@
     <exercise number="20" xml:id="fields-exercise-algebraic-elements-over-Q">
       <statement>
         <p>
-          Show that the set of all elements in
-          <m>{\mathbb R}</m> that are algebraic over
-          <m>{\mathbb Q}</m> form a field extension of <m>{\mathbb Q}</m> that is not finite.
+          Mostre que o conjunto de todos os elementos de
+          <m>{\mathbb R}</m> que são algébricos sobre
+          <m>{\mathbb Q}</m> forma uma extensão de corpos de <m>{\mathbb Q}</m> que não é finita.
         </p>
       </statement>
     </exercise>
@@ -2044,10 +2045,10 @@
     <exercise number="21" xml:id="fields-exercise-auto-permute-zeros">
       <statement>
         <p>
-          Let <m>E</m> be an algebraic extension of a field <m>F</m>,
-          and let <m>\sigma</m> be an automorphism of <m>E</m> leaving <m>F</m> fixed.
-          Let <m>\alpha \in E</m>.
-          Show that <m>\sigma</m> induces a permutation of the set of all zeros of the minimal polynomial of <m>\alpha</m> that are in <m>E</m>.
+          Seja <m>E</m> uma extensão algébrica de um corpo <m>F</m>
+          e seja <m>\sigma</m> um automorfismo de <m>E</m> que fixa <m>F</m>.
+          Seja <m>\alpha \in E</m>.
+          Mostre que <m>\sigma</m> induz uma permutação do conjunto de todos os zeros do polinômio mínimo de <m>\alpha</m> que estão em <m>E</m>.
         </p>
       </statement>
     </exercise>
@@ -2055,20 +2056,20 @@
     <exercise number="22" xml:id="fields-exercise-Q-root-3-root-7">
       <statement>
         <p>
-          Show that <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{7}\, )</m>.
-          Extend your proof to show that <m>{\mathbb Q}( \sqrt{a}, \sqrt{b}\, ) = {\mathbb Q}( \sqrt{a} + \sqrt{b}\, )</m>,
-          where <m>a \neq b</m> and neither <m>a</m> nor <m>b</m> is a perfect square.
+          Mostre que <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{7}\, )</m>.
+          Estenda sua prova para mostrar que <m>{\mathbb Q}( \sqrt{a}, \sqrt{b}\, ) = {\mathbb Q}( \sqrt{a} + \sqrt{b}\, )</m>,
+          onde <m>a \neq b</m> e nem <m>a</m> nem <m>b</m> é um quadrado perfeito.
         </p>
       </statement>
       <hint>
         <p>
-          Since <m>\{ 1, \sqrt{3}, \sqrt{7}, \sqrt{21}\, \}</m> is a basis for
-          <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, )</m> over <m>{\mathbb Q}</m>,
+          Como <m>\{ 1, \sqrt{3}, \sqrt{7}, \sqrt{21}\, \}</m> é uma base de
+          <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, )</m> sobre <m>{\mathbb Q}</m>,
           <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) \supset {\mathbb Q}( \sqrt{3} +\sqrt{7}\, )</m>.
-          Since <m>[{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) : {\mathbb Q}] = 4</m>,
-          <m>[{\mathbb Q}( \sqrt{3} + \sqrt{7}\, ) : {\mathbb Q}] = 2</m> or 4.
-          Since the degree of the minimal polynomial of
-          <m>\sqrt{3} +\sqrt{7}</m> is 4, <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) = {\mathbb Q}( \sqrt{3} +\sqrt{7}\, )</m>.
+          Como <m>[{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) : {\mathbb Q}] = 4</m>,
+          <m>[{\mathbb Q}( \sqrt{3} + \sqrt{7}\, ) : {\mathbb Q}] = 2</m> ou 4.
+          Como o grau do polinômio mínimo de
+          <m>\sqrt{3} +\sqrt{7}</m> é 4, <m>{\mathbb Q}( \sqrt{3}, \sqrt{7}\, ) = {\mathbb Q}( \sqrt{3} +\sqrt{7}\, )</m>.
         </p>
       </hint>
     </exercise>
@@ -2078,9 +2079,9 @@
     <exercise number="23" xml:id="fields-exercise-extension-degree-2">
       <statement>
         <p>
-          Let <m>E</m> be a finite extension of a field <m>F</m>.
-          If <m>[E:F] = 2</m>,
-          show that <m>E</m> is a splitting field of <m>F</m> for some polynomial <m>f(x) \in F[x]</m>.
+          Seja <m>E</m> uma extensão finita de um corpo <m>F</m>.
+          Se <m>[E:F] = 2</m>,
+          mostre que <m>E</m> é um corpo de decomposição de <m>F</m> para algum polinômio <m>f(x) \in F[x]</m>.
         </p>
       </statement>
     </exercise>
@@ -2088,8 +2089,8 @@
     <exercise number="24" xml:id="fields-exercise-Z6">
       <statement>
         <p>
-          Prove or disprove: Given a polynomial <m>p(x)</m> in <m>{\mathbb Z}_6[x]</m>,
-          it is possible to construct a ring <m>R</m> such that <m>p(x)</m> has a root in <m>R</m>.
+          Prove ou refute: dado um polinômio <m>p(x)</m> em <m>{\mathbb Z}_6[x]</m>,
+          é possível construir um anel <m>R</m> tal que <m>p(x)</m> tenha uma raiz em <m>R</m>.
         </p>
       </statement>
     </exercise>
@@ -2099,7 +2100,7 @@
     <exercise number="25" xml:id="fields-exercise-alpha-alpha-3">
       <statement>
         <p>
-          Let <m>E</m> be a field extension of <m>F</m> and <m>\alpha \in E</m>.
+          Seja <m>E</m> um corpo de extensão de <m>F</m> e <m>\alpha \in E</m>.
           Determine <m>[F(\alpha): F(\alpha^3)]</m>.
         </p>
       </statement>
@@ -2110,9 +2111,9 @@
     <exercise number="26" xml:id="fields-exercise-transcendental">
       <statement>
         <p>
-          Let <m>\alpha, \beta</m> be transcendental over <m>{\mathbb Q}</m>.
-          Prove that either <m>\alpha \beta</m> or
-          <m>\alpha + \beta</m> is also transcendental.
+          Sejam <m>\alpha, \beta</m> transcendentais sobre <m>{\mathbb Q}</m>.
+          Prove que <m>\alpha \beta</m> ou
+          <m>\alpha + \beta</m> também é transcendental.
         </p>
       </statement>
     </exercise>
@@ -2120,28 +2121,28 @@
     <exercise number="27" xml:id="fields-exercise-not-transcendental">
       <statement>
         <p>
-          Let <m>E</m> be an extension field of <m>F</m> and
-          <m>\alpha \in E</m> be transcendental over <m>F</m>.
-          Prove that every element in
-          <m>F(\alpha)</m> that is not in <m>F</m> is also transcendental over <m>F</m>.
+          Seja <m>E</m> um corpo de extensão de <m>F</m> e
+          <m>\alpha \in E</m> transcendental sobre <m>F</m>.
+          Prove que todo elemento de
+          <m>F(\alpha)</m> que não está em <m>F</m> também é transcendental sobre <m>F</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>\beta \in F(\alpha)</m> not in <m>F</m>.
-          Then <m>\beta = p(\alpha)/q(\alpha)</m>,
-          where <m>p</m> and <m>q</m> are polynomials in <m>\alpha</m> with
-          <m>q(\alpha) \neq 0</m> and coefficients in <m>F</m>.
-          If <m>\beta</m> is algebraic over <m>F</m>,
-          then there exists a polynomial
-          <m>f(x) \in F[x]</m> such that <m>f(\beta) = 0</m>.
-          Let <m>f(x) = a_0 + a_1 x + \cdots + a_n x^n</m>.
-          Then
+          Seja <m>\beta \in F(\alpha)</m> um elemento que não está em <m>F</m>.
+          Então <m>\beta = p(\alpha)/q(\alpha)</m>,
+          onde <m>p</m> e <m>q</m> são polinômios em <m>\alpha</m> com
+          <m>q(\alpha) \neq 0</m> e coeficientes em <m>F</m>.
+          Se <m>\beta</m> é algébrico sobre <m>F</m>,
+          então existe um polinômio
+          <m>f(x) \in F[x]</m> tal que <m>f(\beta) = 0</m>.
+          Seja <m>f(x) = a_0 + a_1 x + \cdots + a_n x^n</m>.
+          Então
           <md>
             0 = f(\beta) = f\left( \frac{p(\alpha)}{q(\alpha)} \right) = a_0 + a_1 \left( \frac{p(\alpha)}{q(\alpha)} \right) + \cdots + a_n \left( \frac{p(\alpha)}{q(\alpha)} \right)^n
           </md>.
-          Now multiply both sides by
-          <m>q(\alpha)^n</m> to show that there is a polynomial in <m>F[x]</m> that has <m>\alpha</m> as a zero.
+          Agora multiplique ambos os lados por
+          <m>q(\alpha)^n</m> para mostrar que existe um polinômio em <m>F[x]</m> que tem <m>\alpha</m> como zero.
         </p>
       </hint>
     </exercise>
@@ -2149,14 +2150,14 @@
     <exercise number="28" xml:id="fields-exercise-degree-irred-poly">
       <statement>
         <p>
-          Let <m>\alpha</m> be a root of an irreducible monic polynomial
-          <m>p(x) \in F[x]</m>, with <m>\deg p = n</m>.
-          Prove that <m>[F(\alpha) : F] = n</m>.
+          Seja <m>\alpha</m> uma raiz de um polinômio mônico irredutível
+          <m>p(x) \in F[x]</m>, com <m>\deg p = n</m>.
+          Prove que <m>[F(\alpha) : F] = n</m>.
         </p>
       </statement>
       <hint>
         <p>
-          See the comments following <xref ref="fields-theorem-simple_extension"/>.
+          Veja os comentários após <xref ref="fields-theorem-simple_extension"/>.
         </p>
       </hint>
     </exercise>
@@ -2164,7 +2165,7 @@
   </exercises>
 
   <references xml:id="fields-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e Leituras Sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Dean, R. A.
@@ -2175,19 +2176,19 @@
     <biblio type="raw">
 <!-- was [2] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Dudley, U.
-      <title>A Budget of Trisections</title>. Springer-Verlag, New York, 1987. An interesting and entertaining account of how not to  trisect an angle.
+      <title>A Budget of Trisections</title>. Springer-Verlag, New York, 1987. Um relato interessante e divertido sobre como não trisectar um ângulo.
     </biblio>
 
     <biblio type="raw">
 <!-- was [3] --><!-- Reference updated - 19 August 2010 - TWJ -->
       Fraleigh, J. B.
-      <title>A First Course in Abstract Algebra</title>. 7th ed. Pearson, Upper Saddle River, NJ, 2003.
+      <title>A First Course in Abstract Algebra</title>. 7. ed. Pearson, Upper Saddle River, NJ, 2003.
     </biblio>
 
     <biblio type="raw">
 <!-- was [4] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Kaplansky, I.
-      <title>Fields and Rings</title>, 2nd ed. University of Chicago Press, Chicago, 1972.
+      <title>Fields and Rings</title>, 2. ed. University of Chicago Press, Chicago, 1972.
     </biblio>
 
     <biblio type="raw">
@@ -2204,14 +2205,14 @@
 
     <biblio type="raw">
 <!-- was [7] --><!-- Reference updated - 19 August 2010 - TWJ -->
-      H. Pollard and H. G. Diamond.
+      H. Pollard e H. G. Diamond.
       <title>Theory of Algebraic Numbers</title>, Dover, Mineola, NY, 2010.
     </biblio>
 
     <biblio type="raw">
 <!-- was [8] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Walker, E. A.
-      <title>Introduction to Abstract Algebra</title>. Random House,  New York, 1987. This work contains a proof showing that every field has an algebraic closure.
+      <title>Introduction to Abstract Algebra</title>. Random House, New York, 1987. Esta obra contém uma prova de que todo corpo possui um fecho algébrico.
     </biblio>
   </references>
 
@@ -2221,17 +2222,17 @@
     <title>Sage</title>
     <introduction>
       <p>
-        In Sage, and other places,
-        an extension of the rationals is called a <q>number field.</q>
-        They are one of Sage's most mature features.
+        No Sage, e em outros contextos,
+        uma extensão dos racionais é chamada de <q>corpo de números.</q>
+        Esse é um dos recursos mais maduros do Sage.
       </p>
     </introduction>
 
     <subsection>
-      <title>Number Fields</title>
+      <title>Corpos de Números</title>
       <p>
-        There are several ways to create a number field.
-        We are familiar with the syntax where we adjoin an irrational number that we can write with traditional combinations of arithmetic and roots.
+        Há várias maneiras de criar um corpo de números.
+        Já conhecemos a sintaxe em que adjuntamos um número irracional que podemos escrever usando combinações tradicionais de operações aritméticas e raízes.
       </p>
 
             <sage>
@@ -2245,8 +2246,8 @@
             </sage>
 
       <p>
-        We can also specify the element we want to adjoin as the root of a monic irreducible polynomial.
-        One approach is to construct the polynomial ring first so that the polynomial has the location of its coefficients specified properly.
+        Também podemos especificar o elemento que queremos adjuntar como a raiz de um polinômio mônico irredutível.
+        Uma abordagem é construir primeiro o anel de polinômios, para que o polinômio tenha corretamente especificado o anel de seus coeficientes.
       </p>
 
             <sage>
@@ -2270,10 +2271,10 @@
             </sage>
 
       <p>
-        Rather than building the whole polynomial ring,
-        we can simply introduce a variable as the generator of a polynomial ring and then create polynomials from this variable.
-        This spares us naming the polynomial ring.
-        Notice in the example that both instances of <c>z</c> are necessary.
+        Em vez de construir o anel de polinômios inteiro,
+        podemos simplesmente introduzir uma variável como geradora de um anel de polinômios e então criar polinômios a partir dessa variável.
+        Isso nos poupa de nomear o anel de polinômios.
+        Observe no exemplo que as duas ocorrências de <c>z</c> são necessárias.
       </p>
 
             <sage>
@@ -2297,10 +2298,10 @@
             </sage>
 
       <p>
-        We can recover the polynomial used to create a number field,
-        even if we constructed it by giving an expression for an irrational element.
-        In this case,
-        the polynomial is the minimal polynomial of the element.
+        Podemos recuperar o polinômio usado para criar um corpo de números,
+        mesmo que o tenhamos construído fornecendo uma expressão para um elemento irracional.
+        Nesse caso,
+        o polinômio é o polinômio mínimo do elemento.
       </p>
 
             <sage>
@@ -2321,7 +2322,7 @@
             </sage>
 
       <p>
-        For any element of a number field, Sage will obligingly compute its minimal polynomial.
+        Para qualquer elemento de um corpo de números, o Sage calcula prontamente seu polinômio mínimo.
       </p>
 
             <sage>
@@ -2360,20 +2361,21 @@
             </sage>
 
       <p>
-        Substituting <c>element</c> back into the alleged minimal polynomial and getting back zero is not convincing evidence that it is the <em>minimal</em>
-        polynomial, but it is heartening.
+        Substituir <c>element</c> de volta no suposto polinômio mínimo e obter zero não é uma evidência convincente de que ele seja o polinômio
+        <em>mínimo</em>,
+        mas é animador.
       </p>
     </subsection>
 
     <subsection>
-      <title>Relative and Absolute Number Fields</title>
+      <title>Corpos de Números Relativos e Absolutos</title>
       <p>
-        With Sage we can adjoin several elements at once and we can build nested towers of number fields.
-        Sage uses the term <q>absolute</q>
-        to refer to a number field viewed as an extension of the rationals themselves,
-        and the term <q>relative</q> to refer to a number field constructed,
-        or viewed,
-        as an extension of another (nontrivial) number field.
+        Com o Sage podemos adjuntar vários elementos de uma vez e construir torres aninhadas de corpos de números.
+        O Sage usa o termo <q>absoluto</q>
+        para se referir a um corpo de números visto como uma extensão dos próprios racionais,
+        e o termo <q>relativo</q> para se referir a um corpo de números construído,
+        ou visto,
+        como uma extensão de outro corpo de números (não trivial).
       </p>
 
             <sage>
@@ -2412,16 +2414,16 @@
             </sage>
 
       <p>
-        The number field <c>A</c> has been constructed mathematically as what we would write as <m>{\mathbb Q}\subset{\mathbb Q}[\sqrt{3}]\subset{\mathbb Q}[\sqrt{3},\sqrt{2}]</m>.
-        Notice the slight difference in ordering of the elements we are adjoining,
-        and notice how the number fields use slightly fancier internal names (<c>sqrt2</c>,
-        <c>sqrt3</c>) for the new elements.
+        O corpo de números <c>A</c> foi construído matematicamente como escreveríamos <m>{\mathbb Q}\subset{\mathbb Q}[\sqrt{3}]\subset{\mathbb Q}[\sqrt{3},\sqrt{2}]</m>.
+        Observe a pequena diferença na ordem dos elementos que estamos adjuntando
+        e observe como os corpos de números usam nomes internos um pouco mais sofisticados (<c>sqrt2</c>,
+        <c>sqrt3</c>) para os novos elementos.
       </p>
 
       <p>
-        We can <q>flatten</q> a relative field to view it as an absolute field,
-        which may have been our intention from the start.
-        Here we create a new number field from <c>A</c> that makes it a pure absolute number field.
+        Podemos <q>achatar</q> um corpo relativo para vê-lo como um corpo absoluto,
+        o que talvez tenha sido nossa intenção desde o início.
+        Aqui criamos a partir de <c>A</c> um novo corpo de números que o torna um corpo de números puramente absoluto.
       </p>
 
             <sage>
@@ -2435,13 +2437,13 @@
             </sage>
 
       <p>
-        Once we construct an absolute number field this way,
-        we can recover isomorphisms to and from the absolute field.
-        Recall that our tower was built with generators <c>a</c> and <c>b</c>,
-        while the flattened tower is generated by <c>c</c>.
-        The <c>.structure()</c> method returns a pair of functions,
-        with the absolute number field as the domain and codomain
-        (in that order).
+        Uma vez que construímos um corpo de números absoluto dessa maneira,
+        podemos recuperar os isomorfismos de e para o corpo absoluto.
+        Lembre-se de que nossa torre foi construída com os geradores <c>a</c> e <c>b</c>,
+        enquanto a torre achatada é gerada por <c>c</c>.
+        O método <c>.structure()</c> retorna um par de funções,
+        com o corpo de números absoluto como domínio e contradomínio
+        (nessa ordem).
       </p>
 
             <sage>
@@ -2471,30 +2473,30 @@
             </sage>
 
       <p>
-        This tells us that the single generator of the flattened tower,
-        <c>c</c>, is equal to <m>\sqrt{2}-\sqrt{3}</m>, and further,
-        each of <m>\sqrt{2}</m> and
-        <m>\sqrt{3}</m> can be expressed as polynomial functions of <c>c</c>.
-        With these connections,
-        you might want to compute the final two expressions in <c>c</c> by hand,
-        and appreciate the work Sage does to determine these for us.
-        This computation is an example of the conclusion of the upcoming <xref ref="galois-theorem-primitive-element"/>.
+        Isso nos diz que o gerador único da torre achatada,
+        <c>c</c>, é igual a <m>\sqrt{2}-\sqrt{3}</m> e, além disso,
+        tanto <m>\sqrt{2}</m> quanto
+        <m>\sqrt{3}</m> podem ser expressos como funções polinomiais de <c>c</c>.
+        Com essas conexões,
+        talvez você queira calcular manualmente as duas últimas expressões em <c>c</c>
+        e apreciar o trabalho que o Sage realiza para determiná-las.
+        Esse cálculo é um exemplo da conclusão do próximo <xref ref="galois-theorem-primitive-element"/>.
       </p>
 
       <p>
-        Many number field methods have both relative and absolute versions,
-        and we will also find it more convenient to work in a tower or a flattened version,
-        thus the isomorphisms between the two can be invaluable for translating both questions and answers.
+        Muitos métodos para corpos de números possuem versões relativas e absolutas,
+        e também podemos achar mais conveniente trabalhar em uma torre ou em uma versão achatada;
+        assim, os isomorfismos entre as duas podem ser inestimáveis para traduzir tanto perguntas quanto respostas.
       </p>
 
       <p>
-        As a vector space over <m>{\mathbb Q}</m>,
-        or over another number field,
-        number fields that are finite extensions have a dimension,
-        called the degree.
-        These are easy to get from Sage,
-        though for a relative field,
-        we need to be more precise about which degree we desire.
+        Como espaço vetorial sobre <m>{\mathbb Q}</m>,
+        ou sobre outro corpo de números,
+        corpos de números que são extensões finitas possuem uma dimensão,
+        chamada de grau.
+        É fácil obter esses valores no Sage,
+        embora, para um corpo relativo,
+        precisemos ser mais precisos sobre qual grau desejamos.
       </p>
 
             <sage>
@@ -2524,12 +2526,12 @@
     </subsection>
 
     <subsection>
-      <title>Splitting Fields</title>
+      <title>Corpos de Decomposição</title>
       <p>
-        Here is a concrete example of how to use Sage to construct a splitting field of a polynomial.
-        Consider <m>p(x)=x^4+x^2-1</m>.
-        We first build a number field with a single root,
-        and then factor the polynomial over this new, larger, field.
+        Eis um exemplo concreto de como usar o Sage para construir um corpo de decomposição de um polinômio.
+        Considere <m>p(x)=x^4+x^2-1</m>.
+        Primeiro construímos um corpo de números com uma única raiz
+        e depois fatoramos o polinômio sobre esse corpo novo e maior.
       </p>
 
             <sage>
@@ -2588,19 +2590,19 @@
             </sage>
 
       <p>
-        So our polynomial factors partially into two linear factors and a quadratic factor.
-        But notice that the quadratic factor has a coefficient that is irrational,
+        Assim, nosso polinômio se fatora parcialmente em dois fatores lineares e um fator quadrático.
+        Mas observe que o fator quadrático possui um coeficiente irracional,
         <m>a^2+1</m>,
-        so the quadratic factor properly belongs in the polynomial ring over <c>M</c> and not over <c>QQ</c>.
+        portanto o fator quadrático pertence propriamente ao anel de polinômios sobre <c>M</c>, e não sobre <c>QQ</c>.
       </p>
 
       <p>
-        We build an extension containing a root of the quadratic factor,
-        called <c>q</c> here.
-        Then, rather than using the <c>polygen()</c> function,
-        we build an entire polynomial ring <c>R</c> over <c>N</c> with the indeterminate <c>z</c>.
-        The reason for doing this is we can illustrate how we <q>upgrade</q>
-        the polynomial <c>p</c> with the syntax <c>R(p)</c> to go from having coefficients in <c>M</c> to having coefficients in <c>N</c>.
+        Construímos uma extensão contendo uma raiz do fator quadrático,
+        denotada por <c>q</c> aqui.
+        Então, em vez de usar a função <c>polygen()</c>,
+        construímos um anel de polinômios inteiro <c>R</c> sobre <c>N</c>, com a indeterminada <c>z</c>.
+        O motivo é que podemos ilustrar como <q>promover</q>
+        o polinômio <c>p</c> com a sintaxe <c>R(p)</c>, passando de coeficientes em <c>M</c> para coeficientes em <c>N</c>.
       </p>
 
             <sage>
@@ -2642,11 +2644,11 @@
             </sage>
 
       <p>
-        So we have a field, <c>N</c>,
-        where our polynomial factors into linear factors with coefficients from the field.
-        We can get another factorization by converting <c>N</c> to an absolute number field and factoring there.
-        We need to recreate the polynomial over <c>N</c>,
-        since a substitution will carry coefficients from the wrong ring.
+        Assim, temos um corpo, <c>N</c>,
+        no qual nosso polinômio se fatora em fatores lineares com coeficientes do corpo.
+        Podemos obter outra fatoração convertendo <c>N</c> em um corpo de números absoluto e fatorando ali.
+        Precisamos recriar o polinômio sobre <c>N</c>,
+        pois uma substituição carregará coeficientes do anel errado.
       </p>
 
             <sage>
@@ -2665,22 +2667,22 @@
             </sage>
 
       <p>
-        This is an interesting alternative,
-        in that the roots of the polynomial are expressions in terms of the
-        <em>single</em> generator <c>c</c>.
-        Since the roots involve a seventh power of <c>c</c>, we might suspect
-        (but not be certain)
-        that the minimal polynomial of <c>c</c> has degree <m>8</m> and that <c>P</c> is a degree <m>8</m> extension of the rationals.
-        Indeed <c>P</c>
-        (or <c>N</c>)
-        is a splitting field for <m>p(x)=x^4+x^2-1</m>.
-        The roots are not really as bad as they appear <mdash/> lets convert them back to the relative number field.
+        Esta é uma alternativa interessante,
+        pois as raízes do polinômio são expressões em termos do
+        gerador <em>único</em> <c>c</c>.
+        Como as raízes envolvem a sétima potência de <c>c</c>, podemos suspeitar
+        (mas não ter certeza)
+        que o polinômio mínimo de <c>c</c> tem grau <m>8</m> e que <c>P</c> é uma extensão de grau <m>8</m> dos racionais.
+        De fato, <c>P</c>
+        (ou <c>N</c>)
+        é um corpo de decomposição de <m>p(x)=x^4+x^2-1</m>.
+        As raízes não são realmente tão ruins quanto parecem <mdash/> vamos convertê-las de volta ao corpo de números relativo.
       </p>
 
       <p>
-        First we want to rewrite a single factor
-        (the first)
-        in the form <m>(w-r)</m> to identify the root with the correct signs.
+        Primeiro queremos reescrever um único fator
+        (o primeiro)
+        na forma <m>(w-r)</m> para identificar a raiz com os sinais corretos.
       </p>
 
             <sage type="display">
@@ -2691,8 +2693,8 @@
             </sage>
 
       <p>
-        With the conversion isomorphisms,
-        we can recognize the roots for what they are.
+        Com os isomorfismos de conversão,
+        podemos reconhecer as raízes pelo que elas são.
       </p>
 
             <sage>
@@ -2706,13 +2708,13 @@
             </sage>
 
       <p>
-        So the rather complicated expression in <c>c</c> is just the negative of the root we adjoined in the second step of constructing the tower of number fields.
-        It would be a good exercise to see what happens to the other three roots
-        (being careful to get the signs right on each root).
+        Assim, a expressão bastante complicada em <c>c</c> é simplesmente o negativo da raiz que adjuntamos no segundo passo da construção da torre de corpos de números.
+        Seria um bom exercício ver o que acontece com as outras três raízes
+        (tomando cuidado para obter os sinais corretos em cada raiz).
       </p>
 
       <p>
-        This is a good opportunity to illustrate <xref ref="fields-theorem-tower-indices"/>.
+        Esta é uma boa oportunidade para ilustrar o <xref ref="fields-theorem-tower-indices"/>.
       </p>
 
             <sage>
@@ -2750,12 +2752,12 @@
     </subsection>
 
     <subsection>
-      <title>Algebraic Numbers</title>
+      <title>Números Algébricos</title>
       <p>
-        <xref ref="fields-corollary-algebraic-numbers-field"/> says that the set of <em>all</em>
-        algebraic numbers forms a field.
-        This field is implemented in Sage as <c>QQbar</c>.
-        This allows for finding roots of polynomials as exact quantities which display as inexact numbers.
+        O <xref ref="fields-corollary-algebraic-numbers-field"/> afirma que o conjunto de <em>todos</em>
+        os números algébricos forma um corpo.
+        Esse corpo é implementado no Sage como <c>QQbar</c>.
+        Isso permite encontrar raízes de polinômios como quantidades exatas que são exibidas como números inexatos.
       </p>
 
             <sage>
@@ -2771,14 +2773,14 @@
             </sage>
 
       <p>
-        So we asked for the roots of a polynomial over the rationals,
-        but requested any root that may lie outside the rationals and within the field of algebraic numbers.
-        Since the field of algebraic numbers contains all such roots,
-        we get a full four roots of the fourth-degree polynomial.
-        These roots are computed to lie within an interval and the question mark indicates that the preceding digits are accurate.
-        (The integers paired with each root are the multiplicities of that root.
-        Use the keyword <c>multiplicities=False</c> to turn them off.)
-        Let us take a look under the hood and see how Sage manages the field of algebraic numbers.
+        Assim, pedimos as raízes de um polinômio sobre os racionais,
+        mas solicitamos qualquer raiz que possa estar fora dos racionais e dentro do corpo dos números algébricos.
+        Como o corpo dos números algébricos contém todas essas raízes,
+        obtemos as quatro raízes do polinômio de quarto grau.
+        Calcula-se que essas raízes estão dentro de um intervalo, e o ponto de interrogação indica que os dígitos anteriores são precisos.
+        (Os inteiros associados a cada raiz são as multiplicidades dessa raiz.
+        Use a palavra-chave <c>multiplicities=False</c> para desativá-las.)
+        Vamos olhar por baixo do capô e ver como o Sage administra o corpo dos números algébricos.
       </p>
 
             <sage>
@@ -2804,18 +2806,18 @@
             </sage>
 
       <p>
-        Three items are associated with this initial root.
-        First is a number field,
-        with generator <c>a</c> and a defining polynomial similar to the polynomial we are finding the roots of,
-        but not identical.
-        Second is an expression in the generator <c>a</c>, which is the actual root.
-        You might evaluate this expression with the numerical approximation of <c>a</c>,
-        coming next, to verify this is a root.
-        Finally, there is a ring homomorphism from the number field to the
-        <q>Algebraic Real Field</q>,
-        <c>AA</c>, the subfield of <c>QQbar</c> with just real elements,
-        which associates the generator <c>a</c> with the number <c>-1.272019649514069?</c>.
-        Let us verify, in two ways, that the root given is really a root.
+        Três objetos estão associados a essa raiz inicial.
+        O primeiro é um corpo de números,
+        com gerador <c>a</c> e um polinômio definidor semelhante ao polinômio cujas raízes estamos encontrando,
+        mas não idêntico.
+        O segundo é uma expressão no gerador <c>a</c>, que é a raiz propriamente dita.
+        Você pode avaliar essa expressão usando a aproximação numérica de <c>a</c>,
+        que vem a seguir, para verificar que se trata de uma raiz.
+        Por fim, há um homomorfismo de anéis do corpo de números para o
+        <q>Corpo Real Algébrico</q>,
+        <c>AA</c>, o subcorpo de <c>QQbar</c> formado apenas pelos elementos reais,
+        que associa o gerador <c>a</c> ao número <c>-1.272019649514069?</c>.
+        Vamos verificar, de duas maneiras, que a raiz fornecida é realmente uma raiz.
       </p>
 
             <sage>
@@ -2837,29 +2839,28 @@
             </sage>
 
       <p>
-        Now that we have enough theory to understand the field of algebraic numbers,
-        and a natural way to represent them exactly,
-        you might consider the operations in the field.
-        If we take two algebraic numbers and add them together,
-        we get another algebraic number (<xref ref="fields-corollary-algebraic-numbers-field"/>).
-        So what is the resulting minimal polynomial?
-        How is it computed in Sage?
-        You could read the source code if you wanted the answer.
+        Agora que temos teoria suficiente para compreender o corpo dos números algébricos
+        e uma maneira natural de representá-los exatamente,
+        você pode considerar as operações no corpo.
+        Se tomarmos dois números algébricos e os somarmos,
+        obteremos outro número algébrico (<xref ref="fields-corollary-algebraic-numbers-field"/>).
+        Então, qual é o polinômio mínimo resultante?
+        Como ele é calculado no Sage?
+        Você poderia ler o código-fonte se quisesse a resposta.
       </p>
     </subsection>
 
     <subsection>
-      <title>Geometric Constructions</title>
+      <title>Construções Geométricas</title>
       <p>
-        Sage can do a lot of things,
-        but it is not yet able to lay out lines with a straightedge and compass.
-        However, we can very quickly determine that trisecting a <m>60</m> degree angle is impossible.
-        We adjoin the cosine of a <m>20</m> degree angle
-        (in radians)
-        to the rationals, determine the degree of the extension,
-        and check that it is not an integer power of <m>2</m>.
-        In one line.
-        Sweet.
+        O Sage pode fazer muitas coisas,
+        mas ainda não é capaz de traçar retas com régua e compasso.
+        No entanto, podemos determinar muito rapidamente que trisectar um ângulo de <m>60</m> graus é impossível.
+        Adjuntamos aos racionais o cosseno de um ângulo de <m>20</m> graus
+        (em radianos), determinamos o grau da extensão
+        e verificamos que ele não é uma potência inteira de <m>2</m>.
+        Em uma linha.
+        Simples assim.
       </p>
 
             <sage>
@@ -2874,26 +2875,26 @@
   </section>
 
   <exercises xml:id="fields-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
 
     <exercise number="1" xml:id="fields-sage-exercise-Z3">
       <statement>
         <p>
-          Create the polynomial <m>p(x)=x^5+2x^4+1</m> over <m>{\mathbb Z}_3</m>.
-          Verify that it does not have any linear factors by evaluating <m>p(x)</m> with each element of <m>{\mathbb Z}_3</m>,
-          and then check that <m>p(x)</m> is irreducible.
+          Crie o polinômio <m>p(x)=x^5+2x^4+1</m> sobre <m>{\mathbb Z}_3</m>.
+          Verifique que ele não possui fatores lineares avaliando <m>p(x)</m> em cada elemento de <m>{\mathbb Z}_3</m>
+          e depois verifique que <m>p(x)</m> é irredutível.
         </p>
 
         <p>
-          Create a finite field of order <m>3^5</m> with the <c>FiniteField()</c> command,
-          but include the <c>modulus</c> keyword set to the polynomial <m>p(x)</m> to override the default choice.
+          Crie um corpo finito de ordem <m>3^5</m> com o comando <c>FiniteField()</c>,
+          mas inclua a palavra-chave <c>modulus</c> definida como o polinômio <m>p(x)</m> para substituir a escolha padrão.
         </p>
 
         <p>
-          Recreate <m>p(x)</m> as a polynomial over this field.
-          Check each of the <m>3^5 = 243</m> elements of the field to see if they are roots of the polynomial and list all of the elements which are roots.
-          Finally, request that Sage give a factorization of <m>p(x)</m> over the field,
-          and comment on the relationship between your list of roots and your factorization.
+          Recrie <m>p(x)</m> como um polinômio sobre esse corpo.
+          Verifique cada um dos <m>3^5 = 243</m> elementos do corpo para saber se são raízes do polinômio e liste todos os elementos que são raízes.
+          Por fim, peça ao Sage uma fatoração de <m>p(x)</m> sobre o corpo
+          e comente a relação entre sua lista de raízes e sua fatoração.
         </p>
       </statement>
     </exercise>
@@ -2901,22 +2902,22 @@
     <exercise number="2" xml:id="fields-sage-exercise-Z3-PID">
       <statement>
         <p>
-          This problem continues the previous one.
-          Build the ring of polynomials over
-          <m>{\mathbb Z}_3</m> and within this ring use <m>p(x)</m> to generate a principal ideal.
-          Finally construct the quotient of the polynomial ring by the ideal.
-          Since the polynomial is irreducible,
-          this quotient ring is a field,
-          and by <xref ref="fields-proposition-minimal-poly"/> this quotient ring is isomorphic to the number field in the previous problem.
+          Este problema dá continuidade ao anterior.
+          Construa o anel de polinômios sobre
+          <m>{\mathbb Z}_3</m> e, dentro desse anel, use <m>p(x)</m> para gerar um ideal principal.
+          Por fim, construa o quociente do anel de polinômios pelo ideal.
+          Como o polinômio é irredutível,
+          esse anel quociente é um corpo
+          e, pelo <xref ref="fields-proposition-minimal-poly"/>, esse anel quociente é isomorfo ao corpo de números do problema anterior.
         </p>
 
         <p>
-          Borrowing from your results in the previous question,
-          construct five roots of the polynomial <m>p(x)</m> within this quotient ring,
-          but now as expressions in the generator of the quotient ring
-          (which is technically a coset).
-          Use Sage to verify that they are indeed roots.
-          This demonstrates using a quotient ring to create a splitting field for an irreducible polynomial over a finite field.
+          Aproveitando seus resultados da questão anterior,
+          construa cinco raízes do polinômio <m>p(x)</m> dentro desse anel quociente,
+          mas agora como expressões no gerador do anel quociente
+          (que tecnicamente é uma classe lateral).
+          Use o Sage para verificar que elas são de fato raízes.
+          Isso demonstra como usar um anel quociente para criar um corpo de decomposição de um polinômio irredutível sobre um corpo finito.
         </p>
       </statement>
     </exercise>
@@ -2924,38 +2925,38 @@
     <exercise number="3" xml:id="fields-sage-exercise-finite-extension">
       <statement>
         <p>
-          The subsection <xref ref="fields-subsection-algebraic-elements" text="title"/> relies on techniques from linear algebra and contains <xref ref="fields-theorem-finite-extension"/>:
-          every finite extension is an algebraic extension.
-          This exercise will help you understand this proof.
+          A subseção <xref ref="fields-subsection-algebraic-elements" text="title"/> depende de técnicas de álgebra linear e contém o <xref ref="fields-theorem-finite-extension"/>:
+          toda extensão finita é uma extensão algébrica.
+          Este exercício ajudará você a compreender essa prova.
         </p>
 
         <p>
-          The polynomial <m>r(x)=x^4+2x+2</m> is irreducible over the rationals (Eisenstein's criterion with prime <m>p=2</m>).
-          Create a number field that contains a root of <m>r(x)</m>.
-          By <xref ref="fields-theorem-finite-extension"/>,
-          and the remark following,
-          every element of this finite field extension is an algebraic number,
-          and hence satisfies some polynomial over the base field (it is this polynomial that Sage will produce with the <c>.minpoly()</c> method).
-          This exercise will show how we can use just linear algebra to determine this minimal polynomial.
+          O polinômio <m>r(x)=x^4+2x+2</m> é irredutível sobre os racionais (critério de Eisenstein com o primo <m>p=2</m>).
+          Crie um corpo de números que contenha uma raiz de <m>r(x)</m>.
+          Pelo <xref ref="fields-theorem-finite-extension"/>
+          e pela observação seguinte,
+          todo elemento dessa extensão finita de corpos é um número algébrico
+          e, portanto, satisfaz algum polinômio sobre o corpo base (é esse polinômio que o Sage produzirá com o método <c>.minpoly()</c>).
+          Este exercício mostrará como podemos usar apenas álgebra linear para determinar esse polinômio mínimo.
         </p>
 
         <p>
-          Suppose that <c>a</c> is the generator of the number field you just created with <m>r(x)</m>.
-          Then we will determine the minimal polynomial of <c>t = 3a + 1</c> using just linear algebra.
-          According to the proof, the first five powers of <c>t</c>
-          (start counting from zero)
-          will be linearly dependent. (Why?) So a nontrivial relation of linear dependence on these powers will provide the coefficients of a polynomial with <c>t</c> as a root.
-          Compute these five powers,
-          then construct the correct linear system to determine the coefficients of the minimal polynomial,
-          solve the system, and suitably interpret its solutions.
+          Suponha que <c>a</c> seja o gerador do corpo de números que você acabou de criar com <m>r(x)</m>.
+          Então determinaremos o polinômio mínimo de <c>t = 3a + 1</c> usando apenas álgebra linear.
+          De acordo com a prova, as cinco primeiras potências de <c>t</c>
+          (começando a contar a partir de zero)
+          serão linearmente dependentes. (Por quê?) Assim, uma relação não trivial de dependência linear entre essas potências fornecerá os coeficientes de um polinômio que tem <c>t</c> como raiz.
+          Calcule essas cinco potências,
+          depois construa o sistema linear correto para determinar os coeficientes do polinômio mínimo,
+          resolva o sistema e interprete adequadamente suas soluções.
         </p>
 
         <p>
-          Hints: The <c>vector()</c> and <c>matrix()</c> commands will create vectors and matrices,
-          and the <c>.solve_right()</c> method for matrices can be used to find solutions.
-          Given an element of the number field,
-          which will necessarily be a polynomial in the generator <c>a</c>,
-          the <c>.vector()</c> method of the element will provide the coefficients of this polynomial in a list.
+          Dicas: os comandos <c>vector()</c> e <c>matrix()</c> criarão vetores e matrizes,
+          e o método <c>.solve_right()</c> para matrizes pode ser usado para encontrar soluções.
+          Dado um elemento do corpo de números,
+          que necessariamente será um polinômio no gerador <c>a</c>,
+          o método <c>.vector()</c> do elemento fornecerá os coeficientes desse polinômio em uma lista.
         </p>
       </statement>
     </exercise>
@@ -2963,8 +2964,8 @@
     <exercise number="4" xml:id="fields-sage-exercise-splitting-field">
       <statement>
         <p>
-          Construct the splitting field of
-          <m>s(x)=x^4+x^2+1</m> and find a factorization of <m>s(x)</m> over this field into linear factors.
+          Construa o corpo de decomposição de
+          <m>s(x)=x^4+x^2+1</m> e encontre uma fatoração de <m>s(x)</m> sobre esse corpo em fatores lineares.
         </p>
       </statement>
     </exercise>
@@ -2972,43 +2973,43 @@
     <exercise number="5" xml:id="fields-sage-exercise-irred-poly">
       <statement>
         <p>
-          Form the number field, <m>K</m>,
-          which contains a root of the irreducible polynomial <m>q(x)=x^3+3x^2+3x-2</m>.
-          Name your root <c>a</c>.
-          Verify that <m>q(x)</m> factors,
-          but does not split, over <m>K</m>.
-          With <m>K</m> now as the base field,
-          form an extension of <m>K</m> where the quadratic factor of <m>q(x)</m> has a root.
-          Name this root <c>b</c>,
-          and call this second extension of the tower <m>L</m>.
+          Construa o corpo de números <m>K</m>
+          que contém uma raiz do polinômio irredutível <m>q(x)=x^3+3x^2+3x-2</m>.
+          Dê à sua raiz o nome <c>a</c>.
+          Verifique que <m>q(x)</m> se fatora,
+          mas não se decompõe, sobre <m>K</m>.
+          Tomando <m>K</m> agora como corpo base,
+          forme uma extensão de <m>K</m> na qual o fator quadrático de <m>q(x)</m> tenha uma raiz.
+          Dê a essa raiz o nome <c>b</c>
+          e chame essa segunda extensão da torre de <m>L</m>.
         </p>
 
         <p>
-          Use <c>M.&lt;c&gt; = L.absolute_field()</c> to form the flattened tower that is the absolute number field <c>M</c>.
-          Find the defining polynomial of <c>M</c> with the <c>.polynomial()</c> method.
-          From this polynomial, which must have the generator <c>c</c> as a root,
-          you should be able to use elementary algebra to write the generator as a fairly simple expression.
+          Use <c>M.&lt;c&gt; = L.absolute_field()</c> para formar a torre achatada que é o corpo de números absoluto <c>M</c>.
+          Encontre o polinômio definidor de <c>M</c> com o método <c>.polynomial()</c>.
+          A partir desse polinômio, que deve ter o gerador <c>c</c> como raiz,
+          você deverá ser capaz de usar álgebra elementar para escrever o gerador como uma expressão relativamente simples.
         </p>
 
         <p>
-          <m>M</m> should be the splitting field of <m>q(x)</m>.
-          To see this, start over,
-          and build from scratch a new number field, <m>P</m>,
-          using the simple expression for <c>c</c> that you just found.
-          Use <c>d</c> as the name of the root used to construct <c>P</c>.
-          Since <c>d</c> is a root of the simple minimal polynomial for <c>c</c>,
-          you should be able to write an expression for <c>d</c> that a pre-calculus student would recognize.
+          <m>M</m> deve ser o corpo de decomposição de <m>q(x)</m>.
+          Para ver isso, recomece
+          e construa do zero um novo corpo de números, <m>P</m>,
+          usando a expressão simples para <c>c</c> que você acabou de encontrar.
+          Use <c>d</c> como nome da raiz usada para construir <c>P</c>.
+          Como <c>d</c> é uma raiz do polinômio mínimo simples de <c>c</c>,
+          você deverá ser capaz de escrever uma expressão para <c>d</c> que um estudante de pré-cálculo reconheceria.
         </p>
 
         <p>
-          Now factor the original polynomial <m>q(x)</m>
-          (with rational coefficients)
-          over <m>P</m>, to see the polynomial split
-          (as expected).
-          Using this factorization,
-          and your simple expression for <c>d</c> write simplified expressions for the three roots of <m>q(x)</m>.
-          See if you can convert between the two versions of the roots <q>by hand</q>,
-          and without using the isomorphisms provided by the <c>.structure()</c> method on <c>M</c>.
+          Agora fatore o polinômio original <m>q(x)</m>
+          (com coeficientes racionais)
+          sobre <m>P</m>, para ver o polinômio se decompor
+          (como esperado).
+          Usando essa fatoração
+          e sua expressão simples para <c>d</c>, escreva expressões simplificadas para as três raízes de <m>q(x)</m>.
+          Veja se consegue converter entre as duas versões das raízes <q>à mão</q>
+          e sem usar os isomorfismos fornecidos pelo método <c>.structure()</c> em <c>M</c>.
         </p>
       </statement>
     </exercise>
