@@ -10,36 +10,36 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="algcodes">
-  <title>Algebraic Coding Theory</title>
+  <title>Teoria algébrica dos códigos</title>
   <introduction>
     <p>
-      Coding theory is an application of algebra that has become increasingly important over the last several decades.
-      When we transmit data,
-      we are concerned about sending a message over a channel that could be affected by <q>noise.</q>
-      We wish to be able to encode and decode the information in a manner that will allow the detection,
-      and possibly the correction, of errors caused by noise.
-      This situation arises in many areas of communications,
-      including radio, telephone,
-      television, computer communications,
-      and digital media technology.
-      Probability, combinatorics, group theory, linear algebra,
-      and polynomial rings over finite fields all play important roles in coding theory.
+      A teoria dos códigos é uma aplicação da álgebra que se tornou cada vez mais importante nas últimas décadas.
+      Quando transmitimos dados,
+      preocupamo-nos em enviar uma mensagem por um canal que pode ser afetado por <q>ruído.</q>
+      Queremos ser capazes de codificar e decodificar a informação de modo a permitir a detecção
+      e, possivelmente, a correção de erros causados pelo ruído.
+      Essa situação surge em muitas áreas das comunicações,
+      incluindo rádio, telefonia,
+      televisão, comunicações por computador
+      e tecnologia de mídias digitais.
+      Probabilidade, combinatória, teoria dos grupos, álgebra linear
+      e anéis de polinômios sobre corpos finitos desempenham papéis importantes na teoria dos códigos.
     </p>
   </introduction>
 
   <section xml:id="algcodes-section-error-detecting-correcting-codes">
-    <title>Error-Detecting and Correcting Codes</title>
+    <title>Códigos detectores e corretores de erros</title>
     <introduction>
       <p>
-        Let us examine a simple model of a communications system for transmitting and receiving coded messages (<xref ref="algcodes-figure-encoding"/>).
+        Examinemos um modelo simples de sistema de comunicação para transmitir e receber mensagens codificadas (<xref ref="algcodes-figure-encoding"/>).
       </p>
 
       <figure xml:id="algcodes-figure-encoding">
         
-        <caption>Encoding and decoding messages</caption>
+        <caption>Codificação e decodificação de mensagens</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/10/2010 -->
         <image width="60%" xml:id="algcodes-encode-decode">
-        	<description>A vertical flow chart where an m-digit message is passed to an encoder which is represented by a rectangle to become an n-digit codeword which is passed to a transmitter that is also represented by a rectangle.  The outcome of the transmitter may have noise and is passed to the receiver which is prepresented by a rectangle.  The receiver passes an n-digit received word to a decoder that is represented by a rectangle.  The decoder produces an m-digit received word or an error.</description>
+        <description>Um fluxograma vertical no qual uma mensagem de m algarismos é passada a um codificador, representado por um retângulo, para se tornar uma palavra-código de n algarismos, que é passada a um transmissor, também representado por um retângulo. A saída do transmissor pode conter ruído e é passada ao receptor, representado por um retângulo. O receptor passa uma palavra recebida de n algarismos a um decodificador, representado por um retângulo. O decodificador produz uma palavra recebida de m algarismos ou um erro.</description>
             <latex-image>
                 <xi:include href="tikz/algcodes-encode-decode.tex" parse="text"/>
             </latex-image>
@@ -48,136 +48,136 @@
       </figure>
 
       <p>
-        Uncoded messages may be composed of letters or characters,
-        but typically they consist of binary <m>m</m>-tuples.
-        These messages are encoded into codewords,
-        consisting of binary <m>n</m>-tuples,
-        by a device called an <term>encoder</term>.
-        The message is transmitted and then decoded.
-        We will consider the occurrence of errors during transmission.
-        An <term>error</term> occurs if there is a change in one or more bits in the codeword.
-        A <term>decoding scheme</term> is a method that either converts an arbitrarily received <m>n</m>-tuple into a meaningful decoded message or gives an error message for that <m>n</m>-tuple.
-        If the received message is a codeword
-        (one of the special <m>n</m>-tuples allowed to be transmitted),
-        then the decoded message must be the unique message that was encoded into the codeword.
-        For received non-codewords,
-        the decoding scheme will give an error indication,
-        or, if we are more clever,
-        will actually try to correct the error and reconstruct the original message.
-        Our goal is to transmit error-free messages as cheaply and quickly as possible.
+        Mensagens não codificadas podem ser compostas por letras ou caracteres,
+        mas normalmente consistem em <m>m</m>-uplas binárias.
+        Essas mensagens são codificadas em palavras-código,
+        que consistem em <m>n</m>-uplas binárias,
+        por um dispositivo chamado <term>codificador</term>.
+        A mensagem é transmitida e depois decodificada.
+        Consideraremos a ocorrência de erros durante a transmissão.
+        Ocorre um <term>erro</term> se houver alteração em um ou mais bits da palavra-código.
+        Um <term>esquema de decodificação</term> é um método que converte uma <m>n</m>-upla recebida arbitrariamente em uma mensagem decodificada com significado ou fornece uma mensagem de erro para essa <m>n</m>-upla.
+        Se a mensagem recebida for uma palavra-código
+        (uma das <m>n</m>-uplas especiais permitidas para transmissão),
+        então a mensagem decodificada deve ser a única mensagem codificada nessa palavra-código.
+        Para palavras recebidas que não são palavras-código,
+        o esquema de decodificação fornecerá uma indicação de erro
+        ou, se formos mais engenhosos,
+        tentará corrigir o erro e reconstruir a mensagem original.
+        Nosso objetivo é transmitir mensagens sem erros da forma mais barata e rápida possível.
       </p>
 
       <example xml:id="algcodes-example-repeat">
         <p>
-          One possible coding scheme would be to send a message several times and to compare the received copies with one another.
-          Suppose that the message to be encoded is a binary <m>n</m>-tuple <m>(x_{1}, x_{2}, \ldots,
+          Um possível esquema de codificação seria enviar uma mensagem várias vezes e comparar entre si as cópias recebidas.
+          Suponha que a mensagem a ser codificada seja uma <m>n</m>-upla binária <m>(x_{1}, x_{2}, \ldots,
           x_{n})</m>.
-          The message is encoded into a binary <m>3n</m>-tuple by simply repeating the message three times:
+          A mensagem é codificada em uma <m>3n</m>-upla binária simplesmente repetindo-a três vezes:
           <md>
             (x_{1}, x_{2}, \ldots, x_{n}) \mapsto (x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n})
           </md>.
-          To decode the message,
-          we choose as the <m>i</m>th digit the one that appears in the <m>i</m>th place in at least two of the three transmissions.
-          For example, if the original message is <m>(\codeword{0110})</m>,
-          then the transmitted message will be <m>(\codeword{0110}\;  \codeword{0110}\;  \codeword{0110})</m>.
-          If there is a transmission error in the fifth digit,
-          then the received codeword will be <m>(\codeword{0110}\;  \codeword{1110}\;  \codeword{0110})</m>,
-          which will be correctly decoded as <m>(\codeword{0110})</m>.<fn>
-          We will adopt the convention that bits are numbered left to right in binary <m>n</m>-tuples.
-          </fn> This triple-repetition method will automatically detect and correct all single errors,
-          but it is slow and inefficient:
-          to send a message consisting of <m>n</m> bits,
-          <m>2n</m> extra bits are required,
-          and we can only detect and correct single errors.
-          We will see that it is possible to find an encoding scheme that will encode a message of <m>n</m> bits into <m>m</m> bits with <m>m</m> much smaller than <m>3n</m>.
+          Para decodificar a mensagem,
+          escolhemos como <m>i</m>-ésimo algarismo aquele que aparece na <m>i</m>-ésima posição em pelo menos duas das três transmissões.
+          Por exemplo, se a mensagem original for <m>(\codeword{0110})</m>,
+          então a mensagem transmitida será <m>(\codeword{0110}\;  \codeword{0110}\;  \codeword{0110})</m>.
+          Se houver um erro de transmissão no quinto algarismo,
+          a palavra-código recebida será <m>(\codeword{0110}\;  \codeword{1110}\;  \codeword{0110})</m>,
+          que será corretamente decodificada como <m>(\codeword{0110})</m>.<fn>
+          Adotaremos a convenção de numerar os bits da esquerda para a direita nas <m>n</m>-uplas binárias.
+          </fn> Esse método de repetição tripla detectará e corrigirá automaticamente todos os erros únicos,
+          mas é lento e ineficiente:
+          para enviar uma mensagem composta por <m>n</m> bits,
+          são necessários <m>2n</m> bits extras,
+          e só podemos detectar e corrigir erros únicos.
+          Veremos que é possível encontrar um esquema de codificação que codifique uma mensagem de <m>n</m> bits em <m>m</m> bits, com <m>m</m> muito menor que <m>3n</m>.
         </p>
       </example>
 
       <example xml:id="algcodes-example-even-parity">
         <p>
-          <term>Even parity</term>, a commonly used coding scheme,
-          is much more efficient than the simple repetition scheme.
-          The <acro>ASCII</acro> (American Standard Code for Information Interchange) coding system uses binary <m>8</m>-tuples,
-          yielding <m>2^{8} = 256</m> possible <m>8</m>-tuples.
-          However, only seven bits are needed since there are only
-          <m>2^7 = 128</m> <acro>ASCII</acro> characters.
-          What can or should be done with the extra bit?
-          Using the full eight bits, we can detect single transmission errors.
-          For example, the <acro>ASCII</acro> codes for A, B, and C are
+          A <term>paridade par</term>, um esquema de codificação comumente usado,
+          é muito mais eficiente que o esquema de repetição simples.
+          O sistema de codificação <acro>ASCII</acro> (American Standard Code for Information Interchange) usa <m>8</m>-uplas binárias,
+          produzindo <m>2^{8} = 256</m> <m>8</m>-uplas possíveis.
+          Contudo, só são necessários sete bits, pois há apenas
+          <m>2^7 = 128</m> caracteres <acro>ASCII</acro>.
+          O que pode ou deve ser feito com o bit extra?
+          Usando os oito bits completos, podemos detectar erros únicos de transmissão.
+          Por exemplo, os códigos <acro>ASCII</acro> de A, B e C são
           <md>
             <mrow>\text{A} &amp; = \codeword{65}_{10} = \codeword{01000001}_{2},</mrow>
             <mrow>\text{B} &amp; = \codeword{66}_{10} = \codeword{01000010}_{2},</mrow>
             <mrow>\text{C} &amp; = \codeword{67}_{10} = \codeword{01000011}_{2}</mrow>
           </md>.
-          Notice that the leftmost bit is always set to <m>0</m>;
-          that is, the <m>128</m> <acro>ASCII</acro> characters have codes
+          Observe que o bit mais à esquerda está sempre definido como <m>0</m>;
+          isto é, os <m>128</m> caracteres <acro>ASCII</acro> têm códigos
           <md>
             <mrow>\codeword{00000000}_{2} &amp; = \codeword{0}_{10},</mrow>
             <mrow>&amp; \aatavdots{=}</mrow>
             <mrow>\codeword{01111111}_{2} &amp; = \codeword{127}_{10}</mrow>
           </md>.
-          The bit can be used for error checking on the other seven bits.
-          It is set to either <m>0</m> or <m>1</m> so that the total number of <m>1</m> bits in the representation of a character is even.
-          Using even parity, the codes for A, B, and C now become
+          O bit pode ser usado para verificar erros nos outros sete bits.
+          Ele é definido como <m>0</m> ou <m>1</m> de modo que o número total de bits <m>1</m> na representação de um caractere seja par.
+          Usando paridade par, os códigos de A, B e C passam a ser
           <md>
             <mrow>\text{A} &amp; = \codeword{01000001}_{2},</mrow>
             <mrow>\text{B} &amp; = \codeword{01000010}_{2},</mrow>
             <mrow>\text{C} &amp; = \codeword{11000011}_{2}</mrow>
           </md>.
-          Suppose an A is sent and a transmission error in the sixth bit is caused by noise over the communication channel so that  <m>(\codeword{0100}\; \codeword{0101})</m> is received.
-          We know an error has occurred since the received word has an odd number of <m>1</m>s,
-          and we can now request that the codeword be transmitted again.
-          When used for error checking,
-          the leftmost bit is called a <term>parity check bit</term>.
+          Suponha que um A seja enviado e que um erro de transmissão no sexto bit, causado por ruído no canal de comunicação, faça com que se receba <m>(\codeword{0100}\; \codeword{0101})</m>.
+          Sabemos que ocorreu um erro, pois a palavra recebida tem um número ímpar de bits <m>1</m>,
+          e agora podemos solicitar que a palavra-código seja transmitida novamente.
+          Quando usado para verificação de erros,
+          o bit mais à esquerda é chamado de <term>bit de verificação de paridade</term>.
         </p>
 
         <p>
-          By far the most common error-detecting codes used in computers are based on the addition of a parity bit.
-          Typically, a computer stores information in <m>m</m>-tuples called <term>words</term>.
-          Common word lengths are <m>8</m>,
-          <m>16</m>, and <m>32</m> bits.
-          One bit in the word is set aside as the parity check bit,
-          and is not used to store information.
-          This bit is set to either <m>0</m> or <m>1</m>,
-          depending on the number of <m>1</m>s in the word.
+          De longe, os códigos detectores de erros mais comuns usados em computadores baseiam-se na adição de um bit de paridade.
+          Normalmente, um computador armazena informações em <m>m</m>-uplas chamadas <term>palavras</term>.
+          Comprimentos comuns de palavras são <m>8</m>,
+          <m>16</m> e <m>32</m> bits.
+          Um bit da palavra é reservado como bit de verificação de paridade
+          e não é usado para armazenar informação.
+          Esse bit é definido como <m>0</m> ou <m>1</m>,
+          dependendo do número de bits <m>1</m> na palavra.
         </p>
 
         <p>
-          Adding a parity check bit allows the detection of all single errors because changing a single bit either increases or decreases the number of <m>1</m>s by one,
-          and in either case the parity has been changed from even to odd,
-          so the new word is not a codeword.
-          (We could also construct an error detection scheme based on <term>odd parity</term>;
-          that is, we could set the parity check bit so that a codeword always has an odd number of <m>1</m>s.)
+          Adicionar um bit de verificação de paridade permite detectar todos os erros únicos, pois alterar um único bit aumenta ou diminui em um o número de bits <m>1</m>,
+          e, em ambos os casos, a paridade muda de par para ímpar,
+          de modo que a nova palavra não é uma palavra-código.
+          (Também poderíamos construir um esquema de detecção de erros baseado em <term>paridade ímpar</term>;
+          isto é, poderíamos definir o bit de verificação de paridade de modo que uma palavra-código sempre tivesse um número ímpar de bits <m>1</m>.)
         </p>
       </example>
 
       <p>
-        The even parity system is easy to implement, but has two drawbacks.
-        First, multiple errors are not detectable.
-        Suppose an A is sent and the first and seventh bits are changed from <m>0</m> to <m>1</m>.
-        The received word is a codeword,
-        but will be decoded into a C instead of an A. Second,
-        we do not have the ability to correct errors.
-        If the 8-tuple <m>(\codeword{1001}\; \codeword{1000})</m> is received,
-        we know that an error has occurred,
-        but we have no idea which bit has been changed.
-        We will now investigate a coding scheme that will not only allow us to detect transmission errors but will actually correct the errors.
+        O sistema de paridade par é fácil de implementar, mas tem duas desvantagens.
+        Primeiro, não é possível detectar erros múltiplos.
+        Suponha que um A seja enviado e que o primeiro e o sétimo bits mudem de <m>0</m> para <m>1</m>.
+        A palavra recebida é uma palavra-código,
+        mas será decodificada como C em vez de A. Segundo,
+        não temos a capacidade de corrigir erros.
+        Se a 8-upla <m>(\codeword{1001}\; \codeword{1000})</m> for recebida,
+        sabemos que ocorreu um erro,
+        mas não temos ideia de qual bit foi alterado.
+        Investigaremos agora um esquema de codificação que não apenas nos permita detectar erros de transmissão, mas que efetivamente corrija os erros.
       </p>
 
       <example xml:id="algcodes-example-nearest">
         <p>
-          Suppose that our original message is either a <m>0</m> or a <m>1</m>,
-          and that <m>0</m> encodes to <m>(\codeword{000})</m> and <m>1</m> encodes to <m>(\codeword{111})</m>.
-          If only a single error occurs during transmission,
-          we can detect and correct the error.
-          For example, if a <m>(\codeword{101})</m> is received,
-          then the second bit must have been changed from a <m>1</m> to a <m>0</m>.
-          The originally transmitted codeword must have been <m>(\codeword{111})</m>.
-          This method will detect and correct all single errors.
+          Suponha que nossa mensagem original seja <m>0</m> ou <m>1</m>,
+          e que <m>0</m> seja codificado como <m>(\codeword{000})</m> e <m>1</m> como <m>(\codeword{111})</m>.
+          Se ocorrer apenas um erro durante a transmissão,
+          podemos detectá-lo e corrigi-lo.
+          Por exemplo, se <m>(\codeword{101})</m> for recebido,
+          então o segundo bit deve ter mudado de <m>1</m> para <m>0</m>.
+          A palavra-código transmitida originalmente deve ter sido <m>(\codeword{111})</m>.
+          Esse método detectará e corrigirá todos os erros únicos.
         </p>
 
         <table xml:id="algcodes-table-repetition-code">
-          <title>A repetition code</title>
+          <title>Um código de repetição</title>
           <tabular halign="center" top="medium">
             <col/>
             <col/>
@@ -189,11 +189,11 @@
             <col/>
             <col/>
             <row>
-              <cell>Transmitted</cell>
-              <cell colspan="8">Received Word</cell>
+              <cell>Transmitida</cell>
+              <cell colspan="8">Palavra recebida</cell>
             </row>
             <row bottom="medium">
-              <cell>Codeword</cell>
+              <cell>Palavra-código</cell>
               <cell><m>\codeword{000}</m></cell>
               <cell><m>\codeword{001}</m></cell>
               <cell><m>\codeword{010}</m></cell>
@@ -230,48 +230,48 @@
         </table>
 
         <p>
-          In <xref ref="algcodes-table-repetition-code"/>,
-          we present all possible words that might be received for the transmitted codewords <m>(\codeword{000})</m> and <m>(\codeword{111})</m>.
-          <xref ref="algcodes-table-repetition-code"/> also shows the number of bits by which each received <m>3</m>-tuple differs from each original codeword.
+          Em <xref ref="algcodes-table-repetition-code"/>,
+          apresentamos todas as palavras possíveis que podem ser recebidas para as palavras-código transmitidas <m>(\codeword{000})</m> e <m>(\codeword{111})</m>.
+          <xref ref="algcodes-table-repetition-code"/> também mostra o número de bits pelos quais cada <m>3</m>-upla recebida difere de cada palavra-código original.
         </p>
       </example>
     </introduction>
 
     <subsection xml:id="algcodes-subsection-max-likelihood">
-      <title>Maximum-Likelihood Decoding</title>
+      <title>Decodificação por máxima verossimilhança</title>
             <!-- Label repaired.  Suggested by R. Beezer. -->
             <!-- TWJ - 12/19/2011 -->
       <p>
-        The coding scheme presented in <xref ref="algcodes-example-nearest"/> is not a complete solution to the problem because it does not account for the possibility of multiple errors.
-        For example,
-        either a <m>(\codeword{000})</m> or a <m>(\codeword{111})</m> could be sent and a <m>(\codeword{001})</m> received.
-        We have no means of deciding from the received word whether there was a single error in the third bit or two errors,
-        one in the first bit and one in the second.
-        No matter what coding scheme is used,
-        an incorrect message could be received.
-        We could transmit a <m>(\codeword{000})</m>,
-        have errors in all three bits,
-        and receive the codeword <m>(\codeword{111})</m>.
-        It is important to make explicit assumptions about the likelihood and distribution of transmission errors so that,
-        in a particular application,
-        it will be known whether a given error detection scheme is appropriate.
-        We will assume that transmission errors are rare, and,
-        that when they do occur, they occur independently in each bit;
-        that is, if <m>p</m> is the probability of an error in one bit and <m>q</m> is the probability of an error in a different bit,
-        then the probability of errors occurring in both of these bits at the same time is <m>pq</m>.
-        We will also assume that a received <m>n</m>-tuple is decoded into a codeword that is closest to it;
-        that is, we assume that the receiver uses
-        <idx><h>Maximum-likelihood decoding</h></idx><term>maximum-likelihood decoding</term>.<fn>
-        This section requires a knowledge of probability,
-        but can be skipped without loss of continuity.
+        O esquema de codificação apresentado em <xref ref="algcodes-example-nearest"/> não é uma solução completa para o problema, pois não leva em conta a possibilidade de erros múltiplos.
+        Por exemplo,
+        tanto <m>(\codeword{000})</m> quanto <m>(\codeword{111})</m> poderiam ser enviados e <m>(\codeword{001})</m> recebido.
+        Não temos como decidir, a partir da palavra recebida, se houve um único erro no terceiro bit ou dois erros,
+        um no primeiro bit e outro no segundo.
+        Independentemente do esquema de codificação usado,
+        uma mensagem incorreta pode ser recebida.
+        Poderíamos transmitir <m>(\codeword{000})</m>,
+        ter erros nos três bits
+        e receber a palavra-código <m>(\codeword{111})</m>.
+        É importante explicitar hipóteses sobre a probabilidade e a distribuição dos erros de transmissão para que,
+        em uma aplicação particular,
+        se saiba se determinado esquema de detecção de erros é apropriado.
+        Suporemos que os erros de transmissão são raros e
+        que, quando ocorrem, acontecem independentemente em cada bit;
+        isto é, se <m>p</m> é a probabilidade de erro em um bit e <m>q</m> é a probabilidade de erro em outro bit,
+        então a probabilidade de ocorrerem erros simultaneamente nesses dois bits é <m>pq</m>.
+        Também suporemos que uma <m>n</m>-upla recebida seja decodificada na palavra-código mais próxima;
+        isto é, suporemos que o receptor use a
+        <idx><h>decodificação por máxima verossimilhança</h></idx><term>decodificação por máxima verossimilhança</term>.<fn>
+        Esta seção requer conhecimento de probabilidade,
+        mas pode ser omitida sem perda de continuidade.
         </fn></p>
 
       <figure xml:id="algcodes-figure-channel">
         
-        <caption>Binary symmetric channel</caption>
+        <caption>Canal binário simétrico</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/10/2010 -->
         <image width="40%" xml:id="algcodes-binary-channel">
-        	<description>A schematic diagram where a zero has probabilty p that it will be decoded as a zero and probability q that it will be decoded as a one, which are represented by arrows from 0 to 0 and 1 to 1, respectively.  A one has probabilty p that it will be decoded as a one and probability q that it will be decoded as a zero, which are represented by arrows from 1 to 1 and 0 to 1, respectively.</description>
+        <description>Um diagrama esquemático no qual um zero tem probabilidade p de ser decodificado como zero e probabilidade q de ser decodificado como um, representadas por setas de 0 para 0 e de 1 para 1, respectivamente. Um tem probabilidade p de ser decodificado como um e probabilidade q de ser decodificado como zero, representadas por setas de 1 para 1 e de 0 para 1, respectivamente.</description>
             <latex-image>
                 <xi:include href="tikz/algcodes-binary-channel.tex" parse="text"/>
             </latex-image>
@@ -280,16 +280,16 @@
       </figure>
 
       <p>
-        A <term>binary symmetric channel</term><idx><h>Binary symmetric channel</h></idx> is a model that consists of a transmitter capable of sending a binary signal,
-        either a <m>0</m> or a <m>1</m>, together with a receiver.
-        Let <m>p</m> be the probability that the signal is correctly received.
-        Then <m>q = 1 - p</m> is the probability of an incorrect reception.
-        If a <m>1</m> is sent,
-        then the probability that a <m>1</m> is received is <m>p</m> and the probability that a <m>0</m> is received is <m>q</m> (<xref ref="algcodes-figure-channel"/>).
-        The probability that no errors occur during the transmission of a binary codeword of length <m>n</m> is <m>p^{n}</m>.
-        For example,
-        if <m>p=0.999</m> and a message consisting of 10,000 bits is sent,
-        then the probability of a perfect transmission is
+        Um <term>canal binário simétrico</term><idx><h>Canal binário simétrico</h></idx> é um modelo que consiste em um transmissor capaz de enviar um sinal binário,
+        seja <m>0</m> ou <m>1</m>, juntamente com um receptor.
+        Seja <m>p</m> a probabilidade de o sinal ser recebido corretamente.
+        Então <m>q = 1 - p</m> é a probabilidade de uma recepção incorreta.
+        Se um <m>1</m> é enviado,
+        a probabilidade de receber um <m>1</m> é <m>p</m> e a probabilidade de receber um <m>0</m> é <m>q</m> (<xref ref="algcodes-figure-channel"/>).
+        A probabilidade de não ocorrerem erros durante a transmissão de uma palavra-código binária de comprimento <m>n</m> é <m>p^{n}</m>.
+        Por exemplo,
+        se <m>p=0.999</m> e for enviada uma mensagem composta por 10.000 bits,
+        então a probabilidade de uma transmissão perfeita é
         <md>
           (0.999)^{10,000} \approx 0.00005
         </md>.
@@ -298,10 +298,10 @@
       <theorem>
         <statement>
           <p>
-            If a binary <m>n</m>-tuple
+            Se uma <m>n</m>-upla binária
             <m>(x_{1}, \ldots,
-            x_{n})</m> is transmitted across a binary symmetric channel with probability <m>p</m> that no error will occur in each coordinate,
-            then the probability that there are errors in exactly <m>k</m> coordinates is
+            x_{n})</m> é transmitida por um canal binário simétrico com probabilidade <m>p</m> de não ocorrer erro em cada coordenada,
+            então a probabilidade de haver erros em exatamente <m>k</m> coordenadas é
             <md>
               \binom{n}{k} q^kp^{n - k}
             </md>.
@@ -310,18 +310,18 @@
 
         <proof>
           <p>
-            Fix <m>k</m> different coordinates.
-            We first compute the probability that an error has occurred in this fixed set of coordinates.
-            The probability of an error occurring in a particular one of these <m>k</m> coordinates is <m>q</m>;
-            the probability that an error will not occur in any of the remaining <m>n-k</m> coordinates is <m>p</m>.
-            The probability of each of these <m>n</m> independent events is <m>q^{k}p^{n-k}</m>.
-            The number of possible error patterns with exactly <m>k</m> errors occurring is equal to
+            Fixe <m>k</m> coordenadas distintas.
+            Primeiro calculamos a probabilidade de ter ocorrido um erro nesse conjunto fixo de coordenadas.
+            A probabilidade de ocorrer um erro em uma coordenada particular dessas <m>k</m> é <m>q</m>;
+            a probabilidade de não ocorrer erro em nenhuma das <m>n-k</m> coordenadas restantes é <m>p</m>.
+            A probabilidade de cada um desses <m>n</m> eventos independentes é <m>q^{k}p^{n-k}</m>.
+            O número de padrões de erro possíveis com exatamente <m>k</m> erros é igual a
             <md>
               \binom{n}{k}  = \frac{n!}{k!(n - k)!}
             </md>,
-            the number of combinations of <m>n</m> things taken <m>k</m> at a time.
-            Each of these error patterns has probability <m>q^{k}p^{n-k}</m> of occurring;
-            hence, the probability of all of these error patterns is
+            o número de combinações de <m>n</m> elementos tomados <m>k</m> de cada vez.
+            Cada um desses padrões de erro tem probabilidade <m>q^{k}p^{n-k}</m> de ocorrer;
+            portanto, a probabilidade de todos esses padrões de erro é
             <md>
               \binom{n}{k}  q^{k}p^{n - k}
             </md>.
@@ -331,20 +331,20 @@
 
       <example xml:id="algcodes-example-probability">
         <p>
-          Suppose that <m>p = 0.995</m> and a <m>500</m>-bit message is sent.
-          The probability that the message was sent error-free is
+          Suponha que <m>p = 0.995</m> e que seja enviada uma mensagem de <m>500</m> bits.
+          A probabilidade de a mensagem ser enviada sem erros é
           <md>
             p^{n} = (0.995)^{500} \approx 0.082
           </md>.
-          The probability of exactly one error occurring is
+          A probabilidade de ocorrer exatamente um erro é
           <md>
             \binom{n}{1}  qp^{n - 1}= 500(0.005)(0.995)^{499} \approx 0.204
           </md>.
-          The probability of exactly two errors is
+          A probabilidade de ocorrerem exatamente dois erros é
           <md>
             \binom{n}{2} q^{2}p^{n - 2}= \frac{500 \cdot 499}{2}(0.005)^{2}(0.995)^{498} \approx 0.257
           </md>.
-          The probability of more than two errors is approximately
+          A probabilidade de ocorrerem mais de dois erros é aproximadamente
           <md>
             1 - 0.082 - 0.204 - 0.257 = 0.457
           </md>.
@@ -353,89 +353,89 @@
     </subsection>
 
     <subsection xml:id="algcodes-subsection-block-codes">
-      <title>Block Codes</title>
+      <title>Códigos de blocos</title>
       <p>
-        If we are to develop efficient error-detecting and error-correcting codes,
-        we will need more sophisticated mathematical tools.
-        Group theory  will allow faster methods of encoding and decoding messages.
-        A code is an <m>(n, m)</m>-<term>block code</term>
-        if the information that is to be coded can be divided into blocks of <m>m</m> binary digits,
-        each of which can be encoded into <m>n</m> binary digits.
-        More specifically, an <m>(n, m)</m>-block code consists of an
-        <term>encoding function</term>
+        Para desenvolver códigos eficientes detectores e corretores de erros,
+        precisaremos de ferramentas matemáticas mais sofisticadas.
+        A teoria dos grupos permitirá métodos mais rápidos de codificação e decodificação de mensagens.
+        Um código é um <m>(n, m)</m>-<term>código de blocos</term>
+        se a informação a ser codificada puder ser dividida em blocos de <m>m</m> algarismos binários,
+        cada um dos quais pode ser codificado em <m>n</m> algarismos binários.
+        Mais especificamente, um código de blocos de tipo <m>(n, m)</m> consiste em uma
+        <term>função de codificação</term>
         <md>
           E:{\mathbb Z}^{m}_{2} \rightarrow {\mathbb Z}^{n}_{2}
         </md>
-        and a <term>decoding function</term>
+        e uma <term>função de decodificação</term>
         <md>
           D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{m}_{2}
         </md>.
-        A <term>codeword</term> is any element in the image of <m>E</m>.
-        We also require that <m>E</m> be one-to-one so that two information blocks will not be encoded into the same codeword.
-        If our code is to be error-correcting,
-        then <m>D</m> must be onto.
+        Uma <term>palavra-código</term> é qualquer elemento da imagem de <m>E</m>.
+        Também exigimos que <m>E</m> seja injetiva, para que dois blocos de informação não sejam codificados na mesma palavra-código.
+        Se nosso código for corretor de erros,
+        então <m>D</m> deve ser sobrejetiva.
       </p>
 
       <example xml:id="algcodes-example-block-code">
         <p>
-          The even-parity coding system developed to detect single errors in <acro>ASCII</acro> characters is an <m>(8,7)</m>-block code.
-          The encoding function is
+          O sistema de codificação por paridade par desenvolvido para detectar erros únicos em caracteres <acro>ASCII</acro> é um código de blocos <m>(8,7)</m>.
+          A função de codificação é
           <md>
             E(x_7, x_6, \ldots, x_1) = (x_8, x_7,  \ldots, x_1)
           </md>,
-          where <m>x_8 = x_7 + x_6 + \cdots + x_1</m> with addition in <m>{\mathbb Z}_2</m>.
+          onde <m>x_8 = x_7 + x_6 + \cdots + x_1</m>, com a adição em <m>{\mathbb Z}_2</m>.
         </p>
       </example>
 
       <p>
-        Let <m>{\mathbf x} = (x_1, \ldots,
-        x_n)</m> and <m>{\mathbf y} = (y_1, \ldots,
-        y_n)</m> be binary <m>n</m>-tuples.
-        The <term>Hamming distance</term><idx><h>Hamming distance</h></idx>
-        or <term>distance</term>, <m>d({\mathbf x}, {\mathbf y})</m>,
-        between <m>{\mathbf x}</m> and
-        <m>{\mathbf y}</m> is the number of bits in which
-        <m>{\mathbf x}</m> and <m>{\mathbf y}</m> differ.
-        The distance between two codewords is the minimum number of transmission errors required to change one codeword into the other.
-        The <term>minimum distance</term><idx><h>Code</h><h>minimum distance of</h></idx> for a code,
+        Sejam <m>{\mathbf x} = (x_1, \ldots,
+        x_n)</m> e <m>{\mathbf y} = (y_1, \ldots,
+        y_n)</m> <m>n</m>-uplas binárias.
+        A <term>distância de Hamming</term><idx><h>Distância de Hamming</h></idx>
+        ou <term>distância</term>, <m>d({\mathbf x}, {\mathbf y})</m>,
+        entre <m>{\mathbf x}</m> e
+        <m>{\mathbf y}</m> é o número de bits nos quais
+        <m>{\mathbf x}</m> e <m>{\mathbf y}</m> diferem.
+        A distância entre duas palavras-código é o número mínimo de erros de transmissão necessários para transformar uma palavra-código na outra.
+        A <term>distância mínima</term><idx><h>Código</h><h>distância mínima de</h></idx> de um código,
         <m>d_{\min}</m>,
-        is the minimum of all distances <m>d({\mathbf x}, {\mathbf y})</m>,
-        where <m>{\mathbf x}</m> and
-        <m>{\mathbf y}</m> are distinct codewords.
-        The <idx><h>Weight of a codeword</h></idx><term>weight</term>,   
-        <m>w({\mathbf x})</m>, of a binary codeword
-        <m>{\mathbf x}</m> is the number of <m>1</m>s in <m>{\mathbf x}</m>.
-        Clearly, <m>w({\mathbf x}) = d({\mathbf x}, {\mathbf 0})</m>,
-        where <m>{\mathbf 0} = (\codeword{00 \cdots 0})</m>.
+        é o mínimo de todas as distâncias <m>d({\mathbf x}, {\mathbf y})</m>,
+        onde <m>{\mathbf x}</m> e
+        <m>{\mathbf y}</m> são palavras-código distintas.
+        O <idx><h>Peso de uma palavra-código</h></idx><term>peso</term>,
+        <m>w({\mathbf x})</m>, de uma palavra-código binária
+        <m>{\mathbf x}</m> é o número de <m>1</m>s em <m>{\mathbf x}</m>.
+        Claramente, <m>w({\mathbf x}) = d({\mathbf x}, {\mathbf 0})</m>,
+        onde <m>{\mathbf 0} = (\codeword{00 \cdots 0})</m>.
 
         <notation>
           <usage><m>d(\mathbf x, \mathbf y)</m></usage>
-          <description>Hamming distance between <m>\mathbf x</m> and <m>\mathbf y</m></description>
+          <description>distância de Hamming entre <m>\mathbf x</m> e <m>\mathbf y</m></description>
         </notation>
 
         <notation>
           <usage><m>d_{\min}</m></usage>
-          <description>the minimum distance of a code</description>
+          <description>a distância mínima de um código</description>
         </notation>
 
         <notation>
           <usage><m>w(\mathbf x)</m></usage>
-          <description>the weight of <m>\mathbf x</m></description>
+          <description>o peso de <m>\mathbf x</m></description>
         </notation>
 
       </p>
 
       <example xml:id="algcodes-example-min-distance">
         <p>
-          Let <m>{\mathbf x} = (\codeword{10101})</m>,
-          <m>{\mathbf y} = (\codeword{11010})</m>,
-          and <m>{\mathbf z} = (\codeword{00011})</m> be all of the codewords in some code <m>C</m>.
-          Then we have the following Hamming distances:
+          Sejam <m>{\mathbf x} = (\codeword{10101})</m>,
+          <m>{\mathbf y} = (\codeword{11010})</m>
+          e <m>{\mathbf z} = (\codeword{00011})</m> todas as palavras-código de algum código <m>C</m>.
+          Então temos as seguintes distâncias de Hamming:
           <md>
             d({\mathbf x},{\mathbf y}) = 4, \qquad d({\mathbf x},{\mathbf z}) = 3, \qquad d({\mathbf y},{\mathbf z}) = 3
           </md>.
-          The minimum distance for this code is <m>3</m>.
-          We also have the following weights:
+          A distância mínima desse código é <m>3</m>.
+          Também temos os seguintes pesos:
           <md>
             w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2
           </md>.
@@ -443,16 +443,16 @@
       </example>
 
       <p>
-        The following proposition lists some basic properties about the weight of a codeword and the distance between two codewords.
-        The proof is left as an exercise.
+        A proposição a seguir lista algumas propriedades básicas do peso de uma palavra-código e da distância entre duas palavras-código.
+        A demonstração fica como exercício.
       </p>
 
       <proposition>
         <statement>
           <p>
-            Let <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
-            and <m>{\mathbf z}</m> be binary <m>n</m>-tuples.
-            Then
+            Sejam <m>{\mathbf x}</m>, <m>{\mathbf y}</m>
+            e <m>{\mathbf z}</m> <m>n</m>-uplas binárias.
+            Então
 
             <ol>
               <li>
@@ -490,31 +490,31 @@
       </proposition>
 
       <p>
-        The weights in a particular code are usually much easier to compute than the Hamming distances between all codewords in the code.
-        If a code is set up carefully,
-        we can use this fact to our advantage.
+        Em um código particular, geralmente é muito mais fácil calcular os pesos do que as distâncias de Hamming entre todas as palavras-código do código.
+        Se um código for construído cuidadosamente,
+        podemos usar esse fato a nosso favor.
       </p>
 
       <p>
-        Suppose that <m>{\mathbf x} = (\codeword{1101})</m> and
-        <m>{\mathbf y} = (\codeword{1100})</m> are codewords in some code.
-        If we transmit <m>(\codeword{1101})</m> and an error occurs in the rightmost bit,
-        then <m>(\codeword{1100})</m> will be received.
-        Since <m>(\codeword{1100})</m> is a codeword,
-        the decoder will decode <m>(\codeword{1100})</m> as the transmitted message.
-        This code is clearly not very appropriate for error detection.
-        The problem is that <m>d({\mathbf x}, {\mathbf y}) = 1</m>.
-        If <m>{\mathbf x} = (\codeword{1100})</m> and <m>{\mathbf y} = (\codeword{1010})</m> are codewords,
-        then <m>d({\mathbf x}, {\mathbf y}) = 2</m>.
-        If <m>{\mathbf x}</m> is transmitted and a single error occurs,
-        then <m>{\mathbf y}</m> can never be received.
-        <xref ref="algcodes-table-4-bit-words"/> gives the distances between all 4-bit codewords in which the first three bits carry information and the fourth is an even parity check bit.
-        We can see that the minimum distance here is <m>2</m>;
-        hence, the code is suitable as a single error-detecting code.
+        Suponha que <m>{\mathbf x} = (\codeword{1101})</m> e
+        <m>{\mathbf y} = (\codeword{1100})</m> sejam palavras-código de algum código.
+        Se transmitirmos <m>(\codeword{1101})</m> e ocorrer um erro no bit mais à direita,
+        então <m>(\codeword{1100})</m> será recebido.
+        Como <m>(\codeword{1100})</m> é uma palavra-código,
+        o decodificador decodificará <m>(\codeword{1100})</m> como a mensagem transmitida.
+        Esse código claramente não é muito apropriado para a detecção de erros.
+        O problema é que <m>d({\mathbf x}, {\mathbf y}) = 1</m>.
+        Se <m>{\mathbf x} = (\codeword{1100})</m> e <m>{\mathbf y} = (\codeword{1010})</m> forem palavras-código,
+        então <m>d({\mathbf x}, {\mathbf y}) = 2</m>.
+        Se <m>{\mathbf x}</m> for transmitida e ocorrer um único erro,
+        então <m>{\mathbf y}</m> nunca poderá ser recebida.
+        <xref ref="algcodes-table-4-bit-words"/> fornece as distâncias entre todas as palavras-código de 4 bits nas quais os três primeiros bits carregam informação e o quarto é um bit de verificação de paridade par.
+        Podemos ver que a distância mínima aqui é <m>2</m>;
+        portanto, o código é adequado como código detector de erros únicos.
       </p>
 
       <table xml:id="algcodes-table-4-bit-words">
-        <title>Distances between 4-bit codewords</title>
+        <title>Distâncias entre palavras-código de 4 bits</title>
         <tabular halign="center" top="medium" left="medium" right="medium">
           <row bottom="medium">
             <cell/>
@@ -620,85 +620,85 @@
       </table>
 
       <p>
-        To determine exactly what the error-detecting and error-correcting capabilities for a code are,
-        we need to analyze the minimum distance for the code.
-        Let <m>{\mathbf x}</m> and <m>{\mathbf y}</m> be codewords.
-        If <m>d({\mathbf x}, {\mathbf y}) = 1</m> and an error occurs where
-        <m>{\mathbf x}</m> and <m>{\mathbf y}</m> differ,
-        then <m>{\mathbf x}</m> is changed to <m>{\mathbf y}</m>.
-        The received codeword is <m>{\mathbf y}</m> and no error message is given.
-        Now suppose <m>d({\mathbf x}, {\mathbf y}) = 2</m>.
-        Then a single error cannot change
-        <m>{\mathbf x}</m> to <m>{\mathbf y}</m>.
-        Therefore, if <m>d_{\min} = 2</m>,
-        we have the ability to detect single errors.
-        However, suppose that <m>d({\mathbf x}, {\mathbf y}) = 2</m>,
-        <m>{\mathbf y}</m> is sent,
-        and a noncodeword <m>{\mathbf z}</m> is received such that
+        Para determinar exatamente quais são as capacidades de detecção e correção de erros de um código,
+        precisamos analisar a distância mínima do código.
+        Sejam <m>{\mathbf x}</m> e <m>{\mathbf y}</m> palavras-código.
+        Se <m>d({\mathbf x}, {\mathbf y}) = 1</m> e ocorrer um erro na posição em que
+        <m>{\mathbf x}</m> e <m>{\mathbf y}</m> diferem,
+        então <m>{\mathbf x}</m> será transformada em <m>{\mathbf y}</m>.
+        A palavra-código recebida será <m>{\mathbf y}</m> e nenhuma mensagem de erro será fornecida.
+        Suponha agora que <m>d({\mathbf x}, {\mathbf y}) = 2</m>.
+        Então um único erro não pode transformar
+        <m>{\mathbf x}</m> em <m>{\mathbf y}</m>.
+        Portanto, se <m>d_{\min} = 2</m>,
+        podemos detectar erros únicos.
+        Contudo, suponha que <m>d({\mathbf x}, {\mathbf y}) = 2</m>,
+        <m>{\mathbf y}</m> seja enviada
+        e uma palavra que não é palavra-código, <m>{\mathbf z}</m>, seja recebida de modo que
         <md>
           d({\mathbf x}, {\mathbf z}) = d({\mathbf y}, {\mathbf z}) = 1
         </md>.
-        Then the decoder cannot decide between
-        <m>{\mathbf x}</m> and <m>{\mathbf y}</m>.
-        Even though we are aware that an error has occurred,
-        we do not know what the error is.
+        Então o decodificador não pode decidir entre
+        <m>{\mathbf x}</m> e <m>{\mathbf y}</m>.
+        Embora saibamos que ocorreu um erro,
+        não sabemos qual é o erro.
       </p>
 
       <p>
-        Suppose <m>d_{\min} \geq 3</m>.
-        Then the maximum-likelihood decoding scheme corrects all single errors.
-        Starting with a codeword <m>{\mathbf x}</m>,
-        an error in the transmission of a single bit gives
-        <m>{\mathbf y}</m> with <m>d({\mathbf x}, {\mathbf y}) = 1</m>,
-        but <m>d({\mathbf z}, {\mathbf y}) \geq 2</m> for any other codeword <m>{\mathbf z} \neq {\mathbf x}</m>.
-        If we do not require the correction of errors,
-        then we can detect multiple errors when a code has a minimum distance that is greater than or equal to <m>3</m>.
+        Suponha <m>d_{\min} \geq 3</m>.
+        Então o esquema de decodificação por máxima verossimilhança corrige todos os erros únicos.
+        Partindo de uma palavra-código <m>{\mathbf x}</m>,
+        um erro na transmissão de um único bit produz
+        <m>{\mathbf y}</m> com <m>d({\mathbf x}, {\mathbf y}) = 1</m>,
+        mas <m>d({\mathbf z}, {\mathbf y}) \geq 2</m> para qualquer outra palavra-código <m>{\mathbf z} \neq {\mathbf x}</m>.
+        Se não exigirmos a correção de erros,
+        poderemos detectar erros múltiplos quando um código tiver distância mínima maior ou igual a <m>3</m>.
       </p>
 
       <theorem xml:id="algcodes-theorem-min-distance">
         <statement>
           <p>
-            Let <m>C</m> be a code with <m>d_{\min} = 2n + 1</m>.
-            Then <m>C</m> can correct any <m>n</m> or fewer errors.
-            Furthermore,
-            any <m>2n</m> or fewer errors can be detected in <m>C</m>.
+            Seja <m>C</m> um código com <m>d_{\min} = 2n + 1</m>.
+            Então <m>C</m> pode corrigir quaisquer <m>n</m> erros ou menos.
+            Além disso,
+            quaisquer <m>2n</m> erros ou menos podem ser detectados em <m>C</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that a codeword <m>{\mathbf x}</m> is sent and the word
-            <m>{\mathbf y}</m> is received with at most <m>n</m> errors.
-            Then <m>d( {\mathbf x}, {\mathbf y}) \leq n</m>.
-            If <m>{\mathbf z}</m> is any codeword other than <m>{\mathbf x}</m>, then
+            Suponha que uma palavra-código <m>{\mathbf x}</m> seja enviada e a palavra
+            <m>{\mathbf y}</m> seja recebida com no máximo <m>n</m> erros.
+            Então <m>d( {\mathbf x}, {\mathbf y}) \leq n</m>.
+            Se <m>{\mathbf z}</m> for qualquer palavra-código diferente de <m>{\mathbf x}</m>, então
             <md>
               2n+1 \leq d( {\mathbf x}, {\mathbf z}) \leq d( {\mathbf x}, {\mathbf y}) + d( {\mathbf y}, {\mathbf z}) \leq n + d( {\mathbf y}, {\mathbf z})
             </md>.
-            Hence, <m>d({\mathbf y}, {\mathbf z} ) \geq n+1</m> and
-            <m>{\mathbf y}</m> will be correctly decoded as <m>{\mathbf x}</m>.
-            Now suppose that <m>{\mathbf x}</m> is transmitted and
-            <m>{\mathbf y}</m> is received and that at least one error  has occurred,
-            but not more than <m>2n</m> errors.
-            Then <m>1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n</m>.
-            Since the minimum distance between codewords is <m>2n +1</m>,
-            <m>{\mathbf y}</m> cannot be a codeword.
-            Consequently,
-            the code can detect between <m>1</m> and <m>2n</m> errors.
+            Portanto, <m>d({\mathbf y}, {\mathbf z} ) \geq n+1</m> e
+            <m>{\mathbf y}</m> será corretamente decodificada como <m>{\mathbf x}</m>.
+            Suponha agora que <m>{\mathbf x}</m> seja transmitida e
+            <m>{\mathbf y}</m> seja recebida, tendo ocorrido pelo menos um erro,
+            mas não mais que <m>2n</m> erros.
+            Então <m>1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n</m>.
+            Como a distância mínima entre palavras-código é <m>2n +1</m>,
+            <m>{\mathbf y}</m> não pode ser uma palavra-código.
+            Consequentemente,
+            o código pode detectar entre <m>1</m> e <m>2n</m> erros.
           </p>
         </proof>
       </theorem>
 
       <example xml:id="algcodes-example-single-correct">
         <p>
-          In <xref ref="algcodes-table-hamming-distance"/>,
-          the codewords <m>{\mathbf c}_1 = (\codeword{00000})</m>,
+          Em <xref ref="algcodes-table-hamming-distance"/>,
+          as palavras-código <m>{\mathbf c}_1 = (\codeword{00000})</m>,
           <m>{\mathbf c}_2 = (\codeword{00111})</m>,
           <m>{\mathbf c}_3 = (\codeword{11100})</m>,
-          and <m>{\mathbf c}_4 = (\codeword{11011})</m> determine a single error-correcting code.
+          e <m>{\mathbf c}_4 = (\codeword{11011})</m> determinam um código corretor de erros únicos.
         </p>
 
         <table xml:id="algcodes-table-hamming-distance">
-          <title>Hamming distances for an error-correcting code</title>
+          <title>Distâncias de Hamming para um código corretor de erros</title>
           <tabular halign="center" top="medium" left="medium" right="medium">
             <row bottom="medium">
               <cell/>
@@ -744,47 +744,47 @@
     </subsection>
 
     <subsection xml:id="algcodes-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Modern coding theory began in 1948 with C. Shannon's<idx><h>Shannon, C.</h></idx>
-        paper, <q>A Mathematical Theory of Information</q>
-        [7]. This paper offered an example of an algebraic code,
-        and Shannon's Theorem proclaimed exactly how good codes could be expected to be.
+        A teoria moderna dos códigos começou em 1948 com o artigo de C. Shannon<idx><h>Shannon, C.</h></idx>,
+        <q>A Mathematical Theory of Information</q>
+        [7]. Esse artigo ofereceu um exemplo de código algébrico,
+        e o Teorema de Shannon proclamou exatamente quão bons se poderia esperar que fossem os códigos.
         Richard Hamming<idx><h>Hamming, R.</h></idx>
-        began working with linear codes at Bell Labs in the late 1940s and early 1950s after becoming frustrated because the programs that he was running could not recover from simple errors generated by noise.
-        Coding theory has grown tremendously in the past several decades.
+        começou a trabalhar com códigos lineares no Bell Labs no final da década de 1940 e início da década de 1950, depois de se frustrar porque os programas que executava não conseguiam se recuperar de erros simples gerados por ruído.
+        A teoria dos códigos cresceu enormemente nas últimas décadas.
         <em>The Theory of Error-Correcting Codes</em>,
-        by MacWilliams and Sloane [5], published in 1977,
-        already contained over 1500 references.
-        Linear codes (Reed-Muller <m>(32, 6)</m>-block codes) were used on NASA's Mariner space probes.
-        More recent space probes such as Voyager have used what are called convolution codes.
-        Currently, very active research is being done with Goppa codes,
-        which are heavily dependent on algebraic geometry.
+        de MacWilliams e Sloane [5], publicado em 1977,
+        já continha mais de 1500 referências.
+        Códigos lineares (códigos de blocos de Reed-Muller <m>(32, 6)</m>) foram usados nas sondas espaciais Mariner da NASA.
+        Sondas espaciais mais recentes, como a Voyager, usaram os chamados códigos convolucionais.
+        Atualmente, há pesquisas muito ativas com códigos de Goppa,
+        que dependem fortemente da geometria algébrica.
       </p>
     </subsection>
   </section>
 
   <section xml:id="algcodes-section-linear-codes">
-    <title>Linear Codes</title>
+    <title>Códigos lineares</title>
     <introduction>
       <p>
-        To gain more knowledge of a particular code and develop more efficient techniques of encoding,
-        decoding,
-        and error detection, we need to add additional structure to our codes.
-        One way to accomplish this is to require that the code also be a group.
-        A <term>group code</term><idx><h>Code</h><h>group</h></idx>
-        is a code that is also a subgroup of <m>{\mathbb Z}_2^n</m>.
+        Para conhecer melhor um código particular e desenvolver técnicas mais eficientes de codificação,
+        decodificação
+        e detecção de erros, precisamos adicionar estrutura ao nosso código.
+        Uma maneira de fazer isso é exigir que o código também seja um grupo.
+        Um <term>código de grupo</term><idx><h>Código</h><h>grupo</h></idx>
+        é um código que também é um subgrupo de <m>{\mathbb Z}_2^n</m>.
       </p>
 
       <p>
-        To check that a code is a group code,
-        we need only verify one thing.
-        If we add any two elements in the code,
-        the result must be an <m>n</m>-tuple that is again in the code.
-        It is not necessary to check that the inverse of the <m>n</m>-tuple is in the code,
-        since every codeword is its own inverse,
-        nor is it necessary to check that <m>{\mathbf 0}</m> is a codeword.
-        For instance,
+        Para verificar que um código é um código de grupo,
+        basta verificar uma coisa.
+        Se somarmos dois elementos quaisquer do código,
+        o resultado deve ser uma <m>n</m>-upla que também pertence ao código.
+        Não é necessário verificar que o inverso da <m>n</m>-upla pertence ao código,
+        pois toda palavra-código é seu próprio inverso,
+        nem é necessário verificar que <m>{\mathbf 0}</m> é uma palavra-código.
+        Por exemplo,
         <md>
           (\codeword{11000101}) + (\codeword{11000101}) = (\codeword{00000000})
         </md>.
@@ -792,49 +792,49 @@
 
       <example xml:id="algcodes-example-weights">
         <p>
-          Suppose that we have a code that consists of the following 7-tuples:
+          Suponha que tenhamos um código que consiste nas seguintes 7-uplas:
           <md>
             <mrow>&amp;(\codeword{0000000}) &amp; &amp; (\codeword{0001111}) &amp;  &amp; (\codeword{0010101}) &amp; &amp; (\codeword{0011010})</mrow>
             <mrow>&amp;(\codeword{0100110}) &amp; &amp; (\codeword{0101001}) &amp; &amp; (\codeword{0110011}) &amp; &amp; (\codeword{0111100})</mrow>
             <mrow>&amp;(\codeword{1000011}) &amp; &amp; (\codeword{1001100}) &amp; &amp; (\codeword{1010110}) &amp; &amp; (\codeword{1011001})</mrow>
             <mrow>&amp;(\codeword{1100101}) &amp; &amp; (\codeword{1101010}) &amp; &amp; (\codeword{1110000}) &amp; &amp; (\codeword{1111111})</mrow>
           </md>.
-          It is a straightforward though tedious task to verify that this code is also a subgroup of
-          <m>{\mathbb Z}_2^7</m> and, therefore, a group code.
-          This code is a single error-detecting and single error-correcting  code,
-          but it is a long and tedious process to compute all of the distances between  pairs of codewords to determine that <m>d_{\min} = 3</m>.
-          It is much easier to see that the minimum weight of all the nonzero codewords is <m>3</m>.
-          As we will soon see, this is no coincidence.
-          However, the relationship between weights and distances in a particular code is heavily dependent on the fact that the code is a group.
+          É uma tarefa direta, embora tediosa, verificar que esse código também é um subgrupo de
+          <m>{\mathbb Z}_2^7</m> e, portanto, um código de grupo.
+          Esse código detecta e corrige erros únicos,
+          mas é longo e tedioso calcular todas as distâncias entre pares de palavras-código para determinar que <m>d_{\min} = 3</m>.
+          É muito mais fácil ver que o peso mínimo de todas as palavras-código não nulas é <m>3</m>.
+          Como veremos em breve, isso não é coincidência.
+          Contudo, a relação entre pesos e distâncias em um código particular depende fortemente do fato de o código ser um grupo.
         </p>
       </example>
 
       <lemma>
         <statement>
           <p>
-            Let <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> be binary <m>n</m>-tuples.
-            Then <m>w({\mathbf x} + {\mathbf y}) = d({\mathbf x}, {\mathbf y})</m>.
+            Sejam <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> <m>n</m>-uplas binárias.
+            Então <m>w({\mathbf x} + {\mathbf y}) = d({\mathbf x}, {\mathbf y})</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            Suppose that <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> are binary <m>n</m>-tuples.
-            Then the distance between <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> is exactly the number of places in which
-            <m>{\mathbf x}</m> and <m>{\mathbf y}</m> differ.
-            But <m>{\mathbf x}</m> and
-            <m>{\mathbf y}</m> differ in a particular coordinate exactly when the sum in the coordinate is <m>1</m>, since
+            Suponha que <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> sejam <m>n</m>-uplas binárias.
+            Então a distância entre <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> é exatamente o número de posições nas quais
+            <m>{\mathbf x}</m> e <m>{\mathbf y}</m> diferem.
+            Mas <m>{\mathbf x}</m> e
+            <m>{\mathbf y}</m> diferem em uma coordenada particular exatamente quando a soma nessa coordenada é <m>1</m>, pois
             <md>
               <mrow>1 + 1 &amp; = 0</mrow>
               <mrow>0 + 0 &amp; = 0</mrow>
               <mrow>1 + 0 &amp; = 1</mrow>
               <mrow>0 + 1 &amp; = 1</mrow>
             </md>.
-            Consequently,
-            the weight of the sum must be the distance between the two codewords.
+            Consequentemente,
+            o peso da soma deve ser a distância entre as duas palavras-código.
           </p>
         </proof>
       </lemma>
@@ -842,9 +842,9 @@
       <theorem>
         <statement>
           <p>
-            Let <m>d_{\min}</m> be the minimum distance for a group code <m>C</m>.
-            Then <m>d_{\min}</m> is the minimum weight of all the nonzero codewords in <m>C</m>.
-            That is,
+            Seja <m>d_{\min}</m> a distância mínima de um código de grupo <m>C</m>.
+            Então <m>d_{\min}</m> é o peso mínimo de todas as palavras-código não nulas em <m>C</m>.
+            Isto é,
             <md>
               d_{\min} = \min\{ w({\mathbf x}) : { {\mathbf x} \neq {\mathbf 0} } \}
             </md>.
@@ -853,7 +853,7 @@
 
         <proof>
           <p>
-            Observe that
+            Observe que
             <md>
               <mrow>d_{\min} &amp; =  \min \{ d({\mathbf x},{\mathbf y}) : {\mathbf x}\neq{\mathbf y} \}</mrow>
               <mrow>&amp;=  \min \{ d({\mathbf x},{\mathbf y}) : {\mathbf x}+{\mathbf y} \neq {\mathbf 0} \}</mrow>
@@ -866,31 +866,31 @@
     </introduction>
 
     <subsection xml:id="algcodes-subsection-linear-codes">
-      <title>Linear Codes</title>
+      <title>Códigos lineares</title>
       <p>
-        From <xref ref="algcodes-example-weights"/>,
-        it is now easy to check that the minimum nonzero weight is <m>3</m>;
-        hence, the code does indeed detect and correct all single errors.
-        We have now reduced the problem of finding <q>good</q>
-        codes to that of generating group codes.
-        One easy way to generate group codes is to employ a bit of matrix theory.
+        A partir de <xref ref="algcodes-example-weights"/>,
+        agora é fácil verificar que o peso mínimo não nulo é <m>3</m>;
+        portanto, o código de fato detecta e corrige todos os erros únicos.
+        Reduzimos o problema de encontrar códigos <q>bons</q>
+        ao de gerar códigos de grupo.
+        Uma maneira fácil de gerar códigos de grupo é usar um pouco de teoria das matrizes.
       </p>
 
       <p>
-        Define the <term>inner product</term><idx><h>Inner product</h></idx>
-        of two binary <m>n</m>-tuples to be
+        Defina o <term>produto interno</term><idx><h>Produto interno</h></idx>
+        de duas <m>n</m>-uplas binárias como
         <md>
           {\mathbf x} \cdot {\mathbf y} = x_1 y_1 + \cdots + x_n y_n
         </md>,
-        where <m>{\mathbf x} = (x_1, x_2, \ldots,
-        x_n)^\transpose</m> and <m>{\mathbf y} = (y_1, y_2, \ldots,
-        y_n)^\transpose</m> are column vectors.<fn>
-        Since we will be working with matrices,
-        we will write binary <m>n</m>-tuples as column vectors for the remainder of this chapter.
-        </fn> For example,
-        if <m>{\mathbf x} = (\codeword{011001})^\transpose</m> and <m>{\mathbf y} = (\codeword{110101})^\transpose</m>,
-        then <m>{\mathbf x} \cdot {\mathbf y} = 0</m>.
-        We can also look at an inner product as the product of a row matrix with a column matrix; that is,
+        onde <m>{\mathbf x} = (x_1, x_2, \ldots,
+        x_n)^\transpose</m> e <m>{\mathbf y} = (y_1, y_2, \ldots,
+        y_n)^\transpose</m> são vetores coluna.<fn>
+        Como trabalharemos com matrizes,
+        escreveremos as <m>n</m>-uplas binárias como vetores coluna pelo restante deste capítulo.
+        </fn> Por exemplo,
+        se <m>{\mathbf x} = (\codeword{011001})^\transpose</m> e <m>{\mathbf y} = (\codeword{110101})^\transpose</m>,
+        então <m>{\mathbf x} \cdot {\mathbf y} = 0</m>.
+        Também podemos ver um produto interno como o produto de uma matriz linha por uma matriz coluna; isto é,
         <md>
           <mrow>{\mathbf x} \cdot {\mathbf y} &amp; = {\mathbf x}^\transpose  {\mathbf y}</mrow>
           <mrow>&amp; =
@@ -906,13 +906,13 @@
 
       <example xml:id="algcodes-example-matrixcodes">
         <p>
-          Suppose that the words to be encoded consist of all binary <m>3</m>-tuples and that our encoding scheme is even-parity.
-          To encode an arbitrary <m>3</m>-tuple,
-          we add a fourth bit to obtain an even number of <m>1</m>s.
-          Notice that an arbitrary <m>n</m>-tuple
+          Suponha que as palavras a serem codificadas consistam em todas as <m>3</m>-uplas binárias e que nosso esquema de codificação seja de paridade par.
+          Para codificar uma <m>3</m>-upla arbitrária,
+          adicionamos um quarto bit para obter um número par de bits <m>1</m>.
+          Observe que uma <m>n</m>-upla arbitrária
           <m>{\mathbf x} = (x_1, x_2, \ldots,
-          x_n)^\transpose</m> has an even number of <m>1</m>s exactly when <m>x_1 + x_2 + \cdots + x_n = 0</m>;
-          hence, a <m>4</m>-tuple <m>{\mathbf x} = (x_1, x_2, x_3, x_4)^\transpose</m> has an even number of <m>1</m>s if <m> x_1+ x_2+ x_3+ x_4 = 0</m>, or
+          x_n)^\transpose</m> tem um número par de bits <m>1</m> exatamente quando <m>x_1 + x_2 + \cdots + x_n = 0</m>;
+          portanto, uma <m>4</m>-upla <m>{\mathbf x} = (x_1, x_2, x_3, x_4)^\transpose</m> tem um número par de bits <m>1</m> se <m> x_1+ x_2+ x_3+ x_4 = 0</m>, ou
           <md>
             {\mathbf x} \cdot {\mathbf 1} =  {\mathbf x}^\transpose {\mathbf 1} =
             \begin{pmatrix}
@@ -922,34 +922,34 @@
             1 \\ 1 \\ 1 \\ 1
             \end{pmatrix} = 0
           </md>.
-          This example leads us to hope that there is a connection between matrices and coding theory.
+          Esse exemplo nos leva a esperar que exista uma conexão entre matrizes e teoria dos códigos.
         </p>
       </example>
 
       <p>
-        Let <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m> denote the set of all
-        <m>m \times n</m> matrices with entries in <m>{\mathbb Z}_2</m>.
-        We do matrix operations as usual except that all our addition and multiplication operations occur in <m>{\mathbb Z}_2</m>.
-        Define the <term>null space</term><idx><h>Matrix</h><h>null space of</h></idx><idx><h>Null space</h><h>of a matrix</h></idx> of a matrix
-        <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m> to be the set of all binary <m>n</m>-tuples
-        <m>{\mathbf x}</m> such that <m>H{\mathbf x} = {\mathbf 0}</m>.
-        We denote the null space of a matrix <m>H</m> by <m>\Null(H)</m>.
+        Denote por <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m> o conjunto de todas as
+        matrizes <m>m \times n</m> com entradas em <m>{\mathbb Z}_2</m>.
+        Fazemos as operações matriciais usualmente, exceto que todas as operações de adição e multiplicação ocorrem em <m>{\mathbb Z}_2</m>.
+        Defina o <term>espaço nulo</term><idx><h>Matriz</h><h>espaço nulo de</h></idx><idx><h>Espaço nulo</h><h>de uma matriz</h></idx> de uma matriz
+        <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m> como o conjunto de todas as <m>n</m>-uplas binárias
+        <m>{\mathbf x}</m> tais que <m>H{\mathbf x} = {\mathbf 0}</m>.
+        Denotamos o espaço nulo de uma matriz <m>H</m> por <m>\Null(H)</m>.
 
         <notation>
           <usage><m>\mathbb M_{m \times n}(\mathbf Z_2)</m></usage>
-          <description>the set of <m>m \times n</m> matrices with entries in <m>\mathbb Z_2</m></description>
+          <description>o conjunto de matrizes <m>m \times n</m> com entradas em <m>\mathbb Z_2</m></description>
         </notation>
 
         <notation>
           <usage><m>\Null(H)</m></usage>
-          <description>null space of a matrix <m>H</m></description>
+          <description>espaço nulo de uma matriz <m>H</m></description>
         </notation>
 
       </p>
 
       <example xml:id="algcodes-example-group-code">
         <p>
-          Suppose that
+          Suponha que
           <md>
             H =
             \begin{pmatrix}
@@ -958,55 +958,55 @@
             0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
             \end{pmatrix}
           </md>.
-          For a <m>5</m>-tuple <m>{\mathbf x} = (x_1, x_2, x_3, x_4, x_5)^\transpose</m> to be in the null space of <m>H</m>,
+          Para que uma <m>5</m>-upla <m>{\mathbf x} = (x_1, x_2, x_3, x_4, x_5)^\transpose</m> pertença ao espaço nulo de <m>H</m>,
           <m>H{\mathbf x} = {\mathbf 0}</m>.
-          Equivalently,
-          the following system of equations must be satisfied:
+          Equivalentemente,
+          o seguinte sistema de equações deve ser satisfeito:
           <md>
             <mrow>x_2 +  x_4  &amp; =  0</mrow>
             <mrow>x_1 + x_2 + x_3  + x_4 &amp; =  0</mrow>
             <mrow>x_3  + x_4  +  x_5 &amp; =  0</mrow>
           </md>.
-          The set of binary <m>5</m>-tuples satisfying these equations is
+          O conjunto de <m>5</m>-uplas binárias que satisfazem essas equações é
           <md>
             (\codeword{00000}) \qquad (\codeword{11110}) \qquad (\codeword{10101}) \qquad (\codeword{01011})
           </md>.
-          This code is easily determined to be a group code.
+          É fácil verificar que esse código é um código de grupo.
         </p>
       </example>
 
       <theorem>
         <statement>
           <p>
-            Let <m>H</m> be in <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
-            Then the null space of <m>H</m> is a group code.
+            Seja <m>H</m> um elemento de <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
+            Então o espaço nulo de <m>H</m> é um código de grupo.
           </p>
         </statement>
 
         <proof>
           <p>
-            Since each element of <m>{\mathbb Z}_2^n</m> is its own inverse,
-            the only thing that really needs to be checked here is closure.
-            Let <m>{\mathbf x}, {\mathbf y} \in \Null(H)</m> for some matrix <m>H</m> in <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
-            Then <m>H{\mathbf x} = {\mathbf 0}</m> and <m>H{\mathbf y} = {\mathbf 0}</m>.
-            So
+            Como cada elemento de <m>{\mathbb Z}_2^n</m> é seu próprio inverso,
+            a única coisa que realmente precisa ser verificada aqui é o fechamento.
+            Sejam <m>{\mathbf x}, {\mathbf y} \in \Null(H)</m> para alguma matriz <m>H</m> em <m>{\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
+            Então <m>H{\mathbf x} = {\mathbf 0}</m> e <m>H{\mathbf y} = {\mathbf 0}</m>.
+            Logo,
             <md>
               H({\mathbf x}+{\mathbf y}) = H{\mathbf x} + H{\mathbf y} = {\mathbf 0} + {\mathbf 0} = {\mathbf 0}
             </md>.
-            Hence, <m>{\mathbf x} + {\mathbf y}</m> is in the null space of <m>H</m> and therefore must be a codeword.
+            Portanto, <m>{\mathbf x} + {\mathbf y}</m> pertence ao espaço nulo de <m>H</m> e, consequentemente, deve ser uma palavra-código.
           </p>
         </proof>
       </theorem>
             <!-- typo correction.  Suggested by J. Buller. -->
             <!-- TWJ - 12/20/2011 -->
       <p>
-        A code is a <term>linear code</term><idx><h>Code</h><h>linear</h></idx>
-        if it is determined by the null space of some matrix <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
+        Um código é um <term>código linear</term><idx><h>Código</h><h>linear</h></idx>
+        se for determinado pelo espaço nulo de alguma matriz <m>H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)</m>.
       </p>
 
       <example xml:id="algcodes-example-linear-code">
         <p>
-          Let <m>C</m> be the code given by the matrix
+          Seja <m>C</m> o código dado pela matriz
           <md>
             H =
             \begin{pmatrix}
@@ -1015,17 +1015,17 @@
             1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          Suppose that the <m>6</m>-tuple <m>{\mathbf x} = (\codeword{010011})^\transpose</m> is received.
-          It is a simple matter of matrix multiplication to determine whether or not <m>{\mathbf x}</m> is a codeword.
-          Since
+          Suponha que a <m>6</m>-upla <m>{\mathbf x} = (\codeword{010011})^\transpose</m> seja recebida.
+          É simples, por multiplicação de matrizes, determinar se <m>{\mathbf x}</m> é ou não uma palavra-código.
+          Como
           <md>
             H{\mathbf x} =
             \begin{pmatrix} 
             0 \\ 1 \\ 1
             \end{pmatrix}
           </md>,
-          the received word is not a codeword.
-          We must either attempt to correct the word or request that it be transmitted again.
+          a palavra recebida não é uma palavra-código.
+          Devemos tentar corrigir a palavra ou solicitar que ela seja transmitida novamente.
         </p>
       </example>
             <!-- typo correction.  Suggested by J. Buller. -->
@@ -1034,13 +1034,13 @@
   </section>
 
   <section xml:id="algcodes-section-parity-check">
-    <title>Parity-Check and Generator Matrices</title>
+    <title>Matrizes de verificação de paridade e geradoras</title>
     <p>
-      We need to find a systematic way of generating linear codes as well as fast methods of decoding.
-      By examining the properties of a matrix <m>H</m> and by carefully choosing <m>H</m>,
-      it is possible to develop very efficient methods of encoding and decoding messages.
-      To this end,
-      we will introduce standard generator and canonical parity-check matrices.
+      Precisamos encontrar uma maneira sistemática de gerar códigos lineares, assim como métodos rápidos de decodificação.
+      Examinando as propriedades de uma matriz <m>H</m> e escolhendo cuidadosamente <m>H</m>,
+      é possível desenvolver métodos muito eficientes de codificação e decodificação de mensagens.
+      Para isso,
+      introduziremos matrizes geradoras padrão e matrizes canônicas de verificação de paridade.
     </p>
 
     <p>
