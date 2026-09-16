@@ -377,7 +377,7 @@
            os <m>a_i</m>s são relativamente primos;
           portanto, existem inteiros
           <m>b_1, \ldots,
-           b_k</m> tais que <m>a_1 b_1 + \cdots + a_k b_k = 1</m>.
+          b_k</m> tais que <m>a_1 b_1 + \cdots + a_k b_k = 1</m>.
            Consequentemente,
           <md>
             g = g^{a_1 b_1 + \cdots + a_k b_k} = g^{a_1 b_1} \cdots  g^{a_k b_k}
@@ -490,7 +490,7 @@
             a^p = g^{-sp} h^p = g^{-r} h^p = h^{-p} h^p = e
           </md>.
            Formamos agora um elemento <m>a</m> de ordem <m>p</m> tal que <m>a \notin \langle g \rangle</m>.
-           Como <m>h</m> foi escolhido com a menor ordem entre todos os elementos que não pertencem a <m>\langle g \rangle</m>,
+           Como <m>h</m> foi escolhido com a menor ordem entre todos os elementos que não pertencem a <m>\langle g\rangle</m>,
            <m>|H|  = p</m>.
         </p>
 
@@ -577,7 +577,7 @@
         <md>
           D_4 \supset \{ (1), (1 \, 2)(3 \, 4), (1 \, 3)(2 \, 4), (1 \, 4)(2 \, 3) \} \supset \{  (1), (1 \, 2)(3 \, 4) \} \supset \{ (1) \}
         </md>.
-        O subgrupo <m>\{  (1), (1 \, 2)(3 \, 4)\}</m> não é normal em <m>D_4</m>;
+        O subgrupo <m>\{  (1), (1 \, 2)(3 \, 4) \}</m> não é normal em <m>D_4</m>;
         consequentemente, esta série não é uma série normal.
       </p>
     </example>
@@ -1191,7 +1191,7 @@
       <statement>
         <p>
           Suponha que <m>G</m> seja um grupo solúvel de ordem <m>n \geq 2</m>.
-          Mostre que <m>G</m> contém um grupo quociente normal abeliano não trivial.
+          Mostre que <m>G</m> contém um grupo quociente abeliano não trivial.
         </p>
       </statement>
       <hint>
@@ -1254,12 +1254,12 @@
   </exercises>
 
   <exercises xml:id="struct-exercises-programming">
-    <title>Programming Exercises</title>
+    <title>Exercícios de Programação</title>
     <exercise xml:id="struct-programming-exercise-abelian-groups">
       <statement>
         <p>
-          Write a program that will compute all possible abelian groups of order <m>n</m>.
-          What is the largest <m>n</m> for which your program will work?
+          Escreva um programa que calcule todos os grupos abelianos possíveis de ordem <m>n</m>.
+          Qual é o maior <m>n</m> para o qual seu programa funcionará?
         </p>
       </statement>
     </exercise>
@@ -1268,7 +1268,7 @@
 
   <references xml:id="struct-references">
         <!-- %References checked and updated - TWJ 6/22/2010 -->
-    <title>References and Suggested Readings</title>
+    <title>Referências e Leituras Sugeridas</title>
         <!--Fix INTRO
 		<p>Each of the following references contains a proof of the Fundamental Theorem of Finitely Generated Abelian Groups.</p>
 
@@ -1299,78 +1299,78 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Cyclic groups, and direct products of cyclic groups,
-        are implemented in Sage as permutation groups.
-        However, these groups quickly become very unwieldly representations and it should be easier to work with finite abelian groups in Sage.
-        So we will postpone any specifics for this chapter until that happens.
-        However, now that we understand the notion of isomorphic groups and the structure of finite abelian groups,
-        we can return to our quest to classify all of the groups with order less than <m>16</m>.
+        Os grupos cíclicos e os produtos diretos de grupos cíclicos
+        são implementados no Sage como grupos de permutações.
+        Contudo, esses grupos rapidamente se tornam representações muito difíceis de manipular, e deveria ser mais fácil trabalhar com grupos abelianos finitos no Sage.
+        Portanto, adiaremos quaisquer detalhes específicos deste capítulo até que isso aconteça.
+        Entretanto, agora que compreendemos a noção de grupos isomorfos e a estrutura dos grupos abelianos finitos,
+        podemos retomar nossa busca para classificar todos os grupos de ordem menor que <m>16</m>.
       </p>
     </introduction>
 
     <subsection>
-      <title>Classification of Finite Groups</title>
+      <title>Classificação de Grupos Finitos</title>
       <p>
-        It does not take any sophisticated tools to understand groups of order <m>2p</m>,
-        where <m>p</m> is an odd prime.
-        There are two possibilities <mdash/> a cyclic group of order <m>2p</m> and the dihedral group of order <m>2p</m> that is the set of symmetries of a regular <m>p</m>-gon.
-        The proof requires some close, tight reasoning,
-        but the required theorems are generally just concern orders of elements, Lagrange's Theorem and cosets.
-        See <xref ref="isomorph-exercise-classify-2p"/>.
-        This takes care of orders <m>n=6,\,10,\,14</m>.
+        Não são necessárias ferramentas sofisticadas para compreender os grupos de ordem <m>2p</m>,
+        em que <m>p</m> é um primo ímpar.
+        Há duas possibilidades <mdash/> um grupo cíclico de ordem <m>2p</m> e o grupo diedral de ordem <m>2p</m>, que é o conjunto de simetrias de um <m>p</m>-gono regular.
+        A demonstração exige um raciocínio cuidadoso e rigoroso,
+        mas os teoremas necessários geralmente se reduzem às ordens de elementos, ao Teorema de Lagrange e às classes laterais.
+        Consulte <xref ref="isomorph-exercise-classify-2p"/>.
+        Isso resolve os casos de ordem <m>n=6,\,10,\,14</m>.
       </p>
 
       <p>
-        For <m>n=9</m>,
-        the upcoming <xref ref="actions-corollary-p2abelian"/> will tell us that any group of order <m>p^2</m>
-        (where <m>p</m> is a prime)
-        is abelian.
-        So we know from this section that the only two possibilities are
+        Para <m>n=9</m>,
+        o próximo <xref ref="actions-corollary-p2abelian"/> nos dirá que qualquer grupo de ordem <m>p^2</m>
+        (em que <m>p</m> é primo)
+        é abeliano.
+        Portanto, sabemos, a partir desta seção, que as únicas possibilidades são
         <m>{\mathbb Z}_9</m> and <m>{\mathbb Z}_3\times{\mathbb Z}_3</m>.
-        Similarly, the upcoming <xref ref="sylow-theorem-pq-cyclic"/> will tell us that every group of order <m>n=15</m> is abelian.
-        Now this leaves just one possibility for this order:
+        De modo semelhante, o próximo <xref ref="sylow-theorem-pq-cyclic"/> nos dirá que todo grupo de ordem <m>n=15</m> é abeliano.
+        Agora resta apenas uma possibilidade para essa ordem:
         <m>{\mathbb Z}_3\times{\mathbb Z}_5\cong{\mathbb Z}_{15}</m>.
       </p>
 
       <p>
-        We have just two orders left to analyze:
-        <m>n=8</m> and <m>n=12</m>.
-        The possibilities are groups we already know, with one exception.
-        However, the analysis that these are the <em>only</em>
-        possibilities is more complicated,
-        and will not be pursued now, nor in the next few chapters.
-        Notice that <m>n=16</m> is more complicated still,
-        with <m>14</m> different possibilities
-        (which explains why we stopped here).
+        Restam apenas duas ordens para analisar:
+        <m>n=8</m> e <m>n=12</m>.
+        As possibilidades são grupos que já conhecemos, com uma exceção.
+        Contudo, a análise que mostra que estas são as <em>únicas</em>
+        possibilidades é mais complicada,
+        e não será desenvolvida agora, nem nos próximos capítulos.
+        Observe que <m>n=16</m> é ainda mais complicado,
+        com <m>14</m> possibilidades diferentes
+        (o que explica por que paramos aqui).
       </p>
 
       <p>
-        For <m>n=8</m> there are <m>3</m> abelian groups,
-        and the two non-abelian groups are the dihedral group
-        (symmetries of a square)
-        and the quaternions.
+        Para <m>n=8</m>, há <m>3</m> grupos abelianos,
+        e os dois grupos não abelianos são o grupo diedral
+        (simetrias de um quadrado)
+        e os quatérnios.
       </p>
 
       <p>
-        For <m>n=12</m> there are <m>2</m> abelian groups,
-        and <m>3</m> non-abelian groups.
-        We know two of the non-abelian groups as a dihedral group,
-        and the alternating group on <m>4</m> symbols
-        (which is also the symmetries of a tetrahedron).
-        The third non-abelian group is an example of a <q>dicyclic</q> group,
-        which is an infinite family of groups,
-        each with order divisible by <m>4</m>.
-        The order <m>12</m> dicyclic group can also be constructed as a
-        <q>semi-direct product</q>
-        of two cyclic groups <mdash/> this is a construction worth knowing as you pursue further study of group theory.
-        The order <m>8</m> dicyclic group is also the quaternions and more generally,
-        the dicyclic groups of order <m>2^k</m>,
-        <m>k&gt;2</m> are known as <q>generalized quaternion groups.</q>
+        Para <m>n=12</m>, há <m>2</m> grupos abelianos,
+        e <m>3</m> grupos não abelianos.
+        Conhecemos dois dos grupos não abelianos: um grupo diedral
+        e o grupo alternado sobre <m>4</m> símbolos
+        (que também corresponde às simetrias de um tetraedro).
+        O terceiro grupo não abeliano é um exemplo de grupo <q>dicíclico</q>,
+        que é uma família infinita de grupos,
+        cada um com ordem divisível por <m>4</m>.
+        O grupo dicíclico de ordem <m>12</m> também pode ser construído como um
+        <q>produto semidireto</q>
+        de dois grupos cíclicos <mdash/> uma construção que vale a pena conhecer à medida que você prossegue no estudo da teoria dos grupos.
+        O grupo dicíclico de ordem <m>8</m> também é o grupo dos quatérnios e, mais geralmente,
+        os grupos dicíclicos de ordem <m>2^k</m>,
+        <m>k&gt;2</m> são conhecidos como <q>grupos quatérnios generalizados.</q>
       </p>
 
       <p>
-        The following examples will show you how to construct some of these groups,
-        while also exercising a few of the commands and allowing us to be more certain the following table is accurate.
+            Os exemplos a seguir mostrarão como construir alguns desses grupos,
+            além de exercitar alguns comandos e nos permitir ter mais certeza de que a tabela a seguir está correta.
       </p>
 
             <sage>
@@ -1408,19 +1408,19 @@
     </subsection>
 
     <subsection>
-      <title>Groups of Small Order as Permutation Groups</title>
+      <title>Grupos de Pequena Ordem como Grupos de Permutações</title>
       <p>
-        We list here constructions, as permutation groups in Sage,
-        for all of the groups of order less than <m>16</m>.
+        Apresentamos aqui construções, como grupos de permutações no Sage,
+        para todos os grupos de ordem menor que <m>16</m>.
       </p>
             <!-- comments are the number of dividing rules following the row in LaTeX original -->
       <table>
-        <title>The Groups of Order <m>\mathbf{15}</m> or Less in Sage</title>
+        <title>Os Grupos de Ordem <m>\mathbf{15}</m> ou Menor no Sage</title>
         <tabular halign="left" top="medium">
           <row bottom="medium">
-            <cell>Order</cell>
-            <cell>Construction</cell>
-            <cell>Notes, Alternatives</cell>
+            <cell>Ordem</cell>
+            <cell>Construção</cell>
+            <cell>Observações, Alternativas</cell>
           </row>
           <row>
             <cell>1</cell>
@@ -1437,37 +1437,37 @@
           <row>
             <cell>3</cell>
             <cell><c>CyclicPermutationGroup(3)</c></cell>
-            <cell>Prime order</cell>
+            <cell>Ordem prima</cell>
           </row>
             <!--double-->
           <row>
             <cell>4</cell>
             <cell><c>CyclicPermutationGroup(4)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>4</cell>
             <cell><c>KleinFourGroup()</c></cell>
-            <cell>Abelian, non-cyclic</cell>
+            <cell>Abeliano, não cíclico</cell>
           </row>
             <!--double-->
           <row>
             <cell>5</cell>
             <cell><c>CyclicPermutationGroup(5)</c></cell>
-            <cell>Prime order</cell>
+            <cell>Ordem prima</cell>
           </row>
             <!--double-->
           <row>
             <cell>6</cell>
             <cell><c>CyclicPermutationGroup(6)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>6</cell>
             <cell><c>SymmetricGroup(3)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--none-->
           <row>
@@ -1479,13 +1479,13 @@
           <row>
             <cell>7</cell>
             <cell><c>CyclicPermutationGroup(7)</c></cell>
-            <cell>Prime order</cell>
+            <cell>Ordem prima</cell>
           </row>
             <!--double-->
           <row>
             <cell>8</cell>
             <cell><c>CyclicPermutationGroup(8)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
@@ -1503,7 +1503,7 @@
           <row>
             <cell/>
             <cell><c>G=direct_product_permgroups([C2,C4])</c></cell>
-            <cell>Abelian, non-cyclic</cell>
+            <cell>Abeliano, não cíclico</cell>
           </row>
             <!--single-->
           <row>
@@ -1515,19 +1515,19 @@
           <row>
             <cell/>
             <cell><c>G=direct_product_permgroups([C2,C2,C2])</c></cell>
-            <cell>Abelian, non-cyclic</cell>
+            <cell>Abeliano, não cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>8</cell>
             <cell><c>DihedralGroup(4)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--single-->
           <row>
             <cell>8</cell>
             <cell><c>QuaternionGroup()</c></cell>
-            <cell>Quaternions</cell>
+            <cell>Quatérnios</cell>
           </row>
             <!--none-->
           <row>
@@ -1539,7 +1539,7 @@
           <row>
             <cell>9</cell>
             <cell><c>CyclicPermutationGroup(9)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
@@ -1551,31 +1551,31 @@
           <row>
             <cell/>
             <cell><c>G=direct_product_permgroups([C3,C3])</c></cell>
-            <cell>Abelian, non-cyclic</cell>
+            <cell>Abeliano, não cíclico</cell>
           </row>
             <!--double-->
           <row>
             <cell>10</cell>
             <cell><c>CyclicPermutationGroup(10)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>10</cell>
             <cell><c>DihedralGroup(5)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--double-->
           <row>
             <cell>11</cell>
             <cell><c>CyclicPermutationGroup(11)</c></cell>
-            <cell>Prime order</cell>
+            <cell>Ordem prima</cell>
           </row>
             <!--double-->
           <row>
             <cell>12</cell>
             <cell><c>CyclicPermutationGroup(12)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
@@ -1593,61 +1593,61 @@
           <row>
             <cell/>
             <cell><c>G=direct_product_permgroups([C2,C6])</c></cell>
-            <cell>Abelian, non-cyclic</cell>
+            <cell>Abeliano, não cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>12</cell>
             <cell><c>DihedralGroup(6)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--single-->
           <row>
             <cell>12</cell>
             <cell><c>AlternatingGroup(4)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--none-->
           <row>
             <cell/>
             <cell/>
-            <cell>Symmetries of tetrahedron</cell>
+            <cell>Simetrias do tetraedro</cell>
           </row>
             <!--single-->
           <row>
             <cell>12</cell>
             <cell><c>DiCyclicGroup(3)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--none-->
           <row>
             <cell/>
             <cell/>
-            <cell>Semi-direct product <m>Z_3\rtimes Z_4</m></cell>
+            <cell>Produto semidireto <m>Z_3\rtimes Z_4</m></cell>
           </row>
             <!--double-->
           <row>
             <cell>13</cell>
             <cell><c>CyclicPermutationGroup(13)</c></cell>
-            <cell>Prime order</cell>
+            <cell>Ordem prima</cell>
           </row>
             <!--double-->
           <row>
             <cell>14</cell>
             <cell><c>CyclicPermutationGroup(14)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--single-->
           <row>
             <cell>14</cell>
             <cell><c>DihedralGroup(7)</c></cell>
-            <cell>Non-abelian</cell>
+            <cell>Não abeliano</cell>
           </row>
             <!--double-->
           <row bottom="medium">
             <cell>15</cell>
             <cell><c>CyclicPermutationGroup(15)</c></cell>
-            <cell>Cyclic</cell>
+            <cell>Cíclico</cell>
           </row>
             <!--double-->
         </tabular>
@@ -1658,10 +1658,10 @@
   </section>
 
   <exercises xml:id="struct-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
     <introduction>
       <p>
-        There are no Sage exercises for this chapter.
+        Não há exercícios do Sage para este capítulo.
       </p>
     </introduction>
 
