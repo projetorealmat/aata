@@ -10,176 +10,175 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="crypt">
-  <title>Introduction to Cryptography</title>
+  <title>Introdução à criptografia</title>
   <introduction>
     <p>
-      Cryptography is the study of sending and receiving secret messages.
-      The aim of cryptography is to send messages across a channel so that only the intended recipient of the message can read it.
-      In addition, when a message is received,
-      the recipient usually requires some assurance that the message is authentic;
-      that is, that it has not been sent by someone who is trying to deceive the recipient.
-      Modern cryptography is heavily dependent on abstract algebra and number theory.
+      A criptografia é o estudo do envio e do recebimento de mensagens secretas.
+      O objetivo da criptografia é enviar mensagens por um canal de modo que somente o destinatário pretendido possa lê-las.
+      Além disso, quando uma mensagem é recebida,
+      o destinatário geralmente precisa de alguma garantia de que a mensagem é autêntica;
+      isto é, de que ela não foi enviada por alguém que está tentando enganá-lo.
+      A criptografia moderna depende fortemente da álgebra abstrata e da teoria dos números.
     </p>
 
     <p>
-      The message to be sent is called the <term>plaintext</term><idx><h>Plaintext</h></idx>
-      message.
-      The disguised message is called the <idx><h>Ciphertext</h></idx><term>ciphertext</term>.  
-      The plaintext and the ciphertext are both written in an <term>alphabet</term>,
-      consisting of <term>letters</term>
-      or <term>characters</term>.
-      Characters can include not only the familiar alphabetic characters A, <m>\ldots</m>, Z and a, <m>\ldots</m>,
-      z but also digits, punctuation marks, and blanks.
-      A <term>cryptosystem</term>,<idx><h>Cryptosystem</h><h>definition of</h></idx> or <idx><h>Cipher</h></idx><term>cipher</term>,
-      has two parts: <term>encryption</term>,
-      the process of transforming a plaintext message to a ciphertext message,
-      and <term>decryption</term>,
-      the reverse transformation of changing a ciphertext message into a plaintext message.
+      A mensagem a ser enviada é chamada de mensagem em <term>texto claro</term><idx><h>Texto claro</h></idx>.
+      A mensagem disfarçada é chamada de <idx><h>Texto cifrado</h></idx><term>texto cifrado</term>.
+      Tanto o texto claro quanto o texto cifrado são escritos em um <term>alfabeto</term>,
+      constituído por <term>letras</term>
+      ou <term>caracteres</term>.
+      Os caracteres podem incluir não apenas os conhecidos caracteres alfabéticos A, <m>\ldots</m>, Z e a, <m>\ldots</m>,
+      z, mas também algarismos, sinais de pontuação e espaços.
+      Um <term>criptossistema</term>,<idx><h>Criptossistema</h><h>definição de</h></idx> ou <idx><h>Cifra</h></idx><term>cifra</term>,
+      possui duas partes: a <term>cifração</term>,
+      o processo de transformar uma mensagem em texto claro em uma mensagem em texto cifrado,
+      e a <term>decifração</term>,
+      a transformação inversa que converte uma mensagem em texto cifrado em uma mensagem em texto claro.
     </p>
 
     <p>
-      There are many different families of cryptosystems,
-      each distinguished by a particular encryption algorithm.
-      Cryptosystems in a specified cryptographic family are distinguished from one another by a parameter to the encryption function called a <idx><h>Key</h><h>definition of</h></idx><term>key</term>.
-      A classical cryptosystem has a single key,
-      which must be kept secret,
-      known only to the sender and the receiver of the message.
-      If person <m>A</m> wishes to send secret messages to two different people <m>B</m> and <m>C</m>,
-      and does not wish to have <m>B</m> understand <m>C</m>'s messages or vice versa,
-      <m>A</m> must use two separate keys,
-      so one cryptosystem is used for exchanging messages with <m>B</m>,
-      and another is used for exchanging messages with <m>C</m>.
+      Existem muitas famílias diferentes de criptossistemas,
+      cada uma distinguida por um algoritmo de cifração específico.
+      Os criptossistemas de uma determinada família criptográfica distinguem-se uns dos outros por um parâmetro da função de cifração chamado <idx><h>Chave</h><h>definição de</h></idx><term>chave</term>.
+      Um criptossistema clássico possui uma única chave,
+      que deve ser mantida em segredo,
+      conhecida apenas pelo remetente e pelo destinatário da mensagem.
+      Se a pessoa <m>A</m> quiser enviar mensagens secretas para duas pessoas diferentes, <m>B</m> e <m>C</m>,
+      e não quiser que <m>B</m> compreenda as mensagens de <m>C</m>, nem vice-versa,
+      <m>A</m> deverá usar duas chaves distintas,
+      de modo que um criptossistema seja usado para trocar mensagens com <m>B</m>,
+      e outro seja usado para trocar mensagens com <m>C</m>.
     </p>
 
     <p>
-      Systems that use two separate keys,
-      one for encoding and another for decoding,
-      are called <idx><h>Key</h><h>public</h></idx><idx><h>Cryptosystem</h><h>public key</h></idx><term>public key cryptosystems</term>.
-      Since knowledge of the encoding key does not allow anyone to guess at the decoding key,
-      the encoding key can be made public.
-      A public key cryptosystem allows <m>A</m> and <m>B</m> to send messages to <m>C</m> using the same encoding key.
-      Anyone is capable of encoding a message to be sent to <m>C</m>,
-      but only <m>C</m> knows how to decode such a message.
+      Os sistemas que usam duas chaves distintas,
+      uma para cifrar e outra para decifrar,
+      são chamados de <idx><h>Chave</h><h>pública</h></idx><idx><h>Criptossistema</h><h>chave pública</h></idx><term>criptossistemas de chave pública</term>.
+      Como conhecer a chave de cifração não permite que alguém descubra a chave de decifração,
+      a chave de cifração pode ser tornada pública.
+      Um criptossistema de chave pública permite que <m>A</m> e <m>B</m> enviem mensagens para <m>C</m> usando a mesma chave de cifração.
+      Qualquer pessoa pode cifrar uma mensagem para ser enviada a <m>C</m>,
+      mas somente <m>C</m> sabe como decifrar essa mensagem.
     </p>
   </introduction>
 
   <section xml:id="crypt-section-private-key">
-    <title>Private Key Cryptography</title>
+    <title>Criptografia de chave privada</title>
     <p>
-      In <idx><h>Key</h><h>single</h></idx><idx><h>Cryptosystem</h><h>single key</h></idx><term>single</term>
-      or <term>private key cryptosystems</term><idx><h>Key</h><h>private</h></idx><idx><h>Cryptosystem</h><h>private key</h></idx>
-      the same key is used for both encrypting and decrypting messages.
-      To encrypt a plaintext message,
-      we apply to the message some function which is kept secret,
-      say <m>f</m>.
-      This function will yield an encrypted message.
-      Given the encrypted form of the message,
-      we can recover the original message by applying the inverse transformation <m>f^{-1}</m>.
-      The transformation <m>f</m> must be relatively easy to compute,
-      as must <m>f^{-1}</m>;
-      however, <m>f</m> must be extremely difficult to guess from available examples of coded messages.
+      Nos <idx><h>Chave</h><h>única</h></idx><idx><h>Criptossistema</h><h>chave única</h></idx><term>criptossistemas de chave única</term>
+      ou <term>criptossistemas de chave privada</term><idx><h>Chave</h><h>privada</h></idx><idx><h>Criptossistema</h><h>chave privada</h></idx>,
+      a mesma chave é usada tanto para cifrar quanto para decifrar mensagens.
+      Para cifrar uma mensagem em texto claro,
+      aplicamos à mensagem alguma função mantida em segredo,
+      digamos <m>f</m>.
+      Essa função produzirá uma mensagem cifrada.
+      Dada a forma cifrada da mensagem,
+      podemos recuperar a mensagem original aplicando a transformação inversa <m>f^{-1}</m>.
+      A transformação <m>f</m> deve ser relativamente fácil de calcular,
+      assim como <m>f^{-1}</m>;
+      contudo, deve ser extremamente difícil deduzir <m>f</m> a partir dos exemplos disponíveis de mensagens cifradas.
     </p>
 
     <example xml:id="crypt-example-caesar">
       <p>
-        One of the first and most famous private key cryptosystems was the shift code used by Julius Caesar.
-        We first digitize the alphabet by letting <m>\text{A}  = 00, \text{B}  = 01, \ldots, \text{Z} = 25</m>.
-        The encoding function will be
+        Um dos primeiros e mais famosos criptossistemas de chave privada foi a cifra de deslocamento usada por Júlio César.
+        Primeiro digitalizamos o alfabeto fazendo <m>\text{A}  = 00, \text{B}  = 01, \ldots, \text{Z} = 25</m>.
+        A função de cifração será
         <md>
           f(p) = p + 3 \bmod 26;
         </md>
-        that is, <m>A \mapsto D, B \mapsto E, \ldots, Z \mapsto C</m>.
-        The decoding function is then
+        isto é, <m>A \mapsto D, B \mapsto E, \ldots, Z \mapsto C</m>.
+        A função de decifração é então
         <md>
           f^{-1}(p) = p - 3 \bmod 26 = p + 23 \bmod 26
         </md>.
-        Suppose we receive the encoded message <c>DOJHEUD</c>. To decode this message,
-        we first digitize it:
+        Suponha que recebamos a mensagem cifrada <c>DOJHEUD</c>. Para decifrar essa mensagem,
+        primeiro a digitalizamos:
         <md>
           3, 14, 9, 7, 4, 20, 3
         </md>.
-        Next we apply the inverse transformation to get
+        Em seguida, aplicamos a transformação inversa para obter
         <md>
           0, 11, 6, 4, 1, 17, 0
         </md>,
-        or <c>ALGEBRA</c>. Notice here that there is nothing special about either of the numbers <m>3</m> or <m>26</m>.
-        We could have used a larger alphabet or a different shift.
+        ou <c>ALGEBRA</c>. Observe que não há nada de especial em nenhum dos números <m>3</m> ou <m>26</m>.
+        Poderíamos ter usado um alfabeto maior ou um deslocamento diferente.
       </p>
     </example>
 
     <p>
-      <term>Cryptanalysis</term><idx><h>Cryptanalysis</h></idx>
-      is concerned with deciphering a received or intercepted message.
-      Methods from probability and statistics are great aids in deciphering an intercepted message;
-      for example,
-      the frequency analysis of the characters appearing in the intercepted message often makes its decryption possible.
+      A <term>criptoanálise</term><idx><h>Criptoanálise</h></idx>
+      ocupa-se da decifração de uma mensagem recebida ou interceptada.
+      Métodos de probabilidade e estatística são grandes auxiliares na decifração de uma mensagem interceptada;
+      por exemplo,
+      a análise de frequência dos caracteres que aparecem na mensagem interceptada frequentemente torna possível sua decifração.
     </p>
 
     <example xml:id="crypt-example-analysis">
       <p>
-        Suppose we receive a message that we know was encrypted by using a shift transformation on single letters of the <m>26</m>-letter alphabet.
-        To find out exactly what the shift transformation was,
-        we must compute <m>b</m> in the equation <m>f(p) = p + b \bmod 26</m>.
-        We can do this using frequency analysis.
-        The letter <m>\text{E} = 04</m> is the most commonly occurring letter in the English language.
-        Suppose that <m>\text{S} = 18</m> is the most commonly occurring letter in the ciphertext.
-        Then we have good reason to suspect that  <m>18 = 4 + b \bmod 26</m>,
-        or <m>b= 14</m>.
-        Therefore, the most likely encrypting function is
+        Suponha que recebamos uma mensagem que sabemos ter sido cifrada usando uma transformação de deslocamento sobre letras individuais do alfabeto de <m>26</m> letras.
+        Para descobrir exatamente qual era a transformação de deslocamento,
+        devemos calcular <m>b</m> na equação <m>f(p) = p + b \bmod 26</m>.
+        Podemos fazer isso usando a análise de frequência.
+        A letra <m>\text{E} = 04</m> é a que ocorre com maior frequência na língua inglesa.
+        Suponha que <m>\text{S} = 18</m> seja a letra que ocorre com maior frequência no texto cifrado.
+        Então temos boas razões para suspeitar que <m>18 = 4 + b \bmod 26</m>,
+        ou <m>b= 14</m>.
+        Portanto, a função de cifração mais provável é
         <md>
           f(p) = p + 14 \bmod 26
         </md>.
-        The corresponding decrypting function is
+        A função de decifração correspondente é
         <md>
           f^{-1}(p) = p + 12 \bmod 26
         </md>.
-        It is now easy to determine whether or not our guess is correct.
+        Agora é fácil determinar se nossa hipótese está correta.
       </p>
     </example>
 
     <p>
-      Simple shift codes are examples of
-      <idx><h>Cryptosystem</h><h>monoalphabetic</h></idx><term>monoalphabetic cryptosystems</term>.
-      In these ciphers a character in the enciphered message represents exactly one character in the original message.
-      Such cryptosystems are not very sophisticated and are quite easy to break.
-      In fact, in a simple shift as described in <xref ref="crypt-example-caesar"/>, there are only <m>26</m> possible keys.
-      It would be quite easy to try them all rather than to use frequency analysis.
+      As cifras de deslocamento simples são exemplos de
+      <idx><h>Criptossistema</h><h>monoalfabético</h></idx><term>criptossistemas monoalfabéticos</term>.
+      Nessas cifras, um caractere da mensagem cifrada representa exatamente um caractere da mensagem original.
+      Esses criptossistemas não são muito sofisticados e são bastante fáceis de quebrar.
+      De fato, em um deslocamento simples como o descrito em <xref ref="crypt-example-caesar"/>, há apenas <m>26</m> chaves possíveis.
+      Seria bastante fácil tentar todas elas, em vez de usar a análise de frequência.
     </p>
 
     <p>
-      Let us investigate a slightly more sophisticated cryptosystem.
-      Suppose that the encoding function is given by
+      Investiguemos um criptossistema um pouco mais sofisticado.
+      Suponha que a função de cifração seja dada por
       <md>
         f(p) = ap + b \bmod 26
       </md>.
-      We first need to find out when a decoding function <m>f^{-1}</m> exists.
-      Such a decoding function exists when we can solve the equation
+      Primeiro precisamos descobrir quando existe uma função de decifração <m>f^{-1}</m>.
+      Tal função de decifração existe quando podemos resolver a equação
       <md>
         c = ap + b \bmod 26
       </md>
-      for <m>p</m>.
-      By <xref ref="groups-proposition-zn-equiv-classes"/>,
-      this is possible exactly when <m>a</m> has an inverse or,
-      equivalently, when <m>\gcd( a, 26) =1</m>.
-      In this case
+      para <m>p</m>.
+      Pela <xref ref="groups-proposition-zn-equiv-classes"/>,
+      isso é possível exatamente quando <m>a</m> possui um inverso ou,
+      equivalentemente, quando <m>\gcd( a, 26) =1</m>.
+      Nesse caso,
       <md>
         f^{-1}(p) = a^{-1} p - a^{-1} b \bmod 26
       </md>.
-      Such a cryptosystem is called an
-      <idx><h>Cryptosystem</h><h>affine</h></idx><term>affine cryptosystem</term>.  
+      Tal criptossistema é chamado de
+      <idx><h>Criptossistema</h><h>afim</h></idx><term>criptossistema afim</term>.
     </p>
 
     <example xml:id="crypt-example-affine-crypt">
       <p>
-        Let us consider the affine cryptosystem <m>f(p) = ap + b \bmod 26</m>.
-        For this cryptosystem to work we must choose an <m>a \in {\mathbb Z}_{26}</m> that is invertible.
-        This is only possible if <m>\gcd(a, 26) = 1</m>.
-        Recognizing this fact,
-        we will let <m>a = 5</m> since <m>\gcd(5, 26) = 1</m>.
-        It is easy to see that <m>a^{-1} = 21</m>.
-        Therefore, we can take our encryption function to be <m>f(p) = 5p + 3 \bmod 26</m>.
-        Thus, <c>ALGEBRA</c> is encoded as <m>3, 6, 7, 23, 8, 10, 3</m>,
-        or <c>DGHXIKD</c>. The decryption function will be
+        Consideremos o criptossistema afim <m>f(p) = ap + b \bmod 26</m>.
+        Para que esse criptossistema funcione, devemos escolher um <m>a \in {\mathbb Z}_{26}</m> que seja inversível.
+        Isso só é possível se <m>\gcd(a, 26) = 1</m>.
+        Reconhecendo esse fato,
+        tomaremos <m>a = 5</m>, pois <m>\gcd(5, 26) = 1</m>.
+        É fácil ver que <m>a^{-1} = 21</m>.
+        Portanto, podemos tomar como função de cifração <m>f(p) = 5p + 3 \bmod 26</m>.
+        Assim, <c>ALGEBRA</c> é cifrada como <m>3, 6, 7, 23, 8, 10, 3</m>,
+        ou <c>DGHXIKD</c>. A função de decifração será
         <md>
           f^{-1}(p) = 21 p - 21 \cdot 3 \bmod 26 = 21 p + 15 \bmod 26
         </md>.
@@ -187,25 +186,25 @@
     </example>
 
     <p>
-      A cryptosystem would be more secure if a ciphertext letter could represent more than one plaintext letter.
-      To give an example of this type of cryptosystem,
-      called a <term>polyalphabetic cryptosystem</term>,<idx><h>Cryptosystem</h><h>polyalphabetic</h></idx> we will generalize affine codes by using matrices.
-      The idea works roughly the same as before;
-      however, instead of encrypting one letter at a time we will encrypt pairs of letters.
-      We can store a pair of letters <m>p_1</m> and <m>p_2</m> in a vector
+      Um criptossistema seria mais seguro se uma letra do texto cifrado pudesse representar mais de uma letra do texto claro.
+      Para dar um exemplo desse tipo de criptossistema,
+      chamado <term>criptossistema polialfabético</term>,<idx><h>Criptossistema</h><h>polialfabético</h></idx> generalizaremos as cifras afins usando matrizes.
+      A ideia funciona aproximadamente como antes;
+      contudo, em vez de cifrar uma letra por vez, ciframos pares de letras.
+      Podemos armazenar um par de letras <m>p_1</m> e <m>p_2</m> em um vetor
       <md>
         {\mathbf p} = 
         \begin{pmatrix}
         p_1 \\ p_2
         \end{pmatrix}
       </md>.
-      Let <m>A</m> be a <m>2 \times 2</m> invertible matrix with entries in <m>{\mathbb Z}_{26}</m>.
-      We can define an encoding function by
+      Seja <m>A</m> uma matriz inversível <m>2 \times 2</m> com entradas em <m>{\mathbb Z}_{26}</m>.
+      Podemos definir uma função de cifração por
       <md>
         f({\mathbf p}) = A {\mathbf p} + {\mathbf b}
       </md>,
-      where <m>{\mathbf b}</m> is a fixed column vector and matrix operations are performed in <m>{\mathbb Z}_{26}</m>.
-      The decoding function must be
+      onde <m>{\mathbf b}</m> é um vetor coluna fixo e as operações matriciais são realizadas em <m>{\mathbb Z}_{26}</m>.
+      A função de decifração deve ser
       <md>
         f^{-1}({\mathbf p}) = A^{-1} {\mathbf p} - A^{-1} {\mathbf b}
       </md>.
@@ -213,8 +212,8 @@
 
     <example xml:id="crypt-example-help">
       <p>
-        Suppose that we wish to encode the word <c>HELP</c>. The corresponding digit string is <m>7, 4, 11, 15</m>.
-        If
+        Suponha que desejemos cifrar a palavra <c>HELP</c>. A sequência de algarismos correspondente é <m>7, 4, 11, 15</m>.
+        Se
         <md>
           A =
           \begin{pmatrix}
@@ -222,7 +221,7 @@
           1 &amp; 2
           \end{pmatrix}
         </md>,
-        then
+        então
         <md>
           A^{-1} 
           =
@@ -231,109 +230,107 @@
           25 &amp; 3
           \end{pmatrix}
         </md>.
-        If <m>{\mathbf b} = ( 2, 2)^\transpose</m>,
-        then our message is encrypted as <c>RRGR</c>. The encrypted letter R represents more than one plaintext letter.
+        Se <m>{\mathbf b} = ( 2, 2)^\transpose</m>,
+        então nossa mensagem é cifrada como <c>RRGR</c>. A letra cifrada R representa mais de uma letra do texto claro.
       </p>
     </example>
 
     <p>
-      Frequency analysis can still be performed on a polyalphabetic cryptosystem,
-      because we have a good understanding of how pairs of letters appear in the English language.
-      The pair <em>th</em> appears quite often;
-      the pair <em>qz</em> never appears.
-      To avoid decryption by a third party,
-      we must use a larger matrix than the one we used in <xref ref="crypt-example-help"/>.
+      Ainda é possível realizar uma análise de frequência em um criptossistema polialfabético,
+      pois compreendemos bem como os pares de letras aparecem na língua inglesa.
+      O par <em>th</em> aparece com bastante frequência;
+      o par <em>qz</em> nunca aparece.
+      Para evitar a decifração por terceiros,
+      devemos usar uma matriz maior que a utilizada em <xref ref="crypt-example-help"/>.
     </p>
         <!-- TWJ 4/7/2010 Need to resolve this reference -->
   </section>
 
   <section xml:id="crypt-section-public-key">
-    <title>Public Key Cryptography</title>
+    <title>Criptografia de chave pública</title>
     <introduction>
       <p>
-        If traditional cryptosystems are used,
-        anyone who knows enough to encode a message will also know enough to decode an intercepted message.
-        In 1976, W. Diffie<idx><h>Diffie, W.</h></idx>
-        and M. Hellman<idx><h>Hellman, M.</h></idx>
-        proposed public key cryptography,
-        which is based on the observation that the encryption and decryption procedures need not have the same key.
-        This removes the requirement that the encoding key be kept secret.
-        The encoding function <m>f</m> must be relatively easy to compute,
-        but <m>f^{-1}</m> must be extremely difficult to compute without some additional information,
-        so that someone who knows only the encrypting key cannot find the decrypting key without prohibitive computation.
-        It is interesting to note that to date,
-        no system has been proposed that has been proven to be
-        <q>one-way;</q> that is,
-        for any existing public key cryptosystem,
-        it has never been shown to be computationally prohibitive to decode messages with only knowledge of the encoding key.
+        Quando se utilizam criptossistemas tradicionais,
+        qualquer pessoa que saiba o suficiente para cifrar uma mensagem também saberá o suficiente para decifrar uma mensagem interceptada.
+        Em 1976, W. Diffie<idx><h>Diffie, W.</h></idx>
+        e M. Hellman<idx><h>Hellman, M.</h></idx>
+        propuseram a criptografia de chave pública,
+        baseada na observação de que os procedimentos de cifração e decifração não precisam usar a mesma chave.
+        Isso elimina a exigência de que a chave de cifração seja mantida em segredo.
+        A função de cifração <m>f</m> deve ser relativamente fácil de calcular,
+        mas <m>f^{-1}</m> deve ser extremamente difícil de calcular sem alguma informação adicional,
+        de modo que alguém que conheça apenas a chave de cifração não consiga encontrar a chave de decifração sem realizar uma computação proibitiva.
+        É interessante observar que, até o momento,
+        não foi proposto nenhum sistema que tenha sido provado ser
+        <q>unidirecional;</q> isto é,
+        para nenhum criptossistema de chave pública existente
+        se mostrou computacionalmente proibitivo decifrar mensagens conhecendo apenas a chave de cifração.
       </p>
     </introduction>
 
     <subsection xml:id="crypt-subsection-rsa">
-      <title>The <acro>RSA</acro> Cryptosystem</title>
+      <title>O criptossistema <acro>RSA</acro></title>
       <p>
-        The <acro>RSA</acro> cryptosystem introduced by R. Rivest,<idx><h>Rivest, R.</h></idx>
-        A. Shamir,<idx><h>Shamir, A.</h></idx>
-        and L. Adleman<idx><h>Adleman, L.</h></idx>
-        in 1978, is based on the difficulty of factoring large numbers.
-        Though it is not a difficult task to find two large random primes and multiply them together,
-        factoring a 150-digit number that is the product of two large primes would take 100 million computers operating at 10 million instructions per second about 50 million years under the fastest algorithms available in the early 1990s.
-        Although the algorithms have improved,
-        factoring a number that is a product of two large primes is still computationally prohibitive.
+        O criptossistema <acro>RSA</acro>, introduzido em 1978 por R. Rivest,<idx><h>Rivest, R.</h></idx>
+        A. Shamir<idx><h>Shamir, A.</h></idx>
+        e L. Adleman,<idx><h>Adleman, L.</h></idx>
+        baseia-se na dificuldade de fatorar números grandes.
+        Embora não seja difícil encontrar dois primos aleatórios grandes e multiplicá-los,
+        fatorar um número de 150 algarismos que seja produto de dois primos grandes levaria, com os algoritmos mais rápidos disponíveis no início da década de 1990, cerca de 50 milhões de anos usando 100 milhões de computadores operando a 10 milhões de instruções por segundo.
+        Embora os algoritmos tenham melhorado,
+        fatorar um número que é produto de dois primos grandes ainda é computacionalmente proibitivo.
       </p>
 
       <p>
-        The <acro>RSA</acro> cryptosystem<idx><h><acro>RSA</acro> cryptosystem</h></idx><idx><h>Cryptosystem</h><h><acro>RSA</acro></h></idx> works as follows.
-        Suppose that we choose two random 150-digit prime numbers <m>p</m> and <m>q</m>.
-        Next, we compute the product <m>n= pq</m> and also compute <m>\phi(n) = m = (p - 1)(q-1)</m>,
-        where <m>\phi</m> is the Euler <m>\phi</m>-function.
-        Now we start choosing random integers <m>E</m> until we find one that is relatively prime to <m>m</m>;
-        that is, we choose <m>E</m> such that <m>\gcd(E, m) = 1</m>.
-        Using the Euclidean algorithm,
-        we can find a number <m>D</m> such that <m>DE \equiv 1 \pmod{m}</m>.
-        The numbers <m>n</m> and <m>E</m> are now made public.
+        O criptossistema <acro>RSA</acro><idx><h>criptossistema <acro>RSA</acro></h></idx><idx><h>Criptossistema</h><h><acro>RSA</acro></h></idx> funciona da seguinte maneira.
+        Suponha que escolhamos dois números primos aleatórios de 150 algarismos, <m>p</m> e <m>q</m>.
+        Em seguida, calculamos o produto <m>n= pq</m> e também calculamos <m>\phi(n) = m = (p - 1)(q-1)</m>,
+        onde <m>\phi</m> é a função <m>\phi</m> de Euler.
+        Começamos então a escolher inteiros aleatórios <m>E</m> até encontrar um que seja coprimo de <m>m</m>;
+        isto é, escolhemos <m>E</m> tal que <m>\gcd(E, m) = 1</m>.
+        Usando o algoritmo de Euclides,
+        podemos encontrar um número <m>D</m> tal que <m>DE \equiv 1 \pmod{m}</m>.
+        Agora tornamos públicos os números <m>n</m> e <m>E</m>.
       </p>
 
       <p>
-        Suppose now that person B (Bob) wishes to send person A (Alice) a message over a public line.
-        Since <m>E</m> and <m>n</m> are known to everyone,
-        anyone can encode messages.
-        Bob first digitizes the message according to some scheme,
-        say <m>\text{A} = 00, \text{B} = 02, \ldots, \text{Z}= 25</m>.
-        If necessary,
-        he will break the message into pieces such that each piece is a positive integer less than <m>n</m>.
-        Suppose <m>x</m> is one of the pieces.
-        Bob forms the number <m>y = x^E \mod n</m> and sends <m>y</m> to Alice.
-        For Alice to recover <m>x</m>,
-        she need only compute <m>x = y^D \bmod n</m>.
-        Only Alice knows <m>D</m>.
+        Suponha agora que a pessoa B (Bob) queira enviar uma mensagem à pessoa A (Alice) por uma linha pública.
+        Como <m>E</m> e <m>n</m> são conhecidos por todos,
+        qualquer pessoa pode cifrar mensagens.
+        Primeiro, Bob digitaliza a mensagem de acordo com algum esquema,
+        por exemplo <m>\text{A} = 00, \text{B} = 02, \ldots, \text{Z}= 25</m>.
+        Se necessário,
+        ele divide a mensagem em partes tais que cada parte seja um inteiro positivo menor que <m>n</m>.
+        Suponha que <m>x</m> seja uma dessas partes.
+        Bob forma o número <m>y = x^E \mod n</m> e envia <m>y</m> a Alice.
+        Para recuperar <m>x</m>, Alice precisa apenas calcular <m>x = y^D \bmod n</m>.
+        Somente Alice conhece <m>D</m>.
       </p>
 
       <example xml:id="crypt-example-rsa">
         <p>
-          Before exploring the theory behind the <acro>RSA</acro> cryptosystem or attempting to use large integers,
-          we will use some small integers just to see that the system does indeed work.
-          Suppose that we wish to send some message,
-          which when digitized is <m>25</m>.
-          Let <m>p = 23</m> and <m>q = 29</m>.
-          Then
+          Antes de explorar a teoria por trás do criptossistema <acro>RSA</acro> ou tentar usar inteiros grandes,
+          usaremos alguns inteiros pequenos apenas para verificar que o sistema realmente funciona.
+          Suponha que desejemos enviar uma mensagem que, após digitalizada, seja <m>25</m>.
+          Sejam <m>p = 23</m> e <m>q = 29</m>.
+          Então
           <md>
             n = pq = 667
           </md>
-          and
+          e
           <md>
             \phi(n) = m = (p - 1)(q - 1) = 616
           </md>.
-          We can let <m>E = 487</m>, since <m>\gcd(616, 487) = 1</m>.
-          The encoded message is computed to be
+          Podemos tomar <m>E = 487</m>, pois <m>\gcd(616, 487) = 1</m>.
+          A mensagem cifrada é calculada como
           <md>
             25^{487} \bmod 667 = 169
           </md>.
-          This computation can be reasonably done by using the method of repeated squares as described in <xref ref="cyclic"/>.
-          Using the Euclidean algorithm,
-          we determine that <m>191 E = 1 + 151 m</m>;
-          therefore, the decrypting key is <m>(n, D) = ( 667, 191)</m>.
-          We can recover the original message by calculating
+          Esse cálculo pode ser realizado razoavelmente pelo método dos quadrados sucessivos, descrito em <xref ref="cyclic"/>.
+          Usando o algoritmo de Euclides,
+          determinamos que <m>191 E = 1 + 151 m</m>;
+          portanto, a chave de decifração é <m>(n, D) = ( 667, 191)</m>.
+          Podemos recuperar a mensagem original calculando
           <md>
             169^{191} \bmod 667 = 25
           </md>.
@@ -342,37 +339,37 @@
             <!-- Message changed from 23 to 25 so that it does not match p.  Suggested by R. Beezer. -->
             <!-- TWJ - 12/19/2011 -->
       <p>
-        Now let us examine why the <acro>RSA</acro> cryptosystem works.
-        We know that <m>DE \equiv 1 \pmod{ m}</m>;
-        hence, there exists a <m>k</m> such that
+        Examinemos agora por que o criptossistema <acro>RSA</acro> funciona.
+        Sabemos que <m>DE \equiv 1 \pmod{ m}</m>;
+        logo, existe um <m>k</m> tal que
         <md>
           DE = km + 1 = k \phi(n) + 1
         </md>.
-        There are two cases to consider.
-        In the first case assume that <m>\gcd(x, n) = 1</m>.
-        Then by <xref ref="cosets-theorem-eulers_theorem"/>,
+        Há dois casos a considerar.
+        No primeiro, suponha que <m>\gcd(x, n) = 1</m>.
+        Então, pelo <xref ref="cosets-theorem-eulers_theorem"/>,
         <md>
           y^D = (x^E)^D = x^{DE} = x^{km + 1} = (x^{\phi(n)})^k x = (1)^k x = x \bmod n
         </md>.
-        So we see that Alice recovers the original message <m>x</m> when she computes <m>y^D \bmod n</m>.
+        Portanto, Alice recupera a mensagem original <m>x</m> ao calcular <m>y^D \bmod n</m>.
       </p>
 
       <p>
-        For the other case, assume that <m>\gcd(x, n) \neq 1</m>.
-        Since <m>n = pq</m> and <m>x \lt n</m>,
-        we know <m>x</m> is a multiple of <m>p</m> or a multiple of <m>q</m>,
-        but not both.
-        We will describe the first possibility only,
-        since the second is entirely similar.
-        There is then an integer <m>r</m>,
-        with <m>r \lt q</m> and <m>x = rp</m>.
-        Note that we have <m>\gcd(x, q) = 1</m> and that <m>m=\phi(n)=(p - 1)(q - 1)=\phi(p)\phi(q)</m>.
-        Then, using <xref ref="cosets-theorem-eulers_theorem"/>, but now mod <m>q</m>,
+        No outro caso, suponha que <m>\gcd(x, n) \neq 1</m>.
+        Como <m>n = pq</m> e <m>x \lt n</m>,
+        sabemos que <m>x</m> é múltiplo de <m>p</m> ou de <m>q</m>,
+        mas não de ambos.
+        Descreveremos apenas a primeira possibilidade,
+        pois a segunda é inteiramente análoga.
+        Existe então um inteiro <m>r</m>,
+        com <m>r \lt q</m> e <m>x = rp</m>.
+        Observe que <m>\gcd(x, q) = 1</m> e que <m>m=\phi(n)=(p - 1)(q - 1)=\phi(p)\phi(q)</m>.
+        Então, usando o <xref ref="cosets-theorem-eulers_theorem"/>, mas agora módulo <m>q</m>,
         <md>
           x^{km} = x^{k\phi(p)\phi(q)} = (x^{\phi(q)})^{k\phi(p)} = (1)^{k\phi(p)} = 1 \bmod q
         </md>.
-        So there is an integer <m>t</m> such that <m>x^{km}=1 + tq</m>.
-        Thus, Alice also recovers the message in this case,
+        Logo, existe um inteiro <m>t</m> tal que <m>x^{km}=1 + tq</m>.
+        Portanto, Alice também recupera a mensagem neste caso,
         <md>
           y^D = x^{km + 1} = x^{km} x = (1 + tq) x = x + tq(rp) = x + trn = x \bmod n
         </md>.
@@ -380,109 +377,109 @@
             <!-- Demonstration expanded to two cases.  Suggested by Kevin Halasz. -->
             <!-- RAB - 12/30/2011 -->
       <p>
-        We can now ask how one would go about breaking the <acro>RSA</acro> cryptosystem.
-        To find <m>D</m> given <m>n</m> and <m>E</m>,
-        we simply need to factor <m>n</m> and solve for <m>D</m> by using the Euclidean algorithm.
-        If we had known that <m>667 = 23 \cdot 29</m> in <xref ref="crypt-example-rsa"/>, we could have recovered <m>D</m>.
+        Podemos agora perguntar como quebrar o criptossistema <acro>RSA</acro>.
+        Para encontrar <m>D</m> dados <m>n</m> e <m>E</m>,
+        basta fatorar <m>n</m> e determinar <m>D</m> usando o algoritmo de Euclides.
+        Se soubéssemos que <m>667 = 23 \cdot 29</m> em <xref ref="crypt-example-rsa"/>, poderíamos ter recuperado <m>D</m>.
       </p>
     </subsection>
 
     <subsection xml:id="crypt-subsection-message-verification">
-      <title>Message Verification</title>
+      <title>Verificação de mensagens</title>
       <p>
-        There is a problem of message verification in public key cryptosystems.
-        Since the encoding key is public knowledge,
-        anyone has the ability to send an encoded message.
-        If Alice receives a message from Bob,
-        she would like to be able to verify that it was Bob who actually sent the message.
-        Suppose that Bob's encrypting key is
-        <m>(n', E')</m> and his decrypting key is <m>(n', D')</m>.
-        Also, suppose that Alice's encrypting key is <m>(n, E)</m> and her decrypting key is <m>(n, D)</m>.
-        Since encryption keys are public information,
-        they can exchange coded messages at their convenience.
-        Bob wishes to assure Alice that the message he is sending is authentic.
-        Before Bob sends the message <m>x</m> to Alice,
-        he decrypts  <m>x</m> with his own key:
+        Há um problema de verificação de mensagens nos criptossistemas de chave pública.
+        Como a chave de cifração é de conhecimento público,
+        qualquer pessoa pode enviar uma mensagem cifrada.
+        Se Alice recebe uma mensagem de Bob,
+        ela gostaria de poder verificar se foi realmente Bob quem enviou a mensagem.
+        Suponha que a chave de cifração de Bob seja
+        <m>(n', E')</m> e sua chave de decifração seja <m>(n', D')</m>.
+        Suponha também que a chave de cifração de Alice seja <m>(n, E)</m> e sua chave de decifração seja <m>(n, D)</m>.
+        Como as chaves de cifração são informações públicas,
+        eles podem trocar mensagens cifradas quando desejarem.
+        Bob quer garantir a Alice que a mensagem que está enviando é autêntica.
+        Antes de enviar a mensagem <m>x</m> a Alice,
+        ele decifra <m>x</m> com sua própria chave:
         <md>
           x' = x ^{D'} \bmod n'
         </md>.
-        Anyone can change <m>x'</m> back to <m>x</m> just by encryption,
-        but only Bob has the ability to form <m>x'</m>.
-        Now Bob encrypts <m>x'</m> with Alice's encryption key to form
+        Qualquer pessoa pode transformar <m>x'</m> novamente em <m>x</m> simplesmente cifrando,
+        mas somente Bob consegue formar <m>x'</m>.
+        Agora Bob cifra <m>x'</m> com a chave de cifração de Alice, obtendo
         <md>
           y' = {x'}^E  \bmod n
         </md>,
-        a message that only Alice can decode.
-        Alice decodes the message and then encodes the result with Bob's key to read the original message,
-        a message that could have only been sent by Bob.
+        uma mensagem que somente Alice pode decifrar.
+        Alice decifra a mensagem e então cifra o resultado com a chave de Bob para ler a mensagem original,
+        uma mensagem que só poderia ter sido enviada por Bob.
       </p>
     </subsection>
 
     <subsection xml:id="crypt-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Encrypting secret messages goes as far back as ancient Greece and Rome.
-        As we know, Julius Caesar used a simple shift code to send and receive messages.
-        However, the formal study of encoding and decoding messages probably began with the Arabs in the 1400s.
-        In the fifteenth and sixteenth centuries mathematicians such as Alberti and Viete discovered that monoalphabetic cryptosystems offered no real security.
-        In the 1800s, F. W. Kasiski established methods for breaking ciphers in which a ciphertext letter can represent more than one plaintext letter,
-        if the same key was used several times.
-        This discovery led to the use of cryptosystems with keys that were used only a single time.
-        Cryptography was placed on firm mathematical foundations by such people as W. Friedman and L. Hill in the early part of the twentieth century.
+        A cifração de mensagens secretas remonta à Grécia e à Roma antigas.
+        Como sabemos, Júlio César usava uma cifra de deslocamento simples para enviar e receber mensagens.
+        No entanto, o estudo formal da cifração e da decifração de mensagens provavelmente começou com os árabes no século XV.
+        Nos séculos XV e XVI, matemáticos como Alberti e Viete descobriram que os criptossistemas monoalfabéticos não ofereciam segurança real.
+        No século XIX, F. W. Kasiski estabeleceu métodos para quebrar cifras nas quais uma letra do texto cifrado pode representar mais de uma letra do texto claro,
+        quando a mesma chave era usada várias vezes.
+        Essa descoberta levou ao uso de criptossistemas com chaves utilizadas apenas uma vez.
+        A criptografia foi assentada sobre bases matemáticas sólidas por pessoas como W. Friedman e L. Hill no início do século XX.
       </p>
 
       <p>
-        The period after World War I saw the development of special-purpose machines for encrypting and decrypting messages,
-        and mathematicians were very active in cryptography during World War II. Efforts to penetrate the cryptosystems of the Axis nations were organized in England and in the United States by such notable mathematicians as Alan Turing and A. A. Albert.
-        The Allies gained a tremendous advantage in World War II by breaking the ciphers produced by the German Enigma machine and the Japanese Purple ciphers.
+        O período após a Primeira Guerra Mundial assistiu ao desenvolvimento de máquinas de finalidade específica para cifrar e decifrar mensagens,
+        e os matemáticos foram muito ativos na criptografia durante a Segunda Guerra Mundial. Esforços para penetrar os criptossistemas das nações do Eixo foram organizados na Inglaterra e nos Estados Unidos por matemáticos notáveis como Alan Turing e A. A. Albert.
+        Os Aliados obtiveram uma enorme vantagem na Segunda Guerra Mundial ao quebrar as cifras produzidas pela máquina alemã Enigma e pelas cifras japonesas Purple.
       </p>
 
       <p>
-        By the 1970s, interest in commercial cryptography had begun to take hold.
-        There was a growing need to protect banking transactions,
-        computer data, and electronic mail.
-        In the early 1970s, <acro>IBM</acro> developed and implemented <acro>LUZIFER</acro>,
-        the forerunner of the National Bureau of Standards' Data Encryption Standard (DES).
+        Na década de 1970, o interesse pela criptografia comercial começou a se consolidar.
+        Havia uma necessidade crescente de proteger transações bancárias,
+        dados de computador e correio eletrônico.
+        No início da década de 1970, a <acro>IBM</acro> desenvolveu e implementou o <acro>LUZIFER</acro>,
+        precursor do Data Encryption Standard (DES) do National Bureau of Standards.
       </p>
 
       <p>
-        The concept of a public key cryptosystem,
-        due to Diffie and Hellman, is very recent (1976).
-        It was further developed by Rivest, Shamir,
-        and Adleman with the <acro>RSA</acro> cryptosystem (1978).
-        It is not known how secure any of these systems are.
-        The trapdoor knapsack cryptosystem,
-        developed by Merkle and Hellman, has been broken.
-        It is still an open question whether or not the <acro>RSA</acro> system can be broken.
-        In 1991, <acro>RSA</acro> Laboratories published a list of semiprimes
-        (numbers with exactly two prime factors)
-        with a cash prize for whoever was able to provide a factorization
+        O conceito de criptossistema de chave pública,
+        devido a Diffie e Hellman, é muito recente (1976).
+        Ele foi desenvolvido posteriormente por Rivest, Shamir
+        e Adleman com o criptossistema <acro>RSA</acro> (1978).
+        Não se sabe quão seguros são esses sistemas.
+        O criptossistema da mochila com alçapão,
+        desenvolvido por Merkle e Hellman, foi quebrado.
+        Ainda é uma questão em aberto saber se o sistema <acro>RSA</acro> pode ser quebrado.
+        Em 1991, os Laboratórios <acro>RSA</acro> publicaram uma lista de semiprimos
+        (números com exatamente dois fatores primos)
+        com um prêmio em dinheiro para quem conseguisse fornecer uma fatoração
         (<url href="http://www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm" visual="www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm">http://www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm</url>).
-        Although the challenge ended in 2007,
-        many of these numbers have not yet been factored.
+        Embora o desafio tenha terminado em 2007,
+        muitos desses números ainda não foram fatorados.
       </p>
 
       <p>
-        There been a great deal of controversy about research in cryptography and cryptography itself.
-        In 1929, when Henry Stimson, Secretary of State under Herbert Hoover,
-        dismissed the Black Chamber
-        (the State Department's cryptography division)
-        on the ethical grounds that <q>gentlemen do not read each other's mail.</q>
-        During the last two decades of the twentieth century,
-        the National Security Agency wanted to keep information about cryptography secret,
-        whereas the academic community fought for the right to publish basic research.
-        Currently, research in mathematical cryptography and computational number theory is very active,
-        and mathematicians are free to publish their results in these areas.
+        Houve muita controvérsia sobre a pesquisa em criptografia e sobre a própria criptografia.
+        Em 1929, Henry Stimson, Secretário de Estado no governo de Herbert Hoover,
+        fechou a Câmara Negra
+        (a divisão de criptografia do Departamento de Estado)
+        por motivos éticos, afirmando que <q>cavalheiros não leem a correspondência uns dos outros.</q>
+        Durante as duas últimas décadas do século XX,
+        a Agência de Segurança Nacional queria manter em segredo as informações sobre criptografia,
+        enquanto a comunidade acadêmica lutava pelo direito de publicar pesquisas básicas.
+        Atualmente, a pesquisa em criptografia matemática e teoria computacional dos números é muito ativa,
+        e os matemáticos têm liberdade para publicar seus resultados nessas áreas.
       </p>
     </subsection>
     <paragraphs component="sage-blurb">
       <title>Sage</title>
       <p>
-        Sage's early development featured powerful routines for number theory,
-        and later included significant support for algebraic structures and other areas of discrete mathematics.
-        So it is a natural tool for the study of cryptology,
-        including topics like RSA, elliptic curve cryptography,
-        and AES (Advanced Encryption Standard).
+        O desenvolvimento inicial do Sage contou com rotinas poderosas para a teoria dos números,
+        e posteriormente passou a incluir suporte significativo para estruturas algébricas e outras áreas da matemática discreta.
+        Assim, ele é uma ferramenta natural para o estudo da criptologia,
+        incluindo tópicos como RSA, criptografia de curvas elípticas
+        e AES (Advanced Encryption Standard).
       </p>
     </paragraphs>
   </section>
@@ -492,7 +489,7 @@
     <exercise label="rq-crypt-euler-phi">
       <statement>
         <p>
-          Use the <c>euler_phi()</c>function in Sage to compute <m>\phi(893\,456\,123)</m>.
+          Use a função <c>euler_phi()</c> do Sage para calcular <m>\phi(893\,456\,123)</m>.
         </p>
       </statement>
       <response/>
@@ -501,7 +498,7 @@
     <exercise label="rq-crypt-power-mod">
       <statement>
         <p>
-          Use the <c>power_mod()</c>function in Sage to compute <m>7^{324}\pmod{895}</m>.
+          Use a função <c>power_mod()</c> do Sage para calcular <m>7^{324}\pmod{895}</m>.
         </p>
       </statement>
       <response/>
@@ -510,9 +507,9 @@
     <exercise label="rq-crypt-RSA">
       <statement>
         <p>
-          Explain the mathematical basis for saying:
-          encrypting a message using an <init>RSA</init> public key is very simple computationally,
-          while decrypting a communication without the private key is very hard computationally.
+          Explique a base matemática para afirmar que:
+          cifrar uma mensagem usando uma chave pública <init>RSA</init> é computacionalmente muito simples,
+          enquanto decifrar uma comunicação sem a chave privada é computacionalmente muito difícil.
         </p>
       </statement>
       <response/>
@@ -521,7 +518,7 @@
     <exercise label="rq-crypt-verification">
       <statement>
         <p>
-          Explain how in <init>RSA</init> message encoding differs from message verification.
+          Explique como, no <init>RSA</init>, a cifração de mensagens difere da verificação de mensagens.
         </p>
       </statement>
       <response/>
@@ -530,7 +527,7 @@
     <exercise>
       <statement>
         <p>
-          Explain how one could be justified in saying that Diffie and Hellman's proposal in 1976 was <q>revolutionary.</q>
+          Explique por que se poderia justificar a afirmação de que a proposta de Diffie e Hellman, em 1976, foi <q>revolucionária.</q>
         </p>
       </statement>
       <response/>
@@ -541,12 +538,12 @@
     <!-- File: crypt.xml  -->
     <!-- Title: Introduction to Cryptography -->
   <exercises xml:id="crypt-exercises" filenamebase="crypt">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="crypt-exercise-i-love-math">
       <statement>
         <p>
-          Encode <c>IXLOVEXMATH</c> using the cryptosystem in <xref ref="crypt-example-caesar"/>.
+          Cifre <c>IXLOVEXMATH</c> usando o criptossistema de <xref ref="crypt-example-caesar"/>.
         </p>
       </statement>
       <hint>
@@ -559,8 +556,8 @@
     <exercise number="2" xml:id="crypt-exercise-ZLOOA-WKLVA-EHARQ-WKHA-ILQDO">
       <statement>
         <p>
-          Decode <c>ZLOOA WKLVA EHARQ WKHA ILQDO</c>,
-          which was encoded using the cryptosystem in <xref ref="crypt-example-caesar"/>.
+          Decifre <c>ZLOOA WKLVA EHARQ WKHA ILQDO</c>,
+          que foi cifrada usando o criptossistema de <xref ref="crypt-example-caesar"/>.
         </p>
       </statement>
     </exercise>
@@ -568,8 +565,8 @@
     <exercise number="3" xml:id="crypt-exercise-monoalphabetic-decode">
       <statement>
         <p>
-          Assuming that monoalphabetic code was used to encode the following secret message,
-          what was the original message?
+          Supondo que tenha sido usada uma cifra monoalfabética para cifrar a seguinte mensagem secreta,
+          qual era a mensagem original?
         </p>
 
             <pre>
@@ -579,13 +576,13 @@
             PVEHP PEXOV ERYKP GERYT GVKEG XDRTE RGAGA</pre>
 
         <p>
-          What is the significance of this message in the history of cryptography?
+          Qual é a importância dessa mensagem na história da criptografia?
         </p>
       </statement>
       <hint>
         <p>
-          Hint: <c>V = E</c>, <c>E = X</c>
-          (also used for spaces and punctuation),
+          Dica: <c>V = E</c>, <c>E = X</c>
+          (também usados para espaços e pontuação),
           <c>K = R</c>.
         </p>
       </hint>
@@ -594,8 +591,8 @@
     <exercise number="4" xml:id="crypt-exercise-total-possible-monoalphabetic">
       <statement>
         <p>
-          What is the total number of possible monoalphabetic cryptosystems?
-          How secure are such cryptosystems?
+          Qual é o número total de criptossistemas monoalfabéticos possíveis?
+          Quão seguros são esses criptossistemas?
         </p>
       </statement>
       <hint>
@@ -608,8 +605,8 @@
     <exercise number="5" xml:id="crypt-exercise-2-by-2-matrix-Z26">
       <statement>
         <p>
-          Prove that a <m>2 \times 2</m> matrix <m>A</m> with entries in
-          <m>{\mathbb Z}_{26}</m> is invertible if and only if <m>\gcd( \det(A), 26 ) = 1</m>.
+          Prove que uma matriz <m>2 \times 2</m> <m>A</m> com entradas em
+          <m>{\mathbb Z}_{26}</m> é inversível se, e somente se, <m>\gcd( \det(A), 26 ) = 1</m>.
         </p>
       </statement>
     </exercise>
@@ -617,7 +614,7 @@
     <exercise number="6" xml:id="crypt-exercise-matrix-encrypt">
       <statement>
         <p>
-          Given the matrix
+          Dada a matriz
           <md>
             A =
             \begin{pmatrix}
@@ -625,10 +622,10 @@
             2 &amp; 3
             \end{pmatrix}
           </md>,
-          use the encryption function
-          <m>f({\mathbf p}) = A {\mathbf p} + {\mathbf b}</m> to encode the message <c>CRYPTOLOGY</c>,
-          where <m>{\mathbf b} = ( 2, 5)^\transpose</m>.
-          What is the decoding function?
+          use a função de cifração
+          <m>f({\mathbf p}) = A {\mathbf p} + {\mathbf b}</m> para cifrar a mensagem <c>CRYPTOLOGY</c>,
+          onde <m>{\mathbf b} = ( 2, 5)^\transpose</m>.
+          Qual é a função de decifração?
         </p>
       </statement>
     </exercise>
@@ -636,9 +633,9 @@
     <exercise number="7" xml:id="crypt-exercise-RSA-encrypt">
       <statement>
         <p>
-          Encrypt each of the following <acro>RSA</acro> messages <m>x</m> so that <m>x</m> is divided into blocks of integers of length <m>2</m>;
-          that is, if <m>x = 142528</m>,
-          encode <m>14</m>, <m>25</m>, and <m>28</m> separately.
+          Cifre cada uma das seguintes mensagens <acro>RSA</acro> <m>x</m> de modo que <m>x</m> seja dividido em blocos de inteiros de comprimento <m>2</m>;
+          isto é, se <m>x = 142528</m>,
+          cifre <m>14</m>, <m>25</m> e <m>28</m> separadamente.
 
           <ol>
             <li>
@@ -677,7 +674,7 @@
     <exercise number="8" xml:id="crypt-exercise-RSA-decode-key">
       <statement>
         <p>
-          Compute the decoding key <m>D</m> for each of the encoding keys in <xref ref="crypt-exercise-RSA-encrypt"/>.
+          Calcule a chave de decifração <m>D</m> para cada uma das chaves de cifração em <xref ref="crypt-exercise-RSA-encrypt"/>.
         </p>
       </statement>
     </exercise>
@@ -685,7 +682,7 @@
     <exercise number="9" xml:id="crypt-exercise-RSA-decrypt-examples">
       <statement>
         <p>
-          Decrypt each of the following <acro>RSA</acro> messages <m>y</m>.
+          Decifre cada uma das seguintes mensagens <acro>RSA</acro> <m>y</m>.
 
           <ol>
             <li>
@@ -724,8 +721,8 @@
     <exercise number="10" xml:id="crypt-exercise-compute-D">
       <statement>
         <p>
-          For each of the following encryption keys <m>(n, E)</m> in the <acro>RSA</acro> cryptosystem,
-          compute <m>D</m>.
+          Para cada uma das seguintes chaves de cifração <m>(n, E)</m> no criptossistema <acro>RSA</acro>,
+          calcule <m>D</m>.
 
           <ol>
             <li>
@@ -764,9 +761,9 @@
     <exercise number="11" xml:id="crypt-exercise-message-padding">
       <statement>
         <p>
-          Encrypted messages are often divided into blocks of <m>n</m> letters.
-          A message such as <c>THE WORLD WONDERS WHY</c> might be encrypted as <c>JIW OCFRJ LPOEVYQ IOC</c> but sent as <c>JIW OCF RJL POE VYQ IOC</c>.
-          What are the advantages of using blocks of <m>n</m> letters?
+          Mensagens cifradas são frequentemente divididas em blocos de <m>n</m> letras.
+          Uma mensagem como <c>THE WORLD WONDERS WHY</c> poderia ser cifrada como <c>JIW OCFRJ LPOEVYQ IOC</c>, mas enviada como <c>JIW OCF RJL POE VYQ IOC</c>.
+          Quais são as vantagens de usar blocos de <m>n</m> letras?
         </p>
       </statement>
     </exercise>
@@ -774,11 +771,11 @@
     <exercise number="12" xml:id="crypt-exercise-X-hat-E-modn">
       <statement>
         <p>
-          Find integers <m>n</m>, <m>E</m>, and <m>X</m> such that
+          Encontre inteiros <m>n</m>, <m>E</m> e <m>X</m> tais que
           <md>
             X^E \equiv X \pmod{n}
           </md>.
-          Is this a potential problem in the <acro>RSA</acro> cryptosystem?
+          Isso é um problema potencial no criptossistema <acro>RSA</acro>?
         </p>
       </statement>
     </exercise>
@@ -786,55 +783,55 @@
     <exercise number="13" xml:id="crypt-exercise-classroom-exercise">
       <statement>
         <p>
-          Every person in the class should construct an <acro>RSA</acro> cryptosystem using primes that are <m>10</m> to <m>15</m> digits long.
-          Hand in <m>(n, E)</m> and an encoded message.
-          Keep <m>D</m> secret.
-          See if you can break one another's codes.
+          Cada pessoa da turma deve construir um criptossistema <acro>RSA</acro> usando primos com <m>10</m> a <m>15</m> algarismos.
+          Entregue <m>(n, E)</m> e uma mensagem cifrada.
+          Mantenha <m>D</m> em segredo.
+          Verifique se conseguem quebrar os códigos uns dos outros.
         </p>
       </statement>
     </exercise>
 
   </exercises>
   <exercises xml:id="crypt-exercises-additional">
-    <title>Additional Exercises: Primality and Factoring</title>
+    <title>Exercícios adicionais: primalidade e fatoração</title>
     <p>
-      In the <acro>RSA</acro> cryptosystem it is important to be able to find large prime numbers easily.
-      Also, this cryptosystem is not secure if we can factor a composite number that is the product of two large primes.
-      The solutions to both of these problems are quite easy.
-      To find out if a number <m>n</m> is prime or to factor <m>n</m>,
-      we can use trial division.
-      We simply divide <m>n</m> by <m>d = 2, 3, \ldots, \sqrt{n}</m>.
-      Either a factorization will be obtained,
-      or <m>n</m> is prime if no <m>d</m> divides <m>n</m>.
-      The problem is that such a computation is prohibitively time-consuming if <m>n</m> is very large.
+      No criptossistema <acro>RSA</acro>, é importante conseguir encontrar facilmente números primos grandes.
+      Além disso, esse criptossistema não é seguro se pudermos fatorar um número composto que seja produto de dois primos grandes.
+      As soluções para ambos os problemas são bastante simples.
+      Para descobrir se um número <m>n</m> é primo ou para fatorar <m>n</m>,
+      podemos usar a divisão por tentativa.
+      Simplesmente dividimos <m>n</m> por <m>d = 2, 3, \ldots, \sqrt{n}</m>.
+      Ou obtemos uma fatoração,
+      ou <m>n</m> é primo se nenhum <m>d</m> dividir <m>n</m>.
+      O problema é que esse cálculo consome tempo proibitivo quando <m>n</m> é muito grande.
     </p>
 
     <exercise xml:id="crypt-exercise-fermats-factorization-algorithm">
       <statement>
         <p>
-          A better algorithm for factoring odd positive integers is
-          <idx><h>Fermat's factorization algorithm</h></idx><term>Fermat's factorization algorithm</term>.
+          Um algoritmo melhor para fatorar inteiros positivos ímpares é o
+          <idx><h>algoritmo de fatoração de Fermat</h></idx><term>algoritmo de fatoração de Fermat</term>.
         </p>
 
         <ol>
           <li>
             <p>
-              Let <m>n= ab</m> be an odd composite number.
-              Prove that <m>n</m> can be written as the difference of two perfect squares:
+              Seja <m>n= ab</m> um número composto ímpar.
+              Prove que <m>n</m> pode ser escrito como a diferença de dois quadrados perfeitos:
               <md>
                 n = x^2 - y^2 = (x - y)(x + y)
               </md>.
-              Consequently,
-              a positive odd integer can be factored exactly when we can find integers <m>x</m> and <m>y</m> such that <m>n = x^2 - y^2</m>.
+              Consequentemente,
+              um inteiro positivo ímpar pode ser fatorado exatamente quando conseguimos encontrar inteiros <m>x</m> e <m>y</m> tais que <m>n = x^2 - y^2</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Write a program to implement the following factorization algorithm based on the observation in part (a).
-              The expression <c>ceiling(sqrt(n))</c> means the smallest integer greater than or equal to the square root of <m>n</m>.
-              Write another program to do factorization using trial division and compare the speed of the two algorithms.
-              Which algorithm is faster and why?
+              Escreva um programa para implementar o seguinte algoritmo de fatoração, baseado na observação da parte (a).
+              A expressão <c>ceiling(sqrt(n))</c> significa o menor inteiro maior ou igual à raiz quadrada de <m>n</m>.
+              Escreva outro programa para fazer a fatoração usando divisão por tentativa e compare a velocidade dos dois algoritmos.
+              Qual algoritmo é mais rápido e por quê?
             </p>
           </li>
         </ol>
@@ -861,27 +858,27 @@
     </exercise>
 
     <exercise xml:id="crypt-exercise-primality-testing">
-      <title>Primality Testing</title>
+      <title>Teste de primalidade</title>
       <statement>
         <p>
-          Recall Fermat's Little Theorem from <xref ref="cosets"/>.
-          Let <m>p</m> be prime with <m>\gcd(a, p) = 1</m>.
-          Then <m>a^{p-1} \equiv 1 \pmod{p}</m>.
-          We can use Fermat's Little Theorem as a screening test for primes.
-          For example, <m>15</m> cannot be prime since
+          Recorde o Pequeno Teorema de Fermat de <xref ref="cosets"/>.
+          Seja <m>p</m> primo com <m>\gcd(a, p) = 1</m>.
+          Então <m>a^{p-1} \equiv 1 \pmod{p}</m>.
+          Podemos usar o Pequeno Teorema de Fermat como teste preliminar de primalidade.
+          Por exemplo, <m>15</m> não pode ser primo, pois
           <md>
             2^{15-1} \equiv 2^{14} \equiv 4 \pmod{15}
           </md>.
-          However, <m>17</m> is a potential prime since
+          Contudo, <m>17</m> é um possível primo, pois
           <md>
             2^{17-1} \equiv 2^{16} \equiv 1 \pmod{17}
           </md>.
-          We say that an odd composite number <m>n</m> is a <term>pseudoprime</term><idx><h>Pseudoprime</h></idx>
-          if
+          Dizemos que um número composto ímpar <m>n</m> é um <term>pseudoprimo</term><idx><h>Pseudoprimo</h></idx>
+          se
           <md>
             2^{n-1} \equiv 1 \pmod{n}
           </md>.
-          Which of the following numbers are primes and which are pseudoprimes?
+          Quais dos números a seguir são primos e quais são pseudoprimos?
 
           <ol cols="3">
             <li>
@@ -927,10 +924,10 @@
     <exercise xml:id="crypt-exercise-pseudoprime">
       <statement>
         <p>
-          Let <m>n</m> be an odd composite number and <m>b</m> be a positive integer such that <m>\gcd(b, n) = 1</m>.
-          If <m>b^{n-1} \equiv 1 \pmod{n}</m>,
-          then <m>n</m> is a <term>pseudoprime base</term> <m>b</m>.
-          Show that <m>341</m> is a pseudoprime base <m>2</m> but not a pseudoprime base <m>3</m>.
+          Seja <m>n</m> um número composto ímpar e <m>b</m> um inteiro positivo tal que <m>\gcd(b, n) = 1</m>.
+          Se <m>b^{n-1} \equiv 1 \pmod{n}</m>,
+          então <m>n</m> é um <term>pseudoprimo na base</term> <m>b</m>.
+          Mostre que <m>341</m> é um pseudoprimo na base <m>2</m>, mas não é um pseudoprimo na base <m>3</m>.
         </p>
       </statement>
     </exercise>
@@ -938,20 +935,20 @@
     <exercise xml:id="crypt-exercise-primes-less-than-2000">
       <statement>
         <p>
-          Write a program to determine all primes less than <m>2000</m> using trial division.
-          Write a second program that will determine all numbers less than <m>2000</m> that are either primes or pseudoprimes.
-          Compare the speed of the two programs.
-          How many pseudoprimes are there below <m>2000</m>?
+          Escreva um programa para determinar todos os primos menores que <m>2000</m> usando divisão por tentativa.
+          Escreva um segundo programa que determine todos os números menores que <m>2000</m> que sejam primos ou pseudoprimos.
+          Compare a velocidade dos dois programas.
+          Quantos pseudoprimos existem abaixo de <m>2000</m>?
         </p>
 
         <p>
-          There exist composite numbers that are pseudoprimes for all bases to which they are relatively prime.
-          These numbers are called <idx><h>Carmichael numbers</h></idx><term>Carmichael numbers</term>.
-          The first Carmichael number is <m>561 = 3 \cdot 11 \cdot 17</m>.
-          In 1992, Alford, Granville,
-          and Pomerance proved that there are an infinite number of Carmichael numbers [4]. However, Carmichael numbers are very rare.
-          There are only <m>2163</m> Carmichael numbers less than <m>25 \times 10^9</m>.
-          For more sophisticated primality tests, see [1], [6], or [7].
+          Existem números compostos que são pseudoprimos para todas as bases relativamente primas a eles.
+          Esses números são chamados de <idx><h>números de Carmichael</h></idx><term>números de Carmichael</term>.
+          O primeiro número de Carmichael é <m>561 = 3 \cdot 11 \cdot 17</m>.
+          Em 1992, Alford, Granville
+          e Pomerance provaram que existe uma infinidade de números de Carmichael [4]. Contudo, números de Carmichael são muito raros.
+          Existem apenas <m>2163</m> números de Carmichael menores que <m>25 \times 10^9</m>.
+          Para testes de primalidade mais sofisticados, consulte [1], [6] ou [7].
         </p>
       </statement>
     </exercise>
@@ -959,7 +956,7 @@
   </exercises>
 
   <references xml:id="crypt-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras recomendadas</title>
     <biblio type="raw">
 <!-- was [1] -->
       Bressoud, D. M.
@@ -1027,28 +1024,28 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Since Sage began as software to support research in number theory,
-        we can quickly and easily demonstrate the internal workings of the <acro>RSA</acro> algorithm.
-        Recognize that, in practice,
-        many other details such as encoding between letters and integers,
-        or protecting one's private key,
-        are equally important for the security of communications.
-        So <acro>RSA</acro> itself is just the theoretical foundation.
+        Como o Sage começou como um software para apoiar a pesquisa em teoria dos números,
+        podemos demonstrar de forma rápida e fácil o funcionamento interno do algoritmo <acro>RSA</acro>.
+        Observe que, na prática,
+        muitos outros detalhes, como a conversão entre letras e inteiros
+        ou a proteção da chave privada,
+        são igualmente importantes para a segurança das comunicações.
+        Portanto, o próprio <acro>RSA</acro> é apenas a base teórica.
       </p>
     </introduction>
 
     <subsection>
-      <title>Constructing Keys</title>
+      <title>Construção de chaves</title>
       <p>
-        We will suppose that Alice wants to send a secret message to Bob,
-        along with message verification
-        (also known as a message with a digital signature).
-        So we begin with the construction of key pairs
-        (private and public)
-        for both Alice and Bob.
-        We first need two large primes for both individuals, and their product.
-        In practice, values of <m>n</m> would have hundreds of digits,
-        rather than just <m>21</m> as we have done here.
+        Suponha que Alice queira enviar uma mensagem secreta a Bob,
+        juntamente com a verificação da mensagem
+        (também conhecida como mensagem com assinatura digital).
+        Portanto, começamos construindo pares de chaves
+        (privada e pública)
+        para Alice e Bob.
+        Primeiro precisamos de dois primos grandes para cada pessoa e de seu produto.
+        Na prática, os valores de <m>n</m> teriam centenas de algarismos,
+        em vez de apenas <m>21</m>, como faremos aqui.
       </p>
 
             <sage>
@@ -1065,9 +1062,9 @@
             </sage>
 
       <p>
-        Computationally,
-        the value of the Euler <m>\phi</m>-function for a product of primes <m>pq</m> can be obtained from <m>(p-1)(q-1)</m>,
-        but we could use Sage's built-in function just as well.
+        Computacionalmente,
+        o valor da função <m>\phi</m> de Euler para um produto de primos <m>pq</m> pode ser obtido a partir de <m>(p-1)(q-1)</m>,
+        mas também poderíamos usar a função interna do Sage.
       </p>
 
             <sage>
@@ -1080,19 +1077,19 @@
             </sage>
 
       <p>
-        Now we can create the encryption and decryption exponents.
-        We choose the encryption exponent as a (small) number relatively prime to the value of <m>m</m>.
-        With Sage we can factor <m>m</m> quickly to help us choose this value.
-        In practice we would not want to do this computation for large values of <m>m</m>,
-        so we might more easily choose <q>random</q>
-        values and check for the first value which is relatively prime to <m>m</m>.
-        The decryption exponent is the multiplicative inverse,
-        mod <m>m</m>, of the encryption exponent.
-        If you construct an improper encryption exponent
-        (not relatively prime to <m>m</m>),
-        the computation of the multiplicative inverse will fail
-        (and Sage will tell you so).
-        We do this twice <mdash/>- for both Alice and Bob.
+        Agora podemos criar os expoentes de cifração e decifração.
+        Escolhemos o expoente de cifração como um número (pequeno) coprimo do valor de <m>m</m>.
+        Com o Sage podemos fatorar <m>m</m> rapidamente para nos ajudar a escolher esse valor.
+        Na prática, não gostaríamos de fazer esse cálculo para valores grandes de <m>m</m>,
+        então podemos escolher mais facilmente valores <q>aleatórios</q>
+        e verificar o primeiro que seja coprimo de <m>m</m>.
+        O expoente de decifração é o inverso multiplicativo,
+        módulo <m>m</m>, do expoente de cifração.
+        Se você construir um expoente de cifração inadequado
+        (não coprimo de <m>m</m>),
+        o cálculo do inverso multiplicativo falhará
+        (e o Sage informará isso).
+        Fazemos isso duas vezes <mdash/>- uma para Alice e outra para Bob.
       </p>
 
             <sage>
@@ -1121,16 +1118,16 @@
             </sage>
 
       <p>
-        At this stage,
-        each individual would publish their values of <m>n</m> and <m>E</m>,
-        while keeping <m>D</m> very private and secure.
-        In practice <m>D</m> should be protected on the user's hard disk by a password only the owner knows.
-        For even greater security a person might only have two copies of their private key,
-        one on a <acro>USB</acro> memory stick they always carry with them,
-        and a backup in their sage deposit box.
-        Every time the person uses <m>D</m> they would need to provide the password.
-        The value of <m>m</m> can be discarded.
-        For the record, here are all the keys:
+        Nesta etapa,
+        cada pessoa publicaria seus valores de <m>n</m> e <m>E</m>,
+        mantendo <m>D</m> muito privado e seguro.
+        Na prática, <m>D</m> deve ser protegido no disco rígido do usuário por uma senha que somente o proprietário conheça.
+        Para uma segurança ainda maior, uma pessoa poderia ter apenas duas cópias de sua chave privada,
+        uma em um pendrive <acro>USB</acro> que carregasse sempre consigo
+        e uma cópia de segurança em seu cofre bancário.
+        Cada vez que usasse <m>D</m>, a pessoa precisaria fornecer a senha.
+        O valor de <m>m</m> pode ser descartado.
+        Para referência, seguem todas as chaves:
       </p>
 
             <sage>
@@ -1153,22 +1150,22 @@
     </subsection>
 
     <subsection>
-      <title>Signing and Encoding a Message</title>
+      <title>Assinatura e cifração de uma mensagem</title>
       <p>
-        Alice is going to construct a message as an English word with four letters.
-        From these four letters we will construct a single number to represent the message in a form we can use in the <acro>RSA</acro> algorithm.
-        The function <c>ord()</c> will convert a single letter to its <acro>ASCII</acro> code value,
-        a number between 0 and 127.
-        If we use these numbers as <q>digits</q> mod 128,
-        we can be sure that Alice's four-letter word will encode to an integer less than <m>128^4=268,435,456</m>.
-        The particular maximum value is not important,
-        so long as it is smaller than our value of <m>n</m> since all of our subsequent arithmetic is mod <m>n</m>.
-        We choose a popular four-letter word,
-        convert to <acro>ASCII</acro> <q>digits</q>
-        with a list comprehension,
-        and then construct the integer from the digits with the right base.
-        Notice how we can treat the word as a list and that the first digit in the list is in the <q>ones</q> place
-        (we say the list is in <q>little-endian</q> order).
+        Alice vai construir uma mensagem na forma de uma palavra inglesa com quatro letras.
+        A partir dessas quatro letras, construiremos um único número para representar a mensagem de uma forma que possamos usar no algoritmo <acro>RSA</acro>.
+        A função <c>ord()</c> converterá uma letra individual em seu valor de código <acro>ASCII</acro>,
+        um número entre 0 e 127.
+        Se usarmos esses números como <q>algarismos</q> módulo 128,
+        podemos ter certeza de que a palavra de quatro letras de Alice será codificada em um inteiro menor que <m>128^4=268,435,456</m>.
+        O valor máximo específico não é importante,
+        desde que seja menor que nosso valor de <m>n</m>, pois toda a aritmética subsequente será módulo <m>n</m>.
+        Escolhemos uma palavra popular de quatro letras,
+        convertemos para <acro>ASCII</acro> <q>algarismos</q>
+        com uma compreensão de lista
+        e então construímos o inteiro a partir dos algarismos usando a base correta.
+        Observe que podemos tratar a palavra como uma lista e que o primeiro algarismo da lista ocupa a casa das <q>unidades</q>
+        (dizemos que a lista está na ordem <q>little-endian</q>).
       </p>
 
             <sage>
@@ -1188,9 +1185,9 @@
             </sage>
 
       <p>
-        First, Alice will sign her message to provide message verification.
-        She uses her private key for this,
-        since this is an act that only she should be able to perform.
+        Primeiro, Alice assinará sua mensagem para fornecer a verificação da mensagem.
+        Para isso, ela usa sua chave privada,
+        pois esse é um ato que somente ela deve ser capaz de realizar.
       </p>
 
             <sage>
@@ -1202,10 +1199,10 @@
             </sage>
 
       <p>
-        Then Alice encrypts her message so that only Bob can read it.
-        To do this, she uses Bob's public key.
-        Notice how she does not have to even know Bob <mdash/> for example,
-        she could have obtained Bob's public key off his web site or maybe Bob announced his public key in an advertisement in the <pubtitle>New York Times</pubtitle>.
+        Em seguida, Alice cifra sua mensagem para que somente Bob possa lê-la.
+        Para isso, ela usa a chave pública de Bob.
+        Observe que ela nem precisa conhecer Bob <mdash/> por exemplo,
+        poderia ter obtido a chave pública de Bob no site dele, ou talvez Bob tenha anunciado sua chave pública em um anúncio no <pubtitle>New York Times</pubtitle>.
       </p>
 
             <sage>
@@ -1217,25 +1214,25 @@
             </sage>
 
       <p>
-        Alice's communication is now ready to travel on any communications network,
-        no matter how insecure the network may be,
-        and no matter how many snoops may be monitoring the network.
+        A comunicação de Alice está agora pronta para percorrer qualquer rede de comunicação,
+        por mais insegura que a rede seja
+        e independentemente de quantos bisbilhoteiros possam estar monitorando a rede.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection>
-      <title>Decoding and Verifying a Message</title>
+      <title>Decifração e verificação de uma mensagem</title>
       <p>
-        Now assume that the value of <c>encrypted</c> has reached Bob.
-        Realize that Bob may not know Alice,
-        and realize that Bob does not even necessarily believe what he has received has genuinely originated from Alice.
-        An adversary could be trying to confuse Bob by sending messages that claim to be from Alice.
-        First, Bob must unwrap the encyption Alice has provided.
-        This is an act only Bob, as the intended recipient, should be able to do.
-        And he does it by using his private key,
-        which only he knows, and which he has kept secure.
+        Suponha agora que o valor de <c>encrypted</c> tenha chegado a Bob.
+        Perceba que Bob pode não conhecer Alice
+        e pode nem mesmo acreditar que o que recebeu tenha realmente se originado de Alice.
+        Um adversário poderia estar tentando confundir Bob, enviando mensagens que afirmam ser de Alice.
+        Primeiro, Bob precisa remover a cifração fornecida por Alice.
+        Esse é um ato que somente Bob, como destinatário pretendido, deve ser capaz de realizar.
+        E ele o faz usando sua chave privada,
+        que somente ele conhece e manteve segura.
       </p>
 
             <sage>
@@ -1247,13 +1244,13 @@
             </sage>
 
       <p>
-        Right now, this means very little to Bob.
-        Anybody could have sent him an encoded message.
-        However, this was a message Alice signed.
-        Lets unwrap the message signing.
-        Notice that this uses Alice's public key.
-        Bob does not need to know Alice <mdash/> for example,
-        he could obtain Alice's key off her web site or maybe Alice announced her public key in an advertisement in the <pubtitle>New York Times</pubtitle>.
+        Neste momento, isso significa muito pouco para Bob.
+        Qualquer pessoa poderia ter enviado uma mensagem cifrada a ele.
+        Contudo, esta era uma mensagem assinada por Alice.
+        Vamos remover a assinatura da mensagem.
+        Observe que isso usa a chave pública de Alice.
+        Bob não precisa conhecer Alice <mdash/> por exemplo,
+        ele poderia obter a chave de Alice no site dela, ou talvez Alice tenha anunciado sua chave pública em um anúncio no <pubtitle>New York Times</pubtitle>.
       </p>
 
             <sage>
@@ -1265,9 +1262,9 @@
             </sage>
 
       <p>
-        Bob needs to transform this integer representation back to a word with letters.
-        The <c>chr()</c> function converts <acro>ASCII</acro> code values to letters,
-        and we use a list comprehension to do this repeatedly.
+        Bob precisa transformar essa representação inteira novamente em uma palavra com letras.
+        A função <c>chr()</c> converte valores de código <acro>ASCII</acro> em letras,
+        e usamos uma compreensão de lista para fazer isso repetidamente.
       </p>
 
             <sage>
@@ -1280,8 +1277,8 @@
             </sage>
 
       <p>
-        If we would like a slightly more recognizable result,
-        we can combine the letters into a string.
+        Se quisermos um resultado um pouco mais reconhecível,
+        podemos combinar as letras em uma cadeia de caracteres.
       </p>
 
             <sage>
@@ -1290,62 +1287,62 @@
             </sage>
 
       <p>
-        Bob is pleased to obtain such an informative message from Alice.
-        What would have happened if an imposter had sent a message ostensibly from Alice,
-        or what if an adversary had intercepted Alice's original message and replaced it with a tampered message? (The latter is known as a
-        <q>man in the middle</q> attack.)
+        Bob fica satisfeito por obter uma mensagem tão informativa de Alice.
+        O que teria acontecido se um impostor tivesse enviado uma mensagem aparentemente de Alice,
+        ou se um adversário tivesse interceptado a mensagem original de Alice e a substituído por uma mensagem adulterada? (Este último caso é conhecido como um ataque do tipo
+        <q>homem no meio</q>.)
       </p>
 
       <p>
-        In either case,
-        the rogue party would not be able to duplicate Alice's first action <mdash/> signing her message.
-        If an adversary somehow signs the message, or tampers with it,
-        the step where Bob unwraps the signing will lead to total garbage.  (Try it!)  Because Bob received a legitimate word,
-        properly capitalized,
-        he has confidence that the message he unsigned is the same as the message Alice signed.
-        In practice,
-        if Alice sent several hundred words as her message,
-        the odds that it will unsign as cohrent text are astronomically small.
+        Em qualquer dos casos,
+        a parte desonesta não seria capaz de reproduzir a primeira ação de Alice <mdash/> assinar sua mensagem.
+        Se um adversário de algum modo assinar a mensagem ou adulterá-la,
+        a etapa em que Bob remove a assinatura levará a um resultado completamente sem sentido. (Tente!) Como Bob recebeu uma palavra legítima,
+        com capitalização correta,
+        ele tem confiança de que a mensagem cuja assinatura removeu é a mesma que Alice assinou.
+        Na prática,
+        se Alice enviasse várias centenas de palavras como mensagem,
+        a probabilidade de que a remoção da assinatura produzisse um texto coerente seria astronomicamente pequena.
       </p>
 
       <p>
-        What have we demonstrated?
+        O que demonstramos?
       </p>
 
       <ol>
         <li>
           <p>
-            Alice can send messages that only Bob can read.
+            Alice pode enviar mensagens que somente Bob pode ler.
           </p>
         </li>
 
         <li>
           <p>
-            Bob can receive secret messages from anybody.
+            Bob pode receber mensagens secretas de qualquer pessoa.
           </p>
         </li>
 
         <li>
           <p>
-            Alice can sign messages,
-            so that then Bob (or anybody else)knows they are genuinely from Alice.
+            Alice pode assinar mensagens,
+            de modo que Bob (ou qualquer outra pessoa) saiba que elas são realmente de Alice.
           </p>
         </li>
       </ol>
 
       <p>
-        Of course, without making new keys,
-        you can reverse the roles of Alice and Bob.
-        And if Carol makes a key pair,
-        she can communicate with both Alice and Bob in the same fashion.
+        Evidentemente, sem criar novas chaves,
+        você pode inverter os papéis de Alice e Bob.
+        E, se Carol criar um par de chaves,
+        poderá se comunicar com Alice e Bob da mesma maneira.
       </p>
 
       <p>
-        If you want to use <acro>RSA</acro> public-key encryption seriously,
-        investigate the open source software GNU Privacy Guard,
-        aka <c>GPG</c>, which is freely available at
+        Se quiser usar seriamente a cifração de chave pública <acro>RSA</acro>,
+        investigue o software de código aberto GNU Privacy Guard,
+        também conhecido como <c>GPG</c>, disponível gratuitamente em
         <url href="https://www.gnupg.org/" visual="www.gnupg.org">www.gnupg.org/</url>.
-        Notice that it only makes sense to use encryption programs that allow you to look at the source code.
+        Observe que só faz sentido usar programas de cifração que permitam examinar o código-fonte.
       </p>
 
       <sage type="practice"/>
@@ -1353,20 +1350,20 @@
   </section>
 
   <exercises xml:id="crypt-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="crypt-sage-exercise-key-pair-alice">
       <statement>
         <p>
-          Construct a keypair for Alice using the first two primes greater than <m>10^{12}</m>.
-          For your choice of <m>E</m>,
-          use a single prime number and use the smallest possible choice.
+          Construa um par de chaves para Alice usando os dois primeiros primos maiores que <m>10^{12}</m>.
+          Para sua escolha de <m>E</m>,
+          use um único número primo e escolha o menor valor possível.
         </p>
 
         <p>
-          Output the values of <m>n</m>,
-          <m>E</m>, and <m>D</m> for Alice.
-          Then use Sage commands to verify that Alice's encryption and decryption keys are multiplicative inverses.
+          Apresente os valores de <m>n</m>,
+          <m>E</m> e <m>D</m> de Alice.
+          Em seguida, use comandos do Sage para verificar que as chaves de cifração e decifração de Alice são inversas multiplicativas.
         </p>
       </statement>
     </exercise>
@@ -1374,19 +1371,19 @@
     <exercise number="2" xml:id="crypt-sage-exercise-key-pair-bob">
       <statement>
         <p>
-          Construct a keypair for Bob using the first two primes greater than <m>2\cdot 10^{12}</m>.
-          For your choice of <m>E</m>,
-          use a single prime number and use the smallest possible choice.
-          Output the values of <m>n</m>,
-          <m>E</m>, and <m>D</m> for Alice.
+          Construa um par de chaves para Bob usando os dois primeiros primos maiores que <m>2\cdot 10^{12}</m>.
+          Para sua escolha de <m>E</m>,
+          use um único número primo e escolha o menor valor possível.
+          Apresente os valores de <m>n</m>,
+          <m>E</m> e <m>D</m> de Alice.
         </p>
 
         <p>
-          Encode the word <c>Math</c> using <acro>ASCII</acro> values in the same manner as described in this section
-          (keep the capitalization as shown).
-          Create a signed message of this word for communication from Alice to Bob.
-          Output the three integers: the message,
-          the signed message and the signed, encrypted message.
+          Cifre a palavra <c>Math</c> usando valores <acro>ASCII</acro> da mesma maneira descrita nesta seção
+          (mantenha a capitalização mostrada).
+          Crie uma mensagem assinada com essa palavra para uma comunicação de Alice para Bob.
+          Apresente os três inteiros: a mensagem,
+          a mensagem assinada e a mensagem assinada e cifrada.
         </p>
       </statement>
     </exercise>
@@ -1394,8 +1391,8 @@
     <exercise number="3" xml:id="crypt-sage-exercise-bob-decrypt">
       <statement>
         <p>
-          Demonstrate how Bob converts the message received from Alice back into the word <c>Math</c>.
-          Output the value of the intermediate computations and the final human-readable message.
+          Demonstre como Bob converte a mensagem recebida de Alice novamente na palavra <c>Math</c>.
+          Apresente os valores dos cálculos intermediários e a mensagem final legível por humanos.
         </p>
       </statement>
     </exercise>
@@ -1403,35 +1400,35 @@
     <exercise number="4" xml:id="crypt-sage-exercise-signing-message">
       <statement>
         <p>
-          Create a new signed message from Alice to Bob.
-          Simulate the message being tampered with by adding <m>1</m> to the integer Bob receives,
-          before he decrypts it.
-          What result does Bob get for the letters of the message when he decrypts and unsigns the tampered message?
+          Crie uma nova mensagem assinada de Alice para Bob.
+          Simule a adulteração da mensagem adicionando <m>1</m> ao inteiro recebido por Bob,
+          antes que ele o decifre.
+          Que resultado Bob obtém para as letras da mensagem ao decifrar e remover a assinatura da mensagem adulterada?
         </p>
       </statement>
     </exercise>
 
     <exercise number="5" xml:id="crypt-sage-exercise-classroom">
-      <title>Classroom Exercise</title>
+      <title>Exercício em sala de aula</title>
       <statement>
         <p>
-          Organize a class into several small groups.
-          Have each group construct key pairs with some minimum size
-          (digits in <m>n</m>).
-          Each group should keep their private key to themselves,
-          but make their public key available to everybody in the room.
-          It could be written on the board (error-prone) or maybe pasted in a public site like
+          Organize a turma em vários grupos pequenos.
+          Faça cada grupo construir pares de chaves com algum tamanho mínimo
+          (algarismos em <m>n</m>).
+          Cada grupo deve manter sua chave privada consigo,
+          mas disponibilizar sua chave pública para todos na sala.
+          Ela poderia ser escrita no quadro (sujeito a erros) ou talvez publicada em um site público como
           <url href="http://pastebin.com/" visual="pastebin.com"><c>pastebin.com</c></url>.
-          Then each group can send a signed message to another group,
-          where the groups could be arranged logically in a circular fashion for this purpose.
-          Of course, messages should be posted publicly as well.
-          Expect a success rate somewhere between 50% and 100%.
+          Em seguida, cada grupo pode enviar uma mensagem assinada a outro grupo,
+          e, para esse fim, os grupos podem ser organizados logicamente em um círculo.
+          Evidentemente, as mensagens também devem ser publicadas.
+          Espere uma taxa de sucesso entre 50% e 100%.
         </p>
 
         <p>
-          If you do not do this in class,
-          grab a study buddy and send each other messages in the same manner.
-          Expect a success rate of 0%, 50% or 100%.
+          Se não fizer isso em sala,
+          escolha um colega de estudos e enviem mensagens um ao outro da mesma maneira.
+          Espere uma taxa de sucesso de 0%, 50% ou 100%.
         </p>
       </statement>
     </exercise>

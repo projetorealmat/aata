@@ -10,62 +10,49 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="cosets">
-  <title>Cosets and Lagrange's Theorem</title>
+  <title>Classes laterais e o teorema de Lagrange</title>
   <introduction>
     <p>
-      Lagrange's Theorem,
-      one of the most important results in finite group theory,
-      states that the order of a subgroup must divide the order of the group.
-      This theorem provides a powerful tool for analyzing finite groups;
-      it gives us an idea of exactly what type of subgroups we might expect a finite group to possess.
-      Central to understanding Lagranges's Theorem is the notion of a coset.
+      O teorema de Lagrange, um dos resultados mais importantes da teoria dos grupos finitos, afirma que a ordem de um subgrupo deve dividir a ordem do grupo. Esse teorema fornece uma ferramenta poderosa para analisar grupos finitos; ele nos dá uma ideia de exatamente que tipos de subgrupos podemos esperar que um grupo finito possua. A noção de classe lateral é fundamental para compreender o teorema de Lagrange.
     </p>
   </introduction>
 
   <section xml:id="cosets-section-cosets">
-    <title>Cosets</title>
+    <title>Classes laterais</title>
     <p>
-      Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>.
-      Define a <term>left coset</term><idx><h>Coset</h><h>left</h></idx>
-      of <m>H</m> with <term>representative</term><idx><h>Coset</h><h>representative</h></idx> <m>g \in G</m> to be the set
+      Seja <m>G</m> um grupo e <m>H</m> um subgrupo de <m>G</m>. Definimos uma <term>classe lateral à esquerda</term><idx><h>Classe lateral</h><h>à esquerda</h></idx>
+      de <m>H</m> com <term>representante</term><idx><h>Classe lateral</h><h>representante</h></idx> <m>g \in G</m> como o conjunto
       <md>
         gH = \{ gh : h \in H \}
       </md>.
-      <term>Right cosets</term><idx><h>Coset</h><h>right</h></idx>
-      can be defined similarly by
+      <term>Classes laterais à direita</term><idx><h>Classe lateral</h><h>à direita</h></idx>
+      podem ser definidas analogamente por
       <md>
         Hg = \{ hg : h \in H \}
-      </md>.
-      If left and right cosets coincide or if it is clear from the context to which type of coset that we are referring,
-      we will use the word <em>coset</em>
-      without specifying left or right.
+      </md>. Se as classes laterais à esquerda e à direita coincidem ou se está claro pelo contexto a que tipo de classe lateral estamos nos referindo, usaremos a expressão <em>classe lateral</em>
+      sem especificar à esquerda ou à direita.
     </p>
 
     <example xml:id="cosets-example-z6-cosets">
       <p>
-        Let <m>H</m> be the subgroup of
-        <m>{\mathbb Z}_6</m> consisting of the elements <m>0</m> and <m>3</m>.
-        The cosets are
+        Seja <m>H</m> o subgrupo de
+        <m>{\mathbb Z}_6</m> constituído pelos elementos <m>0</m> e <m>3</m>. As classes laterais são
         <md>
           <mrow>0 + H = 3 + H = \{ 0, 3 \}</mrow>
           <mrow>1 + H = 4 + H = \{ 1, 4 \}</mrow>
           <mrow>2 + H = 5 + H = \{ 2, 5 \}</mrow>
-        </md>.
-        We will always write the cosets of subgroups of <m>{\mathbb Z}</m> and
-        <m>{\mathbb Z}_n</m> with the additive notation we have used for cosets here.
-        In a commutative group, left and right cosets are always identical.
+        </md>. Sempre escreveremos as classes laterais dos subgrupos de <m>{\mathbb Z}</m> e
+        <m>{\mathbb Z}_n</m> com a notação aditiva que usamos aqui para classes laterais. Em um grupo comutativo, as classes laterais à esquerda e à direita são sempre idênticas.
       </p>
     </example>
 
     <example xml:id="cosets-example-s3-cosets">
       <p>
-        Let <m>H</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>.
-        The left cosets of <m>H</m> are
+        Seja <m>H</m> o subgrupo de <m>S_3</m> definido pelas permutações <m>\{(1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>. As classes laterais à esquerda de <m>H</m> são
         <md>
           <mrow>(1)H = (1 \,  2 \,  3)H =  (1 \, 3 \, 2)H = \{(1), (1 \,  2 \, 3), (1 \, 3 \, 2) \}</mrow>
           <mrow>(1 \,  2)H = (1 \,  3)H = (2 \,  3)H =  \{ (1 \,  2), (1 \,  3), (2 \,  3)  \}</mrow>
-        </md>.
-        The right cosets of <m>H</m> are exactly the same as the left cosets:
+        </md>. As classes laterais à direita de <m>H</m> são exatamente as mesmas que as classes laterais à esquerda:
         <md>
           <mrow>H(1) = H(1 \,  2 \,  3) =  H(1 \, 3 \, 2) = \{(1), (1 \,  2 \, 3), (1 \, 3 \, 2) \}</mrow>
           <mrow>H(1 \, 2) = H(1 \,  3) = H(2 \,  3) =  \{ (1 \,  2), (1 \,  3), (2 \,  3)  \}</mrow>
@@ -73,15 +60,13 @@
       </p>
 
       <p>
-        It is not always the case that a left coset is the same as a right coset.
-        Let <m>K</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (1 \,  2)\}</m>.
-        Then the left cosets of <m>K</m> are
+        Nem sempre uma classe lateral à esquerda é igual a uma classe lateral à direita. Seja <m>K</m> o subgrupo de <m>S_3</m> definido pelas permutações <m>\{(1), (1 \,  2)\}</m>. Então as classes laterais à esquerda de <m>K</m> são
         <md>
           <mrow>(1)K = (1 \,  2)K = \{(1), (1 \,  2)\}</mrow>
           <mrow>(1 \,  3)K = (1 \,  2 \,  3)K = \{(1 \,  3), (1 \,  2  \, 3)\}</mrow>
           <mrow>(2  \, 3)K = (1 \,  3 \,  2)K = \{(2 \,  3), (1 \,  3  \, 2)\};</mrow>
         </md>
-        however, the right cosets of <m>K</m> are
+        porém, as classes laterais à direita de <m>K</m> são
         <md>
           <mrow>K(1) = K(1  \, 2) = \{(1), (1 \,  2)\}</mrow>
           <mrow>K(1 \,  3) = K(1 \,  3 \,  2) = \{(1 \,  3), (1 \,  3  \, 2)\}</mrow>
@@ -91,15 +76,13 @@
     </example>
 
     <p>
-      The following lemma is quite useful when dealing with cosets.
-      (We leave its proof as an exercise.)
+      O lema a seguir é bastante útil ao lidar com classes laterais. (Deixamos sua prova como exercício.)
     </p>
 
     <lemma xml:id="cosets-lemma-theorem-1">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
-          The following conditions are equivalent.
+          Seja <m>H</m> um subgrupo de um grupo <m>G</m> e suponha que <m>g_1, g_2 \in G</m>. As condições a seguir são equivalentes.
 
           <ol>
             <li>
@@ -137,132 +120,98 @@
     </lemma>
 
     <p>
-      In all of our examples the cosets of a subgroup <m>H</m> partition the larger group <m>G</m>.
-      The following theorem proclaims that this will always be the case.
+      Em todos os nossos exemplos, as classes laterais de um subgrupo <m>H</m> particionam o grupo maior <m>G</m>. O teorema a seguir afirma que isso sempre ocorre.
     </p>
 
     <theorem xml:id="cosets-theorem-theorem-2">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a group <m>G</m>.
-          Then the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
-          That is, the group <m>G</m> is the disjoint union of the left cosets of <m>H</m> in <m>G</m>.
+          Seja <m>H</m> um subgrupo de um grupo <m>G</m>. Então as classes laterais à esquerda de <m>H</m> em <m>G</m> particionam <m>G</m>. Isto é, o grupo <m>G</m> é a união disjunta das classes laterais à esquerda de <m>H</m> em <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>g_1 H</m> and <m>g_2 H</m> be two cosets of <m>H</m> in <m>G</m>.
-          We must show that either <m>g_1 H \cap g_2 H = \emptyset</m> or <m>g_1 H = g_2 H</m>.
-          Suppose that <m>g_1 H \cap g_2 H \neq \emptyset</m> and <m>a \in g_1 H \cap g_2 H</m>.
-          Then by the definition of a left coset,
-          <m>a = g_1 h_1 = g_2 h_2</m> for some elements <m>h_1</m> and <m>h_2</m> in <m>H</m>.
-          Hence, <m>g_1 = g_2 h_2 h_1^{-1}</m> or <m>g_1 \in g_2 H</m>.
-          By <xref ref="cosets-lemma-theorem-1"/>, <m>g_1 H = g_2 H</m>.
+          Sejam <m>g_1 H</m> e <m>g_2 H</m> duas classes laterais de <m>H</m> em <m>G</m>. Devemos mostrar que <m>g_1 H \cap g_2 H = \emptyset</m> ou <m>g_1 H = g_2 H</m>. Suponha que <m>g_1 H \cap g_2 H \neq \emptyset</m> e <m>a \in g_1 H \cap g_2 H</m>. Então, pela definição de classe lateral à esquerda,
+          <m>a = g_1 h_1 = g_2 h_2</m> para alguns elementos <m>h_1</m> e <m>h_2</m> em <m>H</m>. Logo, <m>g_1 = g_2 h_2 h_1^{-1}</m> ou <m>g_1 \in g_2 H</m>. Por <xref ref="cosets-lemma-theorem-1"/>, <m>g_1 H = g_2 H</m>.
         </p>
       </proof>
     </theorem>
 
     <remark>
       <p>
-        There is nothing special in this theorem about left cosets.
-        Right cosets also partition <m>G</m>;
-        the proof of this fact is exactly the same as the proof for left cosets except that all group multiplications are done on the opposite side of <m>H</m>.
+        Não há nada de especial nesse teorema a respeito das classes laterais à esquerda. As classes laterais à direita também particionam <m>G</m>; a prova desse fato é exatamente a mesma que a prova para classes laterais à esquerda, exceto pelo fato de que todas as multiplicações do grupo são feitas do lado oposto de <m>H</m>.
       </p>
     </remark>
 
     <p>
-      Let <m>G</m> be a group and <m>H</m> be a subgroup of <m>G</m>.
-      Define the <term>index</term><idx><h>Index of a subgroup</h></idx><idx><h>Subgroup</h><h>index of</h></idx>
-      of <m>H</m> in <m>G</m> to be the number of left cosets of <m>H</m> in <m>G</m>.
-      We will denote the index by <m>[G:H]</m>.
+      Seja <m>G</m> um grupo e <m>H</m> um subgrupo de <m>G</m>. Definimos o <term>índice</term><idx><h>Índice de um subgrupo</h></idx><idx><h>Subgrupo</h><h>índice de</h></idx>
+      de <m>H</m> em <m>G</m> como o número de classes laterais à esquerda de <m>H</m> em <m>G</m>. Denotaremos o índice por <m>[G:H]</m>.
 
       <notation>
         <usage><m>[G:H]</m></usage>
-        <description>index of a subgroup <m>H</m> in a group <m>G</m></description>
+        <description>índice de um subgrupo <m>H</m> em um grupo <m>G</m></description>
       </notation>
 
     </p>
 
     <example xml:id="cosets-example-z6-index">
       <p>
-        Let <m>G= {\mathbb Z}_6</m> and <m>H = \{ 0, 3 \}</m>.
-        Then <m>[G:H] = 3</m>.
+        Seja <m>G= {\mathbb Z}_6</m> e <m>H = \{ 0, 3 \}</m>. Então <m>[G:H] = 3</m>.
       </p>
     </example>
 
     <example xml:id="cosets-example-s3-index">
       <p>
-        Suppose that <m>G= S_3</m>,
-        <m>H = \{ (1),(1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>,
-        and <m>K= \{ (1), (1 \, 2) \}</m>.
-        Then <m>[G:H] = 2</m> and <m>[G:K] = 3</m>.
+        Suponha que <m>G= S_3</m>,
+        <m>H = \{ (1),(1 \, 2 \, 3), (1 \, 3 \, 2) \}</m>, e <m>K= \{ (1), (1 \, 2) \}</m>. Então <m>[G:H] = 2</m> e <m>[G:K] = 3</m>.
       </p>
     </example>
 
     <theorem xml:id="cosets-theorem-theorem-3">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a group <m>G</m>.
-          The number of left cosets of <m>H</m> in <m>G</m> is the same as the number of right cosets of <m>H</m> in <m>G</m>.
+          Seja <m>H</m> um subgrupo de um grupo <m>G</m>. O número de classes laterais à esquerda de <m>H</m> em <m>G</m> é igual ao número de classes laterais à direita de <m>H</m> em <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>{\mathcal L}_H</m> and
-          <m>{\mathcal R}_H</m> denote the set of left and right cosets of <m>H</m> in <m>G</m>,
-          respectively.
+          Sejam <m>{\mathcal L}_H</m> e
+          <m>{\mathcal R}_H</m> os conjuntos de classes laterais à esquerda e à direita de <m>H</m> em <m>G</m>, respectivamente.
 
           <notation>
             <usage><m>\mathcal L_H</m></usage>
-            <description>the set of left cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+            <description>o conjunto das classes laterais à esquerda de um subgrupo <m>H</m> em um grupo <m>G</m></description>
           </notation>
 
           <notation>
             <usage><m>\mathcal R_H</m></usage>
-            <description>the set of right cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+            <description>o conjunto das classes laterais à direita de um subgrupo <m>H</m> em um grupo <m>G</m></description>
           </notation>
 
-          If we can define a bijective map <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m>,
-          then the theorem will be proved.
-          If <m>gH \in {\mathcal L}_H</m>,
-          let <m>\phi( gH ) = Hg^{-1}</m>.
-          By <xref ref="cosets-lemma-theorem-1"/>, the map <m>\phi</m> is well-defined;
-          that is, if <m>g_1 H = g_2 H</m>,
-          then <m>H g_1^{-1} = H g_2^{-1}</m>.
-          To show that <m>\phi</m> is one-to-one, suppose that
+          Se pudermos definir uma aplicação bijetiva <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m>, então o teorema estará demonstrado. Se <m>gH \in {\mathcal L}_H</m>, seja <m>\phi( gH ) = Hg^{-1}</m>. Por <xref ref="cosets-lemma-theorem-1"/>, a aplicação <m>\phi</m> está bem definida; isto é, se <m>g_1 H = g_2 H</m>, então <m>H g_1^{-1} = H g_2^{-1}</m>. Para mostrar que <m>\phi</m> é injetiva, suponha que
           <md>
             H g_1^{-1} = \phi( g_1 H ) = \phi( g_2 H ) = H g_2^{-1}
-          </md>.
-          Again by <xref ref="cosets-lemma-theorem-1"/>, <m>g_1 H = g_2 H</m>.
-          The map <m>\phi</m> is onto since <m>\phi(g^{-1} H ) = H g</m>.
+          </md>. Novamente por <xref ref="cosets-lemma-theorem-1"/>, <m>g_1 H = g_2 H</m>. A aplicação <m>\phi</m> é sobrejetiva, pois <m>\phi(g^{-1} H ) = H g</m>.
         </p>
       </proof>
     </theorem>
   </section>
 
   <section xml:id="cosets-section-lagranges-theorem">
-    <title>Lagrange's Theorem</title>
+    <title>Teorema de Lagrange</title>
     <proposition xml:id="cosets-theorem-4">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of <m>G</m> with <m>g \in G</m> and define a map
-          <m>\phi:H \rightarrow gH</m> by <m>\phi(h) = gh</m>.
-          The map <m>\phi</m> is bijective;
-          hence, the number of elements in <m>H</m> is the same as the number of elements in <m>gH</m>.
+          Seja <m>H</m> um subgrupo de <m>G</m> com <m>g \in G</m> e defina uma aplicação
+          <m>\phi:H \rightarrow gH</m> por <m>\phi(h) = gh</m>. A aplicação <m>\phi</m> é bijetiva; portanto, o número de elementos de <m>H</m> é igual ao número de elementos de <m>gH</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          We first show that the map <m>\phi</m> is one-to-one.
-          Suppose that <m>\phi(h_1) = \phi(h_2)</m> for elements <m>h_1, h_2 \in H</m>.
-          We must show that <m>h_1 = h_2</m>,
-          but <m>\phi(h_1) = gh_1</m> and <m>\phi(h_2) = gh_2</m>.
-          So <m>gh_1 = gh_2</m>, and by left cancellation <m>h_1= h_2</m>.
-          To show that <m>\phi</m> is onto is easy.
-          By definition every element of <m>gH</m> is of the form <m>gh</m> for some <m>h \in H</m> and <m>\phi(h) = gh</m>.
+          Primeiro mostramos que a aplicação <m>\phi</m> é injetiva. Suponha que <m>\phi(h_1) = \phi(h_2)</m> para elementos <m>h_1, h_2 \in H</m>. Devemos mostrar que <m>h_1 = h_2</m>, mas <m>\phi(h_1) = gh_1</m> e <m>\phi(h_2) = gh_2</m>. Assim, <m>gh_1 = gh_2</m>, e, pelo cancelamento à esquerda, <m>h_1= h_2</m>. Mostrar que <m>\phi</m> é sobrejetiva é fácil. Por definição, todo elemento de <m>gH</m> é da forma <m>gh</m> para algum <m>h \in H</m> e <m>\phi(h) = gh</m>.
         </p>
       </proof>
     </proposition>
@@ -270,22 +219,17 @@
     <theorem xml:id="cosets-theorem-lagrange">
       <title>Lagrange</title>
       <idx>
-      <h>Lagrange's Theorem</h>
+      <h>Teorema de Lagrange</h>
       </idx>
       <statement>
         <p>
-          Let <m>G</m> be a finite group and let <m>H</m> be a subgroup of <m>G</m>.
-          Then <m>|G|/|H| = [G : H]</m> is the number of distinct left cosets of <m>H</m> in <m>G</m>.
-          In particular,
-          the number of elements in <m>H</m> must divide the number of elements in <m>G</m>.
+          Seja <m>G</m> um grupo finito e seja <m>H</m> um subgrupo de <m>G</m>. Então <m>|G|/|H| = [G : H]</m> é o número de classes laterais à esquerda distintas de <m>H</m> em <m>G</m>. Em particular, o número de elementos de <m>H</m> deve dividir o número de elementos de <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          The group <m>G</m> is partitioned into <m>[G : H]</m> distinct left cosets.
-          Each left coset has <m>|H|</m> elements;
-          therefore, <m>|G| = [G : H] |H|</m>.
+          O grupo <m>G</m> é particionado em <m>[G : H]</m> classes laterais à esquerda distintas. Cada classe lateral à esquerda tem <m>|H|</m> elementos; portanto, <m>|G| = [G : H] |H|</m>.
         </p>
       </proof>
     </theorem>
@@ -293,8 +237,7 @@
     <corollary xml:id="cosets-corollary-theorem-6">
       <statement>
         <p>
-          Suppose that <m>G</m> is a finite group and <m>g \in G</m>.
-          Then the order of <m>g</m> must divide the number of elements in <m>G</m>.
+          Suponha que <m>G</m> é um grupo finito e <m>g \in G</m>. Então a ordem de <m>g</m> deve dividir o número de elementos de <m>G</m>.
         </p>
       </statement>
     </corollary>
@@ -302,31 +245,25 @@
     <corollary xml:id="cosets-corollary-theorem-7">
       <statement>
         <p>
-          Let <m>|G| = p</m> with <m>p</m> a prime number.
-          Then <m>G</m> is cyclic and any <m>g \in G</m> such that <m>g \neq e</m> is a generator.
+          Seja <m>|G| = p</m> com <m>p</m> um número primo. Então <m>G</m> é cíclico e qualquer <m>g \in G</m> tal que <m>g \neq e</m> é um gerador.
         </p>
       </statement>
 
       <proof>
         <p>
-          Let <m>g</m> be in <m>G</m> such that <m>g \neq e</m>.
-          Then by <xref ref="cosets-corollary-theorem-6"/>,
-          the order of <m>g</m> must divide the order of the group.
-          Since <m>|\langle g \rangle| \gt 1</m>, it must be <m>p</m>.
-          Hence, <m>g</m> generates <m>G</m>.
+          Seja <m>g</m> um elemento de <m>G</m> tal que <m>g \neq e</m>. Então, por <xref ref="cosets-corollary-theorem-6"/>, a ordem de <m>g</m> deve dividir a ordem do grupo. Como <m>|\langle g \rangle| \gt 1</m>, ela deve ser <m>p</m>. Logo, <m>g</m> gera <m>G</m>.
         </p>
       </proof>
     </corollary>
 
     <p>
-      <xref ref="cosets-corollary-theorem-7"/> suggests that groups of prime order <m>p</m> must somehow look like <m>{\mathbb Z}_p</m>.
+      <xref ref="cosets-corollary-theorem-7"/> sugere que os grupos de ordem prima <m>p</m> devem, de alguma maneira, se assemelhar a <m>{\mathbb Z}_p</m>.
     </p>
 
     <corollary xml:id="cosets-corollary-theorem-8">
       <statement>
         <p>
-          Let <m>H</m> and <m>K</m> be subgroups of a finite group <m>G</m> such that <m>G \supset H \supset K</m>.
-          Then
+          Sejam <m>H</m> e <m>K</m> subgrupos de um grupo finito <m>G</m> tais que <m>G \supset H \supset K</m>. Então
           <md>
             [G:K] = [G:H][H:K]
           </md>.
@@ -335,7 +272,7 @@
 
       <proof>
         <p>
-          Observe that
+          Observe que
           <md>
             [G:K] = \frac{|G|}{|K|} = \frac{|G|}{|H|} \cdot \frac{|H|}{|K|} = [G:H][H:K]
           </md>.
@@ -344,21 +281,11 @@
     </corollary>
 
     <remark>
-      <title>The converse of Lagrange's Theorem is false</title>
+      <title>A recíproca do teorema de Lagrange é falsa</title>
       <p>
-        The group <m>A_4</m> has order <m>12</m>;
-        however, it can be shown that it does not possess a subgroup of order <m>6</m>.
-        According to Lagrange's Theorem,
-        subgroups of a group of order <m>12</m> can have orders of either <m>1</m>,
+        O grupo <m>A_4</m> tem ordem <m>12</m>; porém, pode-se mostrar que ele não possui um subgrupo de ordem <m>6</m>. De acordo com o teorema de Lagrange, subgrupos de um grupo de ordem <m>12</m> podem ter ordens <m>1</m>,
         <m>2</m>,
-        <m>3</m>, <m>4</m>, or <m>6</m>.
-        However, we are not guaranteed that subgroups of every possible order exist.
-        To prove that <m>A_4</m> has no subgroup of order <m>6</m>,
-        we will assume that it does have such a subgroup <m>H</m> and show that a contradiction must occur.
-        Since <m>A_4</m> contains eight <m>3</m>-cycles,
-        we know that <m>H</m> must contain a <m>3</m>-cycle.
-        We will show that if <m>H</m> contains one <m>3</m>-cycle,
-        then it must contain more than <m>6</m> elements.
+        <m>3</m>, <m>4</m>, ou <m>6</m>. Contudo, não há garantia de que existam subgrupos de todas as ordens possíveis. Para provar que <m>A_4</m> não possui subgrupo de ordem <m>6</m>, suporemos que ele possui um tal subgrupo <m>H</m> e mostraremos que deve ocorrer uma contradição. Como <m>A_4</m> contém oito <m>3</m>-ciclos, sabemos que <m>H</m> deve conter um <m>3</m>-ciclo. Mostraremos que, se <m>H</m> contém um <m>3</m>-ciclo, então deve conter mais de <m>6</m> elementos.
       </p>
     </remark>
         <!-- % TWJ, 2011/11/20 -->
@@ -367,159 +294,132 @@
     <proposition xml:id="cosets-proposition-theorem-10">
       <statement>
         <p>
-          The group <m>A_4</m> has no subgroup of order <m>6</m>.
+          O grupo <m>A_4</m> não possui subgrupo de ordem <m>6</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Since <m>[A_4 : H] = 2</m>,
-          there are only two cosets of <m>H</m> in <m>A_4</m>.
-          Inasmuch as one of the cosets is <m>H</m> itself,
-          right and left cosets must coincide;
-          therefore, <m>gH = Hg</m> or
-          <m>g H g^{-1} = H</m> for every <m>g \in A_4</m>.
-          Since there are eight <m>3</m>-cycles in <m>A_4</m>,
-          at least one <m>3</m>-cycle must be in <m>H</m>.
-          Without loss of generality, assume that <m>(1 \, 2 \, 3)</m> is in <m>H</m>.
-          Then <m>(1 \, 2 \, 3)^{-1} = (1 \, 3 \, 2)</m> must also be in <m>H</m>.
-          Since <m>g h g^{-1} \in H</m> for all
-          <m>g \in A_4</m> and all <m>h \in H</m> and
+          Como <m>[A_4 : H] = 2</m>, existem apenas duas classes laterais de <m>H</m> em <m>A_4</m>. Como uma das classes laterais é o próprio <m>H</m> , as classes laterais à direita e à esquerda devem coincidir; portanto, <m>gH = Hg</m> ou
+          <m>g H g^{-1} = H</m> para todo <m>g \in A_4</m>. Como existem oito <m>3</m>-ciclos em <m>A_4</m>, pelo menos um <m>3</m>-ciclo deve pertencer a <m>H</m>. Sem perda de generalidade, suponha que <m>(1 \, 2 \, 3)</m> pertence a <m>H</m>. Então <m>(1 \, 2 \, 3)^{-1} = (1 \, 3 \, 2)</m> também deve pertencer a <m>H</m>. Como <m>g h g^{-1} \in H</m> para todo
+          <m>g \in A_4</m> e todo <m>h \in H</m> e
           <md>
             <mrow>(1 \, 2 \, 4)(1 \, 2 \, 3)(1 \, 2 \, 4)^{-1} &amp; = (1 \, 2 \, 4)(1 \, 2 \, 3)(1 \, 4 \, 2)  = (2 \, 4 \, 3)</mrow>
             <mrow>(2 \, 4 \, 3)(1 \, 2 \, 3)(2 \, 4 \, 3)^{-1} &amp; = (2 \, 4 \, 3)(1 \, 2 \, 3)(2 \, 3 \, 4)  = (1 \, 4 \, 2)</mrow>
           </md>
-          we can conclude that <m>H</m> must have at least seven elements
+          podemos concluir que <m>H</m> deve ter pelo menos sete elementos
           <md>
             (1), (1 \, 2 \, 3), (1 \, 3 \, 2), (2 \, 4 \, 3), (2 \, 4 \, 3)^{-1} = (2 \, 3 \, 4), (1 \, 4 \, 2), (1 \, 4 \, 2)^{-1} = (1 \, 2 \, 4)
-          </md>.
-          Therefore, <m>A_4</m> has no subgroup of order <m>6</m>.
+          </md>. Portanto, <m>A_4</m> não possui subgrupo de ordem <m>6</m>.
         </p>
       </proof>
     </proposition>
 
     <p>
-      In fact, we can say more about when two cycles have the same length.
+      De fato, podemos dizer mais sobre quando dois ciclos têm o mesmo comprimento.
     </p>
 
     <theorem xml:id="cosets-theorem-cycle-length-theorem">
       <statement>
         <p>
-          Two cycles <m>\tau</m> and <m>\mu</m> in <m>S_n</m> have the same length if and only if there exists a
-          <m>\sigma \in S_n</m> such that <m>\mu = \sigma \tau \sigma^{-1}</m>.
+          Dois ciclos <m>\tau</m> e <m>\mu</m> em <m>S_n</m> têm o mesmo comprimento se e somente se existe um
+          <m>\sigma \in S_n</m> tal que <m>\mu = \sigma \tau \sigma^{-1}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Suppose that
+          Suponha que
           <md>
             <mrow>\tau &amp; = (a_1, a_2, \ldots, a_k )</mrow>
             <mrow>\mu  &amp; = (b_1, b_2, \ldots, b_k )</mrow>
-          </md>.
-          Define <m>\sigma</m> to be the permutation
+          </md>. Defina <m>\sigma</m> como a permutação
           <md>
             <mrow>\sigma( a_1 ) &amp; = b_1</mrow>
             <mrow>\sigma( a_2 ) &amp; = b_2</mrow>
             <mrow>&amp; \aatavdots{=}</mrow>
             <mrow>\sigma( a_k ) &amp; = b_k</mrow>
-          </md>.
-          Then <m>\mu = \sigma \tau \sigma^{-1}</m>.
+          </md>. Então <m>\mu = \sigma \tau \sigma^{-1}</m>.
         </p>
 
         <p>
-          Conversely, suppose that <m>\tau = (a_1, a_2, \ldots,
-          a_k )</m> is a <m>k</m>-cycle and <m>\sigma \in S_n</m>.
-          If <m>\sigma( a_i ) = b</m> and
-          <m>\sigma( a_{(i \bmod k) + 1}) = b'</m>, then <m>\mu( b) = b'</m>.
-          Hence,
+          Reciprocamente, suponha que <m>\tau = (a_1, a_2, \ldots,
+          a_k )</m> é um <m>k</m>-ciclo e <m>\sigma \in S_n</m>. Se <m>\sigma( a_i ) = b</m> e
+          <m>\sigma( a_{(i \bmod k) + 1}) = b'</m>, então <m>\mu( b) = b'</m>. Logo,
           <md>
             \mu = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k) )
-          </md>.
-          Since <m>\sigma</m> is one-to-one and onto,
-          <m>\mu</m> is a cycle of the same length as <m>\tau</m>.
+          </md>. Como <m>\sigma</m> é injetiva e sobrejetiva,
+          <m>\mu</m> é um ciclo do mesmo comprimento que <m>\tau</m>.
         </p>
       </proof>
     </theorem>
   </section>
 
   <section xml:id="cosets-section-fermat-euler">
-    <title>Fermat's and Euler's Theorems</title>
+    <title>Teoremas de Fermat e de Euler</title>
     <introduction>
       <p>
-        The <term>Euler</term> <m>\phi</m>-<term>function</term><idx><h>Euler <m>\phi</m>-function</h></idx> is the map <m>\phi : {\mathbb N } \rightarrow {\mathbb N}</m> defined by
-        <m>\phi(n) = 1</m> for <m>n=1</m>, and, for <m>n \gt 1</m>,
-        <m>\phi(n)</m> is the number of positive integers <m>m</m> with
-        <m>1 \leq m \lt n</m> and <m>\gcd(m,n) = 1</m>.
+        A <term>função</term> <m>\phi</m> <term>de Euler</term><idx><h>Função <m>\phi</m> de Euler</h></idx> é a aplicação <m>\phi : {\mathbb N } \rightarrow {\mathbb N}</m> definida por
+        <m>\phi(n) = 1</m> para <m>n=1</m>, e, para <m>n \gt 1</m>,
+        <m>\phi(n)</m> é o número de inteiros positivos <m>m</m> com
+        <m>1 \leq m \lt n</m> e <m>\gcd(m,n) = 1</m>.
       </p>
 
       <p>
-        From <xref ref="groups-proposition-zn-equiv-classes"/>, we know that the order of <m>U(n)</m>,
-        the group of units in <m>{\mathbb Z}_n</m>, is <m>\phi(n)</m>.
-        For example,
-        <m>|U(12)| = \phi(12) = 4</m> since the numbers that are relatively prime to <m>12</m> are <m>1</m>, <m>5</m>, <m>7</m>, and <m>11</m>.
-        For any prime <m>p</m>, <m>\phi(p) = p-1</m>.
-        We state these results in the following theorem.
+        Por <xref ref="groups-proposition-zn-equiv-classes"/>, sabemos que a ordem de <m>U(n)</m>, o grupo das unidades de <m>{\mathbb Z}_n</m>, é <m>\phi(n)</m>. Por exemplo,
+        <m>|U(12)| = \phi(12) = 4</m> pois os números que são relativamente primos com <m>12</m> são <m>1</m>, <m>5</m>, <m>7</m>, e <m>11</m>. Para qualquer primo <m>p</m>, <m>\phi(p) = p-1</m>. Enunciamos esses resultados no teorema a seguir.
       </p>
 
       <theorem xml:id="cosets-theorem-theorem-11">
         <statement>
           <p>
-            Let <m>U(n)</m> be the group of units in <m>{\mathbb Z}_n</m>.
-            Then <m>|U(n)| = \phi(n)</m>.
+            Seja <m>U(n)</m> o grupo das unidades de <m>{\mathbb Z}_n</m>. Então <m>|U(n)| = \phi(n)</m>.
           </p>
         </statement>
       </theorem>
 
       <p>
-        The following theorem is an important result in number theory,
-        due to Leonhard Euler.
+        O teorema a seguir é um resultado importante da teoria dos números, devido a Leonhard Euler.
       </p>
 
       <theorem xml:id="cosets-theorem-eulers_theorem">
-        <title>Euler's Theorem</title>
+        <title>Teorema de Euler</title>
         <statement>
           <p>
-            Let <m>a</m> and <m>n</m> be integers such that <m>n \gt 0</m> and <m>\gcd(a, n) = 1</m>.
-            Then <m>a^{\phi(n)} \equiv 1 \pmod{n}</m>.
+            Sejam <m>a</m> e <m>n</m> inteiros tais que <m>n \gt 0</m> e <m>\gcd(a, n) = 1</m>. Então <m>a^{\phi(n)} \equiv 1 \pmod{n}</m>.
           </p>
         </statement>
 
         <proof>
           <p>
-            By <xref ref="cosets-theorem-theorem-11"/> the order of <m>U(n)</m> is <m>\phi(n)</m>.
-            Consequently, <m>a^{\phi(n)} = 1</m> for all <m>a \in U(n)</m>;
-            or <m>a^{\phi(n)} - 1</m> is divisible by <m>n</m>.
-            Therefore, <m>a^{\phi(n)} \equiv 1 \pmod{n}</m>.
+            Por <xref ref="cosets-theorem-theorem-11"/> a ordem de <m>U(n)</m> é <m>\phi(n)</m>. Consequentemente, <m>a^{\phi(n)} = 1</m> para todo <m>a \in U(n)</m>; ou <m>a^{\phi(n)} - 1</m> é divisível por <m>n</m>. Portanto, <m>a^{\phi(n)} \equiv 1 \pmod{n}</m>.
           </p>
         </proof>
       </theorem>
 
       <p>
-        If we consider the special case of Euler's Theorem in which <m>n = p</m> is prime and recall that <m>\phi(p) = p - 1</m>,
-        we obtain the following result, due to <idx><h>Fermat, Pierre de</h></idx>Pierre de Fermat.  
+        Se considerarmos o caso particular do teorema de Euler em que <m>n = p</m> é primo e lembrarmos que <m>\phi(p) = p - 1</m>, obtemos o resultado a seguir, devido a <idx><h>Fermat, Pierre de</h></idx>Pierre de Fermat.
       </p>
 
       <theorem xml:id="cosets-theorem-theorem-13">
-        <title>Fermat's Little Theorem</title>
+        <title>Pequeno teorema de Fermat</title>
         <idx>
-        <h>Fermat's Little Theorem</h>
+        <h>Pequeno teorema de Fermat</h>
         </idx>
         <statement>
           <p>
-            Let <m>p</m> be any prime number and suppose that <m>p \notdivide a</m>
-            (<m>p</m> does not divide <m>a</m>).
+            Seja <m>p</m> um número primo qualquer e suponha que <m>p \notdivide a</m>
+            (<m>p</m> não divide <m>a</m>).
 
             <notation>
               <usage><m>a \notdivide b</m></usage>
-              <description><m>a</m> does not divide <m>b</m></description>
+              <description><m>a</m> não divide <m>b</m></description>
             </notation>
 
-            Then
+            Então
             <md>
               a^{p-1} \equiv 1 \pmod{ p }
-            </md>.
-            Furthermore, for any integer <m>b</m>,
+            </md>. Além disso, para qualquer inteiro <m>b</m>,
             <m>b^p \equiv b \pmod{ p}</m>.
           </p>
         </statement>
@@ -527,37 +427,20 @@
       <paragraphs component="sage-blurb">
         <title>Sage</title>
         <p>
-          Sage can create all the subgroups of a group,
-          so long as the group is not too large.
-          It can also create the cosets of a subgroup.
+          Sage pode criar todos os subgrupos de um grupo, desde que o grupo não seja muito grande. Ele também pode criar as classes laterais de um subgrupo.
         </p>
       </paragraphs>
 
     </introduction>
 
     <subsection xml:id="cosets-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
         Joseph-Louis Lagrange<idx><h>Lagrange, Joseph-Louis</h></idx>
-        (1736<ndash/>1813), born in Turin, Italy,
-        was of French and Italian descent.
-        His talent for mathematics became apparent at an early age.
-        Leonhard Euler<idx><h>Euler, Leonhard</h></idx>
-        recognized Lagrange's abilities when Lagrange, who was only 19,
-        communicated to Euler some work that he had done in the calculus of variations.
-        That year he was also named a professor at the Royal Artillery School in Turin.
-        At the age of 23 he joined the Berlin Academy.
-        Frederick the Great had written to Lagrange proclaiming that the
-        <q>greatest king in Europe</q>
-        should have the <q>greatest mathematician in Europe</q> at his court.
-        For 20 years Lagrange held the position vacated by his mentor, Euler.
-        His works include contributions to number theory,
-        group theory, physics and mechanics,
-        the calculus of variations,
-        the theory of equations, and differential equations.
-        Along with Laplace and Lavoisier, Lagrange was one of the people responsible for designing the metric system.
-        During his life Lagrange profoundly influenced the development of mathematics,
-        leaving much to the next generation of mathematicians in the form of examples and new problems to be solved.
+        (1736<ndash/>1813), nascido em Turim, Itália, tinha ascendência francesa e italiana. Seu talento para a matemática se tornou evidente desde cedo. Leonhard Euler<idx><h>Euler, Leonhard</h></idx>
+        reconheceu as habilidades de Lagrange quando este, com apenas 19 anos, comunicou a Euler um trabalho que havia feito em cálculo das variações. Naquele ano, ele também foi nomeado professor da Escola Real de Artilharia de Turim. Aos 23 anos, ingressou na Academia de Berlim. Frederico, o Grande, havia escrito a Lagrange proclamando que o
+        <q>maior rei da Europa</q>
+        deveria ter o <q>maior matemático da Europa</q> em sua corte. Durante 20 anos, Lagrange ocupou o posto deixado por seu mentor, Euler. Seus trabalhos incluem contribuições à teoria dos números, à teoria dos grupos, à física e à mecânica, ao cálculo das variações, à teoria das equações e às equações diferenciais. Juntamente com Laplace e Lavoisier, Lagrange foi uma das pessoas responsáveis pela concepção do sistema métrico. Durante sua vida, Lagrange influenciou profundamente o desenvolvimento da matemática, deixando muito para a geração seguinte de matemáticos na forma de exemplos e novos problemas a serem resolvidos.
       </p>
     </subsection>
   </section>
@@ -567,7 +450,7 @@
     <exercise label="rq-cosets-lagrange">
       <statement>
         <p>
-          State Lagrange's Theorem in your own words.
+          Enuncie o teorema de Lagrange com suas próprias palavras.
         </p>
       </statement>
       <response/>
@@ -576,8 +459,8 @@
     <exercise label="rq-cosets-Z9">
       <statement>
         <p>
-          Determine the left cosets of
-          <m>\langle 3 \rangle</m> in <m>\mathbb Z_9</m>.
+          Determine as classes laterais à esquerda de
+          <m>\langle 3 \rangle</m> em <m>\mathbb Z_9</m>.
         </p>
       </statement>
       <response/>
@@ -586,8 +469,7 @@
     <exercise label="rq-cosets-S4">
       <statement>
         <p>
-          The set <m>\{(), (1\,2)(3\,4), (1\,3)(2\,4), (1\,4)(2\,3)\}</m> is a subgroup of <m>S_4</m>.
-          What is its index in <m>S_4</m>?
+          O conjunto <m>\{(), (1\,2)(3\,4), (1\,3)(2\,4), (1\,4)(2\,3)\}</m> é um subgrupo de <m>S_4</m>. Qual é seu índice em <m>S_4</m>?
         </p>
       </statement>
       <response/>
@@ -596,8 +478,7 @@
     <exercise label="rq-cosets-order-29">
       <statement>
         <p>
-          Suppose <m>G</m> is a group of order <m>29</m>.
-          Describe <m>G</m>.
+          Suponha que <m>G</m> é um grupo de ordem <m>29</m>. Descreva <m>G</m>.
         </p>
       </statement>
       <response/>
@@ -606,8 +487,7 @@
     <exercise label="rq-cosets-is-prime">
       <statement>
         <p>
-          The number <m>p=137909</m> is prime.
-          Explain how to compute <m>57^{137909}\pmod{137909}</m> without a calculator.
+          O número <m>p=137909</m> é primo. Explique como calcular <m>57^{137909}\pmod{137909}</m> sem uma calculadora.
         </p>
       </statement>
       <response/>
@@ -618,18 +498,17 @@
     <!-- File: cosets.xml  -->
     <!-- Title: Cosets and Lagrange's Theorem -->
   <exercises xml:id="cosets-exercises" filenamebase="cosets">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="cosets-exercise-order-35">
       <statement>
         <p>
-          Suppose that <m>G</m> is a finite group with an element <m>g</m> of order <m>5</m> and an element <m>h</m> of order <m>7</m>.
-          Why must <m>|G| \geq 35</m>?
+          Suponha que <m>G</m> é um grupo finito com um elemento <m>g</m> de ordem <m>5</m> e um elemento <m>h</m> de ordem <m>7</m>. Por que devemos ter <m>|G| \geq 35</m>?
         </p>
       </statement>
       <hint>
         <p>
-          The order of <m>g</m> and the order <m>h</m> must both divide the order of <m>G</m>.
+          A ordem de <m>g</m> e a ordem de <m>h</m> devem ambas dividir a ordem de <m>G</m>.
         </p>
       </hint>
     </exercise>
@@ -637,13 +516,12 @@
     <exercise number="2" xml:id="cosets-exercise-order-60">
       <statement>
         <p>
-          Suppose that <m>G</m> is a finite group with <m>60</m> elements.
-          What are the orders of possible subgroups of <m>G</m>?
+          Suponha que <m>G</m> é um grupo finito com <m>60</m> elementos. Quais são as possíveis ordens dos subgrupos de <m>G</m>?
         </p>
       </statement>
       <hint>
         <p>
-          The possible orders must divide <m>60</m>.
+          As ordens possíveis devem dividir <m>60</m>.
         </p>
       </hint>
     </exercise>
@@ -651,12 +529,12 @@
     <exercise number="3" xml:id="cosets-exercise-integers-finite-index">
       <statement>
         <p>
-          Prove or disprove: Every subgroup of the integers has finite index.
+          Prove ou refute: Todo subgrupo dos inteiros tem índice finito.
         </p>
       </statement>
       <hint>
         <p>
-          This is true for every proper nontrivial subgroup.
+          Isso é verdadeiro para todo subgrupo próprio não trivial.
         </p>
       </hint>
     </exercise>
@@ -664,12 +542,12 @@
     <exercise number="4" xml:id="cosets-exercise-integers-finite-order">
       <statement>
         <p>
-          Prove or disprove: Every subgroup of the integers has finite order.
+          Prove ou refute: Todo subgrupo dos inteiros tem ordem finita.
         </p>
       </statement>
       <hint>
         <p>
-          False.
+          Falso.
         </p>
       </hint>
     </exercise>
@@ -677,54 +555,54 @@
     <exercise number="5" xml:id="cosets-exercise-left-and-right-cosets">
       <statement>
         <p>
-          List the left and right cosets of the subgroups in each of the following.
+          Liste as classes laterais à esquerda e à direita dos subgrupos em cada um dos itens a seguir.
 
           <ol cols="2">
             <li>
               <p>
-                <m>\langle 8 \rangle</m> in <m>{\mathbb Z}_{24}</m>
+                <m>\langle 8 \rangle</m> em <m>{\mathbb Z}_{24}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>\langle 3 \rangle</m> in <m>U(8)</m>
+                <m>\langle 3 \rangle</m> em <m>U(8)</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>3 {\mathbb Z}</m> in <m>{\mathbb Z}</m>
+                <m>3 {\mathbb Z}</m> em <m>{\mathbb Z}</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>A_4</m> in <m>S_4</m>
+                <m>A_4</m> em <m>S_4</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>A_n</m> in <m>S_n</m>
+                <m>A_n</m> em <m>S_n</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>D_4</m> in <m>S_4</m>
+                <m>D_4</m> em <m>S_4</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>{\mathbb T}</m> in <m>{\mathbb C}^\ast</m>
+                <m>{\mathbb T}</m> em <m>{\mathbb C}^\ast</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>H = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m> in <m>S_4</m>
+                <m>H = \{ (1), (1 \, 2 \, 3), (1 \, 3 \, 2) \}</m> em <m>S_4</m>
               </p>
             </li>
           </ol>
@@ -738,9 +616,8 @@
           <m>3 + \langle 8 \rangle</m>,
           <m>4 + \langle 8 \rangle</m>,
           <m>5 + \langle 8 \rangle</m>,
-          <m>6 + \langle 8 \rangle</m>,
-          and <m>7 + \langle 8 \rangle</m>; (c) <m>3 {\mathbb Z}</m>,
-          <m>1 + 3 {\mathbb Z}</m>, and <m>2 + 3 {\mathbb Z}</m>.
+          <m>6 + \langle 8 \rangle</m>, e <m>7 + \langle 8 \rangle</m>; (c) <m>3 {\mathbb Z}</m>,
+          <m>1 + 3 {\mathbb Z}</m>, e <m>2 + 3 {\mathbb Z}</m>.
         </p>
       </hint>
     </exercise>
@@ -748,9 +625,8 @@
     <exercise number="6" xml:id="cosets-exercise-cosets-sl2">
       <statement>
         <p>
-          Describe the left cosets of
-          <m>SL_2( {\mathbb R} )</m> in <m>GL_2( {\mathbb R})</m>.
-          What is the index of <m>SL_2( {\mathbb R} )</m> in <m>GL_2( {\mathbb R})</m>?
+          Descreva as classes laterais à esquerda de
+          <m>SL_2( {\mathbb R} )</m> em <m>GL_2( {\mathbb R})</m>. Qual é o índice de <m>SL_2( {\mathbb R} )</m> em <m>GL_2( {\mathbb R})</m>?
         </p>
       </statement>
     </exercise>
@@ -758,7 +634,7 @@
     <exercise number="7" xml:id="cosets-exercise-euler-n-15">
       <statement>
         <p>
-          Verify Euler's Theorem for <m>n = 15</m> and <m>a = 4</m>.
+          Verifique o teorema de Euler para <m>n = 15</m> e <m>a = 4</m>.
         </p>
       </statement>
       <hint>
@@ -771,8 +647,7 @@
     <exercise number="8" xml:id="cosets-exercise-fermat-4n-plus-3">
       <statement>
         <p>
-          Use Fermat's Little Theorem to show that if <m>p = 4n + 3</m> is prime,
-          there is no solution to the equation <m>x^2 \equiv -1 \pmod{p}</m>.
+          Use o pequeno teorema de Fermat para mostrar que, se <m>p = 4n + 3</m> é primo, não existe solução para a equação <m>x^2 \equiv -1 \pmod{p}</m>.
         </p>
       </statement>
     </exercise>
@@ -780,7 +655,7 @@
     <exercise number="9" xml:id="cosets-exercise-Z-infinite-in-Q">
       <statement>
         <p>
-          Show that the integers have infinite index in the additive group of rational numbers.
+          Mostre que os inteiros têm índice infinito no grupo aditivo dos números racionais.
         </p>
       </statement>
     </exercise>
@@ -788,7 +663,7 @@
     <exercise number="10" xml:id="cosets-exercise-R-in-C">
       <statement>
         <p>
-          Show that the additive group of real numbers has infinite index in the additive group of the complex numbers.
+          Mostre que o grupo aditivo dos números reais tem índice infinito no grupo aditivo dos números complexos.
         </p>
       </statement>
     </exercise>
@@ -796,8 +671,7 @@
     <exercise number="11" xml:id="cosets-exercise-equivalent-cosets">
       <statement>
         <p>
-          Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
-          Prove that the following conditions are equivalent.
+          Seja <m>H</m> um subgrupo de um grupo <m>G</m> e suponha que <m>g_1, g_2 \in G</m>. Prove que as condições a seguir são equivalentes.
 
           <ol>
             <li>
@@ -837,15 +711,12 @@
     <exercise number="12" xml:id="cosets-exercise-ghg-inverse-left-right-cosets">
       <statement>
         <p>
-          If <m>ghg^{-1} \in H</m> for all <m>g \in G</m> and <m>h \in H</m>,
-          show that right cosets are identical to left cosets.
-          That is, show that <m>gH = Hg</m> for all <m>g \in G</m>.
+          Se <m>ghg^{-1} \in H</m> para todo <m>g \in G</m> e <m>h \in H</m>, mostre que as classes laterais à direita são idênticas às classes laterais à esquerda. Isto é, mostre que <m>gH = Hg</m> para todo <m>g \in G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Let <m>g_1 \in gH</m>.
-          Show that <m>g_1 \in Hg</m> and thus <m>gH \subset Hg</m>.
+          Seja <m>g_1 \in gH</m>. Mostre que <m>g_1 \in Hg</m> e, portanto, <m>gH \subset Hg</m>.
         </p>
       </hint>
     </exercise>
@@ -853,8 +724,8 @@
     <exercise number="13" xml:id="cosets-exercise-counterexample-proof">
       <statement>
         <p>
-          What fails in the proof of <xref ref="cosets-theorem-theorem-3"/> if
-          <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m> is defined by <m>\phi( gH ) = Hg</m>?
+          O que falha na prova de <xref ref="cosets-theorem-theorem-3"/> se
+          <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m> é definida por <m>\phi( gH ) = Hg</m>?
         </p>
       </statement>
     </exercise>
@@ -862,8 +733,7 @@
     <exercise number="14" xml:id="cosets-exercise-order-g-divides-n">
       <statement>
         <p>
-          Suppose that <m>g^n = e</m>.
-          Show that the order of <m>g</m> divides <m>n</m>.
+          Suponha que <m>g^n = e</m>. Mostre que a ordem de <m>g</m> divide <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -871,14 +741,12 @@
     <exercise number="15" xml:id="cosets-exercise-cycle-structure">
       <statement>
         <p>
-          The <term>cycle structure</term><idx><h>Permutation</h><h>cycle structure of</h></idx> of a permutation <m>\sigma</m> is defined as the unordered list of the sizes of the cycles in the cycle decomposition <m>\sigma</m>. For example, the permutation <m>\sigma = (1 \, 2)(3 \, 4 \, 5)(7 \, 8)(9)</m> has cycle structure <m>(2,3,2,1)</m> which can also be written as <m>(1, 2, 2, 3)</m>.
+          A <term>estrutura cíclica</term><idx><h>Permutação</h><h>estrutura cíclica de</h></idx> de uma permutação <m>\sigma</m> é definida como a lista não ordenada dos tamanhos dos ciclos na decomposição em ciclos <m>\sigma</m>. Por exemplo, a permutação <m>\sigma = (1 \, 2)(3 \, 4 \, 5)(7 \, 8)(9)</m> tem estrutura cíclica <m>(2,3,2,1)</m> que também pode ser escrita como <m>(1, 2, 2, 3)</m>.
         </p>
 
         <p>
-          Show that any two permutations
-          <m>\alpha, \beta \in S_n</m> have the same cycle structure if and only if there exists a permutation <m>\gamma</m> such that <m>\beta = \gamma \alpha \gamma^{-1}</m>.
-          If <m>\beta = \gamma \alpha \gamma^{-1}</m> for some <m>\gamma \in S_n</m>,
-          then <m>\alpha</m> and <m>\beta</m> are <term>conjugate</term>.
+          Mostre que quaisquer duas permutações
+          <m>\alpha, \beta \in S_n</m> têm a mesma estrutura cíclica se e somente se existe uma permutação <m>\gamma</m> tal que <m>\beta = \gamma \alpha \gamma^{-1}</m>. Se <m>\beta = \gamma \alpha \gamma^{-1}</m> para algum <m>\gamma \in S_n</m>, então <m>\alpha</m> e <m>\beta</m> são <term>conjugadas</term>.
         </p>
       </statement>
     </exercise>
@@ -886,9 +754,7 @@
     <exercise number="16" xml:id="cosets-exercise-elements-of-order-2">
       <statement>
         <p>
-          If <m>|G| = 2n</m>,
-          prove that the number of elements of order <m>2</m> is odd.
-          Use this result to show that <m>G</m> must contain a subgroup of order <m>2</m>.
+          Se <m>|G| = 2n</m>, prove que o número de elementos de ordem <m>2</m> é ímpar. Use esse resultado para mostrar que <m>G</m> deve conter um subgrupo de ordem <m>2</m>.
         </p>
       </statement>
     </exercise>
@@ -896,9 +762,7 @@
     <exercise number="17" xml:id="cosets-exercise-index-2-ab-in-H">
       <statement>
         <p>
-          Suppose that <m>[G : H] = 2</m>.
-          If <m>a</m> and <m>b</m> are not in <m>H</m>,
-          show that <m>ab \in H</m>.
+          Suponha que <m>[G : H] = 2</m>. Se <m>a</m> e <m>b</m> não pertencem a <m>H</m>, mostre que <m>ab \in H</m>.
         </p>
       </statement>
     </exercise>
@@ -906,7 +770,7 @@
     <exercise number="18" xml:id="cosets-exercise-index-2-left-right-cosets">
       <statement>
         <p>
-          If <m>[G : H] = 2</m>, prove that <m>gH = Hg</m> for all <m>g \in G</m>.
+          Se <m>[G : H] = 2</m>, prove que <m>gH = Hg</m> para todo <m>g \in G</m>.
         </p>
       </statement>
     </exercise>
@@ -914,13 +778,12 @@
     <exercise number="19" xml:id="cosets-exercise-coset-intersection">
       <statement>
         <p>
-          Let <m>H</m> and <m>K</m> be subgroups of a group <m>G</m>.
-          Prove that <m>gH \cap gK</m> is a coset of <m>H \cap K</m> in <m>G</m>.
+          Sejam <m>H</m> e <m>K</m> subgrupos de um grupo <m>G</m>. Prove que <m>gH \cap gK</m> é uma classe lateral de <m>H \cap K</m> em <m>G</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Show that <m>g(H \cap K) = gH \cap gK</m>.
+          Mostre que <m>g(H \cap K) = gH \cap gK</m>.
         </p>
       </hint>
     </exercise>
@@ -928,13 +791,9 @@
     <exercise number="20" xml:id="cosets-exercise-double-cosets">
       <statement>
         <p>
-          Let <m>H</m> and <m>K</m> be subgroups of a group <m>G</m>.
-          Define a relation <m>\sim</m> on <m>G</m> by
-          <m>a \sim b</m> if there exists an <m>h \in H</m> and a <m>k \in K</m> such that <m>hak = b</m>.
-          Show that this relation is an equivalence relation.
-          The corresponding equivalence classes are called
-          <term>double cosets</term>.
-          Compute the double cosets of <m>H = \{ (1),(1 \, 2 \, 3), (1 \, 3 \, 2) \}</m> in <m>A_4</m>.
+          Sejam <m>H</m> e <m>K</m> subgrupos de um grupo <m>G</m>. Defina uma relação <m>\sim</m> em <m>G</m> por
+          <m>a \sim b</m> se existe um <m>h \in H</m> e um <m>k \in K</m> tal que <m>hak = b</m>. Mostre que essa relação é uma relação de equivalência. As classes de equivalência correspondentes são chamadas de
+          <term>classes laterais duplas</term>. Calcule as classes laterais duplas de <m>H = \{ (1),(1 \, 2 \, 3), (1 \, 3 \, 2) \}</m> em <m>A_4</m>.
         </p>
       </statement>
     </exercise>
@@ -942,8 +801,7 @@
     <exercise number="21" xml:id="cosets-exercise-number-generators-cyclic-group">
       <statement>
         <p>
-          Let <m>G</m> be a cyclic group of order <m>n</m>.
-          Show that there are exactly <m>\phi(n)</m> generators for <m>G</m>.
+          Seja <m>G</m> um grupo cíclico de ordem <m>n</m>. Mostre que existem exatamente <m>\phi(n)</m> geradores de <m>G</m>.
         </p>
       </statement>
     </exercise>
@@ -951,9 +809,7 @@
     <exercise number="22" xml:id="cosets-exercise-euler-phi-formula">
       <statement>
         <p>
-          Let <m>n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}</m>,
-          where <m>p_1, p_2, \ldots, p_k</m> are distinct primes.
-          Prove that
+          Seja <m>n = p_1^{e_1} p_2^{e_2} \cdots p_k^{e_k}</m>, onde <m>p_1, p_2, \ldots, p_k</m> são primos distintos. Prove que
           <md>
             \phi(n) =  n \left( 1 - \frac{1}{p_1} \right) \left( 1 - \frac{1}{p_2} \right)\cdots \left( 1 - \frac{1}{p_k} \right)
           </md>.
@@ -961,8 +817,7 @@
       </statement>
       <hint>
         <p>
-          If <m>\gcd(m,n) = 1</m>,
-          then <m>\phi(mn) = \phi(m)\phi(n)</m> (<xref ref="integers-exercise-gcd-products"/> in <xref ref="integers"/>).
+          Se <m>\gcd(m,n) = 1</m>, então <m>\phi(mn) = \phi(m)\phi(n)</m> (<xref ref="integers-exercise-gcd-products"/> em <xref ref="integers"/>).
         </p>
       </hint>
     </exercise>
@@ -970,11 +825,11 @@
     <exercise number="23" xml:id="cosets-exercise-euler-phi-sum">
       <statement>
         <p>
-          Show that
+          Mostre que
           <md>
             n = \sum_{d \mid n} \phi(d)
           </md>
-          for all positive integers <m>n</m>.
+          para todos os inteiros positivos <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -987,45 +842,23 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage can create all of the cosets of a subgroup,
-        and all of the subgroups of a group.
-        While these methods can be somewhat slow, they are in many,
-        many ways much better than experimenting with pencil and paper,
-        and can greatly assist us in understanding the structure of finite groups.
+        Sage pode criar todas as classes laterais de um subgrupo e todos os subgrupos de um grupo. Embora esses métodos possam ser um pouco lentos, eles são, em muitos e muitos aspectos, muito melhores do que experimentar com lápis e papel, e podem nos ajudar bastante a compreender a estrutura dos grupos finitos.
       </p>
     </introduction>
 
     <subsection>
-      <title>Cosets</title>
+      <title>Classes laterais</title>
       <p>
-        Sage will create all the right
-        (or left)
-        cosets of a subgroup.
-        Written mathematically, cosets are sets,
-        and the order of the elements within the set is irrelevant.
-        With Sage, lists are more natural,
-        and here it is to our advantage.
+        Sage criará todas as classes laterais à direita (ou à esquerda) de um subgrupo. Escritas matematicamente, as classes laterais são conjuntos, e a ordem dos elementos no conjunto é irrelevante. No Sage, as listas são mais naturais, e aqui isso nos favorece.
       </p>
 
       <p>
-        Sage creates the cosets of a subgroup as a list of lists.
-        Each inner list is a single coset.
-        The first coset is always the coset that is the subgroup itself,
-        and the first element of this coset is the identity.
-        Each of the other cosets can be construed to have their first element as their representative,
-        and if you use this element as the representative,
-        the elements of the coset are in the same order they would be created by multiplying this representative by the elements of the first coset
-        (the subgroup).
+        Sage cria as classes laterais de um subgrupo como uma lista de listas. Cada lista interna é uma única classe lateral. A primeira classe lateral é sempre aquela que é o próprio subgrupo, e o primeiro elemento dessa classe lateral é o elemento identidade. Pode-se considerar que cada uma das outras classes laterais tem seu primeiro elemento como representante e, se você usar esse elemento como representante, os elementos da classe lateral estarão na mesma ordem em que seriam criados ao multiplicar esse representante pelos elementos da primeira classe lateral (o subgrupo).
       </p>
 
       <p>
-        The keyword <c>side</c> can be <c>'right'</c> or <c>'left'</c>,
-        and if not given, then the default is right cosets.
-        The options refer to which side of the product has the representative.
-        Notice that now Sage's results will be
-        <q>backwards</q> compared with the text.
-        Here is <xref ref="cosets-example-s3-cosets"/> reprised,
-        but in a slightly different order.
+        A palavra-chave <c>side</c> pode ser <c>'right'</c> ou <c>'left'</c>, e, se não for fornecida, o padrão são classes laterais à direita. As opções se referem ao lado do produto em que está o representante. Observe que agora os resultados do Sage estarão
+        <q>invertidos</q> em comparação com o texto. Aqui está <xref ref="cosets-example-s3-cosets"/> retomado, mas em uma ordem ligeiramente diferente.
       </p>
 
             <sage>
@@ -1043,9 +876,7 @@
             </sage>
 
       <p>
-        So if we work our way through the brackets carefully we can see the difference between the right cosets and the left cosets.
-        Compare these cosets with the ones in the text and see that left and right are reversed.
-        Shouldn't be a problem <mdash/> just keep it in mind.
+        Assim, se examinarmos cuidadosamente os colchetes, poderemos ver a diferença entre as classes laterais à direita e à esquerda. Compare essas classes laterais com as do texto e veja que esquerda e direita estão invertidas. Isso não deve ser um problema <mdash/> basta ter isso em mente.
       </p>
 
             <sage>
@@ -1063,9 +894,7 @@
             </sage>
 
       <p>
-        If we study the bracketing,
-        we can see that the left and right cosets are equal.
-        Let's see what Sage thinks:
+        Se estudarmos o uso dos colchetes, poderemos ver que as classes laterais à esquerda e à direita são iguais. Vejamos o que Sage acha:
       </p>
 
             <sage>
@@ -1074,15 +903,7 @@
             </sage>
 
       <p>
-        Mathematically, we need sets,
-        but Sage is working with ordered lists, and the order matters.
-        However, if we know our lists do not have duplicates (the <c>.cosets()</c> method will never produce duplicates) then we can sort the lists and a test for equality will perform as expected.
-        The elements of a permutation group have an ordering defined for them <mdash/> it is not so important <em>what</em> this is,
-        just that <em>some</em> ordering is defined.
-        The <c>sorted()</c> function will take any list and return a sorted version.
-        So for each list of cosets,
-        we will sort the individual cosets and then sort the list of sorted cosets.
-        This is a typical maneuver, though a bit complicated with the nested lists.
+        Matematicamente, precisamos de conjuntos, mas Sage está trabalhando com listas ordenadas, e a ordem importa. Contudo, se sabemos que nossas listas não têm repetições (o método <c>.cosets()</c> nunca produzirá repetições), então podemos ordenar as listas, e um teste de igualdade funcionará como esperado. Os elementos de um grupo de permutações têm uma ordenação definida para eles <mdash/> não é tão importante <em>qual</em> é ela, mas apenas que <em>alguma</em> ordenação esteja definida. A função <c>sorted()</c> recebe qualquer lista e retorna uma versão ordenada. Assim, para cada lista de classes laterais, ordenaremos as classes laterais individuais e depois ordenaremos a lista de classes laterais ordenadas. Essa é uma manobra típica, embora um pouco complicada com as listas aninhadas.
       </p>
 
             <sage>
@@ -1105,27 +926,16 @@
             </sage>
 
       <p>
-        The list of all cosets can be quite long
-        (it will include every element of the group)
-        and can take a few seconds to complete, even for small groups.
-        There are more sophisticated,
-        and faster, ways to study cosets
-        (such as just using their representatives),
-        but to understand these techniques you also need to understand more theory.
+        A lista de todas as classes laterais pode ser bastante longa (ela incluirá todos os elementos do grupo) e pode levar alguns segundos para ser concluída, mesmo para grupos pequenos. Existem maneiras mais sofisticadas e mais rápidas de estudar classes laterais (como usar apenas seus representantes), mas, para compreender essas técnicas, você também precisa compreender mais teoria.
       </p>
 
       <sage type="practice"/>
     </subsection>
 
     <subsection>
-      <title>Subgroups</title>
+      <title>Subgrupos</title>
       <p>
-        Sage can compute all of the subgroups of a group.
-        This can produce even more output than the coset method and can sometimes take much longer,
-        depending on the structure of the group.
-        The list is in order of the size of the subgroups, with smallest first.
-        As a demonstration we will first compute and list all of the subgroups of a small group,
-        and then extract just one of these subgroups from the list for some futher study.
+        Sage pode calcular todos os subgrupos de um grupo. Isso pode produzir ainda mais saída do que o método das classes laterais e, às vezes, levar muito mais tempo, dependendo da estrutura do grupo. A lista está ordenada pelo tamanho dos subgrupos, começando pelos menores. Como demonstração, primeiro calcularemos e listaremos todos os subgrupos de um grupo pequeno e, em seguida, extrairemos apenas um desses subgrupos da lista para estudá-lo um pouco mais.
       </p>
 
             <sage>
@@ -1160,17 +970,11 @@
             </sage>
             <!-- RAB 2014/08/18 ref is to a proposition, not a Corollary? -->
       <p>
-        The output of the <c>.subgroups()</c> method can be voluminous,
-        so sometimes we are interested in properties of specific subgroups
-        (as in the previous example)
-        or broader questions of the group's
-        <q>subgroup structure.</q>
-        Here we expand on <xref ref="cosets-proposition-theorem-10"/>.
-        Notice that just because Sage does not <em>compute</em>
-        a subgroup of order 6 in <m>A_4</m>,
-        this is no substitute whatsoever for a <em>proof</em>
-        such as given for the corollary.
-        But the computational result emboldens us to search for the theoretical result with confidence.
+        A saída do método <c>.subgroups()</c> pode ser volumosa, de modo que às vezes estamos interessados em propriedades de subgrupos específicos (como no exemplo anterior) ou em questões mais amplas sobre a
+        <q>estrutura de subgrupos</q>
+        do grupo. Aqui ampliamos <xref ref="cosets-proposition-theorem-10"/>. Observe que o simples fato de Sage não <em>calcular</em>
+        um subgrupo de ordem 6 em <m>A_4</m> não substitui, de maneira alguma, uma <em>prova</em>
+        como a apresentada para o corolário. Mas o resultado computacional nos encoraja a buscar o resultado teórico com confiança.
       </p>
 
             <sage>
@@ -1183,10 +987,7 @@
             </sage>
 
       <p>
-        So we see no subgroup of order 6 in the list of subgroups of <m>A_4</m>.
-        Notice how Lagrange's Theorem (<xref ref="cosets-theorem-lagrange"/>) is in evidence <mdash/> all the subgroup orders divide <m>12</m>,
-        the order of <m>A_4</m>.
-        Be patient, the next subgroup computation may take a while.
+        Assim, não vemos nenhum subgrupo de ordem 6 na lista de subgrupos de <m>A_4</m>. Observe como o teorema de Lagrange (<xref ref="cosets-theorem-lagrange"/>) está em evidência <mdash/> todas as ordens dos subgrupos dividem <m>12</m>, a ordem de <m>A_4</m>. Seja paciente, o próximo cálculo de subgrupos pode demorar um pouco.
       </p>
 
             <sage>
@@ -1202,16 +1003,9 @@
             </sage>
 
       <p>
-        Again, note Lagrange's Theorem in action.
-        But more interestingly, <m>S_4</m> has a subgroup of order 6.
-        Four of them, to be precise.
-        These four subgroups of order 6 are similar to each other,
-        can you describe them simply (<em>before</em>
-        digging into the <c>sg</c> list for more information)?
-        If you were curious how many subgroups <m>S_4</m> has,
-        you could simply count the number of subgroups in the <c>sg</c> list.
-        The <c>len()</c> function does this for <em>any</em>
-        list and is often an easy way to count things.
+        Novamente, observe o teorema de Lagrange em ação. Mas, o que é mais interessante, <m>S_4</m> tem um subgrupo de ordem 6. Quatro deles, para ser preciso. Esses quatro subgrupos de ordem 6 são semelhantes entre si; você consegue descrevê-los de maneira simples (<em>antes de</em>
+        examinar a lista <c>sg</c> em busca de mais informações)? Se você quisesse saber quantos subgrupos <m>S_4</m> possui, poderia simplesmente contar o número de subgrupos na lista <c>sg</c> . A função <c>len()</c> faz isso para <em>qualquer</em>
+        lista e muitas vezes é uma maneira fácil de contar coisas.
       </p>
 
             <sage>
@@ -1222,13 +1016,9 @@
     </subsection>
 
     <subsection>
-      <title>Subgroups of Cyclic Groups</title>
+      <title>Subgrupos de grupos cíclicos</title>
       <p>
-        Now that we are more familiar with permutation groups,
-        and know about the <c>.subgroups()</c> method,
-        we can revisit an idea from <xref ref="cyclic"/>.
-        The subgroups of a cyclic group are always cyclic,
-        but how many are there and what are their orders?
+        Agora que estamos mais familiarizados com grupos de permutações e conhecemos o método <c>.subgroups()</c> , podemos retomar uma ideia de <xref ref="cyclic"/>. Os subgrupos de um grupo cíclico são sempre cíclicos, mas quantos existem e quais são suas ordens?
       </p>
 
             <sage>
@@ -1247,10 +1037,7 @@
             </sage>
 
       <p>
-        We could do this all day, but you have Sage at your disposal,
-        so vary the order of <c>G</c> by changing <c>n</c> and study the output across many runs.
-        Maybe try a cyclic group of order 24 and compare with the symmetric group <m>S_4</m> (above) which also has order 24.
-        Do you feel a conjecture coming on?
+        Poderíamos fazer isso o dia inteiro, mas você tem Sage à disposição; portanto, varie a ordem de <c>G</c> alterando <c>n</c> e estude a saída ao longo de várias execuções. Talvez você possa tentar um grupo cíclico de ordem 24 e compará-lo com o grupo simétrico <m>S_4</m> (acima), que também tem ordem 24. Sente uma conjectura surgindo?
       </p>
 
             <sage>
@@ -1265,10 +1052,9 @@
     </subsection>
 
     <subsection>
-      <title>Euler Phi Function</title>
+      <title>Função fi de Euler</title>
       <p>
-        To add to our number-theoretic functions from <xref ref="integers"/>,
-        we note that Sage makes the Euler <m>\phi</m>-function available as the function <c>euler_phi()</c>.
+        Para complementar nossas funções de teoria dos números de <xref ref="integers"/>, observamos que Sage disponibiliza a função <m>\phi</m> de Euler como a função <c>euler_phi()</c>.
       </p>
 
             <sage>
@@ -1277,7 +1063,7 @@
             </sage>
 
       <p>
-        Here's an interesting experiment that you can try running several times.
+        Aqui está um experimento interessante que você pode tentar executar várias vezes.
       </p>
 
             <sage doctest="random">
@@ -1290,59 +1076,32 @@
             </sage>
 
       <p>
-        Feel another conjecture coming on?
-        Can you generalize this result?
+        Sente outra conjectura surgindo? Você consegue generalizar esse resultado?
       </p>
 
       <sage type="practice"/>
     </subsection>
   </section>
   <exercises xml:id="cosets-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
-        The following exercises are less about cosets and subgroups,
-        and more about using Sage as an experimental tool.
-        They are designed to help you become both more efficient,
-        and more expressive, as you write commands in Sage.
-        We will have many opportunities to work with cosets and subgroups in the coming chapters.
-        These exercises do not contain much guidance,
-        and get more challenging as they go.
-        They are designed to explore, or confirm,
-        results presented in this chapter or earlier chapters.
+        Os exercícios a seguir tratam menos de classes laterais e subgrupos e mais do uso do Sage como ferramenta experimental. Eles foram elaborados para ajudá-lo a se tornar mais eficiente e mais expressivo ao escrever comandos no Sage. Teremos muitas oportunidades de trabalhar com classes laterais e subgrupos nos próximos capítulos. Estes exercícios não contêm muitas orientações e se tornam mais desafiadores à medida que avançam. Eles foram elaborados para explorar ou confirmar resultados apresentados neste capítulo ou em capítulos anteriores.
       </p>
 
       <p>
-        <alert>Important</alert>: You should answer each of the last three problems with a single (complicated) line of Sage that concludes by outputting <c>True</c>.
-        A <q>single line</q> means you will have several Sage commands packaged up together in complicated ways.
-        It does not mean several Sage commands seperated by semi-colons and typed in on a single line.
-        Be sure include some intermediate steps used in building up your solution,
-        but using smaller ranges of values so as to not overwhelm the reader with lots of output.
-        This will help you, and the grader of your work,
-        have some confidence that the final version is correct.
+        <alert>Importante</alert>: Você deve responder a cada um dos três últimos problemas com uma única linha (complicada) de Sage que termine produzindo <c>True</c>. Uma <q>única linha</q> significa que você terá vários comandos Sage combinados de maneiras complicadas. Não significa vários comandos Sage separados por ponto e vírgula e digitados em uma única linha. Não deixe de incluir algumas etapas intermediárias usadas na construção de sua solução, mas usando intervalos menores de valores para não sobrecarregar o leitor com muita saída. Isso ajudará você e quem corrigir seu trabalho a ter alguma confiança de que a versão final está correta.
       </p>
 
       <p>
-        When you check integers below for divisibility,
-        remember that <c>range()</c> produces plain integers,
-        which are quite simple in their functionality.
-        The <c>srange()</c> command produces Sage integers,
-        which have many more capabilities.
-        (See the last exercise for an example.)
-        And remember that a list comprehension is a very compact way to examine many possibilities at once.
+        Ao verificar a divisibilidade de inteiros abaixo, lembre-se de que <c>range()</c> produz inteiros comuns, que são bastante simples em sua funcionalidade. O comando <c>srange()</c> produz inteiros do Sage, que têm muito mais recursos. (Veja um exemplo no último exercício.) E lembre-se de que uma compreensão de lista é uma maneira bastante compacta de examinar muitas possibilidades de uma só vez.
       </p>
     </introduction>
 
     <exercise number="1" xml:id="cosets-sage-exercise-A4">
       <statement>
         <p>
-          Use <c>.subgroups()</c> to find an example of a group <m>G</m> and an integer <m>m</m>,
-          so that (a) <m>m</m> divides the order of <m>G</m>,
-          and (b) <m>G</m> has no subgroup of order <m>m</m>.
-          (Do not use the group <m>A_4</m> for <m>G</m>,
-          since this is in the text.)
-          Provide a single line of Sage code that has all the logic to produce the desired <m>m</m> as its output.
-          (You can give your group a simple name on a prior line and then just reference the group by name.) Here is a very simple example that might help you structure your answer.
+          Use <c>.subgroups()</c> para encontrar um exemplo de grupo <m>G</m> e um inteiro <m>m</m>, de modo que (a) <m>m</m> divide a ordem de <m>G</m>, e (b) <m>G</m> não possui subgrupo de ordem <m>m</m>. (Não use o grupo <m>A_4</m> para <m>G</m>, pois ele está no texto.) Forneça uma única linha de código Sage que contenha toda a lógica para produzir o <m>m</m> desejado como saída. (Você pode dar ao seu grupo um nome simples em uma linha anterior e, depois, apenas se referir ao grupo pelo nome.) Aqui está um exemplo muito simples que pode ajudá-lo a estruturar sua resposta.
         </p>
 
             <sage>
@@ -1369,23 +1128,12 @@
     <exercise number="2" xml:id="cosets-sage-exercise-fermat">
       <statement>
         <p>
-          Verify the truth of Fermat's Little Theorem
-          (either variant)
-          using the composite number
-          <m>391=17\cdot 23</m> as the choice of the base
-          (either <m>a</m> or <m>b</m>),
-          and for <m>p</m> assuming the value of every prime number between <m>100</m> and <m>1000</m>.
+          Verifique a validade do pequeno teorema de Fermat (qualquer uma das variantes) usando o número composto
+          <m>391=17\cdot 23</m> como escolha da base ( <m>a</m> ou <m>b</m>), e para <m>p</m> assumindo o valor de cada número primo entre <m>100</m> e <m>1000</m>.
         </p>
 
         <p>
-          Build up a solution slowly <mdash/> make a list of powers
-          (start with just a few primes),
-          then make a list of powers reduced by modular arithmetic,
-          then a list of comparisons with the predicted value,
-          then a check on all these logical values resulting from the comparisons.
-          This is a useful strategy for many similar problems.
-          Eventually you will write a single line that performs the verification by eventually printing out <c>True</c>.
-          Here are some more hints about useful functions.
+          Construa uma solução aos poucos <mdash/> faça uma lista de potências (comece com apenas alguns primos), depois faça uma lista de potências reduzidas por aritmética modular, em seguida uma lista de comparações com o valor previsto e, finalmente, uma verificação de todos esses valores lógicos resultantes das comparações. Essa é uma estratégia útil para muitos problemas semelhantes. Por fim, você escreverá uma única linha que realiza a verificação e termina imprimindo <c>True</c>. Aqui estão mais algumas dicas sobre funções úteis.
         </p>
 
             <sage>
@@ -1414,13 +1162,7 @@
     <exercise number="3" xml:id="cosets-sage-exercise-group-of-units">
       <statement>
         <p>
-          Verify that the group of units mod <m>n</m> has order <m>n-1</m> when <m>n</m> is prime,
-          again for all primes between <m>100</m> and <m>1000</m>.
-          As before, your output should be simply <c>True</c>, just once,
-          indicating that the statement about the order is true for all the primes examined.
-          As before, build up your solution slowly,
-          and with a smaller range of primes in the beginning.
-          Express your answer as a single line of Sage code.
+          Verifique que o grupo das unidades módulo <m>n</m> tem ordem <m>n-1</m> quando <m>n</m> é primo, novamente para todos os primos entre <m>100</m> e <m>1000</m>. Como antes, sua saída deve ser simplesmente <c>True</c>, uma única vez, indicando que a afirmação sobre a ordem é verdadeira para todos os primos examinados. Como antes, construa sua solução aos poucos e com um intervalo menor de primos no início. Expresse sua resposta como uma única linha de código Sage.
         </p>
       </statement>
     </exercise>
@@ -1428,11 +1170,8 @@
     <exercise number="4" xml:id="cosets-sage-exercise-euler">
       <statement>
         <p>
-          Verify Euler's Theorem for all values of
-          <m>0\lt n\lt 100</m> and for <m>1\leq a \leq n</m>.
-          This will require nested <c>for</c> statements with a conditional.
-          Again, here is a small example that might be helpful for constructing your one line of Sage code.
-          Note the use of <c>srange()</c> in this example.
+          Verifique o teorema de Euler para todos os valores de
+          <m>0\lt n\lt 100</m> e para <m>1\leq a \leq n</m>. Isso exigirá instruções <c>for</c> aninhadas com uma condicional. Novamente, aqui está um pequeno exemplo que pode ser útil para construir sua única linha de código Sage. Observe o uso de <c>srange()</c> neste exemplo.
         </p>
 
             <sage>
@@ -1448,63 +1187,52 @@
     <exercise number="5" xml:id="cosets-sage-exercise-S7">
       <statement>
         <p>
-          The symmetric group on <m>7</m> symbols,
-          <m>S_7</m>, has <m>7! = 5040</m> elements.
-          Consider the following questions without employing Sage,
-          based on what we know about orders of elements of permutation groups (<xref ref="permute-exercise-order-product-cycles"/>).
+          O grupo simétrico em <m>7</m> símbolos,
+          <m>S_7</m>, tem <m>7! = 5040</m> elementos. Considere as questões a seguir sem empregar Sage, com base no que sabemos sobre ordens de elementos de grupos de permutações (<xref ref="permute-exercise-order-product-cycles"/>).
 
           <ul>
             <li>
               <p>
-                What is the maximum possible order?
+                Qual é a maior ordem possível?
               </p>
             </li>
 
             <li>
               <p>
-                How many elements are there of order <m>10</m>?
+                Quantos elementos existem de ordem <m>10</m>?
               </p>
             </li>
 
             <li>
               <p>
-                How many elements are there of order <m>1</m>?
+                Quantos elementos existem de ordem <m>1</m>?
               </p>
             </li>
 
             <li>
               <p>
-                How many elements are there of order <m>2</m>?
+                Quantos elementos existem de ordem <m>2</m>?
               </p>
             </li>
 
             <li>
               <p>
-                What is the smallest positive integer for which there is no element with that order?
+                Qual é o menor inteiro positivo para o qual não existe elemento com essa ordem?
               </p>
             </li>
           </ul>
         </p>
 
         <p>
-          These questions will be easier if you are familiar with using binomial coefficients for counting in similarly complex situations.
-          But either way, give some serious thought to each question
-          (and maybe a few of your own)
-          before firing up Sage.
+          Essas questões serão mais fáceis se você estiver familiarizado com o uso de coeficientes binomiais para contar em situações de complexidade semelhante. Mas, de qualquer forma, reflita seriamente sobre cada questão (e talvez sobre algumas de sua própria autoria) antes de abrir o Sage.
         </p>
 
         <p>
-          Now, compute how many elements there are of each order using the <c>.order()</c> method,
-          and then embed this into a list comprehension which creates a single list of these counts.
-          You can check your work
-          (or check Sage)
-          by wrapping this list in <c>sum()</c> and hopefully getting <m>5040</m>.
+          Agora, calcule quantos elementos existem de cada ordem usando o método <c>.order()</c> e, depois, insira isso em uma compreensão de lista que crie uma única lista dessas contagens. Você pode conferir seu trabalho (ou conferir o Sage) envolvendo essa lista em <c>sum()</c> e, com sorte, obtendo <m>5040</m>.
         </p>
 
         <p>
-          Comment on the process of studying these questions first without any computational aid,
-          and then again with Sage.
-          For which values of <m>n</m> do you think Sage would be too slow and your mind quicker?
+          Comente o processo de estudar essas questões primeiro sem auxílio computacional e depois novamente com Sage. Para quais valores de <m>n</m> você acha que Sage seria lento demais e sua mente mais rápida?
         </p>
       </statement>
     </exercise>
