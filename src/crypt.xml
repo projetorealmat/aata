@@ -385,101 +385,101 @@
     </subsection>
 
     <subsection xml:id="crypt-subsection-message-verification">
-      <title>Message Verification</title>
+      <title>Verificação de mensagens</title>
       <p>
-        There is a problem of message verification in public key cryptosystems.
-        Since the encoding key is public knowledge,
-        anyone has the ability to send an encoded message.
-        If Alice receives a message from Bob,
-        she would like to be able to verify that it was Bob who actually sent the message.
-        Suppose that Bob's encrypting key is
-        <m>(n', E')</m> and his decrypting key is <m>(n', D')</m>.
-        Also, suppose that Alice's encrypting key is <m>(n, E)</m> and her decrypting key is <m>(n, D)</m>.
-        Since encryption keys are public information,
-        they can exchange coded messages at their convenience.
-        Bob wishes to assure Alice that the message he is sending is authentic.
-        Before Bob sends the message <m>x</m> to Alice,
-        he decrypts  <m>x</m> with his own key:
+        Há um problema de verificação de mensagens nos criptossistemas de chave pública.
+        Como a chave de cifração é de conhecimento público,
+        qualquer pessoa pode enviar uma mensagem cifrada.
+        Se Alice recebe uma mensagem de Bob,
+        ela gostaria de poder verificar se foi realmente Bob quem enviou a mensagem.
+        Suponha que a chave de cifração de Bob seja
+        <m>(n', E')</m> e sua chave de decifração seja <m>(n', D')</m>.
+        Suponha também que a chave de cifração de Alice seja <m>(n, E)</m> e sua chave de decifração seja <m>(n, D)</m>.
+        Como as chaves de cifração são informações públicas,
+        eles podem trocar mensagens cifradas quando desejarem.
+        Bob quer garantir a Alice que a mensagem que está enviando é autêntica.
+        Antes de enviar a mensagem <m>x</m> a Alice,
+        ele decifra <m>x</m> com sua própria chave:
         <md>
           x' = x ^{D'} \bmod n'
         </md>.
-        Anyone can change <m>x'</m> back to <m>x</m> just by encryption,
-        but only Bob has the ability to form <m>x'</m>.
-        Now Bob encrypts <m>x'</m> with Alice's encryption key to form
+        Qualquer pessoa pode transformar <m>x'</m> novamente em <m>x</m> simplesmente cifrando,
+        mas somente Bob consegue formar <m>x'</m>.
+        Agora Bob cifra <m>x'</m> com a chave de cifração de Alice, obtendo
         <md>
           y' = {x'}^E  \bmod n
         </md>,
-        a message that only Alice can decode.
-        Alice decodes the message and then encodes the result with Bob's key to read the original message,
-        a message that could have only been sent by Bob.
+        uma mensagem que somente Alice pode decifrar.
+        Alice decifra a mensagem e então cifra o resultado com a chave de Bob para ler a mensagem original,
+        uma mensagem que só poderia ter sido enviada por Bob.
       </p>
     </subsection>
 
     <subsection xml:id="crypt-subsection-historical-note">
-      <title>Historical Note</title>
+      <title>Nota histórica</title>
       <p>
-        Encrypting secret messages goes as far back as ancient Greece and Rome.
-        As we know, Julius Caesar used a simple shift code to send and receive messages.
-        However, the formal study of encoding and decoding messages probably began with the Arabs in the 1400s.
-        In the fifteenth and sixteenth centuries mathematicians such as Alberti and Viete discovered that monoalphabetic cryptosystems offered no real security.
-        In the 1800s, F. W. Kasiski established methods for breaking ciphers in which a ciphertext letter can represent more than one plaintext letter,
-        if the same key was used several times.
-        This discovery led to the use of cryptosystems with keys that were used only a single time.
-        Cryptography was placed on firm mathematical foundations by such people as W. Friedman and L. Hill in the early part of the twentieth century.
+        A cifração de mensagens secretas remonta à Grécia e à Roma antigas.
+        Como sabemos, Júlio César usava uma cifra de deslocamento simples para enviar e receber mensagens.
+        No entanto, o estudo formal da cifração e da decifração de mensagens provavelmente começou com os árabes no século XV.
+        Nos séculos XV e XVI, matemáticos como Alberti e Viete descobriram que os criptossistemas monoalfabéticos não ofereciam segurança real.
+        No século XIX, F. W. Kasiski estabeleceu métodos para quebrar cifras nas quais uma letra do texto cifrado pode representar mais de uma letra do texto claro,
+        quando a mesma chave era usada várias vezes.
+        Essa descoberta levou ao uso de criptossistemas com chaves utilizadas apenas uma vez.
+        A criptografia foi assentada sobre bases matemáticas sólidas por pessoas como W. Friedman e L. Hill no início do século XX.
       </p>
 
       <p>
-        The period after World War I saw the development of special-purpose machines for encrypting and decrypting messages,
-        and mathematicians were very active in cryptography during World War II. Efforts to penetrate the cryptosystems of the Axis nations were organized in England and in the United States by such notable mathematicians as Alan Turing and A. A. Albert.
-        The Allies gained a tremendous advantage in World War II by breaking the ciphers produced by the German Enigma machine and the Japanese Purple ciphers.
+        O período após a Primeira Guerra Mundial assistiu ao desenvolvimento de máquinas de finalidade específica para cifrar e decifrar mensagens,
+        e os matemáticos foram muito ativos na criptografia durante a Segunda Guerra Mundial. Esforços para penetrar os criptossistemas das nações do Eixo foram organizados na Inglaterra e nos Estados Unidos por matemáticos notáveis como Alan Turing e A. A. Albert.
+        Os Aliados obtiveram uma enorme vantagem na Segunda Guerra Mundial ao quebrar as cifras produzidas pela máquina alemã Enigma e pelas cifras japonesas Purple.
       </p>
 
       <p>
-        By the 1970s, interest in commercial cryptography had begun to take hold.
-        There was a growing need to protect banking transactions,
-        computer data, and electronic mail.
-        In the early 1970s, <acro>IBM</acro> developed and implemented <acro>LUZIFER</acro>,
-        the forerunner of the National Bureau of Standards' Data Encryption Standard (DES).
+        Na década de 1970, o interesse pela criptografia comercial começou a se consolidar.
+        Havia uma necessidade crescente de proteger transações bancárias,
+        dados de computador e correio eletrônico.
+        No início da década de 1970, a <acro>IBM</acro> desenvolveu e implementou o <acro>LUZIFER</acro>,
+        precursor do Data Encryption Standard (DES) do National Bureau of Standards.
       </p>
 
       <p>
-        The concept of a public key cryptosystem,
-        due to Diffie and Hellman, is very recent (1976).
-        It was further developed by Rivest, Shamir,
-        and Adleman with the <acro>RSA</acro> cryptosystem (1978).
-        It is not known how secure any of these systems are.
-        The trapdoor knapsack cryptosystem,
-        developed by Merkle and Hellman, has been broken.
-        It is still an open question whether or not the <acro>RSA</acro> system can be broken.
-        In 1991, <acro>RSA</acro> Laboratories published a list of semiprimes
-        (numbers with exactly two prime factors)
-        with a cash prize for whoever was able to provide a factorization
+        O conceito de criptossistema de chave pública,
+        devido a Diffie e Hellman, é muito recente (1976).
+        Ele foi desenvolvido posteriormente por Rivest, Shamir
+        e Adleman com o criptossistema <acro>RSA</acro> (1978).
+        Não se sabe quão seguros são esses sistemas.
+        O criptossistema da mochila com alçapão,
+        desenvolvido por Merkle e Hellman, foi quebrado.
+        Ainda é uma questão em aberto saber se o sistema <acro>RSA</acro> pode ser quebrado.
+        Em 1991, os Laboratórios <acro>RSA</acro> publicaram uma lista de semiprimos
+        (números com exatamente dois fatores primos)
+        com um prêmio em dinheiro para quem conseguisse fornecer uma fatoração
         (<url href="http://www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm" visual="www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm">http://www.emc.com/emc-plus/rsa-labs/historical/the-rsa-challenge-numbers.htm</url>).
-        Although the challenge ended in 2007,
-        many of these numbers have not yet been factored.
+        Embora o desafio tenha terminado em 2007,
+        muitos desses números ainda não foram fatorados.
       </p>
 
       <p>
-        There been a great deal of controversy about research in cryptography and cryptography itself.
-        In 1929, when Henry Stimson, Secretary of State under Herbert Hoover,
-        dismissed the Black Chamber
-        (the State Department's cryptography division)
-        on the ethical grounds that <q>gentlemen do not read each other's mail.</q>
-        During the last two decades of the twentieth century,
-        the National Security Agency wanted to keep information about cryptography secret,
-        whereas the academic community fought for the right to publish basic research.
-        Currently, research in mathematical cryptography and computational number theory is very active,
-        and mathematicians are free to publish their results in these areas.
+        Houve muita controvérsia sobre a pesquisa em criptografia e sobre a própria criptografia.
+        Em 1929, Henry Stimson, Secretário de Estado no governo de Herbert Hoover,
+        fechou a Câmara Negra
+        (a divisão de criptografia do Departamento de Estado)
+        por motivos éticos, afirmando que <q>cavalheiros não leem a correspondência uns dos outros.</q>
+        Durante as duas últimas décadas do século XX,
+        a Agência de Segurança Nacional queria manter em segredo as informações sobre criptografia,
+        enquanto a comunidade acadêmica lutava pelo direito de publicar pesquisas básicas.
+        Atualmente, a pesquisa em criptografia matemática e teoria computacional dos números é muito ativa,
+        e os matemáticos têm liberdade para publicar seus resultados nessas áreas.
       </p>
     </subsection>
     <paragraphs component="sage-blurb">
       <title>Sage</title>
       <p>
-        Sage's early development featured powerful routines for number theory,
-        and later included significant support for algebraic structures and other areas of discrete mathematics.
-        So it is a natural tool for the study of cryptology,
-        including topics like RSA, elliptic curve cryptography,
-        and AES (Advanced Encryption Standard).
+        O desenvolvimento inicial do Sage contou com rotinas poderosas para a teoria dos números,
+        e posteriormente passou a incluir suporte significativo para estruturas algébricas e outras áreas da matemática discreta.
+        Assim, ele é uma ferramenta natural para o estudo da criptologia,
+        incluindo tópicos como RSA, criptografia de curvas elípticas
+        e AES (Advanced Encryption Standard).
       </p>
     </paragraphs>
   </section>
