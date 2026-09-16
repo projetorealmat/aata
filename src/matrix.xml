@@ -10,47 +10,47 @@
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="matrix">
-  <title>Matrix Groups and Symmetry</title>
+  <title>Grupos de matrizes e simetria</title>
   <introduction>
     <p>
-      When Felix Klein<idx><h>Klein, Felix</h></idx>
-      (1849<ndash/>1925) accepted a chair at the University of Erlangen,
-      he outlined in his inaugural address a program to classify different geometries.
-      Central to Klein's program was the theory of groups:
-      he considered geometry to be the study of properties that are left invariant under transformation groups.
-      Groups, especially matrix groups,
-      have now become important in the study of symmetry and have found applications in such disciplines as chemistry and physics.
-      In the first part of this chapter,
-      we will examine some of the classical matrix groups,
-      such as the general linear group,
-      the special linear group, and the orthogonal group.
-      We will then use these matrix groups to investigate some of the ideas behind geometric symmetry.
+      Quando Felix Klein<idx><h>Klein, Felix</h></idx>
+      (1849<ndash/>1925) assumiu uma cátedra na Universidade de Erlangen,
+      ele esboçou, em seu discurso inaugural, um programa para classificar diferentes geometrias.
+      A teoria dos grupos estava no centro do programa de Klein:
+      ele considerava a geometria como o estudo das propriedades que permanecem invariantes sob grupos de transformações.
+      Os grupos, especialmente os grupos de matrizes,
+      tornaram-se importantes no estudo da simetria e encontraram aplicações em disciplinas como química e física.
+      Na primeira parte deste capítulo,
+      examinaremos alguns dos grupos clássicos de matrizes,
+      como o grupo linear geral,
+      o grupo linear especial e o grupo ortogonal.
+      Em seguida, usaremos esses grupos de matrizes para investigar algumas das ideias por trás da simetria geométrica.
     </p>
   </introduction>
 
   <section xml:id="matrix-section-groups">
-    <title>Matrix Groups</title>
+    <title>Grupos de matrizes</title>
     <subsection xml:id="matrix-subsection-linear-algebra">
-      <title>Some Facts from Linear Algebra</title>
+      <title>Alguns fatos de álgebra linear</title>
       <p>
-        Before we study matrix groups,
-        we must recall some basic facts from linear algebra.
-        One of the most fundamental ideas of linear algebra is that of a linear transformation.
-        A <term>linear transformation</term><idx><h>Linear transformation</h><h>definition of</h></idx> or <term>linear map</term><idx><h>Linear map</h></idx>
-        <m>T : {\mathbb R}^n \rightarrow {\mathbb R}^m</m> is a map that preserves vector addition and scalar multiplication;
-        that is, for vectors <m>{\mathbf x}</m> and <m>{\mathbf y}</m> in
-        <m>{\mathbb R}^n</m> and a scalar <m>\alpha \in {\mathbb R}</m>,
+        Antes de estudarmos grupos de matrizes,
+        devemos recordar alguns fatos básicos de álgebra linear.
+        Uma das ideias mais fundamentais da álgebra linear é a de transformação linear.
+        Uma <term>transformação linear</term><idx><h>Transformação linear</h><h>definição de</h></idx> ou <term>aplicação linear</term><idx><h>Aplicação linear</h></idx>
+        <m>T : {\mathbb R}^n \rightarrow {\mathbb R}^m</m> é uma aplicação que preserva a soma de vetores e a multiplicação por escalares;
+        isto é, para os vetores <m>{\mathbf x}</m> e <m>{\mathbf y}</m> em
+        <m>{\mathbb R}^n</m> e um escalar <m>\alpha \in {\mathbb R}</m>,
         <md>
           <mrow>T({\mathbf x}+{\mathbf y}) &amp; = T({\mathbf x}) + T({\mathbf y})</mrow>
           <mrow>T(\alpha {\mathbf y}) &amp; = \alpha T({\mathbf y})</mrow>
         </md>.
-        An <m>m \times n</m> matrix with entries in
-        <m>{\mathbb R}</m> represents a linear transformation from
-        <m>{\mathbb R}^n</m> to <m>{\mathbb R}^m</m>.
-        If we write vectors <m>{\mathbf x} = (x_1, \ldots,
-        x_n)^\transpose</m> and <m>{\mathbf y} = (y_1, \ldots,
-        y_n)^\transpose</m> in <m>{\mathbb R}^n</m> as column matrices,
-        then an <m>m \times n</m> matrix
+        Uma matriz <m>m \times n</m> com entradas em
+        <m>{\mathbb R}</m> representa uma transformação linear de
+        <m>{\mathbb R}^n</m> em <m>{\mathbb R}^m</m>.
+        Se escrevermos os vetores <m>{\mathbf x} = (x_1, \ldots,
+        x_n)^\transpose</m> e <m>{\mathbf y} = (y_1, \ldots,
+        y_n)^\transpose</m> em <m>{\mathbb R}^n</m> como matrizes coluna,
+        então uma matriz <m>m \times n</m>
         <md>
           A
           =
@@ -61,8 +61,8 @@
           a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
           \end{pmatrix}
         </md>
-        maps the vectors to <m>{\mathbb R}^m</m> linearly by matrix multiplication.
-        Observe that if <m>\alpha</m> is a real number,
+        leva os vetores a <m>{\mathbb R}^m</m> linearmente por multiplicação de matrizes.
+        Observe que, se <m>\alpha</m> é um número real,
         <md>
           A({\mathbf x} + {\mathbf y} ) 
           = 
@@ -72,7 +72,7 @@
           = 
           A ( \alpha {\mathbf x})
         </md>,
-        where
+        em que
         <md>
           {\mathbf x}
           =
@@ -83,37 +83,37 @@
           x_n
           \end{pmatrix}
         </md>.
-        We will often abbreviate the matrix <m>A</m> by writing <m>(a_{ij})</m>.
+        Frequentemente abreviaremos a matriz <m>A</m> escrevendo <m>(a_{ij})</m>.
 
         <notation>
           <usage><m>(a_{ij})</m></usage>
-          <description>matrix</description>
+          <description>matriz</description>
         </notation>
 
       </p>
 
       <p>
-        Conversely, if <m>T : {\mathbb R}^n \rightarrow {\mathbb R}^m</m> is a linear map,
-        we can associate a matrix <m>A</m> with <m>T</m> by considering what <m>T</m> does to the vectors
+        Reciprocamente, se <m>T : {\mathbb R}^n \rightarrow {\mathbb R}^m</m> é uma aplicação linear,
+        podemos associar uma matriz <m>A</m> a <m>T</m> considerando o que <m>T</m> faz com os vetores
         <md>
           <mrow>{\mathbf e}_1 &amp; = (1, 0, \ldots, 0)^\transpose</mrow>
           <mrow>{\mathbf e}_2 &amp; = (0, 1, \ldots, 0)^\transpose</mrow>
           <mrow>&amp;  \aatavdots{=} &amp;</mrow>
           <mrow>{\mathbf e}_n &amp; = (0, 0, \ldots, 1)^\transpose</mrow>
         </md>.
-        We can write any vector <m>{\mathbf x} = (x_1, \ldots,
-        x_n)^\transpose</m> as
+        Podemos escrever qualquer vetor <m>{\mathbf x} = (x_1, \ldots,
+        x_n)^\transpose</m> como
         <md>
           x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n
         </md>.
-        Consequently, if
+        Consequentemente, se
         <md>
           <mrow>T({\mathbf e}_1) &amp; = (a_{11}, a_{21}, \ldots, a_{m1})^\transpose,</mrow>
           <mrow>T({\mathbf e}_2) &amp; = (a_{12}, a_{22}, \ldots, a_{m2})^\transpose,</mrow>
           <mrow>&amp;  \aatavdots{=} &amp;</mrow>
           <mrow>T({\mathbf e}_n) &amp; = (a_{1n}, a_{2n}, \ldots, a_{mn})^\transpose</mrow>
         </md>,
-        then
+        então
         <md>
           <mrow>T({\mathbf x} ) &amp; = T(x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n)</mrow>
           <mrow>&amp; = x_1 T({\mathbf e}_1) + x_2 T({\mathbf e}_2) + \cdots + x_n T({\mathbf e}_n)</mrow>
@@ -124,13 +124,13 @@
 
       <example xml:id="matrix-example-linear-transform">
         <p>
-          If we let <m>T : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> be the map given by
+          Seja <m>T : {\mathbb R}^2 \rightarrow {\mathbb R}^2</m> a aplicação dada por
           <md>
             T(x_1, x_2) = (2 x_1 + 5 x_2, - 4 x_1 + 3 x_2)
           </md>,
-          the axioms that <m>T</m> must satisfy to be a linear transformation are easily verified.
-          The column vectors <m>T {\mathbf e}_1 = (2, -4)^\transpose</m> and
-          <m>T {\mathbf e}_2 = (5,3)^\transpose</m> tell us that <m>T</m> is given by the matrix
+          os axiomas que <m>T</m> deve satisfazer para ser uma transformação linear são facilmente verificados.
+          Os vetores coluna <m>T {\mathbf e}_1 = (2, -4)^\transpose</m> e
+          <m>T {\mathbf e}_2 = (5,3)^\transpose</m> nos dizem que <m>T</m> é dada pela matriz
           <md>
             A =
             \begin{pmatrix}
@@ -142,10 +142,10 @@
       </example>
 
       <p>
-        Since we are interested in groups of matrices,
-        we need to know which matrices have multiplicative inverses.
-        Recall that an <m>n \times n</m> matrix <m>A</m> is <term>invertible</term><idx><h>Matrix</h><h>invertible</h></idx>
-        exactly when there exists another matrix <m>A^{-1}</m> such that <m>A A^{-1} = A^{-1} A = I</m>, where
+        Como estamos interessados em grupos de matrizes,
+        precisamos saber quais matrizes têm inversas multiplicativas.
+        Recorde que uma matriz <m>n \times n</m> <m>A</m> é <term>invertível</term><idx><h>Matriz</h><h>invertível</h></idx>
+        exatamente quando existe outra matriz <m>A^{-1}</m> tal que <m>A A^{-1} = A^{-1} A = I</m>, em que
         <md>
           I =
           \begin{pmatrix}
@@ -155,21 +155,21 @@
           0 &amp; 0 &amp; \cdots &amp; 1
           \end{pmatrix}
         </md>
-        is the <m>n \times n</m> identity matrix.
-        From linear algebra we know that <m>A</m> is invertible if and only if the determinant of <m>A</m> is nonzero.
-        Sometimes an invertible matrix is said to be <idx><h>Matrix</h><h>nonsingular</h></idx><term>nonsingular</term>.
+        é a matriz identidade <m>n \times n</m>.
+        Da álgebra linear sabemos que <m>A</m> é invertível se, e somente se, o determinante de <m>A</m> é não nulo.
+        Às vezes, uma matriz invertível também é chamada de <idx><h>Matriz</h><h>não singular</h></idx><term>não singular</term>.
       </p>
 
       <example xml:id="matrix-inverse-matrix">
         <p>
-          If <m>A</m> is the matrix
+          Se <m>A</m> for a matriz
           <md>
             \begin{pmatrix}
             2 &amp; 1 \\
             5 &amp; 3
             \end{pmatrix}
           </md>,
-          then the inverse of <m>A</m> is
+          então a inversa de <m>A</m> é
           <md>
             A^{-1} =
             \begin{pmatrix}
@@ -177,76 +177,76 @@
             -5 &amp; 2
             \end{pmatrix}
           </md>.
-          We are guaranteed  that <m>A^{-1}</m> exists,
-          since <m>\det(A) = 2 \cdot 3 - 5 \cdot 1 = 1</m> is nonzero.
+          Temos a garantia de que <m>A^{-1}</m> existe,
+          pois <m>\det(A) = 2 \cdot 3 - 5 \cdot 1 = 1</m> é não nulo.
         </p>
       </example>
 
       <p>
-        Some other facts about determinants will also prove useful in the course of this chapter.
-        Let <m>A</m> and <m>B</m> be <m>n \times n</m> matrices.
-        From linear algebra we have the following properties of determinants.
+        Alguns outros fatos sobre determinantes também serão úteis ao longo deste capítulo.
+        Sejam <m>A</m> e <m>B</m> matrizes <m>n \times n</m>.
+        Da álgebra linear temos as seguintes propriedades dos determinantes.
 
         <ul>
           <li>
             <p>
-              The determinant is a homomorphism into the multiplicative group of real numbers;
-              that is, <m>\det( A B) = (\det A )(\det B)</m>.
+              O determinante é um homomorfismo no grupo multiplicativo dos números reais;
+              isto é, <m>\det( A B) = (\det A )(\det B)</m>.
             </p>
           </li>
 
           <li>
             <p>
-              If <m>A</m> is an invertible matrix,
-              then <m>\det(A^{-1}) = 1 / \det A</m>.
+              Se <m>A</m> for uma matriz invertível,
+              então <m>\det(A^{-1}) = 1 / \det A</m>.
             </p>
           </li>
 
           <li>
             <p>
-              If we define the transpose of a matrix
-              <m>A = (a_{ij})</m> to be <m>A^\transpose = (a_{ji})</m>,
-              then <m>\det(A^\transpose) = \det A</m>.
+              Se definirmos a transposta de uma matriz
+              <m>A = (a_{ij})</m> como <m>A^\transpose = (a_{ji})</m>,
+              então <m>\det(A^\transpose) = \det A</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Let <m>T</m> be the linear transformation associated with an <m>n \times n</m> matrix <m>A</m>.
-              Then <m>T</m> multiplies volumes by a factor of <m>\mathopen{|}\det A|</m>.
-              In the case of <m>{\mathbb R}^2</m>,
-              this means that <m>T</m> multiplies areas by <m>\mathopen{|}\det A|</m>.
+              Seja <m>T</m> a transformação linear associada a uma matriz <m>n \times n</m> <m>A</m>.
+              Então <m>T</m> multiplica os volumes por um fator de <m>\mathopen{|}\det A|</m>.
+              No caso de <m>{\mathbb R}^2</m>,
+              isso significa que <m>T</m> multiplica as áreas por <m>\mathopen{|}\det A|</m>.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        Linear maps, matrices,
-        and determinants are covered in any elementary linear algebra text;
-        however, if you have not had a course in linear algebra,
-        it is a straightforward process to verify these properties directly for <m>2 \times 2</m> matrices,
-        the case with which we are most concerned.
+        Aplicações lineares, matrizes,
+        e determinantes são tratados em qualquer texto elementar de álgebra linear;
+        entretanto, se você não fez um curso de álgebra linear,
+        é um processo direto verificar essas propriedades diretamente para matrizes <m>2 \times 2</m>,
+        o caso pelo qual estamos mais interessados.
       </p>
     </subsection>
 
     <subsection xml:id="matrix-subsection-general-linear-group">
-      <title>The General and Special Linear Groups</title>
+      <title>Os grupos lineares geral e especial</title>
       <p>
-        The set of all <m>n \times n</m> invertible matrices forms a group called the
-        <idx><h>Group</h><h>general linear</h></idx><term>general linear group</term>.
-        We will denote this group by <m>GL_n({\mathbb R})</m>.
-        The general linear group has several important subgroups.
-        The multiplicative properties of the determinant imply that the set of matrices with determinant one is a subgroup of the general linear group.
-        Stated another way, suppose that
-        <m>\det(A) =1</m> and <m>\det(B) = 1</m>.
-        Then <m>\det(AB) = \det(A) \det (B) = 1</m> and <m>\det(A^{-1}) = 1 / \det A = 1</m>.
-        This subgroup is called the <term>special linear group</term><idx><h>Group</h><h>special linear</h></idx> and is denoted by <m>SL_n({\mathbb R})</m>.
+        O conjunto de todas as matrizes invertíveis <m>n \times n</m> forma um grupo chamado
+        <idx><h>Grupo</h><h>linear geral</h></idx><term>grupo linear geral</term>.
+        Denotaremos esse grupo por <m>GL_n({\mathbb R})</m>.
+        O grupo linear geral tem vários subgrupos importantes.
+        As propriedades multiplicativas do determinante implicam que o conjunto das matrizes com determinante igual a um é um subgrupo do grupo linear geral.
+        Dito de outra forma, suponha que
+        <m>\det(A) =1</m> e <m>\det(B) = 1</m>.
+        Então <m>\det(AB) = \det(A) \det (B) = 1</m> e <m>\det(A^{-1}) = 1 / \det A = 1</m>.
+        Esse subgrupo é chamado de <term>grupo linear especial</term><idx><h>Grupo</h><h>linear especial</h></idx> e é denotado por <m>SL_n({\mathbb R})</m>.
       </p>
 
       <example xml:id="matrix-example-determinant">
         <p>
-          Given a <m>2 \times 2</m> matrix
+          Dada uma matriz <m>2 \times 2</m>
           <md>
             A =
             \begin{pmatrix}
@@ -254,9 +254,9 @@
             c &amp; d
             \end{pmatrix}
           </md>,
-          the determinant of <m>A</m> is <m>ad-bc</m>.
-          The group <m>GL_2({\mathbb R})</m> consists of those matrices in which <m>ad-bc \neq 0</m>.
-          The inverse of <m>A</m> is
+          o determinante de <m>A</m> é <m>ad-bc</m>.
+          O grupo <m>GL_2({\mathbb R})</m> consiste nas matrizes para as quais <m>ad-bc \neq 0</m>.
+          A inversa de <m>A</m> é
           <md>
             A^{-1} =
             \frac{1}{ad-bc}
@@ -265,7 +265,7 @@
             -c &amp; a
             \end{pmatrix}
           </md>.
-          If <m>A</m> is in <m>SL_2({\mathbb R})</m>, then
+          Se <m>A</m> pertence a <m>SL_2({\mathbb R})</m>, então
           <md>
             A^{-1} =
             \begin{pmatrix}
@@ -273,9 +273,9 @@
             -c &amp; a
             \end{pmatrix}
           </md>.
-          Geometrically,
-          <m>SL_2({\mathbb R})</m> is the group that preserves the areas of parallelograms.
-          Let
+          Geometricamente,
+          <m>SL_2({\mathbb R})</m> é o grupo que preserva as áreas dos paralelogramos.
+          Seja
           <md>
             A =
             \begin{pmatrix}
@@ -283,31 +283,31 @@
             0 &amp; 1
             \end{pmatrix}
           </md>
-          be in <m>SL_2({\mathbb R})</m>.
-          In <xref ref="matrix-figure-sl2"/>,
-          the unit square corresponding to the vectors <m>{\mathbf x} = (1,0)^\transpose</m> and
-          <m>{\mathbf y} = (0,1)^\transpose</m> is taken  by <m>A</m> to the parallelogram with sides
-          <m>(1,0)^\transpose</m> and <m>(1, 1)^\transpose</m>;
-          that is, <m>A {\mathbf x} = (1,0)^\transpose</m> and <m>A {\mathbf y} = (1, 1)^\transpose</m>.
-          Notice that these two parallelograms have the same area.
+          pertença a <m>SL_2({\mathbb R})</m>.
+          Na <xref ref="matrix-figure-sl2"/>,
+          o quadrado unitário correspondente aos vetores <m>{\mathbf x} = (1,0)^\transpose</m> e
+          <m>{\mathbf y} = (0,1)^\transpose</m> é levado por <m>A</m> ao paralelogramo com lados
+          <m>(1,0)^\transpose</m> e <m>(1, 1)^\transpose</m>;
+          isto é, <m>A {\mathbf x} = (1,0)^\transpose</m> e <m>A {\mathbf y} = (1, 1)^\transpose</m>.
+          Observe que esses dois paralelogramos têm a mesma área.
         </p>
       </example>
 <!--=============================-->
 
 
       <figure xml:id="matrix-figure-sl2">
-        <caption><m>SL_2(\mathbb R)</m> acting on the unit square</caption>
+        <caption><m>SL_2(\mathbb R)</m> atuando sobre o quadrado unitário</caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-sl2r-a">
-          	<description>A square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0).</description>
+          	<description>Um quadrado sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (0,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-sl2r-a.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="matrix-sl2r-b">
-            <description>A parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0).</description>
+            <description>Um paralelogramo sobre um conjunto de eixos, com a borda esquerda sendo um vetor da origem até (1,1) e a borda inferior sendo um vetor da origem até (1,0).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-sl2r-b.tex" parse="text"/>
               </latex-image>
@@ -320,24 +320,24 @@
     </subsection>
 
     <subsection xml:id="matrix-subsection-orthogonal-group">
-      <title>The Orthogonal Group <m>O(n)</m></title>
+      <title>O grupo ortogonal <m>O(n)</m></title>
       <p>
-        Another subgroup of <m>GL_n({\mathbb R})</m> is the orthogonal group.
-        A matrix <m>A</m> is <term>orthogonal</term><idx><h>Orthogonal matrix</h></idx><idx><h>Matrix</h><h>orthogonal</h></idx>
-        if <m>A^{-1} = A^\transpose</m>.
-        The <term>orthogonal group</term><idx><h>Group</h><h>orthogonal</h></idx><idx><h>Orthogonal group</h></idx>
-        consists of the set of all orthogonal matrices.
-        We write <m>O(n)</m> for the <m>n \times n</m> orthogonal group.
+        Outro subgrupo de <m>GL_n({\mathbb R})</m> é o grupo ortogonal.
+        Uma matriz <m>A</m> é <term>ortogonal</term><idx><h>Matriz ortogonal</h></idx><idx><h>Matriz</h><h>ortogonal</h></idx>
+        se <m>A^{-1} = A^\transpose</m>.
+        O <term>grupo ortogonal</term><idx><h>Grupo</h><h>ortogonal</h></idx><idx><h>Grupo ortogonal</h></idx>
+        consiste no conjunto de todas as matrizes ortogonais.
+        Escrevemos <m>O(n)</m> para o grupo ortogonal de matrizes <m>n \times n</m>.
         <notation>
           <usage><m>O(n)</m></usage>
-          <description>orthogonal group</description>
+          <description>grupo ortogonal</description>
         </notation>
-        We leave as an exercise the proof that <m>O(n)</m> is a subgroup of <m>GL_n( {\mathbb R})</m>.
+        Deixamos como exercício a prova de que <m>O(n)</m> é um subgrupo de <m>GL_n( {\mathbb R})</m>.
       </p>
 
       <example xml:id="matrix-orthogonal">
         <p>
-          The following matrices are orthogonal:
+          As matrizes a seguir são ortogonais:
           <md>
             \begin{pmatrix}
             3/5 &amp; -4/5 \\
@@ -359,14 +359,14 @@
       </example>
 
       <p>
-        There is a more geometric way of viewing the group <m>O(n)</m>.
-        The orthogonal matrices are exactly those matrices that preserve the length of vectors.
-        We can define the length of a vector using the
-        <term>Euclidean inner product</term>,<idx><h>Euclidean inner product</h></idx>
-        or <term>dot product</term>, of two vectors.
-        The Euclidean inner product of two vectors
+        Há uma maneira mais geométrica de ver o grupo <m>O(n)</m>.
+        As matrizes ortogonais são exatamente as matrizes que preservam o comprimento dos vetores.
+        Podemos definir o comprimento de um vetor usando o
+        <term>produto interno euclidiano</term>,<idx><h>Produto interno euclidiano</h></idx>
+        ou <term>produto escalar</term>, de dois vetores.
+        O produto interno euclidiano de dois vetores
         <m>{\mathbf x}=(x_1, \ldots,
-        x_n)^\transpose</m> and <m>{\mathbf y}=(y_1, \ldots, y_n)^\transpose</m> is
+        x_n)^\transpose</m> e <m>{\mathbf y}=(y_1, \ldots, y_n)^\transpose</m> é
         <md>
           \langle  {\mathbf x}, {\mathbf y} \rangle
           =
@@ -379,31 +379,31 @@
           =
           x_1 y_1 + \cdots + x_n y_n
         </md>.
-        We define the length of a vector <m>{\mathbf x}=(x_1, \ldots,
-        x_n)^\transpose</m> to be
+        Definimos o comprimento de um vetor <m>{\mathbf x}=(x_1, \ldots,
+        x_n)^\transpose</m> como
 
         <notation>
           <usage><m>\| {\mathbf x} \|</m></usage>
-          <description>length of a vector <m>\mathbf x</m></description>
+          <description>comprimento de um vetor <m>\mathbf x</m></description>
         </notation>
 
         <md>
           \| {\mathbf x} \| = \sqrt{\langle  {\mathbf x}, {\mathbf x} \rangle}  = \sqrt{x_1^2 + \cdots + x_n^2}
         </md>.
-        Associated with the notion of the length of a vector is the idea of the distance between two vectors.
-        We define the <term>distance</term>
-        between two vectors <m>{\mathbf x}</m> and
-        <m>{\mathbf y}</m> to be <m>\| {\mathbf x}-{\mathbf y} \|</m>.
-        We leave as an exercise the proof of the following proposition about the properties of Euclidean inner products.
+        Associada à noção de comprimento de um vetor está a ideia de distância entre dois vetores.
+        Definimos a <term>distância</term>
+        entre dois vetores <m>{\mathbf x}</m> e
+        <m>{\mathbf y}</m> como <m>\| {\mathbf x}-{\mathbf y} \|</m>.
+        Deixamos como exercício a prova da proposição a seguir sobre as propriedades dos produtos internos euclidianos.
       </p>
 
       <proposition>
         <statement>
           <p>
-            Let <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
-            and <m>{\mathbf w}</m> be vectors in
-            <m>{\mathbb R}^n</m> and <m>\alpha \in {\mathbb R}</m>.
-            Then
+            Sejam <m>{\mathbf x}</m>, <m>{\mathbf y}</m>,
+            e <m>{\mathbf w}</m> vetores em
+            <m>{\mathbb R}^n</m> e <m>\alpha \in {\mathbb R}</m>.
+            Então
 
             <ol>
               <li>
@@ -426,15 +426,15 @@
 
               <li>
                 <p>
-                  <m>\langle {\mathbf x}, {\mathbf x} \rangle \geq 0</m> with equality exactly when <m>{\mathbf x} = 0</m>.
+                  <m>\langle {\mathbf x}, {\mathbf x} \rangle \geq 0</m> com igualdade exatamente quando <m>{\mathbf x} = 0</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  If <m>\langle {\mathbf x}, {\mathbf y} \rangle = 0</m> for all
-                  <m>{\mathbf x}</m> in <m>{\mathbb R}^n</m>,
-                  then <m>{\mathbf y} = 0</m>.
+                  Se <m>\langle {\mathbf x}, {\mathbf y} \rangle = 0</m> para todo
+                  <m>{\mathbf x}</m> em <m>{\mathbb R}^n</m>,
+                  então <m>{\mathbf y} = 0</m>.
                 </p>
               </li>
             </ol>
@@ -444,8 +444,8 @@
 
       <example xml:id="matrix-example-on-preserves-length">
         <p>
-          The vector <m>{\mathbf x} =(3,4)^\transpose</m> has length <m>\sqrt{3^2 + 4^2} = 5</m>.
-          We can also see that the orthogonal matrix
+          O vetor <m>{\mathbf x} =(3,4)^\transpose</m> tem comprimento <m>\sqrt{3^2 + 4^2} = 5</m>.
+          Também podemos ver que a matriz ortogonal
           <md>
             A=
             \begin{pmatrix}
@@ -453,24 +453,24 @@
             4/5 &amp; 3/5
             \end{pmatrix}
           </md>
-          preserves the length of this vector.
-          The vector <m>A{\mathbf x} = (-7/5,24/5)^\transpose</m> also has length <m>5</m>.
+          preserva o comprimento desse vetor.
+          O vetor <m>A{\mathbf x} = (-7/5,24/5)^\transpose</m> também tem comprimento <m>5</m>.
         </p>
       </example>
 
       <p>
-        Since <m>\det(A A^\transpose) = \det(I) = 1</m> and <m>\det(A) = \det( A^\transpose )</m>,
-        the determinant of any orthogonal matrix is either <m>1</m> or <m>-1</m>.
-        Consider the column vectors
+        Como <m>\det(A A^\transpose) = \det(I) = 1</m> e <m>\det(A) = \det( A^\transpose )</m>,
+        o determinante de qualquer matriz ortogonal é <m>1</m> ou <m>-1</m>.
+        Considere os vetores coluna
         <md>
           {\mathbf a}_j =
           \begin{pmatrix}
           a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
           \end{pmatrix}
         </md>
-        of the orthogonal matrix <m>A= (a_{ij})</m>.
-        Since <m>AA^\transpose = I</m>,
-        <m>\langle {\mathbf a}_r, {\mathbf a}_s \rangle = \delta_{rs}</m>, where
+        da matriz ortogonal <m>A= (a_{ij})</m>.
+        Como <m>AA^\transpose = I</m>,
+        <m>\langle {\mathbf a}_r, {\mathbf a}_s \rangle = \delta_{rs}</m>, em que
         <md>
           \delta_{rs}
           =
@@ -479,38 +479,38 @@
           0 &amp; r \neq s
           \end{cases}
         </md>
-        is the <idx><h>Kronecker delta</h></idx>Kronecker delta.
-        Accordingly,
-        column vectors of an orthogonal matrix all have length <m>1</m>;
-        and the Euclidean inner product of distinct column vectors is zero.
-        Any set of vectors satisfying these properties is called an
-        <idx><h>Orthonormal set</h></idx><term>orthonormal set</term>.
-        Conversely, given an <m>n \times n</m> matrix <m>A</m> whose columns form an orthonormal set,
-        it follows that <m>A^{-1} = A^\transpose</m>.
+        é o <idx><h>Delta de Kronecker</h></idx>delta de Kronecker.
+        Consequentemente,
+        todos os vetores coluna de uma matriz ortogonal têm comprimento <m>1</m>;
+        e o produto interno euclidiano de vetores coluna distintos é zero.
+        Qualquer conjunto de vetores que satisfaça essas propriedades é chamado de
+        <idx><h>Conjunto ortonormal</h></idx><term>conjunto ortonormal</term>.
+        Reciprocamente, dada uma matriz <m>n \times n</m> <m>A</m> cujas colunas formam um conjunto ortonormal,
+        segue que <m>A^{-1} = A^\transpose</m>.
       </p>
 
       <p>
-        We say that a matrix <m>A</m> is
+        Dizemos que uma matriz <m>A</m> é
         <term>distance-preserving</term>,<idx><h>Matrix</h><h>distance-preserving</h></idx>
         <term>length-preserving</term>,<idx><h>Matrix</h><h>length-preserving</h></idx>
-        or <term>inner product-preserving</term><idx><h>Matrix</h><h>inner product-preserving</h></idx> when <m>\| A{\mathbf x}- A{\mathbf y} \| =\| {\mathbf x}- {\mathbf y} \|</m>,
+        ou <term>preservadora de produtos internos</term><idx><h>Matriz</h><h>preservadora de produtos internos</h></idx> quando <m>\| A{\mathbf x}- A{\mathbf y} \| =\| {\mathbf x}- {\mathbf y} \|</m>,
         <m>\| A{\mathbf x} \| =\| {\mathbf x} \|</m>,
-        or <m>\langle A{\mathbf x}, A{\mathbf y} \rangle = \langle {\mathbf x},{\mathbf y} \rangle</m>,
-        respectively.
-        The following theorem, which characterizes the orthogonal group,
-        says that these notions are the same.
+        ou <m>\langle A{\mathbf x}, A{\mathbf y} \rangle = \langle {\mathbf x},{\mathbf y} \rangle</m>,
+        respectivamente.
+        O teorema a seguir, que caracteriza o grupo ortogonal,
+        afirma que essas noções são equivalentes.
       </p>
 
       <theorem xml:id="matrix-theorem-orthnormal-matrix">
         <statement>
           <p>
-            Let <m>A</m> be an <m>n \times n</m> matrix.
-            The following statements are equivalent.
+            Seja <m>A</m> uma matriz <m>n \times n</m>.
+            As afirmações a seguir são equivalentes.
 
             <ol>
               <li>
                 <p>
-                  The columns of the matrix <m>A</m> form an orthonormal set.
+                  As colunas da matriz <m>A</m> formam um conjunto ortonormal.
                 </p>
               </li>
 
@@ -522,21 +522,21 @@
 
               <li>
                 <p>
-                  For vectors <m>{\mathbf x}</m> and <m>{\mathbf y}</m>,
+                  Para os vetores <m>{\mathbf x}</m> e <m>{\mathbf y}</m>,
                   <m>\langle A{\mathbf x}, A {\mathbf y} \rangle = \langle {\mathbf x}, {\mathbf y} \rangle</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  For vectors <m>{\mathbf x}</m> and <m>{\mathbf y}</m>,
+                  Para os vetores <m>{\mathbf x}</m> e <m>{\mathbf y}</m>,
                   <m>\| A{\mathbf x}- A{\mathbf y} \| = \| {\mathbf x}- {\mathbf y} \|</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  For any vector <m>{\mathbf x}</m>,
+                  Para qualquer vetor <m>{\mathbf x}</m>,
                   <m>\| A{\mathbf x} \| = \| {\mathbf x}\|</m>.
                 </p>
               </li>
@@ -546,7 +546,7 @@
 
         <proof>
           <p>
-            We have already shown (1) and (2) to be equivalent.
+            Já mostramos que (1) e (2) são equivalentes.
           </p>
 
           <p>
@@ -561,11 +561,11 @@
 
           <p>
             <m>(3) \Rightarrow (2)</m>.
-            First, 
+            Primeiro,
               <m>\langle A{\mathbf x}, A {\mathbf y} \rangle = (A{\mathbf x})^\transpose A{\mathbf y} = {\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}.</m>
-            If <m>M</m> is any <m>n \times n</m> matrix, then <m>\mathbf e_i^\transpose M \mathbf e_j^\transpose = M_{ij}</m>, where <m>M_{ij}</m> is the <m>ij</m>th entry of the matrix <m>M</m>.  Noticing that <m>{\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}</m>, let <m>\mathbf x = \mathbf e_i</m> and <m>\mathbf y = \mathbf e_j</m>.  Then 
+            Se <m>M</m> for qualquer matriz <m>n \times n</m>, então <m>\mathbf e_i^\transpose M \mathbf e_j^\transpose = M_{ij}</m>, em que <m>M_{ij}</m> é a entrada de índice <m>ij</m> da matriz <m>M</m>. Observando que <m>{\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}</m>, sejam <m>\mathbf x = \mathbf e_i</m> e <m>\mathbf y = \mathbf e_j</m>. Então
               <md>\mathbf e_i^\transpose A^\transpose A \mathbf e_j = \mathbf e_i^\transpose \mathbf e_j.</md>
-            Thus, the <m>ij</m>th component of <m>A^\transpose A</m>is <m>1</m> when <m>i = j</m> and <m>0</m> otherwise.  In other words <m>A^\transpose A = I</m>, and <m>A^{-1} = A^\transpose</m>.
+            Assim, a componente <m>ij</m> de <m>A^\transpose A</m> é <m>1</m> quando <m>i = j</m> e <m>0</m> caso contrário. Em outras palavras, <m>A^\transpose A = I</m>, e <m>A^{-1} = A^\transpose</m>.
 
             <!--Since
             <md>
@@ -579,8 +579,8 @@
 
           <p>
             <m>(3) \Rightarrow (4)</m>.
-            If <m>A</m> is inner product-preserving,
-            then <m>A</m> is distance-preserving, since
+            Se <m>A</m> preserva produtos internos,
+            então <m>A</m> preserva distâncias, pois
             <md>
               <mrow>\| A{\mathbf x} - A{\mathbf y} \|^2 &amp; = \| A({\mathbf x} - {\mathbf y}) \|^2</mrow>
               <mrow>&amp; = \langle A({\mathbf x} - {\mathbf y}), A({\mathbf x} - {\mathbf y}) \rangle</mrow>
@@ -591,9 +591,9 @@
 
           <p>
             <m>(4) \Rightarrow (5)</m>.
-            If <m>A</m> is distance-preserving,
-            then <m>A</m> is length-preserving.
-            Letting <m>{\mathbf y} = 0</m>, we have
+            Se <m>A</m> preserva distâncias,
+            então <m>A</m> preserva comprimentos.
+            Tomando <m>{\mathbf y} = 0</m>, temos
             <md>
               \| A{\mathbf x}\| = \| A{\mathbf x}- A{\mathbf y} \| = \| {\mathbf x}- {\mathbf y} \| = \| {\mathbf x} \|
             </md>.
@@ -601,11 +601,11 @@
 
           <p>
             <m>(5) \Rightarrow (3)</m>.
-            We use the following identity to show that length-preserving implies inner product-preserving:
+            Usamos a identidade a seguir para mostrar que preservar comprimentos implica preservar produtos internos:
             <md>
               \langle {\mathbf x}, {\mathbf y} \rangle = \frac{1}{2} \left[ \|{\mathbf x} +{\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \|{\mathbf y}\|^2 \right]
             </md>.
-            Observe that
+            Observe que
             <md>
               <mrow>\langle A {\mathbf x}, A {\mathbf y} \rangle &amp; = \frac{1}{2} \left[ \|A {\mathbf x} + A {\mathbf y} \|^2 - \|A {\mathbf x} \|^2 -  \|A {\mathbf y} \|^2 \right]</mrow>
               <mrow>&amp; = \frac{1}{2} \left[ \|A ( {\mathbf x} + {\mathbf y} ) \|^2 - \|A {\mathbf x} \|^2 -  \|A {\mathbf y} \|^2 \right]</mrow>
@@ -617,19 +617,19 @@
       </theorem>
 <!--=============================-->
       <figure xml:id="matrix-figure-o2">
-        <caption><m>O(2)</m> acting on <m>\mathbb R^2</m></caption>
+        <caption><m>O(2)</m> atuando sobre <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
             <!-- Fixed tikz figure - TWJ 12/8/2011 -->
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-o2-a">
-          	<description>Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to (a,b) and the second arrow pointing down and right from the origin to a point (a, -b). The figure on the right is a set of axes with an arrow pointed up and right from the origin to (cosine theta, sine theta) and an arrow point up and left at a right angle to the first vector from the origin to (sine theta, minus cosine theta).</description>
+          	<description>Dois desenhos lado a lado. O desenho à esquerda é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (a,b), e uma segunda seta apontando para baixo e para a direita, da origem até um ponto (a, -b). O desenho à direita é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (cosseno de teta, seno de teta), e uma seta apontando para cima e para a esquerda, formando um ângulo reto com o primeiro vetor, da origem até (seno de teta, menos cosseno de teta).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-o2-a.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="matrix-o2-b">
-            <description>Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to (a,b) and the second arrow pointing down and right from the origin to a point (a, -b). The figure on the right is a set of axes with an arrow pointed up and right from the origin to (cosine theta, sine theta) and an arrow point up and left at a right angle to the first vector from the origin to (sine theta, minus cosine theta).</description>
+            <description>Dois desenhos lado a lado. O desenho à esquerda é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (a,b), e uma segunda seta apontando para baixo e para a direita, da origem até um ponto (a, -b). O desenho à direita é um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até (cosseno de teta, seno de teta), e uma seta apontando para cima e para a esquerda, formando um ângulo reto com o primeiro vetor, da origem até (seno de teta, menos cosseno de teta).</description>
               <latex-image>
                   <xi:include href="tikz/matrix-o2-b.tex" parse="text"/>
               </latex-image>
@@ -643,12 +643,12 @@
             <!-- Clarified what it means to be a reflection - TWJ 12/8/2011 -->
       <example xml:id="matrix-example-o2">
         <p>
-          Let us examine the orthogonal group on <m>{\mathbb R}^2</m> a bit more closely.
-          An element <m>A \in O(2)</m> is determined by its action on
-          <m>{\mathbf e}_1 = (1, 0)^\transpose</m> and <m>{\mathbf e}_2 = (0, 1)^\transpose</m>.
-          If <m>A{\mathbf e}_1 = (a,b)^\transpose</m>,
-          then <m>a^2 + b^2 = 1</m>, since the length of a vector must be preserved when it is multiplied by <m>A</m>. Since multiplication of an element of <m>O(2)</m> preserves length and orthogonality, <m>A{\mathbf e}_2 = \pm(-b, a)^\transpose</m>.
-          If we choose <m>A{\mathbf e}_2 = (-b, a)^\transpose</m>, then
+          Examinemos com um pouco mais de atenção o grupo ortogonal em <m>{\mathbb R}^2</m>.
+          Um elemento <m>A \in O(2)</m> é determinado por sua ação sobre
+          <m>{\mathbf e}_1 = (1, 0)^\transpose</m> e <m>{\mathbf e}_2 = (0, 1)^\transpose</m>.
+          Se <m>A{\mathbf e}_1 = (a,b)^\transpose</m>,
+          então <m>a^2 + b^2 = 1</m>, pois o comprimento de um vetor deve ser preservado quando ele é multiplicado por <m>A</m>. Como a multiplicação por um elemento de <m>O(2)</m> preserva comprimento e ortogonalidade, <m>A{\mathbf e}_2 = \pm(-b, a)^\transpose</m>.
+          Se escolhermos <m>A{\mathbf e}_2 = (-b, a)^\transpose</m>, então
           <md>
             A
             =
@@ -662,10 +662,10 @@
             \sin \theta &amp; \cos \theta
             \end{pmatrix},
           </md>
-          where <m>0 \leq \theta \lt 2 \pi</m>.
-          The matrix <m>A</m> rotates a vector in <m>\mathbb R^2</m> counterclockwise about the origin by an angle of <m>\theta</m> (<xref ref="matrix-figure-o2"/>).</p>
+          em que <m>0 \leq \theta \lt 2 \pi</m>.
+          A matriz <m>A</m> gira um vetor em <m>\mathbb R^2</m> no sentido anti-horário, em torno da origem, por um ângulo de <m>\theta</m> (<xref ref="matrix-figure-o2"/>).</p>
 
-          <p>If we choose <m>A{\mathbf e}_2 = (b, -a)^\transpose</m>, then we obtain the matrix
+          <p>Se escolhermos <m>A{\mathbf e}_2 = (b, -a)^\transpose</m>, então obtemos a matriz
 		  <md>
             B
             =
@@ -679,7 +679,7 @@
             \sin \theta &amp; -\cos \theta
             \end{pmatrix}.
           </md>
-          Here, <m>\det B = -1</m> and 
+          Aqui, <m>\det B = -1</m> e
           <md>
             B^2
             =
@@ -688,7 +688,7 @@
             0 &amp; 1
             \end{pmatrix}.
           </md>
-          A reflection about the horizontal axis is given by the matrix
+          Uma reflexão em torno do eixo horizontal é dada pela matriz
           <md>
             C
             =
@@ -697,42 +697,42 @@
             0 &amp; -1
             \end{pmatrix},
           </md>
-          and <m>B = AC</m> (see <xref ref="matrix-figure-o2"/>). Thus,
-          a reflection about a line <m>\ell</m> is simply a reflection about the horizontal axis followed by a rotation.
+          e <m>B = AC</m> (veja <xref ref="matrix-figure-o2"/>). Assim,
+          uma reflexão em torno de uma reta <m>\ell</m> é simplesmente uma reflexão em torno do eixo horizontal seguida de uma rotação.
         </p>
       </example>
 
       <p>
-        Two of the other matrix or matrix-related groups that we will consider are the special orthogonal group  and the group of Euclidean motions.
-        The <term>special orthogonal group</term>,<idx><h>Group</h><h>special orthogonal</h></idx>
+        Dois dos outros grupos de matrizes ou relacionados a matrizes que consideraremos são o grupo ortogonal especial e o grupo dos movimentos euclidianos.
+        O <term>grupo ortogonal especial</term>,<idx><h>Grupo</h><h>ortogonal especial</h></idx>
         <m>SO(n)</m>,
-        is just the intersection of <m>O(n)</m> and <m>SL_n({\mathbb R})</m>;
-        that is, those elements in <m>O(n)</m> with determinant one.
+        é simplesmente a interseção de <m>O(n)</m> e <m>SL_n({\mathbb R})</m>;
+        isto é, os elementos de <m>O(n)</m> com determinante igual a um.
 
         <notation>
           <usage><m>SO(n)</m></usage>
-          <description>special orthogonal group</description>
+          <description>grupo ortogonal especial</description>
         </notation>
 
-        The <term>Euclidean group</term>,<idx><h>Euclidean group</h></idx><idx><h>Group</h><h>Euclidean</h></idx>
+        O <term>grupo euclidiano</term>,<idx><h>Grupo euclidiano</h></idx><idx><h>Grupo</h><h>euclidiano</h></idx>
         <m>E(n)</m>,
-        can be written as ordered pairs <m>(A, {\mathbf x})</m>,
-        where <m>A</m> is in <m>O(n)</m> and
-        <m>{\mathbf x}</m> is in <m>{\mathbb R}^n</m>.
-        We define multiplication by
+        pode ser escrito como pares ordenados <m>(A, {\mathbf x})</m>,
+        em que <m>A</m> pertence a <m>O(n)</m> e
+        <m>{\mathbf x}</m> pertence a <m>{\mathbb R}^n</m>.
+        Definimos a multiplicação por
 
         <notation>
           <usage><m>E(n)</m></usage>
-          <description>Euclidean group</description>
+          <description>grupo euclidiano</description>
         </notation>
 
         <md>
           (A, {\mathbf x}) (B, {\mathbf y}) = (AB, A {\mathbf y} +{\mathbf x})
         </md>.
-        The identity of the group is <m>(I,{\mathbf 0})</m>;
-        the inverse of <m>(A, {\mathbf x})</m> is <m>(A^{-1}, -A^{-1} {\mathbf x})</m>.
-        In <xref ref="matrix-exercise-en-group"/>,
-        you are asked to check that <m>E(n)</m> is indeed a group under this operation.
+        O elemento identidade do grupo é <m>(I,{\mathbf 0})</m>;
+        o inverso de <m>(A, {\mathbf x})</m> é <m>(A^{-1}, -A^{-1} {\mathbf x})</m>.
+        Em <xref ref="matrix-exercise-en-group"/>,
+        você deverá verificar que <m>E(n)</m> é de fato um grupo sob essa operação.
       </p>
 
 <!--
@@ -748,17 +748,17 @@
 -->
 
       <figure xml:id="matrix-figure-isometries">
-        <caption>Translations in <m>\mathbb R^2</m></caption>
+        <caption>Translações em <m>\mathbb R^2</m></caption>
         <sidebyside width="40%" margins="auto" valign="middle">
           <image xml:id="matrix-r2-translations-a">
-            <description>A set of axes with an arrow pointing up and right from the origin to a point x.</description>
+            <description>Um conjunto de eixos com uma seta apontando para cima e para a direita, da origem até um ponto x.</description>
               <latex-image>
                   <xi:include href="tikz/matrix-r2-translations-a.tex" parse="text"/>
               </latex-image>
           </image>
 
           <image xml:id="matrix-r2-translations-b">
-            <description>A set of axes with an arrow of the same length and same direction as in the previous diagram from a point to the right and above the origin to a point x + y.</description>
+            <description>Um conjunto de eixos com uma seta do mesmo comprimento e na mesma direção do diagrama anterior, de um ponto à direita e acima da origem até um ponto x + y.</description>
               <latex-image>
                   <xi:include href="tikz/matrix-r2-translations-b.tex" parse="text"/>
               </latex-image>
