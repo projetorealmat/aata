@@ -1108,38 +1108,38 @@
     <title>Sage</title>
     <introduction>
       <p>
-        Sage is able to create homomorphisms
-        (and by extension, isomorphisms and automorphisms)
-        between finite permutation groups.
-        There is a limited supply of commands then available to manipulate these functions,
-        but we can still illustrate many of the ideas in this chapter.
+        Sage é capaz de criar homomorfismos
+        (e, por extensão, isomorfismos e automorfismos)
+        entre grupos de permutações finitos.
+        Há uma quantidade limitada de comandos disponíveis para manipular essas funções,
+        mas ainda podemos ilustrar muitas das ideias deste capítulo.
       </p>
     </introduction>
 
     <subsection>
-      <title>Homomorphisms</title>
+      <title>Homomorfismos</title>
       <p>
-        The principal device for creating a homomorphism is to specify the specific images of the set of generators for the domain.
-        Consider cyclic groups of order <m>12</m> and <m>20</m>:
+        O principal recurso para criar um homomorfismo é especificar as imagens dos geradores do domínio.
+        Considere grupos cíclicos de ordens <m>12</m> e <m>20</m>:
         <md>
           <mrow>G &amp;= \{a^i\vert a^{12}=e\} &amp; H &amp;= \{x^i\vert x^{20}=e\}</mrow>
         </md>
-        and define a homomorphism by just defining the image of the generator of <m>G</m>,
-        and define the rest of the mapping by extending the mapping via the operation-preserving property of a homomorphism.
+        e defina um homomorfismo especificando apenas a imagem do gerador de <m>G</m>,
+        e defina o restante da aplicação estendendo-a por meio da propriedade de preservação da operação de um homomorfismo.
         <md>
           <mrow>\phi: G\rightarrow H, &amp;\quad\phi(a)=x^5</mrow>
           <mrow>\Rightarrow           &amp;\quad\phi(a^i) = \phi(a)^i = (x^5)^i = x ^{5i}</mrow>
         </md>
-        The constructor <c>PermutationGroupMorphism</c> requires the two groups,
-        then a list of images for each generator
-        (in order!),
-        and then will create the homomorphism.
-        Note that we can then use the result as a function.
-        In the example below,
-        we first verify that <c>C12</c> has a single generator
-        (no surprise there),
-        which we then send to a particular element of order <m>4</m> in the codomain.
-        Sage then constructs the unique homomorphism that is consistent with this requirement.
+        O construtor <c>PermutationGroupMorphism</c> requer os dois grupos,
+        depois uma lista das imagens de cada gerador
+        (na ordem!),
+        e então criará o homomorfismo.
+        Observe que podemos então usar o resultado como uma função.
+        No exemplo abaixo,
+        primeiro verificamos que <c>C12</c> tem um único gerador
+        (nenhuma surpresa),
+        que então enviamos para um elemento específico de ordem <m>4</m> no contradomínio.
+        Sage então constrói o único homomorfismo compatível com esse requisito.
       </p>
 
             <sage>
@@ -1205,16 +1205,16 @@
             </sage>
 
       <p>
-        Note that the element <c>c</c> must therefore be in the kernel of <c>phi</c>.
+        Observe que o elemento <c>c</c> deve, portanto, estar no núcleo de <c>phi</c>.
       </p>
 
       <p>
-        We can then compute the subgroup of the domain that is the kernel,
-        in this case a cyclic group of order <m>3</m> inside the cyclic group of order <m>12</m>.
-        We can compute the image of <em>any</em> subgroup,
-        but here we will build the whole homomorphic image by supplying the whole domain to the <c>.image()</c> method.
-        Here the image is a cyclic subgroup of order <m>4</m> inside the cyclic group of order <m>20</m>.
-        Then we can verify the First Isomorphism Theorem.
+        Podemos então calcular o subgrupo do domínio que é o núcleo,
+        neste caso, um grupo cíclico de ordem <m>3</m> dentro do grupo cíclico de ordem <m>12</m>.
+        Podemos calcular a imagem de <em>qualquer</em> subgrupo,
+        mas aqui construiremos a imagem homomórfica inteira fornecendo o domínio inteiro ao método <c>.image()</c>.
+        Aqui, a imagem é um subgrupo cíclico de ordem <m>4</m> dentro do grupo cíclico de ordem <m>20</m>.
+        Então podemos verificar o Primeiro Teorema do Isomorfismo.
       </p>
 
             <sage>
@@ -1245,24 +1245,24 @@
             </sage>
 
       <p>
-        Here is a slightly more complicated example.
-        The dihedral group <m>D_{20}</m> is the symmetry group of a <m>20</m>-gon.
-        Inside this group is a subgroup that is isomorphic to the symmetry group of a <m>5</m>-gon
-        (pentagon).
-        Is this a surprise, or is this obvious?
-        Here is a way to make precise the statement
-        <q><m>D_{20}</m> contains a copy of <m>D_{5}</m>.</q>
+        Eis um exemplo um pouco mais complicado.
+        O grupo diedral <m>D_{20}</m> é o grupo de simetrias de um <m>20</m>-gono.
+        Dentro desse grupo há um subgrupo isomorfo ao grupo de simetrias de um <m>5</m>-gono
+        (pentágono).
+        Isso é uma surpresa ou é óbvio?
+        Eis uma maneira de tornar precisa a afirmação
+        <q><m>D_{20}</m> contém uma cópia de <m>D_{5}</m>.</q>
       </p>
 
       <p>
-        We build the domain and find its generators,
-        so we know how many images to supply in the definition of the homomorphism.
-        Then we construct the codomain,
-        from which we will construct images.
-        Our choice here is to send a reflection to a reflection,
-        and a rotation to a rotation.
-        But the rotations will both have order <m>5</m>,
-        and both are a rotation by <m>72</m> degrees.
+        Construímos o domínio e encontramos seus geradores,
+        assim sabemos quantas imagens fornecer na definição do homomorfismo.
+        Então construímos o contradomínio,
+        a partir do qual construiremos as imagens.
+        Nossa escolha aqui é levar uma reflexão a uma reflexão,
+        e uma rotação a uma rotação.
+        Mas ambas as rotações terão ordem <m>5</m>,
+        e cada uma é uma rotação de <m>72</m> graus.
       </p>
 
             <sage>
@@ -1297,11 +1297,11 @@
             </sage>
 
       <p>
-        Since the kernel is trivial, <c>rho</c> is a one-to-one function
-        (see <xref ref="homomorph-exercise-trivial-kernel"/>).
-        But more importantly, by the First Isomorphishm Theorem,
-        <c>G</c> is isomorphic to the image of the homomorphism.
-        We compute the image and check the claim.
+        Como o núcleo é trivial, <c>rho</c> é uma função injetiva
+        (veja <xref ref="homomorph-exercise-trivial-kernel"/>).
+        Mas, mais importante, pelo Primeiro Teorema do Isomorfismo,
+        <c>G</c> é isomorfo à imagem do homomorfismo.
+        Calculamos a imagem e verificamos a afirmação.
       </p>
 
             <sage>
@@ -1331,19 +1331,19 @@
             </sage>
 
       <p>
-        Just providing a list of images for the generators of the domain is no guarantee that the function will extend to a homomorphism.
-        For starters,
-        the order of each image must divide the order of the corresponding preimage. (Can you prove this?) And similarly,
-        if the domain is abelian, then the image must also be abelian,
-        so in this case the list of images should not generate a non-abelian subgroup.
-        Here is an example.
-        There are no homomorphisms from a cyclic group of order <m>7</m> to a cyclic group of order <m>4</m>
-        (other than the trivial function that takes every element to the identity).
-        To see this, consider the possible orders of the kernel,
-        and of the two possibilities,
-        see that one is impossible and the other arises with the trivial homomorphism.
-        Unfortunately, Sage acts as if nothing is wrong in creating a homomorphism between these groups,
-        but what Sage builds is useless and raises errors when you try to use it.
+        Fornecer apenas uma lista de imagens para os geradores do domínio não garante que a função se estenda a um homomorfismo.
+        Antes de tudo,
+        a ordem de cada imagem deve dividir a ordem da pré-imagem correspondente. (Você consegue provar isso?) E, de modo semelhante,
+        se o domínio for abeliano, então a imagem também deverá ser abeliana,
+        portanto, neste caso, a lista de imagens não deve gerar um subgrupo não abeliano.
+        Eis um exemplo.
+        Não existem homomorfismos de um grupo cíclico de ordem <m>7</m> para um grupo cíclico de ordem <m>4</m>
+        (além da função trivial que leva todo elemento à identidade).
+        Para ver isso, considere as ordens possíveis do núcleo,
+        e, entre as duas possibilidades,
+        veja que uma é impossível e a outra ocorre com o homomorfismo trivial.
+        Infelizmente, Sage age como se não houvesse nada de errado ao criar um homomorfismo entre esses grupos,
+        mas o que Sage constrói é inútil e gera erros quando você tenta usá-lo.
       </p>
 
             <sage>
@@ -1374,20 +1374,20 @@
             </sage>
 
       <p>
-        Rather than creating homomorphisms ourselves,
-        in certain situations Sage knows of the existence of natural homomorphisms and will create them for you.
-        One such case is a direct product construction.
-        Given a group <c>G</c>,
-        the method <c>.direct_product(H)</c> will create the direct product
-        <m>G\times H</m>. (This is not the same command as the function <c>direct_product_permgroups()</c> from before.) Not only does this command create the direct product,
-        but it also builds <em>four</em>
-        homomorphisms, one with domain <m>G</m>,
-        one with domain <m>H</m> and two with domain <m>G\times H</m>.
-        So the output consists of five objects,
-        the first being the actual group,
-        and the remainder are homomorphisms.
-        We will demonstrate the call here,
-        and leave a more thorough investigation for the exercises.
+        Em vez de criarmos homomorfismos por conta própria,
+        em certas situações Sage conhece a existência de homomorfismos naturais e os criará para você.
+        Um desses casos é a construção de produto direto.
+        Dado um grupo <c>G</c>,
+        o método <c>.direct_product(H)</c> criará o produto direto
+        <m>G\times H</m>. (Este não é o mesmo comando que a função <c>direct_product_permgroups()</c> usada anteriormente.) Não apenas esse comando cria o produto direto,
+        como também constrói <em>quatro</em>
+        homomorfismos, um com domínio <m>G</m>,
+        um com domínio <m>H</m> e dois com domínio <m>G\times H</m>.
+        Assim, a saída consiste em cinco objetos,
+        o primeiro sendo o grupo propriamente dito,
+        e os restantes sendo homomorfismos.
+        Demonstraremos a chamada aqui,
+        e deixaremos uma investigação mais completa para os exercícios.
       </p>
 
             <sage>
@@ -1453,17 +1453,17 @@
   </section>
 
   <exercises xml:id="homomorph-sage-exercises" component="sage-exercises">
-    <title>Sage Exercises</title>
+    <title>Exercícios do Sage</title>
 
     <exercise number="1" xml:id="homomorph-sage-exercise-automorphism">
       <statement>
         <p>
-          An automorphism is an isomorphism between a group and itself.
-          The identity function (<m>x\mapsto x</m>) is always an isomorphism,
-          which we consider trivial.
-          Use Sage to construct a nontrivial automorphism of the cyclic group of order <m>12</m>.
-          Check that the mapping is both onto and one-to-one by computing the image and kernel and performing the proper tests on these subgroups.
-          Now construct all of the possible automorphisms of the cyclic group of order <m>12</m> without any duplicates.
+          Um automorfismo é um isomorfismo entre um grupo e ele mesmo.
+          A função identidade (<m>x\mapsto x</m>) é sempre um isomorfismo,
+          que consideramos trivial.
+          Use o Sage para construir um automorfismo não trivial do grupo cíclico de ordem <m>12</m>.
+          Verifique que a aplicação é sobrejetiva e injetiva calculando a imagem e o núcleo e realizando os testes adequados nesses subgrupos.
+          Agora construa todos os automorfismos possíveis do grupo cíclico de ordem <m>12</m> sem duplicatas.
         </p>
       </statement>
     </exercise>
@@ -1471,19 +1471,19 @@
     <exercise number="2" xml:id="homomorph-sage-exercise-GxH">
       <statement>
         <p>
-          The four homomorphisms created by the direct product construction are each an example of a more general construction of homomorphisms involving groups <m>G</m>,
-          <m>H</m> and <m>G\times H</m>.
-          By using the same groups as in the example in the previous subsection,
-          see if you can discover and describe these constructions with exact definitions of the four homomorphisms in general.
+          Os quatro homomorfismos criados pela construção de produto direto são, cada um, um exemplo de uma construção mais geral de homomorfismos envolvendo os grupos <m>G</m>,
+          <m>H</m> e <m>G\times H</m>.
+          Usando os mesmos grupos do exemplo da subseção anterior,
+          veja se consegue descobrir e descrever essas construções com definições exatas dos quatro homomorfismos em geral.
         </p>
 
         <p>
-          Your tools for investigating a Sage group homomorphism are limited,
-          you might take each generator of the domain and see what its image is.
-          Here is an example of the type of computation you might do repeatedly.
-          We'll investigate the second homomorphism.
-          The domain is the dihedral group,
-          and we will compute the image of the first generator.
+          Suas ferramentas para investigar um homomorfismo de grupos do Sage são limitadas,
+          você pode considerar cada gerador do domínio e verificar qual é sua imagem.
+          Eis um exemplo do tipo de cálculo que você poderia repetir várias vezes.
+          Investigaremos o segundo homomorfismo.
+          O domínio é o grupo diedral,
+          e calcularemos a imagem do primeiro gerador.
         </p>
 
                 <sage>
@@ -1520,13 +1520,13 @@
     <exercise number="3" xml:id="homomorph-sage-exercise-S7-S12">
       <statement>
         <p>
-          Consider two permutation groups.
-          The first is the subgroup of <m>S_7</m> generated by
-          <m>(1, 2, 3)</m> and <m>(4, 5, 6, 7)</m>.
-          The second is a subgroup of <m>S_{12}</m> generated by
-          <m>(1, 2, 3)(4, 5, 6)(7, 8, 9)(10, 11, 12)</m> and <m>(1, 10, 7, 4)(2, 11, 8, 5)(3, 12, 9, 6)</m>.
-          Build these two groups and use the proper Sage command to see that they are isomorphic.
-          Then construct a homomorphism between these two groups that is an isomorphism and include enough details to verify that the mapping is really an isomorphism.
+          Considere dois grupos de permutações.
+          O primeiro é o subgrupo de <m>S_7</m> gerado por
+          <m>(1, 2, 3)</m> e <m>(4, 5, 6, 7)</m>.
+          O segundo é um subgrupo de <m>S_{12}</m> gerado por
+          <m>(1, 2, 3)(4, 5, 6)(7, 8, 9)(10, 11, 12)</m> e <m>(1, 10, 7, 4)(2, 11, 8, 5)(3, 12, 9, 6)</m>.
+          Construa esses dois grupos e use o comando apropriado do Sage para verificar que são isomorfos.
+          Em seguida, construa um homomorfismo entre esses dois grupos que seja um isomorfismo e inclua detalhes suficientes para verificar que a aplicação é realmente um isomorfismo.
         </p>
       </statement>
     </exercise>
@@ -1534,19 +1534,19 @@
     <exercise number="4" xml:id="homomorph-sage-exercise-Sn-Z2">
       <statement>
         <p>
-          The second paragraph of this chapter informally describes a homomorphism from <m>S_n</m> to <m>{\mathbb Z}_2</m>,
-          where the even permutations all map to one of the elements and the odd permutations all map to the other element.
-          Replace <m>S_n</m> by <m>S_6</m> and replace
-          <m>{\mathbb Z}_2</m> by the permutation version of the cyclic subgroup of order <m>2</m>,
-          and construct a nontrivial homomorphism between these two groups.
-          Evaluate your homomorphism with enough even and odd permutations to be convinced that it is correct.
-          Then construct the kernel and verify that it is the group you expect.
+          O segundo parágrafo deste capítulo descreve informalmente um homomorfismo de <m>S_n</m> para <m>{\mathbb Z}_2</m>,
+          no qual todas as permutações pares são levadas a um dos elementos e todas as permutações ímpares ao outro elemento.
+          Substitua <m>S_n</m> por <m>S_6</m> e substitua
+          <m>{\mathbb Z}_2</m> pela versão como grupo de permutações do subgrupo cíclico de ordem <m>2</m>,
+          e construa um homomorfismo não trivial entre esses dois grupos.
+          Avalie seu homomorfismo com permutações pares e ímpares suficientes para se convencer de que está correto.
+          Em seguida, construa o núcleo e verifique que ele é o grupo esperado.
         </p>
 
         <p>
-          Hints: First,
-          decide which elements of the group of order <m>2</m> will be associated with even permutations and which will be associated with odd permutations.
-          Then examine the generators of <m>S_6</m> to help decide just how to build the homomorphism.
+          Dicas: primeiro,
+          decida quais elementos do grupo de ordem <m>2</m> serão associados às permutações pares e quais serão associados às permutações ímpares.
+          Depois examine os geradores de <m>S_6</m> para ajudar a decidir exatamente como construir o homomorfismo.
         </p>
       </statement>
     </exercise>
@@ -1554,13 +1554,13 @@
     <exercise number="5" xml:id="homomorph-sage-exercise-D20">
       <statement>
         <p>
-          The dihedral group <m>D_{20}</m> has several normal subgroups,
-          as seen below.
-          Each of these is the kernel of a homomorphism with <m>D_{20}</m> as the domain.
-          For each normal subgroup of <m>D_{20}</m> construct a homomorphism from <m>D_{20}</m> to <m>D_{20}</m> that has the normal subgroup as the kernel.
-          Include in your work verifications that you are creating the desired kernels.
-          There is a pattern to many of these,
-          but the three of order <m>20</m> will be a challenge.
+          O grupo diedral <m>D_{20}</m> possui vários subgrupos normais,
+          como se vê abaixo.
+          Cada um deles é o núcleo de um homomorfismo que tem <m>D_{20}</m> como domínio.
+          Para cada subgrupo normal de <m>D_{20}</m>, construa um homomorfismo de <m>D_{20}</m> para <m>D_{20}</m> que tenha o subgrupo normal como núcleo.
+          Inclua no seu trabalho verificações de que está construindo os núcleos desejados.
+          Há um padrão em muitos deles,
+          mas os três de ordem <m>20</m> serão um desafio.
         </p>
 
                 <sage>
