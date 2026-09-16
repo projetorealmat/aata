@@ -802,7 +802,7 @@
     <exercise label="rq-cyclic-U20">
       <statement>
         <p>
-          What is the order of the element <m>3</m> in <m>U(20)</m>?
+          Qual é a ordem do elemento <m>3</m> em <m>U(20)</m>?
         </p>
       </statement>
       <response/>
@@ -811,7 +811,7 @@
     <exercise label="rq-cyclic-U23">
       <statement>
         <p>
-          What is the order of the element <m>5</m> in <m>U(23)</m>?
+          Qual é a ordem do elemento <m>5</m> em <m>U(23)</m>?
         </p>
       </statement>
       <response/>
@@ -820,7 +820,7 @@
     <exercise label="rq-cyclic-Z8">
       <statement>
         <p>
-          Find three generators of <m>\mathbb Z_8</m>.
+          Encontre três geradores de <m>\mathbb Z_8</m>.
         </p>
       </statement>
       <response/>
@@ -829,7 +829,7 @@
     <exercise label="rq-cyclic-roots-of-unity">
       <statement>
         <p>
-          Find three generators of the 5th roots of unity.
+          Encontre três geradores das raízes quintas da unidade.
         </p>
       </statement>
       <response/>
@@ -838,8 +838,8 @@
     <exercise label="rq-cyclic-repeated-squares">
       <statement>
         <p>
-          Show how to compute <m>15^{40}\pmod{23}</m> efficiently by hand.
-          Check your answer with Sage.
+          Mostre como calcular <m>15^{40}\pmod{23}</m> manualmente, de forma eficiente.
+          Confira sua resposta com o Sage.
         </p>
       </statement>
       <response/>
