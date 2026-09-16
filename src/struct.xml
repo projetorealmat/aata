@@ -826,7 +826,7 @@
     <exercise label="rq-struct-200">
       <statement>
         <p>
-          How many abelian groups are there of order <m>200 = 2^3 5^2</m>?
+          Quantos grupos abelianos existem de ordem <m>200 = 2^3 5^2</m>?
         </p>
       </statement>
       <response/>
@@ -835,7 +835,7 @@
     <exercise label="rq-struct-729">
       <statement>
         <p>
-          How many abelian groups are there of order <m>729=3^6</m>?
+          Quantos grupos abelianos existem de ordem <m>729=3^6</m>?
         </p>
       </statement>
       <response/>
@@ -844,7 +844,7 @@
     <exercise label="rq-struct-subgroup-order6">
       <statement>
         <p>
-          Find a subgroup of order 6 in <m>\mathbb Z_8\times\mathbb Z_3\times\mathbb Z_3</m>.
+          Encontre um subgrupo de ordem 6 em <m>\mathbb Z_8\times\mathbb Z_3\times\mathbb Z_3</m>.
         </p>
       </statement>
       <response/>
@@ -853,9 +853,9 @@
     <exercise label="rq-struct-72">
       <statement>
         <p>
-          It can be shown that an abelian group of order <m>72</m> contains a subgroup of order <m>8</m>.
-          What
-          are the possibilities for this subgroup?
+          Pode-se mostrar que um grupo abeliano de ordem <m>72</m> contém um subgrupo de ordem <m>8</m>.
+          Quais
+          são as possibilidades para esse subgrupo?
         </p>
       </statement>
       <response/>
@@ -864,8 +864,8 @@
     <exercise label="rq-struct-principal-series">
       <statement>
         <p>
-          What is a principal series of the group <m>G</m>?
-          Your answer should not use new terms defined in this chapter.
+          O que é uma série principal do grupo <m>G</m>?
+          Sua resposta não deve usar novos termos definidos neste capítulo.
         </p>
       </statement>
       <response/>
@@ -876,17 +876,17 @@
     <!-- File: struct.xml  -->
     <!-- Title: The Structure of Groups -->
   <exercises xml:id="struct-exercises" filenamebase="struct">
-    <title>Exercises</title>
+    <title>Exercícios</title>
 
     <exercise number="1" xml:id="struct-exercise-order-40">
       <statement>
         <p>
-          Find all of the abelian groups of order less than or equal to <m>40</m> up to isomorphism.
+          Encontre todos os grupos abelianos de ordem menor ou igual a <m>40</m>, a menos de isomorfismo.
         </p>
       </statement>
       <hint>
         <p>
-          There are three possible groups.
+          Há três grupos possíveis.
         </p>
       </hint>
     </exercise>
@@ -894,7 +894,7 @@
     <exercise number="2" xml:id="struct-exercise-order-200">
       <statement>
         <p>
-          Find all of the abelian groups of order <m>200</m> up to isomorphism.
+          Encontre todos os grupos abelianos de ordem <m>200</m>, a menos de isomorfismo.
         </p>
       </statement>
     </exercise>
@@ -902,7 +902,7 @@
     <exercise number="3" xml:id="struct-exercise-order-729">
       <statement>
         <p>
-          Find all of the abelian groups of order <m>720</m> up to isomorphism.
+          Encontre todos os grupos abelianos de ordem <m>720</m>, a menos de isomorfismo.
         </p>
       </statement>
     </exercise>
@@ -910,7 +910,7 @@
     <exercise number="4" xml:id="struct-exercise-composition-series">
       <statement>
         <p>
-          Find all of the composition series for each of the following groups.
+          Encontre todas as séries de composição para cada um dos grupos a seguir.
 
           <ol cols="2">
             <li>
@@ -927,7 +927,7 @@
 
             <li>
               <p>
-                The quaternions, <m>Q_8</m>
+                Os quatérnios, <m>Q_8</m>
               </p>
             </li>
 
@@ -973,7 +973,7 @@
     <exercise number="5" xml:id="struct-exercise-infinite-direct-product">
       <statement>
         <p>
-          Show that the infinite direct product
+          Mostre que o produto direto infinito
           <m>G = {\mathbb Z}_2 \times {\mathbb Z}_2 \times \cdots</m> is not finitely generated.
         </p>
       </statement>
@@ -982,9 +982,9 @@
     <exercise number="6" xml:id="struct-exercise-abelian-group-subgroup">
       <statement>
         <p>
-          Let <m>G</m> be an abelian group of order <m>m</m>.
-          If <m>n</m> divides <m>m</m>,
-          prove that <m>G</m> has a subgroup of order <m>n</m>.
+          Seja <m>G</m> um grupo abeliano de ordem <m>m</m>.
+          Se <m>n</m> divide <m>m</m>,
+          prove que <m>G</m> tem um subgrupo de ordem <m>n</m>.
         </p>
       </statement>
     </exercise>
@@ -994,14 +994,14 @@
     <exercise number="7" xml:id="struct-exercise-torsion-group">
       <statement>
         <p>
-          A group <m>G</m> is a <term>torsion group</term>
-          if every element of <m>G</m> has finite order.
-          Prove that a finitely generated abelian torsion group must be finite.
+          Um grupo <m>G</m> é um <term>grupo de torção</term>
+          se todo elemento de <m>G</m> tem ordem finita.
+          Prove que um grupo abeliano de torção finitamente gerado deve ser finito.
         </p>
       </statement>
       <hint>
         <p>
-          Use the Fundamental Theorem of Finitely Generated Abelian Groups.
+          Use o Teorema Fundamental dos Grupos Abelianos Finitamente Gerados.
         </p>
       </hint>
     </exercise>
@@ -1011,10 +1011,10 @@
     <exercise number="8" xml:id="struct-exercise-finitely-generated-abelian-group">
       <statement>
         <p>
-          Let <m>G</m>,
-          <m>H</m>, and <m>K</m> be finitely generated abelian groups.
-          Show that if <m>G \times H \cong G \times K</m>, then <m>H \cong K</m>.
-          Give a counterexample to show that this cannot be true in general.
+          Sejam <m>G</m>,
+          <m>H</m> e <m>K</m> sejam grupos abelianos finitamente gerados.
+          Mostre que, se <m>G \times H \cong G \times K</m>, então <m>H \cong K</m>.
+          Dê um contraexemplo que mostre que isso não é verdadeiro em geral.
         </p>
       </statement>
     </exercise>
@@ -1022,8 +1022,8 @@
     <exercise number="9" xml:id="struct-exercise-GxH-solvable">
       <statement>
         <p>
-          Let <m>G</m> and <m>H</m> be solvable groups.
-          Show that <m>G \times H</m> is also solvable.
+          Sejam <m>G</m> e <m>H</m> grupos solúveis.
+          Mostre que <m>G \times H</m> também é solúvel.
         </p>
       </statement>
     </exercise>
@@ -1031,8 +1031,8 @@
     <exercise number="10" xml:id="struct-exercise-composition-principal-series">
       <statement>
         <p>
-          If <m>G</m> has a composition (principal) series and if <m>N</m> is a proper normal subgroup of <m>G</m>,
-          show there exists a composition (principal) series containing <m>N</m>.
+          Se <m>G</m> possui uma série de composição (principal) e <m>N</m> é um subgrupo normal próprio de <m>G</m>,
+          mostre que existe uma série de composição (principal) contendo <m>N</m>.
         </p>
       </statement>
     </exercise>
@@ -1042,9 +1042,9 @@
     <exercise number="11" xml:id="struct-exercise-N-GmodN-comp-series">
       <statement>
         <p>
-          Prove or disprove: Let <m>N</m> be a normal subgroup of <m>G</m>.
-          If <m>N</m> and <m>G/N</m> have composition series,
-          then <m>G</m> must also have a composition series.
+          Prove ou refute: seja <m>N</m> um subgrupo normal de <m>G</m>.
+          Se <m>N</m> e <m>G/N</m> possuem séries de composição,
+          então <m>G</m> também deve possuir uma série de composição.
         </p>
       </statement>
     </exercise>
@@ -1054,15 +1054,15 @@
     <exercise number="12" xml:id="struct-exercise-N-normal-solvable">
       <statement>
         <p>
-          Let <m>N</m> be a normal subgroup of <m>G</m>.
-          If <m>N</m> and <m>G/N</m> are solvable groups,
-          show that <m>G</m> is also a solvable group.
+          Seja <m>N</m> um subgrupo normal de <m>G</m>.
+          Se <m>N</m> e <m>G/N</m> são grupos solúveis,
+          mostre que <m>G</m> também é um grupo solúvel.
         </p>
       </statement>
       <hint>
         <p>
-          If <m>N</m> and <m>G/N</m> are solvable,
-          then they have solvable series
+          Se <m>N</m> e <m>G/N</m> são solúveis,
+          então eles têm séries solúveis
           <md>
             <mrow>N = N_n \supset N_{n - 1} \supset \cdots \supset N_1 \supset N_0 = \{ e \}</mrow>
             <mrow>G/N = G_n/N \supset G_{n - 1}/N \supset \cdots G_1/N \supset G_0/N = \{ N \}</mrow>
@@ -1074,12 +1074,12 @@
     <exercise number="13" xml:id="struct-exercise-solvable-series">
       <statement>
         <p>
-          Prove that <m>G</m> is a solvable group if and only if <m>G</m> has a series of subgroups
+          Prove que <m>G</m> é um grupo solúvel se, e somente se, <m>G</m> possui uma série de subgrupos
           <md>
             G = P_n \supset P_{n - 1} \supset \cdots \supset P_1 \supset P_0 = \{ e \}
           </md>
-          where <m>P_i</m> is normal in
-          <m>P_{i + 1}</m> and the order of <m>P_{i + 1} / P_i</m> is prime.
+          em que <m>P_i</m> é normal em
+          <m>P_{i + 1}</m> e a ordem de <m>P_{i + 1} / P_i</m> é prima.
         </p>
       </statement>
     </exercise>
@@ -1089,8 +1089,8 @@
     <exercise number="14" xml:id="struct-exercise-subgroup-solvable">
       <statement>
         <p>
-          Let <m>G</m> be a solvable group.
-          Prove that any subgroup of <m>G</m> is also solvable.
+          Seja <m>G</m> um grupo solúvel.
+          Prove que qualquer subgrupo de <m>G</m> também é solúvel.
         </p>
       </statement>
     </exercise>
@@ -1098,8 +1098,8 @@
     <exercise number="15" xml:id="struct-exercise-Gmod-solvable">
       <statement>
         <p>
-          Let <m>G</m> be a solvable group and <m>N</m> a normal subgroup of <m>G</m>.
-          Prove that <m>G/N</m> is solvable.
+          Seja <m>G</m> um grupo solúvel e <m>N</m> um subgrupo normal de <m>G</m>.
+          Prove que <m>G/N</m> é solúvel.
         </p>
       </statement>
     </exercise>
@@ -1107,12 +1107,12 @@
     <exercise number="16" xml:id="struct-exercise-Dn-solvable">
       <statement>
         <p>
-          Prove that <m>D_n</m> is solvable for all integers <m>n</m>.
+          Prove que <m>D_n</m> é solúvel para todo inteiro <m>n</m>.
         </p>
       </statement>
       <hint>
         <p>
-          Use the fact that <m>D_n</m> has a cyclic subgroup of index <m>2</m>.
+          Use o fato de que <m>D_n</m> possui um subgrupo cíclico de índice <m>2</m>.
         </p>
       </hint>
     </exercise>
@@ -1122,9 +1122,9 @@
     <exercise number="17" xml:id="struct-exercise-G-compostion-series">
       <statement>
         <p>
-          Suppose that <m>G</m> has a composition series.
-          If <m>N</m> is a normal subgroup of <m>G</m>,
-          show that <m>N</m> and <m>G/N</m> also have composition series.
+          Suponha que <m>G</m> possua uma série de composição.
+          Se <m>N</m> é um subgrupo normal de <m>G</m>,
+          mostre que <m>N</m> e <m>G/N</m> também possuem séries de composição.
         </p>
       </statement>
     </exercise>
@@ -1134,8 +1134,8 @@
     <exercise number="18" xml:id="struct-exercise-cyclic">
       <statement>
         <p>
-          Let <m>G</m> be a cyclic <m>p</m>-group with subgroups <m>H</m> and <m>K</m>.
-          Prove that either <m>H</m> is contained in <m>K</m> or <m>K</m> is contained in <m>H</m>.
+          Seja <m>G</m> um <m>p</m>-grupo cíclico com subgrupos <m>H</m> e <m>K</m>.
+          Prove que ou <m>H</m> está contido em <m>K</m>, ou <m>K</m> está contido em <m>H</m>.
         </p>
       </statement>
     </exercise>
@@ -1145,8 +1145,8 @@
     <exercise number="19" xml:id="struct-exercise-G-solvable-normal-abelian-subgroup">
       <statement>
         <p>
-          Suppose that <m>G</m> is a solvable group with order <m>n \geq 2</m>.
-          Show that <m>G</m> contains a normal nontrivial abelian subgroup.
+          Suponha que <m>G</m> seja um grupo solúvel de ordem <m>n \geq 2</m>.
+          Mostre que <m>G</m> contém um subgrupo normal abeliano não trivial.
         </p>
       </statement>
     </exercise>
@@ -1156,28 +1156,28 @@
     <exercise number="20" xml:id="struct-exercise-commutator-subgroup">
       <statement>
         <p>
-          Recall that the <term>commutator subgroup</term>
-          <m>G'</m> of a group <m>G</m> is defined as the subgroup of <m>G</m> generated by elements of the form
+          Relembre que o <term>subgrupo comutador</term>
+          <m>G'</m> de um grupo <m>G</m> é definido como o subgrupo de <m>G</m> gerado pelos elementos da forma
           <m>a^{-1} b ^{-1} ab</m> for <m>a, b \in G</m>.
-          We can define a series of subgroups of <m>G</m> by <m>G^{(0)} = G</m>,
+          Podemos definir uma série de subgrupos de <m>G</m> por <m>G^{(0)} = G</m>,
           <m>G^{(1)} = G'</m>, and <m>G^{(i + 1)} = (G^{(i)})'</m>.
 
           <ol>
             <li>
               <p>
-                Prove that <m>G^{(i+1)}</m> is normal in <m>(G^{(i)})'</m>.
-                The series of subgroups
+                Prove que <m>G^{(i+1)}</m> é normal em <m>(G^{(i)})'</m>.
+                A série de subgrupos
                 <md>
                   G^{(0)} = G \supset G^{(1)} \supset G^{(2)} \supset \cdots
                 </md>
-                is called the <term>derived series</term> of <m>G</m>.
+                é chamada de <term>série derivada</term> de <m>G</m>.
               </p>
             </li>
 
             <li>
               <p>
-                Show that <m>G</m> is solvable if and only if
-                <m>G^{(n)} = \{ e \}</m> for some integer <m>n</m>.
+                Mostre que <m>G</m> é solúvel se, e somente se,
+                <m>G^{(n)} = \{ e \}</m> para algum inteiro <m>n</m>.
               </p>
             </li>
           </ol>
@@ -1190,13 +1190,13 @@
     <exercise number="21" xml:id="struct-exercise-abelian-factor-group">
       <statement>
         <p>
-          Suppose that <m>G</m> is a solvable group with order <m>n \geq 2</m>.
-          Show that <m>G</m> contains a normal nontrivial abelian factor group.
+          Suponha que <m>G</m> seja um grupo solúvel de ordem <m>n \geq 2</m>.
+          Mostre que <m>G</m> contém um grupo quociente normal abeliano não trivial.
         </p>
       </statement>
       <hint>
         <p>
-          <m>G/G'</m> is abelian.
+          <m>G/G'</m> é abeliano.
         </p>
       </hint>
     </exercise>
@@ -1204,23 +1204,23 @@
     <!--Todo Expand solution.-->
 
     <exercise number="22" xml:id="struct-exercise-zassenhaus">
-      <title>Zassenhaus Lemma</title>
+      <title>Lema de Zassenhaus</title>
       <statement>
         <p>
-          Let <m>H</m> and <m>K</m> be subgroups of a group <m>G</m>.
-          Suppose also that <m>H^*</m> and <m>K^*</m> are normal subgroups of <m>H</m> and <m>K</m> respectively.
-          Then
+          Sejam <m>H</m> e <m>K</m> subgrupos de um grupo <m>G</m>.
+          Suponha também que <m>H^*</m> e <m>K^*</m> sejam subgrupos normais de <m>H</m> e <m>K</m>, respectivamente.
+          Então
 
           <ol>
             <li>
               <p>
-                <m>H^* ( H \cap K^*)</m> is a normal subgroup of <m>H^* ( H \cap K)</m>.
+                <m>H^* ( H \cap K^*)</m> é um subgrupo normal de <m>H^* ( H \cap K)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                <m>K^* ( H^* \cap K)</m> is a normal subgroup of <m>K^* ( H \cap K)</m>.
+                <m>K^* ( H^* \cap K)</m> é um subgrupo normal de <m>K^* ( H \cap K)</m>.
               </p>
             </li>
 
@@ -1235,10 +1235,10 @@
     </exercise>
 
     <exercise number="23" xml:id="struct-exercise-schreir">
-      <title>Schreier's Theorem</title>
+      <title>Teorema de Schreier</title>
       <statement>
         <p>
-          Use the Zassenhaus Lemma to prove that two subnormal (normal) series of a group <m>G</m> have isomorphic refinements.
+          Use o Lema de Zassenhaus para provar que duas séries subnormais (normais) de um grupo <m>G</m> têm refinamentos isomorfos.
         </p>
       </statement>
     </exercise>
@@ -1246,7 +1246,7 @@
     <exercise number="24" xml:id="struct-exercise-jordan-holder">
       <statement>
         <p>
-          Use Schreier's Theorem to prove the Jordan-Hölder Theorem.
+          Use o Teorema de Schreier para provar o Teorema de Jordan-Hölder.
         </p>
       </statement>
     </exercise>
