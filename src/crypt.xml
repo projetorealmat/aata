@@ -793,45 +793,45 @@
 
   </exercises>
   <exercises xml:id="crypt-exercises-additional">
-    <title>Additional Exercises: Primality and Factoring</title>
+    <title>Exercícios adicionais: primalidade e fatoração</title>
     <p>
-      In the <acro>RSA</acro> cryptosystem it is important to be able to find large prime numbers easily.
-      Also, this cryptosystem is not secure if we can factor a composite number that is the product of two large primes.
-      The solutions to both of these problems are quite easy.
-      To find out if a number <m>n</m> is prime or to factor <m>n</m>,
-      we can use trial division.
-      We simply divide <m>n</m> by <m>d = 2, 3, \ldots, \sqrt{n}</m>.
-      Either a factorization will be obtained,
-      or <m>n</m> is prime if no <m>d</m> divides <m>n</m>.
-      The problem is that such a computation is prohibitively time-consuming if <m>n</m> is very large.
+      No criptossistema <acro>RSA</acro>, é importante conseguir encontrar facilmente números primos grandes.
+      Além disso, esse criptossistema não é seguro se pudermos fatorar um número composto que seja produto de dois primos grandes.
+      As soluções para ambos os problemas são bastante simples.
+      Para descobrir se um número <m>n</m> é primo ou para fatorar <m>n</m>,
+      podemos usar a divisão por tentativa.
+      Simplesmente dividimos <m>n</m> por <m>d = 2, 3, \ldots, \sqrt{n}</m>.
+      Ou obtemos uma fatoração,
+      ou <m>n</m> é primo se nenhum <m>d</m> dividir <m>n</m>.
+      O problema é que esse cálculo consome tempo proibitivo quando <m>n</m> é muito grande.
     </p>
 
     <exercise xml:id="crypt-exercise-fermats-factorization-algorithm">
       <statement>
         <p>
-          A better algorithm for factoring odd positive integers is
-          <idx><h>Fermat's factorization algorithm</h></idx><term>Fermat's factorization algorithm</term>.
+          Um algoritmo melhor para fatorar inteiros positivos ímpares é o
+          <idx><h>algoritmo de fatoração de Fermat</h></idx><term>algoritmo de fatoração de Fermat</term>.
         </p>
 
         <ol>
           <li>
             <p>
-              Let <m>n= ab</m> be an odd composite number.
-              Prove that <m>n</m> can be written as the difference of two perfect squares:
+              Seja <m>n= ab</m> um número composto ímpar.
+              Prove que <m>n</m> pode ser escrito como a diferença de dois quadrados perfeitos:
               <md>
                 n = x^2 - y^2 = (x - y)(x + y)
               </md>.
-              Consequently,
-              a positive odd integer can be factored exactly when we can find integers <m>x</m> and <m>y</m> such that <m>n = x^2 - y^2</m>.
+              Consequentemente,
+              um inteiro positivo ímpar pode ser fatorado exatamente quando conseguimos encontrar inteiros <m>x</m> e <m>y</m> tais que <m>n = x^2 - y^2</m>.
             </p>
           </li>
 
           <li>
             <p>
-              Write a program to implement the following factorization algorithm based on the observation in part (a).
-              The expression <c>ceiling(sqrt(n))</c> means the smallest integer greater than or equal to the square root of <m>n</m>.
-              Write another program to do factorization using trial division and compare the speed of the two algorithms.
-              Which algorithm is faster and why?
+              Escreva um programa para implementar o seguinte algoritmo de fatoração, baseado na observação da parte (a).
+              A expressão <c>ceiling(sqrt(n))</c> significa o menor inteiro maior ou igual à raiz quadrada de <m>n</m>.
+              Escreva outro programa para fazer a fatoração usando divisão por tentativa e compare a velocidade dos dois algoritmos.
+              Qual algoritmo é mais rápido e por quê?
             </p>
           </li>
         </ol>
@@ -858,27 +858,27 @@
     </exercise>
 
     <exercise xml:id="crypt-exercise-primality-testing">
-      <title>Primality Testing</title>
+      <title>Teste de primalidade</title>
       <statement>
         <p>
-          Recall Fermat's Little Theorem from <xref ref="cosets"/>.
-          Let <m>p</m> be prime with <m>\gcd(a, p) = 1</m>.
-          Then <m>a^{p-1} \equiv 1 \pmod{p}</m>.
-          We can use Fermat's Little Theorem as a screening test for primes.
-          For example, <m>15</m> cannot be prime since
+          Recorde o Pequeno Teorema de Fermat de <xref ref="cosets"/>.
+          Seja <m>p</m> primo com <m>\gcd(a, p) = 1</m>.
+          Então <m>a^{p-1} \equiv 1 \pmod{p}</m>.
+          Podemos usar o Pequeno Teorema de Fermat como teste preliminar de primalidade.
+          Por exemplo, <m>15</m> não pode ser primo, pois
           <md>
             2^{15-1} \equiv 2^{14} \equiv 4 \pmod{15}
           </md>.
-          However, <m>17</m> is a potential prime since
+          Contudo, <m>17</m> é um possível primo, pois
           <md>
             2^{17-1} \equiv 2^{16} \equiv 1 \pmod{17}
           </md>.
-          We say that an odd composite number <m>n</m> is a <term>pseudoprime</term><idx><h>Pseudoprime</h></idx>
-          if
+          Dizemos que um número composto ímpar <m>n</m> é um <term>pseudoprimo</term><idx><h>Pseudoprimo</h></idx>
+          se
           <md>
             2^{n-1} \equiv 1 \pmod{n}
           </md>.
-          Which of the following numbers are primes and which are pseudoprimes?
+          Quais dos números a seguir são primos e quais são pseudoprimos?
 
           <ol cols="3">
             <li>
@@ -924,10 +924,10 @@
     <exercise xml:id="crypt-exercise-pseudoprime">
       <statement>
         <p>
-          Let <m>n</m> be an odd composite number and <m>b</m> be a positive integer such that <m>\gcd(b, n) = 1</m>.
-          If <m>b^{n-1} \equiv 1 \pmod{n}</m>,
-          then <m>n</m> is a <term>pseudoprime base</term> <m>b</m>.
-          Show that <m>341</m> is a pseudoprime base <m>2</m> but not a pseudoprime base <m>3</m>.
+          Seja <m>n</m> um número composto ímpar e <m>b</m> um inteiro positivo tal que <m>\gcd(b, n) = 1</m>.
+          Se <m>b^{n-1} \equiv 1 \pmod{n}</m>,
+          então <m>n</m> é um <term>pseudoprimo na base</term> <m>b</m>.
+          Mostre que <m>341</m> é um pseudoprimo na base <m>2</m>, mas não é um pseudoprimo na base <m>3</m>.
         </p>
       </statement>
     </exercise>
@@ -935,20 +935,20 @@
     <exercise xml:id="crypt-exercise-primes-less-than-2000">
       <statement>
         <p>
-          Write a program to determine all primes less than <m>2000</m> using trial division.
-          Write a second program that will determine all numbers less than <m>2000</m> that are either primes or pseudoprimes.
-          Compare the speed of the two programs.
-          How many pseudoprimes are there below <m>2000</m>?
+          Escreva um programa para determinar todos os primos menores que <m>2000</m> usando divisão por tentativa.
+          Escreva um segundo programa que determine todos os números menores que <m>2000</m> que sejam primos ou pseudoprimos.
+          Compare a velocidade dos dois programas.
+          Quantos pseudoprimos existem abaixo de <m>2000</m>?
         </p>
 
         <p>
-          There exist composite numbers that are pseudoprimes for all bases to which they are relatively prime.
-          These numbers are called <idx><h>Carmichael numbers</h></idx><term>Carmichael numbers</term>.
-          The first Carmichael number is <m>561 = 3 \cdot 11 \cdot 17</m>.
-          In 1992, Alford, Granville,
-          and Pomerance proved that there are an infinite number of Carmichael numbers [4]. However, Carmichael numbers are very rare.
-          There are only <m>2163</m> Carmichael numbers less than <m>25 \times 10^9</m>.
-          For more sophisticated primality tests, see [1], [6], or [7].
+          Existem números compostos que são pseudoprimos para todas as bases relativamente primas a eles.
+          Esses números são chamados de <idx><h>números de Carmichael</h></idx><term>números de Carmichael</term>.
+          O primeiro número de Carmichael é <m>561 = 3 \cdot 11 \cdot 17</m>.
+          Em 1992, Alford, Granville
+          e Pomerance provaram que existe uma infinidade de números de Carmichael [4]. Contudo, números de Carmichael são muito raros.
+          Existem apenas <m>2163</m> números de Carmichael menores que <m>25 \times 10^9</m>.
+          Para testes de primalidade mais sofisticados, consulte [1], [6] ou [7].
         </p>
       </statement>
     </exercise>
@@ -956,7 +956,7 @@
   </exercises>
 
   <references xml:id="crypt-references">
-    <title>References and Suggested Readings</title>
+    <title>Referências e leituras recomendadas</title>
     <biblio type="raw">
 <!-- was [1] -->
       Bressoud, D. M.
