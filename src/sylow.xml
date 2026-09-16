@@ -1397,28 +1397,28 @@
   <section xml:id="sylow-sage" component="sage-info">
     <title>Sage</title>
     <subsection>
-      <title>Sylow Subgroups</title>
+      <title>Subgrupos de Sylow</title>
       <p>
-        The Sage permutation group method <c>.sylow_subgroup(p)</c> will return a single Sylow <m>p</m>-subgroup.
-        If the prime is not a proper divisor of the group order it returns a subgroup of order <m>p^0</m>,
-        in other words, a trivial subgroup.
-        So be careful about how you construct your primes.
-        Sometimes, you may only want <em>one</em> such Sylow subgroup,
-        since any two Sylow <m>p</m>-subgroups are conjugate,
-        and hence isomorphic (<xref ref="sylow-theorem-second-sylow"/>).
-        This also means we can create other Sylow <m>p</m>-subgroups by conjugating the one we have.
-        The permutation group method <c>.conjugate(g)</c> will conjugate the group by <c>g</c>.
+        O método de grupos de permutações do Sage <c>.sylow_subgroup(p)</c> retornará um único subgrupo de Sylow <m>p</m>.
+        Se o primo não for um divisor próprio da ordem do grupo, ele retornará um subgrupo de ordem <m>p^0</m>,
+        em outras palavras, um subgrupo trivial.
+        Portanto, tenha cuidado ao construir seus primos.
+        Às vezes, você pode querer apenas <em>um</em> subgrupo de Sylow desse tipo,
+        pois quaisquer dois subgrupos de Sylow <m>p</m> são conjugados,
+        e, portanto, isomorfos (<xref ref="sylow-theorem-second-sylow"/>).
+        Isso também significa que podemos criar outros subgrupos de Sylow <m>p</m> conjugando aquele que temos.
+        O método de grupos de permutações <c>.conjugate(g)</c> conjuga o grupo por <c>g</c>.
       </p>
 
       <p>
-        With repeated conjugations of a single Sylow <m>p</m>-subgroup,
-        we will always create duplicate subgroups.
-        So we need to use a slightly complicated construction to form a list of just the unique subgroups as the list of conjugates.
-        This routine that computes all Sylow <m>p</m>-subgroups can be helpful throughout this section.
-        It could be made much more efficient by conjugating by just one element per coset of the normalizer,
-        but it will be sufficient for our purposes here.
-        Be sure to execute the next cell if you are online,
-        so the function is defined for use later.
+        Com conjugações repetidas de um único subgrupo de Sylow <m>p</m>,
+        sempre criaremos subgrupos duplicados.
+        Portanto, precisamos de uma construção um pouco complicada para formar uma lista contendo apenas os subgrupos únicos entre os conjugados.
+        Esta rotina, que calcula todos os subgrupos de Sylow <m>p</m>, pode ser útil ao longo desta seção.
+        Ela poderia ser muito mais eficiente se conjugássemos por apenas um elemento de cada classe lateral do normalizador,
+        mas será suficiente para nossos propósitos aqui.
+        Certifique-se de executar a próxima célula se estiver on-line,
+        para que a função seja definida para uso posterior.
       </p>
 
             <sage>
@@ -1436,12 +1436,12 @@
             </sage>
 
       <p>
-        Lets investigate the Sylow subgroups of the dihedral group <m>D_{18}</m>.
-        As a group of order <m>36=2^2\cdot 3^2</m>,
-        we know by the First Sylow Theorem that there is a Sylow <m>2</m>-subgroup of order <m>4</m> and a Sylow <m>3</m>-subgroup of order <m>9</m>.
-        First for <m>p=2</m>, we obtain one Sylow <m>2</m>-subgroup,
-        form all the conjugates, and form a list of non-duplicate subgroups.
-        (These commands take a while to execute, so be patient.)
+        Vamos investigar os subgrupos de Sylow do grupo diédrico <m>D_{18}</m>.
+        Como um grupo de ordem <m>36=2^2\cdot 3^2</m>,
+        sabemos, pelo Primeiro Teorema de Sylow, que há um subgrupo de Sylow <m>2</m> de ordem <m>4</m> e um subgrupo de Sylow <m>3</m> de ordem <m>9</m>.
+        Primeiro, para <m>p=2</m>, obtemos um subgrupo de Sylow <m>2</m>,
+        formamos todos os conjugados e construímos uma lista de subgrupos sem duplicatas.
+        (Esses comandos demoram um pouco para serem executados, portanto, tenha paciência.)
       </p>
 
             <sage>
@@ -1499,14 +1499,14 @@
             </sage>
 
       <p>
-        The Third Sylow Theorem tells us that for <m>p=2</m> we would expect <m>1, 3</m> or <m>9</m> Sylow <m>2</m>-subgroups,
-        so our computational result of <m>9</m> subgroups is consistent with what the theory predicts.
-        Can you visualize each of these subgroups as symmetries of an <m>18</m>-gon?
-        Notice that we also have many subgroups of order <m>2</m> inside of these subgroups of order <m>4</m>.
+        O Terceiro Teorema de Sylow nos diz que, para <m>p=2</m>, esperaríamos <m>1, 3</m> ou <m>9</m> subgrupos de Sylow <m>2</m>,
+        portanto, nosso resultado computacional de <m>9</m> subgrupos é consistente com o que a teoria prevê.
+        Você consegue visualizar cada um desses subgrupos como simetrias de um <m>18</m>-gono?
+        Observe que também temos muitos subgrupos de ordem <m>2</m> dentro desses subgrupos de ordem <m>4</m>.
       </p>
 
       <p>
-        Now for the case of <m>p=3</m>.
+        Agora, consideremos o caso de <m>p=3</m>.
       </p>
 
             <sage>
@@ -1540,13 +1540,13 @@
             </sage>
 
       <p>
-        What does the Third Sylow Theorem predict?
-        Just <m>1</m> or <m>4</m> Sylow <m>3</m>-subgroups.
-        Having found just one subgroup computationally,
-        we know that all of the conjugates of the lone Sylow <m>3</m>-subgroup are equal.
-        In other words,
-        the Sylow <m>3</m>-subgroup is normal in <m>D_{18}</m>.
-        Let us check anyway.
+        O que o Terceiro Teorema de Sylow prevê?
+        Apenas <m>1</m> ou <m>4</m> subgrupos de Sylow <m>3</m>.
+        Tendo encontrado computacionalmente apenas um subgrupo,
+        sabemos que todos os conjugados do único subgrupo de Sylow <m>3</m> são iguais.
+        Em outras palavras,
+        o subgrupo de Sylow <m>3</m> é normal em <m>D_{18}</m>.
+        Vamos verificar mesmo assim.
       </p>
 
             <sage>
@@ -1559,9 +1559,9 @@
             </sage>
 
       <p>
-        At least one of the subgroups of order <m>3</m> contained in this Sylow <m>3</m>-subgroup should be obvious by looking at the orders of the generators,
-        and then you may even notice that the generators given could be reduced,
-        and one is a power of the other.
+        Pelo menos um dos subgrupos de ordem <m>3</m> contidos neste subgrupo de Sylow <m>3</m> deve ser evidente ao observar as ordens dos geradores,
+        e então você pode até notar que os geradores dados poderiam ser reduzidos,
+        e que um é uma potência do outro.
       </p>
 
             <sage>
@@ -1574,18 +1574,18 @@
             </sage>
 
       <p>
-        Remember that there are many other subgroups, of other orders.
-        For example,
-        can you construct a subgroup of order <m>6=2\cdot 3</m> in <m>D_{18}</m>?
+        Lembre-se de que existem muitos outros subgrupos, de outras ordens.
+        Por exemplo,
+        você consegue construir um subgrupo de ordem <m>6=2\cdot 3</m> em <m>D_{18}</m>?
       </p>
     </subsection>
 
     <subsection>
-      <title>Normalizers</title>
+      <title>Normalizadores</title>
       <p>
-        A new command that is relevant to this section is the construction of a normalizer.
-        The Sage command <c>G.normalizer(H)</c> will return the subgroup of <c>G</c> containing elements that normalize the subgroup <c>H</c>.
-        We illustrate its use with the Sylow subgroups from above.
+        Um novo comando relevante para esta seção é a construção de um normalizador.
+        O comando do Sage <c>G.normalizer(H)</c> retornará o subgrupo de <c>G</c> que contém os elementos que normalizam o subgrupo <c>H</c>.
+        Ilustramos seu uso com os subgrupos de Sylow apresentados acima.
       </p>
 
             <sage>
@@ -1633,11 +1633,11 @@
             </sage>
 
       <p>
-        The normalizer of a subgroup always contains the whole subgroup,
-        so the normalizer of <c>S2</c> is as small as possible.
-        We already knew <c>S3</c> is normal in <c>G</c>,
-        so it is no surprise that its normalizer is as big as possible <mdash/> every element of <c>G</c> normalizes <c>S3</c>.
-        Let us compute a normalizer in <m>D_{18}</m> that is more <q>interesting.</q>
+        O normalizador de um subgrupo sempre contém o subgrupo inteiro,
+        portanto, o normalizador de <c>S2</c> é o menor possível.
+        Já sabíamos que <c>S3</c> é normal em <c>G</c>,
+        portanto, não é surpresa que seu normalizador seja o maior possível <mdash/> todo elemento de <c>G</c> normaliza <c>S3</c>.
+        Vamos calcular um normalizador em <m>D_{18}</m> que seja mais <q>interessante.</q>
       </p>
 
             <sage>
@@ -1675,11 +1675,11 @@
             </sage>
 
       <p>
-        So for this subgroup of order <m>6</m>,
-        the normalizer is strictly bigger than the subgroup,
-        but still strictly smaller than the whole group
-        (and hence not normal in the dihedral group).
-        Trivially, a subgroup is normal in its normalizer:
+        Assim, para este subgrupo de ordem <m>6</m>,
+        o normalizador é estritamente maior que o subgrupo,
+        mas ainda estritamente menor que o grupo inteiro
+        (e, portanto, não é normal no grupo diédrico).
+        Trivialmente, um subgrupo é normal em seu normalizador:
       </p>
 
             <sage>
@@ -1701,14 +1701,14 @@
     </subsection>
 
     <subsection>
-      <title>Finite Simple Groups</title>
+      <title>Grupos Simples Finitos</title>
       <p>
-        We saw earlier Sage's permutation group method <c>.is_simple()</c>.
-        <xref ref="sylow-example-group-pn"/> tells us that a group of order <m>64</m> is never simple.
-        The dicyclic group <c>DiCyclicGroup(16)</c> is a non-abelian group of <m>64</m>,
-        so we can test this method on this group.
-        It turns out this group has many normal subgroups <mdash/> the list will always contain the trivial subgroup and the group itself,
-        so any number exceeding <m>2</m> indicates a non-trivial normal subgroup.
+        Já vimos anteriormente o método de grupos de permutações do Sage <c>.is_simple()</c>.
+        <xref ref="sylow-example-group-pn"/> nos diz que um grupo de ordem <m>64</m> nunca é simples.
+        O grupo dicíclico <c>DiCyclicGroup(16)</c> é um grupo não abeliano de <m>64</m>,
+        portanto, podemos testar esse método neste grupo.
+        Acontece que esse grupo tem muitos subgrupos normais <mdash/> a lista sempre conterá o subgrupo trivial e o próprio grupo,
+        portanto, qualquer número maior que <m>2</m> indica um subgrupo normal não trivial.
       </p>
 
             <sage>
@@ -1739,16 +1739,16 @@
             </sage>
 
       <p>
-        Here is a rather interesting group,
-        one of the <m>26</m> sporadic simple groups,
-        known as the Higman-Sims group, <m>HS</m>.
-        The generators used below come from the representation on 100 points in <acro>GAP</acro> format,
-        available off of
+        Aqui está um grupo bastante interessante,
+        um dos <m>26</m> grupos simples esporádicos,
+        conhecido como o grupo de Higman-Sims, <m>HS</m>.
+        Os geradores usados abaixo vêm da representação em 100 pontos no formato do <acro>GAP</acro>,
+        disponível em
         <url href="http://web.mat.bham.ac.uk/atlas/v2.0/spor/HS/"  visual="web.mat.bham.ac.uk/atlas/v2.0/spor/HS">web.mat.bham.ac.uk/atlas/v2.0/spor/HS/</url>.
-        Two generators of just order <m>2</m> and order <m>5</m>
-        (as you can esily see),
-        generating exactly <m>44\,352\,000</m> elements, but no normal subgroups.
-        Amazing.
+        Dois geradores de ordens apenas <m>2</m> e <m>5</m>
+        (como você pode ver facilmente),
+        que geram exatamente <m>44\,352\,000</m> elementos, mas nenhum subgrupo normal.
+        Incrível.
       </p>
 
             <sage>
@@ -1793,24 +1793,24 @@
             </sage>
 
       <p>
-        We saw this group earlier in the exercises for <xref ref="actions"/> on group actions,
-        where it was the single non-trivial normal subgroup of the automorphism group of the Higman-Sims graph,
-        hence its name.
+        Já vimos este grupo anteriormente nos exercícios sobre <xref ref="actions"/> relacionados às ações de grupos,
+        onde ele era o único subgrupo normal não trivial do grupo de automorfismos do grafo de Higman-Sims,
+        daí seu nome.
       </p>
     </subsection>
 
     <subsection>
-      <title><acro>GAP</acro> Console and Interface</title>
+      <title>Console e Interface do <acro>GAP</acro></title>
       <p>
-        This concludes our exclusive study of group theory,
-        though we will be using groups some in the subsequent sections.
-        As we have remarked,
-        much of Sage's computation with groups is performed by the open source program,
+        Isso conclui nosso estudo exclusivo da teoria dos grupos,
+        embora utilizemos grupos em algumas das seções subsequentes.
+        Como observamos,
+        grande parte da computação do Sage com grupos é realizada pelo programa de código aberto,
         <q>Groups, Algorithms,
-        and Programming,</q> which is better know as simply <acro>GAP</acro>.
-        If after this course you outgrow Sage's support for groups,
-        then learning <acro>GAP</acro> would be your next step as a group theorist.
-        Every copy of Sage includes a copy of <acro>GAP</acro> and is easy to see which version of <acro>GAP</acro> is included:
+        and Programming,</q> que é mais conhecido simplesmente como <acro>GAP</acro>.
+        Se, depois deste curso, você superar o suporte do Sage para grupos,
+        então aprender <acro>GAP</acro> seria seu próximo passo como teórico dos grupos.
+        Toda cópia do Sage inclui uma cópia do <acro>GAP</acro>, e é fácil ver qual versão do <acro>GAP</acro> está incluída:
       </p>
 
             <sage>
@@ -1819,8 +1819,8 @@
             </sage>
 
       <p>
-        You can interact with <acro>GAP</acro> in Sage in several ways.
-        The most direct is by creating a permutation group via Sage's <c>gap()</c> command.
+        Você pode interagir com o <acro>GAP</acro> no Sage de várias maneiras.
+        A mais direta é criar um grupo de permutações por meio do comando <c>gap()</c> do Sage.
       </p>
 
             <sage>
@@ -1834,11 +1834,11 @@
             </sage>
 
       <p>
-        Now we can use most any <acro>GAP</acro> command with <c>G</c>,
-        via the convention that most <acro>GAP</acro> commands expect a group as the first argument,
-        and we instead provide the group by using the object-oriented<c>G.</c> syntax.
-        If you consult the <acro>GAP</acro> documentation you will see that <c>Center</c> is a <acro>GAP</acro> command that expects a group as its lone argument,
-        and <c>Centralizer</c> is a <acro>GAP</acro> command that expects two arguments <mdash/> a group and then a group element.
+        Agora podemos usar praticamente qualquer comando do <acro>GAP</acro> com <c>G</c>,
+        seguindo a convenção de que a maioria dos comandos do <acro>GAP</acro> espera um grupo como primeiro argumento,
+        e nós, em vez disso, fornecemos o grupo usando a sintaxe orientada a objetos <c>G.</c>.
+        Se você consultar a documentação do <acro>GAP</acro>, verá que <c>Center</c> é um comando do <acro>GAP</acro> que espera um grupo como seu único argumento,
+        e que <c>Centralizer</c> é um comando do <acro>GAP</acro> que espera dois argumentos <mdash/> um grupo e depois um elemento do grupo.
       </p>
 
             <sage>
@@ -1859,16 +1859,16 @@
             </sage>
 
       <p>
-        If you use the Sage Notebook interface you can set the first line of a compute cell to <c>%gap</c> and the entire cell will be interpreted as if you were interacting directly with <acro>GAP</acro>.
-        This means you would now use <acro>GAP</acro>'s syntax,
-        which you can see above is slightly different than Sage's universal syntax.
-        You can also use the drop-down box at the top of a worksheet,
-        and select <c>gap</c> as the system
-        (rather than <c>sage</c>)
-        and your whole worksheet will be interpreted as <acro>GAP</acro> commands.
-        Here is one simple example,
-        which you should be able to evaluate in your current worksheet.
-        This particular example will not run properly in a Sage Cell in a web page version of this section.
+        Se você usar a interface Sage Notebook, poderá definir a primeira linha de uma célula de computação como <c>%gap</c>, e a célula inteira será interpretada como se você estivesse interagindo diretamente com o <acro>GAP</acro>.
+        Isso significa que você usaria a sintaxe do <acro>GAP</acro>,
+        que, como você pode ver acima, é ligeiramente diferente da sintaxe universal do Sage.
+        Você também pode usar a caixa suspensa no topo de uma folha de trabalho
+        e selecionar <c>gap</c> como sistema
+        (em vez de <c>sage</c>)
+        e toda a sua folha de trabalho será interpretada como comandos do <acro>GAP</acro>.
+        Aqui está um exemplo simples,
+        que você deve conseguir avaliar na sua folha de trabalho atual.
+        Este exemplo específico não será executado corretamente em uma Célula Sage na versão para página web desta seção.
       </p>
 
             <sage type="display">
@@ -1880,35 +1880,35 @@
             </sage>
 
       <p>
-        Notice that
+        Observe que
 
         <ul>
           <li>
             <p>
-              We do not need to wrap the individual permutations in as many quotation marks as we do in Sage.
+              Não precisamos envolver as permutações individuais em tantas aspas quanto fazemos no Sage.
             </p>
           </li>
 
           <li>
             <p>
-              Assignment is <c>:=</c> not <c>=</c>.
-              If you forget the colon,
-              you will get an error message such as <c>Variable: 'G' must have a value</c>
+              A atribuição é <c>:=</c>, não <c>=</c>.
+              Se você esquecer os dois-pontos,
+              você receberá uma mensagem de erro como <c>Variable: 'G' must have a value</c>
             </p>
           </li>
 
           <li>
             <p>
-              A line <em>must</em> end with a semi-colon.
-              If you forget, several lines will be merged together.
+              Uma linha <em>deve</em> terminar com ponto e vírgula.
+              Se você esquecer, várias linhas serão mescladas.
             </p>
           </li>
         </ul>
       </p>
 
       <p>
-        You can get help about <acro>GAP</acro> commands with a command such as the following,
-        though you will soon see that <acro>GAP</acro> assumes you know a lot more algebra than Sage assumes you know.
+        Você pode obter ajuda sobre comandos do <acro>GAP</acro> com um comando como o seguinte,
+        embora logo veja que o <acro>GAP</acro> pressupõe que você conhece muito mais álgebra do que o Sage pressupõe que você conheça.
       </p>
 
             <sage doctest="not tested">
@@ -1918,21 +1918,21 @@
             </sage>
 
       <p>
-        In the command-line version of Sage,
-        you can also use the <acro>GAP</acro> <q>console.</q> Again,
-        you need to use <acro>GAP</acro> syntax,
-        and you do not have many of the conveniences of the Sage notebook.
-        It is also good to know in advance that <c>quit;</c> is how you can leave the <acro>GAP</acro> console and get back to Sage.
-        If you run Sage at the command-line,
-        use the command <c>gap_console()</c> to start <acro>GAP</acro> running.
+        Na versão de linha de comando do Sage,
+        você também pode usar o <acro>GAP</acro> <q>console.</q> Novamente,
+        é necessário usar a sintaxe do <acro>GAP</acro>,
+        e você não dispõe de muitas das conveniências do Sage Notebook.
+        Também é bom saber de antemão que <c>quit;</c> é a forma de sair do console do <acro>GAP</acro> e voltar ao Sage.
+        Se você executar o Sage na linha de comando,
+        use o comando <c>gap_console()</c> para iniciar o <acro>GAP</acro>.
       </p>
 
       <p>
-        It is a comfort to know that with Sage you get a complete copy of <acro>GAP</acro>,
-        installed and all ready to run.
-        However, this is not a tutorial on <acro>GAP</acro>,
-        so consult the documentation available at the main <acro>GAP</acro> website:
-        <url href="http://www.gap-system.org" visual="/www.gap-system.org">www.gap-system.org</url> to learn how to get the most out of <acro>GAP</acro>.
+        É reconfortante saber que, com o Sage, você obtém uma cópia completa do <acro>GAP</acro>,
+        instalada e pronta para execução.
+        No entanto, este não é um tutorial sobre o <acro>GAP</acro>,
+        portanto, consulte a documentação disponível no site principal do <acro>GAP</acro>:
+        <url href="http://www.gap-system.org" visual="/www.gap-system.org">www.gap-system.org</url> para aprender a aproveitar ao máximo o <acro>GAP</acro>.
       </p>
     </subsection>
 
