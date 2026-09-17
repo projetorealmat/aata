@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it."
 title: "Álgebra Abstrata: Teoria e Aplicações"
-version: "0.1.0"
+version: "0.1.2"
 authors:
   - family-names: Judson
     given-names: Thomas W.
@@ -9,4 +9,4 @@ authors:
     given-names: Robert A.
 repository-code: "https://github.com/projetorealmat/aata"
 license: "GFDL-1.3-or-later"
-date-released: 2026-09-16
+date-released: 2026-09-17
