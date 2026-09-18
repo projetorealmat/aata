@@ -491,8 +491,8 @@
 
       <p>
         Dizemos que uma matriz <m>A</m> é
-        <term>distance-preserving</term>,<idx><h>Matrix</h><h>distance-preserving</h></idx>
-        <term>length-preserving</term>,<idx><h>Matrix</h><h>length-preserving</h></idx>
+        <term>preservadora de distâncias</term>,<idx><h>Matriz</h><h>preservadora de distâncias</h></idx>
+        <term>preservadora de comprimentos</term>,<idx><h>Matriz</h><h>preservadora de comprimentos</h></idx>
         ou <term>preservadora de produtos internos</term><idx><h>Matriz</h><h>preservadora de produtos internos</h></idx> quando <m>\| A{\mathbf x}- A{\mathbf y} \| =\| {\mathbf x}- {\mathbf y} \|</m>,
         <m>\| A{\mathbf x} \| =\| {\mathbf x} \|</m>,
         ou <m>\langle A{\mathbf x}, A{\mathbf y} \rangle = \langle {\mathbf x},{\mathbf y} \rangle</m>,

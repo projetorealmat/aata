@@ -276,7 +276,7 @@
             <md>
               {\mathcal S} = \{ P = P_1, P_2, \ldots, P_k \}
             </md>
-            seja constituído dos conjugados distintos de <m>P</m> em <m>G</m>.
+            constituído pelos conjugados distintos de <m>P</m> em <m>G</m>.
             Pelo <xref ref="sylow-lemma-distinct-conjugates"/>, <m>k = [G: N(P)]</m>.
             Observe que
             <md>
@@ -1118,7 +1118,7 @@
       <hint>
         <p>
            Sejam <m>a G', b G' \in G/G'</m>.
-          Então <m>(a G')( b G') = ab G' = ab(b^{-1}a^{-1}ba) G' = (abb^{-1}a^{-1})ba G'</m>.
+          Então <m>(a G')( b G') = ab G' = ab(b^{-1}a^{-1}ba) G' = (abb^{-1}a^{-1})ba G' = ba G'</m>.
         </p>
       </hint>
     </exercise>

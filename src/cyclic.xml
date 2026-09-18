@@ -1295,7 +1295,7 @@
             1 &amp; -1
             \end{pmatrix}
           </md>
-          sejam elementos de <m>GL_2( {\mathbb R} )</m>.
+          elementos de <m>GL_2( {\mathbb R} )</m>.
           Mostre que <m>A</m> e <m>B</m> têm ordens finitas, mas <m>AB</m> não.
         </p>
       </statement>

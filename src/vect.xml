@@ -867,7 +867,7 @@
             <li>
               <p>
                 Prove que a <term>imagem</term>
-                ou <term>imagem</term> de <m>T</m>,
+                ou <term>espaço imagem</term> de <m>T</m>,
                 <m>R(V) = \{ w \in W : T(v) = w \text{ para algum } v \in V \}</m>,
                 é um subespaço de <m>W</m>.
               </p>
@@ -1625,7 +1625,7 @@
           O comando <c>F.vector_space()</c> retornará três objetos em uma tripla
           (portanto, tenha cuidado ao manipular essa saída para extrair o que precisa).
           A primeira parte da saída é um espaço vetorial sobre os racionais que é isomorfo a <c>F</c>.
-          A seguinte é um isomorfismo de espaços vetoriais
+          O segundo item é um isomorfismo de espaços vetoriais
           (transformação linear invertível)
           do espaço vetorial fornecido para o corpo,
           enquanto a terceira é um isomorfismo na direção oposta.
