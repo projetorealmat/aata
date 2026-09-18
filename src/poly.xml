@@ -145,7 +145,7 @@
         <md>
           p(x) = 3 + 3 x^3 \qquad \text{e} \qquad q(x) = 4 + 4 x^2 + 4 x^4
         </md>
-        sejam polinômios em <m>{\mathbb Z}_{12}[x]</m>.
+        polinômios em <m>{\mathbb Z}_{12}[x]</m>.
         A soma de <m>p(x)</m> e <m>q(x)</m> é <m>7 + 4 x^2 + 3 x^3 + 4 x^4</m>.
         O produto dos dois polinômios é o polinômio nulo.
         Este exemplo nos diz que não podemos esperar que <m>R[x]</m> seja um domínio de integridade se <m>R</m> não for um domínio de integridade.
@@ -925,7 +925,7 @@
             <md>
               f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )
             </md>
-            seja uma fatoração em <m>{\mathbb Z}[x]</m>,
+            uma fatoração em <m>{\mathbb Z}[x]</m>,
             com <m>b_r</m> e <m>c_s</m> não nulos e <m>r,
             s \lt n</m>.
             Como <m>p^2</m> não divide <m>a_0 = b_0 c_0</m>,

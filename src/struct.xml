@@ -585,7 +585,7 @@
     <p>
       Uma série subnormal (normal) <m>\{ K_j \}</m> é um
       <term>refinamento de uma série subnormal (normal)</term>
-      de uma série subnormal (normal) <m>\{ H_i \}</m> se <m>\{ H_i \} \subset \{ K_j \}</m>.
+      <m>\{ H_i \}</m> se <m>\{ H_i \} \subset \{ K_j \}</m>.
       Isto é, cada <m>H_i</m> é um dos <m>K_j</m>.
     </p>
 
@@ -725,7 +725,7 @@
             <mrow>G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}</mrow>
             <mrow>G = K_m \supset K_{m-1} \supset \cdots \supset K_1 \supset K_0 = \{ e \}</mrow>
           </md>
-          sejam duas séries de composição de <m>G</m>.
+          duas séries de composição de <m>G</m>.
           Podemos formar duas novas séries subnormais para <m>G</m>, pois
           <m>H_i \cap K_{m-1}</m> é normal em <m>H_{i+1} \cap K_{m-1}</m> e
           <m>K_j \cap H_{n-1}</m> é normal em <m>K_{j+1} \cap H_{n-1}</m>:
