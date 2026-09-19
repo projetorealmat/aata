@@ -6,10 +6,10 @@
 -->
 <project ptx-version="2" source="src" publication=".">
   <targets>
-    <target name="web" format="html" source="aata.xml" publication="publication/publication.ptx"/>
+    <target name="web" format="html" source="aata.xml" publication="publication/publication.ptx" xsl="aata-html.xsl"/>
     <target name="french" format="html" source="aata.xml" publication="publication/publication-french.ptx"/>
     <target name="runestone" format="html" source="aata.xml" publication="publisher/runestone.xml"/>
-    <target name="print" format="pdf" pdf-method="xelatex" source="aata.xml" publication="publication/publication.ptx"/>
-    <target name="print-latex" format="latex" source="aata.xml" publication="publication/publication.ptx"/>
+    <target name="print" format="pdf" pdf-method="xelatex" source="aata.xml" publication="publication/publication.ptx" xsl="aata-print.xsl"/>
+    <target name="print-latex" format="latex" source="aata.xml" publication="publication/publication.ptx" xsl="aata-print.xsl"/>
   </targets>
 </project>

@@ -14,6 +14,21 @@
     <!-- Prefix to enhance Sage notebook contents -->
   <initialism>AATA</initialism>
 
+    <!-- Reader-facing interface labels not yet supplied by PreTeXt's pt-BR locale. -->
+    <rename element="search-book" xml:lang="pt-BR">Pesquisar no livro</rename>
+    <rename element="readability-settings" xml:lang="pt-BR">Opções de leitura</rename>
+    <rename element="readability-line-height" xml:lang="pt-BR">Altura da linha</rename>
+    <rename element="readability-content-font-size" xml:lang="pt-BR">Tamanho da fonte do conteúdo</rename>
+    <rename element="readability-theme" xml:lang="pt-BR">Tema</rename>
+    <rename element="readability-theme-system" xml:lang="pt-BR">Sistema</rename>
+    <rename element="readability-theme-light" xml:lang="pt-BR">Claro</rename>
+    <rename element="readability-theme-dark" xml:lang="pt-BR">Escuro</rename>
+    <rename element="readability-assistive-technologies" xml:lang="pt-BR">Tecnologias assistivas</rename>
+    <rename element="readability-expose-permalinks" xml:lang="pt-BR">Exibir links permanentes</rename>
+    <rename element="reset-all" xml:lang="pt-BR">Redefinir tudo</rename>
+    <rename element="top" xml:lang="pt-BR">Topo</rename>
+    <rename element="permalink-tooltip" xml:lang="pt-BR">Copiar título e link permanente para</rename>
+
     <!-- Identify text uniquely -->
     <!-- ONLY update if there are massive changes, -->
     <!-- not the annual changes for Lon's editions -->

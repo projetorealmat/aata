@@ -1036,7 +1036,7 @@
       <statement>
         <p>
           Construa todos os subgrupos do grupo alternado em 5 símbolos,
-          <m>A_5</m>, e verifique que nenhum é um subgrupo normal (exceto nos dois casos triviais). Esse comando pode levar alguns segundos para executar. Compare isso com o tempo necessário para executar o método <c>.is_simple()</c> e perceba que uma quantidade significativa de teoria e engenhosidade é empregada para acelerar comandos como esse. (É possível que sua instalação do <acro>GAP</acro>no Sage não tenha a biblioteca <q>Table of Marks</q>
+          <m>A_5</m>, e verifique que nenhum é um subgrupo normal (exceto nos dois casos triviais). Esse comando pode levar alguns segundos para executar. Compare isso com o tempo necessário para executar o método <c>.is_simple()</c> e perceba que uma quantidade significativa de teoria e engenhosidade é empregada para acelerar comandos como esse. (É possível que sua instalação do <acro>GAP</acro> no Sage não tenha a biblioteca <q>Table of Marks</q>
           e você não consiga calcular a lista de subgrupos.)
         </p>
       </statement>

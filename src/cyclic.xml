@@ -207,7 +207,7 @@
         Podemos fazer algumas perguntas interessantes sobre subgrupos cíclicos de um grupo e sobre subgrupos de um grupo cíclico.
         Se <m>G</m> é um grupo, quais subgrupos de <m>G</m> são cíclicos?
         Se <m>G</m> é um grupo cíclico,
-        que tipo de subgrupos ele possui?
+        que tipo de subgrupos o grupo <m>G</m> possui?
       </p>
 
       <theorem xml:id="cyclic-theorem-cyclic-subgroups">
