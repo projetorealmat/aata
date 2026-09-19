@@ -1116,7 +1116,7 @@
           1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1
           \end{pmatrix}
         </md>,
-        respectively.
+        respectivamente.
       </p>
 
       <p>
@@ -1296,7 +1296,7 @@
           é o <idx><h>Delta de Kronecker</h></idx>delta de Kronecker.
           <notation>
             <usage><m>\delta_{ij}</m></usage>
-            <description>Kronecker delta</description>
+            <description>delta de Kronecker</description>
           </notation>
 
         </p>
@@ -1337,7 +1337,7 @@
             <mrow>&amp; \aatavdots{=}</mrow>
             <mrow>a_{m1} y_1 + a_{m2} y_2 + \cdots + a_{m, n-m} y_{n-m} + y_{n-m+m} &amp; = 0</mrow>
           </md>.
-          Equivalently, <m>y_{n-m+1}, \ldots,
+          Equivalentemente, <m>y_{n-m+1}, \ldots,
           y_n</m> são determinados por <m>y_1, \ldots, y_{n-m}</m>:
           <md>
             <mrow>y_{n-m+1} &amp; = a_{11} y_1 + a_{12} y_2 + \cdots + a_{1, n-m} y_{n-m}</mrow>
