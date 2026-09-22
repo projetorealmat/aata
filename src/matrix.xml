@@ -1116,8 +1116,7 @@
         <caption>Um reticulado em <m>\mathbb R^2</m></caption>
             <!-- Replaced figure with tikz figure - TWJ 6/11/2010 -->
         <image xml:id="matrix-lattice-r2">
-            <description>Um reticulado de paralelogramos inclinados para a direita. Há quatro setas, cada uma começando no centro, na origem, e apontando para a direita até (2,0), para cima e para a direita até (1,1), e para cima e para a esquerda até
-            menos um, um), e para baixo e para a esquerda até (menos um, menos um).</description>
+            <description>Um reticulado de paralelogramos inclinados para a direita. Há quatro setas, cada uma começando no centro, na origem, e apontando para a direita até (2,0), para cima e para a direita até (1,1), para cima e para a esquerda até (-1,1), e para baixo e para a esquerda até (-1,-1).</description>
             <latex-image>
                 <xi:include href="tikz/matrix-lattice-r2.tex" parse="text"/>
             </latex-image>
