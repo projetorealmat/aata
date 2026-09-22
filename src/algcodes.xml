@@ -271,7 +271,7 @@
         <caption>Canal binário simétrico</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/10/2010 -->
         <image width="40%" xml:id="algcodes-binary-channel">
-        <description>Um diagrama esquemático no qual um zero tem probabilidade p de ser decodificado como zero e probabilidade q de ser decodificado como um, representadas por setas de 0 para 0 e de 1 para 1, respectivamente. Um tem probabilidade p de ser decodificado como um e probabilidade q de ser decodificado como zero, representadas por setas de 1 para 1 e de 0 para 1, respectivamente.</description>
+        <description>Um diagrama esquemático no qual um zero tem probabilidade p de ser decodificado como zero e probabilidade q de ser decodificado como um, representadas por setas de 0 para 0 e de 1 para 1, respectivamente. Um 1 tem probabilidade p de ser decodificado como um e probabilidade q de ser decodificado como zero, representadas por setas de 1 para 1 e de 0 para 1, respectivamente.</description>
             <latex-image>
                 <xi:include href="tikz/algcodes-binary-channel.tex" parse="text"/>
             </latex-image>
