@@ -1588,7 +1588,7 @@
       <statement>
         <p>
           Desenhando os diagramas apropriados,
-          complete a prova de <xref ref="boolean-theorem-circuit"/> para mostrar que as funções de interruptores formam uma álgebra booleana.
+          complete a prova de <xref ref="boolean-theorem-circuit"/> para mostrar que as funções de comutação formam uma álgebra booleana.
         </p>
       </statement>
     </exercise>
@@ -1709,7 +1709,7 @@
       <statement>
         <p>
           Uma <term>função booleana</term><idx><h>Função booleana</h></idx><idx><h>Função</h><h>booleana</h></idx>
-          ou <term>função de interruptores em <m>n</m> variáveis</term><idx><h>Função de interruptores</h></idx><idx><h>Função</h><h>de interruptores</h></idx>
+          ou <term>função de comutação em <m>n</m> variáveis</term><idx><h>Função de comutação</h></idx><idx><h>Função</h><h>de comutação</h></idx>
           é uma aplicação <m>f : \{O, I\}^n \rightarrow \{ 0, I\}</m>.
           Um polinômio booleano é um tipo especial de função booleana:
           é qualquer tipo de expressão booleana formada por uma combinação finita das variáveis
