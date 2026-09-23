@@ -781,7 +781,7 @@
             <md>
               [K : F ] \leq |G| \leq |G(K/F)| = [K:F]
             </md>.
-            segue que <m>G = G(K/F)</m>,
+            Segue que <m>G = G(K/F)</m>,
             pois eles devem ter a mesma ordem.
           </p>
         </proof>
@@ -1329,7 +1329,7 @@
     </subsection>
 
     <subsection xml:id="galois-subsection-quintic">
-      <title>Insolubilidade do Quíntico</title>
+      <title>Impossibilidade de resolução da equação quíntica por radicais</title>
       <p>
         Agora estamos em condições de encontrar um polinômio de quinto grau que não seja solúvel por radicais.
         Basta encontrar um polinômio cujo grupo de Galois seja <m>S_5</m>.
@@ -3177,7 +3177,7 @@
         vemos potências de <c>a</c> e reconhecemos que <c>a</c> sozinho será um elemento primitivo para o corpo fixo,
         que, portanto, é <m>{\mathbb Q}(\sqrt[4]{2})</m>.
         Lembre que <c>a</c> era nossa primeira raiz de <m>x^4-2</m>
-        e foi usado para criar a primeira parte da torre original,
+        e foi usada para criar a primeira parte da torre original,
         <c>N</c>.
         Assim, <c>N</c> é tanto <m>{\mathbb Q}(\sqrt[4]{2})</m> quanto o corpo fixo de <m>H=\langle(1,4)\rangle</m>.
       </p>

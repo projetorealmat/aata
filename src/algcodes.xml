@@ -1069,8 +1069,8 @@
         \end{pmatrix}
       </md>.
       A cada matriz canônica de verificação de paridade podemos associar uma
-      <m>n \times (n-m)</m>
-      <term>matriz geradora padrão</term><idx><h>Matriz</h><h>geradora</h></idx>
+      <term>matriz geradora padrão</term><idx><h>Matriz</h><h>geradora</h></idx> <m>G</m>,
+      de dimensão <m>n \times (n-m)</m>, definida por
       <md>
         G = \left( \frac{I_{n-m}}{A} \right)
       </md>.

@@ -848,7 +848,7 @@
             <md>
               p(x) = (x - \alpha)( x^{n - 1} + \cdots - a_0 / \alpha )
             </md>.
-            temos <m>a_0 /\alpha \in {\mathbb Z}</m> e, portanto, <m>\alpha \mid a_0</m>.
+            Temos <m>a_0 /\alpha \in {\mathbb Z}</m> e, portanto, <m>\alpha \mid a_0</m>.
           </p>
         </proof>
       </corollary>
@@ -2384,7 +2384,7 @@
 
       <p>
         Entretanto, <c>q</c> se fatora em um par de polinômios de grau 2,
-        portanto nenhum número de testes de raízes descobrirá um fator.
+        portanto nenhuma busca de raízes revelará um fator.
       </p>
 
       <p>

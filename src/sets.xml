@@ -679,7 +679,7 @@
           f(A) = \{ f(a) : a \in A \} \subset B
         </md>
         é chamado de <term>imagem</term><idx><h>Função</h><h>imagem de</h></idx>
-        ou <term>imagem</term> de <m>f</m>.
+        (ou <term>conjunto imagem</term>) de <m>f</m>.
         Podemos pensar nos elementos do domínio da função como valores de entrada e nos elementos da imagem da função como valores de saída.
       </p>
 
@@ -2412,12 +2412,12 @@
         É fácil comentar seu trabalho quando você usa o Sage Notebook.
         (O que segue se aplica apenas se você estiver lendo isto em um Sage Notebook.
         Se não estiver,
-        talvez possa abrir uma planilha no Sage Notebook e experimentar nela.)
+        talvez possa abrir uma folha de trabalho no Sage Notebook e experimentar nela.)
         Você pode abrir um pequeno processador de texto passando o mouse até aparecer novamente uma barra azul estreita,
         mas agora, ao clicar, mantenha também pressionada a tecla SHIFT.
         Experimente fontes, cores,
         listas com marcadores etc. e então clique no botão
-        <q>Salvar alterações</q> para sair.
+        <q>Save changes</q> (Salvar alterações) para sair.
         Clique duas vezes no seu texto se precisar voltar e editá-lo mais tarde.
       </p>
 

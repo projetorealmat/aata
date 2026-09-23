@@ -719,12 +719,12 @@
         pode ser escrito como pares ordenados <m>(A, {\mathbf x})</m>,
         em que <m>A</m> pertence a <m>O(n)</m> e
         <m>{\mathbf x}</m> pertence a <m>{\mathbb R}^n</m>.
-        Definimos a multiplicação por
+        A multiplicação em
 
         <notation>
           <usage><m>E(n)</m></usage>
           <description>grupo euclidiano</description>
-        </notation>
+        </notation> é definida por
 
         <md>
           (A, {\mathbf x}) (B, {\mathbf y}) = (AB, A {\mathbf y} +{\mathbf x})

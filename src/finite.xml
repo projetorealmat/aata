@@ -224,7 +224,7 @@
           Seja <m>f(x) = x^{p^n} - x</m> e seja <m>F</m> o corpo de decomposição de <m>f(x)</m>.
           Então, pelo <xref ref="finite-lemma-separable-derivative"/>,
           <m>f(x)</m> tem <m>p^n</m> zeros distintos em <m>F</m>,
-          pois <m>f'(x) = p^n x^{p^n - 1} - 1 = -1</m> é primo entre si e <m>f(x)</m>.
+          pois <m>f'(x) = p^n x^{p^n - 1} - 1 = -1</m> é coprimo com <m>f(x)</m>.
           Afirmamos que as raízes de <m>f(x)</m> formam um subcorpo de <m>F</m>.
           Certamente, 0 e 1 são zeros de <m>f(x)</m>.
           Se <m>\alpha</m> e <m>\beta</m> são zeros de <m>f(x)</m>,
