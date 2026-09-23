@@ -1417,7 +1417,7 @@
           <mrow>x &amp; \equiv  1 \pmod{9}</mrow>
           <mrow>x &amp; \equiv  5 \pmod{7}</mrow>
         </md>.
-        Resolvendo as duas equações seguintes,
+        Resolvendo as duas congruências seguintes,
         podemos reduzir o sistema a
         <md>
           <mrow>x &amp; \equiv  19 \pmod{180}</mrow>

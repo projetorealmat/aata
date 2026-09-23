@@ -628,7 +628,7 @@
           onde <m>i^2 = -1</m>.
           Então valem as relações <m>I^2 = J^2 = K^2 = -1</m>,
           <m>IJ=K</m>, <m>JK = I</m>, <m>KI = J</m>,
-          <m>JI = -K</m>, <m>KJ = -I</m> e <m>IK = -J</m> são válidas.
+          <m>JI = -K</m>, <m>KJ = -I</m> e <m>IK = -J</m>.
           O conjunto
 
           <notation>
@@ -2507,7 +2507,7 @@
         elas são apenas diferentes, e há bons argumentos a favor de cada uma.
         Ao consultar outros livros que trabalham com grupos de permutações,
         você deve primeiro determinar qual abordagem eles adotam.
-        (Observe que esta discussão sobre composição de funções no Sage se limita apenas às permutações<mdash/>as funções <q>regulares</q> no Sage são compostas na ordem que talvez você conheça de um curso de cálculo.)
+        (Observe que esta discussão sobre composição de funções no Sage se limita apenas às permutações<mdash/>as funções <q>usuais</q> no Sage são compostas na ordem que talvez você conheça de um curso de cálculo.)
       </p>
 
       <p>
