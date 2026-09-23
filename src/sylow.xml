@@ -1347,7 +1347,7 @@
 
   <references xml:id="sylow-references">
         <!-- %TWJ 8/13/2010 - References checked and updated -->
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] -->
       Edwards, H. <q>A Short History of the Fields Medal,</q>
@@ -1939,7 +1939,7 @@
   </section>
 
   <exercises xml:id="sylow-sage-exercises" component="sage-exercises">
-    <title>Exercícios de Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="sylow-sage-exercise-commutator-subgroup-theorem">
       <statement>

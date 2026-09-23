@@ -586,7 +586,7 @@
       </theorem>
             <!-- Error in proof fixed.  Suggested by R. Rossi.  TWJ 12/19/2011 -->
       <theorem xml:id="integers-theorem-fund-theorem-arithmetic">
-        <title>Teorema fundamental da aritmética</title>
+        <title>Teorema Fundamental da Aritmética</title>
         <idx>
         <h>Teorema fundamental</h>
         <h>da aritmética</h>
@@ -1671,7 +1671,7 @@ theory.</p> -->
   </section>
 
   <exercises xml:id="integers-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Estes exercícios tratam da investigação de propriedades básicas dos inteiros,

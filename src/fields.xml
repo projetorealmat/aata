@@ -1079,7 +1079,7 @@
         </p>
 
         <figure xml:id="fields-figure-splitting-fields-1">
-          <caption>Diagrama comutativo para <xref ref="fields-lemma-field-isomorphism"/></caption>
+          <caption>Diagrama comutativo para o <xref ref="fields-lemma-field-isomorphism"/></caption>
           <p><md>\begin{CD}
           E[x]/\langle p(x) \rangle    @>\psi>>  F[x]/\langle q(x) \rangle  \\
           @VV{\sigma}V        @VV{\tau}V\\
@@ -1127,7 +1127,7 @@
         </p>
 
         <figure xml:id="fields-figure-splitting-fields-2">
-          <caption>Diagrama comutativo para <xref ref="fields-theorem-isomorphism-extension"/></caption>
+          <caption>Diagrama comutativo para o <xref ref="fields-theorem-isomorphism-extension"/></caption>
           <p><md>\begin{CD}
           K  @>\psi>>  L  \\
           @VV{\sigma}V        @VV{\tau}V\\
@@ -1563,7 +1563,7 @@
     </subsection>
 
     <subsection xml:id="fields-subsection-historical-note">
-      <title>Nota Histórica</title>
+      <title>Nota histórica</title>
       <p>
         A teoria algébrica dos números usa as ferramentas da álgebra para resolver problemas da teoria dos números.
         A teoria algébrica moderna dos números começou com Pierre de Fermat<idx><h>Fermat, Pierre de</h></idx>
@@ -2165,7 +2165,7 @@
   </exercises>
 
   <references xml:id="fields-references">
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Dean, R. A.
@@ -2875,7 +2875,7 @@
   </section>
 
   <exercises xml:id="fields-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="fields-sage-exercise-Z3">
       <statement>

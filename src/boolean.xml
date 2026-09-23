@@ -1189,7 +1189,7 @@
     </introduction>
 
     <subsection xml:id="boolean-subsection-historical-note">
-      <title>Nota Histórica</title>
+      <title>Nota histórica</title>
       <p>
         George Boole<idx><h>Boole, George</h></idx>
         (1815<ndash/>1864) foi a primeira pessoa a estudar reticulados.
@@ -1703,13 +1703,13 @@
 
   </exercises>
   <exercises xml:id="boolean-exercises-programming">
-    <title>Exercícios de Programação</title>
+    <title>Exercícios de programação</title>
 
     <exercise xml:id="boolean-programming-exercise-boolean-polys">
       <statement>
         <p>
           Uma <term>função booleana</term><idx><h>Função booleana</h></idx><idx><h>Função</h><h>booleana</h></idx>
-          ou <term>função de comutação em <m>n</m> variáveis</term><idx><h>Função de comutação</h></idx><idx><h>Função</h><h>de comutação</h></idx>
+          ou <term>função de comutação em <m>n</m> variáveis</term><idx><h>Função de comutação</h></idx><idx><h>Função</h><h>comutação</h></idx>
           é uma aplicação <m>f : \{O, I\}^n \rightarrow \{ 0, I\}</m>.
           Um polinômio booleano é um tipo especial de função booleana:
           é qualquer tipo de expressão booleana formada por uma combinação finita das variáveis
@@ -1792,7 +1792,7 @@
 
 -->
   <references xml:id="boolean-references">
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
         <!-- %TWJ 8/19/2010 - References checked. -->
     <biblio type="raw">
 <!-- was [1] --><!-- Out of print - TWJ 8/19/2010 -->
@@ -2405,7 +2405,7 @@
     </subsection>
   </section>
   <exercises xml:id="boolean-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="boolean-sage-exercise-construct-poset">
       <statement>

@@ -1046,7 +1046,7 @@
     </introduction>
 
     <subsection xml:id="galois-subsection-historical-note">
-      <title>Nota Histórica</title>
+      <title>Nota histórica</title>
       <p>
         As soluções das equações cúbica e quártica foram descobertas no século XVI.
         As tentativas de encontrar soluções para as equações quínticas intrigaram alguns dos melhores matemáticos da história.
@@ -1129,7 +1129,7 @@
         O polinômio mais fácil de resolver por radicais é um da forma <m>x^n - a</m>.
         Como discutimos em <xref ref="cyclic"/>,
         as raízes de <m>x^n - 1</m> são chamadas
-        <idx><h><m>n</m>-ésima raiz da unidade</h></idx><term>raízes n-ésimas da unidade</term>.
+        <idx><h>Raiz <m>n</m>-ésima da unidade</h></idx><term>raízes n-ésimas da unidade</term>.
         Essas raízes formam um subgrupo finito do corpo de decomposição de <m>x^n -1</m>.
         Pelo <xref ref="finite-corollary-cyclic-group-finite-field"/>, as raízes <m>n</m>-ésimas da unidade formam um grupo cíclico.
         Qualquer gerador desse grupo é chamado de
@@ -2146,7 +2146,7 @@
   </exercises>
 
   <references xml:id="galois-references">
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated - 21 August 2010 - TWJ -->
       Artin, E.
@@ -3207,7 +3207,7 @@
   </section>
 
   <exercises xml:id="galois-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="galois-sage-exercise-x4-2">
       <statement>

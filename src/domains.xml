@@ -1140,7 +1140,7 @@
     </subsection>
 
     <subsection xml:id="domains-subsection-historical-note">
-      <title>Nota Histórica</title>
+      <title>Nota histórica</title>
       <p>
         Karl Friedrich Gauss,<idx><h>Gauss, Karl Friedrich</h></idx>
         nascido em Brunswick, Alemanha, em 30 de abril de 1777,
@@ -1722,7 +1722,7 @@
   </exercises>
 
   <references xml:id="domains-references">
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated - TWJ 8/14/2010 -->
       Atiyah, M. F.  and MacDonald, I. G.
@@ -2017,7 +2017,7 @@
   </section>
 
   <exercises xml:id="domains-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Não há exercícios do Sage para esta seção.

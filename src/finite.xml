@@ -1690,7 +1690,7 @@
   </exercises>
 
   <references xml:id="finite-references">
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference updated 5/4/2010 - TWJ -->
       Childs, L.
@@ -1898,7 +1898,7 @@
   </section>
 
   <exercises xml:id="finite-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="finite-sage-exercise-field-order-25">
       <statement>
