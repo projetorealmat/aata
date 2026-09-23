@@ -44,10 +44,8 @@ jobs:
             -lc 'set -euo pipefail
               python3 -m venv /tmp/pretext-venv
               /tmp/pretext-venv/bin/python -m pip install --requirement requirements.txt "lxml<6.1.3"
+              export PATH="/source/.realmat/pretext-wrapper:/tmp/pretext-venv/bin:$PATH"
               python3 scripts/prepare_pretext_runestone_cache.py
-              mkdir -p /tmp/realmat-python/bin
-              ln -s /tmp/pretext-venv/bin/python /tmp/realmat-python/bin/python
-              export PATH="/tmp/realmat-python/bin:/source/.realmat/pretext-wrapper:/tmp/pretext-venv/bin:$PATH"
               pretext build web --no-generate'
 
       - name: Validar saída HTML
