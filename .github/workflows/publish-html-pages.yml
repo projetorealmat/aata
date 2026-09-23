@@ -15,32 +15,13 @@ jobs:
   build:
     name: Gerar HTML com PreTeXt
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 20
     permissions:
       contents: read
 
     steps:
       - name: Checkout do livro
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-
-      - name: Configurar Python
-        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
-        with:
-          python-version: "3.12"
-
-      - name: Instalar dependências de compilação
-        shell: bash
-        run: |
-          set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y \
-            texlive-full \
-            latexmk \
-            poppler-utils \
-            pdf2svg \
-            nodejs \
-            npm
-          python -m pip install --requirement requirements.txt "lxml<6.1.3"
 
       - name: Preparar assets já gerados
         shell: bash
@@ -49,13 +30,23 @@ jobs:
           mkdir -p generated-assets
           cp -a images/. generated-assets/
 
-      - name: Preparar fallback dos serviços Runestone
+      - name: Compilar HTML na imagem oficial do PreTeXt
         shell: bash
-        run: python3 scripts/prepare_pretext_runestone_cache.py
-
-      - name: Compilar HTML
-        shell: bash
-        run: pretext build web --no-generate
+        run: |
+          set -euo pipefail
+          image="pretextbook/pretext:1.16"
+          docker pull "$image"
+          docker run --rm \
+            --volume "$GITHUB_WORKSPACE:/source" \
+            --workdir /source \
+            --entrypoint /bin/bash \
+            "$image" \
+            -lc 'set -euo pipefail
+              python3 -m venv /tmp/pretext-venv
+              /tmp/pretext-venv/bin/python -m pip install --requirement requirements.txt "lxml<6.1.3"
+              export PATH="/source/.realmat/pretext-wrapper:/tmp/pretext-venv/bin:$PATH"
+              python3 scripts/prepare_pretext_runestone_cache.py
+              pretext build web --no-generate'
 
       - name: Validar saída HTML
         shell: bash
