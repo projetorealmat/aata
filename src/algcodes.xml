@@ -3082,7 +3082,7 @@
     </subsection>
   </section>
   <exercises xml:id="algcodes-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <exercise number="1" xml:id="algcodes-sage-exercise-golay-code">
       <statement>
         <p>

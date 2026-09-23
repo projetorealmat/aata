@@ -2785,7 +2785,7 @@
   </section>
 
   <exercises xml:id="groups-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Estes exercícios têm por objetivo familiarizá-lo com o trabalho com grupos no Sage.

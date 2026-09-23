@@ -102,7 +102,7 @@
     <subsection xml:id="normal-subsection-factor-groups">
       <title>Grupos quocientes</title>
       <p>
-        Se <m>N</m> é um subgrupo normal de um grupo <m>G</m>, então as classes laterais de <m>N</m> em <m>G</m> formam um grupo <m>G/N</m> com a operação <m>(aN) (bN) = abN</m>. Esse grupo é chamado de <term>grupo fator</term><idx><h>Grupo</h><h>quociente</h></idx>
+        Se <m>N</m> é um subgrupo normal de um grupo <m>G</m>, então as classes laterais de <m>N</m> em <m>G</m> formam um grupo <m>G/N</m> com a operação <m>(aN) (bN) = abN</m>. Esse grupo é chamado de <term>grupo fator</term><idx><h>Grupo</h><h>fator</h></idx>
         ou <term>grupo quociente</term><idx><h>Grupo</h><h>quociente</h></idx>
         de <m>G</m> e <m>N</m>.
         <notation>

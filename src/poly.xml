@@ -2564,7 +2564,7 @@
   </section>
 
   <exercises xml:id="poly-sage-exercises" component="sage-exercises">
-    <title>Exercícios de Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="poly-sage-exercise-x3-3x-plus-4">
       <statement>

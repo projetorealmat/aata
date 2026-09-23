@@ -2255,7 +2255,7 @@
   </section>
 
   <exercises xml:id="permute-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Estes exercícios foram elaborados para ajudar você a se familiarizar com grupos de permutações no Sage.

@@ -36,7 +36,7 @@
   </introduction>
 
   <section xml:id="section-vect-definitions-and-examples">
-    <title>Definições e Exemplos</title>
+    <title>Definições e exemplos</title>
     <p>
       Um <term>espaço vetorial</term><idx><h>Espaço vetorial</h><h>definição de</h></idx> <m>V</m> sobre um corpo <m>F</m> é um grupo abeliano com um
       <term>produto por escalar</term><idx><h>Produto por escalar</h></idx>
@@ -1075,7 +1075,7 @@
 
   <references xml:id="vect-references">
         <!-- References updated - TWJ 8/19/2010 -->
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
     <biblio type="raw">
 <!-- was [1] --><!-- Reference added - TWJ 8/19/2010 -->
       Beezer, R.
@@ -1575,7 +1575,7 @@
   </section>
 
   <exercises xml:id="vect-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <exercise number="1" xml:id="vect-sage-exercise-U-plus-V">
       <statement>
         <p>

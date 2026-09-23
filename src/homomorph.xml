@@ -1453,7 +1453,7 @@
   </section>
 
   <exercises xml:id="homomorph-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
 
     <exercise number="1" xml:id="homomorph-sage-exercise-automorphism">
       <statement>

@@ -2592,7 +2592,7 @@
   </section>
 
   <exercises xml:id="cyclic-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Este grupo de exercícios trata do grupo das unidades módulo <m>n</m>,

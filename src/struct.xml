@@ -1254,7 +1254,7 @@
   </exercises>
 
   <exercises xml:id="struct-exercises-programming">
-    <title>Exercícios de Programação</title>
+    <title>Exercícios de programação</title>
     <exercise xml:id="struct-programming-exercise-abelian-groups">
       <statement>
         <p>
@@ -1268,7 +1268,7 @@
 
   <references xml:id="struct-references">
         <!-- %References checked and updated - TWJ 6/22/2010 -->
-    <title>Referências e Leituras Sugeridas</title>
+    <title>Referências e leituras sugeridas</title>
         <!--Fix INTRO
 		<p>Each of the following references contains a proof of the Fundamental Theorem of Finitely Generated Abelian Groups.</p>
 
@@ -1658,7 +1658,7 @@
   </section>
 
   <exercises xml:id="struct-sage-exercises" component="sage-exercises">
-    <title>Exercícios do Sage</title>
+    <title>Exercícios com Sage</title>
     <introduction>
       <p>
         Não há exercícios do Sage para este capítulo.
