@@ -42,9 +42,12 @@ jobs:
             --entrypoint /bin/bash \
             "$image" \
             -lc 'set -euo pipefail
-              python -m pip install --requirement requirements.txt "lxml<6.1.3"
+              python3 -m pip install --requirement requirements.txt "lxml<6.1.3"
+              mkdir -p /tmp/realmat-python/bin
+              ln -s "$(command -v python3)" /tmp/realmat-python/bin/python
+              export PATH="/tmp/realmat-python/bin:/source/.realmat/pretext-wrapper:$PATH"
               python3 scripts/prepare_pretext_runestone_cache.py
-              PATH="/source/.realmat/pretext-wrapper:$PATH" pretext build web --no-generate'
+              pretext build web --no-generate'
 
       - name: Validar saída HTML
         shell: bash
