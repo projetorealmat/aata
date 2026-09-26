@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="history">
+  <title>Histórico (History)</title>
+
+  <paragraphs xml:id="history-original">
+    <title>Obra original</title>
+    <p>
+      <pubtitle>Abstract Algebra: Theory and Applications</pubtitle>
+      (publicada inicialmente em 1997; edição-fonte consultada de 2026), de Thomas W. Judson,
+      com exercícios de Sage de Robert A. Beezer.
+      O publicador da obra original é Thomas W. Judson, que a disponibiliza em
+      <url href="https://judsonbooks.org/aata/" visual="judsonbooks.org/aata"/>.
+      A fonte transparente e as versões da obra original estão em
+      <url href="https://github.com/twjudson/aata" visual="github.com/twjudson/aata"/>.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="history-prior-brazilian-versions">
+    <title>Versões brasileiras anteriores</title>
+    <p>
+      As versões preliminares <c>v0.1.0</c>, <c>v0.1.2</c> e <c>v0.1.3</c>
+      foram distribuídas em 2026 sob o título
+      <pubtitle>Álgebra Abstrata: Teoria e Aplicações</pubtitle>.
+      A tradução e adaptação são de Carlos André Duarte Costa; a publicação e a distribuição
+      foram realizadas por Carlos André Duarte Costa por meio do projeto REALMat.
+      O histórico público está em
+      <url href="https://github.com/projetorealmat/aata/releases" visual="github.com/projetorealmat/aata/releases"/>.
+    </p>
+  </paragraphs>
+
+  <paragraphs xml:id="history-current-brazilian-version">
+    <title>Versão brasileira modificada</title>
+    <p>
+      <pubtitle>Álgebra Abstrata: Teoria e Aplicações — edição brasileira</pubtitle>
+      (2026). Autor da tradução e adaptação: Carlos André Duarte Costa.
+      Publicador (publisher) da versão modificada: Carlos André Duarte Costa.
+      Revisão editorial: equipe de revisão da edição brasileira.
+      O projeto REALMat organiza e disponibiliza esta edição em
+      <url href="https://projetorealmat.github.io/aata/" visual="projetorealmat.github.io/aata/"/>
+      e em
+      <url href="https://github.com/projetorealmat/aata" visual="github.com/projetorealmat/aata"/>.
+    </p>
+  </paragraphs>
+</appendix>

@@ -1,5 +1,4 @@
-Álgebra Abstrata: Teoria e Aplicações
-=====================================
+# Álgebra Abstrata: Teoria e Aplicações — edição brasileira
 
 por Tom Judson
 -------------
@@ -10,7 +9,7 @@ Para obter cópias em vários formatos e saber mais, visite o site do livro em [
 
 ## REALMat integration
 
-Este repositório é a edição REALMat em preparação, baseada no repositório-fonte em inglês. A tradução e a adaptação serão feitas aqui; o repositório upstream é mantido apenas para fins de procedência, créditos e informações de licença.
+Esta é a edição brasileira de *Álgebra Abstrata: Teoria e Aplicações*, baseada na obra de Thomas W. Judson e nos exercícios com Sage de Robert A. Beezer. Tradução e adaptação: Carlos André Duarte Costa. Revisão editorial: equipe de revisão da edição brasileira. O projeto REALMat organiza e disponibiliza a edição; Carlos André Duarte Costa é identificado na obra como publicador da versão modificada, conforme a GFDL.
 
 ## Publicações
 
