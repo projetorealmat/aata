@@ -14,7 +14,7 @@ Esta é a edição brasileira de *Álgebra Abstrata: Teoria e Aplicações*, bas
 ## Publicações
 
 <!-- realmat-release:start -->
-- Release REALMat atualmente recomendada: [v0.1.3](https://github.com/projetorealmat/aata/releases/tag/v0.1.3).
+- Release REALMat atualmente recomendada: [v0.1.4](https://github.com/projetorealmat/aata/releases/tag/v0.1.4).
 - [Ler no navegador](https://projetorealmat.github.io/aata/)
-- [PDF](https://github.com/projetorealmat/aata/releases/download/v0.1.3/aata.pdf)
+- [PDF](https://github.com/projetorealmat/aata/releases/download/v0.1.4/aata.pdf)
 <!-- realmat-release:end -->
