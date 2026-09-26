@@ -18,6 +18,11 @@
       <email>aata@judsonbooks.org</email>
     </author>
 
+    <author>
+      <personname>Carlos André Duarte Costa</personname>
+      <department>Tradução e adaptação para o português brasileiro</department>
+    </author>
+
     <credit>
       <title>Exercícios com Sage para Álgebra Abstrata</title>
       <author>
@@ -37,6 +42,25 @@
         <email>abehn@uchile.cl</email>
       </author>
     </credit>
+
+    <credit>
+      <title>Revisão editorial da edição brasileira</title>
+      <author>
+        <personname>Equipe de revisão da edição brasileira</personname>
+      </author>
+    </credit>
+
+    <credit>
+      <title>Projeto de organização e disponibilização da edição brasileira</title>
+      <author>
+        <personname>Projeto REALMat</personname>
+      </author>
+    </credit>
+
+    <credit>
+      <role>Publicador da versão modificada brasileira</role>
+      <entity>Carlos André Duarte Costa</entity>
+    </credit>
     <!-- Do not change date of the Annual Edition unless RAB  -->
     <!-- is forming a final commit to tag and digitally sign  -->
     <!-- (an annual task).  It can revert to the "today"      -->
@@ -54,7 +78,7 @@
     <!--                                   -->
     <copyright>
       <year>1997<ndash/>2026</year>
-      <holder>Thomas W. Judson, Robert A. Beezer</holder>
+      <holder>Thomas W. Judson, Robert A. Beezer; tradução e adaptação para o português brasileiro © 2026 Carlos André Duarte Costa</holder>
       <minilicense>GFDL License</minilicense>
       <shortlicense>
         Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q>

@@ -13,6 +13,7 @@
   <title>Referências</title>
 
     <xi:include href="./gfdl.xml" />
+    <xi:include href="./history.xml" />
     <xi:include href="./hints.xml" />
     <xi:include href="./notation.xml" />
     <xi:include href="./index.xml" />

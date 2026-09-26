@@ -23,7 +23,7 @@
   <xi:include href="./bookinfo.xml" /> <!-- ISBN, website, other metadata -->
   <book xml:id="aata-toc">
     <title>Álgebra Abstrata</title>
-    <subtitle>Teoria e Aplicações</subtitle>
+    <subtitle>Teoria e Aplicações — edição brasileira</subtitle>
     <xi:include href="./frontmatter.xml" />                 <!-- Title Page, Preface, etc. -->
     <xi:include href="./sets.xml" />                        <!-- Set Theory  -->
     <xi:include href="./integers.xml" />                    <!-- Integers -->
