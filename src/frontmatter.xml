@@ -46,8 +46,10 @@
     </credit>
 
     <credit>
-      <role>Publicador da versão modificada brasileira</role>
-      <entity>Carlos André Duarte Costa</entity>
+      <title>Publicador da versão modificada brasileira</title>
+      <author>
+        <personname>Carlos André Duarte Costa</personname>
+      </author>
     </credit>
     <!-- Data da edição brasileira; a edição anual original é de 4 de agosto de 2026. -->
     <date>26 de setembro de 2026</date>
@@ -57,7 +59,13 @@
       <holder>Thomas W. Judson, Robert A. Beezer; tradução para o português brasileiro © 2026 Carlos André Duarte Costa</holder>
       <minilicense>GFDL License</minilicense>
       <shortlicense>
-        Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q>
+        Resumo informativo em português: é permitida a cópia, a distribuição e/ou a modificação deste documento nos termos da GNU Free Documentation License, versão 1.3 ou qualquer versão posterior publicada pela Free Software Foundation, sem Seções Invariantes, sem Textos de Capa e sem Textos de Contracapa. Uma cópia da licença está incluída na seção intitulada <q>GNU Free Documentation License</q>.
+        Aviso de licença da edição brasileira, em inglês: Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled &#x201C;GNU
+Free Documentation License&#x201D;.
       </shortlicense>
 
     </copyright>
@@ -95,12 +103,11 @@
   <preface>
     <title>Créditos do projeto REALMat</title>
     <p>Projeto REALMat — Recursos Educacionais Abertos na Licenciatura em Matemática.</p>
-    <p>O REALMat organiza e disponibiliza a edição brasileira.</p>
-    <p><em>Tradução para o português brasileiro:</em> Carlos André Duarte Costa.</p>
+    <p>O REALMat organiza e disponibiliza esta edição brasileira.</p>
+    <p><em>Tradução para o português brasileiro</em></p>
+    <p>Carlos André Duarte Costa</p>
     <p><em>Revisão editorial da edição brasileira</em></p>
-    <ul>
-      <li><p>Equipe de revisão da edição brasileira</p></li>
-    </ul>
+    <p>Equipe de revisão da edição brasileira</p>
     <p>Portal: <url href="https://projetorealmat.github.io/" visual="projetorealmat.github.io"/>.</p>
     <p>Repositório desta edição: <url href="https://github.com/projetorealmat/aata" visual="github.com/projetorealmat/aata"/>.</p>
     <p>Fonte original: <url href="https://github.com/twjudson/aata" visual="github.com/twjudson/aata"/>.</p>
