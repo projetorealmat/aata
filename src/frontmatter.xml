@@ -20,7 +20,7 @@
 
     <author>
       <personname>Carlos André Duarte Costa</personname>
-      <department>Tradução e adaptação para o português brasileiro</department>
+      <department>Tradução para o português brasileiro</department>
     </author>
 
     <credit>
@@ -47,13 +47,6 @@
       <title>Revisão editorial da edição brasileira</title>
       <author>
         <personname>Equipe de revisão da edição brasileira</personname>
-      </author>
-    </credit>
-
-    <credit>
-      <title>Projeto de organização e disponibilização da edição brasileira</title>
-      <author>
-        <personname>Projeto REALMat</personname>
       </author>
     </credit>
 
@@ -116,7 +109,20 @@
     <colophon-items/>
   </colophon>
 
+  <preface>
+    <title>Tradução para o português brasileiro</title>
+    <p>Carlos André Duarte Costa</p>
+    <p>26 de setembro de 2026</p>
+  </preface>
 
+  <preface>
+    <title>Créditos do projeto REALMat</title>
+    <p>Projeto REALMat — Recursos Educacionais Abertos na Licenciatura em Matemática.</p>
+    <p>O REALMat organiza e disponibiliza a edição brasileira. A autoria da tradução é de Carlos André Duarte Costa.</p>
+    <p>Portal: <url href="https://projetorealmat.github.io/" visual="projetorealmat.github.io"/>.</p>
+    <p>Repositório desta edição: <url href="https://github.com/projetorealmat/aata" visual="github.com/projetorealmat/aata"/>.</p>
+    <p>Fonte original: <url href="https://github.com/twjudson/aata" visual="github.com/twjudson/aata"/>.</p>
+  </preface>
 
   <preface>
     <p>
