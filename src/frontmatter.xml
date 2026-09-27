@@ -103,12 +103,11 @@ Free Documentation License&#x201D;.
   <preface>
     <title>Créditos do projeto REALMat</title>
     <p>Projeto REALMat — Recursos Educacionais Abertos na Licenciatura em Matemática.</p>
-    <p>O REALMat organiza e disponibiliza a edição brasileira.</p>
-    <p><em>Tradução para o português brasileiro:</em> Carlos André Duarte Costa.</p>
+    <p>O REALMat organiza e disponibiliza esta edição brasileira.</p>
+    <p><em>Tradução para o português brasileiro</em></p>
+    <p>Carlos André Duarte Costa</p>
     <p><em>Revisão editorial da edição brasileira</em></p>
-    <ul>
-      <li><p>Equipe de revisão da edição brasileira</p></li>
-    </ul>
+    <p>Equipe de revisão da edição brasileira</p>
     <p>Portal: <url href="https://projetorealmat.github.io/" visual="projetorealmat.github.io"/>.</p>
     <p>Repositório desta edição: <url href="https://github.com/projetorealmat/aata" visual="github.com/projetorealmat/aata"/>.</p>
     <p>Fonte original: <url href="https://github.com/twjudson/aata" visual="github.com/twjudson/aata"/>.</p>
