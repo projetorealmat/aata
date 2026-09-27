@@ -18,10 +18,6 @@
       <email>aata@judsonbooks.org</email>
     </author>
 
-    <author>
-      <personname>Carlos André Duarte Costa</personname>
-      <department>Tradução para o português brasileiro</department>
-    </author>
 
     <credit>
       <title>Exercícios com Sage para Álgebra Abstrata</title>
@@ -42,33 +38,20 @@
         <email>abehn@uchile.cl</email>
       </author>
     </credit>
-
     <credit>
-      <title>Revisão editorial da edição brasileira</title>
+      <title>Tradução para o português brasileiro</title>
       <author>
-        <personname>Equipe de revisão da edição brasileira</personname>
+        <personname>Carlos André Duarte Costa</personname>
       </author>
     </credit>
+
 
     <credit>
       <role>Publicador da versão modificada brasileira</role>
       <entity>Carlos André Duarte Costa</entity>
     </credit>
-    <!-- Do not change date of the Annual Edition unless RAB  -->
-    <!-- is forming a final commit to tag and digitally sign  -->
-    <!-- (an annual task).  It can revert to the "today"      -->
-    <!-- element for intermediate builds during the year.     -->
-    <!--                                   -->
-    <!-- ********************************* -->
-    <!-- READ COMMENT ABOVE BEFORE EDITING -->
-    <!-- ********************************* -->
-    <!--                                   -->
-    <date>August 4, 2026</date>
-    <!--                                   -->
-    <!-- ********************************* -->
-    <!-- READ COMMENT ABOVE BEFORE EDITING -->
-    <!-- ********************************* -->
-    <!--                                   -->
+    <!-- Data da edição brasileira; a edição anual original é de 4 de agosto de 2026. -->
+    <date>26 de setembro de 2026</date>
     <copyright>
       <year>1997<ndash/>2026</year>
       <holder>Thomas W. Judson, Robert A. Beezer; tradução e adaptação para o português brasileiro © 2026 Carlos André Duarte Costa</holder>
@@ -110,15 +93,10 @@
   </colophon>
 
   <preface>
-    <title>Tradução para o português brasileiro</title>
-    <p>Carlos André Duarte Costa</p>
-    <p>26 de setembro de 2026</p>
-  </preface>
-
-  <preface>
     <title>Créditos do projeto REALMat</title>
     <p>Projeto REALMat — Recursos Educacionais Abertos na Licenciatura em Matemática.</p>
     <p>O REALMat organiza e disponibiliza a edição brasileira. A autoria da tradução é de Carlos André Duarte Costa.</p>
+    <p>Revisão editorial da edição brasileira: Equipe de revisão da edição brasileira.</p>
     <p>Portal: <url href="https://projetorealmat.github.io/" visual="projetorealmat.github.io"/>.</p>
     <p>Repositório desta edição: <url href="https://github.com/projetorealmat/aata" visual="github.com/projetorealmat/aata"/>.</p>
     <p>Fonte original: <url href="https://github.com/twjudson/aata" visual="github.com/twjudson/aata"/>.</p>
