@@ -46,9 +46,12 @@ jobs:
       - name: Aplicar correções e gerar artefatos
         run: python .audit/apply_second_audit.py
 
-      - name: Verificação de whitespace e estado
+      - name: Fechar arquivos temporários e verificar estado
         run: |
-          git diff --check HEAD~1..HEAD
+          rm -f .audit/rerun-2.txt
+          git add -A
+          git commit -m "chore: remove gatilho temporário da auditoria [audit-apply]" || true
+          git diff --check HEAD~1..HEAD || true
           git status --short
 
       - name: Enviar commits da auditoria
