@@ -601,7 +601,7 @@
         É um exercício simples mostrar que
         <m>{\mathbb Z}_2^n</m> e <m>R_n</m> são isomorfos como espaços vetoriais.
         Frequentemente identificaremos elementos de
-        <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+        <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
         Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
       </p>
 
@@ -619,7 +619,7 @@
       <theorem xml:id="finite-theorem-cyclic-code">
         <statement>
           <p>
-            Um código linear <m>C</m> em <m>{\mathbb Z}_2^n</m> é cíclico se, e somente se, é um ideal em <m>R_n = {\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+            Um código linear <m>C</m> em <m>{\mathbb Z}_2^n</m> é cíclico se, e somente se, é um ideal em <m>R_n = {\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
           </p>
         </statement>
 
@@ -733,7 +733,7 @@
         <statement>
           <p>
             Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m> e suponha que <m>x^n - 1 = g(x) h(x)</m>.
-            Então <m>G</m> e <m>H</m> são, respectivamente, matrizes geradora e de verificação de paridade de <m>C</m>.
+            Então <m>G</m> e <m>H</m> são, respectivamente, a matriz geradora e a matriz de verificação de paridade de <m>C</m>.
             Além disso, <m>HG = 0</m>.
           </p>
         </statement>
@@ -1938,7 +1938,7 @@
           e traduzir elementos de um para o outro.
           Contudo, neste exercício criaremos um subcorpo de um corpo finito do zero.
           Como o grupo dos elementos não nulos de um corpo finito é cíclico,
-          os elementos não nulos de um subcorpo formarão um subgrupo do grupo cíclico
+          o grupo multiplicativo dos elementos não nulos de um subcorpo formarão um subgrupo do grupo cíclico
           e necessariamente serão cíclicos.
         </p>
 
