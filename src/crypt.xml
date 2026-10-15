@@ -283,7 +283,7 @@
 
       <p>
         O criptossistema <acro>RSA</acro><idx><h>criptossistema <acro>RSA</acro></h></idx><idx><h>Criptossistema</h><h><acro>RSA</acro></h></idx> funciona da seguinte maneira.
-        Suponha que escolhamos dois números primos aleatórios de 150 algarismos, <m>p</m> e <m>q</m>.
+        Suponha que escolhamos dois números primos distintos de 150 algarismos, <m>p</m> e <m>q</m>.
         Em seguida, calculamos o produto <m>n= pq</m> e também calculamos <m>\phi(n) = m = (p - 1)(q-1)</m>,
         onde <m>\phi</m> é a função <m>\phi</m> de Euler.
         Começamos então a escolher inteiros aleatórios <m>E</m> até encontrar um que seja coprimo de <m>m</m>;
@@ -298,7 +298,7 @@
         Como <m>E</m> e <m>n</m> são conhecidos por todos,
         qualquer pessoa pode cifrar mensagens.
         Primeiro, Bob digitaliza a mensagem de acordo com algum esquema,
-        por exemplo <m>\text{A} = 00, \text{B} = 02, \ldots, \text{Z}= 25</m>.
+        por exemplo <m>\text{A} = 00, \text{B} = 01, \ldots, \text{Z}= 25</m>.
         Se necessário,
         ele divide a mensagem em partes tais que cada parte seja um inteiro positivo menor que <m>n</m>.
         Suponha que <m>x</m> seja uma dessas partes.
@@ -848,7 +848,7 @@
                     x := x + 1
                     y := 1
                     goto 1
-                else if x^2 - y^2 = 0 then
+                else if x^2 - y^2 = n then
                     a := x - y
                     b := x + y
                     write n = a * b
@@ -1089,7 +1089,7 @@
         (não coprimo de <m>m</m>),
         o cálculo do inverso multiplicativo falhará
         (e o Sage informará isso).
-        Fazemos isso duas vezes <mdash/>- uma para Alice e outra para Bob.
+        Fazemos isso duas vezes <mdash/> uma para Alice e outra para Bob.
       </p>
 
             <sage>
@@ -1375,7 +1375,7 @@
           Para sua escolha de <m>E</m>,
           use um único número primo e escolha o menor valor possível.
           Apresente os valores de <m>n</m>,
-          <m>E</m> e <m>D</m> de Alice.
+          <m>E</m> e <m>D</m> de Bob.
         </p>
 
         <p>
@@ -1427,7 +1427,7 @@
 
         <p>
           Se não fizer isso em sala,
-          escolha um colega de estudos e enviem mensagens um ao outro da mesma maneira.
+          escolha um colega de estudos e envie mensagens um ao outro da mesma maneira.
           Espere uma taxa de sucesso de 0%, 50% ou 100%.
         </p>
       </statement>
