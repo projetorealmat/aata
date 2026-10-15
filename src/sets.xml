@@ -1343,7 +1343,7 @@
       <example xml:id="sets-example-matrix-partition">
         <p>
           Na relação de equivalência em <xref ref="sets-example-equivalent-derivative"/>,
-          duas funções <m>f(x)</m> e <m>g(x)</m> estão na mesma partição quando diferem por uma constante.
+          duas funções <m>f(x)</m> e <m>g(x)</m> estão na mesma classe de equivalência quando diferem por uma constante.
         </p>
       </example>
 
@@ -1351,7 +1351,7 @@
         <p>
           Definimos uma classe de equivalência em <m>{\mathbb R}^2</m> por
           <m>(x_1, y_1 ) \sim (x_2, y_2)</m> se <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
-          Dois pares de números reais estão na mesma partição quando pertencem ao mesmo círculo centrado na origem.
+          Dois pares de números reais estão na mesma classe de equivalência quando pertencem ao mesmo círculo centrado na origem.
         </p>
       </example>
 
