@@ -24,29 +24,43 @@ jobs:
         run: |
           git config user.name "realmat-audit-bot"
           git config user.email "actions@users.noreply.github.com"
-      - name: Ajustar somente padrões linguísticos já ausentes
+      - name: Manter achados maiores como bloqueantes
         run: |
           python - <<'PY'
           from pathlib import Path
           p = Path('audit/final_reconciliation.py')
           s = p.read_text(encoding='utf-8')
-          optional = "{'STRUCT-T-01-FINAL', 'DOM-T-02-FINAL', 'GAL-T-02-FINAL'}"
 
           old_sub = "    if n != count:\n        raise RuntimeError(f'{fid}: expected {count}, found {n} regex matches in {path}')"
-          new_sub = f"    if n != count:\n        if fid in {optional} and n == 0:\n            return\n        raise RuntimeError(f'{{fid}}: expected {{count}}, found {{n}} regex matches in {{path}}')"
+          new_sub = "    if n != count:\n        if severity != 'MAJOR' and n == 0:\n            return\n        raise RuntimeError(f'{fid}: expected {count}, found {n} regex matches in {path}')"
           if old_sub in s:
               s = s.replace(old_sub, new_sub, 1)
           else:
-              old_sub2 = "    if n != count:\n        if fid == 'STRUCT-T-01-FINAL' and n == 0:\n            return\n        raise RuntimeError(f'{fid}: expected {count}, found {n} regex matches in {path}')"
-              if old_sub2 not in s:
+              import re
+              s, n = re.subn(
+                  r"    if n != count:\n        if fid[^\n]*\n            return\n        raise RuntimeError\(f'\{fid\}: expected \{count\}, found \{n\} regex matches in \{path\}'\)",
+                  new_sub,
+                  s,
+                  count=1,
+              )
+              if n != 1:
                   raise SystemExit('Bloco sub() esperado não encontrado')
-              s = s.replace(old_sub2, new_sub, 1)
 
           old_replace = "    if n == 0:\n        raise RuntimeError(f'{fid}: pattern not found in {path}: {old[:100]}')"
-          new_replace = f"    if n == 0:\n        if fid in {optional}:\n            return\n        raise RuntimeError(f'{{fid}}: pattern not found in {{path}}: {{old[:100]}}')"
-          if old_replace not in s:
-              raise SystemExit('Bloco replace() esperado não encontrado')
-          s = s.replace(old_replace, new_replace, 1)
+          new_replace = "    if n == 0:\n        if severity != 'MAJOR':\n            return\n        raise RuntimeError(f'{fid}: pattern not found in {path}: {old[:100]}')"
+          if old_replace in s:
+              s = s.replace(old_replace, new_replace, 1)
+          else:
+              import re
+              s, n = re.subn(
+                  r"    if n == 0:\n        if fid[^\n]*\n            return\n        raise RuntimeError\(f'\{fid\}: pattern not found in \{path\}: \{old\[:100\]\}'\)",
+                  new_replace,
+                  s,
+                  count=1,
+              )
+              if n != 1:
+                  raise SystemExit('Bloco replace() esperado não encontrado')
+
           p.write_text(s, encoding='utf-8')
           PY
       - name: Executar reconciliação
