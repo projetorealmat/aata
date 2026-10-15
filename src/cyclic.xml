@@ -509,7 +509,7 @@
           </md>
           e
           <md>
-            \theta = \arctan \left( \frac{b}{a} \right) = \arctan( - 1) = 315^{\circ}
+            \theta = 360^{\circ} + \arctan \left( \frac{b}{a} \right) = 315^{\circ}
           </md>,
           portanto, <m>3 \sqrt{2} - 3 \sqrt{2}\, i=6 \cis  315^{\circ}</m>.
         </p>
@@ -541,9 +541,9 @@
       </example>
 
       <theorem>
-        <title>DeMoivre</title>
+        <title>De Moivre</title>
         <idx>
-        <h>Teorema de DeMoivre</h>
+        <h>Teorema de De Moivre</h>
         </idx>
         <statement>
           <p>
@@ -567,7 +567,7 @@
               <mrow>&amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )</mrow>
               <mrow>&amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]</mrow>
               <mrow>&amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]</mrow>
-              <mrow>&amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ]</mrow>
+              <mrow>&amp; = r^{n+1} [ \cos((n + 1)\theta) + i \sin((n + 1)\theta)  ]</mrow>
             </md>.
           </p>
         </proof>
@@ -577,7 +577,7 @@
         <p>
           Suponha que <m>z= 1+i</m> e queiramos calcular <m>z^{10}</m>.
           Em vez de calcular diretamente <m>(1 + i)^{10}</m>,
-          é muito mais fácil passar para coordenadas polares e calcular <m>z^{10}</m> usando o Teorema de DeMoivre:
+          é muito mais fácil passar para coordenadas polares e calcular <m>z^{10}</m> usando o Teorema de De Moivre:
           <md>
             <mrow>z^{10} &amp; = (1+i)^{10}</mrow>
             <mrow>&amp; = \left( \sqrt{2} \cis \left( \frac{\pi }{4} \right) \right)^{10}</mrow>
@@ -642,7 +642,7 @@
 
         <proof>
           <p>
-            Pelo Teorema de DeMoivre,
+            Pelo Teorema de De Moivre,
             <md>
               z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1
             </md>.
@@ -1864,7 +1864,7 @@
       <statement>
         <p>
           Seja <m>z =\cos \theta + i \sin \theta</m> um elemento de
-          <m>{\mathbb T}</m>, onde <m>\theta \in {\mathbb Q}</m>.
+          <m>{\mathbb T}</m>, onde <m>\theta \in {\mathbb Q} \setminus \{0\}</m>.
           Prove que a ordem de <m>z</m> é infinita.
         </p>
       </statement>
