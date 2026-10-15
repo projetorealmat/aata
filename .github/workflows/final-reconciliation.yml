@@ -1,0 +1,33 @@
+name: Reconciliação final AATA
+
+on:
+  push:
+    branches:
+      - review/aata-second-audit-20261015
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/aata-second-audit-20261015
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Configurar Git
+        run: |
+          git config user.name "realmat-audit-bot"
+          git config user.email "actions@users.noreply.github.com"
+      - name: Executar reconciliação
+        run: python audit/final_reconciliation.py
+      - name: Verificar árvore e enviar commits
+        run: |
+          git diff --check HEAD~1..HEAD || true
+          git status --short
+          git push origin HEAD:review/aata-second-audit-20261015
