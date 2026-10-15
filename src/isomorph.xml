@@ -17,7 +17,7 @@
       mas é possível mostrar que são iguais por meio de uma simples renomeação dos elementos do grupo.
       Por exemplo,
       <m>{\mathbb Z}_4</m> e o subgrupo do grupo circular
-      <m>{\mathbb T}</m> gerado por <m>i</m> podemos mostrar que são isomorfos exibindo uma correspondência bijetiva entre os elementos dos dois grupos e entre as operações de grupo.
+      <m>{\mathbb T}</m> gerado por <m>i</m> são isomorfos, como se vê por uma correspondência bijetiva entre seus elementos que preserva as operações de grupo.
       Nesse caso, dizemos que os grupos são isomorfos.
     </p>
   </introduction>

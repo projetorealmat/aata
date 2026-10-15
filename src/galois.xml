@@ -2026,7 +2026,7 @@
           <ol>
             <li>
               <p>
-                Claramente <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos, pois <m>\omega \neq 1</m> e <m>\omega \neq 0</m>.
+                Como <m>\omega</m> é uma raiz <m>p</m>-ésima primitiva da unidade, sua ordem multiplicativa é <m>p</m>; portanto, <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos.
                 Para mostrar que <m>\omega^i</m> é um zero de <m>\Phi_p(x)</m>,
                 calcule <m>\Phi_p( \omega^i)</m>.
               </p>
@@ -2041,7 +2041,7 @@
                 </md>,
                 em que <m>a_i \in {\mathbb Q}</m>.
                 Prove que <m>\phi_i</m> é um isomorfismo de corpos.
-                Mostre que <m>\phi_2</m> gera <m>G({\mathbb Q}(\omega)/{\mathbb Q})</m>.
+                Mostre que <m>\phi_i \circ \phi_j = \phi_k</m>, em que <m>k \equiv ij \pmod p</m>, e conclua que <m>G({\mathbb Q}(\omega)/{\mathbb Q}) \cong U_p</m>; em particular, esse grupo é abeliano de ordem <m>p-1</m>.
               </p>
             </li>
 

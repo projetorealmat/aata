@@ -773,7 +773,7 @@
         </ol>
 
         Então <m>D</m> é chamado de <term>domínio euclidiano</term><idx><h>Domínio euclidiano</h></idx><idx><h>Domínio</h><h>euclidiano</h></idx>
-        e <m>\nu</m> é chamada de <idx><h>Valoração euclidiana</h></idx><term>função euclidiana</term>.
+        e <m>\nu</m> é chamada de <idx><h>Função euclidiana</h></idx><term>função euclidiana</term>.
       </p>
 
       <example xml:id="domains-example-abs-value">

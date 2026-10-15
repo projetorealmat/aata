@@ -241,3 +241,8 @@ Correções materiais herdadas da edição inglesa foram mantidas separadas dos 
 - Severidade: MAJOR
 - Evidência: Correção do passo de normalidade: usa-se o fecho normal finito de E sobre R; normalidade não é obtida de x²+1.
 - Disposição: corrected
+
+## Adendo — varredura cruzada final
+
+- `galois.xml`: a distinção de `omega, omega^2, ..., omega^(p-1)` foi justificada corretamente pela ordem multiplicativa `p` de `omega`.
+- `galois.xml`: a instrução herdada da fonte para provar que `phi_2` gera todo o grupo foi substituída pela lei de composição `phi_i o phi_j = phi_k` (`k ≡ ij mod p`) e pela identificação com `U_p`. A afirmação anterior falha, por exemplo, para `p=7`.

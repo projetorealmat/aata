@@ -938,7 +938,7 @@
         Um subgrupo que é um subconjunto próprio de <m>G</m> é chamado de
         <idx><h>Subgrupo</h><h>próprio</h></idx><term>subgrupo próprio</term>.
         Em muitos dos exemplos que investigamos até aqui,
-        existem outros subgrupos além dos subgrupos triviais e impróprios.
+        existem outros subgrupos além do subgrupo trivial e do subgrupo impróprio.
       </p>
 
       <example xml:id="groups-example-multiplicative-subgroup">

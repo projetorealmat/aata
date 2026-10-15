@@ -27,3 +27,7 @@ Dois candidatos da passagem anterior foram reclassificados como falsos positivos
 
 ## Reconciliação final
 Os casos em que a aplicação inicial não encontrou o padrão literal foram reinspecionados. As correções ainda pertinentes foram aplicadas em uma passagem final, incluindo índices BCH, afirmações em teoria de Galois, limites de expoentes e correções linguísticas de `fields.xml`. Os registros antigos de mismatch foram marcados como superseded e os achados finais foram adicionados ao ledger.
+
+## Varredura cruzada final do PR #32
+
+Uma nova comparação hunk a hunk das alterações do PR #32 com o baseline inglês identificou nove pendências editoriais/semânticas. Todas foram corrigidas nesta rodada: terminologia e gramática em `fields.xml`, `crypt.xml`, `domains.xml`, `groups.xml`, `isomorph.xml` e `matrix.xml`, além de duas correções matemáticas em `galois.xml` relativas às potências de uma raiz ciclotômica e à falsa afirmação de que `phi_2` gera o grupo de Galois para todo primo.
