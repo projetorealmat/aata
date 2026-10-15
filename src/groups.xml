@@ -13,12 +13,12 @@
   <title>Grupos</title>
   <introduction>
     <p>
-      Começamos nosso estudo das estruturas algébricas investigando conjuntos associados a operações únicas que satisfazem certos axiomas razoáveis;
+      Começamos nosso estudo das estruturas algébricas investigando conjuntos munidos de uma única operação que satisfaça certos axiomas razoáveis;
       isto é, queremos definir uma operação em um conjunto de modo a generalizar estruturas familiares como os inteiros
-      <m>{\mathbb Z}</m> munidos da única operação de adição,
-      ou matrizes invertíveis <m>2 \times 2</m> munidas da única operação de multiplicação de matrizes.
+      <m>{\mathbb Z}</m> com a adição,
+      ou matrizes invertíveis <m>2 \times 2</m> com a multiplicação de matrizes.
       Os inteiros e as matrizes <m>2 \times 2</m>,
-      juntamente com suas respectivas operações únicas,
+      munidos de suas respectivas operações,
       são exemplos de estruturas algébricas conhecidas como grupos.
     </p>
 
@@ -36,7 +36,7 @@
     <title>Classes de equivalência de inteiros e simetrias</title>
     <introduction>
       <p>
-        Vamos agora investigar algumas estruturas matemáticas que podem ser vistas como conjuntos com operações únicas.
+        Vamos agora investigar algumas estruturas matemáticas que podem ser vistas como conjuntos munidos de uma única operação.
       </p>
     </introduction>
 
@@ -1624,7 +1624,7 @@
             1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
             \end{pmatrix}
           </md>
-          pertença a <m>S_n</m>.
+          um elemento de <m>S_n</m>.
           Todos os <m>a_i</m> devem ser distintos.
           Há <m>n</m> maneiras de escolher <m>a_1</m>,
           <m>n - 1</m> maneiras de escolher <m>a_2</m>, <ellipsis/>, duas maneiras de escolher <m>a_{n - 1}</m>

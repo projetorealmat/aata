@@ -765,8 +765,7 @@
           <p>
             Seja <m>p(x) \in {\mathbb Z}[x]</m> um polinômio mônico tal que <m>p(x)</m> se fatora como o produto de dois polinômios <m>\alpha(x)</m> e
             <m>\beta(x)</m> em <m>{\mathbb Q}[x]</m>,
-            cujos graus de ambos <m>\alpha(x)</m> e
-            <m>\beta(x)</m> sejam menores que o grau de <m>p(x)</m>.
+            em que os graus de <m>\alpha(x)</m> e <m>\beta(x)</m> são menores que o grau de <m>p(x)</m>.
             Então <m>p(x) = a(x) b(x)</m>,
             onde <m>a(x)</m> e <m>b(x)</m> são polinômios mônicos em <m>{\mathbb Z}[x]</m> com
             <m>\deg \alpha(x) = \deg a(x)</m> e <m>\deg \beta(x) = \deg b(x)</m>.
@@ -1121,7 +1120,7 @@
       </p>
 
       <p>
-        Embora Fior não fosse igual ao seu mestre,
+        Embora Fior não estivesse à altura de seu mestre,
         imediatamente lançou um desafio a Niccolo Fontana (1499<ndash/>1557).
         Fontana era conhecido como Tartaglia<idx><h>Tartaglia</h></idx>
         (o Gago).

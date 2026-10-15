@@ -2430,7 +2430,7 @@
 
           <li>
             <p>
-              Use <c>.minimal_elements()</c> e <c>.maximal_elements()</c> para encontrar os elementos menor e maior do seu poset.
+              Use <c>.minimal_elements()</c> e <c>.maximal_elements()</c> para encontrar os elementos minimais e maximais do seu poset.
             </p>
           </li>
 

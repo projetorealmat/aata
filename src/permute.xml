@@ -601,11 +601,7 @@
         </proof>
       </theorem>
 
-      <p>
-        À luz do <xref ref="permute-theorem-even-and-odd"/>, definimos uma permutação como <term>par</term><idx><h>Permutação</h><h>par</h></idx>
-        se ela puder ser expressa como um número par de transposições, e como <term>ímpar</term><idx><h>Permutação</h><h>ímpar</h></idx>
-        se puder ser expressa como um número ímpar de transposições.
-      </p>
+      <p> À luz do <xref ref="permute-theorem-even-and-odd"/>, dizemos que uma permutação é <term>par</term><idx><h>Permutação</h><h>par</h></idx> se puder ser expressa como um número par de transposições, e <term>ímpar</term><idx><h>Permutação</h><h>ímpar</h></idx> se puder ser expressa como um número ímpar de transposições. </p>
     </subsection>
 
     <subsection xml:id="permute-subsection-alternating-groups">

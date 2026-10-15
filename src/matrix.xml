@@ -1138,7 +1138,7 @@
 
       <p>
         Um grupo espacial é composto de duas partes:
-        um <term>subgrupo de translações</term><idx><h>Subgrupo</h><h>translações</h></idx> e um <idx><h>Grupo</h><h>ponto</h></idx><term>ponto</term>.
+        um <term>subgrupo de translações</term><idx><h>Subgrupo</h><h>translações</h></idx> e um <idx><h>Grupo</h><h>pontual</h></idx><term>grupo pontual</term>.
         O subgrupo de translações é um subgrupo abeliano infinito do grupo espacial, composto pelas simetrias de translação do cristal;
         o grupo pontual é um grupo finito que consiste em rotações e reflexões do cristal em torno de um ponto.
         Mais especificamente, um grupo espacial é um subgrupo de

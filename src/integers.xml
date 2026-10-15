@@ -1686,7 +1686,7 @@ theory.</p> -->
     <exercise number="1" xml:id="integers-sage-exercise-next-prime">
       <statement>
         <p>
-          Use o comando <c>next_prime()</c> para construir dois números primos de 8 algarismos diferentes e salve-os nas variáveis chamadas <c>a</c> e <c>b</c>.
+          Use o comando <c>next_prime()</c> para construir dois números primos distintos, cada um com 8 algarismos, e salve-os nas variáveis chamadas <c>a</c> e <c>b</c>.
         </p>
       </statement>
     </exercise>

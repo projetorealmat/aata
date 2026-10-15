@@ -28,7 +28,7 @@
       <md>
         p(x) = x^4 -5 x^2 + 6
       </md>
-      in <m>{\mathbb Q}[x]</m>,
+      em <m>{\mathbb Q}[x]</m>,
       então <m>p(x)</m> se fatora como <m>(x^2 - 2)(x^2 - 3)</m>.
       No entanto, ambos esses fatores são irredutíveis em <m>{\mathbb Q}[x]</m>.
       Se desejarmos encontrar um zero de <m>p(x)</m>,
@@ -350,7 +350,7 @@
             O núcleo de <m>\phi_{\alpha}</m> é um ideal principal gerado por algum
             <m>p(x) \in F[x]</m> com <m>\deg p(x) \geq 1</m>.
             Sabemos que tal polinômio existe,
-            pois <m>F[x]</m> é um domínio principal de ideais e <m>\alpha</m> é algébrico.
+            pois <m>F[x]</m> é um domínio de ideais principais e <m>\alpha</m> é algébrico.
             O ideal <m>\langle p(x) \rangle</m> consiste exatamente nos elementos de <m>F[x]</m> que têm <m>\alpha</m> como zero.
             Se <m>f( \alpha ) = 0</m> e <m>f(x)</m> não é o polinômio zero,
             então <m>f(x) \in \langle p(x) \rangle</m> e <m>p(x)</m> divide <m>f(x)</m>.
@@ -2361,7 +2361,7 @@
             </sage>
 
       <p>
-        Substituir <c>element</c> de volta no suposto polinômio mínimo e obter zero não é uma evidência convincente de que ele seja o polinômio
+        Substituir o valor de <c>element</c> no suposto polinômio mínimo e obter zero não é uma evidência convincente de que ele seja o polinômio
         <em>mínimo</em>,
         mas é animador.
       </p>

@@ -1428,21 +1428,7 @@
       </p>
     </example>
 
-    <p>
-      Uma aplicação interessante do Teorema Chinês do Resto no projeto de software para computadores é que o teorema nos permite decompor um cálculo envolvendo inteiros grandes em vários cálculos menos difíceis.
-      Um computador manipula cálculos com inteiros somente até certo tamanho, devido ao tamanho de seu chip processador,
-      que normalmente é um chip processador de 32 ou 64 bits.
-      Por exemplo,
-      o maior inteiro disponível em um computador com chip processador de 64 bits é
-      <md>
-        2^{63} - 1 = 9{,}223{,}372{,}036{,}854{,}775{,}807
-      </md>.
-      Processadores maiores, como os de 128 ou 256 bits, foram propostos ou estão em desenvolvimento.
-      Fala-se até mesmo em um chip processador de 512 bits.
-      O maior inteiro que um chip desse tipo poderia armazenar seria <m>2^{511} - 1</m>,
-      que teria 154 algarismos.
-      No entanto, precisaríamos lidar com números muito maiores para quebrar esquemas sofisticados de criptografia.
-    </p>
+    <p> Uma aplicação interessante do Teorema Chinês do Resto no projeto de software para computadores é que o teorema nos permite decompor um cálculo envolvendo inteiros grandes em vários cálculos menos difíceis. Um computador só consegue manipular inteiros até certo tamanho, devido às limitações do processador, que normalmente é de 32 ou 64 bits. Por exemplo, o maior inteiro disponível em um computador com processador de 64 bits é <md> 2^{63} - 1 = 9{,}223{,}372{,}036{,}854{,}775{,}807 </md>. Processadores de 128 ou 256 bits foram propostos ou estão em desenvolvimento. Fala-se até mesmo em processadores de 512 bits. O maior inteiro que um processador desse tipo poderia armazenar seria <m>2^{511} - 1</m>, que teria 154 algarismos. No entanto, precisaríamos lidar com números muito maiores para quebrar esquemas sofisticados de criptografia.</p>
 
     <p>
       É necessário um software especial para cálculos envolvendo inteiros maiores, que não podem ser adicionados diretamente pela máquina.
@@ -1450,16 +1436,7 @@
       Isso é especialmente útil em computadores de processamento paralelo, que têm a capacidade de executar vários programas simultaneamente.
     </p>
 
-    <p>
-      A maioria dos computadores possui uma única unidade central de processamento (<acro>CPU</acro>), contendo um chip processador, e só pode adicionar dois números de cada vez.
-      Para adicionar uma lista de dez números,
-      a <acro>CPU</acro> deve realizar nove adições em sequência.
-      Entretanto, um computador de processamento paralelo possui mais de uma <acro>CPU</acro>. Um computador com 10 <acro>CPU</acro>s, por exemplo,
-      pode realizar 10 adições diferentes ao mesmo tempo.
-      Se pudermos decompor um inteiro grande em partes,
-      enviando cada parte para uma <acro>CPU</acro> diferente, e então realizar várias adições ou multiplicações simultaneamente nessas partes,
-      poderemos trabalhar com um inteiro que o computador não seria capaz de manipular como um todo.
-    </p>
+    <p> A maioria dos computadores possui uma única unidade central de processamento (<acro>CPU</acro>), que contém um processador; por isso, o computador só pode adicionar dois números de cada vez. Para adicionar uma lista de dez números, a <acro>CPU</acro> deve realizar nove adições em sequência. Entretanto, um computador de processamento paralelo possui mais de uma <acro>CPU</acro>. Um computador com 10 <acro>CPU</acro>s, por exemplo, pode realizar 10 adições diferentes ao mesmo tempo. Se pudermos decompor um inteiro grande em partes, enviando cada parte para uma <acro>CPU</acro> diferente, e então realizar várias adições ou multiplicações simultaneamente nessas partes, poderemos trabalhar com um inteiro que o computador não seria capaz de manipular como um todo.</p>
 
     <example xml:id="rings-example-2134x1531">
       <p>

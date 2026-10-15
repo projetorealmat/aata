@@ -1634,7 +1634,7 @@
         A partir de <m>w(t)</m>, podemos calcular
         <m>w( \omega^i ) = s_i</m> para <m>i = 1, \ldots, 2r</m>,
         onde <m>\omega</m> é uma <m>n</m>-ésima raiz primitiva da unidade sobre <m>{\mathbb Z}_2</m>.
-        Dizemos que o <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
+        Dizemos que a <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
         de <m>w(t)</m> é <m>s_1, \ldots, s_{2r}</m>.
       </p>
     </introduction>
@@ -2050,9 +2050,7 @@
               o subcorpo conhecido como corpo fixo é uma construção importante
               e será especialmente importante no próximo capítulo.
               Dado um automorfismo <m>\tau</m> de um corpo <m>E</m>,
-              o subconjunto
-              <m>K=\{b\in E\mid\tau(b)=b\}</m>,
-              pode ser mostrado ser um subcorpo de <m>E</m>.
+              pode-se mostrar que o subconjunto <m>K=\{b\in E\mid\tau(b)=b\}</m> é um subcorpo de <m>E</m>.
               Ele é conhecido como o <term>corpo fixo</term>
               de <m>\tau</m> em <m>E</m>.
               Para cada automorfismo de <m>E=GF(3^6)</m>, identifique o corpo fixo do automorfismo.

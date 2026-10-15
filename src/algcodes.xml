@@ -1588,7 +1588,7 @@
             <!-- TWJ - 1/2/2013 -->
       <p>
         Se <m>H</m> é uma matriz <m>m \times n</m> e <m>{\mathbf x} \in {\mathbb Z}_2^n</m>,
-        dizemos que o <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
+        dizemos que a <term>síndrome</term><idx><h>Síndrome de um código</h></idx>
         de <m>{\mathbf x}</m> é <m>H{\mathbf x}</m>.
         A proposição a seguir permite a detecção e a correção rápidas de erros.
       </p>
@@ -1596,13 +1596,13 @@
       <proposition xml:id="algcodes-proposition-syndrome">
         <statement>
           <p>
-            Seja a matriz binária <m>m \times n</m> <m>H</m> determinante de um código linear e seja
+            Seja <m>H</m> uma matriz binária <m>m \times n</m> que determina um código linear, e seja
             <m>{\mathbf x}</m> a <m>n</m>-upla recebida.
             Escreva <m>{\mathbf x}</m> como <m>{\mathbf x} = {\mathbf c} +{\mathbf e}</m>,
             onde <m>{\mathbf c}</m> é a palavra-código transmitida e
             <m>{\mathbf e}</m> é o erro de transmissão.
-            Então o síndrome <m>H{\mathbf x}</m> da palavra recebida
-            <m>{\mathbf x}</m> também é o síndrome do erro <m>{\mathbf e}</m>.
+            Então a síndrome <m>H{\mathbf x}</m> da palavra recebida
+            <m>{\mathbf x}</m> também é a síndrome do erro <m>{\mathbf e}</m>.
           </p>
         </statement>
 
@@ -1617,7 +1617,7 @@
       </proposition>
             <!--Made the proof into a complete sentence.  TWJ 3/6/2014-->
       <p>
-        Essa proposição nos diz que o síndrome de uma palavra recebida depende apenas do erro, e não da palavra-código transmitida.
+        Essa proposição nos diz que a síndrome de uma palavra recebida depende apenas do erro, e não da palavra-código transmitida.
         A demonstração do teorema seguinte segue imediatamente de <xref ref="algcodes-proposition-syndrome"/> e do fato de que
         <m>H{\mathbf e}</m> é a <m>i</m>-ésima coluna da matriz <m>H</m>.
       </p>
@@ -1627,9 +1627,9 @@
           <p>
             Seja <m>H \in {\mathbb M}_{ m \times n} ( {\mathbb Z}_2)</m> e suponha que o código linear correspondente a <m>H</m> seja corretor de erros únicos.
             Seja <m>{\mathbf r}</m> uma <m>n</m>-upla recebida que foi transmitida com no máximo um erro.
-            Se o síndrome de <m>{\mathbf r}</m> for <m>{\mathbf 0}</m>,
+            Se a síndrome de <m>{\mathbf r}</m> for <m>{\mathbf 0}</m>,
             então não ocorreu erro;
-            caso contrário, se o síndrome de
+            caso contrário, se a síndrome de
             <m>{\mathbf r}</m> for igual a alguma coluna de <m>H</m>,
             digamos a <m>i</m>-ésima coluna, então o erro ocorreu no <m>i</m>-ésimo bit.
           </p>
@@ -1670,7 +1670,7 @@
           As palavras-código transmitidas para
           <m>{\mathbf x}</m> e <m>{\mathbf z}</m> devem ter sido
           <m>(\codeword{110110})</m> e <m>(\codeword{010011})</m>, respectivamente.
-          O síndrome de <m>{\mathbf y}</m> não ocorre em nenhuma das colunas da matriz <m>H</m>,
+          A síndrome de <m>{\mathbf y}</m> não ocorre em nenhuma das colunas da matriz <m>H</m>,
           portanto vários erros devem ter ocorrido para produzir <m>{\mathbf y}</m>.
         </p>
       </example>
@@ -1793,7 +1793,7 @@
       <p>
         Um possível problema desse método de decodificação é que talvez tenhamos de examinar cada classe lateral para encontrar a palavra-código recebida.
         A proposição a seguir fornece um método para implementar a decodificação por classes laterais.
-        Ela afirma que podemos associar um síndrome a cada classe lateral;
+        Ela afirma que podemos associar uma síndrome a cada classe lateral;
         assim, podemos construir uma tabela que indique um líder de classe lateral correspondente a cada síndrome.
         Essa lista é chamada de <idx><h>Tabela de decodificação</h></idx><term>tabela de decodificação</term>.
       </p>
@@ -1866,7 +1866,7 @@
         <p>
           A <xref ref="algcodes-table-syndrome"/> é uma tabela de decodificação para o código <m>C</m> dado em <xref ref="algcodes-example-coset-decoding"/>.
           Se <m>{\mathbf x} = (\codeword{01111})</m> for recebido,
-          então seu síndrome pode ser calculado como
+          então sua síndrome pode ser calculado como
           <md>
             H {\mathbf x} =
             \begin{pmatrix}
@@ -2416,7 +2416,7 @@
             1 &amp; 0 &amp; 1 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          Calcule o síndrome causado por cada um dos seguintes erros de transmissão.
+          Calcule a síndrome causado por cada um dos seguintes erros de transmissão.
 
           <ol>
             <li>
@@ -2746,8 +2746,8 @@
               <p>
                 A coluna correspondente ao síndrome também indica o bit que continha o erro;
                 isto é, a coluna de índice <m>i</m> da matriz é <m>i</m> escrito como um número binário,
-                e o síndrome informa imediatamente qual bit contém o erro.
-                Se a palavra recebida for <m>(101011)</m>, calcule o síndrome.
+                e a síndrome informa imediatamente qual bit contém o erro.
+                Se a palavra recebida for <m>(101011)</m>, calcule a síndrome.
                 Em qual bit ocorreu o erro neste caso,
                 e qual palavra-código foi transmitida originalmente?
               </p>

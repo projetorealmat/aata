@@ -1037,7 +1037,7 @@
             </sage>
 
       <p>
-        Poderíamos fazer isso o dia inteiro, mas você tem Sage à disposição; portanto, varie a ordem de <c>G</c> alterando <c>n</c> e estude a saída ao longo de várias execuções. Talvez você possa tentar um grupo cíclico de ordem 24 e compará-lo com o grupo simétrico <m>S_4</m> (acima), que também tem ordem 24. Sente uma conjectura surgindo?
+        Poderíamos fazer isso o dia inteiro, mas você tem Sage à disposição; portanto, varie a ordem de <c>G</c> alterando <c>n</c> e estude a saída ao longo de várias execuções. Talvez você possa tentar um grupo cíclico de ordem 24 e compará-lo com o grupo simétrico <m>S_4</m> (acima), que também tem ordem 24. Percebe que está surgindo uma conjectura?
       </p>
 
             <sage>
@@ -1076,7 +1076,7 @@
             </sage>
 
       <p>
-        Sente outra conjectura surgindo? Você consegue generalizar esse resultado?
+        Percebe que está surgindo outra conjectura? Você consegue generalizar esse resultado?
       </p>
 
       <sage type="practice"/>

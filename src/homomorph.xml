@@ -600,7 +600,7 @@
     <exercise label="rq-homomorph-isomorph">
       <statement>
         <p>
-          Compare e contraste isomorfismos e homomorfismos.
+          Compare isomorfismos e homomorfismos, destacando suas semelhanças e diferenças.
         </p>
       </statement>
       <response/>
@@ -1024,7 +1024,7 @@
           <md>
             G \rightarrow \aut(G)
           </md>
-          by
+          por
           <md>
             g \mapsto i_g
           </md>.

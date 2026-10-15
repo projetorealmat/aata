@@ -2079,7 +2079,7 @@
       <statement>
         <p>
           Seja <m>F</m> um corpo de característica zero e seja
-          <m>f(x) \in F[x]</m> seja um polinômio separável de grau <m>n</m>.
+          <m>f(x) \in F[x]</m> um polinômio separável de grau <m>n</m>.
           Se <m>E</m> é o corpo de decomposição de <m>f(x)</m>,
           sejam <m>\alpha_1, \ldots, \alpha_n</m> as raízes de <m>f(x)</m> em <m>E</m>.
           Seja <m>\Delta = \prod_{i \lt j} (\alpha_i - \alpha_j)</m>.
@@ -3221,20 +3221,7 @@
 
     <exercise number="2" xml:id="galois-sage-exercise-splitting-field">
       <statement>
-        <p>
-          Construa o corpo de decomposição de
-          <m>p(x)=x^3-6x^2+12x-10</m> e determine então o grupo de Galois de <m>p(x)</m> como um grupo concreto de permutações explícitas.
-          Construa o reticulado de subgrupos do grupo de Galois,
-          novamente usando as mesmas permutações explícitas.
-          Usando o Teorema Fundamental da Teoria de Galois,
-          construa os subcorpos do corpo de decomposição.
-          Inclua a documentação de apoio na folha de trabalho do Sage que você entregar.
-          Além disso, entregue uma parte escrita desta tarefa contendo uma disposição completa dos subgrupos e subcorpos,
-          escrita inteiramente com notação matemática e sem comandos do Sage,
-          projetada para ilustrar a correspondência entre os dois.
-          Aqui você precisa apenas da disposição gráfica,
-          devidamente identificada <mdash/> a folha de trabalho do Sage fundamentará seu trabalho.
-        </p>
+        <p>Além disso, entregue uma parte escrita desta tarefa com um diagrama completo que mostre os subgrupos e os subcorpos, usando apenas notação matemática, sem comandos do Sage, e que ilustre a correspondência entre eles. Aqui, basta apresentar o diagrama devidamente identificado; a folha de trabalho do Sage servirá de apoio ao seu trabalho.</p>
       </statement>
     </exercise>
 
