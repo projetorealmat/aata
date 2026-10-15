@@ -16,8 +16,8 @@
       Muitos grupos podem parecer diferentes à primeira vista,
       mas é possível mostrar que são iguais por meio de uma simples renomeação dos elementos do grupo.
       Por exemplo,
-      <m>{\mathbb Z}_4</m> e o subgrupo do grupo círculo
-      <m>{\mathbb T}</m> gerado por <m>i</m> podem ser mostrados como iguais demonstrando uma correspondência bijetiva entre os elementos dos dois grupos e entre as operações de grupo.
+      <m>{\mathbb Z}_4</m> e o subgrupo do grupo circular
+      <m>{\mathbb T}</m> gerado por <m>i</m> podemos mostrar que são isomorfos exibindo uma correspondência bijetiva entre os elementos dos dois grupos e entre as operações de grupo.
       Nesse caso, dizemos que os grupos são isomorfos.
     </p>
   </introduction>
