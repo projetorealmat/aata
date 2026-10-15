@@ -2,7 +2,7 @@
 
 | Output/gate | Estado | Evidência |
 |---|---|---|
-| XML local (ElementTree) | PASS | todos os `src/*.xml` analisados após as correções |
+| XML local (ElementTree) | PASS | todos os `src/*.xml` analisados após a reconciliação final |
 | Marcadores de conflito | PASS | nenhum `<<<<<<<`/`>>>>>>>` em `src/*.xml` |
 | runner.cli validate | NOT_RUN | `runner.cli` não existe no repositório |
 | runner.cli negative-evidence | NOT_RUN | `runner.cli` não existe no repositório |
