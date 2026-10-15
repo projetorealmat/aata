@@ -271,7 +271,7 @@
         <caption>Canal binário simétrico</caption>
             <!-- Replaced figure with tikz figure - TWJ 5/10/2010 -->
         <image width="40%" xml:id="algcodes-binary-channel">
-        <description>Um diagrama esquemático no qual um zero tem probabilidade p de ser decodificado como zero e probabilidade q de ser decodificado como um, representadas por setas de 0 para 0 e de 1 para 1, respectivamente. Um 1 tem probabilidade p de ser decodificado como um e probabilidade q de ser decodificado como zero, representadas por setas de 1 para 1 e de 0 para 1, respectivamente.</description>
+        <description>Um diagrama de canal binário simétrico: o zero é recebido como zero com probabilidade p e como 1 com probabilidade q; o 1 é recebido como 1 com probabilidade p e como zero com probabilidade q.</description>
             <latex-image>
                 <xi:include href="tikz/algcodes-binary-channel.tex" parse="text"/>
             </latex-image>
@@ -747,7 +747,7 @@
       <title>Nota histórica</title>
       <p>
         A teoria moderna dos códigos começou em 1948 com o artigo de C. Shannon<idx><h>Shannon, C.</h></idx>,
-        <q>A Mathematical Theory of Information</q>
+        <q>A Mathematical Theory of Communication</q>
         [7]. Esse artigo ofereceu um exemplo de código algébrico,
         e o Teorema de Shannon proclamou exatamente quão bons se poderia esperar que fossem os códigos.
         Richard Hamming<idx><h>Hamming, R.</h></idx>
@@ -834,7 +834,7 @@
               <mrow>0 + 1 &amp; = 1</mrow>
             </md>.
             Consequentemente,
-            o peso da soma deve ser a distância entre as duas palavras-código.
+            o peso da soma deve ser a distância entre as duas <m>n</m>-uplas.
           </p>
         </proof>
       </lemma>
@@ -1095,7 +1095,7 @@
           1 &amp; 0 &amp; 1
           \end{pmatrix}
         </md>,
-        as matrizes geradora padrão e canônica de verificação de paridade associadas são
+        a matriz geradora padrão e a matriz canônica de verificação de paridade associadas são
         <md>
           G=
           \begin{pmatrix}
@@ -1319,7 +1319,7 @@
       <proof>
         <p>
           Primeiro, suponha que <m>{\mathbf y} \in C</m>.
-          Então <m>G {\mathbf x} = {\mathbf y}</m> para algum <m>{\mathbf x} \in {\mathbb Z}_2^m</m>.
+          Então <m>G {\mathbf x} = {\mathbf y}</m> para algum <m>{\mathbf x} \in {\mathbb Z}_2^{n-m}</m>.
           Pelo <xref ref="algcodes-lemma-parity-check"/>,
           <m>H {\mathbf y} = HG {\mathbf x} = {\mathbf 0}</m>.
         </p>
@@ -1848,7 +1848,7 @@
             <m>{\mathbf y}</m> pertençam a <m>{\mathbb Z}_2^n</m>.
             Então <m>{\mathbf x}</m> e
             <m>{\mathbf y}</m> estão na mesma classe lateral de <m>C</m> se, e somente se, <m>H{\mathbf x} = H{\mathbf y}</m>.
-            Isto é, duas <m>n</m>-uplas estão na mesma classe lateral se, e somente se, seus síndromes são iguais.
+            Isto é, duas <m>n</m>-uplas estão na mesma classe lateral se, e somente se, suas síndromes são iguais.
           </p>
         </statement>
 
@@ -1866,7 +1866,7 @@
         <p>
           A <xref ref="algcodes-table-syndrome"/> é uma tabela de decodificação para o código <m>C</m> dado em <xref ref="algcodes-example-coset-decoding"/>.
           Se <m>{\mathbf x} = (\codeword{01111})</m> for recebido,
-          então sua síndrome pode ser calculado como
+          então sua síndrome pode ser calculada como
           <md>
             H {\mathbf x} =
             \begin{pmatrix}
@@ -2394,12 +2394,12 @@
     <exercise number="12" xml:id="algcodes-exercise-syndromes">
       <statement>
         <p>
-          Liste todos os síndromes possíveis para os códigos gerados por cada uma das matrizes em <xref ref="algcodes-exercise-check-matrices"/>.
+          Liste todas as síndromes possíveis para os códigos gerados por cada uma das matrizes em <xref ref="algcodes-exercise-check-matrices"/>.
         </p>
       </statement>
       <hint>
         <p>
-          (a) Todos os síndromes possíveis ocorrem.
+          (a) Todas as síndromes possíveis ocorrem.
         </p>
       </hint>
     </exercise>
@@ -2416,7 +2416,7 @@
             1 &amp; 0 &amp; 1 &amp; 0 &amp; 1
             \end{pmatrix}
           </md>.
-          Calcule a síndrome causado por cada um dos seguintes erros de transmissão.
+          Calcule a síndrome causada por cada um dos seguintes erros de transmissão.
 
           <ol>
             <li>
@@ -2744,7 +2744,7 @@
 
             <li>
               <p>
-                A coluna correspondente ao síndrome também indica o bit que continha o erro;
+                A coluna correspondente à síndrome também indica o bit que continha o erro;
                 isto é, a coluna de índice <m>i</m> da matriz é <m>i</m> escrito como um número binário,
                 e a síndrome informa imediatamente qual bit contém o erro.
                 Se a palavra recebida for <m>(101011)</m>, calcule a síndrome.
@@ -2759,7 +2759,7 @@
                 Quais são as posições de verificação e quais são as posições de informação?
                 Codifique as mensagens <m>(\codeword{101101})</m> e <m>(\codeword{001001})</m>.
                 Decodifique as palavras recebidas <m>(\codeword{0010000101})</m> e <m>(\codeword{0000101100})</m>.
-                Quais são os síndromes possíveis para esse código?
+                Quais são as síndromes possíveis para esse código?
               </p>
             </li>
 
@@ -2768,11 +2768,11 @@
                 Qual é o número de bits de verificação e o número de bits de informação em um código de Hamming de blocos <m>(m,n)</m>?
                 Dê tanto um limite superior quanto um limite inferior para o número de bits de informação em termos do número de bits de verificação.
                 Os códigos de Hamming que têm o número máximo possível de bits de informação com <m>k</m> bits de verificação são chamados de <term>perfeitos</term>.
-                Todo síndrome possível, exceto <m>{\mathbf 0}</m>, ocorre como uma coluna.
+                Toda síndrome possível, exceto <m>{\mathbf 0}</m>, ocorre como uma coluna.
                 Se o número de bits de informação for menor que o máximo,
                 então o código é chamado de <term>encurtado</term>.
                 Nesse caso,
-                dê um exemplo mostrando que alguns síndromes podem representar vários erros.
+                dê um exemplo mostrando que algumas síndromes podem representar vários erros.
               </p>
             </li>
           </ol>
@@ -3218,7 +3218,7 @@
           </md>
           vetores em seu interior.
           Para um código perfeito,
-          as esferas de raio <m>d</m> centradas nas palavras-código do código particionarão exatamente o conjunto de todos os vetores possíveis.
+          as esferas de raio <m>(d-1)/2</m> centradas nas palavras-código do código particionarão exatamente o conjunto de todos os vetores possíveis.
           (Essa é a conexão que faz a teoria dos códigos se relacionar com problemas de empacotamento de esferas.)
         </p>
 
