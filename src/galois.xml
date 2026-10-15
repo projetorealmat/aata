@@ -377,7 +377,7 @@
             [{\mathbb Q}( \omega) : {\mathbb Q}] = | G( {\mathbb Q}( \omega) / {\mathbb Q})| = 4
           </md>,
           os <m>\sigma_i</m> devem ser todos os elementos de <m>G( {\mathbb Q}( \omega) / {\mathbb Q} )</m>.
-          Portanto, <m>G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4</m>, pois <m>\omega</m> é um gerador do grupo de Galois.
+          Portanto, <m>G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4</m>, pois <m>\sigma_2</m> é um gerador do grupo de Galois.
         </p>
       </example>
     </introduction>
@@ -1450,7 +1450,7 @@
         Esse teorema foi demonstrado pela primeira vez por Gauss em sua tese de doutorado.
         Antes da demonstração de Gauss,
         os matemáticos suspeitavam que poderiam existir polinômios sobre os números reais e complexos sem soluções.
-        O Teorema Fundamental da Álgebra afirma que todo polinômio sobre os números complexos se fatora em fatores lineares distintos.
+        O Teorema Fundamental da Álgebra afirma que todo polinômio não constante sobre os números complexos se fatora em fatores lineares, contando multiplicidades.
       </p>
 
       <theorem>
@@ -1472,25 +1472,18 @@
         <proof>
           <p>
             Suponha que <m>E</m> seja uma extensão finita própria do corpo dos números complexos.
-            Como toda extensão finita de um corpo de característica zero é uma extensão simples,
-            existe um <m>\alpha \in E</m> tal que
-            <m>E = {\mathbb C}( \alpha )</m>, com <m>\alpha</m> raiz de um polinômio irredutível <m>f(x)</m> em <m>{\mathbb C}[x]</m>.
-            O corpo de decomposição <m>L</m> de <m>f(x)</m> é uma extensão normal separável finita de
-            <m>{\mathbb C}</m> que contém <m>E</m>.
-            Devemos mostrar que é impossível que <m>L</m> seja uma extensão própria de <m>{\mathbb C}</m>.
+            Como <m>E/{\mathbb R}</m> é uma extensão finita separável, considere um fecho normal finito <m>L</m> de <m>E</m> sobre <m>{\mathbb R}</m>.
+            Então <m>L</m> é uma extensão normal separável finita de <m>{\mathbb R}</m> que contém <m>E</m> e <m>{\mathbb C}</m>.
+            Em particular, <m>L</m> é uma extensão própria de <m>{\mathbb C}</m> se <m>E</m> o for.
           </p>
 
           <p>
-            Suponha que <m>L</m> seja uma extensão própria de <m>{\mathbb C}</m>.
-            Como <m>L</m> é o corpo de decomposição de
-            <m>f(x) = (x^2 + 1)</m> sobre <m>{\mathbb R}</m>,
-            <m>L</m> é uma extensão normal separável finita de <m>{\mathbb R}</m>.
             Seja <m>K</m> o corpo fixo de um subgrupo de Sylow <m>2</m> <m>G</m> de <m>G(L/{\mathbb R})</m>.
             Então <m>L \supset K \supset {\mathbb R}</m> e <m>|G( L / K )| =[L:K]</m>.
             Como <m>[L : {\mathbb R}] = [L:K][K:{\mathbb R}]</m>,
             sabemos que <m>[K:{\mathbb R}]</m> deve ser ímpar.
-            Consequentemente,
-            <m>K = {\mathbb R}(\beta)</m>, com <m>\beta</m> tendo um polinômio mínimo <m>f(x)</m> de grau ímpar.
+            Pelo Teorema do Elemento Primitivo, <m>K = {\mathbb R}(\beta)</m> para algum <m>\beta</m>, cujo polinômio mínimo sobre <m>{\mathbb R}</m> tem grau <m>[K:{\mathbb R}]</m>.
+            Se esse grau fosse maior que <m>1</m>, seria ímpar e o polinômio mínimo teria uma raiz real, contradizendo sua irredutibilidade.
             Portanto, <m>K = {\mathbb R}</m>.
           </p>
 
@@ -2033,7 +2026,7 @@
           <ol>
             <li>
               <p>
-                Claramente <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos, pois <m>\omega \neq 1</m> ou 0.
+                Como <m>\omega</m> é uma raiz <m>p</m>-ésima primitiva da unidade, sua ordem multiplicativa é <m>p</m>; portanto, <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos.
                 Para mostrar que <m>\omega^i</m> é um zero de <m>\Phi_p(x)</m>,
                 calcule <m>\Phi_p( \omega^i)</m>.
               </p>
@@ -2044,11 +2037,11 @@
                 Os conjugados de <m>\omega</m> são <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m>.
                 Defina uma aplicação <m>\phi_i: {\mathbb Q}(\omega) \rightarrow {\mathbb Q}(\omega^i)</m> por
                 <md>
-                  \phi_i(a_0 + a_1 \omega + \cdots + a_{p - 2} \omega^{p - 2}) = a_0 + a_1 \omega^i + \cdots + c_{p - 2} (\omega^i)^{p - 2}
+                  \phi_i(a_0 + a_1 \omega + \cdots + a_{p - 2} \omega^{p - 2}) = a_0 + a_1 \omega^i + \cdots + a_{p - 2} (\omega^i)^{p - 2}
                 </md>,
                 em que <m>a_i \in {\mathbb Q}</m>.
                 Prove que <m>\phi_i</m> é um isomorfismo de corpos.
-                Mostre que <m>\phi_2</m> gera <m>G({\mathbb Q}(\omega)/{\mathbb Q})</m>.
+                Mostre que <m>\phi_i \circ \phi_j = \phi_k</m>, em que <m>k \equiv ij \pmod p</m>, e conclua que <m>G({\mathbb Q}(\omega)/{\mathbb Q}) \cong U_p</m>; em particular, esse grupo é abeliano de ordem <m>p-1</m>.
               </p>
             </li>
 
@@ -3340,7 +3333,7 @@
           Em outras palavras,
           aja como se o seu quociente pelo fator linear fosse irredutível.
           Se não for,
-          o comando <c>NumberField()</c> deverá reclamar
+          o comando <c>NumberField()</c> deverá emitir um erro
           (mas não reclamará).
         </p>
 

@@ -632,7 +632,7 @@
       Uma série subnormal <m>\{ H_i \}</m> de um grupo <m>G</m> é uma
       <term>série de composição</term><idx><h>Série de composição</h></idx>
       se todos os grupos quocientes são simples;
-      isto é, se nenhum dos grupos quocientes da série contém um subgrupo normal.
+      isto é, se nenhum dos grupos quocientes da série contém um subgrupo normal próprio não trivial.
       Uma série normal <m>\{ H_i \}</m> de <m>G</m> é uma
       <term>série principal</term><idx><h>Série principal</h></idx>
       se todos os grupos quocientes são simples.
@@ -1313,7 +1313,7 @@
       <p>
         Não são necessárias ferramentas sofisticadas para compreender os grupos de ordem <m>2p</m>,
         em que <m>p</m> é um primo ímpar.
-        Há duas possibilidades <mdash/> um grupo cíclico de ordem <m>2p</m> e o grupo diedral de ordem <m>2p</m>, que é o conjunto de simetrias de um <m>p</m>-gono regular.
+        Há duas possibilidades <mdash/> um grupo cíclico de ordem <m>2p</m> e o grupo diedral de ordem <m>2p</m>, que é o conjunto de simetrias de um <m>p</m>-ágono regular.
         A demonstração exige um raciocínio cuidadoso e rigoroso,
         mas os teoremas necessários geralmente se reduzem às ordens de elementos, ao Teorema de Lagrange e às classes laterais.
         Consulte <xref ref="isomorph-exercise-classify-2p"/>.
@@ -1356,7 +1356,7 @@
         e <m>3</m> grupos não abelianos.
         Conhecemos dois dos grupos não abelianos: um grupo diedral
         e o grupo alternado sobre <m>4</m> símbolos
-        (que também corresponde às simetrias de um tetraedro).
+        (que também corresponde às simetrias rotacionais de um tetraedro).
         O terceiro grupo não abeliano é um exemplo de grupo <q>dicíclico</q>,
         que é uma família infinita de grupos,
         cada um com ordem divisível por <m>4</m>.

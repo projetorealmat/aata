@@ -730,10 +730,10 @@
       <p>
         Outro tipo especial de grupo de permutações é o grupo diédrico.
         Recorde o grupo de simetrias de um triângulo equilátero em <xref ref="groups"/>.
-        Esses grupos consistem nos movimentos rígidos de um polígono regular de <m>n</m> lados, ou <m>n</m>-gono.
+        Esses grupos consistem nos movimentos rígidos de um polígono regular de <m>n</m> lados, ou <m>n</m>-ágono.
         Para <m>n = 3, 4, \ldots</m>, definimos o
         <term>n-ésimo grupo diédrico</term><idx><h>Grupo</h><h>diédrico</h></idx>
-        como o grupo de movimentos rígidos de um <m>n</m>-gono regular.
+        como o grupo de movimentos rígidos de um <m>n</m>-ágono regular.
         Denotaremos esse grupo por <m>D_n</m>.
 
         <notation>
@@ -741,20 +741,20 @@
           <description>o grupo diédrico</description>
         </notation>
 
-        Podemos numerar os vértices de um <m>n</m>-gono regular por
+        Podemos numerar os vértices de um <m>n</m>-ágono regular por
         <m>1, 2, \ldots,
         n</m> (<xref ref="permute-figure-regular"/>).
         Observe que há exatamente <m>n</m> escolhas para substituir o primeiro vértice.
         Se substituirmos o primeiro vértice por <m>k</m>,
         então o segundo vértice deve ser substituído pelo vértice <m>k+1</m> ou pelo vértice <m>k-1</m>;
-        portanto, há <m>2n</m> movimentos rígidos possíveis do <m>n</m>-gono.
+        portanto, há <m>2n</m> movimentos rígidos possíveis do <m>n</m>-ágono.
         Resumimos esses resultados no teorema a seguir.
       </p>
 
       <figure xml:id="permute-figure-regular">
-        <caption>Um <m>n</m>-gono regular</caption>
+        <caption>Um <m>n</m>-ágono regular</caption>
         <image width="60%" xml:id="permute-ngon">
-          <description>Um n-gono com o vértice 1 no topo, seguido por 2, 3, 4, ..., n - 1, n.</description>
+          <description>Um n-ágono com o vértice 1 no topo, seguido por 2, 3, 4, ..., n - 1, n.</description>
 
             <latex-image>
                 <xi:include href="tikz/permute-ngon.tex" parse="text"/>
@@ -783,7 +783,7 @@
 
         <proof>
           <p>
-            Os movimentos possíveis de um <m>n</m>-gono regular são reflexões ou rotações (<xref ref="permute-figure-rotations"/>).
+            Os movimentos possíveis de um <m>n</m>-ágono regular são reflexões ou rotações (<xref ref="permute-figure-rotations"/>).
             Há exatamente <m>n</m> rotações possíveis:
             <md>
               \identity, \frac{360^{\circ} }{n}, 2 \cdot \frac{360^{\circ} }{n}, \ldots, (n-1) \cdot \frac{360^{\circ} }{n}
@@ -797,7 +797,7 @@
           </p>
 
           <figure xml:id="permute-figure-rotations">
-            <caption>Rotações e reflexões de um <m>n</m>-gono regular</caption>
+            <caption>Rotações e reflexões de um <m>n</m>-ágono regular</caption>
             <image xml:id="permute-motions-ngon">
               <description>Rotações e reflexões de um octógono. O octógono superior (1 no topo, 2, 3, 4, 5, 6, 7, 8) é rotacionado para um octógono (2 no topo, 3, 4, 5, 6, 7, 8, 1), e o octógono abaixo (1 no topo, 2, 3, 4, 5, 6, 7, 8) é refletido em torno de um eixo vertical, resultando em (1 no topo, 8, 7, 6, 5, 4, 3, 2).</description>
 
@@ -809,21 +809,12 @@
           </figure>
 
           <p>
-            Denote as <m>n</m> reflexões por <m>s_1, s_2, \ldots, s_n</m>,
-            onde <m>s_k</m> é a reflexão que deixa fixo o vértice <m>k</m>.
-            Há dois casos de reflexões,
-            dependendo de <m>n</m> ser par ou ímpar.
-            Se houver um número par de vértices,
-            então dois vértices permanecem fixos por uma reflexão,
-            e <m>s_1 = s_{n/2 + 1}, s_2 = s_{n/2 + 2}, \ldots, s_{n/2}  = s_n</m>.
-            Se houver um número ímpar de vértices,
-            então apenas um vértice permanece fixo por uma reflexão e
-            <m>s_1, s_2, \ldots,
-            s_n</m> são distintas (<xref ref="permute-figure-types"/>).
-            Em ambos os casos, a ordem de cada <m>s_k</m> é dois.
-            Seja <m>s = s_1</m>.
+            Há exatamente <m>n</m> reflexões. Seja <m>s</m> a reflexão que deixa fixo o vértice <m>1</m>.
+            Se <m>n</m> é ímpar, cada reflexão deixa fixo exatamente um vértice.
+            Se <m>n</m> é par, há <m>n/2</m> reflexões cujos eixos passam por pares de vértices opostos e <m>n/2</m> reflexões cujos eixos passam pelos pontos médios de lados opostos; estas últimas não deixam vértices fixos.
+            Em ambos os casos, cada reflexão tem ordem <m>2</m> (<xref ref="permute-figure-types"/>).
             Então <m>s^2 = 1</m> e <m>r^n = 1</m>.
-            Como qualquer movimento rígido <m>t</m> do <m>n</m>-gono substitui o primeiro vértice pelo vértice <m>k</m>,
+            Como qualquer movimento rígido <m>t</m> do <m>n</m>-ágono substitui o primeiro vértice pelo vértice <m>k</m>,
             o segundo vértice deve ser substituído por <m>k+1</m> ou por <m>k-1</m>.
             Se o segundo vértice for substituído por <m>k+1</m>, então <m>t = r^k</m>.
             Se o segundo vértice for substituído por <m>k-1</m>, então <m>t = r^k s</m>.<fn>Como estamos em um grupo abstrato, adotaremos a convenção de que os elementos do grupo são multiplicados da esquerda para a direita.</fn>
@@ -836,7 +827,7 @@
           </p>
 
           <figure xml:id="permute-figure-types">
-              <caption>Tipos de reflexões de um <m>n</m>-gono regular</caption>
+              <caption>Tipos de reflexões de um <m>n</m>-ágono regular</caption>
               <image xml:id="permute-reflections-ngon">
                 <description>O hexágono superior (1 no topo, 2, 3, 4, 5, 6) é refletido para (1 no topo, 6, 5, 4, 3, 2). O pentágono inferior (1 no topo, 2, 3, 4, 5) é refletido, resultando em (1 no topo, 5, 4, 3, 2).</description>
 
@@ -1424,7 +1415,7 @@
     <exercise number="16" xml:id="permute-exercise-rigid-motions-tetrahedron">
       <statement>
         <p>
-          Encontre o grupo de movimentos rígidos de um tetraedro.
+          Encontre o grupo de rotações de um tetraedro.
           Mostre que ele é o mesmo grupo que <m>A_4</m>.
         </p>
       </statement>
@@ -1953,11 +1944,11 @@
           </row>
           <row>
             <cell><c>DihedralGroup(n)</c></cell>
-            <cell>Simetrias de um <m>n</m>-gono, <m>2n</m> elementos.</cell>
+            <cell>Simetrias de um <m>n</m>-ágono, <m>2n</m> elementos.</cell>
           </row>
           <row>
             <cell><c>CyclicPermutationGroup(n)</c></cell>
-            <cell>Rotações de um <m>n</m>-gono (sem reflexões), <m>n</m> elementos</cell>
+            <cell>Rotações de um <m>n</m>-ágono (sem reflexões), <m>n</m> elementos</cell>
           </row>
           <row>
             <cell><c>AlternatingGroup(n)</c></cell>
@@ -2365,7 +2356,7 @@
     <exercise number="3" xml:id="permute-sage-exercise-create-A4">
       <statement>
         <p>
-          Construa o grupo de simetrias do tetraedro
+          Construa o grupo de simetrias rotacionais do tetraedro
           (que também é o grupo alternado sobre 4 símbolos, <m>A_4</m>)
           com o comando <c>A=AlternatingGroup(4)</c>.
           Usando ferramentas como ordens de elementos

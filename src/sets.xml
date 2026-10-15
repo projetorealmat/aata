@@ -735,7 +735,7 @@
         Em outras palavras,
         se existe um <m>a \in A</m> para cada <m>b \in B</m> tal que
         <m>f(a) = b</m>, então <m>f</m> é sobrejetiva.
-        Uma aplicação é <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> ou
+        Uma aplicação é <term>injetora</term><idx><h>Função</h><h>injetora</h></idx> ou
         <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> se
         <m>a_1 \neq a_2</m> implica <m>f(a_1) \neq f(a_2)</m>.
         Equivalentemente, uma função é injetiva se
@@ -1343,7 +1343,7 @@
       <example xml:id="sets-example-matrix-partition">
         <p>
           Na relação de equivalência em <xref ref="sets-example-equivalent-derivative"/>,
-          duas funções <m>f(x)</m> e <m>g(x)</m> estão na mesma partição quando diferem por uma constante.
+          duas funções <m>f(x)</m> e <m>g(x)</m> estão na mesma classe de equivalência quando diferem por uma constante.
         </p>
       </example>
 
@@ -1351,7 +1351,7 @@
         <p>
           Definimos uma classe de equivalência em <m>{\mathbb R}^2</m> por
           <m>(x_1, y_1 ) \sim (x_2, y_2)</m> se <m>x_1^2 + y_1^2 = x_2^2 + y_2^2</m>.
-          Dois pares de números reais estão na mesma partição quando pertencem ao mesmo círculo centrado na origem.
+          Dois pares de números reais estão na mesma classe de equivalência quando pertencem ao mesmo círculo centrado na origem.
         </p>
       </example>
 

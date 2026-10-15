@@ -879,7 +879,7 @@
 
           <li>
             <p>
-              <m>m(g + h) = mg + mh</m> para todo <m>n \in {\mathbb Z}</m>.
+              <m>m(g + h) = mg + mh</m> para todo <m>m \in {\mathbb Z}</m>.
             </p>
           </li>
         </ol>
@@ -913,7 +913,7 @@
         Sophus Lie,<idx><h>Lie, Sophus</h></idx>
         contemporâneo de Klein,
         usou a teoria dos grupos para estudar soluções de equações diferenciais parciais.
-        Um dos primeiros tratamentos modernos da teoria dos grupos apareceu em
+        Um dos primeiros tratamentos modernos da teoria dos grupos apareceu na obra de
         William Burnside<idx><h>Burnside, William</h></idx>,
         <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], publicado pela primeira vez em 1897.
       </p>
@@ -938,7 +938,7 @@
         Um subgrupo que é um subconjunto próprio de <m>G</m> é chamado de
         <idx><h>Subgrupo</h><h>próprio</h></idx><term>subgrupo próprio</term>.
         Em muitos dos exemplos que investigamos até aqui,
-        existem outros subgrupos além dos subgrupos trivial e impróprio.
+        existem outros subgrupos além do subgrupo trivial e do subgrupo impróprio.
       </p>
 
       <example xml:id="groups-example-multiplicative-subgroup">
@@ -2130,7 +2130,7 @@
         <figure xml:id="groups-figure-upc-codes">
           <caption>Um código <acro>UPC</acro></caption>
           <image width="50%" source="UPCcode">
-            <description>As linhas verticais do código de barras UPC para 0-05000-30042-6</description>
+            <description>As linhas verticais do código de barras UPC para 0-50000-30042-6</description>
           </image>
         </figure>
       </statement>
@@ -2185,7 +2185,7 @@
           </md>.
           Um problema é que <m>d_{10}</m> talvez tivesse de ser 10 para tornar o produto interno nulo;
           nesse caso, seriam necessários 11 dígitos para que esse esquema funcionasse.
-          Por isso, o caractere X é usado para o décimo primeiro dígito.
+          Por isso, o caractere X é usado para representar o valor 10 no décimo dígito verificador.
           Assim, <acro>ISBN</acro> 3-540-96035-X é um código <acro>ISBN</acro> válido.
 
           <ol>

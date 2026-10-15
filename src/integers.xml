@@ -1171,7 +1171,7 @@
     <exercise number="25" xml:id="integers-exercise-coprime-lcd">
       <statement>
         <p>
-          Mostre que <m>\lcm(a,b) = ab</m> se, e somente se, <m>\gcd(a,b) = 1</m>.
+          Mostre que <m>\lcm(a,b) = |ab|</m> se, e somente se, <m>\gcd(a,b) = 1</m>.
         </p>
       </statement>
     </exercise>

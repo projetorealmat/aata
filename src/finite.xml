@@ -601,8 +601,8 @@
         É um exercício simples mostrar que
         <m>{\mathbb Z}_2^n</m> e <m>R_n</m> são isomorfos como espaços vetoriais.
         Frequentemente identificaremos elementos de
-        <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
-        Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+        <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
+        Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
       </p>
 
       <p>
@@ -619,7 +619,7 @@
       <theorem xml:id="finite-theorem-cyclic-code">
         <statement>
           <p>
-            Um código linear <m>C</m> em <m>{\mathbb Z}_2^n</m> é cíclico se, e somente se, é um ideal em <m>R_n = {\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+            Um código linear <m>C</m> em <m>{\mathbb Z}_2^n</m> é cíclico se, e somente se, é um ideal em <m>R_n = {\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
           </p>
         </statement>
 
@@ -733,7 +733,7 @@
         <statement>
           <p>
             Seja <m>C = \langle g(t) \rangle</m> um código cíclico em <m>R_n</m> e suponha que <m>x^n - 1 = g(x) h(x)</m>.
-            Então <m>G</m> e <m>H</m> são, respectivamente, matrizes geradora e de verificação de paridade de <m>C</m>.
+            Então <m>G</m> e <m>H</m> são, respectivamente, a matriz geradora e a matriz de verificação de paridade de <m>C</m>.
             Além disso, <m>HG = 0</m>.
           </p>
         </statement>
@@ -881,17 +881,17 @@
             Equivalentemente, temos o seguinte sistema de equações:
             <md>
               <mrow>a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0</mrow>
-              <mrow>a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0</mrow>
+              <mrow>a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_1} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0</mrow>
               <mrow>&amp; \aatavdots{=}</mrow>
               <mrow>a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0</mrow>
             </md>.
             Portanto, <m>(a_{i_0}, a_{i_1}, \ldots,
             a_{i_{s - 1}})</m> é uma solução do sistema homogêneo de equações lineares
             <md>
-              <mrow>(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0</mrow>
-              <mrow>(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0</mrow>
+              <mrow>(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{s - 1} &amp; = 0</mrow>
+              <mrow>(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{s - 1} &amp; = 0</mrow>
               <mrow>&amp; \aatavdots{=}</mrow>
-              <mrow>(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0</mrow>
+              <mrow>(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{s - 1} &amp; = 0</mrow>
             </md>.
             Contudo, esse sistema tem uma única solução,
             pois o determinante da matriz
@@ -989,7 +989,7 @@
             então <m>g(x) \mid f(x)</m> em <m>{\mathbb Z}_2[x]</m>.
             Logo, para <m>i = 1, \ldots, 2r</m>,
             <m>f( \omega^i) = 0</m>, pois <m>g( \omega^i ) = 0</m>.
-            Reciprocamente, suponha que <m>f( \omega^i) = 0</m> para <m>1 \leq i \leq d</m>.
+            Reciprocamente, suponha que <m>f( \omega^i) = 0</m> para <m>1 \leq i \lt d</m>.
             Então <m>f(x)</m> é divisível por cada <m>m_i(x)</m>,
             pois <m>m_i(x)</m> é o polinômio mínimo de <m>\omega^i</m>.
             Portanto, <m>g(x) \mid f(x)</m> pela definição de <m>g(x)</m>.
@@ -1938,8 +1938,8 @@
           e traduzir elementos de um para o outro.
           Contudo, neste exercício criaremos um subcorpo de um corpo finito do zero.
           Como o grupo dos elementos não nulos de um corpo finito é cíclico,
-          os elementos não nulos de um subcorpo formarão um subgrupo do grupo cíclico
-          e necessariamente serão cíclicos.
+          o grupo multiplicativo dos elementos não nulos de um subcorpo formará um subgrupo do grupo cíclico
+          e necessariamente será cíclico.
         </p>
 
         <p>

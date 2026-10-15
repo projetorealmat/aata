@@ -704,7 +704,7 @@
           O polinômio <m>p(x) = x^3 + x^2 + 2</m> é irredutível sobre <m>{\mathbb Z}_3[x]</m>.
           Suponha que esse polinômio fosse redutível sobre <m>{\mathbb Z}_3[x]</m>.
           Pelo algoritmo da divisão, ele teria de possuir um fator da forma <m>x - a</m>,
-          onde <m>a</m> é algum elemento de <m>{\mathbb Z}_3[x]</m>.
+          onde <m>a</m> é algum elemento de <m>{\mathbb Z}_3</m>.
           Logo, deveríamos ter <m>p(a) = 0</m>.
           Entretanto,
           <md>

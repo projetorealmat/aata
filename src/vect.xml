@@ -265,10 +265,10 @@
       </md>
       é chamado de <term>combinação linear</term><idx><h>Combinação linear</h></idx>
       dos vetores <m>v_1, v_2, \ldots, v_n</m>.
-      O <term>conjunto gerador</term><idx><h>Conjunto gerador</h></idx>
-      dos vetores <m>v_1, v_2, \ldots,
+      O <term>espaço gerado</term><idx><h>Espaço gerado</h></idx>
+      pelos vetores <m>v_1, v_2, \ldots,
       v_n</m> é o conjunto de vetores obtido de todas as combinações lineares possíveis de <m>v_1, v_2, \ldots, v_n</m>.
-      Se <m>W</m> é o conjunto gerador de <m>v_1, v_2, \ldots, v_n</m>,
+      Se <m>W</m> é o espaço gerado por <m>v_1, v_2, \ldots, v_n</m>,
       então dizemos que <m>W</m> é <term>gerado</term>
       por <m>v_1, v_2, \ldots, v_n</m>.
     </p>
@@ -1294,12 +1294,11 @@
 
       <p>
         Este é um bom momento para discutir um pouco da matemática por trás do funcionamento do Sage.
-        Um espaço vetorial sobre um corpo infinito,
+        Um espaço vetorial não nulo sobre um corpo infinito,
         como os racionais ou os reais, é um conjunto infinito.
         Por mais ampla que pareça a memória dos computadores, ela ainda é finita.
         Como o Sage coloca um conjunto infinito em nossas máquinas finitas?
-        A ideia principal é que um espaço vetorial de dimensão finita possui um conjunto finito de geradores,
-        que conhecemos como uma base.
+        A ideia principal é que um espaço vetorial de dimensão finita possui uma base finita, que é em particular um conjunto finito de geradores.
         Assim, o Sage precisa apenas dos elementos de uma base
         (dois vetores no exemplo anterior)
         para trabalhar com as infinitas possibilidades de elementos do subespaço.

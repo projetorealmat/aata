@@ -2191,7 +2191,7 @@
         Todo reticulado é um poset,
         portanto, todos os comandos acima funcionarão igualmente bem para um reticulado.
         Mas como se cria um reticulado?
-        Simples <mdash/> primeiro crie um poset e depois passe-o ao construtor <c>LatticePoset()</c>.
+        É simples: primeiro, crie um poset e depois passe-o ao construtor <c>LatticePoset()</c>.
         Mas perceba que o simples fato de fornecer um poset a esse construtor
         não significa que sempre obteremos um reticulado.
         Somente se o poset já for <em>um reticulado</em>
