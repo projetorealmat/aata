@@ -12,7 +12,15 @@
 <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="actions">
   <title>Ações de Grupos</title>
   <introduction>
-    <p> As ações de grupos generalizam a multiplicação de grupos. Se <m>G</m> é um grupo e <m>X</m> é um conjunto arbitrário, a ação de um elemento <m>g \in G</m> sobre um elemento <m>x \in X</m> é o produto <m>gx</m>, que pertence a <m>X</m>. Muitos problemas de álgebra são mais bem abordados por meio de ações de grupos. Por exemplo, as demonstrações dos teoremas de Sylow e do Teorema de Contagem de Burnside são mais facilmente compreendidas quando formuladas em termos de ações de grupos. </p>
+    <p>
+      As ações de grupos generalizam a multiplicação de grupos.
+      Se <m>G</m> é um grupo e <m>X</m> é um conjunto arbitrário,
+      a ação de um elemento <m>g \\in G</m> sobre um elemento <m>x \\in X</m>
+      é o produto <m>gx</m>, que pertence a <m>X</m>.
+      Muitos problemas de álgebra são mais bem abordados por meio de ações de grupos.
+      Por exemplo,
+      as demonstrações dos teoremas de Sylow e do Teorema de Contagem de Burnside são mais facilmente compreendidas quando formuladas em termos de ações de grupos.
+    </p>
   </introduction>
 
   <section xml:id="actions-section-groups-acting-on-sets">
@@ -2027,7 +2035,12 @@
         </output>
             </sage>
 
-      <p> O grupo de automorfismos é formado pelo automorfismo identidade, que sempre está presente, e por uma permutação de ordem <m>2</m> que inverte o caminho de uma extremidade à outra. O grupo está longe de ser transitivo e há muitas órbitas. </p>
+      <p>
+        O grupo de automorfismos é formado pelo automorfismo identidade,
+        que sempre está presente, e por uma permutação de ordem <m>2</m> que
+        inverte o caminho de uma extremidade à outra.
+        O grupo está longe de ser transitivo e há muitas órbitas.
+      </p>
 
             <sage>
                 <input>
