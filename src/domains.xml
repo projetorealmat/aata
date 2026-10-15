@@ -752,7 +752,7 @@
 
         <notation>
           <usage><m>\nu(a)</m></usage>
-          <description>valoração euclidiana de <m>a</m></description>
+          <description>função euclidiana de <m>a</m></description>
         </notation>
 
         <ol>
@@ -773,19 +773,19 @@
         </ol>
 
         Então <m>D</m> é chamado de <term>domínio euclidiano</term><idx><h>Domínio euclidiano</h></idx><idx><h>Domínio</h><h>euclidiano</h></idx>
-        e <m>\nu</m> é chamada de <idx><h>Valoração euclidiana</h></idx><term>valoração euclidiana</term>.
+        e <m>\nu</m> é chamada de <idx><h>Valoração euclidiana</h></idx><term>função euclidiana</term>.
       </p>
 
       <example xml:id="domains-example-abs-value">
         <p>
-          O valor absoluto em <m>{\mathbb Z}</m> é uma valoração euclidiana.
+          O valor absoluto em <m>{\mathbb Z}</m> é uma função euclidiana.
         </p>
       </example>
 
       <example xml:id="domains-example-deg-poly-field-valuation">
         <p>
           Seja <m>F</m> um corpo.
-          Então o grau de um polinômio em <m>F[x]</m> é uma valoração euclidiana.
+          Então o grau de um polinômio em <m>F[x]</m> é uma função euclidiana.
         </p>
       </example>
 
@@ -803,7 +803,7 @@
         </p>
 
         <p>
-          Afirmamos que <m>\nu( a+ bi) = a^2 + b^2</m> é uma valoração euclidiana em <m>{\mathbb Z}[i]</m>.
+          Afirmamos que <m>\nu( a+ bi) = a^2 + b^2</m> é uma função euclidiana em <m>{\mathbb Z}[i]</m>.
           Sejam <m>z, w \in {\mathbb Z}[i]</m>.
           Então <m>\nu( zw) = |zw|^2 = |z|^2 |w|^2 = \nu(z) \nu(w)</m>.
           Como <m>\nu(z) \geq 1</m> para todo <m>z \in {\mathbb Z}[i]</m> não nulo,
@@ -862,7 +862,7 @@
 
         <proof>
           <p>
-            Seja <m>D</m> um domínio euclidiano e seja <m>\nu</m> uma valoração euclidiana em <m>D</m>.
+            Seja <m>D</m> um domínio euclidiano e seja <m>\nu</m> uma função euclidiana em <m>D</m>.
             Suponha que <m>I</m> seja um ideal não trivial em <m>D</m> e escolha um elemento não nulo <m>b \in I</m> tal que <m>\nu(b)</m> seja mínima entre todos os <m>a \in I</m>.
             Como <m>D</m> é um domínio euclidiano,
             existem elementos <m>q</m> e <m>r</m> em <m>D</m> tais que
@@ -1519,7 +1519,7 @@
 
             <li>
               <p>
-                Prove que <m>{\mathbb Z}[ \sqrt{2} i ]</m> é um domínio euclidiano sob a valoração euclidiana <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
+                Prove que <m>{\mathbb Z}[ \sqrt{2} i ]</m> é um domínio euclidiano sob a função euclidiana <m>\nu( a + b \sqrt{2}\, i) = a^2 + 2b^2</m>.
               </p>
             </li>
           </ol>
@@ -1574,7 +1574,7 @@
     <exercise number="14" xml:id="domains-exercise-euclidean-valuation-unit">
       <statement>
         <p>
-          Seja <m>D</m> um domínio euclidiano com valoração euclidiana <m>\nu</m>.
+          Seja <m>D</m> um domínio euclidiano com função euclidiana <m>\nu</m>.
           Se <m>u</m> é uma unidade em <m>D</m>,
           mostre que <m>\nu(u) = \nu(1)</m>.
         </p>
@@ -1584,7 +1584,7 @@
     <exercise number="15" xml:id="domains-exercise-euclidean-valuation-associates">
       <statement>
         <p>
-          Seja <m>D</m> um domínio euclidiano com valoração euclidiana <m>\nu</m>.
+          Seja <m>D</m> um domínio euclidiano com função euclidiana <m>\nu</m>.
           Se <m>a</m> e <m>b</m> são associados em <m>D</m>,
           prove que <m>\nu(a) = \nu(b)</m>.
         </p>
