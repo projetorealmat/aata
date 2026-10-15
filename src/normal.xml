@@ -422,7 +422,7 @@
         <q>Solvability of Groups of Odd Order,</q>
         que apareceu no <pubtitle>Pacific Journal of Mathematics</pubtitle>. Sua demonstração, com mais de 250 páginas, impulsionou um programa nas décadas de 1960 e 1970 para classificar todos os grupos finitos simples. Daniel Gorenstein<idx><h>Gorenstein, Daniel</h></idx>
         foi o organizador desse esforço notável. Um dos últimos grupos simples foi o
-        <q>Monstro,</q> descoberto por <idx><h>Greiss, R.</h></idx>R. Greiss. O Monstro, um grupo de matrizes <m>196{,}833 \times 196{,}833</m> , é um dos 26 grupos simples esporádicos, ou especiais. Esses grupos simples esporádicos são grupos que não se enquadram em nenhuma família infinita de grupos simples. Alguns dos grupos esporádicos desempenham um papel importante na física.
+        <q>Monstro,</q> descoberto por <idx><h>Griess, R.</h></idx>R. Griess. O Monstro, um grupo de matrizes <m>196{,}883 \times 196{,}883</m>, é um dos 26 grupos simples esporádicos, ou especiais. Esses grupos simples esporádicos são grupos que não se enquadram em nenhuma família infinita de grupos simples. Alguns dos grupos esporádicos desempenham um papel importante na física.
       </p>
     </subsection>
 
@@ -882,7 +882,7 @@
       </p>
 
       <p>
-        Considere o grupo alternado <m>A_4</m> que podemos interpretar como o grupo de simetrias de um tetraedro. Para um subgrupo, tome um elemento que fixa um vértice e gira a face oposta <mdash/> isso gerará um subgrupo cíclico de ordem 3 e, pelo Teorema de Lagrange, obteremos quatro classes laterais. Nós as calculamos aqui. (Novamente, nenhuma saída é solicitada.)
+        Considere o grupo alternado <m>A_4</m> que podemos interpretar como o grupo de simetrias rotacionais de um tetraedro. Para um subgrupo, tome um elemento que fixa um vértice e gira a face oposta <mdash/> isso gerará um subgrupo cíclico de ordem 3 e, pelo Teorema de Lagrange, obteremos quatro classes laterais. Nós as calculamos aqui. (Novamente, nenhuma saída é solicitada.)
       </p>
 
             <sage>
@@ -958,7 +958,7 @@
 
       <p>
         O texto demonstra em <xref ref="normal-section-simplicity-of-an"/> que <m>A_5</m> é simples,
-        <ie/> <m>A_5</m> não tem subgrupos normais. Poderíamos construir todos os subgrupos de <m>A_5</m> e perguntar se cada um é normal em <m>A_5</m> usando o método <c>.is_normal()</c>. Mas o Sage já cuida disso para nós.
+        <ie/> <m>A_5</m> não possui subgrupos normais próprios não triviais. Poderíamos construir todos os subgrupos de <m>A_5</m> e perguntar se cada um é normal em <m>A_5</m> usando o método <c>.is_normal()</c>. Mas o Sage já cuida disso para nós.
       </p>
 
             <sage>
