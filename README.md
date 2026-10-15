@@ -7,7 +7,7 @@ Fonte em formato [PreTeXt](http://mathbook.pugetsound.edu) para um livro didáti
 
 Para obter cópias em vários formatos e saber mais, visite o site do livro em [abstract.pugetsound.edu](http://abstract.pugetsound.edu).
 
-## REALMat integration
+## Integração com o REALMat
 
 Esta é a edição brasileira de *Álgebra Abstrata: Teoria e Aplicações*, baseada na obra de Thomas W. Judson e nos exercícios com Sage de Robert A. Beezer. Tradução e adaptação: Carlos André Duarte Costa. Revisão editorial: equipe de revisão da edição brasileira. O projeto REALMat organiza e disponibiliza a edição; Carlos André Duarte Costa é identificado na obra como publicador da versão modificada, conforme a GFDL.
 
