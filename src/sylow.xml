@@ -387,7 +387,7 @@
           Se houvesse apenas um único subgrupo de Sylow <m>5</m>,
           ele seria conjugado a si mesmo;
           isto é, seria um subgrupo normal de <m>A_5</m>.
-          Como <m>A_5</m> não possui subgrupos normais, isso é impossível;
+          Como <m>A_5</m> não possui subgrupos normais próprios não triviais, isso é impossível;
           portanto, concluímos que existem exatamente seis subgrupos de Sylow <m>5</m> distintos em <m>A_5</m>.
         </p>
       </example>
@@ -499,9 +499,8 @@
            Assim, existem subgrupos normais <m>H_2</m> e <m>H_3</m> em <m>G</m>,
            em que <m>|H_2| = 5</m> e <m>|H_3| = 7</m>.
            Em qualquer dos casos, o grupo quociente é abeliano;
-           portanto, <m>G'</m> deve ser um subgrupo de <m>H_i</m>, <m>i= 1, 2</m>.
-           Portanto, a ordem de <m>G'</m> é <m>1</m>, <m>5</m>,
-           ou <m>7</m>.
+           portanto, <m>G'</m> deve ser um subgrupo de <m>H_i</m>, <m>i= 2, 3</m>.
+           Portanto, <m>|G'|</m> divide simultaneamente <m>5</m> e <m>7</m>, de modo que <m>|G'|=1</m>.
            Contudo, já determinamos que <m>|G'| =1</m> ou <m>47</m>.
            Assim, o subgrupo comutador de <m>G</m> é trivial,
            e, consequentemente, <m>G</m> é abeliano.
@@ -613,8 +612,8 @@
              pois <m>(h_1)^{-1} h_2</m> pertence a <m>H</m> e
              <m>k_2 (k_1)^{-1}</m> pertence a <m>K</m>; consequentemente,
             <md>
-              <mrow>h_2 &amp; =  h_1 a^{-1}</mrow>
-              <mrow>k_2 &amp; =  a k_1</mrow>
+              <mrow>h_2 &amp; =  h_1 a</mrow>
+              <mrow>k_2 &amp; =  a^{-1} k_1</mrow>
             </md>.
           </p>
 
@@ -967,8 +966,8 @@
     <exercise number="18" xml:id="sylow-exercise-G-isomorphic-P1-Pn">
       <statement>
         <p>
-          Seja <m>G</m> de ordem <m>p_1^{e_1} \cdots p_n^{e_n}</m> e suponha que <m>G</m> tenha <m>n</m> subgrupos de Sylow <m>p</m>,
-          <m>P_1, \ldots, P_n</m>, em que <m>|P_i| = p_i^{e_i}</m>.
+          Seja <m>G</m> de ordem <m>p_1^{e_1} \cdots p_n^{e_n}</m> e suponha que <m>G</m> tenha, para cada <m>i</m>, um único subgrupo de Sylow <m>p_i</m>,
+          <m>P_i</m>, em que <m>|P_i| = p_i^{e_i}</m>.
           Prove que <m>G</m> é isomorfo a <m>P_1 \times \cdots \times P_n</m>.
         </p>
       </statement>
@@ -980,7 +979,7 @@
       <statement>
         <p>
           Seja <m>P</m> um subgrupo de Sylow <m>p</m> normal de <m>G</m>.
-          Prove que toda automorfia interna de <m>G</m> fixa <m>P</m>.
+          Prove que toda automorfismo interno de <m>G</m> fixa <m>P</m>.
         </p>
       </statement>
     </exercise>
@@ -1705,7 +1704,7 @@
       <p>
         Já vimos anteriormente o método de grupos de permutações do Sage <c>.is_simple()</c>.
         <xref ref="sylow-example-group-pn"/> nos diz que um grupo de ordem <m>64</m> nunca é simples.
-        O grupo dicíclico <c>DiCyclicGroup(16)</c> é um grupo não abeliano de <m>64</m>,
+        O grupo dicíclico <c>DiCyclicGroup(16)</c> é um grupo não abeliano de ordem <m>64</m>,
         portanto, podemos testar esse método neste grupo.
         Acontece que esse grupo tem muitos subgrupos normais <mdash/> a lista sempre conterá o subgrupo trivial e o próprio grupo,
         portanto, qualquer número maior que <m>2</m> indica um subgrupo normal não trivial.
