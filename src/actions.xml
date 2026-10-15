@@ -175,7 +175,7 @@
 
     <p>
       Se <m>X</m> é um <m>G</m>-conjunto,
-      cada partição de <m>X</m> associada à <m>G</m>-equivalência é chamada de <term>órbita</term><idx><h>Órbita</h></idx>
+      cada classe de equivalência da <m>G</m>-equivalência em <m>X</m> é chamada de <term>órbita</term><idx><h>Órbita</h></idx>
       de <m>X</m> sob <m>G</m>.
       Denotaremos a órbita que contém um elemento <m>x</m> de <m>X</m> por <m>{\mathcal O}_x</m>.
 
@@ -412,7 +412,7 @@
         </md>
         portanto, há três classes de conjugação.
         Há variações do problema de encontrar o número dessas partições para qualquer inteiro positivo <m>n</m> que os cientistas da computação chamam de <term>NP-completas</term>.
-        Isso significa, na prática, que o problema não pode ser resolvido para um <m>n</m> grande, pois os cálculos consumiriam tempo demais até mesmo no maior computador.
+        A NP-completude caracteriza a dificuldade computacional no pior caso; ela não implica que toda instância grande seja irresolúvel.
       </p>
     </example>
 
@@ -501,7 +501,7 @@
       <p>
         O Teorema de Contagem de Burnside oferece um método para calcular o número de maneiras distinguíveis de realizar algo.
         Além de suas aplicações geométricas,
-        o teorema tem aplicações interessantes em áreas da teoria de interruptores e da química.
+        o teorema tem aplicações interessantes em áreas da teoria de comutação e da química.
         A demonstração do Teorema de Contagem de Burnside depende do lema a seguir.
       </p>
 
@@ -611,7 +611,7 @@
     <subsection xml:id="actions-subsection-geometric-example">
       <title>Um Exemplo Geométrico</title>
       <p>
-        Antes de aplicarmos o Teorema de Burnside a problemas de teoria de interruptores,
+        Antes de aplicarmos o Teorema de Burnside a problemas de teoria de comutação,
         vamos examinar o número de maneiras de colorir os vértices de um quadrado de preto ou branco.
         Observe que às vezes podemos obter colorações equivalentes simplesmente aplicando um movimento rígido ao quadrado.
         Por exemplo, como já observamos,
@@ -1043,7 +1043,7 @@
       </p>
 
       <p>
-        Seja <m>X</m> o conjunto de valores de saída de uma função de comutação em <m>n</m> variáveis.
+        Seja <m>X</m> o conjunto das <m>n</m>-uplas binárias de entrada de uma função de comutação em <m>n</m> variáveis.
         Então <m>|X|=2^n</m>.
         Podemos enumerar esses valores da seguinte maneira:
         <md>
@@ -1212,7 +1212,7 @@
       <statement>
         <p>
           A <q>Nota histórica</q> menciona a demonstração da Conjectura de Burnside.
-          Quanto tempo durou a demonstração?
+          Quantas páginas tinha a demonstração?
         </p>
       </statement>
       <response/>
