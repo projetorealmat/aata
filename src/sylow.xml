@@ -979,7 +979,7 @@
       <statement>
         <p>
           Seja <m>P</m> um subgrupo de Sylow <m>p</m> normal de <m>G</m>.
-          Prove que toda automorfismo interno de <m>G</m> fixa <m>P</m>.
+          Prove que todo automorfismo interno de <m>G</m> fixa <m>P</m>.
         </p>
       </statement>
     </exercise>
@@ -1500,7 +1500,7 @@
       <p>
         O Terceiro Teorema de Sylow nos diz que, para <m>p=2</m>, esperaríamos <m>1, 3</m> ou <m>9</m> subgrupos de Sylow <m>2</m>,
         portanto, nosso resultado computacional de <m>9</m> subgrupos é consistente com o que a teoria prevê.
-        Você consegue visualizar cada um desses subgrupos como simetrias de um <m>18</m>-gono?
+        Você consegue visualizar cada um desses subgrupos como simetrias de um <m>18</m>-ágono?
         Observe que também temos muitos subgrupos de ordem <m>2</m> dentro desses subgrupos de ordem <m>4</m>.
       </p>
 
@@ -1976,7 +1976,7 @@
       <statement>
         <p>
           Para o grupo diédrico <m>D_{36}</m>
-          (simetrias de um <m>36</m>-gono)
+          (simetrias de um <m>36</m>-ágono)
           e para cada primo possível,
           determine as possibilidades para o número de subgrupos de Sylow <m>p</m> distintos conforme previsto pelo Terceiro Teorema de Sylow
           (<xref ref="sylow-theorem-third-sylow"/>).

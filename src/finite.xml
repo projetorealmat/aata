@@ -602,7 +602,7 @@
         <m>{\mathbb Z}_2^n</m> e <m>R_n</m> são isomorfos como espaços vetoriais.
         Frequentemente identificaremos elementos de
         <m>{\mathbb Z}_2^n</m> com elementos de <m>{\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
-        Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}[x] / \langle x^n - 1 \rangle</m>.
+        Dessa maneira, podemos interpretar um código linear como um subconjunto de <m>{\mathbb Z}_2[x] / \langle x^n - 1 \rangle</m>.
       </p>
 
       <p>
@@ -1938,8 +1938,8 @@
           e traduzir elementos de um para o outro.
           Contudo, neste exercício criaremos um subcorpo de um corpo finito do zero.
           Como o grupo dos elementos não nulos de um corpo finito é cíclico,
-          o grupo multiplicativo dos elementos não nulos de um subcorpo formarão um subgrupo do grupo cíclico
-          e necessariamente serão cíclicos.
+          o grupo multiplicativo dos elementos não nulos de um subcorpo formará um subgrupo do grupo cíclico
+          e necessariamente será cíclico.
         </p>
 
         <p>

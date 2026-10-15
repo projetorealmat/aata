@@ -792,7 +792,7 @@
       </p>
 
       <p>
-        Considere o grupo diedral <m>D_{8}</m> que é o grupo de simetrias de um <m>8</m>-gono. Se tomarmos o elemento que produz um quarto de volta, podemos usá-lo para gerar um subgrupo cíclico de ordem 4. Esse será um subgrupo normal (confie em nós por enquanto). Primeiro, construa as classes laterais (à direita) (observe que não há saída):
+        Considere o grupo diedral <m>D_{8}</m> que é o grupo de simetrias de um <m>8</m>-ágono. Se tomarmos o elemento que produz um quarto de volta, podemos usá-lo para gerar um subgrupo cíclico de ordem 4. Esse será um subgrupo normal (confie em nós por enquanto). Primeiro, construa as classes laterais (à direita) (observe que não há saída):
       </p>
 
             <sage>
@@ -1045,7 +1045,7 @@
     <exercise number="2" xml:id="normal-sage-exercise-D8-quotient">
       <statement>
         <p>
-          Considere o grupo quociente do grupo de simetrias de um <m>8</m>-gono, formado com o subgrupo cíclico de ordem <m>4</m> gerado por um quarto de volta. Use a função <c>coset_product</c> para determinar a tabela de Cayley desse grupo quociente. Use o número de cada classe lateral, conforme produzido pelo método <c>.cosets()</c>, como nome dos elementos do grupo quociente. Você precisará construir a tabela <q>à mão</q>
+          Considere o grupo quociente do grupo de simetrias de um <m>8</m>-ágono, formado com o subgrupo cíclico de ordem <m>4</m> gerado por um quarto de volta. Use a função <c>coset_product</c> para determinar a tabela de Cayley desse grupo quociente. Use o número de cada classe lateral, conforme produzido pelo método <c>.cosets()</c>, como nome dos elementos do grupo quociente. Você precisará construir a tabela <q>à mão</q>
           , pois não há uma maneira fácil de fazer o comando de tabela de Cayley do Sage produzi-la para você. Você pode construir uma tabela no editor pop-up do Sage Notebook (clique em uma linha azul mantendo Shift pressionado) ou pode ler a documentação do método <c>html.table()</c>.
         </p>
       </statement>
@@ -1054,7 +1054,7 @@
     <exercise number="3" xml:id="normal-sage-exercise-D8-cyclic-subgroup">
       <statement>
         <p>
-          Considere o subgrupo cíclico de ordem <m>4</m> nas simetrias de um <m>8</m>-gono. Verifique que o subgrupo é normal construindo primeiro diretamente as classes laterais à esquerda e à direita (sem usar o método <c>.cosets()</c>) e depois verificando sua igualdade no Sage, tudo com um único comando que empregue ordenação com o comando <c>sorted()</c>.
+          Considere o subgrupo cíclico de ordem <m>4</m> nas simetrias de um <m>8</m>-ágono. Verifique que o subgrupo é normal construindo primeiro diretamente as classes laterais à esquerda e à direita (sem usar o método <c>.cosets()</c>) e depois verificando sua igualdade no Sage, tudo com um único comando que empregue ordenação com o comando <c>sorted()</c>.
         </p>
       </statement>
     </exercise>
@@ -1062,7 +1062,7 @@
     <exercise number="4" xml:id="normal-sage-exercise-D8-normal-subgroup">
       <statement>
         <p>
-          Novamente, use o mesmo subgrupo cíclico de ordem <m>4</m> no grupo de simetrias de um <m>8</m>-gono. Verifique que o subgrupo é normal usando a parte (2) de <xref ref="normal-theorem-normal-equivalents"/>. Construa um comando de uma linha que faça a verificação completa e retorne <c>True</c>. Talvez ordene primeiro os elementos do subgrupo <c>S</c> e depois construa lentamente as listas, os comandos e as condições necessárias, em etapas. Observe que essa verificação não exige construir as classes laterais em nenhum momento.
+          Novamente, use o mesmo subgrupo cíclico de ordem <m>4</m> no grupo de simetrias de um <m>8</m>-ágono. Verifique que o subgrupo é normal usando a parte (2) de <xref ref="normal-theorem-normal-equivalents"/>. Construa um comando de uma linha que faça a verificação completa e retorne <c>True</c>. Talvez ordene primeiro os elementos do subgrupo <c>S</c> e depois construa lentamente as listas, os comandos e as condições necessárias, em etapas. Observe que essa verificação não exige construir as classes laterais em nenhum momento.
         </p>
       </statement>
     </exercise>
@@ -1078,7 +1078,7 @@
     <exercise number="6" xml:id="normal-sage-exercise-n-gon">
       <statement>
         <p>
-          Construa alguns grupos diedrais de ordem <m>2n</m> (<ie/> simetrias de um <m>n</m>-gono,
+          Construa alguns grupos diedrais de ordem <m>2n</m> (<ie/> simetrias de um <m>n</m>-ágono,
           <m>D_{n}</m> no texto, <c>DihedralGroup(n)</c> no Sage). Talvez todos eles para <m>3\leq n \leq 100</m>. Para cada grupo diedral, construa uma lista das ordens de cada um dos subgrupos normais (portanto, use <c>.normal_subgroups()</c>). Talvez você precise esperar dez ou vinte segundos para isso terminar — seja paciente. Observe exemplos suficientes para conjecturar um padrão em suas observações, verifique sua hipótese em cada um dos exemplos e depois enuncie sua hipótese claramente.
         </p>
 

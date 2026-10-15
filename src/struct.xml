@@ -1313,7 +1313,7 @@
       <p>
         Não são necessárias ferramentas sofisticadas para compreender os grupos de ordem <m>2p</m>,
         em que <m>p</m> é um primo ímpar.
-        Há duas possibilidades <mdash/> um grupo cíclico de ordem <m>2p</m> e o grupo diedral de ordem <m>2p</m>, que é o conjunto de simetrias de um <m>p</m>-gono regular.
+        Há duas possibilidades <mdash/> um grupo cíclico de ordem <m>2p</m> e o grupo diedral de ordem <m>2p</m>, que é o conjunto de simetrias de um <m>p</m>-ágono regular.
         A demonstração exige um raciocínio cuidadoso e rigoroso,
         mas os teoremas necessários geralmente se reduzem às ordens de elementos, ao Teorema de Lagrange e às classes laterais.
         Consulte <xref ref="isomorph-exercise-classify-2p"/>.
