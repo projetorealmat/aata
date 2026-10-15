@@ -1207,12 +1207,12 @@
         Para começar, <em>uma régua não é uma régua graduada</em>.
         Não podemos medir comprimentos arbitrários com uma régua.
         Ela é apenas uma ferramenta para traçar uma reta por dois pontos.
-        A afirmação de que a trissecção de um ângulo arbitrário é impossível significa que existe pelo menos um ângulo que é impossível trisectar com uma construção de régua e compasso.
-        Certamente é possível trisectar um ângulo em casos especiais.
+        A afirmação de que a trissecção de um ângulo arbitrário é impossível significa que existe pelo menos um ângulo que é impossível trissectar com uma construção de régua e compasso.
+        Certamente é possível trissectar um ângulo em casos especiais.
         Podemos construir um ângulo de <m>30^\circ</m>;
-        portanto, é possível trisectar um ângulo de <m>90^\circ</m>.
+        portanto, é possível trissectar um ângulo de <m>90^\circ</m>.
         No entanto, mostraremos que é impossível construir um ângulo de <m>20^\circ</m>.
-        Portanto, não podemos trisectar um ângulo de <m>60^\circ</m>.
+        Portanto, não podemos trissectar um ângulo de <m>60^\circ</m>.
       </p>
     </introduction>
 
@@ -1556,7 +1556,7 @@
           Extensões do corpo dos números racionais são um objeto central de estudo na teoria dos números;
           como as raízes do Sage estão nessa disciplina,
           não é surpresa que ele ofereça amplo suporte a corpos e extensões dos racionais.
-          O Sage também contém uma implementação do corpo inteiro dos números algébricos,
+          O Sage também contém uma implementação do corpo formado por todos os números algébricos,
           com representações exatas.
         </p>
       </paragraphs>
@@ -1608,7 +1608,7 @@
         aluno de Grothendieck,
         resolveu várias conjecturas de Weil em teoria dos números.
         Uma das contribuições mais recentes para a álgebra e a teoria dos números é a
-        prova de Gerd Faltings'<idx><h>Faltings, Gerd</h></idx>
+        prova de Gerd Faltings<idx><h>Faltings, Gerd</h></idx>
         da conjectura de Mordell.<idx><h>Conjectura de Mordell</h></idx>
         Essa conjectura de Mordell, hoje conhecida como teorema de Faltings, afirma essencialmente que certos polinômios <m>p(x, y)</m> em
         <m>{\mathbb Z}[x,y]</m> possuem apenas um número finito de soluções inteiras.
@@ -2081,7 +2081,7 @@
         <p>
           Seja <m>E</m> uma extensão finita de um corpo <m>F</m>.
           Se <m>[E:F] = 2</m>,
-          mostre que <m>E</m> é um corpo de decomposição de <m>F</m> para algum polinômio <m>f(x) \in F[x]</m>.
+          mostre que <m>E</m> é um corpo de decomposição, sobre <m>F</m>, de algum polinômio <m>f(x) \in F[x]</m>.
         </p>
       </statement>
     </exercise>
@@ -2176,7 +2176,7 @@
     <biblio type="raw">
 <!-- was [2] --><!-- Out of print  - 19 August 2010 - TWJ -->
       Dudley, U.
-      <title>A Budget of Trisections</title>. Springer-Verlag, New York, 1987. Um relato interessante e divertido sobre como não trisectar um ângulo.
+      <title>A Budget of Trisections</title>. Springer-Verlag, New York, 1987. Um relato interessante e divertido sobre como não trissectar um ângulo.
     </biblio>
 
     <biblio type="raw">
@@ -2271,7 +2271,7 @@
             </sage>
 
       <p>
-        Em vez de construir o anel de polinômios inteiro,
+        Em vez de construir o todo o anel de polinômios,
         podemos simplesmente introduzir uma variável como geradora de um anel de polinômios e então criar polinômios a partir dessa variável.
         Isso nos poupa de nomear o anel de polinômios.
         Observe no exemplo que as duas ocorrências de <c>z</c> são necessárias.
@@ -2600,7 +2600,7 @@
         Construímos uma extensão contendo uma raiz do fator quadrático,
         denotada por <c>q</c> aqui.
         Então, em vez de usar a função <c>polygen()</c>,
-        construímos um anel de polinômios inteiro <c>R</c> sobre <c>N</c>, com a indeterminada <c>z</c>.
+        construímos um todo o anel de polinômios <c>R</c> sobre <c>N</c>, com a indeterminada <c>z</c>.
         O motivo é que podemos ilustrar como <q>promover</q>
         o polinômio <c>p</c> com a sintaxe <c>R(p)</c>, passando de coeficientes em <c>M</c> para coeficientes em <c>N</c>.
       </p>
@@ -2855,7 +2855,7 @@
       <p>
         O Sage pode fazer muitas coisas,
         mas ainda não é capaz de traçar retas com régua e compasso.
-        No entanto, podemos determinar muito rapidamente que trisectar um ângulo de <m>60</m> graus é impossível.
+        No entanto, podemos determinar muito rapidamente que trissectar um ângulo de <m>60</m> graus é impossível.
         Adjuntamos aos racionais o cosseno de um ângulo de <m>20</m> graus
         (em radianos), determinamos o grau da extensão
         e verificamos que ele não é uma potência inteira de <m>2</m>.

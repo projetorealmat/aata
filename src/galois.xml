@@ -377,7 +377,7 @@
             [{\mathbb Q}( \omega) : {\mathbb Q}] = | G( {\mathbb Q}( \omega) / {\mathbb Q})| = 4
           </md>,
           os <m>\sigma_i</m> devem ser todos os elementos de <m>G( {\mathbb Q}( \omega) / {\mathbb Q} )</m>.
-          Portanto, <m>G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4</m>, pois <m>\omega</m> é um gerador do grupo de Galois.
+          Portanto, <m>G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4</m>, pois <m>\sigma_2</m> é um gerador do grupo de Galois.
         </p>
       </example>
     </introduction>
@@ -2026,7 +2026,7 @@
           <ol>
             <li>
               <p>
-                Claramente <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos, pois <m>\omega \neq 1</m> ou 0.
+                Claramente <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m> são distintos, pois <m>\omega \neq 1</m> e <m>\omega \neq 0</m>.
                 Para mostrar que <m>\omega^i</m> é um zero de <m>\Phi_p(x)</m>,
                 calcule <m>\Phi_p( \omega^i)</m>.
               </p>
@@ -2037,7 +2037,7 @@
                 Os conjugados de <m>\omega</m> são <m>\omega, \omega^2, \ldots, \omega^{p - 1}</m>.
                 Defina uma aplicação <m>\phi_i: {\mathbb Q}(\omega) \rightarrow {\mathbb Q}(\omega^i)</m> por
                 <md>
-                  \phi_i(a_0 + a_1 \omega + \cdots + a_{p - 2} \omega^{p - 2}) = a_0 + a_1 \omega^i + \cdots + c_{p - 2} (\omega^i)^{p - 2}
+                  \phi_i(a_0 + a_1 \omega + \cdots + a_{p - 2} \omega^{p - 2}) = a_0 + a_1 \omega^i + \cdots + a_{p - 2} (\omega^i)^{p - 2}
                 </md>,
                 em que <m>a_i \in {\mathbb Q}</m>.
                 Prove que <m>\phi_i</m> é um isomorfismo de corpos.

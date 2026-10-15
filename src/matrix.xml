@@ -1192,8 +1192,8 @@
         devemos examinar os diferentes tipos de reticulados.
         Os reticulados podem ser classificados pela estrutura de uma única célula do reticulado.
         As formas possíveis das células são paralelogramo,
-        retangular, quadrada, rômbica,
-        e hexagonal (<xref ref="matrix-figure-lattice-types"/>).
+        retângulo, quadrado, losango
+        e hexágono (<xref ref="matrix-figure-lattice-types"/>).
         Os grupos de papel de parede podem agora ser classificados de acordo com os tipos de reflexões que ocorrem em cada grupo:
         são reflexões comuns,
         reflexões deslizantes, ambas ou nenhuma.
@@ -1446,7 +1446,7 @@
         Descobrir quantos desses grupos existem em cada dimensão é outra questão.
         Em <m>{\mathbb R}^3</m> há <m>230</m> grupos espaciais diferentes;
         em <m>{\mathbb R}^4</m> há <m>4894</m>; em <m>{\mathbb R}^5</m> há <m>222097</m>.
-        Ninguém conseguiu calcular o número de grupos espaciais para <m>{\mathbb R}^6</m> e além (<url href="https://oeis.org/A006227" visual="oeis.org/A006227"><c>oeis.org/A006227</c></url>).
+        Ninguém conseguiu calcular o número de grupos espaciais para <m>{\mathbb R}^6</m> e dimensões superiores (<url href="https://oeis.org/A006227" visual="oeis.org/A006227"><c>oeis.org/A006227</c></url>).
         É interessante observar que os grupos cristalográficos foram encontrados matematicamente para
         <m>{\mathbb R}^3</m> antes que os <m>230</m> tipos diferentes de cristais fossem de fato descobertos na natureza.
       </p>

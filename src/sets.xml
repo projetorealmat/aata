@@ -735,7 +735,7 @@
         Em outras palavras,
         se existe um <m>a \in A</m> para cada <m>b \in B</m> tal que
         <m>f(a) = b</m>, então <m>f</m> é sobrejetiva.
-        Uma aplicação é <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> ou
+        Uma aplicação é <term>injetora</term><idx><h>Função</h><h>injetora</h></idx> ou
         <term>injetiva</term><idx><h>Função</h><h>injetiva</h></idx> se
         <m>a_1 \neq a_2</m> implica <m>f(a_1) \neq f(a_2)</m>.
         Equivalentemente, uma função é injetiva se

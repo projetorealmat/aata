@@ -1607,7 +1607,7 @@
     <exercise number="23" xml:id="actions-exercise-ZG">
       <statement>
         <p>
-          Seja <m>|G| = p^n</m> um grupo não abeliano, com <m>p</m> primo.
+          Seja <m>G</m> um grupo não abeliano de ordem <m>p^n</m>, com <m>p</m> primo.
           Prove que <m>|Z(G)| \lt p^{n - 1}</m>.
         </p>
       </statement>
@@ -2091,7 +2091,7 @@
         Isso foi corrigido no Sage 4.8 e versões mais recentes.
         Observe a saída correta abaixo
         e verifique sua instalação executando estes comandos.
-        Se você não vir o singleton <c>[4]</c> em sua saída,
+        Se você não vir a lista com um único elemento, <c>[4]</c>, em sua saída,
         deve atualizar sua cópia do Sage.
       </p>
 

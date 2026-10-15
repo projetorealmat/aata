@@ -1120,7 +1120,7 @@
       <p>
         Nesta etapa,
         cada pessoa publicaria seus valores de <m>n</m> e <m>E</m>,
-        mantendo <m>D</m> muito privado e seguro.
+        mantendo <m>D</m> em sigilo e protegido.
         Na prática, <m>D</m> deve ser protegido no disco rígido do usuário por uma senha que somente o proprietário conheça.
         Para uma segurança ainda maior, uma pessoa poderia ter apenas duas cópias de sua chave privada,
         uma em um pendrive <acro>USB</acro> que carregasse sempre consigo

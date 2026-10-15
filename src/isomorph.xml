@@ -1693,7 +1693,7 @@
               <p>
                 Suponha que <m>G</m> não contenha um elemento de ordem <m>2p</m> e que
                 <m>P = \langle z \rangle</m> seja um subgrupo de ordem <m>p</m> gerado por <m>z</m>, e que <m>y</m> seja um elemento de ordem <m>2</m>.
-                Prove que o produto <m>(z^iy^j)(z^ry^s)</m> pode ser expresso univocamente como <m>z^m y^n</m> para alguns inteiros não negativos <m>m, n</m>.
+                Prove que o produto <m>(z^iy^j)(z^ry^s)</m> pode ser expresso univocamente como <m>z^m y^n</m>, com <m>0 \leq m \lt p</m> e <m>0 \leq n \lt 2</m>.
                 Assim, conclua que há apenas uma possibilidade para um grupo não abeliano de ordem <m>2p</m>;
                 ele deve ser, portanto, o grupo diedral que já vimos.
               </p>
@@ -1726,7 +1726,7 @@
         então o comando <c>G.is_isomorphic(H)</c> retornará <c>True</c> ou <c>False</c>, conforme os dois grupos sejam
         ou não
         isomorfos.
-        Como <q>ser isomorfo a</q> é uma relação de equivalência pelo <xref ref="isomorph-theorem-5"/>,
+        Como a relação <q>ser isomorfo a</q> é uma relação de equivalência pelo <xref ref="isomorph-theorem-5"/>,
         não importa qual grupo desempenha o papel de <c>G</c> e qual desempenha o papel de <c>H</c>.
       </p>
 
@@ -1849,7 +1849,7 @@
 
       <p>
         Vamos iniciar uma busca para encontrar todos os grupos de ordem menor que <m>16</m> no Sage como grupos de permutações.
-        Para as ordens primas <m>1,2,3,5,7,11</m> e <m>13</m>, sabemos que há realmente apenas um grupo para cada ordem,
+        Para a ordem <m>1</m> e para as ordens primas <m>2,3,5,7,11</m> e <m>13</m>, sabemos que há realmente apenas um grupo para cada ordem,
         e podemos realizar todos eles:
       </p>
 
@@ -1872,7 +1872,7 @@
         Portanto, nosso menor caso desconhecido agora é a ordem <m>4</m>.
         O Sage conhece pelo menos três grupos desse tipo,
         e podemos usá-lo para verificar se algum par é isomorfo.
-        Observe que, como <q>ser isomorfo a</q>
+        Observe que, como a relação <q>ser isomorfo a</q>
         é uma relação de equivalência,
         e portanto uma relação transitiva,
         os dois testes abaixo são suficientes.

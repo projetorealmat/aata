@@ -1415,7 +1415,7 @@
     <exercise number="16" xml:id="permute-exercise-rigid-motions-tetrahedron">
       <statement>
         <p>
-          Encontre o grupo de movimentos rígidos de um tetraedro.
+          Encontre o grupo de rotações de um tetraedro.
           Mostre que ele é o mesmo grupo que <m>A_4</m>.
         </p>
       </statement>
@@ -2356,7 +2356,7 @@
     <exercise number="3" xml:id="permute-sage-exercise-create-A4">
       <statement>
         <p>
-          Construa o grupo de simetrias do tetraedro
+          Construa o grupo de simetrias rotacionais do tetraedro
           (que também é o grupo alternado sobre 4 símbolos, <m>A_4</m>)
           com o comando <c>A=AlternatingGroup(4)</c>.
           Usando ferramentas como ordens de elementos
