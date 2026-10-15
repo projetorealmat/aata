@@ -15,7 +15,7 @@
     <p>
       As ações de grupos generalizam a multiplicação de grupos.
       Se <m>G</m> é um grupo e <m>X</m> é um conjunto arbitrário,
-      a ação de um elemento <m>g \\in G</m> sobre um elemento <m>x \\in X</m>
+      a ação de um elemento <m>g \in G</m> sobre um elemento <m>x \in X</m>
       é o produto <m>gx</m>, que pertence a <m>X</m>.
       Muitos problemas de álgebra são mais bem abordados por meio de ações de grupos.
       Por exemplo,
