@@ -989,8 +989,9 @@
 
       <example xml:id="sets-example-exponential">
         <p>
-          As funções logaritmo natural e exponencial,
-          <m>f(x) = \ln x</m> e <m>f^{-1}(x) = e^x</m>,
+          A função logarítmica natural
+          <m>f(x) = \ln x</m> e a função exponencial
+          <m>f^{-1}(x) = e^x</m>
           são inversas uma da outra, desde que tenhamos cuidado ao escolher os domínios.
           Observe que
           <md>

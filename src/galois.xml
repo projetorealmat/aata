@@ -2079,7 +2079,7 @@
       <statement>
         <p>
           Seja <m>F</m> um corpo de característica zero e seja
-          <m>f(x) \in F[x]</m> seja um polinômio separável de grau <m>n</m>.
+          <m>f(x) \in F[x]</m> um polinômio separável de grau <m>n</m>.
           Se <m>E</m> é o corpo de decomposição de <m>f(x)</m>,
           sejam <m>\alpha_1, \ldots, \alpha_n</m> as raízes de <m>f(x)</m> em <m>E</m>.
           Seja <m>\Delta = \prod_{i \lt j} (\alpha_i - \alpha_j)</m>.
@@ -3229,11 +3229,11 @@
           Usando o Teorema Fundamental da Teoria de Galois,
           construa os subcorpos do corpo de decomposição.
           Inclua a documentação de apoio na folha de trabalho do Sage que você entregar.
-          Além disso, entregue uma parte escrita desta tarefa contendo uma disposição completa dos subgrupos e subcorpos,
-          escrita inteiramente com notação matemática e sem comandos do Sage,
-          projetada para ilustrar a correspondência entre os dois.
-          Aqui você precisa apenas da disposição gráfica,
-          devidamente identificada <mdash/> a folha de trabalho do Sage fundamentará seu trabalho.
+          Além disso, entregue uma parte escrita desta tarefa com um diagrama completo que mostre os subgrupos e os subcorpos,
+          usando apenas notação matemática e sem comandos do Sage,
+          para ilustrar a correspondência entre eles.
+          Aqui, basta apresentar o diagrama devidamente identificado;
+          a folha de trabalho do Sage servirá de apoio ao seu trabalho.
         </p>
       </statement>
     </exercise>

@@ -76,7 +76,7 @@
       É importante observar que, na maioria dos casos, dois vetores não podem ser multiplicados.
       Em geral, só é possível multiplicar um vetor por um escalar.
       Para distinguir entre o zero escalar e o vetor zero,
-      escrevê-los-emos como 0 e <m>{\mathbf 0}</m>, respectivamente.
+      escreveremos como 0 e <m>{\mathbf 0}</m>, respectivamente.
     </p>
 
     <p>
@@ -1586,7 +1586,7 @@
         </p>
 
         <p>
-          Observe que esta não é a soma direta do seu texto,
+          Observe que esta não é a soma direta definida no texto,
           nem o método <c>direct_sum()</c> do Sage.
           No entanto, você pode construir esse subespaço no Sage da seguinte maneira.
           Obtenha as bases de <m>U</m> e <m>W</m> separadamente, como listas de vetores.
@@ -1613,7 +1613,7 @@
     <exercise number="2" xml:id="vect-sage-exercise-root-2">
       <statement>
         <p>
-          Podemos construir no Sage um corpo que estende os racionais adicionando uma quarta raiz de dois,
+          Podemos construir no Sage um corpo que estende os racionais adicionando uma raiz quarta de 2,
           <m>{\mathbb Q}[\sqrt[4]{2}]</m>,
           com o comando <c>F.&lt;c&gt; = QQ[2^(1/4)]</c>.
           Esse é um espaço vetorial de dimensão <m>4</m> sobre os racionais,
@@ -1702,7 +1702,7 @@
           e verifique a igualdade entre o módulo e o submódulo.
           Em que isso difere da situação dos espaços vetoriais?
           Você consegue criar um terceiro módulo, <c>P</c>,
-          que seja um subconjunto próprio de <c>M</c> e contenha propriamente <c>N</c>?
+          que seja um subconjunto próprio de <c>M</c> e contenha <c>N</c> como subconjunto próprio?
         </p>
       </statement>
     </exercise>
