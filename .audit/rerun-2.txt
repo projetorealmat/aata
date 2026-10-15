@@ -1,0 +1,1 @@
+Trigger da segunda execução do aplicador após tornar divergências de padrão não fatais.
