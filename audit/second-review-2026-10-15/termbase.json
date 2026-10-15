@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "concepts": [
+    {
+      "source": "n-gon",
+      "preferred_pt_br": "n-ágono",
+      "status": "adopted",
+      "evidence": "REALMat Issue #31; Brazilian academic usage"
+    },
+    {
+      "source": "switching theory",
+      "preferred_pt_br": "teoria de comutação",
+      "status": "adopted",
+      "evidence": "internal consistency with função de comutação"
+    },
+    {
+      "source": "Euclidean valuation",
+      "preferred_pt_br": "função euclidiana",
+      "status": "adopted",
+      "evidence": "Brazilian algebra literature cited in Issue #31"
+    },
+    {
+      "source": "circle group",
+      "preferred_pt_br": "grupo circular",
+      "status": "adopted",
+      "evidence": "internal consistency across isomorph/homomorph"
+    },
+    {
+      "source": "syndrome",
+      "preferred_pt_br": "síndrome (f.)",
+      "status": "adopted",
+      "evidence": "Portuguese grammatical gender and coding-theory usage"
+    },
+    {
+      "source": "UFD/PID",
+      "preferred_pt_br": "formas portuguesas com siglas internacionais UFD/PID",
+      "status": "retained_preference",
+      "evidence": "not a correctness defect"
+    }
+  ]
+}

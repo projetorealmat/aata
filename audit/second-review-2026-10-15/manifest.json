@@ -1,0 +1,14 @@
+{
+  "schema_version": 3,
+  "audit_id": "aata-second-review-2026-10-15",
+  "source": "twjudson/aata@3069910e3ded72ff5e18837a97a0e810c92790e2",
+  "target_t0": "13ed5d803cf37bed1d60b246e6f8c8369328d278",
+  "target_t1": "7f5ab4eae6a11373875281baf943611b40faac80",
+  "language_pair": "en-US->pt-BR",
+  "domain": "undergraduate abstract algebra / PreTeXt",
+  "scope": "all reader-facing book content plus paratexts, figures/alt-text, tables, references and generated wrappers",
+  "issue": 31,
+  "independent_human_review": "PENDING",
+  "runner": "NOT_RUN: runner.cli is not present in this repository",
+  "workflow_validation": "PENDING until PR workflows run"
+}
