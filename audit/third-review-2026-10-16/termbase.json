@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "scope": "termbase seletiva dos termos verificados nesta rodada; não exaustiva",
+  "concepts": [
+    {
+      "source": "maximal p-subgroup",
+      "preferred_pt_br": "p-subgrupo maximal",
+      "status": "adopted",
+      "evidence": "Uso acadêmico brasileiro; UFV e UnB",
+      "references": [
+        "https://posmatematica.ufv.br/wp-content/uploads/2018/01/Dissertacao-Carlos-Henrique-Alves-Costa..pdf",
+        "https://repositorio.unb.br/bitstream/10482/15427/1/2013_FranciscoEniodoNascimentoLima.pdf"
+      ]
+    },
+    {
+      "source": "finite field",
+      "preferred_pt_br": "corpo finito",
+      "status": "adopted",
+      "evidence": "Uso consagrado em álgebra; fontes acadêmicas brasileiras citadas no relatório",
+      "references": [
+        "https://books.scielo.org/id/7jqhc/pdf/alves-9788568334393-02.pdf",
+        "https://w3.impa.br/~library/cbm/26CBM/26CBM_13.pdf"
+      ]
+    },
+    {
+      "source": "number field",
+      "preferred_pt_br": "corpo de números",
+      "status": "adopted",
+      "evidence": "Distinto de finite field; ver exemplos de uso em bibliografia brasileira",
+      "references": [
+        "https://books.scielo.org/id/7jqhc/pdf/alves-9788568334393-02.pdf"
+      ]
+    },
+    {
+      "source": "coset decoding",
+      "preferred_pt_br": "decodificação por classes laterais",
+      "status": "adopted",
+      "evidence": "Consistência com terminologia de teoria de grupos e códigos"
+    },
+    {
+      "source": "GAP console",
+      "preferred_pt_br": "console do GAP",
+      "status": "adopted",
+      "evidence": "Forma natural em português brasileiro"
+    },
+    {
+      "source": "simple extension",
+      "preferred_pt_br": "extensão simples",
+      "status": "adopted",
+      "evidence": "Terminologia padrão de teoria de corpos"
+    }
+  ]
+}
