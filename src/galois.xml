@@ -1451,7 +1451,7 @@
         Antes da demonstração de Gauss,
         os matemáticos suspeitavam que poderiam existir polinômios sobre os números reais e complexos sem soluções.
         O Teorema Fundamental da Álgebra afirma que todo polinômio não constante sobre os números complexos se fatora em fatores lineares, contando multiplicidades.
-      </p>
+      <fn>Nota editorial: o original fala em fatores lineares distintos, o que não vale para todo polinômio; uma raiz pode ter multiplicidade maior que um.</fn></p>
 
       <theorem>
         <title>Teorema Fundamental da Álgebra</title>
@@ -1462,7 +1462,7 @@
         <statement>
           <p>
             O corpo dos números complexos é algebricamente fechado;
-            isto é, todo polinômio em
+            isto é, todo polinômio não constante em
             <m>{\mathbb C}[x]</m> tem uma raiz em <m>{\mathbb C}</m>.
           </p>
         </statement>
