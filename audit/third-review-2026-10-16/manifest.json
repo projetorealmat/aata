@@ -41,6 +41,6 @@
   ],
   "independent_human_review": "PENDING",
   "runner": "NOT_RUN: runner.cli is not present in this repository",
-  "workflow_validation": "PENDING until PR workflows run",
+  "workflow_validation": "PARTIAL: HTML workflow run 134 succeeded; REALMat run 174 and PDF preview run 11 are in progress on head ab197747448e4cccd805f3484db16af063d12f83.",
   "final_reconciliation": "completed for the staged corrections; unresolved source/editorial questions listed in report.md"
 }
