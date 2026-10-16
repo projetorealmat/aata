@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "review": "fourth-review-2026-10-16",
+  "issue": "https://github.com/projetorealmat/aata/issues/35",
+  "source": {
+    "repository": "twjudson/aata",
+    "commit": "3069910e3ded72ff5e18837a97a0e810c92790e2"
+  },
+  "translation_baseline": {
+    "repository": "projetorealmat/aata",
+    "ref": "master",
+    "commit": "f48b7db5b2251afc01918f8de85cfeb93f6fa295"
+  },
+  "content_commit": "e0e6f3d03b18bfc11c96f6293c8905c41d495025",
+  "branch": "review/fourth-round-30-criteria-2026-10-16",
+  "chapters": 23,
+  "chapter_inventory": {
+    "matching_xml_ids": 1582,
+    "missing_ids": 0,
+    "extra_ids": 0,
+    "figures_source": 65,
+    "figures_target": 65,
+    "sage_blocks_source": 709,
+    "sage_blocks_target": 709,
+    "math_marker_count_source": 17419,
+    "math_marker_count_target": 17436,
+    "math_marker_count_note": "Counts include nested wrappers and are inventory indicators only."
+  },
+  "findings": {
+    "total": 13,
+    "source_origin": 12,
+    "editorial_intervention": 1,
+    "newly_corrected_source_defects": 10,
+    "previous_source_corrections_now_signaled": 2
+  },
+  "limitations": [
+    "AI reviewer reliability gate not independently measured",
+    "No PDF/HTML visual inspection",
+    "No Sage execution",
+    "Official workflows pending PR"
+  ],
+  "files": [
+    "report.md",
+    "findings.jsonl",
+    "coverage.csv",
+    "interventions.md",
+    "outputs.md",
+    "ai-reviewer-gate.md"
+  ]
+}
