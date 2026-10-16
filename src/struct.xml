@@ -1074,7 +1074,7 @@
     <exercise number="13" xml:id="struct-exercise-solvable-series">
       <statement>
         <p>
-          Prove que <m>G</m> é um grupo solúvel se, e somente se, <m>G</m> possui uma série de subgrupos
+          Para um grupo finito <m>G</m>, prove que <m>G</m> é solúvel se, e somente se, possui uma série de subgrupos
           <md>
             G = P_n \supset P_{n - 1} \supset \cdots \supset P_1 \supset P_0 = \{ e \}
           </md>
@@ -1165,7 +1165,7 @@
           <ol>
             <li>
               <p>
-                Prove que <m>G^{(i+1)}</m> é normal em <m>(G^{(i)})'</m>.
+                Prove que <m>G^{(i+1)}</m> é normal em <m>G^{(i)}</m>.
                 A série de subgrupos
                 <md>
                   G^{(0)} = G \supset G^{(1)} \supset G^{(2)} \supset \cdots
