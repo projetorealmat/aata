@@ -4,7 +4,7 @@
 
 - Original (S): `twjudson/aata@3069910e3ded72ff5e18837a97a0e810c92790e2`
 - Tradução examinada (T0): `projetorealmat/aata@913a92dc0078fc0b702e69fda1cd1d31fcaf1b88`
-- Commit de conteúdo revisado (T1): `b4c957a92e5e19936619aca2ee12df4d67204263`
+- Commit de conteúdo revisado (T1): `bc29a2bcb1dfa490548def27ec0e2cb2f36aa471`
 - Issue de acompanhamento: [#33 — revisão integral da tradução (29 critérios)](https://github.com/projetorealmat/aata/issues/33)
 
 O cotejo cobre os 23 capítulos ativos ligados por src/aata.xml, além de frontmatter, backmatter, metadados, colofão, histórico, notas, índice, notação e apêndices/licenças ativos. Foram examinados prosa, definições, enunciados, demonstrações, exemplos, exercícios, dicas e respostas, referências e remissões, fórmulas, código Sage e seus resultados, figuras, diagramas, legendas e descrições alternativas. Comentários XML inativos foram excluídos do conteúdo leitor-facing. A cobertura por arquivo está em coverage.csv; os achados estão em findings.jsonl.

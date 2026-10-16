@@ -3,7 +3,7 @@
   "audit_id": "aata-third-review-2026-10-16",
   "source": "twjudson/aata@3069910e3ded72ff5e18837a97a0e810c92790e2",
   "target_t0": "projetorealmat/aata@913a92dc0078fc0b702e69fda1cd1d31fcaf1b88",
-  "target_t1": "projetorealmat/aata@b4c957a92e5e19936619aca2ee12df4d67204263",
+  "target_t1": "projetorealmat/aata@bc29a2bcb1dfa490548def27ec0e2cb2f36aa471",
   "language_pair": "en-US->pt-BR",
   "domain": "undergraduate abstract algebra / PreTeXt",
   "scope": "all active reader-facing 23 chapters plus active paratexts, formulas, code, figures and linked assets",
