@@ -63,7 +63,7 @@
        <term>gerado</term> pelos <m>g_i</m>.
        Se esse subgrupo de <m>G</m> for, de fato, todo <m>G</m>,
        então <m>G</m> é gerado pelo conjunto <m>\{g_i : i \in I \}</m>.
-       Nesse caso, os <m>g_i</m>s são chamados de <term>geradores</term><idx><h>Geradores de um grupo</h></idx><idx><h>Grupo</h><h>geradores de</h></idx>
+       Nesse caso, os <m>g_i</m> são chamados de <term>geradores</term><idx><h>Geradores de um grupo</h></idx><idx><h>Grupo</h><h>geradores de</h></idx>
        de <m>G</m>.
        Se existe um conjunto finito <m>\{ g_i : i \in I \}</m> que gera <m>G</m>,
        então <m>G</m> é <idx><h>Grupo</h><h>finitamente gerado</h></idx><idx><h>Grupo finitamente gerado</h></idx><term>finitamente gerado</term>.
@@ -106,18 +106,18 @@
           <md>
             h = g_{i_1}^{\alpha_1} \cdots g_{i_n}^{\alpha_n}
           </md>,
-           em que os <m>g_{i_k}</m>s não precisam ser distintos.
+           em que os <m>g_{i_k}</m> não precisam ser distintos.
         </p>
       </statement>
 
       <proof>
         <p>
            Seja <m>K</m> o conjunto de todos os produtos da forma <m>g_{i_1}^{\alpha_1} \cdots g_{i_n}^{\alpha_n}</m>,
-           em que os <m>g_{i_k}</m>s não precisam ser distintos.
+           em que os <m>g_{i_k}</m> não precisam ser distintos.
            Certamente, <m>K</m> é um subconjunto de <m>H</m>.
            Basta mostrar que <m>K</m> é um subgrupo de <m>G</m>.
            Se esse for o caso, então <m>K=H</m>,
-           pois <m>H</m> é o menor subgrupo que contém todos os <m>g_i</m>s.
+           pois <m>H</m> é o menor subgrupo que contém todos os <m>g_i</m>.
         </p>
 
         <p>
@@ -136,7 +136,7 @@
     <p>
        A razão pela qual potências de um <m>g_i</m> fixado podem ocorrer várias vezes no produto é que podemos ter um grupo não abeliano.
        Contudo, se o grupo for abeliano,
-       então os <m>g_i</m>s precisam ocorrer apenas uma vez.
+       então os <m>g_i</m> precisam ocorrer apenas uma vez.
        Por exemplo,
        um produto como <m>a^{-3} b^5 a^7</m> em um grupo abeliano sempre poderia ser simplificado
        (neste caso, para <m>a^4 b^5</m>).
@@ -169,7 +169,7 @@
           <md>
             {\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }}
           </md>
-           em que os <m>p_i</m>s são primos
+           em que os <m>p_i</m> são primos
            (não necessariamente distintos).
         </p>
       </statement>
@@ -374,7 +374,7 @@
           </md>
            para alguns inteiros <m>\beta_1, \ldots, \beta_k</m>.
            Definindo <m>a_i = |g| / p_i^{\beta_i}</m>,
-           os <m>a_i</m>s são relativamente primos;
+           os <m>a_i</m> são relativamente primos;
           portanto, existem inteiros
           <m>b_1, \ldots,
           b_k</m> tais que <m>a_1 b_1 + \cdots + a_k b_k = 1</m>.
@@ -539,7 +539,7 @@
           <md>
             {\mathbb Z}_{p_1^{ \alpha_1 }} \times {\mathbb Z}_{p_2^{ \alpha_2 }} \times \cdots \times {\mathbb Z}_{p_n^{ \alpha_n }} \times {\mathbb Z} \times \cdots \times {\mathbb Z}
           </md>,
-           em que os <m>p_i</m>s são primos
+           em que os <m>p_i</m> são primos
            (não necessariamente distintos).
         </p>
       </statement>
@@ -1012,7 +1012,7 @@
       <statement>
         <p>
           Sejam <m>G</m>,
-          <m>H</m> e <m>K</m> sejam grupos abelianos finitamente gerados.
+          <m>H</m> e <m>K</m> grupos abelianos finitamente gerados.
           Mostre que, se <m>G \times H \cong G \times K</m>, então <m>H \cong K</m>.
           Dê um contraexemplo que mostre que isso não é verdadeiro em geral.
         </p>

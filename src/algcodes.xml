@@ -153,7 +153,7 @@
 
       <p>
         O sistema de paridade par é fácil de implementar, mas tem duas desvantagens.
-        Primeiro, não é possível detectar erros múltiplos.
+        Primeiro, erros múltiplos nem sempre são detectáveis.
         Suponha que um A seja enviado e que o primeiro e o sétimo bits mudem de <m>0</m> para <m>1</m>.
         A palavra recebida é uma palavra-código,
         mas será decodificada como C em vez de A. Segundo,
@@ -1268,7 +1268,7 @@
       <statement>
         <p>
           Seja <m>H = (A \mid I_m )</m> uma matriz canônica de verificação de paridade
-          <m>m \times n</m> e seja <m>G = \left( \frac{I_{n-m} }{A} \right)</m> a matriz geradora padrão correspondente
+          <m>m \times n</m> e seja <m>G = \left( \frac{I_{n-m} }{A} \right)</m> a matriz geradora padrão correspondente, de dimensão
           <m>n \times (n-m)</m>.
           Então <m>HG = {\mathbf 0}</m>.
         </p>
@@ -1281,7 +1281,7 @@
           <md>
             <mrow>c_{ij} &amp; = \sum_{k=1}^n h_{ik} g_{kj}</mrow>
             <mrow>&amp; =  \sum_{k=1}^{n-m} h_{ik} g_{kj} + \sum_{k=n-m+1}^n h_{ik} g_{kj}</mrow>
-            <mrow>&amp; = \sum_{k=1}^{n-m} a_{ik} \delta_{kj} + \sum_{k=n-m+1}^n \delta_{i-(m-n),k} a_{kj}</mrow>
+            <mrow>&amp; = \sum_{k=1}^{n-m} a_{ik} \delta_{kj} + \sum_{k=n-m+1}^n \delta_{i,k-(n-m)} a_{k-(n-m),j}</mrow>
             <mrow>&amp; =  a_{ij} + a_{ij}</mrow>
             <mrow>&amp; = 0</mrow>
           </md>,
@@ -1307,8 +1307,8 @@
       <statement>
         <p>
           Seja <m>H = (A \mid I_m )</m> uma matriz canônica de verificação de paridade
-          <m>m \times n</m> e seja <m>G = \left( \frac{I_{n-m} }{A} \right) </m> a
-          <m>n \times (n-m)</m> matriz geradora padrão associada a <m>H</m>.
+          <m>m \times n</m> e seja <m>G = \left( \frac{I_{n-m} }{A} \right) </m> a matriz geradora padrão associada, de dimensão
+          <m>n \times (n-m)</m> a <m>H</m>.
           Seja <m>C</m> o código gerado por <m>G</m>.
           Então <m>{\mathbf y}</m> pertence a <m>C</m> se, e somente se, <m>H {\mathbf y} = {\mathbf 0}</m>.
           Em particular,
@@ -1680,8 +1680,8 @@
       <title>Decodificação por classes laterais</title>
       <p>
         Podemos usar a teoria de grupos para obter outra maneira de decodificar mensagens.
-        Um código linear <m>C</m> é um subgrupo de <m>{\mathbb Z}_2^n</m>. <term>Classe lateral</term><idx><h>Decodificação por classes laterais</h></idx>
-        ou <term>decodificação padrão</term><idx><h>Decodificação padrão</h></idx>
+        Um código linear <m>C</m> é um subgrupo de <m>{\mathbb Z}_2^n</m>. A <term>decodificação por classes laterais</term><idx><h>Decodificação por classes laterais</h></idx>
+        (ou <term>decodificação padrão</term><idx><h>Decodificação padrão</h></idx>)
         usa as classes laterais de <m>C</m> em
         <m>{\mathbb Z}_2^n</m> para implementar a decodificação por máxima verossimilhança.
         Suponha que <m>C</m> seja um código linear <m>(n,m)</m>.
@@ -2635,8 +2635,8 @@
       <statement>
         <p>
           Se quisermos usar um código linear corretor de erros para transmitir os <m>128</m> caracteres <acro>ASCII</acro>,
-          qual matriz deve ser usada?
-          Qual matriz deve ser usada para transmitir o conjunto estendido de caracteres <acro>ASCII</acro> com <m>256</m> caracteres?
+          qual deve ser o tamanho da matriz?
+          Qual deve ser o tamanho da matriz para transmitir o conjunto estendido de caracteres <acro>ASCII</acro> com <m>256</m> caracteres?
           E se exigirmos apenas detecção de erros em ambos os casos?
         </p>
       </statement>

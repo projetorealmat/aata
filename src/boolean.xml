@@ -1396,7 +1396,7 @@
         </p>
 
         <image width="50%" xml:id="hint-switching-circuit-part-a">
-          <description>Um grafo da esquerda para a direita que se divide em três caminhos, a, b e b', e depois se reúne em um único caminho que passa por a.</description>
+          <description>Um grafo da esquerda para a direita que se divide em três caminhos, a, b e a', e depois se reúne em um único caminho que passa por a.</description>
           <latex-image>
               <xi:include href="tikz/hint-switching-circuit-part-a.tex" parse="text"/>
           </latex-image>
@@ -1476,7 +1476,7 @@
       </statement>
       <hint>
         <p>
-          (a) <m>a' \wedge [(a \wedge b') \vee b] = a \wedge (a \vee b) </m>.
+          (a) <m>a' \wedge [(a \wedge b') \vee b] = a' \wedge b </m>.
         </p>
       </hint>
     </exercise>
@@ -1956,7 +1956,7 @@
 
       <p>
         Uma família parametrizada.
-        Este é o exemplo clássico em que os elementos são subconjuntos de um conjunto com <m>n</m> elementos e a relação é <q>é subconjunto de.</q>
+        Este é o exemplo clássico em que os elementos são subconjuntos de um conjunto com <m>n</m> elementos e a relação é <q>a de inclusão.</q>
       </p>
 
             <sage doctest="not tested">

@@ -1353,7 +1353,7 @@
             onde <m>1 \leq n \lt p</m>
             (veja <xref ref="permute-exercise-order-product-cycles"/> em <xref ref="permute"/>).
             Observando que <m>(1 \, 2)(1, 2, i_3,\ldots, i_p) = (2, i_3, \ldots, i_p)</m> e <m>(2,i_3, \ldots, i_p)^k(1 \, 2)(2,i_3, \ldots, i_p)^{-k} = (1 \, i_k)</m>,
-            podemos obter todas as transposições da forma <m>(1n)</m> para <m>1 \leq n \lt p</m>.
+            podemos obter todas as transposições da forma <m>(1 \, j)</m> para <m>2 \leq j \leq p</m>.
             Contudo, essas transposições geram todas as transposições em <m>S_p</m>,
             pois <m>(1 \, j)(1 \, i)(1 \, j) = (i \, j)</m>.
             As transposições geram <m>S_p</m>.
@@ -1364,7 +1364,7 @@
       <figure xml:id="galois-figure-4">
         <caption>O gráfico de <m>f(x) = x^5 - 6 x^3 - 27 x - 3</m></caption>
         <image width="70%" xml:id="galois-quintic">
-    <description>O gráfico está em um sistema de eixos retangulares e começa abaixo do eixo horizontal; cresce até aproximadamente 68 quando x é aproximadamente igual a 2, passando pelo eixo horizontal em cerca de menos 3. Em seguida, o gráfico decresce até aproximadamente menos 73 quando x é aproximadamente igual a 2,3, passando pelo eixo horizontal em cerca de menos 0,2. Finalmente, o gráfico cresce até 20 em cerca de 3,2, passando pelo eixo horizontal em cerca de 3.</description>
+    <description>O gráfico está em um sistema de eixos retangulares e começa abaixo do eixo horizontal; cresce até aproximadamente 68 quando x é aproximadamente igual a menos 2, passando pelo eixo horizontal em cerca de menos 3. Em seguida, o gráfico decresce até aproximadamente menos 73 quando x é aproximadamente igual a 2,3, passando pelo eixo horizontal em cerca de menos 0,2. Finalmente, o gráfico cresce até 20 em cerca de 3,2, passando pelo eixo horizontal em cerca de 3.</description>
             <sageplot>
             f(x) = x^5 - 6*x^3 -27*x -3
             grid=[srange(-3,4,1), srange(-70,80,10)]

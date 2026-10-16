@@ -714,7 +714,7 @@
           <m>{\mathbb Q}(\sqrt[3]{5}\, )</m> sobre <m>{\mathbb Q}</m>.
           Portanto, uma base de <m>{\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )</m> sobre <m>{\mathbb Q}</m> é
           <md>
-            \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ ou } \sqrt[6]{5}\, i \}
+            \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \}
           </md>.
           Observe que <m>\sqrt[6]{5}\, i</m> é um zero de <m>x^6 + 5</m>.
           Podemos mostrar que esse polinômio é irredutível sobre
@@ -1394,11 +1394,11 @@
         e <m>f_i</m> pertencem a <m>F</m> para <m>i = 1, 2</m>.
         A interseção das duas circunferências coincide com a interseção da circunferência
         <md>
-          x^2 + y^2 + d_1 x +e_1 x + f_1 = 0
+          x^2 + y^2 + d_1 x + e_1 y + f_1 = 0
         </md>
         com a reta
         <md>
-          (d_1 - d_2) x + b(e_2 - e_1)y + (f_2 - f_1) = 0
+          (d_1 - d_2) x + (e_1 - e_2)y + (f_1 - f_2) = 0
         </md>.
         A última equação é a da corda que passa pelos pontos de interseção das duas circunferências.
         Portanto, a interseção de duas circunferências pode ser reduzida ao caso da interseção de uma reta com uma circunferência.
@@ -1443,7 +1443,7 @@
             tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com
             <m>\alpha_i \in F_{i-1}</m> e <m>\alpha \in F_k</m>.
             Em particular,
-            existe um inteiro <m>k \gt 0</m> tal que <m>[{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k</m>.
+            o grau <m>[{\mathbb Q}(\alpha) : {\mathbb Q}]</m> é uma potência de <m>2</m>.
           </p>
         </statement>
 
@@ -1452,8 +1452,10 @@
             A existência dos <m>F_i</m> e dos
             <m>\alpha_i</m> é consequência direta do <xref ref="fields-lemma-lines-and-circles"/> e do fato de que
             <md>
-              [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] = 2^k
+              [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] \leq 2^k
             </md>.
+            Como cada extensão <m>F_i/F_{i-1}</m> tem grau no máximo <m>2</m>, o grau <m>[F_k:{\mathbb Q}]</m> é uma potência de <m>2</m>.
+            Como <m>{\mathbb Q}(\alpha) \subseteq F_k</m>, o grau <m>[{\mathbb Q}(\alpha):{\mathbb Q}]</m> divide <m>[F_k:{\mathbb Q}]</m> e também é uma potência de <m>2</m>.
           </p>
         </proof>
       </theorem>
@@ -2908,7 +2910,7 @@
           Por fim, construa o quociente do anel de polinômios pelo ideal.
           Como o polinômio é irredutível,
           esse anel quociente é um corpo
-          e, pelo <xref ref="fields-proposition-minimal-poly"/>, esse anel quociente é isomorfo ao corpo de números do problema anterior.
+          e, pelo <xref ref="fields-proposition-minimal-poly"/>, esse anel quociente é isomorfo ao corpo finito construído no problema anterior.
         </p>
 
         <p>

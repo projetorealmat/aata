@@ -173,7 +173,7 @@
 
       <p>
         Um <term>subgrupo de Sylow <m>p</m></term><idx><h>Subgrupo</h><h>subgrupo de Sylow <m>p</m></h></idx><idx><h>Subgrupo de Sylow <m>p</m></h></idx>
-        <m>P</m> de um grupo <m>G</m> é um <m>p</m>-subgrupo máximo de <m>G</m>.
+        <m>P</m> de um grupo <m>G</m> é um <m>p</m>-subgrupo maximal de <m>G</m>.
         Para demonstrar os outros dois Teoremas de Sylow,
         precisamos considerar subgrupos conjugados, em vez de elementos conjugados em um grupo.
         Para um grupo <m>G</m>,
@@ -492,7 +492,7 @@
            Pelo Terceiro Teorema de Sylow,
            <m>G</m> possui apenas um subgrupo <m>H_1</m> de ordem <m>47</m>.
            Assim, <m>G/H_1</m> tem ordem <m>35</m> e deve ser abeliano pelo <xref ref="sylow-theorem-pq-cyclic"/>.
-           Portanto, o subgrupo comutador de <m>G</m> está contido em <m>H</m>, o que nos diz que <m>|G'|</m> é <m>1</m> ou <m>47</m>.
+           Portanto, o subgrupo comutador de <m>G</m> está contido em <m>H_1</m>, o que nos diz que <m>|G'|</m> é <m>1</m> ou <m>47</m>.
            Se <m>|G'|=1</m>, terminamos.
            Suponha que <m>|G'|=47</m>.
            O Terceiro Teorema de Sylow nos diz que <m>G</m> possui apenas um subgrupo de ordem <m>5</m> e um subgrupo de ordem <m>7</m>.
@@ -1918,7 +1918,7 @@
 
       <p>
         Na versão de linha de comando do Sage,
-        você também pode usar o <acro>GAP</acro> <q>console.</q> Novamente,
+        você também pode usar o console do <acro>GAP</acro>. Novamente,
         é necessário usar a sintaxe do <acro>GAP</acro>,
         e você não dispõe de muitas das conveniências do Sage Notebook.
         Também é bom saber de antemão que <c>quit;</c> é a forma de sair do console do <acro>GAP</acro> e voltar ao Sage.
@@ -1998,7 +1998,7 @@
           Este exercício verifica o <xref ref="sylow-lemma-distinct-conjugates"/>.
           Seja <m>G</m> o grupo diédrico de ordem <m>36</m>,
           <m>D_{18}</m>.
-          Seja <m>H</m> um dos subgrupos de Sylow <m>3</m>.
+          Seja <m>H</m> o único subgrupo de Sylow <m>3</m>.
           Seja <m>K</m> o subgrupo de ordem <m>6</m> gerado pelas duas permutações <c>a</c> e <c>b</c> dadas abaixo.
           Primeiro, forme uma lista dos conjugados distintos de <m>K</m> pelos elementos de <m>H</m>,
           e determine o número de subgrupos nessa lista.
@@ -2071,7 +2071,7 @@
           use apenas um dos subgrupos de Sylow <m>5</m> como grupo.
           Escreva a equação das classes para essa ação em um formato que sugira a parte
           <q>congruente a <m>1</m> módulo <m>p</m></q>
-          parte da conclusão do Terceiro Teorema.
+          da conclusão do Terceiro Teorema.
         </p>
       </statement>
     </exercise>
