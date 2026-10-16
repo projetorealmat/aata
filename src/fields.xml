@@ -726,7 +726,7 @@
           </md>.
           Mas necessariamente <m>{\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )</m>,
           pois o grau de ambas as extensões é <m>6</m>.
-        </p>
+         <fn>Nota editorial: o original oferece também <m>\sqrt[6]{5}\,i</m> como valor de <m>(\sqrt[6]{5})^7 i</m>. Como <m>(5^{1/6})^7=5\sqrt[6]{5}</m>, essa alternativa não é igual à potência indicada e foi removida.</fn></p>
       </example>
             <!-- Corrected typo in the last set inclusion.  Suggest2/9/2013 -->
       <theorem>
@@ -1267,8 +1267,7 @@
       <lemma>
         <statement>
           <p>
-            Se <m>\alpha</m> é um número construtível,
-            então <m>\sqrt{\alpha}</m> é um número construtível.
+            Se <m>\alpha</m> é um número construtível, então <m>\sqrt{\alpha}</m> é um número construtível.
           </p>
         </statement>
 
@@ -1401,7 +1400,7 @@
           (d_1 - d_2) x + (e_1 - e_2)y + (f_1 - f_2) = 0
         </md>.
         A última equação é a da corda que passa pelos pontos de interseção das duas circunferências.
-        Portanto, a interseção de duas circunferências pode ser reduzida ao caso da interseção de uma reta com uma circunferência.
+        Portanto, a interseção de duas circunferências pode ser reduzida ao caso da interseção de uma reta com uma circunferência.<fn>Nota editorial: no original, a equação da primeira circunferência usa <m>e_1x</m> no lugar de <m>e_1y</m>, e a equação da corda contém um coeficiente <m>b</m> não definido e sinais incompatíveis com a subtração das equações. As duas fórmulas foram corrigidas.</fn>
       </p>
 
       <p>
@@ -1419,8 +1418,8 @@
           x = \frac{- B \pm \sqrt{B^2 - 4 A C} }{2 A}
         </md>
         e pertence a <m>F( \sqrt{\alpha}\, )</m>,
-        onde <m>\alpha = B^2 - 4 A C \gt 0</m>.
-        Provamos o lema seguinte.
+        onde <m>\alpha = B^2 - 4 A C \geq 0</m>.
+        Provamos o lema seguinte.<fn>Nota editorial: o original exige discriminante estritamente positivo e, assim, deixa de fora a tangência, em que o discriminante é zero e ainda existe um ponto de interseção. Incluímos esse caso com <m>\alpha\geq0</m>.</fn>
       </p>
 
       <lemma xml:id="fields-lemma-lines-and-circles">
@@ -1440,10 +1439,9 @@
             <md>
               {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
             </md>
-            tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com
-            <m>\alpha_i \in F_{i-1}</m> e <m>\alpha \in F_k</m>.
+            tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com <m>\alpha_i \in F_{i-1}</m> e <m>\alpha_i \geq 0</m>; além disso, <m>\alpha \in F_k</m>.
             Em particular,
-            o grau <m>[{\mathbb Q}(\alpha) : {\mathbb Q}]</m> é uma potência de <m>2</m>.
+            o grau <m>[{\mathbb Q}(\alpha) : {\mathbb Q}]</m> é uma potência de <m>2</m>.<fn>Nota editorial: o original afirma que o grau é exatamente <m>2^k</m> para algum <m>k>0</m>. O argumento dá que esse grau divide o grau da torre, que é uma potência de <m>2</m>; o grau pode ser <m>1</m>, como para <m>\alpha=1</m>.</fn><fn>Nota editorial: o original não explicita a não negatividade dos radicandos. Aqui, <m>\alpha_i\geq0</m> explicita a interpretação da torre como uma torre de corpos reais, em consonância com as construções geométricas.</fn>
           </p>
         </statement>
 
@@ -1455,9 +1453,7 @@
               [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] \leq 2^k
             </md>.
             Como cada extensão <m>F_i/F_{i-1}</m> tem grau no máximo <m>2</m>, o grau <m>[F_k:{\mathbb Q}]</m> é uma potência de <m>2</m>.
-            Como <m>{\mathbb Q}(\alpha) \subseteq F_k</m>, o grau <m>[{\mathbb Q}(\alpha):{\mathbb Q}]</m> divide <m>[F_k:{\mathbb Q}]</m> e também é uma potência de <m>2</m>.
-          </p>
-        </proof>
+            Como <m>{\mathbb Q}(\alpha) \subseteq F_k</m>, o grau <m>[{\mathbb Q}(\alpha):{\mathbb Q}]</m> divide <m>[F_k:{\mathbb Q}]</m> e também é uma potência de <m>2</m>. </p> <p> Reciprocamente, suponha que exista uma torre com os radicandos não negativos indicados no enunciado. Por indução em <m>i</m>, cada <m>F_i</m> está contido no corpo dos números construtíveis: isso vale para <m>F_0={\mathbb Q}</m>; se vale para <m>F_{i-1}</m>, então <m>\alpha_i</m> é construtível e, pelo lema da construção de raízes quadradas, <m>\sqrt{\alpha_i}</m> também é, logo <m>F_i=F_{i-1}(\sqrt{\alpha_i})</m> está contido nesse corpo, que é um subcorpo por <xref ref="fields-theorem-constructible-numbers"/>. Portanto, <m>\alpha</m> é construtível.<fn>Nota editorial: a prova do original demonstra apenas a direção da construtibilidade para a existência da torre, embora o enunciado seja um bicondicional. Esta edição acrescenta a recíproca por indução sobre a torre.</fn> </p> </proof>
       </theorem>
             <!-- Clarified where <m>\alpha_i</m> lives - TWJ 4/23/2011 -->
       <corollary>
@@ -2910,7 +2906,7 @@
           Por fim, construa o quociente do anel de polinômios pelo ideal.
           Como o polinômio é irredutível,
           esse anel quociente é um corpo
-          e, pelo <xref ref="fields-proposition-minimal-poly"/>, esse anel quociente é isomorfo ao corpo finito construído no problema anterior.
+          e, pelo <xref ref="fields-proposition-minimal-poly"/>, esse anel quociente é isomorfo ao corpo finito construído no problema anterior.<fn>Nota editorial: o original chama o corpo construído no problema anterior de “corpo de números”. Esse problema constrói um corpo finito de ordem <m>3^5</m>, não um corpo de números; ajustamos a referência.</fn>
         </p>
 
         <p>

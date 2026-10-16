@@ -1393,7 +1393,7 @@
       <hint>
         <p>
           (a) <m>(a \vee b \vee a') \wedge a</m>
-        </p>
+         <fn>Nota editorial: a descrição alternativa do original identifica o terceiro caminho como <m>b'</m>, mas o rótulo no diagrama é <m>a'</m>; a descrição foi ajustada para corresponder à figura.</fn></p>
 
         <image width="50%" xml:id="hint-switching-circuit-part-a">
           <description>Um grafo da esquerda para a direita que se divide em três caminhos, a, b e a', e depois se reúne em um único caminho que passa por a.</description>

@@ -319,7 +319,7 @@
     </example>
 
     <figure xml:id="finite-figure-field-lattice">
-      <caption>Subcorpos de <m>\gf(p^{24})</m></caption>
+      <caption>Subcorpos de <m>\gf(p^{24})</m><fn>Nota editorial: a descrição alternativa do original menciona <m>p^{16}</m> no quarto nível, mas a figura mostra <m>p^6</m>. Além disso, <m>\mathbb F_{p^{16}}</m> não pode ser subcorpo de <m>\mathbb F_{p^{24}}</m>, pois <m>16</m> não divide <m>24</m>.</fn></caption>
             <!-- Replaced figure with tikz figure - TWJ 8/20/2010 -->
       <image width="50%" xml:id="finite-subfield-lattice">
             <description>Um reticulado de inclusões de corpos cujo nível superior é um corpo de Galois com p^24 elementos. O segundo nível possui corpos de Galois com p^8 e p^12 elementos, incluídos no nível superior. O terceiro nível possui corpos de Galois com p^4 (incluído nos corpos com p^8 e p^12 elementos) e p^6 elementos (incluído no corpo com p^12 elementos). O quarto nível possui corpos de Galois com p^2 (incluído nos corpos com p^4 e p^6 elementos) e p^3 elementos (incluído no corpo com p^6 elementos). O nível inferior é um corpo de Galois com p elementos (incluído nos corpos com p^2 e p^3 elementos).</description>
@@ -434,7 +434,7 @@
         agora é possível obter códigos mais sofisticados que os de <xref ref="algcodes"/>.
         Primeiro, lembremos que um código de blocos <m>(n, k)</m> consiste em uma função de codificação injetiva
         <m>E:{\mathbb Z}^{k}_{2} \rightarrow {\mathbb Z}^{n}_{2}</m> e uma função de decodificação <m>D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{k}_{2}</m>.
-        Fixado um conjunto <m>\mathcal E \subseteq {\mathbb Z}_2^n</m> de padrões de erro admissíveis que contenha o vetor nulo, dizemos que o esquema corrige esses erros se <m>D(E(\mathbf{x}) + \mathbf{e}) = \mathbf{x}</m> para toda mensagem <m>\mathbf{x} \in {\mathbb Z}_2^k</m> e todo padrão <m>\mathbf{e} \in \mathcal E</m>. Um código linear de dimensão <m>k</m> é o núcleo de uma matriz <m>H \in {\mathbb M}_{(n-k) \times n}({\mathbb Z}_2)</m> de posto <m>n-k</m>.
+        Fixado um conjunto <m>\mathcal E \subseteq {\mathbb Z}_2^n</m> de padrões de erro admissíveis que contenha o vetor nulo, dizemos que o esquema corrige esses erros se <m>D(E(\mathbf{x}) + \mathbf{e}) = \mathbf{x}</m> para toda mensagem <m>\mathbf{x} \in {\mathbb Z}_2^k</m> e todo padrão <m>\mathbf{e} \in \mathcal E</m>. Um código linear de dimensão <m>k</m> é o núcleo de uma matriz <m>H \in {\mathbb M}_{(n-k) \times n}({\mathbb Z}_2)</m> de posto <m>n-k</m>.<fn>Nota editorial: o original define correção de erros apenas pela sobrejetividade de <m>D</m>, condição que não garante a recuperação da mensagem, e apresenta uma matriz de verificação com dimensão inadequada. Esta edição explicita o conjunto de erros admissíveis, a condição de decodificação correta e o posto e a dimensão compatíveis com um código linear <m>(n,k)</m>.</fn>
       </p>
 
       <p>
@@ -997,7 +997,7 @@
 
           <p>
             (2) <m>\Rightarrow</m> (3).
-            Seja <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1}t^{n - 1}</m> um elemento de <m>R_n</m>.
+            Seja <m>f(t) = a_0 + a_1 t + \cdots + a_{n - 1}t^{n - 1}</m> um elemento de <m>R_n</m>.<fn>Nota editorial: a fonte inclui um <m>v</m> indevido no termo de maior grau, escrevendo <m>a_{n-1}v t^{n-1}</m>. Removemos esse símbolo, que não pertence ao polinômio definido.</fn>
             A <m>n</m>-upla correspondente em
             <m>{\mathbb Z}_2^n</m> é <m>{\mathbf x} = (a_0 a_1 \cdots a_{n - 1})^\transpose</m>.
             Por (2),
