@@ -4,7 +4,7 @@
 
 - Original, S: twjudson/aata, commit 3069910e3ded72ff5e18837a97a0e810c92790e2.
 - Texto de partida, T0: projetorealmat/aata, master, commit f48b7db5b2251afc01918f8de85cfeb93f6fa295, após o merge do PR #34.
-- Texto com as emendas desta rodada, T1: ramo review/fourth-round-30-criteria-2026-10-16; o último commit que alterou capítulos é e0e6f3d03b18bfc11c96f6293c8905c41d495025.
+- Texto com as emendas desta rodada, T1: ramo review/fourth-round-30-criteria-2026-10-16; o último commit que alterou capítulos é c5bf75e76d96c94e86e87b8c73eb424a206a521d.
 - Issue de acompanhamento: #35.
 
 ## Escopo e método
