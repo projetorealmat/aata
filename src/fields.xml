@@ -1439,8 +1439,7 @@
             <md>
               {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
             </md>
-            tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com
-            <m>\alpha_i \in F_{i-1}</m>, com <m>\alpha_i \geq 0</m>, e <m>\alpha \in F_k</m>.
+            tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com <m>\alpha_i \in F_{i-1}</m> e <m>\alpha_i \geq 0</m>; além disso, <m>\alpha \in F_k</m>.
             Em particular,
             o grau <m>[{\mathbb Q}(\alpha) : {\mathbb Q}]</m> é uma potência de <m>2</m>.
           </p>
