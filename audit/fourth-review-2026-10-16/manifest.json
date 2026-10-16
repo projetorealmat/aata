@@ -11,7 +11,7 @@
     "ref": "master",
     "commit": "f48b7db5b2251afc01918f8de85cfeb93f6fa295"
   },
-  "content_commit": "c5bf75e76d96c94e86e87b8c73eb424a206a521d",
+  "content_commit": "da3966f1fde17699c72726853bbdc3bf1232ecb2",
   "branch": "review/fourth-round-30-criteria-2026-10-16",
   "chapters": 23,
   "chapter_inventory": {
@@ -30,21 +30,56 @@
     "total": 13,
     "source_origin": 12,
     "editorial_intervention": 1,
-    "newly_corrected_source_defects": 10,
-    "previous_source_corrections_now_signaled": 2
+    "newly_corrected_source_defects": 7,
+    "probable_source_emendations_pending_human_confirmation": 1,
+    "source_error_claims_rejected_and_reverted": 2,
+    "previous_source_corrections_now_signaled": 2,
+    "cumulative_source_ids_reviewed": 26,
+    "cumulative_confirmed_source_issues": 23
   },
   "limitations": [
     "AI reviewer reliability gate not independently measured",
-    "No PDF/HTML visual inspection",
+    "No human visual inspection of PDF/HTML",
     "No Sage execution",
-    "Official workflows pending PR"
+    "HTML workflow #142 passed for the content commit; backend/PDF workflow #182 was still installing dependencies at the last check",
+    "SRC-18 intended emendation requires human editorial confirmation"
   ],
   "files": [
     "report.md",
     "findings.jsonl",
     "coverage.csv",
     "interventions.md",
+    "source-error-adjudication.md",
     "outputs.md",
     "ai-reviewer-gate.md"
-  ]
+  ],
+  "adjudication": {
+    "confirmed": 23,
+    "probable_interpretive_emendation": 1,
+    "not_source_errors": 2,
+    "alt_description_mismatches": 3,
+    "pending_human_decision": [
+      "SRC-18"
+    ]
+  },
+  "workflows": {
+    "content_commit": "da3966f1fde17699c72726853bbdc3bf1232ecb2",
+    "html": {
+      "run": 142,
+      "id": 38932528084,
+      "conclusion": "success",
+      "details": "PreTeXt build and HTML validation succeeded; Pages deployment skipped for pull_request event."
+    },
+    "backend_pdf": {
+      "run": 182,
+      "id": 38932528551,
+      "status": "in_progress",
+      "last_observed_step": "Instalar dependências de compilação",
+      "pending_steps": [
+        "Validar conteúdo específico do livro",
+        "Compilar",
+        "Verificar PDF"
+      ]
+    }
+  }
 }
