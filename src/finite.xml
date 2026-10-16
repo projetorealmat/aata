@@ -434,7 +434,7 @@
         agora é possível obter códigos mais sofisticados que os de <xref ref="algcodes"/>.
         Primeiro, lembremos que um código de blocos <m>(n, k)</m> consiste em uma função de codificação injetiva
         <m>E:{\mathbb Z}^{k}_{2} \rightarrow {\mathbb Z}^{n}_{2}</m> e uma função de decodificação <m>D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{k}_{2}</m>.
-        Fixado um conjunto <m>\mathcal E \subseteq {\mathbb Z}_2^n</m> de padrões de erro admissíveis, dizemos que o esquema corrige esses erros se <m>D(E(\mathbf{x}) + \mathbf{e}) = \mathbf{x}</m> para toda mensagem <m>\mathbf{x} \in {\mathbb Z}_2^k</m> e todo padrão <m>\mathbf{e} \in \mathcal E</m>. Um código linear de dimensão <m>k</m> é o núcleo de uma matriz <m>H \in {\mathbb M}_{(n-k) \times n}({\mathbb Z}_2)</m> de posto <m>n-k</m>.
+        Fixado um conjunto <m>\mathcal E \subseteq {\mathbb Z}_2^n</m> de padrões de erro admissíveis que contêm o vetor nulo, dizemos que o esquema corrige esses erros se <m>D(E(\mathbf{x}) + \mathbf{e}) = \mathbf{x}</m> para toda mensagem <m>\mathbf{x} \in {\mathbb Z}_2^k</m> e todo padrão <m>\mathbf{e} \in \mathcal E</m>. Um código linear de dimensão <m>k</m> é o núcleo de uma matriz <m>H \in {\mathbb M}_{(n-k) \times n}({\mathbb Z}_2)</m> de posto <m>n-k</m>.
       </p>
 
       <p>
