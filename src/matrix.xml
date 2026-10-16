@@ -563,7 +563,7 @@
             <m>(3) \Rightarrow (2)</m>.
             Primeiro,
               <m>\langle A{\mathbf x}, A {\mathbf y} \rangle = (A{\mathbf x})^\transpose A{\mathbf y} = {\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}.</m>
-            Se <m>M</m> for qualquer matriz <m>n \times n</m>, então <m>\mathbf e_i^\transpose M \mathbf e_j^\transpose = M_{ij}</m>, em que <m>M_{ij}</m> é a entrada de índice <m>ij</m> da matriz <m>M</m>. Observando que <m>{\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}</m>, sejam <m>\mathbf x = \mathbf e_i</m> e <m>\mathbf y = \mathbf e_j</m>. Então
+            Se <m>M</m> for qualquer matriz <m>n \times n</m>, então <m>\mathbf e_i^\transpose M \mathbf e_j = M_{ij}</m>, em que <m>M_{ij}</m> é a entrada de índice <m>ij</m> da matriz <m>M</m>. Observando que <m>{\mathbf x}^\transpose A^\transpose A {\mathbf y} = {\mathbf x}^\transpose {\mathbf y}</m>, sejam <m>\mathbf x = \mathbf e_i</m> e <m>\mathbf y = \mathbf e_j</m>. Então
               <md>\mathbf e_i^\transpose A^\transpose A \mathbf e_j = \mathbf e_i^\transpose \mathbf e_j.</md>
             Assim, a componente <m>ij</m> de <m>A^\transpose A</m> é <m>1</m> quando <m>i = j</m> e <m>0</m> caso contrário. Em outras palavras, <m>A^\transpose A = I</m>, e <m>A^{-1} = A^\transpose</m>.
 
@@ -1520,7 +1520,7 @@
       <hint>
         <p>
           <md>
-            <mrow>\frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 + \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right] &amp; = \frac{1}{2} \left[ \langle x + y, x + y \rangle - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]</mrow>
+            <mrow>\frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right] &amp; = \frac{1}{2} \left[ \langle x + y, x + y \rangle - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]</mrow>
             <mrow>&amp; = \frac{1}{2} \left[ \| {\mathbf x}\|^2 + 2 \langle x, y \rangle + \| {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]</mrow>
             <mrow>&amp; = \langle {\mathbf x}, {\mathbf y} \rangle</mrow>
           </md>.
