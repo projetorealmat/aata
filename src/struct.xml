@@ -1074,7 +1074,7 @@
     <exercise number="13" xml:id="struct-exercise-solvable-series">
       <statement>
         <p>
-          Para um grupo finito <m>G</m>, prove que <m>G</m> é solúvel se, e somente se, possui uma série de subgrupos
+          Para um grupo finito <m>G</m>,<fn>Nota editorial: o original não restringe o enunciado a grupos finitos. Sem essa hipótese, a equivalência falha: o grupo aditivo <m>\mathbb Z</m> é solúvel, mas não pode ter uma série finita com todos os fatores de ordem prima.</fn> prove que <m>G</m> é solúvel se, e somente se, possui uma série de subgrupos
           <md>
             G = P_n \supset P_{n - 1} \supset \cdots \supset P_1 \supset P_0 = \{ e \}
           </md>
@@ -1165,7 +1165,7 @@
           <ol>
             <li>
               <p>
-                Prove que <m>G^{(i+1)}</m> é normal em <m>G^{(i)}</m>.
+                Prove que <m>G^{(i+1)}</m> é normal em <m>G^{(i)}</m>.<fn>Nota editorial: o original pede provar que <m>G^{(i+1)}</m> é normal em <m>(G^{(i)})'</m>; pela definição da série derivada, esses grupos são iguais, tornando o pedido tautológico. Esta edição interpreta o grupo ambiente como <m>G^{(i)}</m>, para enunciar a normalidade usual do termo seguinte. A intenção exata do original não foi confirmada.</fn>
                 A série de subgrupos
                 <md>
                   G^{(0)} = G \supset G^{(1)} \supset G^{(2)} \supset \cdots

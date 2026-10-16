@@ -1059,7 +1059,7 @@
           <mrow>(a), \quad (a,c), \quad (b,d), \quad (a,d,c,b),</mrow>
           <mrow>(a,b,c,d), \quad (a,b)(c,d), \quad (a,d)(b,c), \quad (a,c)(b,d)</mrow>
         </md>.
-        As permutações das quatro variáveis de entrada possíveis induzem as permutações dos valores de saída na <xref ref="actions-table-switching-permutation"/>.
+        As permutações das quatro variáveis de entrada possíveis induzem as permutações dos valores de saída na <xref ref="actions-table-switching-permutation"/>.<fn>Nota editorial: o original contém <m>(3,6.12,9)</m>, que não é notação válida de ciclo. A permutação induzida pelas variáveis e a contagem indicada na tabela determinam o ciclo <m>(3,6,12,9)</m>.</fn>
       </p>
 
       <p>

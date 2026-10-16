@@ -129,7 +129,7 @@
           e agora podemos solicitar que a palavra-código seja transmitida novamente.
           Quando usado para verificação de erros,
           o bit mais à esquerda é chamado de <term>bit de verificação de paridade</term>.
-        </p>
+         </p>
 
         <p>
           De longe, os códigos detectores de erros mais comuns usados em computadores baseiam-se na adição de um bit de paridade.
@@ -153,7 +153,7 @@
 
       <p>
         O sistema de paridade par é fácil de implementar, mas tem duas desvantagens.
-        Primeiro, erros múltiplos nem sempre são detectáveis.
+        Primeiro, erros múltiplos nem sempre são detectáveis.<fn>Nota editorial: o original afirma que erros múltiplos não são detectáveis, sem ressalva. A paridade detecta qualquer número ímpar de inversões de bits, mas não detecta um número par; o exemplo ilustra o segundo caso.</fn>
         Suponha que um A seja enviado e que o primeiro e o sétimo bits mudem de <m>0</m> para <m>1</m>.
         A palavra recebida é uma palavra-código,
         mas será decodificada como C em vez de A. Segundo,
@@ -1299,7 +1299,7 @@
             <description>delta de Kronecker</description>
           </notation>
 
-        </p>
+         <fn>Nota editorial: no original, os índices da delta de Kronecker e da entrada de <m>A</m> na segunda soma estão incorretos. Com os índices corrigidos, essa soma também é <m>a_{ij}</m>, de modo que <m>c_{ij}=a_{ij}+a_{ij}=0</m> em <m>\mathbb Z_2</m>.</fn></p>
       </proof>
     </lemma>
 

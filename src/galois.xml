@@ -1356,13 +1356,13 @@
             podemos obter todas as transposições da forma <m>(1 \, j)</m> para <m>2 \leq j \leq p</m>.
             Contudo, essas transposições geram todas as transposições em <m>S_p</m>,
             pois <m>(1 \, j)(1 \, i)(1 \, j) = (i \, j)</m>.
-            As transposições geram <m>S_p</m>.
+            As transposições geram <m>S_p</m>.<fn>Nota editorial: o intervalo do original para as transposições inclui <m>(1,1)</m>, que é a identidade, e exclui <m>(1,p)</m>. O intervalo foi corrigido para enumerar exatamente as transposições <m>(1,j)</m> com <m>2\leq j\leq p</m>.</fn>
           </p>
         </proof>
       </lemma>
 
       <figure xml:id="galois-figure-4">
-        <caption>O gráfico de <m>f(x) = x^5 - 6 x^3 - 27 x - 3</m></caption>
+        <caption>O gráfico de <m>f(x) = x^5 - 6 x^3 - 27 x - 3</m><fn>Nota editorial: a descrição alternativa do original situa o máximo local perto de <m>x=2</m>. Para <m>f(x)=x^5-6x^3-27x-3</m>, a derivada se anula em <m>x\approx\pm2{,}177</m>; o máximo ocorre perto de <m>-2{,}177</m> e o mínimo, perto de <m>2{,}177</m>.</fn></caption>
         <image width="70%" xml:id="galois-quintic">
     <description>O gráfico está em um sistema de eixos retangulares e começa abaixo do eixo horizontal; cresce até aproximadamente 68 quando x é aproximadamente igual a menos 2, passando pelo eixo horizontal em cerca de menos 3. Em seguida, o gráfico decresce até aproximadamente menos 73 quando x é aproximadamente igual a 2,3, passando pelo eixo horizontal em cerca de menos 0,2. Finalmente, o gráfico cresce até 20 em cerca de 3,2, passando pelo eixo horizontal em cerca de 3.</description>
             <sageplot>
@@ -1451,7 +1451,7 @@
         Antes da demonstração de Gauss,
         os matemáticos suspeitavam que poderiam existir polinômios sobre os números reais e complexos sem soluções.
         O Teorema Fundamental da Álgebra afirma que todo polinômio não constante sobre os números complexos se fatora em fatores lineares, contando multiplicidades.
-      <fn>Nota editorial: o original fala em fatores lineares distintos, o que não vale para todo polinômio; uma raiz pode ter multiplicidade maior que um.</fn></p>
+      <fn>Nota editorial: o original fala em fatores lineares distintos, mas raízes podem ter multiplicidade maior que um. No enunciado do teorema, a hipótese de não constância também foi explicitada.</fn></p>
 
       <theorem>
         <title>Teorema Fundamental da Álgebra</title>
@@ -1463,7 +1463,7 @@
           <p>
             O corpo dos números complexos é algebricamente fechado;
             isto é, todo polinômio não constante em
-            <m>{\mathbb C}[x]</m> tem uma raiz em <m>{\mathbb C}</m>.
+            <m>{\mathbb C}[x]</m> tem uma raiz em <m>{\mathbb C}</m>.<fn>Nota editorial: o original afirma que todo polinômio de <m>\mathbb C[x]</m> tem raiz, sem excluir os polinômios constantes não nulos, que não têm raízes. Explicitamos a hipótese de não constância.</fn>
           </p>
         </statement>
                 <!--				<comment>

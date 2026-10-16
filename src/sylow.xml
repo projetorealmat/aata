@@ -504,7 +504,7 @@
            Contudo, já determinamos que <m>|G'| =1</m> ou <m>47</m>.
            Assim, o subgrupo comutador de <m>G</m> é trivial,
            e, consequentemente, <m>G</m> é abeliano.
-        </p>
+         <fn>Nota editorial: o original omite o índice em <m>H_1</m> na primeira inclusão e indica <m>i=1,2</m> após introduzir <m>H_2</m> e <m>H_3</m>. Corrigimos as referências para <m>H_1</m> e <m>i=2,3</m>, respectivamente.</fn></p>
       </example>
     </introduction>
 

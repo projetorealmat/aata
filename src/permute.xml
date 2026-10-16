@@ -812,7 +812,7 @@
             Há exatamente <m>n</m> reflexões. Seja <m>s</m> a reflexão que deixa fixo o vértice <m>1</m>.
             Se <m>n</m> é ímpar, cada reflexão deixa fixo exatamente um vértice.
             Se <m>n</m> é par, há <m>n/2</m> reflexões cujos eixos passam por pares de vértices opostos e <m>n/2</m> reflexões cujos eixos passam pelos pontos médios de lados opostos; estas últimas não deixam vértices fixos.
-            Em ambos os casos, cada reflexão tem ordem <m>2</m> (<xref ref="permute-figure-types"/>).<fn>Nota editorial: a descrição original para <m>n</m> par omite as reflexões cujos eixos passam pelos pontos médios de lados opostos; a redação acima distingue os dois tipos.</fn>
+            Em ambos os casos, cada reflexão tem ordem <m>2</m> (<xref ref="permute-figure-types"/>).<fn>Nota editorial: o original associa cada <m>s_k</m> a um vértice fixo; para <m>n</m> par, isso descreve apenas as reflexões com eixos por vértices opostos e deixa sem representação as reflexões com eixos pelos pontos médios de lados opostos.</fn>
             Então <m>s^2 = 1</m> e <m>r^n = 1</m>.
             Como qualquer movimento rígido <m>t</m> do <m>n</m>-ágono substitui o primeiro vértice pelo vértice <m>k</m>,
             o segundo vértice deve ser substituído por <m>k+1</m> ou por <m>k-1</m>.

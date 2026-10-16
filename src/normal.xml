@@ -264,7 +264,7 @@
             <md>
               [(i, j)(a, k)](i, j, a)^2 [(i, j)(a, k)]^{-1} = (i, j, k)
             </md>
-            está em <m>N</m>. Assim, <m>N</m> deve conter todos os <m>3</m>-ciclos <m>(i, j, k)</m>  para <m>k \in \{1, 2, \ldots, n\} \setminus \{i,j\}</m>. Pelo <xref ref="normal-lemma-1-normal-3cycle"/>, esses <m>3</m>-ciclos geram <m>A_n</m>; portanto, <m>N = A_n</m>.
+            está em <m>N</m>. Assim, <m>N</m> deve conter todos os <m>3</m>-ciclos <m>(i, j, k)</m>  para <m>1 \leq k \leq n</m>. Pelo <xref ref="normal-lemma-1-normal-3cycle"/>, esses <m>3</m>-ciclos geram <m>A_n</m>; portanto, <m>N = A_n</m>.
           </p>
         </proof>
       </lemma>
