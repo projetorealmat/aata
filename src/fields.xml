@@ -1267,8 +1267,7 @@
       <lemma>
         <statement>
           <p>
-            Se <m>\alpha</m> é um número construtível,
-            então <m>\sqrt{\alpha}</m> é um número construtível.
+            Se <m>\alpha</m> é um número construtível não negativo, então <m>\sqrt{\alpha}</m> é um número construtível.
           </p>
         </statement>
 
@@ -1419,7 +1418,7 @@
           x = \frac{- B \pm \sqrt{B^2 - 4 A C} }{2 A}
         </md>
         e pertence a <m>F( \sqrt{\alpha}\, )</m>,
-        onde <m>\alpha = B^2 - 4 A C \gt 0</m>.
+        onde <m>\alpha = B^2 - 4 A C \geq 0</m>.
         Provamos o lema seguinte.
       </p>
 
@@ -1441,7 +1440,7 @@
               {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
             </md>
             tal que <m>F_i = F_{i-1}( \sqrt{ \alpha_i}\, )</m>, com
-            <m>\alpha_i \in F_{i-1}</m> e <m>\alpha \in F_k</m>.
+            <m>\alpha_i \in F_{i-1}</m>, com <m>\alpha_i \geq 0</m>, e <m>\alpha \in F_k</m>.
             Em particular,
             o grau <m>[{\mathbb Q}(\alpha) : {\mathbb Q}]</m> é uma potência de <m>2</m>.
           </p>
@@ -1455,9 +1454,7 @@
               [F_k: {\mathbb Q}] = [F_k : F_{k - 1}][F_{k - 1} : F_{k - 2}] \cdots [F_1: {\mathbb Q} ] \leq 2^k
             </md>.
             Como cada extensão <m>F_i/F_{i-1}</m> tem grau no máximo <m>2</m>, o grau <m>[F_k:{\mathbb Q}]</m> é uma potência de <m>2</m>.
-            Como <m>{\mathbb Q}(\alpha) \subseteq F_k</m>, o grau <m>[{\mathbb Q}(\alpha):{\mathbb Q}]</m> divide <m>[F_k:{\mathbb Q}]</m> e também é uma potência de <m>2</m>.
-          </p>
-        </proof>
+            Como <m>{\mathbb Q}(\alpha) \subseteq F_k</m>, o grau <m>[{\mathbb Q}(\alpha):{\mathbb Q}]</m> divide <m>[F_k:{\mathbb Q}]</m> e também é uma potência de <m>2</m>. </p> <p> Reciprocamente, suponha que exista uma torre com os radicandos não negativos indicados no enunciado. Por indução em <m>i</m>, cada <m>F_i</m> está contido no corpo dos números construtíveis: isso vale para <m>F_0={\mathbb Q}</m>; se vale para <m>F_{i-1}</m>, então <m>\alpha_i</m> é construtível e, pelo lema da construção de raízes quadradas, <m>\sqrt{\alpha_i}</m> também é, logo <m>F_i=F_{i-1}(\sqrt{\alpha_i})</m> está contido nesse corpo, que é um subcorpo por <xref ref="fields-theorem-constructible-numbers"/>. Portanto, <m>\alpha</m> é construtível. </p> </proof>
       </theorem>
             <!-- Clarified where <m>\alpha_i</m> lives - TWJ 4/23/2011 -->
       <corollary>
