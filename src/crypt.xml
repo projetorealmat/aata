@@ -786,7 +786,7 @@
           Cada pessoa da turma deve construir um criptossistema <acro>RSA</acro> usando primos com <m>10</m> a <m>15</m> algarismos.
           Entregue <m>(n, E)</m> e uma mensagem cifrada.
           Mantenha <m>D</m> em segredo.
-          Verifique se conseguem quebrar os códigos uns dos outros.
+          Verifique se consegue quebrar os códigos dos demais participantes.
         </p>
       </statement>
     </exercise>

@@ -412,7 +412,7 @@
         </md>
         portanto, há três classes de conjugação.
         Há variações do problema de encontrar o número dessas partições para qualquer inteiro positivo <m>n</m> que os cientistas da computação chamam de <term>NP-completas</term>.
-        A NP-completude caracteriza a dificuldade computacional no pior caso; ela não implica que toda instância grande seja irresolúvel.
+        Nota editorial: a afirmação do original de que, para <m>n</m> grande, o problema não pode ser resolvido porque os cálculos demorariam demais é imprecisa. Essa afirmação é imprecisa: a NP-completude caracteriza a dificuldade computacional no pior caso e não implica que toda instância grande seja irresolúvel.
       </p>
     </example>
 

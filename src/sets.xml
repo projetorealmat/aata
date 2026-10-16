@@ -279,7 +279,7 @@
         <md>
           E = \{2, 4, 6, \ldots \} \quad \text{ou} \quad E = \{ x : x \text{ é um inteiro par e } x \gt 0 \}
         </md>.
-        <m>2 \in E</m> quando queremos dizer que 2 está no conjunto <m>E</m>
+        Escrevemos <m>2 \in E</m> quando queremos dizer que 2 está no conjunto <m>E</m>
         e <m>-3 \notin E</m> para dizer que <m>-3</m> não está no conjunto <m>E</m>.
       </p>
 

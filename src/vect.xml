@@ -1410,8 +1410,8 @@
       <p>
         No entanto, há situações em que anéis se comportam naturalmente como espaços vetoriais e podemos explorar essa estrutura adicional.
         Veremos muito mais disso nos capítulos sobre corpos e teoria de Galois.
-        Como exemplo, corpos finitos possuem um único gerador,
-        e as primeiras potências do gerador formam uma base.
+        Como exemplo, todo corpo finito é uma extensão simples do corpo primo;
+        as primeiras potências de um elemento gerador formam uma base.
         Considere a criação de um espaço vetorial a partir dos elementos de um corpo finito de ordem <m>7^6=117\,649</m>.
         Sabemos que, como elementos de um corpo, eles podem ser somados,
         então <em>definiremos</em> essa operação como a adição em nosso espaço vetorial.
