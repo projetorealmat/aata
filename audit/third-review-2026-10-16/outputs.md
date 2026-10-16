@@ -11,7 +11,8 @@
 | runner.cli validate | NOT_RUN | runner.cli não existe no repositório. |
 | Sage | NOT_RUN | Código cotejado estaticamente; sem execução do Sage. |
 | Build/HTML/PDF do baseline T0 | PASS | Registro de build da rodada anterior; sem inspeção visual de PDF. |
-| GitHub Actions do PR atual | PENDING | Atualizar quando os workflows terminarem. |
-| HTML e PDF do PR atual | PENDING | Acompanhar workflows oficiais; inspeção visual ainda pendente. |
+| HTML do PR atual | PASS | “Publicar HTML traduzido — Álgebra Abstrata”, run 134 (#38908579373), concluído com sucesso no head ab197747448e4cccd805f3484db16af063d12f83. |
+| Verificador REALMat do PR atual | IN_PROGRESS | “REALMat — verificar AATA”, run 174 (#38908579461), em execução no mesmo head. |
+| Prévia PDF do PR atual | IN_PROGRESS | “Prévia do PDF — AATA”, run 11 (#38908578970), em execução; inspeção visual ainda pendente. |
 | Revisão humana independente | PENDING | Gate editorial do projeto; não substituído por esta revisão. |
 | Aviso de licença / versão GFDL | PENDING | Remissão ao apêndice corrigida; versão 1.3 exige validação dos responsáveis pelos direitos. |
