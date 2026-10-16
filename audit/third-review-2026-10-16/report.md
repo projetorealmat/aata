@@ -4,7 +4,7 @@
 
 - Original (S): `twjudson/aata@3069910e3ded72ff5e18837a97a0e810c92790e2`
 - Tradução examinada (T0): `projetorealmat/aata@913a92dc0078fc0b702e69fda1cd1d31fcaf1b88`
-- Commit de conteúdo revisado (T1): `e68f39b190bf8845e898f18dd70002e8994a28cb`
+- Commit de conteúdo revisado (T1): `b4c957a92e5e19936619aca2ee12df4d67204263`
 - Issue de acompanhamento: [#33 — revisão integral da tradução (29 critérios)](https://github.com/projetorealmat/aata/issues/33)
 
 O cotejo cobre os 23 capítulos ativos ligados por src/aata.xml, além de frontmatter, backmatter, metadados, colofão, histórico, notas, índice, notação e apêndices/licenças ativos. Foram examinados prosa, definições, enunciados, demonstrações, exemplos, exercícios, dicas e respostas, referências e remissões, fórmulas, código Sage e seus resultados, figuras, diagramas, legendas e descrições alternativas. Comentários XML inativos foram excluídos do conteúdo leitor-facing. A cobertura por arquivo está em coverage.csv; os achados estão em findings.jsonl.
@@ -84,7 +84,7 @@ Os critérios foram considerados ao longo de todo o escopo:
 | SRC-07 | src/fields.xml, construção por interseção de círculos | A equação da circunferência repete e₁x em vez de e₁y; a equação da corda contém b indefinido e diferenças incoerentes. | Corrigidas as duas fórmulas pela subtração das equações das circunferências. |
 | SRC-08 | src/fields.xml, caracterização dos números construtíveis | O grau foi afirmado igual a 2ᵏ com k>0. O grau pode ser 1, e em geral divide o grau da torre, que é uma potência de 2. | A afirmação foi corrigida para “é uma potência de 2”; a demonstração explicita o limite dos graus das etapas e a divisibilidade pelo grau de Fₖ. A prova da equivalência completa ainda precisa de revisão editorial (ver pendências). |
 | SRC-09 | src/fields.xml, exercício sobre GF(3⁵) | “Corpo de números” designa outra classe de corpos; o objeto construído é finito. | “Corpo finito construído no problema anterior.” |
-| SRC-10 | src/finite.xml, introdução aos códigos polinomiais | Sobrejetividade de D não caracteriza correção de erros; para dimensão k, a matriz de verificação tem posto n−k e dimensão (n−k)×n. | A definição agora explicita um conjunto de padrões admissíveis que contém o vetor nulo, a condição D(E(x)+e)=x e a dimensão/posto corretos de H. |
+| SRC-10 | src/finite.xml, introdução aos códigos polinomiais | Sobrejetividade de D não caracteriza correção de erros; para dimensão k, a matriz de verificação tem posto n−k e dimensão (n−k)×n. | A definição agora explicita um conjunto de padrões admissíveis que contenha o vetor nulo, a condição D(E(x)+e)=x e a dimensão/posto corretos de H. |
 | SRC-11 | src/finite.xml, demonstração para códigos polinomiais | Há um v excedente no coeficiente aₙ₋₁v. | Removido. |
 | SRC-12 | src/finite.xml, descrição da rede de corpos | A descrição menciona p¹⁶, mas o diagrama contém p⁶. | Corrigida a descrição para p⁶. |
 | SRC-13 | src/galois.xml, lema sobre transposições em Sₚ | A família (1 n), com 1≤n<p, inclui a identidade e deixa de fora (1 p). | Corrigida para (1 j), 2≤j≤p. |
