@@ -6,7 +6,7 @@ Foram registradas separadamente dos erros de tradução. A validade das emendas 
 
 | ID | Local | Intervenção em T1 | Evidência |
 |---|---|---|---|
-| SRC-15 | matrix.xml, matrix-exercise-identity | Sinal “+” alterado para “−” no termo ||x||² da dica. | Identidade de polarização. |
+| SRC-15 | matrix.xml, matrix-exercise-identity | Sinal “+” alterado para “−” no termo de norma de x ao quadrado na dica. | Identidade de polarização. |
 | SRC-16 | matrix.xml, matrix-theorem-orthnormal-matrix | e_jᵀ à direita de M alterado para e_j. | Multiplicação entre vetor-linha, matriz e vetor-coluna. |
 | SRC-17 | actions.xml, actions-table-switching-permutation | (3,6.12,9) → (3,6,12,9). | Notação de ciclos da tabela. |
 | SRC-18 | struct.xml, struct-exercise-commutator-subgroup | Normalidade em G^(i), não no subgrupo derivado que é igual ao próprio termo seguinte. | Definição da série derivada e característica do subgrupo comutador. |
