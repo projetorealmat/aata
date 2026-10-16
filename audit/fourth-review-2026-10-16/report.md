@@ -54,7 +54,7 @@ O ledger contém 13 registros: 10 defeitos matemáticos/editoriais herdados da f
 | 19 | Paratextos | Inventariados os paratextos ativos; histórico brasileiro é específico da tradução. A decisão sobre a versão da GFDL segue pendente. |
 | 20 | Citações e referências bibliográficas | Nenhuma divergência bibliográfica nova foi confirmada; a verificação anterior não foi expandida a uma auditoria exaustiva de disponibilidade e paginação. |
 | 21 | Nomes próprios, instituições e títulos | Nenhuma inconsistência nova confirmada nos trechos reabertos. |
-| 22 | Números, unidades, medidas e datas | Corrigada a pontuação de ciclo que simulava um decimal; os demais achados numéricos anteriores foram mantidos. |
+| 22 | Números, unidades, medidas e datas | Corrigida a pontuação de ciclo que simulava um decimal; os demais achados numéricos anteriores foram mantidos. |
 | 23 | Intenção pedagógica/didática | Corrigidos o passo inválido da dica e a lacuna de uma das direções da caracterização por torres. |
 | 24 | Adaptação cultural/contextual | Adaptações e correções da fonte foram registradas como intervenções editoriais. |
 | 25 | Anglicismos e falsos cognatos | Nenhum anglicismo ou falso cognato novo confirmado; a revisão terminológica anterior permanece como referência. |
